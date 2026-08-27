@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "mode_selection": ["walk", "transit"],
+  "default_mode": "walk",
+  "accessibility_thresholds": {
+    "time_minutes": {"max_limit_5_min": 5, "max_limit_10_min": 10, "max_limit_15_min": 15, "max_limit_25_min": 25, "no_limit": null},
+    "distance_meters": {"max_limit_300_m": 300, "max_limit_800_m": 800, "max_limit_1400_m": 1400, "max_limit_7000_m": 7000, "no_limit": null},
+    "defaults": {"time": "max_limit_15_min", "distance": "max_limit_800_m"}
+  },
+  "routing": {"place_tree_priority": 100, "atlas_yield_delay_ms": 0},
+  "map": {
+    "enabled_providers": ["leaflet", "mapbox", "carto"],
+    "initial": {"provider": "leaflet", "tile": "light"},
+    "tiles": [["leaflet", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "light"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]]
+  },
+  "runtime_options": {
+    "place_search_debounce_ms": 350,
+    "export_url_revoke_delay_ms": 1000,
+    "map_initialization": {"task_id": "smarturbanity_access_atlas_initialization", "prepare_message": "Preparing Access Atlas map…", "routing_message": "Preparing routing model…", "layers_message": "Creating map layers…", "render_message": "Rendering Access Atlas map…", "completed_message": "Access Atlas map ready", "yield_delay_ms": 0, "completion_auto_clear_ms": 750}
+  },
+  "layer_names": {"zones_shapes": "#Areas", "zones_centroids": "#Area calculation points", "study_areas_shapes": "#Study Area", "access_points": "#Access Points", "graph_links": "#Transport network", "access_atlas_place_catchments": "#Place catchments", "access_atlas_reachable_paths": "#Reachable routes", "selected_radius": "#Selected area"},
+  "area_sources": {"study_area": null, "citizen_input_area": null, "area_groups": []},
+  "access_hub": {
+    "views": {"defaultId": "service", "options": [{"id": "service", "status": "ready", "enabled": true, "text": " Service", "tooltip": "#Service", "bi_class": "bi-grid-3x3-gap"}, {"id": "infrastructure", "status": "draft", "enabled": true, "text": " Infrastructure", "tooltip": "#Infrastructure", "bi_class": "bi-buildings"}, {"id": "perception", "status": "planned", "enabled": true, "text": " Perception", "tooltip": "#Perception", "bi_class": "bi-eye"}]},
+    "service_claims": {"syncIntervalMs": 60000, "requestTimeoutMs": 5000, "progressAutoClearMs": 1000},
+    "behavior": {"serviceListMinZoom": 12, "serviceListMaxZoom": 22, "serviceClaimRadiusM": 500, "serviceRadiusFitPaddingPx": 72, "serviceClaimMaxCandidates": 20, "accessPointSnapDistanceM": 5, "serviceForm": {"enableSecondaryEntrances": true, "showDetailsPromptAfterSubmit": true, "steps": ["location_feature", "service_feature", "summary_feature", "details_feature"], "postSubmitDetailFeatures": ["opportunity_feature", "secondary_location_feature"], "features": {"location_feature": {"enabled": true, "required": true, "step": "location", "label": "Location", "title": "Service location"}, "service_feature": {"enabled": true, "required": true, "step": "service", "label": "Service", "title": "Service classification"}, "summary_feature": {"enabled": true, "required": true, "step": "summary", "label": "Summary", "title": "Review service"}, "details_feature": {"enabled": true, "required": false, "step": "details", "label": "Details", "title": "Additional details"}, "opportunity_feature": {"enabled": true, "required": false, "step": "details", "label": "Opportunity", "title": "Opportunities", "description": "Select the opportunities available at this service and answer the questions for each selection.", "buttonText": "Add opportunities", "openText": "Done", "collapsible": true, "openByDefault": false}, "secondary_location_feature": {"enabled": true, "required": false, "step": "service", "label": "Secondary access points", "title": "Secondary access points", "buttonText": "Add point", "openText": "Close", "collapsible": true, "openByDefault": false}}}},
+    "taxonomy_sources": {"opportunity_catalog": "opportunities", "service_category_catalog": "opportunity_categories", "service_type_catalog": "service_types", "service_subtype_catalog": "service_subtypes", "service_opportunity_mapping": "service_opportunity_mapping", "opportunity_category_mapping": "opportunity_category_mapping", "social_function_opportunity_mapping": "social_function_opportunity_mapping"}
+  }
+}
