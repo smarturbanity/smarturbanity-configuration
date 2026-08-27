@@ -8,9 +8,10 @@ The repository provides version-controlled, machine-readable configuration share
 
 The repository follows three main principles:
 
-1. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
-2. **Pilot configurations** define which capabilities and configurations are available for each pilot and may extend or override shared definitions.
-3. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
+1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
+2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
+3. **Pilot configurations** contain only pilot-specific additions or overrides.
+4. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
@@ -40,6 +41,11 @@ smarturbanity-configuration/
 │
 └── README.md
 ```
+
+Directory `index.json` files enumerate their direct children. A consumer loads
+the root `base.json`, then applies the selected pilot JSON with a deep merge;
+pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
+is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
