@@ -8,6 +8,22 @@
     "defaults": {"time": "max_limit_15_min", "distance": "max_limit_800_m"}
   },
   "routing": {"place_tree_priority": 100, "atlas_yield_delay_ms": 0},
+  "data_model": {
+    "runtime": {"source": "server"},
+    "default_area_group_id": "study_areas",
+    "area_groups": {
+      "study_areas": {"name": "Study areas", "view": "access_inspector", "icon": "bi-bounding-box-circles", "selectable": false, "source_layers": ["su_study_areas"]},
+      "h3": {"name": "H3 zones", "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]}
+    },
+    "areas": ["study_areas", "h3"],
+    "centers": {"source_layers": ["analytical_centers", "accessible_origins"], "id_property": "id", "name_property": "name", "center_weight_property": "center_weight"},
+    "segments": {"source_collections": ["links"]},
+    "connections": {"source_layers": [], "connection_type_property": "connection_type"},
+    "supporting_elements": {"source_layers": [], "type_property": "supporting_element_type"},
+    "attribute_overrides": {"source_layers": [], "entity_group_property": "entity_group", "entity_id_property": "entity_id"},
+    "attribute_aggregates": {"source_layers": [], "entity_group_property": "entity_group", "entity_id_property": "entity_id"},
+    "feedback_contributions": {"source_layers": [], "entity_group_property": "entity_group", "entity_id_property": "entity_id"}
+  },
   "map": {
     "enabled_providers": ["leaflet", "mapbox", "carto"],
     "initial": {"provider": "leaflet", "tile": "light"},
@@ -22,7 +38,7 @@
   "area_sources": {"study_area": null, "citizen_input_area": null, "area_groups": []},
   "access_hub": {
     "views": {"defaultId": "service", "options": [{"id": "service", "status": "ready", "enabled": true, "text": " Service", "tooltip": "#Service", "bi_class": "bi-grid-3x3-gap"}, {"id": "infrastructure", "status": "draft", "enabled": true, "text": " Infrastructure", "tooltip": "#Infrastructure", "bi_class": "bi-buildings"}, {"id": "perception", "status": "planned", "enabled": true, "text": " Perception", "tooltip": "#Perception", "bi_class": "bi-eye"}]},
-    "service_claims": {"syncIntervalMs": 60000, "requestTimeoutMs": 5000, "progressAutoClearMs": 1000},
+    "service_claims": {"modelPath": "/api/v1/models/opportunities", "syncIntervalMs": 60000, "requestTimeoutMs": 30000, "progressAutoClearMs": 1000},
     "behavior": {"serviceListMinZoom": 12, "serviceListMaxZoom": 22, "serviceClaimRadiusM": 500, "serviceRadiusFitPaddingPx": 72, "serviceClaimMaxCandidates": 20, "accessPointSnapDistanceM": 5, "serviceForm": {"enableSecondaryEntrances": true, "showDetailsPromptAfterSubmit": true, "steps": ["location_feature", "service_feature", "summary_feature", "details_feature"], "postSubmitDetailFeatures": ["opportunity_feature", "secondary_location_feature"], "features": {"location_feature": {"enabled": true, "required": true, "step": "location", "label": "Location", "title": "Service location"}, "service_feature": {"enabled": true, "required": true, "step": "service", "label": "Service", "title": "Service classification"}, "summary_feature": {"enabled": true, "required": true, "step": "summary", "label": "Summary", "title": "Review service"}, "details_feature": {"enabled": true, "required": false, "step": "details", "label": "Details", "title": "Additional details"}, "opportunity_feature": {"enabled": true, "required": false, "step": "details", "label": "Opportunity", "title": "Opportunities", "description": "Select the opportunities available at this service and answer the questions for each selection.", "buttonText": "Add opportunities", "openText": "Done", "collapsible": true, "openByDefault": false}, "secondary_location_feature": {"enabled": true, "required": false, "step": "service", "label": "Secondary access points", "title": "Secondary access points", "buttonText": "Add point", "openText": "Close", "collapsible": true, "openByDefault": false}}}},
     "taxonomy_sources": {"opportunity_catalog": "opportunities", "service_category_catalog": "opportunity_categories", "service_type_catalog": "service_types", "service_subtype_catalog": "service_subtypes", "service_opportunity_mapping": "service_opportunity_mapping", "opportunity_category_mapping": "opportunity_category_mapping", "social_function_opportunity_mapping": "social_function_opportunity_mapping"}
   }

@@ -3,5 +3,17 @@
   "pilot_id": "rome",
 
   "mode_selection": ["walk", "bike", "transit"],
-  "default_mode": "walk"
+  "default_mode": "walk",
+  "data_model": {
+    "runtime": {"source": "server"},
+    "default_area_group_id": "neighbourhoods",
+    "area_groups": {
+      "census": {"name": "Censo", "view": "access_inspector", "icon": "bi-grid-3x3-gap", "source_layers": ["cells"]},
+      "neighbourhoods": {"name": "Quartieri", "view": "access_inspector", "icon": "bi-houses", "source_layers": ["su_zones"]},
+      "municipio_xii": {"name": "Municipio XII", "view": "access_inspector", "icon": "bi-building", "source_layers": ["su_study_areas"]},
+      "h3": {"name": "H3 zones", "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]},
+      "study_areas": {"name": "Aree Studio", "view": "access_inspector", "icon": "bi-bounding-box-circles", "selectable": false, "source_layers": ["su_study_areas"]}
+    },
+    "areas": ["census", "neighbourhoods", "municipio_xii", "h3"]
+  }
 }
