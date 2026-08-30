@@ -10,10 +10,12 @@
   "routing": {"place_tree_priority": 100, "atlas_yield_delay_ms": 0},
   "data_model": {
     "runtime": {"source": "server"},
-    "default_area_group_id": "study_areas",
+    "study_area": {"minimum_area_overlap_ratio": 0.95},
+    "default_area_group_id": "neighbourhoods",
     "area_groups": {
+      "neighbourhoods": {"name": "Neighbourhoods", "order": 10, "view": "access_inspector", "icon": "bi-map", "source_layers": ["su_zones"]},
       "study_areas": {"name": "Study area", "order": 20, "view": "access_inspector", "icon": "bi-bounding-box", "selectable": false, "source_layers": ["su_study_areas"]},
-      "h3": {"name": "H3 cells", "order": 40, "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]}
+      "h3": {"name": "H3 cells", "order": 40, "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "resolution": 9, "source_layers": ["su_hexagons"]}
     },
     "centers": {"source_layers": ["analytical_centers", "accessible_origins"], "id_property": "id", "name_property": "name", "center_weight_property": "center_weight"},
     "segments": {"source_collections": ["links"]},
@@ -25,8 +27,8 @@
   },
   "map": {
     "enabled_providers": ["leaflet", "mapbox", "carto"],
-    "initial": {"provider": "leaflet", "tile": "light"},
-    "tiles": [["leaflet", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "light"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]]
+    "initial": {"provider": "mapbox", "tile": "light"},
+    "tiles": [["mapbox", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]]
   },
   "runtime_options": {
     "place_search_debounce_ms": 350,

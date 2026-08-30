@@ -9,6 +9,7 @@
     "study_area": {
       "name": "Municipio XII",
       "area_group_id": "study_areas",
+      "minimum_area_overlap_ratio": 0.95,
       "selector": {"property": "municipio", "values": ["XII"]},
       "membership": {"area_group_id": "neighbourhoods", "name_property": "denominazi"}
     },
@@ -18,7 +19,7 @@
       "neighbourhoods": {"name": "Quartieri", "order": 10, "view": "access_inspector", "icon": "bi-map", "source_layers": ["su_zones"]},
       "study_areas": {"name": "Municipio XII", "order": 20, "view": "access_inspector", "icon": "bi-bounding-box", "selectable": false, "source_layers": ["su_study_areas"]},
       "census": {"name": "Sezioni censuarie", "order": 30, "view": "access_inspector", "icon": "bi-grid-3x3-gap", "source_layers": ["cells"]},
-      "h3": {"name": "Celle H3", "order": 40, "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]}
+      "h3": {"name": "Celle H3", "order": 40, "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "resolution": 9, "source_layers": ["su_hexagons"]}
     }
   }
 }
