@@ -105,10 +105,16 @@ Pilot configuration may progressively include other domains such as:
 - application features;
 - map and interface configuration.
 
-`data_model.import_bbox` may declare the pilot model-import extent as
+`data_model.study_area` identifies the pilot's geographical boundary through
+an Area Group and an optional property selector. The boundary is the complete
+geometry of the matching polygons, not their rectangular extent. For example,
+Rome selects the Municipio XII polygons from the non-selectable `study_areas`
+group.
+
+`data_model.data_bbox` separately declares the data-import extent as
 `[minLongitude, minLatitude, maxLongitude, maxLatitude]`. Servers use polygon
-intersection with this extent when materializing configured Area Groups; it is
-an ingestion filter and does not clip the source geometries.
+intersection with this rectangle when materializing configured Area Groups;
+it does not clip source geometries that cross the rectangle.
 
 ## Extensions and overrides
 
