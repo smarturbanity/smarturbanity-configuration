@@ -12,7 +12,7 @@
     "runtime": {"source": "server"},
     "default_area_group_id": "study_areas",
     "area_groups": {
-      "study_areas": {"name": "Study areas", "view": "access_inspector", "icon": "bi-bounding-box", "source_layers": ["su_study_areas"]},
+      "study_areas": {"name": "Study areas", "view": "access_inspector", "icon": "bi-bounding-box-circles", "selectable": false, "source_layers": ["su_study_areas"]},
       "h3": {"name": "H3 zones", "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]}
     },
     "areas": ["study_areas", "h3"],
@@ -26,7 +26,7 @@
   },
   "map": {
     "enabled_providers": ["leaflet", "mapbox", "carto"],
-    "initial": {"provider": "leaflet", "tile": "openstreetmap"},
+    "initial": {"provider": "leaflet", "tile": "light"},
     "tiles": [["leaflet", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "light"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]]
   },
   "runtime_options": {
