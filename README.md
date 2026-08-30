@@ -105,6 +105,11 @@ Pilot configuration may progressively include other domains such as:
 - application features;
 - map and interface configuration.
 
+`data_model.import_bbox` may declare the pilot model-import extent as
+`[minLongitude, minLatitude, maxLongitude, maxLatitude]`. Servers use polygon
+intersection with this extent when materializing configured Area Groups; it is
+an ingestion filter and does not clip the source geometries.
+
 ## Extensions and overrides
 
 Some SmartUrbanity definitions are shared across pilots, while others may require local adaptation.
