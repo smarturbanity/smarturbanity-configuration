@@ -3,5 +3,17 @@
   "pilot_id": "rome",
 
   "mode_selection": ["walk", "bike", "transit"],
-  "default_mode": "walk"
+  "default_mode": "walk",
+  "data_model": {
+    "runtime": {"source": "file", "entity_groups_path": "/api/v1/entity-groups", "entity_groups": ["area_groups", "areas", "centers", "center_area_mapping", "segments", "connections", "supporting_elements", "attribute_overrides"]},
+    "default_area_group_id": "neighbourhoods",
+    "area_groups": {
+      "census": {"name": "Censo", "view": "access_inspector", "icon": "bi-map", "source_layers": ["cells"]},
+      "neighbourhoods": {"name": "Quartieri", "view": "access_inspector", "icon": "bi-bounding-box", "source_layers": ["su_zones"]},
+      "municipalities": {"name": "Municipi", "view": "access_inspector", "icon": "bi-map", "source_layers": ["municipio_01", "municipio_08", "municipio_11", "municipio_12", "municipio_13"]},
+      "h3": {"name": "H3 zones", "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "source_layers": ["su_hexagons"]},
+      "study_areas": {"name": "Aree Studio", "view": "access_inspector", "icon": "bi-hexagon", "source_layers": ["su_study_areas"]}
+    },
+    "areas": ["census", "neighbourhoods", "municipalities", "h3", "study_areas"]
+  }
 }
