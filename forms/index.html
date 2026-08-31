@@ -32,8 +32,8 @@
       content="Explore the official SmartUrbanity questionnaires on behaviour, perceptions, context, safety and mobility."
     />
 
-    <link rel="apple-touch-icon" href="docs/assets/SmartUrbanity/smarturbanity_logo.png" />
-    <link rel="icon" href="docs/assets/SmartUrbanity/smarturbanity_favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../docs/assets/SmartUrbanity/smarturbanity_logo.png" />
+    <link rel="icon" href="../docs/assets/SmartUrbanity/smarturbanity_favicon.png" type="image/png" />
 
     <style>
       :focus-visible {
@@ -142,7 +142,7 @@
 
     <div id="smarturbanity-footer"></div>
 
-    <script src="docs/assets/SmartUrbanity/smarturbanity-web-init.js"></script>
+    <script src="../docs/assets/SmartUrbanity/smarturbanity-web-init.js"></script>
 
     <script>
       const RAW_BASE_URL =
@@ -205,7 +205,7 @@
 
       async function fetchIndex() {
         try {
-          return await fetchJson("./forms/index.json", "Cannot load local SmartUrbanity questionnaire index");
+          return await fetchJson("./index.json", "Cannot load local SmartUrbanity questionnaire index");
         } catch (err) {
           if (IS_FILE_PREVIEW) {
             throw new Error("Direct file preview cannot load local JSON. Start a local static server from the repository root.");
@@ -217,7 +217,7 @@
 
       async function fetchQuestionnaire(filename) {
         try {
-          return await fetchJson(`./forms/${encodePath(filename)}`, `Cannot load local ${filename}`);
+          return await fetchJson(`./${encodePath(filename)}`, `Cannot load local ${filename}`);
         } catch (err) {
           if (IS_FILE_PREVIEW) {
             throw new Error(`Direct file preview cannot load local JSON file: ${filename}`);
