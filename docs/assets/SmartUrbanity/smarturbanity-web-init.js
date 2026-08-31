@@ -35,7 +35,7 @@
   }
 
   window.initLangToggle = function initLangToggle() {
-    const btn = document.getElementById("toggleLang");
+    const select = document.getElementById("language-select");
     const main = document.querySelector("main");
     const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
     const supported = Array.from(new Set([
@@ -47,17 +47,21 @@
     window.currentLang = initial;
 
     function showLang(l) {
+      const availablePageLanguages = new Set(
+        Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang"))
+      );
+      const displayLang = availablePageLanguages.has(l) ? l : "en";
       document.querySelectorAll("[data-lang]").forEach((el) => {
         const visibleDisplay = el.tagName === "SPAN" ? "inline" : "block";
-        el.style.display = el.getAttribute("data-lang") === l ? visibleDisplay : "none";
+        el.style.display = el.getAttribute("data-lang") === displayLang ? visibleDisplay : "none";
       });
 
       if (main) main.setAttribute("lang", l);
       window.currentLang = l;
 
-      if (btn) {
-        btn.textContent = l.toUpperCase();
-        btn.setAttribute("aria-label", `Change language. Current: ${l}`);
+      if (select) {
+        select.value = l;
+        select.setAttribute("aria-label", `Select language. Current: ${l}`);
       }
 
       window.dispatchEvent(new CustomEvent("smarturbanity:langchange", { detail: { lang: l } }));
@@ -66,11 +70,15 @@
     window.setLang = showLang;
     showLang(window.currentLang);
 
-    if (btn) {
-      btn.addEventListener("click", () => {
-        const index = supported.indexOf(window.currentLang);
-        showLang(supported[(index + 1) % supported.length]);
+    if (select) {
+      select.textContent = "";
+      supported.forEach((language) => {
+        const option = document.createElement("option");
+        option.value = language;
+        option.textContent = language.toUpperCase();
+        select.appendChild(option);
       });
+      select.addEventListener("change", () => showLang(select.value));
     }
   };
 
