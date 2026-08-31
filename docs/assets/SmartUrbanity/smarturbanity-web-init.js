@@ -39,7 +39,7 @@
     const main = document.querySelector("main");
     const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
     const supported = Array.from(new Set([
-      ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang")),
+      ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat(),
       "en", "it", "fr", "de", "tr", "fa", "hu", "ar"
     ].filter(Boolean)));
     const initial = supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
@@ -48,12 +48,13 @@
 
     function showLang(l) {
       const availablePageLanguages = new Set(
-        Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang"))
+        Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat()
       );
       const displayLang = availablePageLanguages.has(l) ? l : "en";
       document.querySelectorAll("[data-lang]").forEach((el) => {
         const visibleDisplay = el.tagName === "SPAN" ? "inline" : "block";
-        el.style.display = el.getAttribute("data-lang") === displayLang ? visibleDisplay : "none";
+        const languages = el.getAttribute("data-lang").split(/\s+/);
+        el.style.display = languages.includes(displayLang) ? visibleDisplay : "none";
       });
 
       if (main) main.setAttribute("lang", l);
