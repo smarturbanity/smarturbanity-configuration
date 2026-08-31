@@ -38,7 +38,13 @@
     const btn = document.getElementById("toggleLang");
     const main = document.querySelector("main");
     const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    window.currentLang = lang.startsWith("it") ? "it" : "en";
+    const supported = Array.from(new Set([
+      ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang")),
+      "en", "it", "fr", "de", "tr", "fa", "hu", "ar"
+    ].filter(Boolean)));
+    const initial = supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
+    window.supportedLanguages = supported;
+    window.currentLang = initial;
 
     function showLang(l) {
       document.querySelectorAll("[data-lang]").forEach((el) => {
@@ -51,7 +57,7 @@
 
       if (btn) {
         btn.textContent = l.toUpperCase();
-        btn.setAttribute("aria-label", `Change language. Current: ${l === "en" ? "English" : "Italiano"}`);
+        btn.setAttribute("aria-label", `Change language. Current: ${l}`);
       }
 
       window.dispatchEvent(new CustomEvent("smarturbanity:langchange", { detail: { lang: l } }));
@@ -61,7 +67,10 @@
     showLang(window.currentLang);
 
     if (btn) {
-      btn.addEventListener("click", () => showLang(window.currentLang === "en" ? "it" : "en"));
+      btn.addEventListener("click", () => {
+        const index = supported.indexOf(window.currentLang);
+        showLang(supported[(index + 1) % supported.length]);
+      });
     }
   };
 
