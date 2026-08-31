@@ -1,0 +1,37 @@
+{
+  "version": "0.1.0",
+  "pilot_id": "rome",
+
+  "mode_selection": ["walk", "bike", "transit"],
+  "default_mode": "walk",
+  "data_model": {
+    "runtime": {"source": "server"},
+    "study_area": {
+      "name": "Municipio XII",
+      "area_group_id": "study_areas",
+      "minimum_area_overlap_ratio": 0.5,
+      "selector": {"property": "municipio", "values": ["XII"]},
+      "membership": {"area_group_id": "neighbourhoods", "name_property": "denominazi"}
+    },
+    "data_bbox_buffer_meters": 1000,
+    "data_bbox": [12.22488438786681, 41.82752843573868, 12.487301122135545, 41.917419029041276],
+    "connections": {
+      "source_collections": ["nodes"],
+      "source_selectors": [{"property": "osm.highway", "values": ["crossing"]}],
+      "exclude_selectors": [{"property": "osm.crossing", "values": ["no"]}],
+      "type": "crossing",
+      "id_prefix": "osm-node:",
+      "mode_access": {
+        "walk": {"default": true, "property": "osm.foot"},
+        "bike": {"property": "osm.bicycle"}
+      }
+    },
+    "default_area_group_id": "neighbourhoods",
+    "area_groups": {
+      "neighbourhoods": {"name": "Quartieri", "order": 10, "view": "access_inspector", "icon": "bi-map", "source_layers": ["su_zones"]},
+      "study_areas": {"name": "Municipio XII", "order": 20, "view": "access_inspector", "icon": "bi-bounding-box", "selectable": false, "source_layers": ["su_study_areas"]},
+      "census": {"name": "Sezioni censuarie", "order": 30, "view": "access_inspector", "icon": "bi-grid-3x3-gap", "source": "server", "source_layers": ["cells"]},
+      "h3": {"name": "Celle H3", "order": 40, "view": "access_inspector", "icon": "bi-hexagon", "source": "server", "resolution": 9, "source_layers": ["su_hexagons"]}
+    }
+  }
+}

@@ -8,9 +8,10 @@ The repository provides version-controlled, machine-readable configuration share
 
 The repository follows three main principles:
 
-1. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
-2. **Pilot configurations** define which capabilities and configurations are available for each pilot and may extend or override shared definitions.
-3. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
+1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
+2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
+3. **Pilot configurations** contain only pilot-specific additions or overrides.
+4. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
@@ -40,6 +41,11 @@ smarturbanity-configuration/
 │
 └── README.md
 ```
+
+Directory `index.json` files enumerate their direct children. A consumer loads
+the root `base.json`, then applies the selected pilot JSON with a deep merge;
+pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
+is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
@@ -98,6 +104,27 @@ Pilot configuration may progressively include other domains such as:
 - campaigns and participation phases;
 - application features;
 - map and interface configuration.
+
+`data_model.study_area` identifies the pilot's geographical boundary through
+an Area Group and an optional property selector. The boundary is the complete
+geometry of the matching polygons, not their rectangular extent. For example,
+Rome selects the Municipio XII polygons from the non-selectable `study_areas`
+group.
+When Study Area records name the included entities of an analytical Area Group,
+`study_area.membership` declares that group and common name property. Rome uses
+`denominazi` to match all 18 Study Area records to their Neighborhoods; other
+Area Groups use geometric intersection with the resulting boundary.
+
+`data_model.data_bbox` separately declares the hard data-loading extent as
+`[minLongitude, minLatitude, maxLongitude, maxLatitude]`. Spatial entities must
+be fully contained by this rectangle; geometries that cross it are not loaded.
+
+Area Group `order` controls the selector order and `selectable: false` keeps a
+technical boundary group in the model without presenting it as an analytical
+choice. Rome exposes Quartieri, Sezioni censuarie and Celle H3 in that order;
+the Municipio XII polygons define the Study Area boundary only. Areas outside
+that boundary may remain loaded only when fully contained by `data_bbox`, but
+Access Inspector shows them with one neutral colour instead of a KPI class.
 
 ## Extensions and overrides
 
