@@ -1,5 +1,7 @@
 {
   "version": "0.1.0",
+  "update_each_click": true,
+  "kpis": {"default_area": "opportunity_coverage"},
   "mode_selection": ["walk", "transit"],
   "default_mode": "walk",
   "accessibility_thresholds": {
@@ -10,7 +12,7 @@
   "routing": {"place_tree_priority": 100, "atlas_yield_delay_ms": 0},
   "data_model": {
     "runtime": {"source": "server"},
-    "study_area": {"minimum_area_overlap_ratio": 0.95},
+    "study_area": {"minimum_area_overlap_ratio": 0.5},
     "default_area_group_id": "neighbourhoods",
     "area_groups": {
       "neighbourhoods": {"name": "Neighbourhoods", "order": 10, "view": "access_inspector", "icon": "bi-map", "source_layers": ["su_zones"]},
@@ -28,14 +30,38 @@
   "map": {
     "enabled_providers": ["leaflet", "mapbox", "carto"],
     "initial": {"provider": "mapbox", "tile": "light"},
-    "tiles": [["mapbox", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]]
+    "tiles": [["mapbox", "light"], ["leaflet", "dark"], ["leaflet", "openstreetmap"], ["mapbox", "satellite"], ["carto", "light"], ["carto", "dark"]],
+    "visualizations": {
+      "access_inspector": {
+        "label": "#Map theme", "tooltip": "#Map theme", "icon": "bi-palette",
+        "heading": "#Colour areas by",
+        "hint": "#This changes the map colours and area comparison, not the travel cutoff.",
+        "default": "opportunity_coverage",
+        "options": [
+          {"id": "opportunity_coverage", "label": "#Opportunity coverage", "icon": "bi-bullseye"},
+          {"id": "services", "label": "#Accessible services", "icon": "bi-building"},
+          {"id": "opportunities", "label": "#Accessible opportunities", "icon": "bi-pin-map"},
+          {"id": "travel_metric", "label": "#Average travel effort", "icon": "bi-clock"}
+        ]
+      },
+      "reach_explorer": {
+        "label": "#Map theme",
+        "default": "network_type",
+        "options": [
+          {"id": "network_type", "label": "#Network type", "icon": "bi-signpost-split"},
+          {"id": "use_difficulty", "label": "#Use difficulty", "icon": "bi-universal-access", "configure": true, "propertyCandidates": ["pedestrian_use_difficulty", "cyclist_use_difficulty"]},
+          {"id": "perceived_risk", "label": "#Perceived risk", "icon": "bi-shield-exclamation", "configure": true, "propertyCandidates": ["pedestrian_perceived_risk", "cyclist_perceived_risk", "tunnel_perceived_safety", "bridge_perceived_safety"]},
+          {"id": "improvement_priority", "label": "#Improvement priority", "icon": "bi-flag", "configure": true, "propertyCandidates": ["segment_improvement_importance", "connection_improvement_importance"]}
+        ]
+      }
+    }
   },
   "runtime_options": {
     "place_search_debounce_ms": 350,
     "export_url_revoke_delay_ms": 1000,
     "map_initialization": {"task_id": "smarturbanity_access_atlas_initialization", "prepare_message": "Preparing Access Atlas map…", "routing_message": "Preparing routing model…", "layers_message": "Creating map layers…", "render_message": "Rendering Access Atlas map…", "completed_message": "Access Atlas map ready", "yield_delay_ms": 0, "completion_auto_clear_ms": 750}
   },
-  "layer_names": {"zones_shapes": "#Areas", "zones_centroids": "#Area calculation points", "study_areas_shapes": "#Study Area boundary", "data_bbox_shapes": "#Data bounding box", "access_points": "#Access Points", "graph_links": "#Transport network", "access_atlas_place_catchments": "#Place catchments", "access_atlas_reachable_paths": "#Reachable routes", "selected_radius": "#Selected area"},
+  "layer_names": {"zones_shapes": "#Areas", "zones_centroids": "#Area calculation points", "study_areas_shapes": "#Study Area boundary", "data_bbox_shapes": "#Data bounding box", "access_points": "#Access Points", "graph_links": "#Transport network", "connections": "#Connections", "access_atlas_place_catchments": "#Place catchments", "access_atlas_reachable_paths": "#Reachable routes", "selected_radius": "#Selected area"},
   "area_sources": {"study_area": null, "citizen_input_area": null, "area_groups": []},
   "access_hub": {
     "views": {"defaultId": "service", "options": [{"id": "service", "status": "ready", "enabled": true, "text": " Service", "tooltip": "#Service", "bi_class": "bi-grid-3x3-gap"}, {"id": "infrastructure", "status": "draft", "enabled": true, "text": " Infrastructure", "tooltip": "#Infrastructure", "bi_class": "bi-buildings"}, {"id": "perception", "status": "planned", "enabled": true, "text": " Perception", "tooltip": "#Perception", "bi_class": "bi-eye"}]},
