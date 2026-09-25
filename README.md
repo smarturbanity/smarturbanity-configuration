@@ -186,7 +186,7 @@ code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and 
 not a secret; keep it unchanged, because changing it separates future answers from
 earlier ones. The email itself is never stored.
 
-The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the gate and minor-page texts, keyed by language and `#` tag, for languages the application dictionary does not include (fr, de, tr, hu, ar) and for the SmartUrbanity consent text in every language.
+The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
 ## Survey schedule and campaigns
 
