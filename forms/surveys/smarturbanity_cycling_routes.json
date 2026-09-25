@@ -1,0 +1,562 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Cycling routes and parking",
+    "questionnaire_id": "smarturbanity_cycling_routes",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Cycling routes and parking",
+      "description": "<p>How you choose your cycling routes, where you park and what would help you cycle more. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Cycling routes and parking",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Do you cycle (including e-bike or bike sharing) at least once a week?",
+            "answer_key": "bike_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Routes",
+        "description": "<p>Tell us how often these things happen to you.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How often do you take a longer route to avoid bad road surfaces (holes, cobblestones)?",
+            "answer_key": "bike_avoid_surface",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you take a longer route to avoid steep slopes?",
+            "answer_key": "bike_avoid_slopes",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you take a longer route to avoid streets with heavy or fast traffic?",
+            "answer_key": "bike_avoid_traffic",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you take a longer route to avoid dark or poorly lit streets?",
+            "answer_key": "bike_avoid_dark",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do bad road surfaces make you slow down?",
+            "answer_key": "bike_slowed_surface",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you decide not to cycle after dark because of poor lighting?",
+            "answer_key": "bike_skip_dark",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you find it hard to find your way because cycle signs are missing or unclear?",
+            "answer_key": "bike_wayfinding",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Parking and improvements",
+        "description": "<p>Where you leave your bike and what would help you.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How good is bike parking at your most frequent destination?",
+            "answer_key": "bike_parking_destination",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very poor: nowhere safe to park",
+                "value": "very_poor"
+              },
+              {
+                "text": "Poor: too few spaces or too far",
+                "value": "poor"
+              },
+              {
+                "text": "Partly adequate: not always handy or safe",
+                "value": "partial"
+              },
+              {
+                "text": "Good: I usually find a place",
+                "value": "mostly_good"
+              },
+              {
+                "text": "Excellent: always safe and handy",
+                "value": "excellent"
+              }
+            ]
+          },
+          {
+            "text": "How often has the lack of safe bike parking made you leave your bike at home?",
+            "answer_key": "bike_parking_changed_plans",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "What would most encourage you to cycle more? (Up to 3)",
+            "answer_key": "bike_improvements",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing, things are fine as they are",
+                "value": "nothing"
+              },
+              {
+                "text": "More separated cycle lanes",
+                "value": "separated_lanes"
+              },
+              {
+                "text": "Better road surfaces",
+                "value": "surfaces"
+              },
+              {
+                "text": "Safe bike parking at destinations",
+                "value": "parking_destination"
+              },
+              {
+                "text": "Safe bike storage at home",
+                "value": "storage_home"
+              },
+              {
+                "text": "Slower traffic in residential streets",
+                "value": "slower_traffic"
+              },
+              {
+                "text": "Safer junctions and crossings",
+                "value": "junctions"
+              },
+              {
+                "text": "More trees and shade",
+                "value": "shade"
+              },
+              {
+                "text": "Better lighting",
+                "value": "lighting"
+              },
+              {
+                "text": "Cycling courses",
+                "value": "training"
+              },
+              {
+                "text": "Financial incentives",
+                "value": "incentives"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Cycling routes and parking": "SmartUrbanity - Cycling routes and parking",
+      "#Cycling routes and parking": "Cycling routes and parking",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Do you cycle (including e-bike or bike sharing) at least once a week?": "Do you cycle (including e-bike or bike sharing) at least once a week?",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Routes": "Routes",
+      "#<p>Tell us how often these things happen to you.</p>": "<p>Tell us how often these things happen to you.</p>",
+      "#How often do you take a longer route to avoid bad road surfaces (holes, cobblestones)?": "How often do you take a longer route to avoid bad road surfaces (holes, cobblestones)?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
+      "#How often do you take a longer route to avoid steep slopes?": "How often do you take a longer route to avoid steep slopes?",
+      "#How often do you take a longer route to avoid streets with heavy or fast traffic?": "How often do you take a longer route to avoid streets with heavy or fast traffic?",
+      "#How often do you take a longer route to avoid dark or poorly lit streets?": "How often do you take a longer route to avoid dark or poorly lit streets?",
+      "#How often do bad road surfaces make you slow down?": "How often do bad road surfaces make you slow down?",
+      "#How often do you decide not to cycle after dark because of poor lighting?": "How often do you decide not to cycle after dark because of poor lighting?",
+      "#How often do you find it hard to find your way because cycle signs are missing or unclear?": "How often do you find it hard to find your way because cycle signs are missing or unclear?",
+      "#Parking and improvements": "Parking and improvements",
+      "#<p>Where you leave your bike and what would help you.</p>": "<p>Where you leave your bike and what would help you.</p>",
+      "#How good is bike parking at your most frequent destination?": "How good is bike parking at your most frequent destination?",
+      "#Very poor: nowhere safe to park": "Very poor: nowhere safe to park",
+      "#Poor: too few spaces or too far": "Poor: too few spaces or too far",
+      "#Partly adequate: not always handy or safe": "Partly adequate: not always handy or safe",
+      "#Good: I usually find a place": "Good: I usually find a place",
+      "#Excellent: always safe and handy": "Excellent: always safe and handy",
+      "#How often has the lack of safe bike parking made you leave your bike at home?": "How often has the lack of safe bike parking made you leave your bike at home?",
+      "#What would most encourage you to cycle more? (Up to 3)": "What would most encourage you to cycle more? (Up to 3)",
+      "#Nothing, things are fine as they are": "Nothing, things are fine as they are",
+      "#More separated cycle lanes": "More separated cycle lanes",
+      "#Better road surfaces": "Better road surfaces",
+      "#Safe bike parking at destinations": "Safe bike parking at destinations",
+      "#Safe bike storage at home": "Safe bike storage at home",
+      "#Slower traffic in residential streets": "Slower traffic in residential streets",
+      "#Safer junctions and crossings": "Safer junctions and crossings",
+      "#More trees and shade": "More trees and shade",
+      "#Better lighting": "Better lighting",
+      "#Cycling courses": "Cycling courses",
+      "#Financial incentives": "Financial incentives",
+      "#<p>How you choose your cycling routes, where you park and what would help you cycle more. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How you choose your cycling routes, where you park and what would help you cycle more. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Cycling routes and parking": "SmartUrbanity - Percorsi e parcheggio in bici",
+      "#Cycling routes and parking": "Percorsi e parcheggio in bici",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Do you cycle (including e-bike or bike sharing) at least once a week?": "Vai in bici (anche elettrica o in sharing) almeno una volta a settimana?",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Routes": "Percorsi",
+      "#<p>Tell us how often these things happen to you.</p>": "<p>Dicci quanto spesso ti succedono queste cose.</p>",
+      "#How often do you take a longer route to avoid bad road surfaces (holes, cobblestones)?": "Quanto spesso fai un percorso più lungo per evitare strade con fondo rovinato (buche, sampietrini)?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
+      "#How often do you take a longer route to avoid steep slopes?": "Quanto spesso fai un percorso più lungo per evitare salite ripide?",
+      "#How often do you take a longer route to avoid streets with heavy or fast traffic?": "Quanto spesso fai un percorso più lungo per evitare strade con traffico intenso o veloce?",
+      "#How often do you take a longer route to avoid dark or poorly lit streets?": "Quanto spesso fai un percorso più lungo per evitare strade buie o poco illuminate?",
+      "#How often do bad road surfaces make you slow down?": "Quanto spesso il fondo stradale rovinato ti costringe a rallentare?",
+      "#How often do you decide not to cycle after dark because of poor lighting?": "Quanto spesso decidi di non andare in bici dopo il tramonto per la scarsa illuminazione?",
+      "#How often do you find it hard to find your way because cycle signs are missing or unclear?": "Quanto spesso fai fatica a orientarti perché la segnaletica ciclabile manca o non è chiara?",
+      "#Parking and improvements": "Parcheggio e miglioramenti",
+      "#<p>Where you leave your bike and what would help you.</p>": "<p>Dove lasci la bici e cosa ti aiuterebbe.</p>",
+      "#How good is bike parking at your most frequent destination?": "Quanto è adeguato il parcheggio per bici nella destinazione dove vai più spesso?",
+      "#Very poor: nowhere safe to park": "Molto scarso: nessun posto sicuro",
+      "#Poor: too few spaces or too far": "Scarso: pochi posti o troppo lontani",
+      "#Partly adequate: not always handy or safe": "In parte adeguato: non sempre comodo o sicuro",
+      "#Good: I usually find a place": "Buono: di solito trovo posto",
+      "#Excellent: always safe and handy": "Ottimo: sempre sicuro e comodo",
+      "#How often has the lack of safe bike parking made you leave your bike at home?": "Quanto spesso la mancanza di un parcheggio sicuro ti ha fatto lasciare la bici a casa?",
+      "#What would most encourage you to cycle more? (Up to 3)": "Cosa ti incoraggerebbe di più ad andare in bici più spesso? (Al massimo 3)",
+      "#Nothing, things are fine as they are": "Niente, va bene così",
+      "#More separated cycle lanes": "Più piste ciclabili separate dal traffico",
+      "#Better road surfaces": "Fondo stradale migliore",
+      "#Safe bike parking at destinations": "Parcheggi sicuri per bici a destinazione",
+      "#Safe bike storage at home": "Deposito sicuro per bici vicino a casa",
+      "#Slower traffic in residential streets": "Traffico più lento nelle strade residenziali",
+      "#Safer junctions and crossings": "Incroci e attraversamenti più sicuri",
+      "#More trees and shade": "Più alberi e ombra",
+      "#Better lighting": "Illuminazione migliore",
+      "#Cycling courses": "Corsi per andare in bici",
+      "#Financial incentives": "Incentivi economici",
+      "#<p>How you choose your cycling routes, where you park and what would help you cycle more. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Come scegli i percorsi in bici, dove parcheggi e cosa ti aiuterebbe a pedalare di più. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_cycling_routes",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

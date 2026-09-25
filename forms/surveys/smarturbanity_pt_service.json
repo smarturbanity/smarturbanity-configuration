@@ -1,0 +1,344 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Public transport service",
+    "questionnaire_id": "smarturbanity_pt_service",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Public transport service",
+      "description": "<p>This questionnaire is about crowding, reliability and delays on public transport. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Public transport service",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Do you use public transport (bus, tram, metro, train) at least once a week?",
+            "answer_key": "pt_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "On board and on time",
+        "description": "<p>Think about the lines you use most.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How comfortable do you feel with the number of people on board?",
+            "answer_key": "pt_crowding_comfort",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
+              },
+              {
+                "text": "A little uncomfortable",
+                "value": "uncomfortable"
+              },
+              {
+                "text": "It makes no difference",
+                "value": "neutral"
+              },
+              {
+                "text": "Quite comfortable",
+                "value": "comfortable"
+              },
+              {
+                "text": "Very comfortable",
+                "value": "very_comfortable"
+              }
+            ]
+          },
+          {
+            "text": "How much can you rely on the service on your route?",
+            "answer_key": "pt_reliability",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all: it doesn't meet my needs",
+                "value": "not_usable"
+              },
+              {
+                "text": "Only for a few fixed trips (e.g. work or school)",
+                "value": "some_trips"
+              },
+              {
+                "text": "For planned trips, not last-minute ones",
+                "value": "planned_trips"
+              },
+              {
+                "text": "I can rely on it, but I have to check the times",
+                "value": "plan_around"
+              },
+              {
+                "text": "I can use it without planning",
+                "value": "no_planning"
+              }
+            ]
+          },
+          {
+            "text": "How stressful are unexpected delays or disruptions?",
+            "answer_key": "pt_delay_stress",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all stressful",
+                "value": "not_stressful"
+              },
+              {
+                "text": "Slightly stressful",
+                "value": "slightly_stressful"
+              },
+              {
+                "text": "Moderately stressful",
+                "value": "moderately_stressful"
+              },
+              {
+                "text": "Very stressful",
+                "value": "very_stressful"
+              },
+              {
+                "text": "Extremely stressful",
+                "value": "extremely_stressful"
+              }
+            ]
+          },
+          {
+            "text": "What do delays make you do? (Up to 2)",
+            "answer_key": "pt_delay_behaviour",
+            "question_type": "multiple_options",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "max_answers": 2,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing changes",
+                "value": "nothing"
+              },
+              {
+                "text": "I leave earlier",
+                "value": "leave_earlier"
+              },
+              {
+                "text": "I change route or time",
+                "value": "change_route_time"
+              },
+              {
+                "text": "I avoid using it for important trips",
+                "value": "avoid_important"
+              },
+              {
+                "text": "I use another way of travelling",
+                "value": "change_mode"
+              }
+            ]
+          },
+          {
+            "text": "How do you feel about being seen using public transport?",
+            "answer_key": "pt_image",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I'd rather not be seen",
+                "value": "rather_not"
+              },
+              {
+                "text": "Sometimes a little uneasy",
+                "value": "sometimes_uneasy"
+              },
+              {
+                "text": "It makes no difference to me",
+                "value": "indifferent"
+              },
+              {
+                "text": "Completely comfortable",
+                "value": "comfortable"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Public transport service": "SmartUrbanity - Public transport service",
+      "#Public transport service": "Public transport service",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Do you use public transport (bus, tram, metro, train) at least once a week?",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#On board and on time": "On board and on time",
+      "#<p>Think about the lines you use most.</p>": "<p>Think about the lines you use most.</p>",
+      "#How comfortable do you feel with the number of people on board?": "How comfortable do you feel with the number of people on board?",
+      "#Very uncomfortable": "Very uncomfortable",
+      "#A little uncomfortable": "A little uncomfortable",
+      "#It makes no difference": "It makes no difference",
+      "#Quite comfortable": "Quite comfortable",
+      "#Very comfortable": "Very comfortable",
+      "#How much can you rely on the service on your route?": "How much can you rely on the service on your route?",
+      "#Not at all: it doesn't meet my needs": "Not at all: it doesn't meet my needs",
+      "#Only for a few fixed trips (e.g. work or school)": "Only for a few fixed trips (e.g. work or school)",
+      "#For planned trips, not last-minute ones": "For planned trips, not last-minute ones",
+      "#I can rely on it, but I have to check the times": "I can rely on it, but I have to check the times",
+      "#I can use it without planning": "I can use it without planning",
+      "#How stressful are unexpected delays or disruptions?": "How stressful are unexpected delays or disruptions?",
+      "#Not at all stressful": "Not at all stressful",
+      "#Slightly stressful": "Slightly stressful",
+      "#Moderately stressful": "Moderately stressful",
+      "#Very stressful": "Very stressful",
+      "#Extremely stressful": "Extremely stressful",
+      "#What do delays make you do? (Up to 2)": "What do delays make you do? (Up to 2)",
+      "#Nothing changes": "Nothing changes",
+      "#I leave earlier": "I leave earlier",
+      "#I change route or time": "I change route or time",
+      "#I avoid using it for important trips": "I avoid using it for important trips",
+      "#I use another way of travelling": "I use another way of travelling",
+      "#How do you feel about being seen using public transport?": "How do you feel about being seen using public transport?",
+      "#I'd rather not be seen": "I'd rather not be seen",
+      "#Sometimes a little uneasy": "Sometimes a little uneasy",
+      "#It makes no difference to me": "It makes no difference to me",
+      "#Completely comfortable": "Completely comfortable",
+      "#<p>This questionnaire is about crowding, reliability and delays on public transport. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This questionnaire is about crowding, reliability and delays on public transport. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Public transport service": "SmartUrbanity - Il servizio dei mezzi pubblici",
+      "#Public transport service": "Il servizio dei mezzi pubblici",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Usi i mezzi pubblici (bus, tram, metro, treno) almeno una volta a settimana?",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#On board and on time": "A bordo e in orario",
+      "#<p>Think about the lines you use most.</p>": "<p>Pensa alle linee che usi di più.</p>",
+      "#How comfortable do you feel with the number of people on board?": "Quanto ti senti a tuo agio con il numero di persone a bordo?",
+      "#Very uncomfortable": "Per niente a mio agio",
+      "#A little uncomfortable": "Poco a mio agio",
+      "#It makes no difference": "Mi è indifferente",
+      "#Quite comfortable": "Abbastanza a mio agio",
+      "#Very comfortable": "Del tutto a mio agio",
+      "#How much can you rely on the service on your route?": "Quanto puoi contare sul servizio lungo il tuo percorso?",
+      "#Not at all: it doesn't meet my needs": "Per niente: non risponde alle mie esigenze",
+      "#Only for a few fixed trips (e.g. work or school)": "Solo per pochi spostamenti fissi (ad es. lavoro o scuola)",
+      "#For planned trips, not last-minute ones": "Per gli spostamenti programmati, non per quelli all'ultimo momento",
+      "#I can rely on it, but I have to check the times": "Posso contarci, ma devo controllare gli orari",
+      "#I can use it without planning": "Posso usarlo senza programmare",
+      "#How stressful are unexpected delays or disruptions?": "Quanto sono stressanti i ritardi o le interruzioni improvvise?",
+      "#Not at all stressful": "Per niente stressante",
+      "#Slightly stressful": "Poco stressante",
+      "#Moderately stressful": "Abbastanza stressante",
+      "#Very stressful": "Molto stressante",
+      "#Extremely stressful": "Estremamente stressante",
+      "#What do delays make you do? (Up to 2)": "Cosa ti fanno fare i ritardi? (Al massimo 2)",
+      "#Nothing changes": "Non cambia niente",
+      "#I leave earlier": "Esco prima",
+      "#I change route or time": "Cambio percorso o orario",
+      "#I avoid using it for important trips": "Evito di usarlo per gli spostamenti importanti",
+      "#I use another way of travelling": "Uso un altro modo di spostarmi",
+      "#How do you feel about being seen using public transport?": "Come ti senti a farti vedere mentre usi i mezzi pubblici?",
+      "#I'd rather not be seen": "Preferirei non farmi vedere",
+      "#Sometimes a little uneasy": "A volte un po' a disagio",
+      "#It makes no difference to me": "Mi è indifferente",
+      "#Completely comfortable": "Del tutto a mio agio",
+      "#<p>This questionnaire is about crowding, reliability and delays on public transport. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario riguarda affollamento, affidabilità e ritardi dei mezzi pubblici. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_pt_service",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

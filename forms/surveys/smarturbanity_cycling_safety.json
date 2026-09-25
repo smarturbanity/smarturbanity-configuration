@@ -1,0 +1,527 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Cycling and safety",
+    "questionnaire_id": "smarturbanity_cycling_safety",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Cycling and safety",
+      "description": "<p>This questionnaire is about how safe you feel cycling in the city. Include e-bikes and bike sharing. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Cycling and safety",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Do you cycle (including e-bike or bike sharing) at least once a week?",
+            "answer_key": "bike_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cycling and safety",
+        "description": "<p>Think about your usual cycling routes.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Which type of bike do you use most?",
+            "answer_key": "bike_type",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "My own pedal bike",
+                "value": "pedal_own"
+              },
+              {
+                "text": "My own e-bike",
+                "value": "ebike_own"
+              },
+              {
+                "text": "Shared pedal bike",
+                "value": "shared_pedal"
+              },
+              {
+                "text": "Shared e-bike",
+                "value": "shared_ebike"
+              },
+              {
+                "text": "Cargo bike or adapted bike",
+                "value": "cargo_adapted"
+              }
+            ]
+          },
+          {
+            "text": "How confident do you feel cycling in city traffic?",
+            "answer_key": "bike_confidence",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all confident",
+                "value": "not_confident"
+              },
+              {
+                "text": "Slightly confident",
+                "value": "slightly_confident"
+              },
+              {
+                "text": "Moderately confident",
+                "value": "moderately_confident"
+              },
+              {
+                "text": "Very confident",
+                "value": "very_confident"
+              },
+              {
+                "text": "Extremely confident",
+                "value": "extremely_confident"
+              },
+              {
+                "text": "I never cycle in traffic",
+                "value": "never_in_traffic"
+              }
+            ]
+          },
+          {
+            "text": "How good are cycle lanes and cycle signs on your usual route?",
+            "answer_key": "bike_infra_adequacy",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very poor or missing",
+                "value": "very_poor"
+              },
+              {
+                "text": "Poor or with gaps",
+                "value": "poor"
+              },
+              {
+                "text": "Good on part of the route",
+                "value": "partial"
+              },
+              {
+                "text": "Good on most of the route",
+                "value": "mostly_good"
+              },
+              {
+                "text": "Excellent all along the route",
+                "value": "excellent"
+              }
+            ]
+          },
+          {
+            "text": "What obstacles do you find on your cycling routes? (Select all that apply)",
+            "answer_key": "bike_barriers",
+            "question_type": "multiple_options",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No particular obstacles",
+                "value": "none"
+              },
+              {
+                "text": "Holes, patches or cobblestones",
+                "value": "surfaces"
+              },
+              {
+                "text": "Steep or sudden slopes",
+                "value": "slopes"
+              },
+              {
+                "text": "Vehicles parked in cycle lanes",
+                "value": "parked_in_lane"
+              },
+              {
+                "text": "Pedestrians or e-scooters in cycle lanes",
+                "value": "people_in_lane"
+              },
+              {
+                "text": "Bins, signs or other objects in the way",
+                "value": "street_furniture"
+              },
+              {
+                "text": "No crossings or traffic lights for bikes",
+                "value": "no_crossings"
+              },
+              {
+                "text": "Badly designed junctions or roundabouts",
+                "value": "junctions"
+              }
+            ]
+          },
+          {
+            "text": "How confident are you that you can react to sudden dangers (car doors opening, vehicles cutting in)?",
+            "answer_key": "bike_hazard_confidence",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all confident",
+                "value": "not_confident"
+              },
+              {
+                "text": "Slightly confident",
+                "value": "slightly_confident"
+              },
+              {
+                "text": "Moderately confident",
+                "value": "moderately_confident"
+              },
+              {
+                "text": "Very confident",
+                "value": "very_confident"
+              },
+              {
+                "text": "Extremely confident",
+                "value": "extremely_confident"
+              }
+            ]
+          },
+          {
+            "text": "Which road users make you feel least safe when cycling? (Up to 3)",
+            "answer_key": "bike_risky_users",
+            "question_type": "multiple_options",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "None",
+                "value": "none"
+              },
+              {
+                "text": "Car drivers",
+                "value": "car_drivers"
+              },
+              {
+                "text": "Motorcycle or moped riders",
+                "value": "motorcyclists"
+              },
+              {
+                "text": "Bus drivers",
+                "value": "bus_drivers"
+              },
+              {
+                "text": "Delivery vehicles and riders",
+                "value": "delivery"
+              },
+              {
+                "text": "Taxi or car-service drivers",
+                "value": "taxi"
+              },
+              {
+                "text": "Other cyclists",
+                "value": "cyclists"
+              },
+              {
+                "text": "E-scooter riders",
+                "value": "escooter_riders"
+              },
+              {
+                "text": "Pedestrians",
+                "value": "pedestrians"
+              }
+            ]
+          },
+          {
+            "text": "How often do you ride on the pavement?",
+            "answer_key": "bike_on_pavement",
+            "question_type": "single_option",
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "Why do you ride on the pavement? (Select all that apply)",
+            "answer_key": "bike_on_pavement_why",
+            "question_type": "multiple_options",
+            "show_if": {
+              "bike_on_pavement": [
+                "rarely",
+                "sometimes",
+                "often",
+                "always"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "The road feels too dangerous",
+                "value": "road_dangerous"
+              },
+              {
+                "text": "There is no cycle lane",
+                "value": "no_cycle_lane"
+              },
+              {
+                "text": "It's shorter or quicker",
+                "value": "shortcut"
+              },
+              {
+                "text": "I'm cycling with children",
+                "value": "with_children"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Cycling and safety": "SmartUrbanity - Cycling and safety",
+      "#Cycling and safety": "Cycling and safety",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Do you cycle (including e-bike or bike sharing) at least once a week?": "Do you cycle (including e-bike or bike sharing) at least once a week?",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#<p>Think about your usual cycling routes.</p>": "<p>Think about your usual cycling routes.</p>",
+      "#Which type of bike do you use most?": "Which type of bike do you use most?",
+      "#My own pedal bike": "My own pedal bike",
+      "#My own e-bike": "My own e-bike",
+      "#Shared pedal bike": "Shared pedal bike",
+      "#Shared e-bike": "Shared e-bike",
+      "#Cargo bike or adapted bike": "Cargo bike or adapted bike",
+      "#How confident do you feel cycling in city traffic?": "How confident do you feel cycling in city traffic?",
+      "#Not at all confident": "Not at all confident",
+      "#Slightly confident": "Slightly confident",
+      "#Moderately confident": "Moderately confident",
+      "#Very confident": "Very confident",
+      "#Extremely confident": "Extremely confident",
+      "#I never cycle in traffic": "I never cycle in traffic",
+      "#How good are cycle lanes and cycle signs on your usual route?": "How good are cycle lanes and cycle signs on your usual route?",
+      "#Very poor or missing": "Very poor or missing",
+      "#Poor or with gaps": "Poor or with gaps",
+      "#Good on part of the route": "Good on part of the route",
+      "#Good on most of the route": "Good on most of the route",
+      "#Excellent all along the route": "Excellent all along the route",
+      "#What obstacles do you find on your cycling routes? (Select all that apply)": "What obstacles do you find on your cycling routes? (Select all that apply)",
+      "#No particular obstacles": "No particular obstacles",
+      "#Holes, patches or cobblestones": "Holes, patches or cobblestones",
+      "#Steep or sudden slopes": "Steep or sudden slopes",
+      "#Vehicles parked in cycle lanes": "Vehicles parked in cycle lanes",
+      "#Pedestrians or e-scooters in cycle lanes": "Pedestrians or e-scooters in cycle lanes",
+      "#Bins, signs or other objects in the way": "Bins, signs or other objects in the way",
+      "#No crossings or traffic lights for bikes": "No crossings or traffic lights for bikes",
+      "#Badly designed junctions or roundabouts": "Badly designed junctions or roundabouts",
+      "#How confident are you that you can react to sudden dangers (car doors opening, vehicles cutting in)?": "How confident are you that you can react to sudden dangers (car doors opening, vehicles cutting in)?",
+      "#Which road users make you feel least safe when cycling? (Up to 3)": "Which road users make you feel least safe when cycling? (Up to 3)",
+      "#None": "None",
+      "#Car drivers": "Car drivers",
+      "#Motorcycle or moped riders": "Motorcycle or moped riders",
+      "#Bus drivers": "Bus drivers",
+      "#Delivery vehicles and riders": "Delivery vehicles and riders",
+      "#Taxi or car-service drivers": "Taxi or car-service drivers",
+      "#Other cyclists": "Other cyclists",
+      "#E-scooter riders": "E-scooter riders",
+      "#Pedestrians": "Pedestrians",
+      "#How often do you ride on the pavement?": "How often do you ride on the pavement?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
+      "#Why do you ride on the pavement? (Select all that apply)": "Why do you ride on the pavement? (Select all that apply)",
+      "#The road feels too dangerous": "The road feels too dangerous",
+      "#There is no cycle lane": "There is no cycle lane",
+      "#It's shorter or quicker": "It's shorter or quicker",
+      "#I'm cycling with children": "I'm cycling with children",
+      "#<p>This questionnaire is about how safe you feel cycling in the city. Include e-bikes and bike sharing. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This questionnaire is about how safe you feel cycling in the city. Include e-bikes and bike sharing. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Cycling and safety": "SmartUrbanity - In bici e sicurezza",
+      "#Cycling and safety": "In bici e sicurezza",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Do you cycle (including e-bike or bike sharing) at least once a week?": "Vai in bici (anche elettrica o in sharing) almeno una volta a settimana?",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#<p>Think about your usual cycling routes.</p>": "<p>Pensa ai tuoi percorsi abituali in bici.</p>",
+      "#Which type of bike do you use most?": "Quale tipo di bici usi di più?",
+      "#My own pedal bike": "La mia bici tradizionale",
+      "#My own e-bike": "La mia bici elettrica",
+      "#Shared pedal bike": "Bici tradizionale in sharing",
+      "#Shared e-bike": "Bici elettrica in sharing",
+      "#Cargo bike or adapted bike": "Cargo bike o bici adattata",
+      "#How confident do you feel cycling in city traffic?": "Quanto ti senti sicuro/a a pedalare nel traffico cittadino?",
+      "#Not at all confident": "Per niente sicuro/a",
+      "#Slightly confident": "Poco sicuro/a",
+      "#Moderately confident": "Abbastanza sicuro/a",
+      "#Very confident": "Molto sicuro/a",
+      "#Extremely confident": "Del tutto sicuro/a",
+      "#I never cycle in traffic": "Non pedalo mai nel traffico",
+      "#How good are cycle lanes and cycle signs on your usual route?": "Quanto sono adeguate piste e segnaletica ciclabile sul tuo percorso abituale?",
+      "#Very poor or missing": "Molto scarse o assenti",
+      "#Poor or with gaps": "Scarse o interrotte",
+      "#Good on part of the route": "Buone solo su una parte del percorso",
+      "#Good on most of the route": "Buone su quasi tutto il percorso",
+      "#Excellent all along the route": "Ottime su tutto il percorso",
+      "#What obstacles do you find on your cycling routes? (Select all that apply)": "Quali ostacoli trovi sui tuoi percorsi in bici? (Puoi sceglierne più di uno)",
+      "#No particular obstacles": "Nessun ostacolo particolare",
+      "#Holes, patches or cobblestones": "Buche, rattoppi o sampietrini",
+      "#Steep or sudden slopes": "Salite ripide o improvvise",
+      "#Vehicles parked in cycle lanes": "Veicoli parcheggiati sulle piste ciclabili",
+      "#Pedestrians or e-scooters in cycle lanes": "Pedoni o monopattini sulle piste ciclabili",
+      "#Bins, signs or other objects in the way": "Cassonetti, cartelli o altri oggetti d'intralcio",
+      "#No crossings or traffic lights for bikes": "Mancano attraversamenti o semafori per bici",
+      "#Badly designed junctions or roundabouts": "Incroci o rotatorie progettati male",
+      "#How confident are you that you can react to sudden dangers (car doors opening, vehicles cutting in)?": "Quanto ti senti sicuro/a di saper reagire a pericoli improvvisi (portiere che si aprono, veicoli che tagliano la strada)?",
+      "#Which road users make you feel least safe when cycling? (Up to 3)": "Quali utenti della strada ti fanno sentire meno al sicuro in bici? (Al massimo 3)",
+      "#None": "Nessuno",
+      "#Car drivers": "Automobilisti",
+      "#Motorcycle or moped riders": "Motociclisti",
+      "#Bus drivers": "Autisti di bus",
+      "#Delivery vehicles and riders": "Veicoli e rider delle consegne",
+      "#Taxi or car-service drivers": "Tassisti o autisti con conducente",
+      "#Other cyclists": "Altri ciclisti",
+      "#E-scooter riders": "Chi usa il monopattino",
+      "#Pedestrians": "Pedoni",
+      "#How often do you ride on the pavement?": "Quanto spesso pedali sul marciapiede?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
+      "#Why do you ride on the pavement? (Select all that apply)": "Perché pedali sul marciapiede? (Puoi sceglierne più di uno)",
+      "#The road feels too dangerous": "La strada mi sembra troppo pericolosa",
+      "#There is no cycle lane": "Non c'è una pista ciclabile",
+      "#It's shorter or quicker": "È più breve o più veloce",
+      "#I'm cycling with children": "Sto pedalando con dei bambini",
+      "#<p>This questionnaire is about how safe you feel cycling in the city. Include e-bikes and bike sharing. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario riguarda quanto ti senti al sicuro in bici in città. Considera anche bici elettriche e bike sharing. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_cycling_safety",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

@@ -1,0 +1,431 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Near miss",
+    "questionnaire_id": "smarturbanity_near_miss_report",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Near miss",
+      "description": "<p>Near misses show where streets are dangerous before someone gets hurt. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Near miss",
+    "sections": [
+      {
+        "title": "What happened",
+        "description": "<p>Tell us about a moment when you were nearly hit or had a close call in traffic, and mark where it happened. If someone is hurt, call 112.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How were you travelling?",
+            "answer_key": "nm_your_mode",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot",
+                "value": "walk"
+              },
+              {
+                "text": "In a wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "By bike",
+                "value": "bike"
+              },
+              {
+                "text": "By e-scooter",
+                "value": "escooter"
+              },
+              {
+                "text": "By motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "By car",
+                "value": "car"
+              }
+            ]
+          },
+          {
+            "text": "When did it happen?",
+            "answer_key": "nm_when",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Just now",
+                "value": "just_now"
+              },
+              {
+                "text": "Earlier today",
+                "value": "today"
+              },
+              {
+                "text": "In the last 7 days",
+                "value": "this_week"
+              },
+              {
+                "text": "Longer ago",
+                "value": "earlier"
+              }
+            ]
+          },
+          {
+            "text": "What was the light like?",
+            "answer_key": "nm_light",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Daylight",
+                "value": "daylight"
+              },
+              {
+                "text": "Dawn or dusk",
+                "value": "dusk"
+              },
+              {
+                "text": "Dark, on a lit street",
+                "value": "dark_lit"
+              },
+              {
+                "text": "Dark, on an unlit street",
+                "value": "dark_unlit"
+              }
+            ]
+          },
+          {
+            "text": "Who was involved?",
+            "answer_key": "nm_other_party",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "A car",
+                "value": "car"
+              },
+              {
+                "text": "A motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "A bus",
+                "value": "bus"
+              },
+              {
+                "text": "A van or truck",
+                "value": "van_truck"
+              },
+              {
+                "text": "A bike",
+                "value": "bike"
+              },
+              {
+                "text": "An e-scooter",
+                "value": "escooter"
+              },
+              {
+                "text": "A pedestrian",
+                "value": "pedestrian"
+              }
+            ]
+          },
+          {
+            "text": "Where exactly were you?",
+            "answer_key": "nm_location_type",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On a zebra crossing without traffic lights",
+                "value": "zebra"
+              },
+              {
+                "text": "At a crossing with traffic lights",
+                "value": "signal"
+              },
+              {
+                "text": "Crossing where there was no crossing",
+                "value": "no_crossing"
+              },
+              {
+                "text": "On the pavement",
+                "value": "pavement"
+              },
+              {
+                "text": "Along the edge of the road",
+                "value": "road_edge"
+              },
+              {
+                "text": "In a cycle lane",
+                "value": "cycle_lane"
+              },
+              {
+                "text": "At a driveway or garage exit",
+                "value": "driveway"
+              }
+            ]
+          },
+          {
+            "text": "What did the other vehicle or person do? (Up to 3)",
+            "answer_key": "nm_what",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Didn't stop at the crossing",
+                "value": "no_stop"
+              },
+              {
+                "text": "Was turning",
+                "value": "turning"
+              },
+              {
+                "text": "Was going too fast",
+                "value": "speeding"
+              },
+              {
+                "text": "Went through a red light",
+                "value": "red_light"
+              },
+              {
+                "text": "Was reversing or parking",
+                "value": "reversing"
+              },
+              {
+                "text": "Passed too close",
+                "value": "close_pass"
+              },
+              {
+                "text": "A car door opened",
+                "value": "door"
+              },
+              {
+                "text": "Was riding on the pavement",
+                "value": "on_pavement"
+              },
+              {
+                "text": "We couldn't see each other (e.g. parked cars)",
+                "value": "not_seen"
+              }
+            ]
+          },
+          {
+            "text": "What happened to you?",
+            "answer_key": "nm_outcome",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": true,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing, but I got a fright",
+                "value": "fright"
+              },
+              {
+                "text": "I had to stop or jump back suddenly",
+                "value": "sudden_move"
+              },
+              {
+                "text": "There was contact, but no injury",
+                "value": "contact"
+              },
+              {
+                "text": "I fell",
+                "value": "fell"
+              },
+              {
+                "text": "I was injured",
+                "value": "injured"
+              }
+            ]
+          },
+          {
+            "text": "Anything else you want to tell us?",
+            "answer_key": "nm_comment",
+            "question_type": "text",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Near miss": "SmartUrbanity - Near miss",
+      "#Near miss": "Near miss",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#What happened": "What happened",
+      "#<p>Tell us about a moment when you were nearly hit or had a close call in traffic, and mark where it happened. If someone is hurt, call 112.</p>": "<p>Tell us about a moment when you were nearly hit or had a close call in traffic, and mark where it happened. If someone is hurt, call 112.</p>",
+      "#How were you travelling?": "How were you travelling?",
+      "#On foot": "On foot",
+      "#In a wheelchair or mobility scooter": "In a wheelchair or mobility scooter",
+      "#By bike": "By bike",
+      "#By e-scooter": "By e-scooter",
+      "#By motorcycle or moped": "By motorcycle or moped",
+      "#By car": "By car",
+      "#When did it happen?": "When did it happen?",
+      "#Just now": "Just now",
+      "#Earlier today": "Earlier today",
+      "#In the last 7 days": "In the last 7 days",
+      "#Longer ago": "Longer ago",
+      "#What was the light like?": "What was the light like?",
+      "#Daylight": "Daylight",
+      "#Dawn or dusk": "Dawn or dusk",
+      "#Dark, on a lit street": "Dark, on a lit street",
+      "#Dark, on an unlit street": "Dark, on an unlit street",
+      "#Who was involved?": "Who was involved?",
+      "#A car": "A car",
+      "#A motorcycle or moped": "A motorcycle or moped",
+      "#A bus": "A bus",
+      "#A van or truck": "A van or truck",
+      "#A bike": "A bike",
+      "#An e-scooter": "An e-scooter",
+      "#A pedestrian": "A pedestrian",
+      "#Where exactly were you?": "Where exactly were you?",
+      "#On a zebra crossing without traffic lights": "On a zebra crossing without traffic lights",
+      "#At a crossing with traffic lights": "At a crossing with traffic lights",
+      "#Crossing where there was no crossing": "Crossing where there was no crossing",
+      "#On the pavement": "On the pavement",
+      "#Along the edge of the road": "Along the edge of the road",
+      "#In a cycle lane": "In a cycle lane",
+      "#At a driveway or garage exit": "At a driveway or garage exit",
+      "#What did the other vehicle or person do? (Up to 3)": "What did the other vehicle or person do? (Up to 3)",
+      "#Didn't stop at the crossing": "Didn't stop at the crossing",
+      "#Was turning": "Was turning",
+      "#Was going too fast": "Was going too fast",
+      "#Went through a red light": "Went through a red light",
+      "#Was reversing or parking": "Was reversing or parking",
+      "#Passed too close": "Passed too close",
+      "#A car door opened": "A car door opened",
+      "#Was riding on the pavement": "Was riding on the pavement",
+      "#We couldn't see each other (e.g. parked cars)": "We couldn't see each other (e.g. parked cars)",
+      "#What happened to you?": "What happened to you?",
+      "#Nothing, but I got a fright": "Nothing, but I got a fright",
+      "#I had to stop or jump back suddenly": "I had to stop or jump back suddenly",
+      "#There was contact, but no injury": "There was contact, but no injury",
+      "#I fell": "I fell",
+      "#I was injured": "I was injured",
+      "#Anything else you want to tell us?": "Anything else you want to tell us?",
+      "#<p>Near misses show where streets are dangerous before someone gets hurt. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Near misses show where streets are dangerous before someone gets hurt. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Near miss": "SmartUrbanity - Quasi incidente",
+      "#Near miss": "Quasi incidente",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#What happened": "Cosa è successo",
+      "#<p>Tell us about a moment when you were nearly hit or had a close call in traffic, and mark where it happened. If someone is hurt, call 112.</p>": "<p>Raccontaci un momento in cui hai rischiato di essere investito/a o di scontrarti nel traffico, e segna dove è successo. Se qualcuno si è fatto male, chiama il 112.</p>",
+      "#How were you travelling?": "Come ti stavi spostando?",
+      "#On foot": "A piedi",
+      "#In a wheelchair or mobility scooter": "In sedia a rotelle o con scooter per disabili",
+      "#By bike": "In bici",
+      "#By e-scooter": "In monopattino",
+      "#By motorcycle or moped": "In moto o scooter",
+      "#By car": "In auto",
+      "#When did it happen?": "Quando è successo?",
+      "#Just now": "Proprio adesso",
+      "#Earlier today": "Oggi, qualche ora fa",
+      "#In the last 7 days": "Negli ultimi 7 giorni",
+      "#Longer ago": "Più tempo fa",
+      "#What was the light like?": "Com'era la luce?",
+      "#Daylight": "Luce del giorno",
+      "#Dawn or dusk": "Alba o tramonto",
+      "#Dark, on a lit street": "Buio, in una strada illuminata",
+      "#Dark, on an unlit street": "Buio, in una strada non illuminata",
+      "#Who was involved?": "Chi era coinvolto?",
+      "#A car": "Un'auto",
+      "#A motorcycle or moped": "Una moto o uno scooter",
+      "#A bus": "Un autobus",
+      "#A van or truck": "Un furgone o un camion",
+      "#A bike": "Una bici",
+      "#An e-scooter": "Un monopattino",
+      "#A pedestrian": "Un pedone",
+      "#Where exactly were you?": "Dove ti trovavi esattamente?",
+      "#On a zebra crossing without traffic lights": "Sulle strisce senza semaforo",
+      "#At a crossing with traffic lights": "A un attraversamento con semaforo",
+      "#Crossing where there was no crossing": "Attraversando dove non c'erano strisce",
+      "#On the pavement": "Sul marciapiede",
+      "#Along the edge of the road": "Al bordo della carreggiata",
+      "#In a cycle lane": "Su una pista ciclabile",
+      "#At a driveway or garage exit": "All'uscita di un passo carrabile o di un garage",
+      "#What did the other vehicle or person do? (Up to 3)": "Cosa ha fatto l'altro veicolo o l'altra persona? (Al massimo 3)",
+      "#Didn't stop at the crossing": "Non si è fermato alle strisce",
+      "#Was turning": "Stava svoltando",
+      "#Was going too fast": "Andava troppo veloce",
+      "#Went through a red light": "È passato col rosso",
+      "#Was reversing or parking": "Stava facendo retromarcia o parcheggiando",
+      "#Passed too close": "È passato troppo vicino",
+      "#A car door opened": "Si è aperta una portiera",
+      "#Was riding on the pavement": "Andava sul marciapiede",
+      "#We couldn't see each other (e.g. parked cars)": "Non ci vedevamo (ad es. per le auto parcheggiate)",
+      "#What happened to you?": "Cosa ti è successo?",
+      "#Nothing, but I got a fright": "Niente, ma mi sono spaventato/a",
+      "#I had to stop or jump back suddenly": "Ho dovuto fermarmi o spostarmi di colpo",
+      "#There was contact, but no injury": "C'è stato un contatto, ma senza ferite",
+      "#I fell": "Sono caduto/a",
+      "#I was injured": "Mi sono fatto/a male",
+      "#Anything else you want to tell us?": "Vuoi aggiungere qualcosa?",
+      "#<p>Near misses show where streets are dangerous before someone gets hurt. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>I quasi incidenti mostrano dove le strade sono pericolose prima che qualcuno si faccia male. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_near_miss_report",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "spatial_contribution",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": "Point",
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "spatialReports/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}
