@@ -1,0 +1,384 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Environment and your trips",
+    "questionnaire_id": "smarturbanity_environment",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Environment and your trips",
+      "description": "<p>How noise, air, weather and the look of places affect your trips. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Environment and your trips",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Which way of travelling do you use most often?",
+            "answer_key": "usual_mode",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot",
+                "value": "walk"
+              },
+              {
+                "text": "Wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "Bicycle (own)",
+                "value": "bike"
+              },
+              {
+                "text": "E-bike (own)",
+                "value": "ebike"
+              },
+              {
+                "text": "Shared bike or e-bike",
+                "value": "bike_shared"
+              },
+              {
+                "text": "E-scooter (own)",
+                "value": "escooter"
+              },
+              {
+                "text": "Shared e-scooter",
+                "value": "escooter_shared"
+              },
+              {
+                "text": "Public transport (bus, tram, metro, train)",
+                "value": "transit"
+              },
+              {
+                "text": "Car, as driver",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car, as passenger",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+                "value": "taxi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Environment",
+        "description": "<p>Think about your usual trips.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How much does traffic noise bother you when you are out?",
+            "answer_key": "noise_bother",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "A lot",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ]
+          },
+          {
+            "text": "How does air pollution (exhaust fumes, dust, bad smells) affect how you travel?",
+            "answer_key": "air_quality_effect",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "It has no effect",
+                "value": "no_effect"
+              },
+              {
+                "text": "I notice it, but I don't change anything",
+                "value": "notice"
+              },
+              {
+                "text": "I protect myself (e.g. mask, closed windows)",
+                "value": "adapt"
+              },
+              {
+                "text": "I change route or time",
+                "value": "change_route_time"
+              },
+              {
+                "text": "I use another way of travelling",
+                "value": "change_mode"
+              }
+            ]
+          },
+          {
+            "text": "How does bad weather (rain, wind, cold, great heat) affect how you travel?",
+            "answer_key": "weather_effect",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "It has no effect",
+                "value": "no_effect"
+              },
+              {
+                "text": "It's less comfortable, but I don't change anything",
+                "value": "less_comfortable"
+              },
+              {
+                "text": "I adapt (clothes, route, preparation)",
+                "value": "adapt"
+              },
+              {
+                "text": "I postpone or avoid some trips",
+                "value": "postpone"
+              },
+              {
+                "text": "I use another way of travelling",
+                "value": "change_mode"
+              }
+            ]
+          },
+          {
+            "text": "How do dirt and poor maintenance (litter, smells, broken glass) affect your trips?",
+            "answer_key": "cleanliness_effect",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "They have no effect",
+                "value": "no_effect"
+              },
+              {
+                "text": "I notice them, but carry on as usual",
+                "value": "notice"
+              },
+              {
+                "text": "They make the trip unpleasant, but I use the same route",
+                "value": "unpleasant"
+              },
+              {
+                "text": "I avoid some places or stretches",
+                "value": "avoid_parts"
+              },
+              {
+                "text": "I avoid that route completely",
+                "value": "avoid_route"
+              }
+            ]
+          },
+          {
+            "text": "How much do pleasant surroundings (buildings, squares, views) affect your trips?",
+            "answer_key": "visual_quality",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "I notice them, but they rarely change anything",
+                "value": "notice"
+              },
+              {
+                "text": "They sometimes affect my mood",
+                "value": "mood"
+              },
+              {
+                "text": "They strongly affect my experience",
+                "value": "strongly"
+              },
+              {
+                "text": "I sometimes choose routes because they are nicer",
+                "value": "choose_routes"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Environment and your trips": "SmartUrbanity - Environment and your trips",
+      "#Environment and your trips": "Environment and your trips",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Which way of travelling do you use most often?": "Which way of travelling do you use most often?",
+      "#On foot": "On foot",
+      "#Wheelchair or mobility scooter": "Wheelchair or mobility scooter",
+      "#Bicycle (own)": "Bicycle (own)",
+      "#E-bike (own)": "E-bike (own)",
+      "#Shared bike or e-bike": "Shared bike or e-bike",
+      "#E-scooter (own)": "E-scooter (own)",
+      "#Shared e-scooter": "Shared e-scooter",
+      "#Public transport (bus, tram, metro, train)": "Public transport (bus, tram, metro, train)",
+      "#Car, as driver": "Car, as driver",
+      "#Car, as passenger": "Car, as passenger",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Motorcycle or moped",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+      "#Environment": "Environment",
+      "#<p>Think about your usual trips.</p>": "<p>Think about your usual trips.</p>",
+      "#How much does traffic noise bother you when you are out?": "How much does traffic noise bother you when you are out?",
+      "#Not at all": "Not at all",
+      "#Slightly": "Slightly",
+      "#Moderately": "Moderately",
+      "#A lot": "A lot",
+      "#Extremely": "Extremely",
+      "#How does air pollution (exhaust fumes, dust, bad smells) affect how you travel?": "How does air pollution (exhaust fumes, dust, bad smells) affect how you travel?",
+      "#It has no effect": "It has no effect",
+      "#I notice it, but I don't change anything": "I notice it, but I don't change anything",
+      "#I protect myself (e.g. mask, closed windows)": "I protect myself (e.g. mask, closed windows)",
+      "#I change route or time": "I change route or time",
+      "#I use another way of travelling": "I use another way of travelling",
+      "#How does bad weather (rain, wind, cold, great heat) affect how you travel?": "How does bad weather (rain, wind, cold, great heat) affect how you travel?",
+      "#It's less comfortable, but I don't change anything": "It's less comfortable, but I don't change anything",
+      "#I adapt (clothes, route, preparation)": "I adapt (clothes, route, preparation)",
+      "#I postpone or avoid some trips": "I postpone or avoid some trips",
+      "#How do dirt and poor maintenance (litter, smells, broken glass) affect your trips?": "How do dirt and poor maintenance (litter, smells, broken glass) affect your trips?",
+      "#They have no effect": "They have no effect",
+      "#I notice them, but carry on as usual": "I notice them, but carry on as usual",
+      "#They make the trip unpleasant, but I use the same route": "They make the trip unpleasant, but I use the same route",
+      "#I avoid some places or stretches": "I avoid some places or stretches",
+      "#I avoid that route completely": "I avoid that route completely",
+      "#How much do pleasant surroundings (buildings, squares, views) affect your trips?": "How much do pleasant surroundings (buildings, squares, views) affect your trips?",
+      "#I notice them, but they rarely change anything": "I notice them, but they rarely change anything",
+      "#They sometimes affect my mood": "They sometimes affect my mood",
+      "#They strongly affect my experience": "They strongly affect my experience",
+      "#I sometimes choose routes because they are nicer": "I sometimes choose routes because they are nicer",
+      "#<p>How noise, air, weather and the look of places affect your trips. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How noise, air, weather and the look of places affect your trips. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Environment and your trips": "SmartUrbanity - L'ambiente e i tuoi spostamenti",
+      "#Environment and your trips": "L'ambiente e i tuoi spostamenti",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Which way of travelling do you use most often?": "Quale modo di spostarti usi più spesso?",
+      "#On foot": "A piedi",
+      "#Wheelchair or mobility scooter": "Sedia a rotelle o scooter per disabili",
+      "#Bicycle (own)": "Bicicletta (tua)",
+      "#E-bike (own)": "Bici elettrica (tua)",
+      "#Shared bike or e-bike": "Bici o bici elettrica in sharing",
+      "#E-scooter (own)": "Monopattino elettrico (tuo)",
+      "#Shared e-scooter": "Monopattino in sharing",
+      "#Public transport (bus, tram, metro, train)": "Mezzi pubblici (bus, tram, metro, treno)",
+      "#Car, as driver": "Auto, come conducente",
+      "#Car, as passenger": "Auto, come passeggero/a",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Moto o scooter",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente tramite app (ad es. Uber, FreeNow)",
+      "#Environment": "Ambiente",
+      "#<p>Think about your usual trips.</p>": "<p>Pensa ai tuoi spostamenti abituali.</p>",
+      "#How much does traffic noise bother you when you are out?": "Quanto ti dà fastidio il rumore del traffico quando sei in giro?",
+      "#Not at all": "Per niente",
+      "#Slightly": "Poco",
+      "#Moderately": "Abbastanza",
+      "#A lot": "Molto",
+      "#Extremely": "Moltissimo",
+      "#How does air pollution (exhaust fumes, dust, bad smells) affect how you travel?": "In che modo l'inquinamento dell'aria (gas di scarico, polvere, cattivi odori) influisce su come ti sposti?",
+      "#It has no effect": "Non ha alcun effetto",
+      "#I notice it, but I don't change anything": "Lo noto, ma non cambio niente",
+      "#I protect myself (e.g. mask, closed windows)": "Mi proteggo (ad es. mascherina, finestrini chiusi)",
+      "#I change route or time": "Cambio percorso o orario",
+      "#I use another way of travelling": "Uso un altro modo di spostarmi",
+      "#How does bad weather (rain, wind, cold, great heat) affect how you travel?": "In che modo il maltempo (pioggia, vento, freddo, gran caldo) influisce su come ti sposti?",
+      "#It's less comfortable, but I don't change anything": "È più scomodo, ma non cambio niente",
+      "#I adapt (clothes, route, preparation)": "Mi adatto (abbigliamento, percorso, preparazione)",
+      "#I postpone or avoid some trips": "Rimando o evito alcuni spostamenti",
+      "#How do dirt and poor maintenance (litter, smells, broken glass) affect your trips?": "In che modo sporcizia e scarsa manutenzione (rifiuti, cattivi odori, vetri rotti) influiscono sui tuoi spostamenti?",
+      "#They have no effect": "Non hanno alcun effetto",
+      "#I notice them, but carry on as usual": "Li noto, ma continuo come sempre",
+      "#They make the trip unpleasant, but I use the same route": "Rendono lo spostamento sgradevole, ma uso lo stesso percorso",
+      "#I avoid some places or stretches": "Evito alcuni luoghi o tratti",
+      "#I avoid that route completely": "Evito del tutto quel percorso",
+      "#How much do pleasant surroundings (buildings, squares, views) affect your trips?": "Quanto influisce un ambiente piacevole (edifici, piazze, panorami) sui tuoi spostamenti?",
+      "#I notice them, but they rarely change anything": "Lo noto, ma raramente cambia qualcosa",
+      "#They sometimes affect my mood": "A volte influisce sul mio umore",
+      "#They strongly affect my experience": "Influisce molto sulla mia esperienza",
+      "#I sometimes choose routes because they are nicer": "A volte scelgo i percorsi perché sono più belli",
+      "#<p>How noise, air, weather and the look of places affect your trips. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Come rumore, aria, meteo e aspetto dei luoghi influiscono sui tuoi spostamenti. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_environment",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

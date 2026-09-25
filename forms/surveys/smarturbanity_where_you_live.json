@@ -1,0 +1,537 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Where you live and go",
+    "questionnaire_id": "smarturbanity_where_you_live",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Where you live and go",
+      "description": "<p>This helps us compare different parts of the city. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Where you live and go",
+    "sections": [
+      {
+        "title": "Where you live and go",
+        "description": "<p>Think about Rome and Municipio XII.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "What is your connection to Municipio XII?",
+            "answer_key": "residence",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I live in Municipio XII",
+                "value": "live"
+              },
+              {
+                "text": "I come here regularly for work or study",
+                "value": "commute"
+              },
+              {
+                "text": "I'm visiting for leisure",
+                "value": "leisure_visit"
+              },
+              {
+                "text": "I'm here for a short time for another reason",
+                "value": "temporary"
+              }
+            ]
+          },
+          {
+            "text": "In which neighbourhood of Municipio XII do you live?",
+            "answer_key": "home_neighbourhood",
+            "question_type": "single_option",
+            "show_if": {
+              "residence": [
+                "live"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Bravetta",
+                "value": "bravetta"
+              },
+              {
+                "text": "Casal Lumbroso",
+                "value": "casal_lumbroso"
+              },
+              {
+                "text": "Colle Aurelio",
+                "value": "colle_aurelio"
+              },
+              {
+                "text": "Colli Portuensi",
+                "value": "colli_portuensi"
+              },
+              {
+                "text": "La Pisana",
+                "value": "la_pisana"
+              },
+              {
+                "text": "Massimina",
+                "value": "massimina"
+              },
+              {
+                "text": "Monteverde Nuovo",
+                "value": "monteverde_nuovo"
+              },
+              {
+                "text": "Monteverde Vecchio",
+                "value": "monteverde_vecchio"
+              },
+              {
+                "text": "Porta Portese",
+                "value": "porta_portese"
+              },
+              {
+                "text": "Santa Cecilia",
+                "value": "santa_cecilia"
+              },
+              {
+                "text": "Vignaccia",
+                "value": "vignaccia"
+              },
+              {
+                "text": "Villa Troili",
+                "value": "villa_troili"
+              },
+              {
+                "text": "Villini",
+                "value": "villini"
+              }
+            ]
+          },
+          {
+            "text": "Where do you live?",
+            "answer_key": "home_area",
+            "question_type": "single_option",
+            "show_if": {
+              "residence": [
+                "commute",
+                "leisure_visit",
+                "temporary"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Municipio I – Centro storico, Prati, Esquilino, Trastevere",
+                "value": "m01"
+              },
+              {
+                "text": "Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo",
+                "value": "m02"
+              },
+              {
+                "text": "Municipio III – Montesacro, Talenti, Fidene",
+                "value": "m03"
+              },
+              {
+                "text": "Municipio IV – Tiburtino, Pietralata, San Basilio",
+                "value": "m04"
+              },
+              {
+                "text": "Municipio V – Prenestino, Centocelle, Pigneto",
+                "value": "m05"
+              },
+              {
+                "text": "Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona",
+                "value": "m06"
+              },
+              {
+                "text": "Municipio VII – Appio Latino, Tuscolano, Cinecittà",
+                "value": "m07"
+              },
+              {
+                "text": "Municipio VIII – Ostiense, Garbatella, Appia Antica",
+                "value": "m08"
+              },
+              {
+                "text": "Municipio IX – EUR, Laurentino, Spinaceto",
+                "value": "m09"
+              },
+              {
+                "text": "Municipio X – Ostia, Acilia, Infernetto",
+                "value": "m10"
+              },
+              {
+                "text": "Municipio XI – Portuense, Magliana, Marconi",
+                "value": "m11"
+              },
+              {
+                "text": "Municipio XIII – Aurelio, Boccea, Casalotti",
+                "value": "m13"
+              },
+              {
+                "text": "Municipio XIV – Monte Mario, Primavalle, Ottavia",
+                "value": "m14"
+              },
+              {
+                "text": "Municipio XV – Cassia, Flaminia, Prima Porta",
+                "value": "m15"
+              },
+              {
+                "text": "Outside Rome",
+                "value": "outside_rome"
+              }
+            ]
+          },
+          {
+            "text": "Apart from your own neighbourhood, which areas of Rome do you go to most often? (Up to 3)",
+            "answer_key": "frequent_areas",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I mostly stay in my neighbourhood",
+                "value": "stay_local"
+              },
+              {
+                "text": "Municipio I – Centro storico, Prati, Esquilino, Trastevere",
+                "value": "m01"
+              },
+              {
+                "text": "Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo",
+                "value": "m02"
+              },
+              {
+                "text": "Municipio III – Montesacro, Talenti, Fidene",
+                "value": "m03"
+              },
+              {
+                "text": "Municipio IV – Tiburtino, Pietralata, San Basilio",
+                "value": "m04"
+              },
+              {
+                "text": "Municipio V – Prenestino, Centocelle, Pigneto",
+                "value": "m05"
+              },
+              {
+                "text": "Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona",
+                "value": "m06"
+              },
+              {
+                "text": "Municipio VII – Appio Latino, Tuscolano, Cinecittà",
+                "value": "m07"
+              },
+              {
+                "text": "Municipio VIII – Ostiense, Garbatella, Appia Antica",
+                "value": "m08"
+              },
+              {
+                "text": "Municipio IX – EUR, Laurentino, Spinaceto",
+                "value": "m09"
+              },
+              {
+                "text": "Municipio X – Ostia, Acilia, Infernetto",
+                "value": "m10"
+              },
+              {
+                "text": "Municipio XI – Portuense, Magliana, Marconi",
+                "value": "m11"
+              },
+              {
+                "text": "Municipio XII – Monteverde, Gianicolense, Pisana",
+                "value": "m12"
+              },
+              {
+                "text": "Municipio XIII – Aurelio, Boccea, Casalotti",
+                "value": "m13"
+              },
+              {
+                "text": "Municipio XIV – Monte Mario, Primavalle, Ottavia",
+                "value": "m14"
+              },
+              {
+                "text": "Municipio XV – Cassia, Flaminia, Prima Porta",
+                "value": "m15"
+              },
+              {
+                "text": "Outside Rome",
+                "value": "outside_rome"
+              }
+            ]
+          },
+          {
+            "text": "When you leave your neighbourhood, what are the main reasons? (Up to 3)",
+            "answer_key": "reasons_outside",
+            "question_type": "multiple_options",
+            "show_if": {
+              "frequent_areas": [
+                "m01",
+                "m02",
+                "m03",
+                "m04",
+                "m05",
+                "m06",
+                "m07",
+                "m08",
+                "m09",
+                "m10",
+                "m11",
+                "m12",
+                "m13",
+                "m14",
+                "m15",
+                "outside_rome"
+              ]
+            },
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Work or study",
+                "value": "work_study"
+              },
+              {
+                "text": "Grocery shopping",
+                "value": "shopping"
+              },
+              {
+                "text": "Health (doctor, pharmacy, hospital)",
+                "value": "health"
+              },
+              {
+                "text": "School or childcare",
+                "value": "school_childcare"
+              },
+              {
+                "text": "Leisure (restaurants, cinema, gym)",
+                "value": "leisure"
+              },
+              {
+                "text": "Visiting friends or family",
+                "value": "visit_people"
+              },
+              {
+                "text": "Offices and services (bank, post office, public offices)",
+                "value": "services"
+              },
+              {
+                "text": "Better prices or more choice elsewhere",
+                "value": "better_offer"
+              },
+              {
+                "text": "The services I need are missing in my neighbourhood",
+                "value": "missing_services"
+              },
+              {
+                "text": "The services in my neighbourhood are poor",
+                "value": "poor_services"
+              }
+            ]
+          },
+          {
+            "text": "How connected do you feel to the place where you live and to the people there?",
+            "answer_key": "place_attachment",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all connected",
+                "value": "not_connected"
+              },
+              {
+                "text": "Slightly connected",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately connected",
+                "value": "moderately"
+              },
+              {
+                "text": "Very connected",
+                "value": "very"
+              },
+              {
+                "text": "Extremely connected",
+                "value": "extremely"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Where you live and go": "SmartUrbanity - Where you live and go",
+      "#Where you live and go": "Where you live and go",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#<p>Think about Rome and Municipio XII.</p>": "<p>Think about Rome and Municipio XII.</p>",
+      "#What is your connection to Municipio XII?": "What is your connection to Municipio XII?",
+      "#I live in Municipio XII": "I live in Municipio XII",
+      "#I come here regularly for work or study": "I come here regularly for work or study",
+      "#I'm visiting for leisure": "I'm visiting for leisure",
+      "#I'm here for a short time for another reason": "I'm here for a short time for another reason",
+      "#In which neighbourhood of Municipio XII do you live?": "In which neighbourhood of Municipio XII do you live?",
+      "#Bravetta": "Bravetta",
+      "#Casal Lumbroso": "Casal Lumbroso",
+      "#Colle Aurelio": "Colle Aurelio",
+      "#Colli Portuensi": "Colli Portuensi",
+      "#La Pisana": "La Pisana",
+      "#Massimina": "Massimina",
+      "#Monteverde Nuovo": "Monteverde Nuovo",
+      "#Monteverde Vecchio": "Monteverde Vecchio",
+      "#Porta Portese": "Porta Portese",
+      "#Santa Cecilia": "Santa Cecilia",
+      "#Vignaccia": "Vignaccia",
+      "#Villa Troili": "Villa Troili",
+      "#Villini": "Villini",
+      "#Where do you live?": "Where do you live?",
+      "#Municipio I – Centro storico, Prati, Esquilino, Trastevere": "Municipio I – Centro storico, Prati, Esquilino, Trastevere",
+      "#Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo": "Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo",
+      "#Municipio III – Montesacro, Talenti, Fidene": "Municipio III – Montesacro, Talenti, Fidene",
+      "#Municipio IV – Tiburtino, Pietralata, San Basilio": "Municipio IV – Tiburtino, Pietralata, San Basilio",
+      "#Municipio V – Prenestino, Centocelle, Pigneto": "Municipio V – Prenestino, Centocelle, Pigneto",
+      "#Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona": "Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona",
+      "#Municipio VII – Appio Latino, Tuscolano, Cinecittà": "Municipio VII – Appio Latino, Tuscolano, Cinecittà",
+      "#Municipio VIII – Ostiense, Garbatella, Appia Antica": "Municipio VIII – Ostiense, Garbatella, Appia Antica",
+      "#Municipio IX – EUR, Laurentino, Spinaceto": "Municipio IX – EUR, Laurentino, Spinaceto",
+      "#Municipio X – Ostia, Acilia, Infernetto": "Municipio X – Ostia, Acilia, Infernetto",
+      "#Municipio XI – Portuense, Magliana, Marconi": "Municipio XI – Portuense, Magliana, Marconi",
+      "#Municipio XIII – Aurelio, Boccea, Casalotti": "Municipio XIII – Aurelio, Boccea, Casalotti",
+      "#Municipio XIV – Monte Mario, Primavalle, Ottavia": "Municipio XIV – Monte Mario, Primavalle, Ottavia",
+      "#Municipio XV – Cassia, Flaminia, Prima Porta": "Municipio XV – Cassia, Flaminia, Prima Porta",
+      "#Outside Rome": "Outside Rome",
+      "#Apart from your own neighbourhood, which areas of Rome do you go to most often? (Up to 3)": "Apart from your own neighbourhood, which areas of Rome do you go to most often? (Up to 3)",
+      "#I mostly stay in my neighbourhood": "I mostly stay in my neighbourhood",
+      "#Municipio XII – Monteverde, Gianicolense, Pisana": "Municipio XII – Monteverde, Gianicolense, Pisana",
+      "#When you leave your neighbourhood, what are the main reasons? (Up to 3)": "When you leave your neighbourhood, what are the main reasons? (Up to 3)",
+      "#Work or study": "Work or study",
+      "#Grocery shopping": "Grocery shopping",
+      "#Health (doctor, pharmacy, hospital)": "Health (doctor, pharmacy, hospital)",
+      "#School or childcare": "School or childcare",
+      "#Leisure (restaurants, cinema, gym)": "Leisure (restaurants, cinema, gym)",
+      "#Visiting friends or family": "Visiting friends or family",
+      "#Offices and services (bank, post office, public offices)": "Offices and services (bank, post office, public offices)",
+      "#Better prices or more choice elsewhere": "Better prices or more choice elsewhere",
+      "#The services I need are missing in my neighbourhood": "The services I need are missing in my neighbourhood",
+      "#The services in my neighbourhood are poor": "The services in my neighbourhood are poor",
+      "#How connected do you feel to the place where you live and to the people there?": "How connected do you feel to the place where you live and to the people there?",
+      "#Not at all connected": "Not at all connected",
+      "#Slightly connected": "Slightly connected",
+      "#Moderately connected": "Moderately connected",
+      "#Very connected": "Very connected",
+      "#Extremely connected": "Extremely connected",
+      "#<p>This helps us compare different parts of the city. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This helps us compare different parts of the city. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Where you live and go": "SmartUrbanity - Dove vivi e dove vai",
+      "#Where you live and go": "Dove vivi e dove vai",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#<p>Think about Rome and Municipio XII.</p>": "<p>Pensa a Roma e al Municipio XII.</p>",
+      "#What is your connection to Municipio XII?": "Qual è il tuo legame con il Municipio XII?",
+      "#I live in Municipio XII": "Vivo nel Municipio XII",
+      "#I come here regularly for work or study": "Vengo qui regolarmente per lavoro o studio",
+      "#I'm visiting for leisure": "Sono qui in visita per svago",
+      "#I'm here for a short time for another reason": "Sono qui per poco tempo per un altro motivo",
+      "#In which neighbourhood of Municipio XII do you live?": "In quale quartiere del Municipio XII vivi?",
+      "#Bravetta": "Bravetta",
+      "#Casal Lumbroso": "Casal Lumbroso",
+      "#Colle Aurelio": "Colle Aurelio",
+      "#Colli Portuensi": "Colli Portuensi",
+      "#La Pisana": "La Pisana",
+      "#Massimina": "Massimina",
+      "#Monteverde Nuovo": "Monteverde Nuovo",
+      "#Monteverde Vecchio": "Monteverde Vecchio",
+      "#Porta Portese": "Porta Portese",
+      "#Santa Cecilia": "Santa Cecilia",
+      "#Vignaccia": "Vignaccia",
+      "#Villa Troili": "Villa Troili",
+      "#Villini": "Villini",
+      "#Where do you live?": "Dove vivi?",
+      "#Municipio I – Centro storico, Prati, Esquilino, Trastevere": "Municipio I – Centro storico, Prati, Esquilino, Trastevere",
+      "#Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo": "Municipio II – Parioli, Flaminio, Nomentano, San Lorenzo",
+      "#Municipio III – Montesacro, Talenti, Fidene": "Municipio III – Montesacro, Talenti, Fidene",
+      "#Municipio IV – Tiburtino, Pietralata, San Basilio": "Municipio IV – Tiburtino, Pietralata, San Basilio",
+      "#Municipio V – Prenestino, Centocelle, Pigneto": "Municipio V – Prenestino, Centocelle, Pigneto",
+      "#Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona": "Municipio VI – Torre Angela, Tor Bella Monaca, Ponte di Nona",
+      "#Municipio VII – Appio Latino, Tuscolano, Cinecittà": "Municipio VII – Appio Latino, Tuscolano, Cinecittà",
+      "#Municipio VIII – Ostiense, Garbatella, Appia Antica": "Municipio VIII – Ostiense, Garbatella, Appia Antica",
+      "#Municipio IX – EUR, Laurentino, Spinaceto": "Municipio IX – EUR, Laurentino, Spinaceto",
+      "#Municipio X – Ostia, Acilia, Infernetto": "Municipio X – Ostia, Acilia, Infernetto",
+      "#Municipio XI – Portuense, Magliana, Marconi": "Municipio XI – Portuense, Magliana, Marconi",
+      "#Municipio XIII – Aurelio, Boccea, Casalotti": "Municipio XIII – Aurelio, Boccea, Casalotti",
+      "#Municipio XIV – Monte Mario, Primavalle, Ottavia": "Municipio XIV – Monte Mario, Primavalle, Ottavia",
+      "#Municipio XV – Cassia, Flaminia, Prima Porta": "Municipio XV – Cassia, Flaminia, Prima Porta",
+      "#Outside Rome": "Fuori Roma",
+      "#Apart from your own neighbourhood, which areas of Rome do you go to most often? (Up to 3)": "Oltre al tuo quartiere, in quali zone di Roma vai più spesso? (Al massimo 3)",
+      "#I mostly stay in my neighbourhood": "Resto quasi sempre nel mio quartiere",
+      "#Municipio XII – Monteverde, Gianicolense, Pisana": "Municipio XII – Monteverde, Gianicolense, Pisana",
+      "#When you leave your neighbourhood, what are the main reasons? (Up to 3)": "Quando esci dal tuo quartiere, quali sono i motivi principali? (Al massimo 3)",
+      "#Work or study": "Lavoro o studio",
+      "#Grocery shopping": "Fare la spesa",
+      "#Health (doctor, pharmacy, hospital)": "Salute (medico, farmacia, ospedale)",
+      "#School or childcare": "Scuola o assistenza ai bambini",
+      "#Leisure (restaurants, cinema, gym)": "Svago (ristoranti, cinema, palestra)",
+      "#Visiting friends or family": "Visitare amici o parenti",
+      "#Offices and services (bank, post office, public offices)": "Uffici e servizi (banca, posta, uffici pubblici)",
+      "#Better prices or more choice elsewhere": "Prezzi migliori o più scelta altrove",
+      "#The services I need are missing in my neighbourhood": "Nel mio quartiere mancano i servizi che mi servono",
+      "#The services in my neighbourhood are poor": "I servizi del mio quartiere sono di bassa qualità",
+      "#How connected do you feel to the place where you live and to the people there?": "Quanto ti senti legato/a al luogo in cui vivi e alle persone che ci abitano?",
+      "#Not at all connected": "Per niente legato/a",
+      "#Slightly connected": "Poco legato/a",
+      "#Moderately connected": "Abbastanza legato/a",
+      "#Very connected": "Molto legato/a",
+      "#Extremely connected": "Moltissimo legato/a",
+      "#<p>This helps us compare different parts of the city. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ci aiuta a confrontare le diverse zone della città. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_where_you_live",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

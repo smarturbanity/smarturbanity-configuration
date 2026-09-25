@@ -1,0 +1,781 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - How you get around",
+    "questionnaire_id": "smarturbanity_how_you_get_around",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 4,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "How you get around",
+      "description": "<p>This questionnaire is about the ways you travel. It takes about 4 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "How you get around",
+    "sections": [
+      {
+        "title": "Your ways of travelling",
+        "description": "<p>Think about a typical week.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Which way of travelling do you use most often?",
+            "answer_key": "usual_mode",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot",
+                "value": "walk"
+              },
+              {
+                "text": "Wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "Bicycle (own)",
+                "value": "bike"
+              },
+              {
+                "text": "E-bike (own)",
+                "value": "ebike"
+              },
+              {
+                "text": "Shared bike or e-bike",
+                "value": "bike_shared"
+              },
+              {
+                "text": "E-scooter (own)",
+                "value": "escooter"
+              },
+              {
+                "text": "Shared e-scooter",
+                "value": "escooter_shared"
+              },
+              {
+                "text": "Public transport (bus, tram, metro, train)",
+                "value": "transit"
+              },
+              {
+                "text": "Car, as driver",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car, as passenger",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+                "value": "taxi"
+              }
+            ]
+          },
+          {
+            "text": "Which of these do you use at least once a week? (Select all that apply)",
+            "answer_key": "modes_weekly",
+            "question_type": "multiple_options",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot, even just to reach a stop or station",
+                "value": "walk"
+              },
+              {
+                "text": "Wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "Bicycle (own)",
+                "value": "bike"
+              },
+              {
+                "text": "E-bike (own)",
+                "value": "ebike"
+              },
+              {
+                "text": "Shared bike or e-bike",
+                "value": "bike_shared"
+              },
+              {
+                "text": "E-scooter (own)",
+                "value": "escooter"
+              },
+              {
+                "text": "Shared e-scooter",
+                "value": "escooter_shared"
+              },
+              {
+                "text": "Public transport (bus, tram, metro, train)",
+                "value": "transit"
+              },
+              {
+                "text": "Car, as driver",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car, as passenger",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+                "value": "taxi"
+              }
+            ]
+          },
+          {
+            "text": "Do you combine different ways of travelling in the same trip (e.g. walking + bus, bike + train)?",
+            "answer_key": "multimodal",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              }
+            ]
+          },
+          {
+            "text": "Which ways of travelling do you combine? (Select all that apply)",
+            "answer_key": "multimodal_modes",
+            "question_type": "multiple_options",
+            "show_if": {
+              "multimodal": [
+                "sometimes",
+                "often"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot",
+                "value": "walk"
+              },
+              {
+                "text": "Wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "Bicycle (own)",
+                "value": "bike"
+              },
+              {
+                "text": "E-bike (own)",
+                "value": "ebike"
+              },
+              {
+                "text": "Shared bike or e-bike",
+                "value": "bike_shared"
+              },
+              {
+                "text": "E-scooter (own)",
+                "value": "escooter"
+              },
+              {
+                "text": "Shared e-scooter",
+                "value": "escooter_shared"
+              },
+              {
+                "text": "Public transport (bus, tram, metro, train)",
+                "value": "transit"
+              },
+              {
+                "text": "Car, as driver",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car, as passenger",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+                "value": "taxi"
+              }
+            ]
+          },
+          {
+            "text": "What difficulties do you have when you combine them? (Up to 3)",
+            "answer_key": "multimodal_difficulties",
+            "question_type": "multiple_options",
+            "show_if": {
+              "multimodal": [
+                "sometimes",
+                "often"
+              ]
+            },
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No real difficulties",
+                "value": "none"
+              },
+              {
+                "text": "Vehicles too crowded (e.g. no space for a bike or luggage)",
+                "value": "crowded"
+              },
+              {
+                "text": "Long waits or missed connections",
+                "value": "bad_connections"
+              },
+              {
+                "text": "No bike parking or bikes not allowed on board",
+                "value": "no_facilities"
+              },
+              {
+                "text": "Transfers far apart or hard to find",
+                "value": "complicated_transfers"
+              },
+              {
+                "text": "The trip takes too long",
+                "value": "too_long"
+              },
+              {
+                "text": "It costs too much",
+                "value": "too_expensive"
+              },
+              {
+                "text": "I feel unsafe (traffic, theft, deserted places)",
+                "value": "unsafe"
+              },
+              {
+                "text": "Unreliable information on times and delays",
+                "value": "no_information"
+              },
+              {
+                "text": "Too much physical effort",
+                "value": "physical_effort"
+              },
+              {
+                "text": "Stairs or no lifts",
+                "value": "accessibility"
+              },
+              {
+                "text": "Bad weather",
+                "value": "weather"
+              }
+            ]
+          },
+          {
+            "text": "When this happens, what do you usually do?",
+            "answer_key": "multimodal_response",
+            "question_type": "single_option",
+            "show_if": {
+              "multimodal": [
+                "sometimes",
+                "often"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I carry on anyway",
+                "value": "keep_going"
+              },
+              {
+                "text": "I travel at a different time",
+                "value": "change_time"
+              },
+              {
+                "text": "I change route or transfer point",
+                "value": "change_route"
+              },
+              {
+                "text": "I use a different combination",
+                "value": "change_combination"
+              },
+              {
+                "text": "I use only one way of travelling",
+                "value": "single_mode"
+              },
+              {
+                "text": "I make that trip less often",
+                "value": "travel_less"
+              },
+              {
+                "text": "I avoid that trip if I can",
+                "value": "avoid_trip"
+              }
+            ]
+          },
+          {
+            "text": "How often do you use sharing services (bike, e-scooter or car sharing)?",
+            "answer_key": "shared_frequency",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Once a month or less",
+                "value": "monthly_or_less"
+              },
+              {
+                "text": "2–3 times a month",
+                "value": "2_3_month"
+              },
+              {
+                "text": "1–2 times a week",
+                "value": "1_2_week"
+              },
+              {
+                "text": "3–5 times a week",
+                "value": "3_5_week"
+              },
+              {
+                "text": "Every day",
+                "value": "daily"
+              }
+            ]
+          },
+          {
+            "text": "At what times of day do you travel most often? (Select all that apply)",
+            "answer_key": "travel_times",
+            "question_type": "multiple_options",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Before 7:00",
+                "value": "before_7"
+              },
+              {
+                "text": "7:00–10:00",
+                "value": "7_10"
+              },
+              {
+                "text": "10:00–14:00",
+                "value": "10_14"
+              },
+              {
+                "text": "14:00–18:00",
+                "value": "14_18"
+              },
+              {
+                "text": "18:00–20:00",
+                "value": "18_20"
+              },
+              {
+                "text": "After 20:00",
+                "value": "after_20"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Satisfaction and priorities",
+        "description": "<p>Think about the way of travelling you use most often.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Overall, how satisfied are you with it?",
+            "answer_key": "usual_mode_satisfaction",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very dissatisfied",
+                "value": "very_dissatisfied"
+              },
+              {
+                "text": "Dissatisfied",
+                "value": "dissatisfied"
+              },
+              {
+                "text": "Neither satisfied nor dissatisfied",
+                "value": "neutral"
+              },
+              {
+                "text": "Satisfied",
+                "value": "satisfied"
+              },
+              {
+                "text": "Very satisfied",
+                "value": "very_satisfied"
+              }
+            ]
+          },
+          {
+            "text": "What are you least satisfied with? (Up to 3)",
+            "answer_key": "usual_mode_dissatisfied",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing, I'm satisfied",
+                "value": "nothing"
+              },
+              {
+                "text": "Travel time",
+                "value": "time"
+              },
+              {
+                "text": "Cost",
+                "value": "cost"
+              },
+              {
+                "text": "Reliability",
+                "value": "reliability"
+              },
+              {
+                "text": "Comfort",
+                "value": "comfort"
+              },
+              {
+                "text": "Safety from traffic",
+                "value": "road_safety"
+              },
+              {
+                "text": "Safety from crime or harassment",
+                "value": "personal_security"
+              },
+              {
+                "text": "Ease of access",
+                "value": "accessibility"
+              },
+              {
+                "text": "Crowding",
+                "value": "crowding"
+              },
+              {
+                "text": "Impact on the environment",
+                "value": "environment"
+              },
+              {
+                "text": "Lack of flexibility",
+                "value": "flexibility"
+              }
+            ]
+          },
+          {
+            "text": "When you choose how to travel, what matters most to you? (Up to 3)",
+            "answer_key": "choice_factors",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Cost",
+                "value": "cost"
+              },
+              {
+                "text": "Saving time",
+                "value": "time"
+              },
+              {
+                "text": "Comfort and low effort",
+                "value": "comfort_effort"
+              },
+              {
+                "text": "Feeling calm and relaxed",
+                "value": "wellbeing"
+              },
+              {
+                "text": "Impact on the environment",
+                "value": "environment"
+              },
+              {
+                "text": "Reliability",
+                "value": "reliability"
+              },
+              {
+                "text": "Safety from traffic",
+                "value": "road_safety"
+              },
+              {
+                "text": "Safety from crime or harassment",
+                "value": "personal_security"
+              },
+              {
+                "text": "Flexibility and independence",
+                "value": "flexibility"
+              },
+              {
+                "text": "What others think of me",
+                "value": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - How you get around",
+      "#How you get around": "How you get around",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Your ways of travelling": "Your ways of travelling",
+      "#<p>Think about a typical week.</p>": "<p>Think about a typical week.</p>",
+      "#Which way of travelling do you use most often?": "Which way of travelling do you use most often?",
+      "#On foot": "On foot",
+      "#Wheelchair or mobility scooter": "Wheelchair or mobility scooter",
+      "#Bicycle (own)": "Bicycle (own)",
+      "#E-bike (own)": "E-bike (own)",
+      "#Shared bike or e-bike": "Shared bike or e-bike",
+      "#E-scooter (own)": "E-scooter (own)",
+      "#Shared e-scooter": "Shared e-scooter",
+      "#Public transport (bus, tram, metro, train)": "Public transport (bus, tram, metro, train)",
+      "#Car, as driver": "Car, as driver",
+      "#Car, as passenger": "Car, as passenger",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Motorcycle or moped",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+      "#Which of these do you use at least once a week? (Select all that apply)": "Which of these do you use at least once a week? (Select all that apply)",
+      "#On foot, even just to reach a stop or station": "On foot, even just to reach a stop or station",
+      "#Do you combine different ways of travelling in the same trip (e.g. walking + bus, bike + train)?": "Do you combine different ways of travelling in the same trip (e.g. walking + bus, bike + train)?",
+      "#Never": "Never",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#What difficulties do you have when you combine them? (Up to 3)": "What difficulties do you have when you combine them? (Up to 3)",
+      "#No real difficulties": "No real difficulties",
+      "#Vehicles too crowded (e.g. no space for a bike or luggage)": "Vehicles too crowded (e.g. no space for a bike or luggage)",
+      "#Long waits or missed connections": "Long waits or missed connections",
+      "#No bike parking or bikes not allowed on board": "No bike parking or bikes not allowed on board",
+      "#Transfers far apart or hard to find": "Transfers far apart or hard to find",
+      "#The trip takes too long": "The trip takes too long",
+      "#It costs too much": "It costs too much",
+      "#I feel unsafe (traffic, theft, deserted places)": "I feel unsafe (traffic, theft, deserted places)",
+      "#Unreliable information on times and delays": "Unreliable information on times and delays",
+      "#Too much physical effort": "Too much physical effort",
+      "#Stairs or no lifts": "Stairs or no lifts",
+      "#Bad weather": "Bad weather",
+      "#When this happens, what do you usually do?": "When this happens, what do you usually do?",
+      "#I carry on anyway": "I carry on anyway",
+      "#I travel at a different time": "I travel at a different time",
+      "#I change route or transfer point": "I change route or transfer point",
+      "#I use a different combination": "I use a different combination",
+      "#I use only one way of travelling": "I use only one way of travelling",
+      "#I make that trip less often": "I make that trip less often",
+      "#I avoid that trip if I can": "I avoid that trip if I can",
+      "#How often do you use sharing services (bike, e-scooter or car sharing)?": "How often do you use sharing services (bike, e-scooter or car sharing)?",
+      "#Once a month or less": "Once a month or less",
+      "#2–3 times a month": "2–3 times a month",
+      "#1–2 times a week": "1–2 times a week",
+      "#3–5 times a week": "3–5 times a week",
+      "#Every day": "Every day",
+      "#At what times of day do you travel most often? (Select all that apply)": "At what times of day do you travel most often? (Select all that apply)",
+      "#Before 7:00": "Before 7:00",
+      "#7:00–10:00": "7:00–10:00",
+      "#10:00–14:00": "10:00–14:00",
+      "#14:00–18:00": "14:00–18:00",
+      "#18:00–20:00": "18:00–20:00",
+      "#After 20:00": "After 20:00",
+      "#Satisfaction and priorities": "Satisfaction and priorities",
+      "#<p>Think about the way of travelling you use most often.</p>": "<p>Think about the way of travelling you use most often.</p>",
+      "#Overall, how satisfied are you with it?": "Overall, how satisfied are you with it?",
+      "#Very dissatisfied": "Very dissatisfied",
+      "#Dissatisfied": "Dissatisfied",
+      "#Neither satisfied nor dissatisfied": "Neither satisfied nor dissatisfied",
+      "#Satisfied": "Satisfied",
+      "#Very satisfied": "Very satisfied",
+      "#What are you least satisfied with? (Up to 3)": "What are you least satisfied with? (Up to 3)",
+      "#Nothing, I'm satisfied": "Nothing, I'm satisfied",
+      "#Travel time": "Travel time",
+      "#Cost": "Cost",
+      "#Reliability": "Reliability",
+      "#Comfort": "Comfort",
+      "#Safety from traffic": "Safety from traffic",
+      "#Safety from crime or harassment": "Safety from crime or harassment",
+      "#Ease of access": "Ease of access",
+      "#Crowding": "Crowding",
+      "#Impact on the environment": "Impact on the environment",
+      "#Lack of flexibility": "Lack of flexibility",
+      "#When you choose how to travel, what matters most to you? (Up to 3)": "When you choose how to travel, what matters most to you? (Up to 3)",
+      "#Saving time": "Saving time",
+      "#Comfort and low effort": "Comfort and low effort",
+      "#Feeling calm and relaxed": "Feeling calm and relaxed",
+      "#Flexibility and independence": "Flexibility and independence",
+      "#What others think of me": "What others think of me",
+      "#Which ways of travelling do you combine? (Select all that apply)": "Which ways of travelling do you combine? (Select all that apply)",
+      "#<p>This questionnaire is about the ways you travel. It takes about 4 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This questionnaire is about the ways you travel. It takes about 4 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Come ti sposti",
+      "#How you get around": "Come ti sposti",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Your ways of travelling": "I tuoi modi di spostarti",
+      "#<p>Think about a typical week.</p>": "<p>Pensa a una settimana tipica.</p>",
+      "#Which way of travelling do you use most often?": "Quale modo di spostarti usi più spesso?",
+      "#On foot": "A piedi",
+      "#Wheelchair or mobility scooter": "Sedia a rotelle o scooter per disabili",
+      "#Bicycle (own)": "Bicicletta (tua)",
+      "#E-bike (own)": "Bici elettrica (tua)",
+      "#Shared bike or e-bike": "Bici o bici elettrica in sharing",
+      "#E-scooter (own)": "Monopattino elettrico (tuo)",
+      "#Shared e-scooter": "Monopattino in sharing",
+      "#Public transport (bus, tram, metro, train)": "Mezzi pubblici (bus, tram, metro, treno)",
+      "#Car, as driver": "Auto, come conducente",
+      "#Car, as passenger": "Auto, come passeggero/a",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Moto o scooter",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente tramite app (ad es. Uber, FreeNow)",
+      "#Which of these do you use at least once a week? (Select all that apply)": "Quali di questi usi almeno una volta a settimana? (Puoi sceglierne più di uno)",
+      "#On foot, even just to reach a stop or station": "A piedi, anche solo per raggiungere una fermata o una stazione",
+      "#Do you combine different ways of travelling in the same trip (e.g. walking + bus, bike + train)?": "Nello stesso spostamento combini modi diversi di viaggiare (ad es. a piedi + bus, bici + treno)?",
+      "#Never": "Mai",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#What difficulties do you have when you combine them? (Up to 3)": "Quali difficoltà incontri quando li combini? (Al massimo 3)",
+      "#No real difficulties": "Nessuna difficoltà particolare",
+      "#Vehicles too crowded (e.g. no space for a bike or luggage)": "Mezzi troppo affollati (ad es. niente spazio per bici o bagagli)",
+      "#Long waits or missed connections": "Lunghe attese o coincidenze perse",
+      "#No bike parking or bikes not allowed on board": "Mancano parcheggi per bici o le bici non sono ammesse a bordo",
+      "#Transfers far apart or hard to find": "Cambi lontani o difficili da trovare",
+      "#The trip takes too long": "Lo spostamento richiede troppo tempo",
+      "#It costs too much": "Costa troppo",
+      "#I feel unsafe (traffic, theft, deserted places)": "Non mi sento al sicuro (traffico, furti, luoghi isolati)",
+      "#Unreliable information on times and delays": "Informazioni poco affidabili su orari e ritardi",
+      "#Too much physical effort": "Troppo sforzo fisico",
+      "#Stairs or no lifts": "Scale o ascensori mancanti",
+      "#Bad weather": "Maltempo",
+      "#When this happens, what do you usually do?": "Quando succede, cosa fai di solito?",
+      "#I carry on anyway": "Continuo comunque",
+      "#I travel at a different time": "Mi sposto in un altro orario",
+      "#I change route or transfer point": "Cambio percorso o punto di cambio",
+      "#I use a different combination": "Uso una combinazione diversa",
+      "#I use only one way of travelling": "Uso un solo modo di spostarmi",
+      "#I make that trip less often": "Faccio quello spostamento meno spesso",
+      "#I avoid that trip if I can": "Evito quello spostamento se posso",
+      "#How often do you use sharing services (bike, e-scooter or car sharing)?": "Quanto spesso usi servizi in sharing (bici, monopattini o auto)?",
+      "#Once a month or less": "Una volta al mese o meno",
+      "#2–3 times a month": "2–3 volte al mese",
+      "#1–2 times a week": "1–2 volte a settimana",
+      "#3–5 times a week": "3–5 volte a settimana",
+      "#Every day": "Ogni giorno",
+      "#At what times of day do you travel most often? (Select all that apply)": "In quali momenti della giornata ti sposti più spesso? (Puoi sceglierne più di uno)",
+      "#Before 7:00": "Prima delle 7:00",
+      "#7:00–10:00": "7:00–10:00",
+      "#10:00–14:00": "10:00–14:00",
+      "#14:00–18:00": "14:00–18:00",
+      "#18:00–20:00": "18:00–20:00",
+      "#After 20:00": "Dopo le 20:00",
+      "#Satisfaction and priorities": "Soddisfazione e priorità",
+      "#<p>Think about the way of travelling you use most often.</p>": "<p>Pensa al modo di spostarti che usi più spesso.</p>",
+      "#Overall, how satisfied are you with it?": "Nel complesso, quanto ne sei soddisfatto/a?",
+      "#Very dissatisfied": "Per niente soddisfatto/a",
+      "#Dissatisfied": "Poco soddisfatto/a",
+      "#Neither satisfied nor dissatisfied": "Né soddisfatto/a né insoddisfatto/a",
+      "#Satisfied": "Abbastanza soddisfatto/a",
+      "#Very satisfied": "Molto soddisfatto/a",
+      "#What are you least satisfied with? (Up to 3)": "Di cosa sei meno soddisfatto/a? (Al massimo 3)",
+      "#Nothing, I'm satisfied": "Di niente, sono soddisfatto/a",
+      "#Travel time": "Tempo di viaggio",
+      "#Cost": "Costo",
+      "#Reliability": "Affidabilità",
+      "#Comfort": "Comodità",
+      "#Safety from traffic": "Sicurezza rispetto al traffico",
+      "#Safety from crime or harassment": "Sicurezza rispetto a furti o molestie",
+      "#Ease of access": "Facilità di accesso",
+      "#Crowding": "Affollamento",
+      "#Impact on the environment": "Impatto sull'ambiente",
+      "#Lack of flexibility": "Poca flessibilità",
+      "#When you choose how to travel, what matters most to you? (Up to 3)": "Quando scegli come spostarti, cosa conta di più per te? (Al massimo 3)",
+      "#Saving time": "Risparmiare tempo",
+      "#Comfort and low effort": "Comodità e poco sforzo",
+      "#Feeling calm and relaxed": "Sentirmi calmo/a e rilassato/a",
+      "#Flexibility and independence": "Flessibilità e autonomia",
+      "#What others think of me": "Cosa pensano gli altri di me",
+      "#Which ways of travelling do you combine? (Select all that apply)": "Quali modi di spostarti combini? (Puoi sceglierne più di uno)",
+      "#<p>This questionnaire is about the ways you travel. It takes about 4 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario riguarda i modi in cui ti sposti. Richiede circa 4 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_how_you_get_around",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}
