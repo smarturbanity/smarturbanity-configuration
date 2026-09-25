@@ -35,23 +35,34 @@
   }
 
   window.initLangToggle = function initLangToggle() {
-    const btn = document.getElementById("toggleLang");
+    const select = document.getElementById("language-select");
     const main = document.querySelector("main");
     const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    window.currentLang = lang.startsWith("it") ? "it" : "en";
+    const supported = Array.from(new Set([
+      ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat(),
+      "en", "it", "fr", "de", "tr", "fa", "hu", "ar"
+    ].filter(Boolean)));
+    const initial = supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
+    window.supportedLanguages = supported;
+    window.currentLang = initial;
 
     function showLang(l) {
+      const availablePageLanguages = new Set(
+        Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat()
+      );
+      const displayLang = availablePageLanguages.has(l) ? l : "en";
       document.querySelectorAll("[data-lang]").forEach((el) => {
         const visibleDisplay = el.tagName === "SPAN" ? "inline" : "block";
-        el.style.display = el.getAttribute("data-lang") === l ? visibleDisplay : "none";
+        const languages = el.getAttribute("data-lang").split(/\s+/);
+        el.style.display = languages.includes(displayLang) ? visibleDisplay : "none";
       });
 
       if (main) main.setAttribute("lang", l);
       window.currentLang = l;
 
-      if (btn) {
-        btn.textContent = l.toUpperCase();
-        btn.setAttribute("aria-label", `Change language. Current: ${l === "en" ? "English" : "Italiano"}`);
+      if (select) {
+        select.value = l;
+        select.setAttribute("aria-label", `Select language. Current: ${l}`);
       }
 
       window.dispatchEvent(new CustomEvent("smarturbanity:langchange", { detail: { lang: l } }));
@@ -60,8 +71,15 @@
     window.setLang = showLang;
     showLang(window.currentLang);
 
-    if (btn) {
-      btn.addEventListener("click", () => showLang(window.currentLang === "en" ? "it" : "en"));
+    if (select) {
+      select.textContent = "";
+      supported.forEach((language) => {
+        const option = document.createElement("option");
+        option.value = language;
+        option.textContent = language.toUpperCase();
+        select.appendChild(option);
+      });
+      select.addEventListener("change", () => showLang(select.value));
     }
   };
 

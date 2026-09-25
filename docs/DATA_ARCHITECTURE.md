@@ -279,3 +279,8 @@ ensuring that all research data are *Findable, Accessible, Interoperable,* and *
 | **Reusable** | Standardized metadata — such as `project`, `campaign`, and `timezone` — ensure reproducibility and enable long-term research use. |
 
 [⬆ Back to documentation index](../README.md)
+# PlanEasy response v2
+
+SmartUrbanity forms use the generic PlanEasy response envelope. `response_kind` is semantic (`survey` or `spatial_contribution`); `db_set` remains the technical destination. Responses keep nested `answers`, `entity`, `related_entities`, `geometry`, and grouped `meta` fields. Optional email values are SHA-256 hashed before storage and raw email is never saved or logged. v1 compatibility belongs to the framework loader/normalizer, not new forms.
+
+Canonical paths are `surveyResponses/{questionnaireId}/responses/{responseId}` and `spatialReports/{questionnaireId}/responses/{responseId}`.
