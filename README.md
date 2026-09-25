@@ -169,37 +169,6 @@ A form definition should describe the form itself, while its availability can de
 
 This avoids creating separate copies of the same form for every pilot.
 
-## Survey schedule and campaigns
-
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
-
-```json
-{
-  "config_type": "smarturbanity_survey_campaigns",
-  "pilot_id": "rome",
-  "pilot_period": {"start_date": "2026-10-05", "end_date": null, "timezone": "Europe/Rome"},
-  "rules": {"base_campaigns": ["rome_profile", "rome_walking"], "show_all_in_debug": true},
-  "campaigns": {
-    "rome_walking": {
-      "name": "Walking",
-      "enabled": true,
-      "priority": 0,
-      "window": {"from_week": 1, "until_week": 8, "valid_from": null, "valid_until": null, "extended_until": "2026-12-20"},
-      "area": null,
-      "exclusive": false,
-      "questionnaires": ["smarturbanity_walking_safety", "smarturbanity_walking_routes"]
-    }
-  }
-}
-```
-
-- A campaign is a named group of forms (by `questionnaire_id`) with one availability window. `from_week` / `until_week` count from `pilot_period.start_date` (week 1 starts on that day, inclusive). `valid_from` / `valid_until` are ISO dates and take precedence over weeks. `extended_until` moves the end date and tells applications that the campaign was extended. `null` means open-ended.
-- The pilot's base campaign is the union of `rules.base_campaigns`. Other campaigns, such as a test event, are active when `enabled` is not `false` and today falls in their window.
-- `area` limits a campaign to a place: `{"type": "circle", "center": {"lat": ..., "lon": ...}, "radius_m": ...}` or `{"type": "area_group", "area_group_id": ..., "area_ids": [...]}` from `data_model.area_groups`.
-- When at least one active campaign is `exclusive`, only the forms of the active exclusive campaigns are offered; otherwise the forms of all active campaigns are offered. Campaigns sharing a `group` belong to the same event. If a form is in several active campaigns, the one with the highest `priority` decides its window.
-- While `pilot_period.start_date` is `null`, every form in `forms/index.json` stays available, as before the schedule existed. With `show_all_in_debug`, debug and review modes always show every form, marked with its schedule status.
-- A form card shows when its window ends ("until 24 Oct", "extended until ...", "opens on ...", "always available") and the form's `estimated_minutes`. Responses should record the id of the campaign through which the form was shown in their `campaign` metadata.
-
 ### Questionnaire consent
 
 Every form starts with one common eligibility screen: data-processing consent, an
@@ -217,6 +186,38 @@ code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and 
 not a secret; keep it unchanged, because changing it separates future answers from
 earlier ones. The email itself is never stored.
 
+The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the gate and minor-page texts, keyed by language and `#` tag, for languages the application dictionary does not include (fr, de, tr, hu, ar) and for the SmartUrbanity consent text in every language.
+
+## Survey schedule and campaigns
+
+When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
+
+```json
+{
+  "config_type": "smarturbanity_survey_campaigns",
+  "pilot_id": "rome",
+  "pilot_period": {"start_date": "2026-10-05", "end_date": null, "timezone": "Europe/Rome"},
+  "rules": {"show_all_in_debug": true},
+  "campaigns": {
+    "rome_walking": {
+      "name": "Walking",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 1, "until_week": 8, "valid_from": null, "valid_until": null, "extended_until": "2026-12-20"},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_walking_safety", "smarturbanity_walking_routes"]
+    }
+  }
+}
+```
+
+- A campaign is a named group of forms (by `questionnaire_id`) with one availability window. `from_week` / `until_week` count from `pilot_period.start_date` (week 1 starts on that day, inclusive). `valid_from` / `valid_until` are ISO dates and take precedence over weeks. `extended_until` moves the end date and tells applications that the campaign was extended. `null` means open-ended.
+- Every campaign is active when `enabled` is not `false` and today falls in its window. The pilot's base offer is simply its open-ended campaigns; a test event is a campaign with a short window.
+- `area` limits a campaign to a place: `{"type": "circle", "center": {"lat": ..., "lon": ...}, "radius_m": ...}` or `{"type": "area_group", "area_group_id": ..., "area_ids": [...]}` from `data_model.area_groups`.
+- When at least one active campaign is `exclusive`, only the forms of the active exclusive campaigns are offered; otherwise the forms of all active campaigns are offered. Campaigns sharing a `group` belong to the same event. If a form is in several active campaigns, the one with the highest `priority` decides its window.
+- While `pilot_period.start_date` is `null`, every form in `forms/index.json` stays available, as before the schedule existed. With `show_all_in_debug`, debug and review modes always show every form, marked with its schedule status.
+- A form card shows when its window ends ("until 24 Oct", "extended until ...", "opens on ...", "always available") and the form's `estimated_minutes`. Responses should record the id of the campaign through which the form was shown in their `campaign` metadata.
 ## Context-dependent configuration
 
 Forms, sections, questions and potentially other configurable components may define conditions based on context.
