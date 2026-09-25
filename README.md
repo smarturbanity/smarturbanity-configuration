@@ -200,6 +200,23 @@ When a form is offered is pilot configuration, not part of the form. Each pilot 
 - While `pilot_period.start_date` is `null`, every form in `forms/index.json` stays available, as before the schedule existed. With `show_all_in_debug`, debug and review modes always show every form, marked with its schedule status.
 - A form card shows when its window ends ("until 24 Oct", "extended until ...", "opens on ...", "always available") and the form's `estimated_minutes`. Responses should record the id of the campaign through which the form was shown in their `campaign` metadata.
 
+### Questionnaire consent
+
+Every form starts with one common eligibility screen: data-processing consent, an
+optional age declaration and an optional email. Forms do not repeat it. The
+application ships the default consent; `base.json` overrides it for SmartUrbanity
+under `questionnaires.consent` and a pilot may override single values, for example
+the age declaration and its minimum age. The age declaration is enabled per pilot:
+
+```json
+{"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
+```
+
+`email.uid_salt` is the project salt used to compute the pseudonymous participant
+code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and is
+not a secret; keep it unchanged, because changing it separates future answers from
+earlier ones. The email itself is never stored.
+
 ## Context-dependent configuration
 
 Forms, sections, questions and potentially other configurable components may define conditions based on context.
