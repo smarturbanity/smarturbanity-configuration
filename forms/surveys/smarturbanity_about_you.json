@@ -2,17 +2,18 @@
   "questionnaire": {
     "name": "SmartUrbanity - About You",
     "questionnaire_id": "smarturbanity_about_you",
-    "questionnaire_version": "0.1.0",
+    "questionnaire_version": "0.1.1",
     "project": "SmartUrbanity",
+    "estimated_minutes": 6,
     "options": {
       "review_mode": true,
       "ask_consent": false,
-      "save_user_id": false
+      "save_user_id": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
       "title": "1. Welcome to About You",
-      "description": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -27,265 +28,340 @@
         "questions": [
           {
             "text": "What is your age group? (Participation is limited to adults aged 18 or older)",
+            "answer_key": "age_group_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "18-24"
+                "text": "18-24",
+                "value": "18_24"
               },
               {
-                "text": "25-34"
+                "text": "25-34",
+                "value": "25_34"
               },
               {
-                "text": "35-44"
+                "text": "35-44",
+                "value": "35_44"
               },
               {
-                "text": "45-54"
+                "text": "45-54",
+                "value": "45_54"
               },
               {
-                "text": "55-64"
+                "text": "55-64",
+                "value": "55_64"
               },
               {
-                "text": "65-74"
+                "text": "65-74",
+                "value": "65_74"
               },
               {
-                "text": "75-84"
+                "text": "75-84",
+                "value": "75_84"
               },
               {
-                "text": "85 or older"
+                "text": "85 or older",
+                "value": "85_or_older"
               },
               {
-                "text": "Prefer not to say"
+                "text": "Prefer not to say",
+                "value": "prefer_not_to_say"
               }
             ]
           },
           {
             "text": "What is your gender?",
+            "answer_key": "gender_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Male"
+                "text": "Male",
+                "value": "male"
               },
               {
-                "text": "Female"
+                "text": "Female",
+                "value": "female"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               },
               {
-                "text": "Prefer not to say"
+                "text": "Prefer not to say",
+                "value": "prefer_not_to_say"
               }
             ]
           },
           {
             "text": "Do you currently live with any dependents (such as children, elderly individuals, or others who rely on you for care)?",
+            "answer_key": "carer",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "No"
+                "text": "No",
+                "value": "no"
               }
             ]
           },
           {
             "text": "How many adults, including yourself, live together in your household?",
+            "answer_key": "household_adults",
             "question_type": "single_option",
             "options": [
               {
-                "text": "1 (only myself)"
+                "text": "1 (only myself)",
+                "value": "1"
               },
               {
-                "text": "2"
+                "text": "2",
+                "value": "2"
               },
               {
-                "text": "3"
+                "text": "3",
+                "value": "3"
               },
               {
-                "text": "4"
+                "text": "4",
+                "value": "4"
               },
               {
-                "text": "5 or more"
+                "text": "5 or more",
+                "value": "5_plus"
               }
             ]
           },
           {
             "text": "What is your highest completed level of education?",
+            "answer_key": "education",
             "question_type": "single_option",
             "options": [
               {
-                "text": "No qualification"
+                "text": "No qualification",
+                "value": "none"
               },
               {
-                "text": "Lower secondary school"
+                "text": "Lower secondary school",
+                "value": "lower_secondary"
               },
               {
-                "text": "High school"
+                "text": "High school",
+                "value": "upper_secondary"
               },
               {
-                "text": "Bachelor degree or equivalent"
+                "text": "Bachelor degree or equivalent",
+                "value": "bachelor"
               },
               {
-                "text": "Master degree or equivalent"
+                "text": "Master degree or equivalent",
+                "value": "master"
               },
               {
-                "text": "Doctorate degree"
+                "text": "Doctorate degree",
+                "value": "doctorate"
               }
             ]
           },
           {
             "text": "Which economic status do you think best describes your household?",
+            "answer_key": "economic_status",
             "question_type": "single_option",
             "options": [
               {
-                "text": "We struggle to cover basic needs"
+                "text": "We struggle to cover basic needs",
+                "value": "struggle"
               },
               {
-                "text": "We can cover basic needs"
+                "text": "We can cover basic needs",
+                "value": "basic"
               },
               {
-                "text": "We can cover basic needs comfortably and have little money left over"
+                "text": "We can cover basic needs comfortably and have little money left over",
+                "value": "comfortable_basic"
               },
               {
-                "text": "We can afford most things we want with occasional extra expenses"
+                "text": "We can afford most things we want with occasional extra expenses",
+                "value": "most_things"
               },
               {
-                "text": "We are financially very comfortable and can easily afford extra expenses"
+                "text": "We are financially very comfortable and can easily afford extra expenses",
+                "value": "very_comfortable"
               }
             ]
           },
           {
             "text": "Which best describes your employment status?",
+            "answer_key": "employment_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Employed full-time"
+                "text": "Employed full-time",
+                "value": "employed_full_time"
               },
               {
-                "text": "Employed part-time"
+                "text": "Employed part-time",
+                "value": "employed_part_time"
               },
               {
-                "text": "Occasionally employed"
+                "text": "Occasionally employed",
+                "value": "occasionally_employed"
               },
               {
-                "text": "Self-employed/freelance full-time"
+                "text": "Self-employed/freelance full-time",
+                "value": "self_employed_freelance_full_time"
               },
               {
-                "text": "Self employed/freelance part-time"
+                "text": "Self employed/freelance part-time",
+                "value": "self_employed_freelance_part_time"
               },
               {
-                "text": "Homemaker"
+                "text": "Homemaker",
+                "value": "homemaker"
               },
               {
-                "text": "Retired"
+                "text": "Retired",
+                "value": "retired"
               },
               {
-                "text": "Unemployed looking for work"
+                "text": "Unemployed looking for work",
+                "value": "unemployed_looking_for_work"
               },
               {
-                "text": "Unemployed not looking for work"
+                "text": "Unemployed not looking for work",
+                "value": "unemployed_not_looking_for_work"
               },
               {
-                "text": "Adult learner (student)"
+                "text": "Adult learner (student)",
+                "value": "adult_learner_student"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           },
           {
             "text": "Do you currently work remotely (partly or fully)?",
+            "answer_key": "remote_work_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes (3 days or more in a week)"
+                "text": "Yes (3 days or more in a week)",
+                "value": "yes_3_days_or_more_in_a_week"
               },
               {
-                "text": "Yes, occasionally (1-2 days in a week)"
+                "text": "Yes, occasionally (1-2 days in a week)",
+                "value": "yes_occasionally_1_2_days_in_a_week"
               },
               {
-                "text": "No"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "I am not currently employed"
+                "text": "I am not currently employed",
+                "value": "i_am_not_currently_employed"
               }
             ]
           },
           {
             "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
+            "answer_key": "flexible_hours_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "Somewhat (within a 1-2 hour window)"
+                "text": "Somewhat (within a 1-2 hour window)",
+                "value": "somewhat_within_a_1_2_hour_window"
               },
               {
-                "text": "No"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "I am not currently employed"
+                "text": "I am not currently employed",
+                "value": "i_am_not_currently_employed"
               }
             ]
           },
           {
             "text": "Do you have any condition or limitation that affects your ability to move independently?",
+            "answer_key": "mobility_limitation_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "No, I can move independently"
+                "text": "No, I can move independently",
+                "value": "no_i_can_move_independently"
               },
               {
-                "text": "Yes, I have a temporary condition/limitation"
+                "text": "Yes, I have a temporary condition/limitation",
+                "value": "yes_i_have_a_temporary_condition_limitat"
               },
               {
-                "text": "Yes, I have a permanent mobility condition/limitation"
+                "text": "Yes, I have a permanent mobility condition/limitation",
+                "value": "yes_i_have_a_permanent_mobility_conditio"
               }
             ]
           },
           {
             "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
+            "answer_key": "dog_walks",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "No"
+                "text": "No",
+                "value": "no"
               }
             ]
           },
           {
             "text": "Do you hold a valid driving license? (Car, motorcycle or both)",
+            "answer_key": "driving_licence",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "No"
+                "text": "No",
+                "value": "no"
               }
             ]
           },
           {
             "text": "Do you belong to any of these groups?",
+            "answer_key": "professional_role_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Urban planner"
+                "text": "Urban planner",
+                "value": "urban_planner"
               },
               {
-                "text": "Policymaker"
+                "text": "Policymaker",
+                "value": "policymaker"
               },
               {
-                "text": "Environmental/sustainable mobility activist"
+                "text": "Environmental/sustainable mobility activist",
+                "value": "environmental_sustainable_mobility_activ"
               },
               {
-                "text": "Content creator / communicator (social media, journalism, blogging)"
+                "text": "Content creator / communicator (social media, journalism, blogging)",
+                "value": "content_creator_communicator_social_medi"
               },
               {
-                "text": "None"
+                "text": "None",
+                "value": "none"
               }
             ]
           }
@@ -298,85 +374,109 @@
         "questions": [
           {
             "text": "On average, how far can you walk without taking a long break (e.g., more than 5 minutes)?",
+            "answer_key": "walk_distance",
             "question_type": "single_option",
             "options": [
               {
-                "text": "I rarely or never walk"
+                "text": "I rarely or never walk",
+                "value": "rarely_walk"
               },
               {
-                "text": "Less than 500 meters (about 5-6 minutes)"
+                "text": "Less than 500 meters (about 5-6 minutes)",
+                "value": "lt_500m"
               },
               {
-                "text": "From 500 meters to 1 km (about 10-15 minutes)"
+                "text": "From 500 meters to 1 km (about 10-15 minutes)",
+                "value": "500m_1km"
               },
               {
-                "text": "1 to 2 km (about 15-25 minutes)"
+                "text": "1 to 2 km (about 15-25 minutes)",
+                "value": "1_2km"
               },
               {
-                "text": "More than 2 km"
+                "text": "More than 2 km",
+                "value": "gt_2km"
               }
             ]
           },
           {
             "text": "How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.",
+            "answer_key": "active_days_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Inactive (0 days)"
+                "text": "Inactive (0 days)",
+                "value": "inactive_0_days"
               },
               {
-                "text": "Occasionally Active (1 day)"
+                "text": "Occasionally Active (1 day)",
+                "value": "occasionally_active_1_day"
               },
               {
-                "text": "Moderately Active (2–3 days)"
+                "text": "Moderately Active (2–3 days)",
+                "value": "moderately_active_23_days"
               },
               {
-                "text": "Highly Active (4–5 days)"
+                "text": "Highly Active (4–5 days)",
+                "value": "highly_active_45_days"
               },
               {
-                "text": "Daily / Near Daily (6–7 days)"
+                "text": "Daily / Near Daily (6–7 days)",
+                "value": "daily_near_daily_67_days"
               }
             ]
           },
           {
             "text": "How would you describe your current level of physical fitness (strength, endurance, and overall health)?",
+            "answer_key": "fitness_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Very low (sedentary, easily fatigued)"
+                "text": "Very low (sedentary, easily fatigued)",
+                "value": "very_low_sedentary_easily_fatigued"
               },
               {
-                "text": "Low"
+                "text": "Low",
+                "value": "low"
               },
               {
-                "text": "Moderate"
+                "text": "Moderate",
+                "value": "moderate"
               },
               {
-                "text": "Good"
+                "text": "Good",
+                "value": "good"
               },
               {
-                "text": "High"
+                "text": "High",
+                "value": "high"
               }
             ]
           },
           {
             "text": "What is your approximate height?",
+            "answer_key": "height",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Less than 150 cm"
+                "text": "Less than 150 cm",
+                "value": "lt_150"
               },
               {
-                "text": "150-164 cm"
+                "text": "150-164 cm",
+                "value": "150_164"
               },
               {
-                "text": "165-179 cm"
+                "text": "165-179 cm",
+                "value": "165_179"
               },
               {
-                "text": "180-194 cm"
+                "text": "180-194 cm",
+                "value": "180_194"
               },
               {
-                "text": "195 cm or more"
+                "text": "195 cm or more",
+                "value": "195_plus"
               }
             ]
           }
@@ -412,6 +512,7 @@
           },
           {
             "text": "In which Municipio of Rome do you currently live?",
+            "answer_key": "v1_in_which_municipio_of_rome_do_you_cu",
             "question_type": "single_option",
             "show_if": {
               "residence": [
@@ -422,100 +523,130 @@
             },
             "options": [
               {
-                "text": "1"
+                "text": "1",
+                "value": "1"
               },
               {
-                "text": "2"
+                "text": "2",
+                "value": "2"
               },
               {
-                "text": "3"
+                "text": "3",
+                "value": "3"
               },
               {
-                "text": "4"
+                "text": "4",
+                "value": "4"
               },
               {
-                "text": "5"
+                "text": "5",
+                "value": "5"
               },
               {
-                "text": "6"
+                "text": "6",
+                "value": "6"
               },
               {
-                "text": "7"
+                "text": "7",
+                "value": "7"
               },
               {
-                "text": "8"
+                "text": "8",
+                "value": "8"
               },
               {
-                "text": "9"
+                "text": "9",
+                "value": "9"
               },
               {
-                "text": "10"
+                "text": "10",
+                "value": "10"
               },
               {
-                "text": "11"
+                "text": "11",
+                "value": "11"
               },
               {
-                "text": "13"
+                "text": "13",
+                "value": "13"
               },
               {
-                "text": "14"
+                "text": "14",
+                "value": "14"
               },
               {
-                "text": "15"
+                "text": "15",
+                "value": "15"
               },
               {
-                "text": "I live outside Rome"
+                "text": "I live outside Rome",
+                "value": "i_live_outside_rome"
               },
               {
-                "text": "I don't know"
+                "text": "I don't know",
+                "value": "i_don_t_know"
               }
             ]
           },
           {
             "text": "In which neighbourhood of Municipio XII do you currently live?",
+            "answer_key": "home_neighbourhood",
             "question_type": "single_option",
             "show_if": {
               "residence": "live"
             },
             "options": [
               {
-                "text": "BRAVETTA"
+                "text": "BRAVETTA",
+                "value": "bravetta"
               },
               {
-                "text": "CASAL LUMBROSO"
+                "text": "CASAL LUMBROSO",
+                "value": "casal_lumbroso"
               },
               {
-                "text": "COLLE AURELIO"
+                "text": "COLLE AURELIO",
+                "value": "colle_aurelio"
               },
               {
-                "text": "COLLI PORTUENSI"
+                "text": "COLLI PORTUENSI",
+                "value": "colli_portuensi"
               },
               {
-                "text": "LA PISANA"
+                "text": "LA PISANA",
+                "value": "la_pisana"
               },
               {
-                "text": "MASSIMINA"
+                "text": "MASSIMINA",
+                "value": "massimina"
               },
               {
-                "text": "MONTEVERDE NUOVO"
+                "text": "MONTEVERDE NUOVO",
+                "value": "monteverde_nuovo"
               },
               {
-                "text": "MONTEVERDE VECCHIO"
+                "text": "MONTEVERDE VECCHIO",
+                "value": "monteverde_vecchio"
               },
               {
-                "text": "PORTA PORTESE"
+                "text": "PORTA PORTESE",
+                "value": "porta_portese"
               },
               {
-                "text": "SANTA CECILIA"
+                "text": "SANTA CECILIA",
+                "value": "santa_cecilia"
               },
               {
-                "text": "VIGNACCIA"
+                "text": "VIGNACCIA",
+                "value": "vignaccia"
               },
               {
-                "text": "VILLA TROILI"
+                "text": "VILLA TROILI",
+                "value": "villa_troili"
               },
               {
-                "text": "VILLINI"
+                "text": "VILLINI",
+                "value": "villini"
               }
             ]
           },
@@ -686,6 +817,7 @@
           },
           {
             "text": "Which is the third Municipio you travel to most frequently?",
+            "answer_key": "frequent_areas_v1",
             "question_type": "single_option",
             "show_if": {
               "second": [
@@ -775,68 +907,88 @@
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
+            "answer_key": "reasons_outside_v1",
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
               {
-                "text": "Work or university"
+                "text": "Work or university",
+                "value": "work_or_university"
               },
               {
-                "text": "Grocery shopping / supermarkets"
+                "text": "Grocery shopping / supermarkets",
+                "value": "grocery_shopping_supermarkets"
               },
               {
-                "text": "Healthcare (doctor, pharmacy, hospital)"
+                "text": "Healthcare (doctor, pharmacy, hospital)",
+                "value": "healthcare_doctor_pharmacy_hospital"
               },
               {
-                "text": "Schools or childcare"
+                "text": "Schools or childcare",
+                "value": "schools_or_childcare"
               },
               {
-                "text": "Leisure activities (restaurants, cafes, cinema, gym)"
+                "text": "Leisure activities (restaurants, cafes, cinema, gym)",
+                "value": "leisure_activities_restaurants_cafes_cin"
               },
               {
-                "text": "Visiting friends or family"
+                "text": "Visiting friends or family",
+                "value": "visiting_friends_or_family"
               },
               {
-                "text": "Administrative services (banks, offices, etc.)"
+                "text": "Administrative services (banks, offices, etc.)",
+                "value": "administrative_services_banks_offices_et"
               },
               {
-                "text": "Better prices or more choice of services elsewhere"
+                "text": "Better prices or more choice of services elsewhere",
+                "value": "better_prices_or_more_choice_of_services"
               },
               {
-                "text": "Lack of services in my neighborhood"
+                "text": "Lack of services in my neighborhood",
+                "value": "lack_of_services_in_my_neighborhood"
               },
               {
-                "text": "Poor quality of services in my neighborhood"
+                "text": "Poor quality of services in my neighborhood",
+                "value": "poor_quality_of_services_in_my_neighborh"
               },
               {
-                "text": "I prefer other neighborhoods or areas"
+                "text": "I prefer other neighborhoods or areas",
+                "value": "i_prefer_other_neighborhoods_or_areas"
               },
               {
-                "text": "I rarely or never travel outside my neighborhood"
+                "text": "I rarely or never travel outside my neighborhood",
+                "value": "i_rarely_or_never_travel_outside_my_neig"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           },
           {
             "text": "How strongly do you feel connected to the place where you live and the people in your community?",
+            "answer_key": "place_attachment_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Not connected"
+                "text": "Not connected",
+                "value": "not_connected"
               },
               {
-                "text": "Somewhat disconnected"
+                "text": "Somewhat disconnected",
+                "value": "somewhat_disconnected"
               },
               {
-                "text": "Neither connected nor disconnected"
+                "text": "Neither connected nor disconnected",
+                "value": "neither_connected_nor_disconnected"
               },
               {
-                "text": "Somewhat connected"
+                "text": "Somewhat connected",
+                "value": "somewhat_connected"
               },
               {
-                "text": "Very connected"
+                "text": "Very connected",
+                "value": "very_connected"
               }
             ]
           }
@@ -850,7 +1002,6 @@
       "#SmartUrbanity - About You": "SmartUrbanity - About You",
       "#1. About You": "1. About You",
       "#1. Welcome to About You": "1. Welcome to About You",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Personal & Household": "Personal & Household",
@@ -1004,14 +1155,14 @@
       "#Somewhat disconnected": "Somewhat disconnected",
       "#Neither connected nor disconnected": "Neither connected nor disconnected",
       "#Somewhat connected": "Somewhat connected",
-      "#Very connected": "Very connected"
+      "#Very connected": "Very connected",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "code": "it",
       "#SmartUrbanity - About You": "SmartUrbanity - Informazioni su di te",
       "#1. About You": "1. Informazioni su di te",
       "#1. Welcome to About You": "1. Benvenuto/a nella sezione Informazioni su di te",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity raccoglie informazioni di base sulla persona, sul nucleo familiare e sul contesto abitativo. Le tue risposte ci aiutano a descrivere chi partecipa allo studio e in che modo le diverse condizioni urbane possono influenzare la mobilità quotidiana. La partecipazione è volontaria e anonima.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Personal & Household": "Informazioni personali e nucleo familiare",
@@ -1165,14 +1316,14 @@
       "#Somewhat disconnected": "Poco legato/a",
       "#Neither connected nor disconnected": "Né legato/a né distaccato/a",
       "#Somewhat connected": "Abbastanza legato/a",
-      "#Very connected": "Molto legato/a"
+      "#Very connected": "Molto legato/a",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity raccoglie informazioni di base sulla persona, sul nucleo familiare e sul contesto abitativo. Le tue risposte ci aiutano a descrivere chi partecipa allo studio e in che modo le diverse condizioni urbane possono influenzare la mobilità quotidiana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "code": "fr",
       "#SmartUrbanity - About You": "SmartUrbanity - À propos de vous",
       "#1. About You": "1. À propos de vous",
       "#1. Welcome to About You": "1. Bienvenue dans « À propos de vous »",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity recueille des informations générales sur vous, votre foyer et votre cadre de vie. Vos réponses nous aident à mieux comprendre qui participe à l’étude et comment différentes conditions urbaines peuvent influencer les déplacements quotidiens. La participation est volontaire et anonyme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Personal & Household": "Vous et votre foyer",
@@ -1326,14 +1477,14 @@
       "#Somewhat disconnected": "Plutôt peu attaché(e)",
       "#Neither connected nor disconnected": "Ni attaché(e) ni détaché(e)",
       "#Somewhat connected": "Plutôt attaché(e)",
-      "#Very connected": "Très attaché(e)"
+      "#Very connected": "Très attaché(e)",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity recueille des informations générales sur vous, votre foyer et votre cadre de vie. Vos réponses nous aident à mieux comprendre qui participe à l’étude et comment différentes conditions urbaines peuvent influencer les déplacements quotidiens. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "code": "de",
       "#SmartUrbanity - About You": "SmartUrbanity - Über Sie",
       "#1. About You": "1. Über Sie",
       "#1. Welcome to About You": "1. Willkommen bei „Über Sie“",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen erfasst grundlegende Informationen zu Ihrer Person, Ihrem Haushalt und Ihrem Wohnumfeld. Ihre Antworten helfen uns zu verstehen, wer an der Studie teilnimmt und wie unterschiedliche Bedingungen in der Stadt die tägliche Mobilität beeinflussen können. Die Teilnahme ist freiwillig und anonym.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Personal & Household": "Persönliche Angaben und Haushalt",
@@ -1487,14 +1638,14 @@
       "#Somewhat disconnected": "Eher wenig verbunden",
       "#Neither connected nor disconnected": "Weder verbunden noch unverbunden",
       "#Somewhat connected": "Eher verbunden",
-      "#Very connected": "Sehr verbunden"
+      "#Very connected": "Sehr verbunden",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen erfasst grundlegende Informationen zu Ihrer Person, Ihrem Haushalt und Ihrem Wohnumfeld. Ihre Antworten helfen uns zu verstehen, wer an der Studie teilnimmt und wie unterschiedliche Bedingungen in der Stadt die tägliche Mobilität beeinflussen können. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "code": "tr",
       "#SmartUrbanity - About You": "SmartUrbanity - Sizin Hakkınızda",
       "#1. About You": "1. Sizin Hakkınızda",
       "#1. Welcome to About You": "1. “Sizin Hakkınızda” Anketine Hoş Geldiniz",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi sizin, hanenizin ve yaşadığınız çevrenin temel özellikleri hakkında bilgi toplar. Yanıtlarınız, çalışmaya kimlerin katıldığını ve farklı kentsel koşulların günlük hareketliliği nasıl etkileyebileceğini anlamamıza yardımcı olur. Katılım gönüllü ve anonimdir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Personal & Household": "Kişisel Bilgiler ve Hane",
@@ -1648,14 +1799,14 @@
       "#Somewhat disconnected": "Pek bağlı hissetmiyorum",
       "#Neither connected nor disconnected": "Ne bağlı ne de kopuk hissediyorum",
       "#Somewhat connected": "Oldukça bağlı hissediyorum",
-      "#Very connected": "Çok bağlı hissediyorum"
+      "#Very connected": "Çok bağlı hissediyorum",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi sizin, hanenizin ve yaşadığınız çevrenin temel özellikleri hakkında bilgi toplar. Yanıtlarınız, çalışmaya kimlerin katıldığını ve farklı kentsel koşulların günlük hareketliliği nasıl etkileyebileceğini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "code": "fa",
       "#SmartUrbanity - About You": "SmartUrbanity - درباره شما",
       "#1. About You": "1. درباره شما",
       "#1. Welcome to About You": "1. به پرسشنامه «درباره شما» خوش آمدید",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity اطلاعات پایه درباره شما، خانوار شما و محیط زندگی‌تان جمع‌آوری می‌کند. پاسخ‌های شما به ما کمک می‌کند بفهمیم چه کسانی در مطالعه شرکت می‌کنند و شرایط مختلف شهری چگونه می‌تواند بر رفت‌وآمد روزانه اثر بگذارد. شرکت در این پرسشنامه داوطلبانه و ناشناس است.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Personal & Household": "اطلاعات شخصی و خانوار",
@@ -1809,14 +1960,14 @@
       "#Somewhat disconnected": "کمی احساس بی‌تعلقی می‌کنم",
       "#Neither connected nor disconnected": "نه احساس تعلق دارم نه بی‌تعلقی",
       "#Somewhat connected": "تا حدی احساس تعلق دارم",
-      "#Very connected": "احساس تعلق زیادی دارم"
+      "#Very connected": "احساس تعلق زیادی دارم",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity اطلاعات پایه درباره شما، خانوار شما و محیط زندگی‌تان جمع‌آوری می‌کند. پاسخ‌های شما به ما کمک می‌کند بفهمیم چه کسانی در مطالعه شرکت می‌کنند و شرایط مختلف شهری چگونه می‌تواند بر رفت‌وآمد روزانه اثر بگذارد. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "code": "hu",
       "#SmartUrbanity - About You": "SmartUrbanity - Önről",
       "#1. About You": "1. Önről",
       "#1. Welcome to About You": "1. Üdvözöljük az „Önről” kérdőívben",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív alapvető információkat gyűjt Önről, a háztartásáról és a lakókörnyezetéről. Válaszai segítenek megérteni, kik vesznek részt a kutatásban, és hogyan befolyásolhatják a különböző városi körülmények a mindennapi közlekedést. A részvétel önkéntes és anonim.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Personal & Household": "Személyes és háztartási adatok",
@@ -1970,14 +2121,14 @@
       "#Somewhat disconnected": "Inkább nem kötődöm",
       "#Neither connected nor disconnected": "Sem kötődőnek, sem távolságtartónak nem érzem magam",
       "#Somewhat connected": "Inkább kötődöm",
-      "#Very connected": "Nagyon kötődöm"
+      "#Very connected": "Nagyon kötődöm",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív alapvető információkat gyűjt Önről, a háztartásáról és a lakókörnyezetéről. Válaszai segítenek megérteni, kik vesznek részt a kutatásban, és hogyan befolyásolhatják a különböző városi körülmények a mindennapi közlekedést. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "code": "ar",
       "#SmartUrbanity - About You": "SmartUrbanity - معلومات عنك",
       "#1. About You": "1. معلومات عنك",
       "#1. Welcome to About You": "1. مرحبًا بك في استبيان «معلومات عنك»",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يجمع هذا الاستبيان من SmartUrbanity معلومات أساسية عنك وعن أسرتك والبيئة التي تعيش فيها. تساعدنا إجاباتك على فهم من يشارك في الدراسة وكيف يمكن للظروف الحضرية المختلفة أن تؤثر في التنقل اليومي. المشاركة طوعية ومجهولة الهوية.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Personal & Household": "معلومات شخصية وعن الأسرة",
@@ -2131,7 +2282,8 @@
       "#Somewhat disconnected": "أشعر بارتباط ضعيف",
       "#Neither connected nor disconnected": "لا أشعر بالارتباط ولا بالانفصال",
       "#Somewhat connected": "أشعر بقدر من الارتباط",
-      "#Very connected": "أشعر بارتباط قوي"
+      "#Very connected": "أشعر بارتباط قوي",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يجمع هذا الاستبيان من SmartUrbanity معلومات أساسية عنك وعن أسرتك والبيئة التي تعيش فيها. تساعدنا إجاباتك على فهم من يشارك في الدراسة وكيف يمكن للظروف الحضرية المختلفة أن تؤثر في التنقل اليومي. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_about_you",

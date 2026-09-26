@@ -2,17 +2,18 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Cycling",
     "questionnaire_id": "smarturbanity_cycling",
-    "questionnaire_version": "0.1.0",
+    "questionnaire_version": "0.1.1",
     "project": "SmartUrbanity",
+    "estimated_minutes": 6,
     "options": {
       "review_mode": true,
       "ask_consent": false,
-      "save_user_id": false
+      "save_user_id": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
       "title": "Welcome to Your Experience With Cycling",
-      "description": "<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -27,405 +28,506 @@
         "questions": [
           {
             "text": "Do you cycle (including e-bikes) as a mode of travel at least once a week?",
+            "answer_key": "bike_weekly",
             "question_type": "single_option",
-            "answer_key": "main_mode",
             "required": true,
             "options": [
               {
                 "text": "Yes",
-                "value": "cycling"
+                "value": "yes"
               },
               {
                 "text": "No",
-                "value": "nocycling"
+                "value": "no"
               }
             ]
           },
           {
             "text": "Which type of bicycle do you most often use?",
+            "answer_key": "bike_type_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Standard pedal bicycle (private)"
+                "text": "Standard pedal bicycle (private)",
+                "value": "standard_pedal_bicycle_private"
               },
               {
-                "text": "Electric bicycle / e-bike (private)"
+                "text": "Electric bicycle / e-bike (private)",
+                "value": "electric_bicycle_e_bike_private"
               },
               {
-                "text": "Shared / hire bicycle (docked or dockless)"
+                "text": "Shared / hire bicycle (docked or dockless)",
+                "value": "shared_hire_bicycle_docked_or_dockless"
               },
               {
-                "text": "Shared / hire e-bike"
+                "text": "Shared / hire e-bike",
+                "value": "shared_hire_e_bike"
               },
               {
-                "text": "Cargo bike or adapted bike"
+                "text": "Cargo bike or adapted bike",
+                "value": "cargo_bike_or_adapted_bike"
               }
             ]
           },
           {
             "text": "How confident are you cycling in urban traffic in your city?",
+            "answer_key": "bike_confidence_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not confident at all — I avoid cycling in traffic"
+                "text": "Not confident at all — I avoid cycling in traffic",
+                "value": "not_confident_at_all_i_avoid_cycling_in"
               },
               {
-                "text": "Not very confident — I cycle only when I have no alternative"
+                "text": "Not very confident — I cycle only when I have no alternative",
+                "value": "not_very_confident_i_cycle_only_when_i_h"
               },
               {
-                "text": "Neither confident nor unconfident"
+                "text": "Neither confident nor unconfident",
+                "value": "neither_confident_nor_unconfident"
               },
               {
-                "text": "Somewhat confident — I manage most situations comfortably"
+                "text": "Somewhat confident — I manage most situations comfortably",
+                "value": "somewhat_confident_i_manage_most_situati"
               },
               {
-                "text": "Very confident — I cycle in all conditions without difficulty"
+                "text": "Very confident — I cycle in all conditions without difficulty",
+                "value": "very_confident_i_cycle_in_all_conditions"
               },
               {
-                "text": "I have never cycled in urban traffic"
+                "text": "I have never cycled in urban traffic",
+                "value": "i_have_never_cycled_in_urban_traffic"
               }
             ]
           },
           {
             "text": "How adequate is the cycling infrastructure (cycle lanes, paths, and signage) on your typical route?",
+            "answer_key": "bike_infra_adequacy_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Very inadequate — little or no cycling infrastructure exists"
+                "text": "Very inadequate — little or no cycling infrastructure exists",
+                "value": "very_inadequate_little_or_no_cycling_inf"
               },
               {
-                "text": "Inadequate — some provision exists but it is fragmented or poorly designed"
+                "text": "Inadequate — some provision exists but it is fragmented or poorly designed",
+                "value": "inadequate_some_provision_exists_but_it"
               },
               {
-                "text": "Partially adequate — infrastructure covers part of my route"
+                "text": "Partially adequate — infrastructure covers part of my route",
+                "value": "partially_adequate_infrastructure_covers"
               },
               {
-                "text": "Mostly adequate — infrastructure is reasonably good along most of my route"
+                "text": "Mostly adequate — infrastructure is reasonably good along most of my route",
+                "value": "mostly_adequate_infrastructure_is_reason"
               },
               {
-                "text": "Very adequate — cycling infrastructure is excellent throughout my route"
+                "text": "Very adequate — cycling infrastructure is excellent throughout my route",
+                "value": "very_adequate_cycling_infrastructure_is"
               }
             ]
           },
           {
             "text": "Which of the following physical barriers do you face on your cycling route? (Select all that apply)",
+            "answer_key": "bike_barriers_v1",
             "question_type": "multiple_options",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Uneven or poorly maintained road surfaces (potholes, patches, cobblestones)"
+                "text": "Uneven or poorly maintained road surfaces (potholes, patches, cobblestones)",
+                "value": "uneven_or_poorly_maintained_road_surface"
               },
               {
-                "text": "Steep or sudden changes in gradient"
+                "text": "Steep or sudden changes in gradient",
+                "value": "steep_or_sudden_changes_in_gradient"
               },
               {
-                "text": "Parked cars or vehicles blocking cycle lanes"
+                "text": "Parked cars or vehicles blocking cycle lanes",
+                "value": "parked_cars_or_vehicles_blocking_cycle_l"
               },
               {
-                "text": "Pedestrians or e-scooters using cycle lanes"
+                "text": "Pedestrians or e-scooters using cycle lanes",
+                "value": "pedestrians_or_e_scooters_using_cycle_la"
               },
               {
-                "text": "Road furniture blocking cycle paths (bins, signage, advertising boards)"
+                "text": "Road furniture blocking cycle paths (bins, signage, advertising boards)",
+                "value": "road_furniture_blocking_cycle_paths_bins"
               },
               {
-                "text": "Lack of cycle-friendly crossings or traffic signals"
+                "text": "Lack of cycle-friendly crossings or traffic signals",
+                "value": "lack_of_cycle_friendly_crossings_or_traf"
               },
               {
-                "text": "Poorly designed junctions or roundabouts"
+                "text": "Poorly designed junctions or roundabouts",
+                "value": "poorly_designed_junctions_or_roundabouts"
               },
               {
-                "text": "I don't face any physical barrier"
+                "text": "I don't face any physical barrier",
+                "value": "i_don_t_face_any_physical_barrier"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           },
           {
             "text": "If you encounter poor road or path surfaces (potholes, cobblestones, or uneven ground), how does it affect your cycling?",
+            "answer_key": "v1_if_you_encounter_poor_road_or_path_s",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "It does not affect my cycling at all"
+                "text": "It does not affect my cycling at all",
+                "value": "it_does_not_affect_my_cycling_at_all"
               },
               {
-                "text": "I notice it but continue without changing my behaviour"
+                "text": "I notice it but continue without changing my behaviour",
+                "value": "i_notice_it_but_continue_without_changin"
               },
               {
-                "text": "I slow down or adjust my line but stay on the same route"
+                "text": "I slow down or adjust my line but stay on the same route",
+                "value": "i_slow_down_or_adjust_my_line_but_stay_o"
               },
               {
-                "text": "I actively avoid roads with poor surfaces, even if the alternative is longer"
+                "text": "I actively avoid roads with poor surfaces, even if the alternative is longer",
+                "value": "i_actively_avoid_roads_with_poor_surface"
               },
               {
-                "text": "Poor surfaces significantly limit where and how often I can cycle"
+                "text": "Poor surfaces significantly limit where and how often I can cycle",
+                "value": "poor_surfaces_significantly_limit_where"
               }
             ]
           },
           {
             "text": "To what extent does the steepness of your route affect your cycling?",
+            "answer_key": "bike_avoid_slopes_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not at all"
+                "text": "Not at all",
+                "value": "not_at_all"
               },
               {
-                "text": "Slightly — I notice hills but they do not significantly affect my journey"
+                "text": "Slightly — I notice hills but they do not significantly affect my journey",
+                "value": "slightly_i_notice_hills_but_they_do_not"
               },
               {
-                "text": "Moderately — hills slow me down or increase my effort noticeably"
+                "text": "Moderately — hills slow me down or increase my effort noticeably",
+                "value": "moderately_hills_slow_me_down_or_increas"
               },
               {
-                "text": "Significantly — I avoid steep routes when possible"
+                "text": "Significantly — I avoid steep routes when possible",
+                "value": "significantly_i_avoid_steep_routes_when"
               },
               {
-                "text": "Extremely — hills are a major barrier that limits where I can cycle"
+                "text": "Extremely — hills are a major barrier that limits where I can cycle",
+                "value": "extremely_hills_are_a_major_barrier_that"
               }
             ]
           },
           {
             "text": "How does the quality of signs and wayfinding on your cycling route affect your journey?",
+            "answer_key": "bike_wayfinding_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not at all — I can navigate easily regardless of signage quality"
+                "text": "Not at all — I can navigate easily regardless of signage quality",
+                "value": "not_at_all_i_can_navigate_easily_regardl"
               },
               {
-                "text": "Slightly — signs are occasionally helpful"
+                "text": "Slightly — signs are occasionally helpful",
+                "value": "slightly_signs_are_occasionally_helpful"
               },
               {
-                "text": "Moderately — I rely on signs to confirm my route"
+                "text": "Moderately — I rely on signs to confirm my route",
+                "value": "moderately_i_rely_on_signs_to_confirm_my"
               },
               {
-                "text": "Significantly — unclear or missing signs sometimes disrupt my journey"
+                "text": "Significantly — unclear or missing signs sometimes disrupt my journey",
+                "value": "significantly_unclear_or_missing_signs_s"
               },
               {
-                "text": "Very significantly — poor signage makes navigation difficult without GPS or phone apps"
+                "text": "Very significantly — poor signage makes navigation difficult without GPS or phone apps",
+                "value": "very_significantly_poor_signage_makes_na"
               }
             ]
           },
           {
             "text": "How do traffic levels and vehicle speeds on your cycling route typically affect your journey?",
+            "answer_key": "bike_avoid_traffic_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not at all — traffic does not affect my cycling experience"
+                "text": "Not at all — traffic does not affect my cycling experience",
+                "value": "not_at_all_traffic_does_not_affect_my_cy"
               },
               {
-                "text": "Slightly — I notice traffic, but it rarely affects my comfort or route"
+                "text": "Slightly — I notice traffic, but it rarely affects my comfort or route",
+                "value": "slightly_i_notice_traffic_but_it_rarely"
               },
               {
-                "text": "Moderately — traffic sometimes reduces my comfort or enjoyment while cycling"
+                "text": "Moderately — traffic sometimes reduces my comfort or enjoyment while cycling",
+                "value": "moderately_traffic_sometimes_reduces_my"
               },
               {
-                "text": "Significantly — traffic often makes me feel stressed or unsafe"
+                "text": "Significantly — traffic often makes me feel stressed or unsafe",
+                "value": "significantly_traffic_often_makes_me_fee"
               },
               {
-                "text": "Very significantly — I change my route or travel time specifically to avoid heavy or fast traffic"
+                "text": "Very significantly — I change my route or travel time specifically to avoid heavy or fast traffic",
+                "value": "very_significantly_i_change_my_route_or"
               }
             ]
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while cycling?",
+            "answer_key": "bike_risky_users_v1",
             "question_type": "multiple_options",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Car drivers"
+                "text": "Car drivers",
+                "value": "car_drivers"
               },
               {
-                "text": "Motorcycle or scooter riders"
+                "text": "Motorcycle or scooter riders",
+                "value": "motorcycle_or_scooter_riders"
               },
               {
-                "text": "Bus drivers"
+                "text": "Bus drivers",
+                "value": "bus_drivers"
               },
               {
-                "text": "Delivery vehicles (vans, cargo bikes, scooters)"
+                "text": "Delivery vehicles (vans, cargo bikes, scooters)",
+                "value": "delivery_vehicles_vans_cargo_bikes_scoot"
               },
               {
-                "text": "Taxi or ride-hailing drivers"
+                "text": "Taxi or ride-hailing drivers",
+                "value": "taxi_or_ride_hailing_drivers"
               },
               {
-                "text": "Other cyclists"
+                "text": "Other cyclists",
+                "value": "other_cyclists"
               },
               {
-                "text": "E-scooter riders"
+                "text": "E-scooter riders",
+                "value": "e_scooter_riders"
               },
               {
-                "text": "Pedestrians"
+                "text": "Pedestrians",
+                "value": "pedestrians"
               },
               {
-                "text": "None — no category negatively affects my feeling of safety"
+                "text": "None — no category negatively affects my feeling of safety",
+                "value": "none_no_category_negatively_affects_my_f"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ],
             "max_answers": 3
           },
           {
             "text": "How confident are you in your ability to anticipate and react to dangerous situations while cycling (e.g., car doors opening suddenly, vehicles cutting across, or blind junctions)?",
+            "answer_key": "bike_hazard_confidence_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not confident at all — I feel unprepared for these situations"
+                "text": "Not confident at all — I feel unprepared for these situations",
+                "value": "not_confident_at_all_i_feel_unprepared_f"
               },
               {
-                "text": "Slightly confident — I am aware of the risks but often feel caught off guard"
+                "text": "Slightly confident — I am aware of the risks but often feel caught off guard",
+                "value": "slightly_confident_i_am_aware_of_the_ris"
               },
               {
-                "text": "Moderately confident — I manage most situations but some still worry me"
+                "text": "Moderately confident — I manage most situations but some still worry me",
+                "value": "moderately_confident_i_manage_most_situa"
               },
               {
-                "text": "Quite confident — I anticipate most hazards and respond well"
+                "text": "Quite confident — I anticipate most hazards and respond well",
+                "value": "quite_confident_i_anticipate_most_hazard"
               },
               {
-                "text": "Very confident — I feel well prepared for all typical cycling hazards"
+                "text": "Very confident — I feel well prepared for all typical cycling hazards",
+                "value": "very_confident_i_feel_well_prepared_for"
               }
             ]
           },
           {
             "text": "How does street lighting affect your decision to cycle after dark?",
+            "answer_key": "bike_skip_dark_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Lighting levels have no influence on my decision to cycle after dark"
+                "text": "Lighting levels have no influence on my decision to cycle after dark",
+                "value": "lighting_levels_have_no_influence_on_my"
               },
               {
-                "text": "I notice poor lighting but it does not change when or where I cycle"
+                "text": "I notice poor lighting but it does not change when or where I cycle",
+                "value": "i_notice_poor_lighting_but_it_does_not_c"
               },
               {
-                "text": "I cycle at reduced speed or stay on higher-lit roads in poorly lit areas"
+                "text": "I cycle at reduced speed or stay on higher-lit roads in poorly lit areas",
+                "value": "i_cycle_at_reduced_speed_or_stay_on_high"
               },
               {
-                "text": "I take significantly longer routes to stay in well-lit areas"
+                "text": "I take significantly longer routes to stay in well-lit areas",
+                "value": "i_take_significantly_longer_routes_to_st"
               },
               {
-                "text": "I do not cycle after dark because of poor lighting"
+                "text": "I do not cycle after dark because of poor lighting",
+                "value": "i_do_not_cycle_after_dark_because_of_poo"
               }
             ]
           },
           {
             "text": "How would you describe the availability of bicycle parking at your most frequent destination?",
+            "answer_key": "bike_parking_destination_v1",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Very inadequate — there is nowhere secure to park my bicycle"
+                "text": "Very inadequate — there is nowhere secure to park my bicycle",
+                "value": "very_inadequate_there_is_nowhere_secure"
               },
               {
-                "text": "Inadequate — parking exists but is too limited or too far from my destination"
+                "text": "Inadequate — parking exists but is too limited or too far from my destination",
+                "value": "inadequate_parking_exists_but_is_too_lim"
               },
               {
-                "text": "Partially adequate — parking is available but not always convenient or secure"
+                "text": "Partially adequate — parking is available but not always convenient or secure",
+                "value": "partially_adequate_parking_is_available"
               },
               {
-                "text": "Mostly adequate — I can usually find a suitable place to park"
+                "text": "Mostly adequate — I can usually find a suitable place to park",
+                "value": "mostly_adequate_i_can_usually_find_a_sui"
               },
               {
-                "text": "Very adequate — secure and convenient parking is always available"
+                "text": "Very adequate — secure and convenient parking is always available",
+                "value": "very_adequate_secure_and_convenient_park"
               }
             ]
           },
           {
             "text": "Has the lack of secure bicycle parking ever caused you to change your travel plans or leave your bike at home?",
+            "answer_key": "bike_parking_changed_plans",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "Never"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "Rarely"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Sometimes"
+                "text": "Sometimes",
+                "value": "sometimes"
               },
               {
-                "text": "Often"
+                "text": "Often",
+                "value": "often"
               },
               {
-                "text": "Always — lack of parking is a constant barrier to cycling"
+                "text": "Always — lack of parking is a constant barrier to cycling",
+                "value": "always"
               }
             ]
           },
           {
             "text": "What improvements would most encourage you to cycle more often or for longer distances?",
+            "answer_key": "bike_improvements_v1",
             "question_type": "multiple_options",
             "show_if": {
-              "main_mode": "cycling"
+              "bike_weekly": "yes"
             },
             "options": [
               {
-                "text": "More dedicated and physically separated cycle lanes"
+                "text": "More dedicated and physically separated cycle lanes",
+                "value": "more_dedicated_and_physically_separated"
               },
               {
-                "text": "Better road surface quality on cycling routes"
+                "text": "Better road surface quality on cycling routes",
+                "value": "better_road_surface_quality_on_cycling_r"
               },
               {
-                "text": "More secure bicycle parking at destinations"
+                "text": "More secure bicycle parking at destinations",
+                "value": "more_secure_bicycle_parking_at_destinati"
               },
               {
-                "text": "More secure bicycle storage near home"
+                "text": "More secure bicycle storage near home",
+                "value": "more_secure_bicycle_storage_near_home"
               },
               {
-                "text": "Reduced vehicle speeds in residential areas"
+                "text": "Reduced vehicle speeds in residential areas",
+                "value": "reduced_vehicle_speeds_in_residential_ar"
               },
               {
-                "text": "Better cycle-friendly junctions and crossings"
+                "text": "Better cycle-friendly junctions and crossings",
+                "value": "better_cycle_friendly_junctions_and_cros"
               },
               {
-                "text": "More trees and shade along cycling routes"
+                "text": "More trees and shade along cycling routes",
+                "value": "more_trees_and_shade_along_cycling_route"
               },
               {
-                "text": "Better street lighting on cycling routes"
+                "text": "Better street lighting on cycling routes",
+                "value": "better_street_lighting_on_cycling_routes"
               },
               {
-                "text": "Access to cycle training or skills courses"
+                "text": "Access to cycle training or skills courses",
+                "value": "access_to_cycle_training_or_skills_cours"
               },
               {
-                "text": "Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)"
+                "text": "Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)",
+                "value": "financial_incentives_e_g_employer_cyclin"
               },
               {
-                "text": "Nothing — I am satisfied with current conditions"
+                "text": "Nothing — I am satisfied with current conditions",
+                "value": "nothing_i_am_satisfied_with_current_cond"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ],
             "max_answers": 3
@@ -440,7 +542,6 @@
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - Your Experience With Cycling",
       "#8. Your Experience With Cycling": "8. Your Experience With Cycling",
       "#Welcome to Your Experience With Cycling": "Welcome to Your Experience With Cycling",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Cycling Habits": "Cycling Habits",
@@ -546,14 +647,14 @@
       "#Better street lighting on cycling routes": "Better street lighting on cycling routes",
       "#Access to cycle training or skills courses": "Access to cycle training or skills courses",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)",
-      "#Nothing — I am satisfied with current conditions": "Nothing — I am satisfied with current conditions"
+      "#Nothing — I am satisfied with current conditions": "Nothing — I am satisfied with current conditions",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "code": "it",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - La tua esperienza con la bicicletta",
       "#8. Your Experience With Cycling": "8. La tua esperienza con la bicicletta",
       "#Welcome to Your Experience With Cycling": "Benvenuto/a nel questionario sulla tua esperienza con la bicicletta",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza come ciclista o utilizzatore/utilizzatrice di e-bike. Le tue risposte ci aiutano a comprendere le condizioni e gli ostacoli che le persone incontrano quando si spostano in bicicletta in città e a individuare opportunità per rendere la mobilità ciclistica più sicura, accessibile e pratica negli spostamenti quotidiani. La partecipazione è volontaria e anonima.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Cycling Habits": "Abitudini ciclistiche",
@@ -659,14 +760,14 @@
       "#Better street lighting on cycling routes": "Migliore illuminazione stradale lungo i percorsi ciclabili",
       "#Access to cycle training or skills courses": "Accesso a corsi di formazione o abilità ciclistiche",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Incentivi economici, ad esempio indennità aziendali per chi usa la bicicletta o contributi per l’acquisto",
-      "#Nothing — I am satisfied with current conditions": "Nessun miglioramento — sono soddisfatto/a delle condizioni attuali"
+      "#Nothing — I am satisfied with current conditions": "Nessun miglioramento — sono soddisfatto/a delle condizioni attuali",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza come ciclista o utilizzatore/utilizzatrice di e-bike. Le tue risposte ci aiutano a comprendere le condizioni e gli ostacoli che le persone incontrano quando si spostano in bicicletta in città e a individuare opportunità per rendere la mobilità ciclistica più sicura, accessibile e pratica negli spostamenti quotidiani. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "code": "fr",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - Votre expérience à vélo",
       "#8. Your Experience With Cycling": "8. Votre expérience à vélo",
       "#Welcome to Your Experience With Cycling": "Bienvenue dans le questionnaire sur votre expérience à vélo",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience à vélo ou à vélo électrique. Vos réponses nous aident à comprendre les conditions et les obstacles rencontrés en ville et à trouver des moyens de rendre les déplacements à vélo plus sûrs, plus accessibles et plus pratiques au quotidien. La participation est volontaire et anonyme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Cycling Habits": "Habitudes à vélo",
@@ -772,14 +873,14 @@
       "#Better street lighting on cycling routes": "Un meilleur éclairage public sur les itinéraires cyclables",
       "#Access to cycle training or skills courses": "Des cours pour apprendre ou améliorer la pratique du vélo",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Des aides financières (par exemple une indemnité vélo de l’employeur ou une aide à l’achat d’un vélo)",
-      "#Nothing — I am satisfied with current conditions": "Rien — les conditions actuelles me conviennent"
+      "#Nothing — I am satisfied with current conditions": "Rien — les conditions actuelles me conviennent",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience à vélo ou à vélo électrique. Vos réponses nous aident à comprendre les conditions et les obstacles rencontrés en ville et à trouver des moyens de rendre les déplacements à vélo plus sûrs, plus accessibles et plus pratiques au quotidien. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "code": "de",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - Ihre Erfahrung mit dem Fahrrad",
       "#8. Your Experience With Cycling": "8. Ihre Erfahrung mit dem Fahrrad",
       "#Welcome to Your Experience With Cycling": "Willkommen beim Fragebogen zu Ihrer Erfahrung mit dem Fahrrad",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung beim Radfahren oder mit dem E-Bike. Ihre Antworten helfen uns zu verstehen, welche Bedingungen und Hindernisse Menschen beim Radfahren in der Stadt erleben und wie Radfahren sicherer, zugänglicher und alltagstauglicher werden kann. Die Teilnahme ist freiwillig und anonym.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Cycling Habits": "Gewohnheiten beim Radfahren",
@@ -885,14 +986,14 @@
       "#Better street lighting on cycling routes": "Bessere Straßenbeleuchtung auf Radstrecken",
       "#Access to cycle training or skills courses": "Fahrradkurse oder Trainingsangebote",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Finanzielle Anreize (zum Beispiel Zuschuss vom Arbeitgeber oder Förderung beim Fahrradkauf)",
-      "#Nothing — I am satisfied with current conditions": "Nichts — ich bin mit den aktuellen Bedingungen zufrieden"
+      "#Nothing — I am satisfied with current conditions": "Nichts — ich bin mit den aktuellen Bedingungen zufrieden",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung beim Radfahren oder mit dem E-Bike. Ihre Antworten helfen uns zu verstehen, welche Bedingungen und Hindernisse Menschen beim Radfahren in der Stadt erleben und wie Radfahren sicherer, zugänglicher und alltagstauglicher werden kann. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "code": "tr",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - Bisiklet Deneyiminiz",
       "#8. Your Experience With Cycling": "8. Bisiklet Deneyiminiz",
       "#Welcome to Your Experience With Cycling": "Bisiklet Deneyimi Anketine Hoş Geldiniz",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi bisiklet veya elektrikli bisiklet kullanma deneyiminizle ilgilidir. Yanıtlarınız, insanların şehirde bisiklet kullanırken karşılaştığı koşulları ve engelleri anlamamıza ve bisikleti günlük yaşamda daha güvenli, erişilebilir ve kullanışlı hale getirecek fırsatları belirlememize yardımcı olur. Katılım gönüllü ve anonimdir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Cycling Habits": "Bisiklet Kullanma Alışkanlıkları",
@@ -998,14 +1099,14 @@
       "#Better street lighting on cycling routes": "Bisiklet güzergâhlarında daha iyi sokak aydınlatması",
       "#Access to cycle training or skills courses": "Bisiklet eğitimi veya beceri kurslarına erişim",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Maddi teşvikler (örneğin işveren bisiklet desteği veya bisiklet satın alma yardımı)",
-      "#Nothing — I am satisfied with current conditions": "Hiçbiri — mevcut koşullardan memnunum"
+      "#Nothing — I am satisfied with current conditions": "Hiçbiri — mevcut koşullardan memnunum",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi bisiklet veya elektrikli bisiklet kullanma deneyiminizle ilgilidir. Yanıtlarınız, insanların şehirde bisiklet kullanırken karşılaştığı koşulları ve engelleri anlamamıza ve bisikleti günlük yaşamda daha güvenli, erişilebilir ve kullanışlı hale getirecek fırsatları belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "code": "fa",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - تجربه شما از دوچرخه‌سواری",
       "#8. Your Experience With Cycling": "8. تجربه شما از دوچرخه‌سواری",
       "#Welcome to Your Experience With Cycling": "به پرسشنامه تجربه دوچرخه‌سواری خوش آمدید",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما هنگام استفاده از دوچرخه یا دوچرخه برقی است. پاسخ‌های شما کمک می‌کند شرایط و موانعی را که مردم هنگام دوچرخه‌سواری در شهر با آن روبه‌رو می‌شوند بهتر بشناسیم و راه‌هایی برای ایمن‌تر، دسترس‌پذیرتر و کاربردی‌تر شدن دوچرخه‌سواری روزانه پیدا کنیم. شرکت در این پرسشنامه داوطلبانه و ناشناس است.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Cycling Habits": "عادت‌های دوچرخه‌سواری",
@@ -1111,14 +1212,14 @@
       "#Better street lighting on cycling routes": "روشنایی بهتر خیابان در مسیرهای دوچرخه",
       "#Access to cycle training or skills courses": "دسترسی به آموزش یا دوره مهارت دوچرخه‌سواری",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "مشوق مالی (مثلاً کمک‌هزینه دوچرخه از طرف کارفرما یا کمک برای خرید دوچرخه)",
-      "#Nothing — I am satisfied with current conditions": "هیچ‌کدام — از شرایط فعلی راضی هستم"
+      "#Nothing — I am satisfied with current conditions": "هیچ‌کدام — از شرایط فعلی راضی هستم",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما هنگام استفاده از دوچرخه یا دوچرخه برقی است. پاسخ‌های شما کمک می‌کند شرایط و موانعی را که مردم هنگام دوچرخه‌سواری در شهر با آن روبه‌رو می‌شوند بهتر بشناسیم و راه‌هایی برای ایمن‌تر، دسترس‌پذیرتر و کاربردی‌تر شدن دوچرخه‌سواری روزانه پیدا کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "code": "hu",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - Kerékpározási tapasztalatai",
       "#8. Your Experience With Cycling": "8. Kerékpározási tapasztalatai",
       "#Welcome to Your Experience With Cycling": "Üdvözöljük a kerékpározási tapasztalatokról szóló kérdőívben",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a kerékpárral vagy elektromos kerékpárral szerzett tapasztalatairól szól. Válaszai segítenek megérteni, milyen körülményekkel és akadályokkal találkoznak az emberek városi kerékpározás közben, és hogyan lehet a kerékpározást biztonságosabbá, hozzáférhetőbbé és a mindennapokban könnyebben használhatóvá tenni. A részvétel önkéntes és anonim.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Cycling Habits": "Kerékpározási szokások",
@@ -1224,14 +1325,14 @@
       "#Better street lighting on cycling routes": "Jobb közvilágítás a kerékpáros útvonalakon",
       "#Access to cycle training or skills courses": "Kerékpáros oktatás vagy készségfejlesztő tanfolyamok",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "Pénzügyi ösztönzők (például munkáltatói kerékpáros támogatás vagy vásárlási támogatás)",
-      "#Nothing — I am satisfied with current conditions": "Semmi — elégedett vagyok a jelenlegi körülményekkel"
+      "#Nothing — I am satisfied with current conditions": "Semmi — elégedett vagyok a jelenlegi körülményekkel",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a kerékpárral vagy elektromos kerékpárral szerzett tapasztalatairól szól. Válaszai segítenek megérteni, milyen körülményekkel és akadályokkal találkoznak az emberek városi kerékpározás közben, és hogyan lehet a kerékpározást biztonságosabbá, hozzáférhetőbbé és a mindennapokban könnyebben használhatóvá tenni. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "code": "ar",
       "#SmartUrbanity - Your Experience With Cycling": "SmartUrbanity - تجربتك مع ركوب الدراجة",
       "#8. Your Experience With Cycling": "8. تجربتك مع ركوب الدراجة",
       "#Welcome to Your Experience With Cycling": "مرحبًا بك في استبيان تجربة ركوب الدراجة",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك في استخدام الدراجة أو الدراجة الكهربائية. تساعدنا إجاباتك على فهم الظروف والعوائق التي يواجهها الناس عند ركوب الدراجة في المدينة، وعلى تحديد فرص لجعل ركوب الدراجة أكثر أمانًا وسهولة وملاءمة للاستخدام اليومي. المشاركة طوعية ومجهولة الهوية.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Cycling Habits": "عادات ركوب الدراجة",
@@ -1337,7 +1438,8 @@
       "#Better street lighting on cycling routes": "إضاءة شارع أفضل على طرق الدراجات",
       "#Access to cycle training or skills courses": "إمكانية الحصول على تدريب أو دورات مهارات لركوب الدراجة",
       "#Financial incentives (e.g., employer cycling allowance, subsidised bike purchase)": "حوافز مالية (مثل بدل دراجة من جهة العمل أو دعم لشراء دراجة)",
-      "#Nothing — I am satisfied with current conditions": "لا شيء — أنا راضٍ عن الظروف الحالية"
+      "#Nothing — I am satisfied with current conditions": "لا شيء — أنا راضٍ عن الظروف الحالية",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a cyclist or e-bike rider. Your answers help us understand the conditions and barriers people face when cycling in the city, and identify opportunities to make cycling safer, more accessible, and more practical for everyday travel. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك في استخدام الدراجة أو الدراجة الكهربائية. تساعدنا إجاباتك على فهم الظروف والعوائق التي يواجهها الناس عند ركوب الدراجة في المدينة، وعلى تحديد فرص لجعل ركوب الدراجة أكثر أمانًا وسهولة وملاءمة للاستخدام اليومي. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_cycling",

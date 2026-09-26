@@ -1,0 +1,170 @@
+{
+  "config_type": "smarturbanity_survey_campaigns",
+  "config_version": "0.1.0",
+  "pilot_id": "rome",
+  "pilot_period": {"start_date": null, "end_date": null, "timezone": "Europe/Rome"},
+  "rules": {
+    "base_campaigns": [
+      "rome_profile",
+      "rome_walking",
+      "rome_safety_environment",
+      "rome_daily_mobility",
+      "rome_public_transport",
+      "rome_cycling",
+      "rome_car_motorcycle",
+      "rome_crossings",
+      "rome_pavements",
+      "rome_trips",
+      "rome_reports"
+    ],
+    "show_all_in_debug": true
+  },
+  "campaigns": {
+    "rome_profile": {
+      "name": "About you",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_about_you"]
+    },
+    "rome_walking": {
+      "name": "Walking",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_walking"]
+    },
+    "rome_safety_environment": {
+      "name": "Safety and environment",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 2, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_safety_environment"]
+    },
+    "rome_daily_mobility": {
+      "name": "Daily mobility",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 3, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_daily_travel", "smarturbanity_experience_on_the_move"]
+    },
+    "rome_public_transport": {
+      "name": "Public transport",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 4, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_public_transport"]
+    },
+    "rome_cycling": {
+      "name": "Cycling",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 6, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_cycling"]
+    },
+    "rome_car_motorcycle": {
+      "name": "Car and motorcycle",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 7, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_car", "smarturbanity_motorcycle"]
+    },
+    "rome_crossings": {
+      "name": "Crossings",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 2, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["street_connection_assessment"]
+    },
+    "rome_pavements": {
+      "name": "Pavements",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 3, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["street_segment_assessment"]
+    },
+    "rome_trips": {
+      "name": "Trips",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": ["smarturbanity_pre_trip", "smarturbanity_post_trip"]
+    },
+    "rome_reports": {
+      "name": "Reports",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_geolocated_perception_report",
+        "smarturbanity_near_miss_report",
+        "smarturbanity_missing_network_element_report"
+      ]
+    },
+    "rome_test_event_surveys": {
+      "name": "Test event 24 October: questionnaires",
+      "enabled": true,
+      "priority": 10,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": "2026-10-24",
+        "valid_until": "2026-10-24",
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": true,
+      "questionnaires": ["smarturbanity_about_you", "smarturbanity_walking"],
+      "group": "rome_test_event_2026_10_24"
+    },
+    "rome_test_event_reports": {
+      "name": "Test event 24 October: reports near Largo Ravizza",
+      "enabled": true,
+      "priority": 10,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": "2026-10-24",
+        "valid_until": "2026-10-24",
+        "extended_until": null
+      },
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 1000
+      },
+      "exclusive": true,
+      "questionnaires": [
+        "street_connection_assessment",
+        "street_segment_assessment",
+        "smarturbanity_missing_network_element_report",
+        "smarturbanity_geolocated_perception_report",
+        "smarturbanity_near_miss_report"
+      ],
+      "group": "rome_test_event_2026_10_24"
+    }
+  }
+}

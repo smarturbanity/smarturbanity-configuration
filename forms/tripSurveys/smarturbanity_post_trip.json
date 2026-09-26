@@ -1,0 +1,889 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - After the trip",
+    "questionnaire_id": "smarturbanity_post_trip",
+    "questionnaire_version": "0.2.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": false,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "After the trip",
+      "description": "<p>Less than a minute: your answers help us understand how the trip really went.</p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "After the trip",
+    "sections": [
+      {
+        "title": "After the trip",
+        "description": "<p>A few quick questions about the trip you just made.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Is the way you travelled shown correctly on the map?",
+            "answer_key": "stages_correct",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No, I'll correct it on the map",
+                "value": "no_fix"
+              }
+            ]
+          },
+          {
+            "text": "Compared to what you expected, how long did this trip feel?",
+            "answer_key": "trip_time_vs_expected",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Much shorter than expected",
+                "value": "much_shorter"
+              },
+              {
+                "text": "A little shorter than expected",
+                "value": "shorter"
+              },
+              {
+                "text": "As expected",
+                "value": "as_expected"
+              },
+              {
+                "text": "A little longer than expected",
+                "value": "longer"
+              },
+              {
+                "text": "Much longer than expected",
+                "value": "much_longer"
+              }
+            ]
+          },
+          {
+            "text": "How tiring was this trip?",
+            "answer_key": "trip_effort",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "A lot",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ]
+          },
+          {
+            "text": "How safe from traffic did you feel on this trip?",
+            "answer_key": "trip_traffic_safety",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all safe",
+                "value": "not_safe"
+              },
+              {
+                "text": "Slightly safe",
+                "value": "slightly_safe"
+              },
+              {
+                "text": "Moderately safe",
+                "value": "moderately_safe"
+              },
+              {
+                "text": "Very safe",
+                "value": "very_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "completely_safe"
+              }
+            ]
+          },
+          {
+            "text": "How safe did you feel from other people (e.g. theft, harassment)?",
+            "answer_key": "trip_personal_security",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all safe",
+                "value": "not_safe"
+              },
+              {
+                "text": "Slightly safe",
+                "value": "slightly_safe"
+              },
+              {
+                "text": "Moderately safe",
+                "value": "moderately_safe"
+              },
+              {
+                "text": "Very safe",
+                "value": "very_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "completely_safe"
+              }
+            ]
+          },
+          {
+            "text": "Which route did you take?",
+            "answer_key": "route_familiarity",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "My usual route",
+                "value": "usual"
+              },
+              {
+                "text": "A route I know, but not my usual one",
+                "value": "known"
+              },
+              {
+                "text": "A route that was new to me",
+                "value": "new"
+              }
+            ]
+          },
+          {
+            "text": "Why did you choose this route? (Up to 2)",
+            "answer_key": "route_reasons",
+            "question_type": "multiple_options",
+            "max_answers": 2,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "It's the quickest or shortest",
+                "value": "fastest"
+              },
+              {
+                "text": "It's safer from traffic",
+                "value": "safer_traffic"
+              },
+              {
+                "text": "It's better lit",
+                "value": "better_lit"
+              },
+              {
+                "text": "There are more people around",
+                "value": "more_people"
+              },
+              {
+                "text": "It's nicer or greener",
+                "value": "pleasant"
+              },
+              {
+                "text": "It has more shade",
+                "value": "shade"
+              },
+              {
+                "text": "It has fewer slopes or stairs",
+                "value": "flatter"
+              },
+              {
+                "text": "Better pavements or cycle lanes",
+                "value": "better_surface"
+              },
+              {
+                "text": "To stop somewhere on the way",
+                "value": "stop_on_way"
+              },
+              {
+                "text": "A navigation app suggested it",
+                "value": "app"
+              },
+              {
+                "text": "Out of habit",
+                "value": "habit"
+              }
+            ]
+          },
+          {
+            "text": "Did you deliberately avoid a street, crossing or place on this trip?",
+            "answer_key": "avoided_place",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          },
+          {
+            "text": "Why did you avoid it? (Select all that apply. You can then mark it on the map.)",
+            "answer_key": "avoided_reasons",
+            "question_type": "multiple_options",
+            "show_if": {
+              "avoided_place": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Heavy or fast traffic",
+                "value": "traffic"
+              },
+              {
+                "text": "A dangerous crossing",
+                "value": "dangerous_crossing"
+              },
+              {
+                "text": "Bad pavement or road surface",
+                "value": "bad_surface"
+              },
+              {
+                "text": "Obstacles or roadworks",
+                "value": "obstacles"
+              },
+              {
+                "text": "Too dark",
+                "value": "dark"
+              },
+              {
+                "text": "Empty or isolated",
+                "value": "isolated"
+              },
+              {
+                "text": "Too crowded",
+                "value": "crowded"
+              },
+              {
+                "text": "Slopes or stairs",
+                "value": "slope"
+              }
+            ]
+          },
+          {
+            "text": "Did any of these happen on this trip? (Select all that apply)",
+            "answer_key": "trip_incidents",
+            "question_type": "multiple_options",
+            "required": true,
+            "add_prefer_not_to_say": true,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing in particular",
+                "value": "none"
+              },
+              {
+                "text": "I was nearly hit by a vehicle",
+                "value": "near_miss_vehicle"
+              },
+              {
+                "text": "A close call with a bike or e-scooter",
+                "value": "close_call_bike_scooter"
+              },
+              {
+                "text": "I tripped or fell",
+                "value": "fall"
+              },
+              {
+                "text": "I was harassed or felt threatened",
+                "value": "harassment"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - After the trip",
+      "#After the trip": "After the trip",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Less than a minute: your answers help us understand how the trip really went.</p>",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>A few quick questions about the trip you just made.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Is the way you travelled shown correctly on the map?",
+      "#Yes": "Yes",
+      "#No, I'll correct it on the map": "No, I'll correct it on the map",
+      "#Compared to what you expected, how long did this trip feel?": "Compared to what you expected, how long did this trip feel?",
+      "#Much shorter than expected": "Much shorter than expected",
+      "#A little shorter than expected": "A little shorter than expected",
+      "#As expected": "As expected",
+      "#A little longer than expected": "A little longer than expected",
+      "#Much longer than expected": "Much longer than expected",
+      "#How tiring was this trip?": "How tiring was this trip?",
+      "#Not at all": "Not at all",
+      "#Slightly": "Slightly",
+      "#Moderately": "Moderately",
+      "#A lot": "A lot",
+      "#Extremely": "Extremely",
+      "#How safe from traffic did you feel on this trip?": "How safe from traffic did you feel on this trip?",
+      "#Not at all safe": "Not at all safe",
+      "#Slightly safe": "Slightly safe",
+      "#Moderately safe": "Moderately safe",
+      "#Very safe": "Very safe",
+      "#Completely safe": "Completely safe",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "How safe did you feel from other people (e.g. theft, harassment)?",
+      "#Which route did you take?": "Which route did you take?",
+      "#My usual route": "My usual route",
+      "#A route I know, but not my usual one": "A route I know, but not my usual one",
+      "#A route that was new to me": "A route that was new to me",
+      "#Why did you choose this route? (Up to 2)": "Why did you choose this route? (Up to 2)",
+      "#It's the quickest or shortest": "It's the quickest or shortest",
+      "#It's safer from traffic": "It's safer from traffic",
+      "#It's better lit": "It's better lit",
+      "#There are more people around": "There are more people around",
+      "#It's nicer or greener": "It's nicer or greener",
+      "#It has more shade": "It has more shade",
+      "#It has fewer slopes or stairs": "It has fewer slopes or stairs",
+      "#Better pavements or cycle lanes": "Better pavements or cycle lanes",
+      "#To stop somewhere on the way": "To stop somewhere on the way",
+      "#A navigation app suggested it": "A navigation app suggested it",
+      "#Out of habit": "Out of habit",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Did you deliberately avoid a street, crossing or place on this trip?",
+      "#No": "No",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Why did you avoid it? (Select all that apply. You can then mark it on the map.)",
+      "#Heavy or fast traffic": "Heavy or fast traffic",
+      "#A dangerous crossing": "A dangerous crossing",
+      "#Bad pavement or road surface": "Bad pavement or road surface",
+      "#Obstacles or roadworks": "Obstacles or roadworks",
+      "#Too dark": "Too dark",
+      "#Empty or isolated": "Empty or isolated",
+      "#Too crowded": "Too crowded",
+      "#Slopes or stairs": "Slopes or stairs",
+      "#Did any of these happen on this trip? (Select all that apply)": "Did any of these happen on this trip? (Select all that apply)",
+      "#Nothing in particular": "Nothing in particular",
+      "#I was nearly hit by a vehicle": "I was nearly hit by a vehicle",
+      "#A close call with a bike or e-scooter": "A close call with a bike or e-scooter",
+      "#I tripped or fell": "I tripped or fell",
+      "#I was harassed or felt threatened": "I was harassed or felt threatened"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - Dopo lo spostamento",
+      "#After the trip": "Dopo lo spostamento",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Meno di un minuto: le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p>",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>Alcune domande veloci sullo spostamento appena fatto.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Il modo in cui ti sei spostato/a è indicato correttamente sulla mappa?",
+      "#Yes": "Sì",
+      "#No, I'll correct it on the map": "No, lo correggo sulla mappa",
+      "#Compared to what you expected, how long did this trip feel?": "Rispetto a quanto ti aspettavi, quanto ti è sembrato lungo questo spostamento?",
+      "#Much shorter than expected": "Molto più breve del previsto",
+      "#A little shorter than expected": "Un po' più breve del previsto",
+      "#As expected": "Come previsto",
+      "#A little longer than expected": "Un po' più lungo del previsto",
+      "#Much longer than expected": "Molto più lungo del previsto",
+      "#How tiring was this trip?": "Quanto è stato faticoso questo spostamento?",
+      "#Not at all": "Per niente",
+      "#Slightly": "Poco",
+      "#Moderately": "Abbastanza",
+      "#A lot": "Molto",
+      "#Extremely": "Moltissimo",
+      "#How safe from traffic did you feel on this trip?": "Quanto ti sei sentito/a al sicuro dal traffico durante questo spostamento?",
+      "#Not at all safe": "Per niente al sicuro",
+      "#Slightly safe": "Poco al sicuro",
+      "#Moderately safe": "Abbastanza al sicuro",
+      "#Very safe": "Molto al sicuro",
+      "#Completely safe": "Del tutto al sicuro",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "Quanto ti sei sentito/a al sicuro rispetto ad altre persone (ad es. furti, molestie)?",
+      "#Which route did you take?": "Che percorso hai fatto?",
+      "#My usual route": "Il mio percorso abituale",
+      "#A route I know, but not my usual one": "Un percorso che conosco, ma non quello abituale",
+      "#A route that was new to me": "Un percorso nuovo per me",
+      "#Why did you choose this route? (Up to 2)": "Perché hai scelto questo percorso? (Al massimo 2)",
+      "#It's the quickest or shortest": "È il più veloce o il più breve",
+      "#It's safer from traffic": "È più sicuro rispetto al traffico",
+      "#It's better lit": "È più illuminato",
+      "#There are more people around": "Ci sono più persone in giro",
+      "#It's nicer or greener": "È più bello o più verde",
+      "#It has more shade": "Ha più ombra",
+      "#It has fewer slopes or stairs": "Ha meno salite o scale",
+      "#Better pavements or cycle lanes": "Marciapiedi o piste ciclabili migliori",
+      "#To stop somewhere on the way": "Per fermarmi da qualche parte lungo la strada",
+      "#A navigation app suggested it": "Me l'ha suggerito un'app di navigazione",
+      "#Out of habit": "Per abitudine",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Durante questo spostamento hai evitato di proposito una strada, un attraversamento o un luogo?",
+      "#No": "No",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Perché l'hai evitato? (Puoi sceglierne più di uno. Dopo puoi segnarlo sulla mappa.)",
+      "#Heavy or fast traffic": "Traffico intenso o veloce",
+      "#A dangerous crossing": "Un attraversamento pericoloso",
+      "#Bad pavement or road surface": "Marciapiede o fondo stradale rovinato",
+      "#Obstacles or roadworks": "Ostacoli o lavori in corso",
+      "#Too dark": "Troppo buio",
+      "#Empty or isolated": "Vuoto o isolato",
+      "#Too crowded": "Troppo affollato",
+      "#Slopes or stairs": "Salite o scale",
+      "#Did any of these happen on this trip? (Select all that apply)": "Durante questo spostamento è successo qualcuno di questi episodi? (Puoi sceglierne più di uno)",
+      "#Nothing in particular": "Niente di particolare",
+      "#I was nearly hit by a vehicle": "Ho rischiato di essere investito/a",
+      "#A close call with a bike or e-scooter": "Ho rischiato uno scontro con una bici o un monopattino",
+      "#I tripped or fell": "Sono inciampato/a o caduto/a",
+      "#I was harassed or felt threatened": "Ho subito molestie o mi sono sentito/a minacciato/a"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - Après le trajet",
+      "#After the trip": "Après le trajet",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Moins d’une minute : vos réponses nous aident à comprendre comment le trajet s’est vraiment passé.</p>",
+      "#Thank you!": "Merci !",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>Quelques questions rapides sur le trajet que vous venez de faire.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Le mode de déplacement que vous avez utilisé est-il indiqué correctement sur la carte ?",
+      "#Yes": "Oui",
+      "#No, I'll correct it on the map": "Non, je vais le corriger sur la carte",
+      "#Compared to what you expected, how long did this trip feel?": "Par rapport à ce que vous attendiez, ce trajet vous a-t-il semblé long ?",
+      "#Much shorter than expected": "Beaucoup moins longtemps que prévu",
+      "#A little shorter than expected": "Un peu moins longtemps que prévu",
+      "#As expected": "Comme prévu",
+      "#A little longer than expected": "Un peu plus long que prévu",
+      "#Much longer than expected": "Beaucoup plus long que prévu",
+      "#How tiring was this trip?": "Ce trajet a-t-il été fatigant ?",
+      "#Not at all": "Pas du tout",
+      "#Slightly": "Légèrement",
+      "#Moderately": "Modérément",
+      "#A lot": "Beaucoup",
+      "#Extremely": "Énormément",
+      "#How safe from traffic did you feel on this trip?": "Vous êtes-vous senti/sentie en sécurité par rapport à la circulation pendant ce trajet ?",
+      "#Not at all safe": "Pas du tout en sécurité",
+      "#Slightly safe": "Un peu en sécurité",
+      "#Moderately safe": "Modérément en sécurité",
+      "#Very safe": "Tout à fait en sécurité",
+      "#Completely safe": "Complètement en sécurité",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "Vous êtes-vous senti/sentie en sécurité vis-à-vis des autres personnes (par ex. vol, harcèlement) ?",
+      "#Which route did you take?": "Quel itinéraire avez-vous pris ?",
+      "#My usual route": "Mon itinéraire habituel",
+      "#A route I know, but not my usual one": "Un itinéraire que je connais, mais pas mon itinéraire habituel",
+      "#A route that was new to me": "Un itinéraire nouveau pour moi",
+      "#Why did you choose this route? (Up to 2)": "Pourquoi avez-vous choisi cet itinéraire ? (2 au maximum)",
+      "#It's the quickest or shortest": "C’est le plus rapide ou le plus court",
+      "#It's safer from traffic": "Il est plus sûr par rapport à la circulation",
+      "#It's better lit": "Il est mieux éclairé",
+      "#There are more people around": "Il y a plus de monde",
+      "#It's nicer or greener": "Il est plus agréable ou plus vert",
+      "#It has more shade": "Il y a plus d’ombre",
+      "#It has fewer slopes or stairs": "Il y a moins de pentes ou d’escaliers",
+      "#Better pavements or cycle lanes": "De meilleurs trottoirs ou pistes cyclables",
+      "#To stop somewhere on the way": "Pour m’arrêter quelque part en chemin",
+      "#A navigation app suggested it": "Une application de navigation me l’a suggéré",
+      "#Out of habit": "Par habitude",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Avez-vous délibérément évité une rue, un passage ou un lieu pendant ce trajet ?",
+      "#No": "Non",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Pourquoi l’avez-vous évité ? (Sélectionnez toutes les réponses qui s’appliquent. Vous pourrez ensuite le marquer sur la carte.)",
+      "#Heavy or fast traffic": "Circulation dense ou rapide",
+      "#A dangerous crossing": "Un passage dangereux",
+      "#Bad pavement or road surface": "Mauvais trottoir ou chaussée en mauvais état",
+      "#Obstacles or roadworks": "Obstacles ou travaux",
+      "#Too dark": "Trop sombre",
+      "#Empty or isolated": "Vide ou isolé",
+      "#Too crowded": "Trop de monde",
+      "#Slopes or stairs": "Pentes ou escaliers",
+      "#Did any of these happen on this trip? (Select all that apply)": "L’une de ces situations s’est-elle produite pendant ce trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Nothing in particular": "Rien de particulier",
+      "#I was nearly hit by a vehicle": "J’ai failli être renversé/renversée par un véhicule",
+      "#A close call with a bike or e-scooter": "J’ai failli entrer en collision avec un vélo ou une trottinette électrique",
+      "#I tripped or fell": "J’ai trébuché ou je suis tombé/tombée",
+      "#I was harassed or felt threatened": "J’ai été harcelé/harcelée ou je me suis senti/sentie menacé/menacée"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - Nach dem Weg",
+      "#After the trip": "Nach dem Weg",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Weniger als eine Minute: Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p>",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>Ein paar kurze Fragen zu dem Weg, den Sie gerade zurückgelegt haben.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Ist die Art, wie Sie unterwegs waren, auf der Karte richtig dargestellt?",
+      "#Yes": "Ja",
+      "#No, I'll correct it on the map": "Nein, ich korrigiere es auf der Karte",
+      "#Compared to what you expected, how long did this trip feel?": "Wie lang hat sich dieser Weg im Vergleich zu Ihrer Erwartung angefühlt?",
+      "#Much shorter than expected": "Viel kürzer als erwartet",
+      "#A little shorter than expected": "Etwas kürzer als erwartet",
+      "#As expected": "Wie erwartet",
+      "#A little longer than expected": "Etwas länger als erwartet",
+      "#Much longer than expected": "Viel länger als erwartet",
+      "#How tiring was this trip?": "Wie anstrengend war dieser Weg?",
+      "#Not at all": "Überhaupt nicht",
+      "#Slightly": "Etwas",
+      "#Moderately": "Mäßig",
+      "#A lot": "Stark",
+      "#Extremely": "Extrem",
+      "#How safe from traffic did you feel on this trip?": "Wie sicher vor dem Verkehr haben Sie sich auf diesem Weg gefühlt?",
+      "#Not at all safe": "Überhaupt nicht sicher",
+      "#Slightly safe": "Etwas sicher",
+      "#Moderately safe": "Mäßig sicher",
+      "#Very safe": "Sehr sicher",
+      "#Completely safe": "Vollkommen sicher",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "Wie sicher haben Sie sich gegenüber anderen Menschen gefühlt (z. B. Diebstahl, Belästigung)?",
+      "#Which route did you take?": "Welche Route haben Sie genommen?",
+      "#My usual route": "Meine übliche Route",
+      "#A route I know, but not my usual one": "Eine Route, die ich kenne, aber nicht meine übliche",
+      "#A route that was new to me": "Eine für mich neue Route",
+      "#Why did you choose this route? (Up to 2)": "Warum haben Sie diese Route gewählt? (Bis zu 2)",
+      "#It's the quickest or shortest": "Sie ist die schnellste oder kürzeste",
+      "#It's safer from traffic": "Sie ist sicherer vor dem Verkehr",
+      "#It's better lit": "Sie ist besser beleuchtet",
+      "#There are more people around": "Es sind mehr Menschen unterwegs",
+      "#It's nicer or greener": "Sie ist schöner oder grüner",
+      "#It has more shade": "Sie hat mehr Schatten",
+      "#It has fewer slopes or stairs": "Sie hat weniger Steigungen oder Treppen",
+      "#Better pavements or cycle lanes": "Bessere Gehwege oder Radwege",
+      "#To stop somewhere on the way": "Um unterwegs irgendwo anzuhalten",
+      "#A navigation app suggested it": "Eine Navigations-App hat sie vorgeschlagen",
+      "#Out of habit": "Aus Gewohnheit",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Haben Sie auf diesem Weg bewusst eine Straße, eine Querung oder einen Ort gemieden?",
+      "#No": "Nein",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Warum haben Sie ihn gemieden? (Alle zutreffenden auswählen. Sie können ihn anschließend auf der Karte markieren.)",
+      "#Heavy or fast traffic": "Dichter oder schneller Verkehr",
+      "#A dangerous crossing": "Eine gefährliche Querung",
+      "#Bad pavement or road surface": "Schlechter Gehweg oder schlechte Fahrbahn",
+      "#Obstacles or roadworks": "Hindernisse oder Baustellen",
+      "#Too dark": "Zu dunkel",
+      "#Empty or isolated": "Leer oder abgelegen",
+      "#Too crowded": "Zu voll",
+      "#Slopes or stairs": "Steigungen oder Treppen",
+      "#Did any of these happen on this trip? (Select all that apply)": "Ist auf diesem Weg etwas davon passiert? (Alle zutreffenden auswählen)",
+      "#Nothing in particular": "Nichts Bestimmtes",
+      "#I was nearly hit by a vehicle": "Ich wäre fast von einem Fahrzeug angefahren worden",
+      "#A close call with a bike or e-scooter": "Beinahe-Zusammenstoß mit einem Fahrrad oder E-Scooter",
+      "#I tripped or fell": "Ich bin gestolpert oder gestürzt",
+      "#I was harassed or felt threatened": "Ich wurde belästigt oder habe mich bedroht gefühlt"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - Yolculuktan sonra",
+      "#After the trip": "Yolculuktan sonra",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Bir dakikadan az: yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p>",
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>Az önce yaptığınız yolculukla ilgili birkaç kısa soru.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Yolculuk şekliniz haritada doğru gösteriliyor mu?",
+      "#Yes": "Evet",
+      "#No, I'll correct it on the map": "Hayır, haritada düzelteceğim",
+      "#Compared to what you expected, how long did this trip feel?": "Beklediğinize kıyasla bu yolculuk size ne kadar uzun geldi?",
+      "#Much shorter than expected": "Beklenenden çok daha kısa",
+      "#A little shorter than expected": "Beklenenden biraz daha kısa",
+      "#As expected": "Beklendiği gibi",
+      "#A little longer than expected": "Beklenenden biraz daha uzun",
+      "#Much longer than expected": "Beklenenden çok daha uzun",
+      "#How tiring was this trip?": "Bu yolculuk ne kadar yorucuydu?",
+      "#Not at all": "Hiç",
+      "#Slightly": "Biraz",
+      "#Moderately": "Orta derecede",
+      "#A lot": "Çok",
+      "#Extremely": "Son derece",
+      "#How safe from traffic did you feel on this trip?": "Bu yolculukta kendinizi trafiğe karşı ne kadar güvende hissettiniz?",
+      "#Not at all safe": "Hiç güvende değil",
+      "#Slightly safe": "Biraz güvende",
+      "#Moderately safe": "Orta derecede güvende",
+      "#Very safe": "Çok güvende",
+      "#Completely safe": "Tamamen güvende",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "Diğer insanlara karşı kendinizi ne kadar güvende hissettiniz (örn. hırsızlık, taciz)?",
+      "#Which route did you take?": "Hangi güzergâhı kullandınız?",
+      "#My usual route": "Her zamanki güzergâhım",
+      "#A route I know, but not my usual one": "Bildiğim ama her zamanki olmayan bir güzergâh",
+      "#A route that was new to me": "Benim için yeni bir güzergâh",
+      "#Why did you choose this route? (Up to 2)": "Bu güzergâhı neden seçtiniz? (En fazla 2)",
+      "#It's the quickest or shortest": "En hızlı veya en kısa olan bu",
+      "#It's safer from traffic": "Trafiğe karşı daha güvenli",
+      "#It's better lit": "Daha iyi aydınlatılmış",
+      "#There are more people around": "Etrafta daha çok insan var",
+      "#It's nicer or greener": "Daha güzel veya daha yeşil",
+      "#It has more shade": "Daha çok gölge var",
+      "#It has fewer slopes or stairs": "Daha az eğim veya merdiven var",
+      "#Better pavements or cycle lanes": "Daha iyi kaldırımlar veya bisiklet yolları",
+      "#To stop somewhere on the way": "Yolda bir yere uğramak için",
+      "#A navigation app suggested it": "Bir navigasyon uygulaması önerdi",
+      "#Out of habit": "Alışkanlıktan",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Bu yolculukta bilerek bir sokaktan, geçitten veya yerden kaçındınız mı?",
+      "#No": "Hayır",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Neden kaçındınız? (Uygun olanların tümünü seçin. Ardından haritada işaretleyebilirsiniz.)",
+      "#Heavy or fast traffic": "Yoğun veya hızlı trafik",
+      "#A dangerous crossing": "Tehlikeli bir geçit",
+      "#Bad pavement or road surface": "Bozuk kaldırım veya yol yüzeyi",
+      "#Obstacles or roadworks": "Engeller veya yol çalışması",
+      "#Too dark": "Çok karanlık",
+      "#Empty or isolated": "Boş veya ıssız",
+      "#Too crowded": "Çok kalabalık",
+      "#Slopes or stairs": "Eğimler veya merdivenler",
+      "#Did any of these happen on this trip? (Select all that apply)": "Bu yolculukta bunlardan herhangi biri oldu mu? (Uygun olanların tümünü seçin)",
+      "#Nothing in particular": "Özel bir şey yok",
+      "#I was nearly hit by a vehicle": "Az kalsın bir araç bana çarpıyordu",
+      "#A close call with a bike or e-scooter": "Bir bisiklet veya elektrikli scooter ile çarpışmaktan kıl payı kurtuldum",
+      "#I tripped or fell": "Tökezledim veya düştüm",
+      "#I was harassed or felt threatened": "Tacize uğradım veya kendimi tehdit altında hissettim"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - پس از سفر",
+      "#After the trip": "پس از سفر",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>کمتر از یک دقیقه: پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p>",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>چند پرسش کوتاه درباره سفری که همین حالا انجام دادید.</p>",
+      "#Is the way you travelled shown correctly on the map?": "آیا شیوه سفر شما روی نقشه درست نشان داده شده است؟",
+      "#Yes": "بله",
+      "#No, I'll correct it on the map": "خیر، آن را روی نقشه اصلاح می‌کنم",
+      "#Compared to what you expected, how long did this trip feel?": "در مقایسه با انتظارتان، این سفر چقدر طولانی به نظر رسید؟",
+      "#Much shorter than expected": "بسیار کوتاه‌تر از انتظار",
+      "#A little shorter than expected": "کمی کوتاه‌تر از انتظار",
+      "#As expected": "مطابق انتظار",
+      "#A little longer than expected": "کمی طولانی‌تر از حد انتظار",
+      "#Much longer than expected": "بسیار طولانی‌تر از حد انتظار",
+      "#How tiring was this trip?": "این سفر چقدر خسته‌کننده بود؟",
+      "#Not at all": "اصلاً",
+      "#Slightly": "کمی",
+      "#Moderately": "تا حدی",
+      "#A lot": "زیاد",
+      "#Extremely": "به‌شدت",
+      "#How safe from traffic did you feel on this trip?": "در این سفر چقدر خود را در برابر ترافیک در امان احساس کردید؟",
+      "#Not at all safe": "اصلاً امن نیست",
+      "#Slightly safe": "کمی امن",
+      "#Moderately safe": "نسبتاً امن",
+      "#Very safe": "بسیار امن",
+      "#Completely safe": "کاملاً امن",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "چقدر خود را در برابر افراد دیگر (مثلاً سرقت، مزاحمت) در امان احساس کردید؟",
+      "#Which route did you take?": "کدام مسیر را رفتید؟",
+      "#My usual route": "مسیر همیشگی من",
+      "#A route I know, but not my usual one": "مسیری که می‌شناسم، اما مسیر همیشگی‌ام نیست",
+      "#A route that was new to me": "مسیری که برایم تازه بود",
+      "#Why did you choose this route? (Up to 2)": "چرا این مسیر را انتخاب کردید؟ (حداکثر ۲ مورد)",
+      "#It's the quickest or shortest": "سریع‌ترین یا کوتاه‌ترین است",
+      "#It's safer from traffic": "در برابر ترافیک امن‌تر است",
+      "#It's better lit": "روشنایی بهتری دارد",
+      "#There are more people around": "افراد بیشتری در اطراف هستند",
+      "#It's nicer or greener": "زیباتر یا سرسبزتر است",
+      "#It has more shade": "سایه بیشتری دارد",
+      "#It has fewer slopes or stairs": "شیب یا پله کمتری دارد",
+      "#Better pavements or cycle lanes": "پیاده‌روها یا مسیرهای دوچرخه بهتر",
+      "#To stop somewhere on the way": "برای توقف در جایی در طول مسیر",
+      "#A navigation app suggested it": "یک برنامه مسیریاب پیشنهاد داد",
+      "#Out of habit": "از روی عادت",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "آیا در این سفر عمداً از خیابان، گذرگاه یا مکانی دوری کردید؟",
+      "#No": "خیر",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "چرا از آن دوری کردید؟ (همه موارد مربوط را انتخاب کنید. سپس می‌توانید آن را روی نقشه علامت بزنید.)",
+      "#Heavy or fast traffic": "ترافیک سنگین یا پرسرعت",
+      "#A dangerous crossing": "گذرگاه خطرناک",
+      "#Bad pavement or road surface": "پیاده‌رو یا سطح جاده خراب",
+      "#Obstacles or roadworks": "موانع یا عملیات جاده‌ای",
+      "#Too dark": "بیش از حد تاریک",
+      "#Empty or isolated": "خالی یا دورافتاده",
+      "#Too crowded": "بیش از حد شلوغ",
+      "#Slopes or stairs": "شیب یا پله",
+      "#Did any of these happen on this trip? (Select all that apply)": "آیا در این سفر یکی از این موارد رخ داد؟ (همه موارد مربوط را انتخاب کنید)",
+      "#Nothing in particular": "هیچ مورد خاصی",
+      "#I was nearly hit by a vehicle": "نزدیک بود یک خودرو با من برخورد کند",
+      "#A close call with a bike or e-scooter": "نزدیک بود با یک دوچرخه یا اسکوتر برقی برخورد کنم",
+      "#I tripped or fell": "سکندری خوردم یا زمین خوردم",
+      "#I was harassed or felt threatened": "مورد مزاحمت قرار گرفتم یا احساس تهدید کردم"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - Az út után",
+      "#After the trip": "Az út után",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Kevesebb mint egy perc: válaszai segítenek megérteni, hogyan zajlott valójában az út.</p>",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>Néhány gyors kérdés az imént megtett útról.</p>",
+      "#Is the way you travelled shown correctly on the map?": "Helyesen mutatja a térkép, hogyan közlekedett?",
+      "#Yes": "Igen",
+      "#No, I'll correct it on the map": "Nem, kijavítom a térképen",
+      "#Compared to what you expected, how long did this trip feel?": "Ahhoz képest, amire számított, mennyire tűnt hosszúnak ez az út?",
+      "#Much shorter than expected": "Sokkal rövidebb a vártnál",
+      "#A little shorter than expected": "Kicsit rövidebb a vártnál",
+      "#As expected": "A vártnak megfelelően",
+      "#A little longer than expected": "Kicsit hosszabb a vártnál",
+      "#Much longer than expected": "Sokkal hosszabb a vártnál",
+      "#How tiring was this trip?": "Mennyire volt fárasztó ez az út?",
+      "#Not at all": "Egyáltalán nem",
+      "#Slightly": "Kissé",
+      "#Moderately": "Közepesen",
+      "#A lot": "Nagyon",
+      "#Extremely": "Rendkívül",
+      "#How safe from traffic did you feel on this trip?": "Mennyire érezte magát biztonságban a forgalomtól ezen az úton?",
+      "#Not at all safe": "Egyáltalán nem biztonságban",
+      "#Slightly safe": "Kissé biztonságban",
+      "#Moderately safe": "Közepesen biztonságban",
+      "#Very safe": "Nagyon biztonságban",
+      "#Completely safe": "Teljesen biztonságban",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "Mennyire érezte magát biztonságban más emberektől (pl. lopás, zaklatás)?",
+      "#Which route did you take?": "Melyik útvonalat választotta?",
+      "#My usual route": "A szokásos útvonalam",
+      "#A route I know, but not my usual one": "Egy ismert, de nem a szokásos útvonalam",
+      "#A route that was new to me": "Egy számomra új útvonal",
+      "#Why did you choose this route? (Up to 2)": "Miért ezt az útvonalat választotta? (Legfeljebb 2)",
+      "#It's the quickest or shortest": "Ez a leggyorsabb vagy a legrövidebb",
+      "#It's safer from traffic": "Biztonságosabb a forgalomtól",
+      "#It's better lit": "Jobban meg van világítva",
+      "#There are more people around": "Több ember van a környéken",
+      "#It's nicer or greener": "Szebb vagy zöldebb",
+      "#It has more shade": "Több az árnyék",
+      "#It has fewer slopes or stairs": "Kevesebb az emelkedő vagy a lépcső",
+      "#Better pavements or cycle lanes": "Jobb járdák vagy kerékpársávok",
+      "#To stop somewhere on the way": "Hogy útközben megálljak valahol",
+      "#A navigation app suggested it": "Egy navigációs alkalmazás javasolta",
+      "#Out of habit": "Megszokásból",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "Szándékosan elkerült egy utcát, átkelőt vagy helyet ezen az úton?",
+      "#No": "Nem",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Miért kerülte el? (Jelölje meg az összes megfelelőt. Ezután megjelölheti a térképen.)",
+      "#Heavy or fast traffic": "Sűrű vagy gyors forgalom",
+      "#A dangerous crossing": "Veszélyes átkelő",
+      "#Bad pavement or road surface": "Rossz járda vagy útburkolat",
+      "#Obstacles or roadworks": "Akadályok vagy útfelújítás",
+      "#Too dark": "Túl sötét",
+      "#Empty or isolated": "Kihalt vagy elszigetelt",
+      "#Too crowded": "Túl zsúfolt",
+      "#Slopes or stairs": "Emelkedők vagy lépcsők",
+      "#Did any of these happen on this trip? (Select all that apply)": "Történt ezek közül valamelyik ezen az úton? (Jelölje meg az összes megfelelőt)",
+      "#Nothing in particular": "Semmi különös",
+      "#I was nearly hit by a vehicle": "Majdnem elütött egy jármű",
+      "#A close call with a bike or e-scooter": "Majdnem összeütköztem egy kerékpárral vagy e-rollerrel",
+      "#I tripped or fell": "Megbotlottam vagy elestem",
+      "#I was harassed or felt threatened": "Zaklattak vagy fenyegetve éreztem magam"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - After the trip": "SmartUrbanity - بعد الرحلة",
+      "#After the trip": "بعد الرحلة",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>أقل من دقيقة: تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p>",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
+      "#<p>A few quick questions about the trip you just made.</p>": "<p>بضعة أسئلة سريعة عن الرحلة التي قمت بها للتو.</p>",
+      "#Is the way you travelled shown correctly on the map?": "هل طريقة تنقلك معروضة بشكل صحيح على الخريطة؟",
+      "#Yes": "نعم",
+      "#No, I'll correct it on the map": "لا، سأصححها على الخريطة",
+      "#Compared to what you expected, how long did this trip feel?": "مقارنةً بما توقعته، كم بدت لك هذه الرحلة طويلة؟",
+      "#Much shorter than expected": "أقصر بكثير من المتوقع",
+      "#A little shorter than expected": "أقصر قليلًا من المتوقع",
+      "#As expected": "كما هو متوقع",
+      "#A little longer than expected": "أطول قليلًا مما توقعت",
+      "#Much longer than expected": "أطول بكثير مما توقعت",
+      "#How tiring was this trip?": "كم كانت هذه الرحلة متعبة؟",
+      "#Not at all": "على الإطلاق",
+      "#Slightly": "قليلًا",
+      "#Moderately": "بدرجة متوسطة",
+      "#A lot": "كثيرًا",
+      "#Extremely": "للغاية",
+      "#How safe from traffic did you feel on this trip?": "إلى أي مدى شعرت بالأمان من حركة المرور في هذه الرحلة؟",
+      "#Not at all safe": "غير آمن/آمنة على الإطلاق",
+      "#Slightly safe": "آمن/آمنة قليلًا",
+      "#Moderately safe": "آمن/آمنة إلى حد ما",
+      "#Very safe": "آمن/آمنة جدًا",
+      "#Completely safe": "آمن/آمنة تمامًا",
+      "#How safe did you feel from other people (e.g. theft, harassment)?": "إلى أي مدى شعرت بالأمان من الأشخاص الآخرين (مثل السرقة أو التحرش)؟",
+      "#Which route did you take?": "أي مسار سلكت؟",
+      "#My usual route": "مساري المعتاد",
+      "#A route I know, but not my usual one": "مسار أعرفه، لكنه ليس مساري المعتاد",
+      "#A route that was new to me": "مسار جديد بالنسبة لي",
+      "#Why did you choose this route? (Up to 2)": "لماذا اخترت هذا المسار؟ (حتى خيارين)",
+      "#It's the quickest or shortest": "إنه الأسرع أو الأقصر",
+      "#It's safer from traffic": "إنه أكثر أمانًا من حركة المرور",
+      "#It's better lit": "إضاءته أفضل",
+      "#There are more people around": "يوجد ناس أكثر حوله",
+      "#It's nicer or greener": "إنه أجمل أو أكثر خضرة",
+      "#It has more shade": "فيه ظل أكثر",
+      "#It has fewer slopes or stairs": "فيه منحدرات أو درج أقل",
+      "#Better pavements or cycle lanes": "أرصفة أو مسارات دراجات أفضل",
+      "#To stop somewhere on the way": "للتوقف في مكان ما في الطريق",
+      "#A navigation app suggested it": "اقترحه تطبيق ملاحة",
+      "#Out of habit": "بحكم العادة",
+      "#Did you deliberately avoid a street, crossing or place on this trip?": "هل تجنبت عمدًا شارعًا أو معبرًا أو مكانًا في هذه الرحلة؟",
+      "#No": "لا",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "لماذا تجنبته؟ (اختر كل ما ينطبق. يمكنك بعد ذلك تحديده على الخريطة.)",
+      "#Heavy or fast traffic": "حركة مرور كثيفة أو سريعة",
+      "#A dangerous crossing": "معبر خطير",
+      "#Bad pavement or road surface": "رصيف أو سطح طريق سيئ",
+      "#Obstacles or roadworks": "عوائق أو أشغال طرق",
+      "#Too dark": "مظلم جدًا",
+      "#Empty or isolated": "خالٍ أو معزول",
+      "#Too crowded": "مزدحم جدًا",
+      "#Slopes or stairs": "منحدرات أو درج",
+      "#Did any of these happen on this trip? (Select all that apply)": "هل حدث أي من هذه الأمور في هذه الرحلة؟ (اختر كل ما ينطبق)",
+      "#Nothing in particular": "لا شيء بعينه",
+      "#I was nearly hit by a vehicle": "كدت أن تصدمني مركبة",
+      "#A close call with a bike or e-scooter": "كدت أن أصطدم بدراجة أو سكوتر كهربائي",
+      "#I tripped or fell": "تعثرت أو سقطت",
+      "#I was harassed or felt threatened": "تعرضت للتحرش أو شعرت بالتهديد"
+    }
+  },
+  "id": "smarturbanity_post_trip",
+  "db_set": "trips",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "trip_survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": false
+    },
+    "id_strategy": "trip_id",
+    "subcollection": "trips/{tripId}",
+    "trip_field": "post_trip"
+  },
+  "default_language": "en"
+}

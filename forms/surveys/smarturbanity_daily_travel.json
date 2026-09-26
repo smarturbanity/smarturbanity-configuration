@@ -2,17 +2,18 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "0.1.0",
+    "questionnaire_version": "0.1.1",
     "project": "SmartUrbanity",
+    "estimated_minutes": 6,
     "options": {
       "review_mode": true,
       "ask_consent": false,
-      "save_user_id": false
+      "save_user_id": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
       "title": "Welcome to Your Daily Travel",
-      "description": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -27,272 +28,353 @@
         "questions": [
           {
             "text": "Which travel mode do you most often use for your trips?",
+            "answer_key": "usual_mode_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Walking (as the main mode for the trip, not short access or transfer walking)"
+                "text": "Walking (as the main mode for the trip, not short access or transfer walking)",
+                "value": "walking_as_the_main_mode_for_the_trip_no"
               },
               {
-                "text": "Car"
+                "text": "Car",
+                "value": "car"
               },
               {
-                "text": "Car sharing"
+                "text": "Car sharing",
+                "value": "car_sharing"
               },
               {
-                "text": "Motorcycle"
+                "text": "Motorcycle",
+                "value": "motorcycle"
               },
               {
-                "text": "Public transport"
+                "text": "Public transport",
+                "value": "public_transport"
               },
               {
-                "text": "Bicycle/e-bike (private)"
+                "text": "Bicycle/e-bike (private)",
+                "value": "bicycle_e_bike_private"
               },
               {
-                "text": "Bicycle/e-bike (shared)"
+                "text": "Bicycle/e-bike (shared)",
+                "value": "bicycle_e_bike_shared"
               },
               {
-                "text": "e-scooter (private)"
+                "text": "e-scooter (private)",
+                "value": "e_scooter_private"
               },
               {
-                "text": "e-scooter (shared)"
+                "text": "e-scooter (shared)",
+                "value": "e_scooter_shared"
               },
               {
-                "text": "Taxi or similar service (e.g. Uber, Bolt)"
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
               }
             ]
           },
           {
             "text": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
+            "answer_key": "v1_do_you_use_any_combination_of_the_fo",
             "question_type": "multiple_options",
             "options": [
               {
-                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)"
+                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+                "value": "walking_as_the_main_mode_for_most_of_the"
               },
               {
-                "text": "Car"
+                "text": "Car",
+                "value": "car"
               },
               {
-                "text": "Car sharing"
+                "text": "Car sharing",
+                "value": "car_sharing"
               },
               {
-                "text": "Motorcycle"
+                "text": "Motorcycle",
+                "value": "motorcycle"
               },
               {
-                "text": "Public transport"
+                "text": "Public transport",
+                "value": "public_transport"
               },
               {
-                "text": "Bicycle/e-bike (private)"
+                "text": "Bicycle/e-bike (private)",
+                "value": "bicycle_e_bike_private"
               },
               {
-                "text": "Bicycle/e-bike (shared)"
+                "text": "Bicycle/e-bike (shared)",
+                "value": "bicycle_e_bike_shared"
               },
               {
-                "text": "e-scooter (private)"
+                "text": "e-scooter (private)",
+                "value": "e_scooter_private"
               },
               {
-                "text": "e-scooter (shared)"
+                "text": "e-scooter (shared)",
+                "value": "e_scooter_shared"
               },
               {
-                "text": "Taxi or similar service (e.g. Uber, Bolt)"
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
               },
               {
-                "text": "I don't use any combination"
+                "text": "I don't use any combination",
+                "value": "i_don_t_use_any_combination"
               }
             ]
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+            "answer_key": "multimodal_difficulties_v1",
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
               {
-                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)"
+                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+                "value": "vehicles_are_too_crowded_e_g_no_space_fo"
               },
               {
-                "text": "Poor coordination between modes (long waiting times, missed connections)"
+                "text": "Poor coordination between modes (long waiting times, missed connections)",
+                "value": "poor_coordination_between_modes_long_wai"
               },
               {
-                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)"
+                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+                "value": "lack_of_infrastructure_e_g_no_bicycle_pa"
               },
               {
-                "text": "Complicated transfers (stations far apart, unclear routes)"
+                "text": "Complicated transfers (stations far apart, unclear routes)",
+                "value": "complicated_transfers_stations_far_apart"
               },
               {
-                "text": "Travel time becomes too long"
+                "text": "Travel time becomes too long",
+                "value": "travel_time_becomes_too_long"
               },
               {
-                "text": "Cost is too high when combining modes"
+                "text": "Cost is too high when combining modes",
+                "value": "cost_is_too_high_when_combining_modes"
               },
               {
-                "text": "Safety concerns (traffic, theft, unsafe areas)"
+                "text": "Safety concerns (traffic, theft, unsafe areas)",
+                "value": "safety_concerns_traffic_theft_unsafe_are"
               },
               {
-                "text": "Lack of reliable information (schedules, delays)"
+                "text": "Lack of reliable information (schedules, delays)",
+                "value": "lack_of_reliable_information_schedules_d"
               },
               {
-                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)"
+                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+                "value": "physical_effort_is_too_high_e_g_carrying"
               },
               {
-                "text": "Accessibility issues (stairs, no elevators, etc.)"
+                "text": "Accessibility issues (stairs, no elevators, etc.)",
+                "value": "accessibility_issues_stairs_no_elevators"
               },
               {
-                "text": "Weather-related difficulties"
+                "text": "Weather-related difficulties",
+                "value": "weather_related_difficulties"
               },
               {
-                "text": "I do not experience significant difficulties"
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
+            "answer_key": "multimodal_response_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "I stop using one of the modes (e.g. stop bringing my bike)"
+                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
+                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
               },
               {
-                "text": "I switch to a single mode (e.g. only car, only public transport)"
+                "text": "I switch to a single mode (e.g. only car, only public transport)",
+                "value": "i_switch_to_a_single_mode_e_g_only_car_o"
               },
               {
-                "text": "I change the time of travel (e.g. avoid peak hours)"
+                "text": "I change the time of travel (e.g. avoid peak hours)",
+                "value": "i_change_the_time_of_travel_e_g_avoid_pe"
               },
               {
-                "text": "I change the route or transfer point"
+                "text": "I change the route or transfer point",
+                "value": "i_change_the_route_or_transfer_point"
               },
               {
-                "text": "I choose a different combination of modes"
+                "text": "I choose a different combination of modes",
+                "value": "i_choose_a_different_combination_of_mode"
               },
               {
-                "text": "I continue using the same combination despite difficulties"
+                "text": "I continue using the same combination despite difficulties",
+                "value": "i_continue_using_the_same_combination_de"
               },
               {
-                "text": "I reduce how often I make that trip"
+                "text": "I reduce how often I make that trip",
+                "value": "i_reduce_how_often_i_make_that_trip"
               },
               {
-                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)"
+                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+                "value": "i_look_for_alternative_solutions_e_g_bik"
               },
               {
-                "text": "I avoid that trip entirely if possible"
+                "text": "I avoid that trip entirely if possible",
+                "value": "i_avoid_that_trip_entirely_if_possible"
               },
               {
-                "text": "I do not experience significant difficulties"
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           },
           {
             "text": "How often do you use shared mobility services (bike-share, e-scooter, car-share)?",
+            "answer_key": "shared_frequency_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "I never use shared mobility services."
+                "text": "I never use shared mobility services.",
+                "value": "i_never_use_shared_mobility_services"
               },
               {
-                "text": "Once a month or less"
+                "text": "Once a month or less",
+                "value": "once_a_month_or_less"
               },
               {
-                "text": "2-3 times a month"
+                "text": "2-3 times a month",
+                "value": "2_3_times_a_month"
               },
               {
-                "text": "1-2 times a week"
+                "text": "1-2 times a week",
+                "value": "1_2_times_a_week"
               },
               {
-                "text": "3-5 times a week"
+                "text": "3-5 times a week",
+                "value": "3_5_times_a_week"
               },
               {
-                "text": "Daily"
+                "text": "Daily",
+                "value": "daily"
               }
             ]
           },
           {
             "text": "At what times of day do you most often travel? (Select all that apply)",
+            "answer_key": "travel_times",
             "question_type": "multiple_options",
             "options": [
               {
-                "text": "Before 7:00"
+                "text": "Before 7:00",
+                "value": "before_7"
               },
               {
-                "text": "7:00-10:00 (morning rush)"
+                "text": "7:00-10:00 (morning rush)",
+                "value": "7_10"
               },
               {
-                "text": "10:00-14:00 (midday)"
+                "text": "10:00-14:00 (midday)",
+                "value": "10_14"
               },
               {
-                "text": "14:00-18:00 (afternoon rush)"
+                "text": "14:00-18:00 (afternoon rush)",
+                "value": "14_18"
               },
               {
-                "text": "18:00-20:00 (evening return)"
+                "text": "18:00-20:00 (evening return)",
+                "value": "18_20"
               },
               {
-                "text": "After 20:00 (evening/night)"
+                "text": "After 20:00 (evening/night)",
+                "value": "after_20"
               }
             ]
           },
           {
             "text": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
+            "answer_key": "freq_trip_company_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Mostly alone"
+                "text": "Mostly alone",
+                "value": "mostly_alone"
               },
               {
-                "text": "Often with family members"
+                "text": "Often with family members",
+                "value": "often_with_family_members"
               },
               {
-                "text": "Often with colleagues or friends"
+                "text": "Often with colleagues or friends",
+                "value": "often_with_colleagues_or_friends"
               }
             ]
           },
           {
             "text": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
+            "answer_key": "freq_trip_purpose_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Work or professional business"
+                "text": "Work or professional business",
+                "value": "work_or_professional_business"
               },
               {
-                "text": "Education"
+                "text": "Education",
+                "value": "education"
               },
               {
-                "text": "Shopping or daily activities"
+                "text": "Shopping or daily activities",
+                "value": "shopping_or_daily_activities"
               },
               {
-                "text": "Appointments (medical,legal,banking)"
+                "text": "Appointments (medical,legal,banking)",
+                "value": "appointments_medical_legal_banking"
               },
               {
-                "text": "Social/Leisure"
+                "text": "Social/Leisure",
+                "value": "social_leisure"
               },
               {
-                "text": "Health/Exercise"
+                "text": "Health/Exercise",
+                "value": "health_exercise"
               },
               {
-                "text": "Caring/Escort"
+                "text": "Caring/Escort",
+                "value": "caring_escort"
               }
             ]
           },
           {
             "text": "On average, how often do you make your most frequent journey?",
+            "answer_key": "freq_trip_frequency",
             "question_type": "single_option",
             "options": [
               {
-                "text": "5 or more days a week (Daily/Commuter)"
+                "text": "5 or more days a week (Daily/Commuter)",
+                "value": "5_plus_week"
               },
               {
-                "text": "3–4 days a week (Frequent)"
+                "text": "3–4 days a week (Frequent)",
+                "value": "3_4_week"
               },
               {
-                "text": "1–2 days a week (Regular)"
+                "text": "1–2 days a week (Regular)",
+                "value": "1_2_week"
               },
               {
-                "text": "1–3 times a month (Occasional)"
+                "text": "1–3 times a month (Occasional)",
+                "value": "1_3_month"
               },
               {
-                "text": "Less than once a month (Rarely)"
+                "text": "Less than once a month (Rarely)",
+                "value": "lt_monthly"
               }
             ]
           }
@@ -305,99 +387,128 @@
         "questions": [
           {
             "text": "Overall, how satisfied are you with your current primary mode of transport?",
+            "answer_key": "usual_mode_satisfaction",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Very dissatisfied"
+                "text": "Very dissatisfied",
+                "value": "very_dissatisfied"
               },
               {
-                "text": "Dissatisfied"
+                "text": "Dissatisfied",
+                "value": "dissatisfied"
               },
               {
-                "text": "Neither satisfied nor dissatisfied"
+                "text": "Neither satisfied nor dissatisfied",
+                "value": "neutral"
               },
               {
-                "text": "Satisfied"
+                "text": "Satisfied",
+                "value": "satisfied"
               },
               {
-                "text": "Very satisfied"
+                "text": "Very satisfied",
+                "value": "very_satisfied"
               }
             ]
           },
           {
             "text": "Which aspects of your current primary mode of transport are you most dissatisfied with?",
+            "answer_key": "usual_mode_dissatisfied_v1",
             "question_type": "multiple_options",
             "options": [
               {
-                "text": "I am satisfied with my current primary mode of transport"
+                "text": "I am satisfied with my current primary mode of transport",
+                "value": "i_am_satisfied_with_my_current_primary_m"
               },
               {
-                "text": "Travel Time/Speed"
+                "text": "Travel Time/Speed",
+                "value": "travel_time_speed"
               },
               {
-                "text": "Cost/Value for money"
+                "text": "Cost/Value for money",
+                "value": "cost_value_for_money"
               },
               {
-                "text": "Reliability/Predictability"
+                "text": "Reliability/Predictability",
+                "value": "reliability_predictability"
               },
               {
-                "text": "Comfort"
+                "text": "Comfort",
+                "value": "comfort"
               },
               {
-                "text": "Safety/Security"
+                "text": "Safety/Security",
+                "value": "safety_security"
               },
               {
-                "text": "Accessibility/Convenience"
+                "text": "Accessibility/Convenience",
+                "value": "accessibility_convenience"
               },
               {
-                "text": "Crowding/Availability of space"
+                "text": "Crowding/Availability of space",
+                "value": "crowding_availability_of_space"
               },
               {
-                "text": "Environmental impact"
+                "text": "Environmental impact",
+                "value": "environmental_impact"
               },
               {
-                "text": "Lack of flexibility"
+                "text": "Lack of flexibility",
+                "value": "lack_of_flexibility"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ],
             "max_answers": 3
           },
           {
             "text": "When choosing how to travel, which factors matter most to you?",
+            "answer_key": "choice_factors_v1",
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
               {
-                "text": "Financial Cost"
+                "text": "Financial Cost",
+                "value": "financial_cost"
               },
               {
-                "text": "Physical Comfort and effort"
+                "text": "Physical Comfort and effort",
+                "value": "physical_comfort_and_effort"
               },
               {
-                "text": "Mental Well-being"
+                "text": "Mental Well-being",
+                "value": "mental_well_being"
               },
               {
-                "text": "Environmental Impact"
+                "text": "Environmental Impact",
+                "value": "environmental_impact"
               },
               {
-                "text": "Reliability and Predictability"
+                "text": "Reliability and Predictability",
+                "value": "reliability_and_predictability"
               },
               {
-                "text": "Social status"
+                "text": "Social status",
+                "value": "social_status"
               },
               {
-                "text": "Personal safety and security"
+                "text": "Personal safety and security",
+                "value": "personal_safety_and_security"
               },
               {
-                "text": "Time Efficiency"
+                "text": "Time Efficiency",
+                "value": "time_efficiency"
               },
               {
-                "text": "Flexibility and independence"
+                "text": "Flexibility and independence",
+                "value": "flexibility_and_independence"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               }
             ]
           }
@@ -410,7 +521,7 @@
         "questions": [
           {
             "text": "Which of the following vehicles are available in your household? (Select all that apply)",
-            "answer_key": "main_mode",
+            "answer_key": "hh_vehicles_v1",
             "question_type": "multiple_options",
             "options": [
               {
@@ -419,15 +530,15 @@
               },
               {
                 "text": "Motorcycle",
-                "value": "moto"
+                "value": "motorcycle"
               },
               {
                 "text": "Bicycle/e-bike",
-                "value": "bike"
+                "value": "bicycle_e_bike"
               },
               {
                 "text": "E-scooter",
-                "value": "scooter"
+                "value": "e_scooter"
               },
               {
                 "text": "Other",
@@ -435,133 +546,167 @@
               },
               {
                 "text": "No vehicle available",
-                "value": "no"
+                "value": "no_vehicle_available"
               }
             ]
           },
           {
             "text": "Which of the following do you personally use regularly? (Select all that apply)",
+            "answer_key": "vehicles_used_v1",
             "question_type": "multiple_options",
             "options": [
               {
-                "text": "Car"
+                "text": "Car",
+                "value": "car"
               },
               {
-                "text": "Motorcycle"
+                "text": "Motorcycle",
+                "value": "motorcycle"
               },
               {
-                "text": "Bicycle/e-bike"
+                "text": "Bicycle/e-bike",
+                "value": "bicycle_e_bike"
               },
               {
-                "text": "E-scooter"
+                "text": "E-scooter",
+                "value": "e_scooter"
               },
               {
-                "text": "Other"
+                "text": "Other",
+                "value": "other"
               },
               {
-                "text": "None"
+                "text": "None",
+                "value": "none"
               }
             ]
           },
           {
             "text": "If any vehicle is available in your household, how easy is it for you to use it when needed?",
+            "answer_key": "vehicle_ease",
             "question_type": "single_option",
             "show_if": {
-              "main_mode": [
+              "hh_vehicles_v1": [
                 "other",
-                "scooter",
-                "bike",
-                "moto",
+                "e_scooter",
+                "bicycle_e_bike",
+                "motorcycle",
                 "car"
               ]
             },
             "options": [
               {
-                "text": "Very difficult (rarely available)"
+                "text": "Very difficult (rarely available)",
+                "value": "very_difficult"
               },
               {
-                "text": "Difficult (often unavailable or shared)"
+                "text": "Difficult (often unavailable or shared)",
+                "value": "difficult"
               },
               {
-                "text": "Neither easy nor difficult"
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
               },
               {
-                "text": "Easy (usually available)"
+                "text": "Easy (usually available)",
+                "value": "easy"
               },
               {
-                "text": "Very easy (almost always available)"
+                "text": "Very easy (almost always available)",
+                "value": "very_easy"
               }
             ]
           },
           {
             "text": "How comfortable are you using navigation or map apps for travel?",
+            "answer_key": "app_navigation",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Very uncomfortable"
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
               },
               {
-                "text": "Somewhat uncomfortable"
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
               },
               {
-                "text": "Neither comfortable nor uncomfortable"
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
               },
               {
-                "text": "Somewhat comfortable"
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
               },
               {
-                "text": "Very comfortable"
+                "text": "Very comfortable",
+                "value": "very_comfortable"
               },
               {
-                "text": "I don't use it at all."
+                "text": "I don't use it at all.",
+                "value": "not_used"
               }
             ]
           },
           {
             "text": "How comfortable are you using apps to buy or validate public transport tickets?",
+            "answer_key": "app_pt_tickets",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Very uncomfortable"
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
               },
               {
-                "text": "Somewhat uncomfortable"
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
               },
               {
-                "text": "Neither comfortable nor uncomfortable"
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
               },
               {
-                "text": "Somewhat comfortable"
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
               },
               {
-                "text": "Very comfortable"
+                "text": "Very comfortable",
+                "value": "very_comfortable"
               },
               {
-                "text": "I don't use it at all."
+                "text": "I don't use it at all.",
+                "value": "not_used"
               }
             ]
           },
           {
             "text": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?",
+            "answer_key": "app_mobility",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Very uncomfortable"
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
               },
               {
-                "text": "Somewhat uncomfortable"
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
               },
               {
-                "text": "Neither comfortable nor uncomfortable"
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
               },
               {
-                "text": "Somewhat comfortable"
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
               },
               {
-                "text": "Very comfortable"
+                "text": "Very comfortable",
+                "value": "very_comfortable"
               },
               {
-                "text": "I don't use it at all."
+                "text": "I don't use it at all.",
+                "value": "not_used"
               }
             ]
           }
@@ -575,7 +720,6 @@
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - Your Daily Travel",
       "#2. Your Daily Travel": "2. Your Daily Travel",
       "#Welcome to Your Daily Travel": "Welcome to Your Daily Travel",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Mobility habits": "Mobility habits",
@@ -701,14 +845,14 @@
       "#Very comfortable": "Very comfortable",
       "#I don't use it at all.": "I don't use it at all.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "How comfortable are you using apps to buy or validate public transport tickets?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "code": "it",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - I tuoi spostamenti quotidiani",
       "#2. Your Daily Travel": "2. I tuoi spostamenti quotidiani",
       "#Welcome to Your Daily Travel": "Benvenuto/a nel questionario sui tuoi spostamenti quotidiani",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulle tue abitudini quotidiane di mobilità: i mezzi che utilizzi, la frequenza con cui li combini e le risorse disponibili per i tuoi spostamenti. Le tue risposte ci aiutano a comprendere i modelli di mobilità quotidiana in città. La partecipazione è volontaria e anonima.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Mobility habits": "Abitudini di mobilità",
@@ -834,14 +978,14 @@
       "#Very comfortable": "Molto a mio agio",
       "#I don't use it at all.": "Non le utilizzo affatto.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Quanto ti senti a tuo agio nell'utilizzare app per acquistare o convalidare i biglietti del trasporto pubblico?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Quanto ti senti a tuo agio nell'utilizzare app di ride-hailing o di mobilità condivisa (ad es. taxi, bike sharing, scooter sharing)?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Quanto ti senti a tuo agio nell'utilizzare app di ride-hailing o di mobilità condivisa (ad es. taxi, bike sharing, scooter sharing)?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulle tue abitudini quotidiane di mobilità: i mezzi che utilizzi, la frequenza con cui li combini e le risorse disponibili per i tuoi spostamenti. Le tue risposte ci aiutano a comprendere i modelli di mobilità quotidiana in città. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "code": "fr",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - Vos déplacements quotidiens",
       "#2. Your Daily Travel": "2. Vos déplacements quotidiens",
       "#Welcome to Your Daily Travel": "Bienvenue dans le questionnaire sur vos déplacements quotidiens",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos habitudes de déplacement au quotidien : les modes de transport que vous utilisez, la façon dont vous les combinez et les moyens dont vous disposez pour vos trajets. Vos réponses nous aident à mieux comprendre les déplacements quotidiens dans la ville. La participation est volontaire et anonyme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Mobility habits": "Habitudes de déplacement",
@@ -967,14 +1111,14 @@
       "#Very comfortable": "Très à l’aise",
       "#I don't use it at all.": "Je ne les utilise pas du tout.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Êtes-vous à l’aise pour utiliser des applications afin d’acheter ou de valider des titres de transport public ?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Êtes-vous à l’aise pour utiliser des applications de VTC ou de mobilité partagée, par exemple taxi, vélo partagé ou trottinette partagée ?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Êtes-vous à l’aise pour utiliser des applications de VTC ou de mobilité partagée, par exemple taxi, vélo partagé ou trottinette partagée ?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos habitudes de déplacement au quotidien : les modes de transport que vous utilisez, la façon dont vous les combinez et les moyens dont vous disposez pour vos trajets. Vos réponses nous aident à mieux comprendre les déplacements quotidiens dans la ville. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "code": "de",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - Ihre täglichen Wege",
       "#2. Your Daily Travel": "2. Ihre täglichen Wege",
       "#Welcome to Your Daily Travel": "Willkommen beim Fragebogen zu Ihren täglichen Wegen",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihren täglichen Mobilitätsgewohnheiten: Welche Verkehrsmittel Sie nutzen, wie oft Sie sie kombinieren und welche Möglichkeiten Ihnen für Ihre Wege zur Verfügung stehen. Ihre Antworten helfen uns, tägliche Mobilitätsmuster in der Stadt besser zu verstehen. Die Teilnahme ist freiwillig und anonym.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Mobility habits": "Mobilitätsgewohnheiten",
@@ -1100,14 +1244,14 @@
       "#Very comfortable": "Sehr wohl",
       "#I don't use it at all.": "Ich nutze sie gar nicht.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Wie wohl fühlen Sie sich bei der Nutzung von Apps zum Kaufen oder Entwerten von Tickets für den öffentlichen Verkehr?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Wie wohl fühlen Sie sich bei der Nutzung von Taxi-, Fahrdienst- oder Sharing-Apps, zum Beispiel für Taxi, Leihrad oder E-Scooter?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Wie wohl fühlen Sie sich bei der Nutzung von Taxi-, Fahrdienst- oder Sharing-Apps, zum Beispiel für Taxi, Leihrad oder E-Scooter?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihren täglichen Mobilitätsgewohnheiten: Welche Verkehrsmittel Sie nutzen, wie oft Sie sie kombinieren und welche Möglichkeiten Ihnen für Ihre Wege zur Verfügung stehen. Ihre Antworten helfen uns, tägliche Mobilitätsmuster in der Stadt besser zu verstehen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "code": "tr",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - Günlük Yolculuklarınız",
       "#2. Your Daily Travel": "2. Günlük Yolculuklarınız",
       "#Welcome to Your Daily Travel": "Günlük Yolculuklar Anketine Hoş Geldiniz",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi günlük ulaşım alışkanlıklarınızla ilgilidir: hangi ulaşım seçeneklerini kullandığınız, bunları ne sıklıkta birleştirdiğiniz ve yolculuklarınız için hangi imkânlara sahip olduğunuz. Yanıtlarınız şehirdeki günlük yolculuk düzenlerini anlamamıza yardımcı olur. Katılım gönüllü ve anonimdir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Mobility habits": "Ulaşım Alışkanlıkları",
@@ -1233,14 +1377,14 @@
       "#Very comfortable": "Çok rahat",
       "#I don't use it at all.": "Hiç kullanmıyorum.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Toplu taşıma bileti satın almak veya doğrulamak için uygulama kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Taksi, araç çağırma veya paylaşımlı ulaşım uygulamalarını, örneğin taksi, bisiklet paylaşımı veya scooter paylaşımı için, kullanırken kendinizi ne kadar rahat hissediyorsunuz?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Taksi, araç çağırma veya paylaşımlı ulaşım uygulamalarını, örneğin taksi, bisiklet paylaşımı veya scooter paylaşımı için, kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi günlük ulaşım alışkanlıklarınızla ilgilidir: hangi ulaşım seçeneklerini kullandığınız, bunları ne sıklıkta birleştirdiğiniz ve yolculuklarınız için hangi imkânlara sahip olduğunuz. Yanıtlarınız şehirdeki günlük yolculuk düzenlerini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "code": "fa",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - رفت‌وآمد روزانه شما",
       "#2. Your Daily Travel": "2. رفت‌وآمد روزانه شما",
       "#Welcome to Your Daily Travel": "به پرسشنامه رفت‌وآمد روزانه خوش آمدید",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره عادت‌های رفت‌وآمد روزانه شماست: چه روش‌هایی استفاده می‌کنید، چگونه آن‌ها را با هم ترکیب می‌کنید و چه امکاناتی برای سفرهای خود دارید. پاسخ‌های شما به ما کمک می‌کند الگوهای رفت‌وآمد روزانه در شهر را بهتر بفهمیم. شرکت در این پرسشنامه داوطلبانه و ناشناس است.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Mobility habits": "عادت‌های رفت‌وآمد",
@@ -1366,14 +1510,14 @@
       "#Very comfortable": "بسیار راحت",
       "#I don't use it at all.": "اصلاً استفاده نمی‌کنم.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "هنگام استفاده از برنامه برای خرید یا اعتبارسنجی بلیت حمل‌ونقل عمومی چقدر احساس راحتی می‌کنید؟",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "هنگام استفاده از برنامه‌های تاکسی اینترنتی یا جابه‌جایی اشتراکی، مانند تاکسی، دوچرخه اشتراکی یا اسکوتر اشتراکی، چقدر احساس راحتی می‌کنید؟"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "هنگام استفاده از برنامه‌های تاکسی اینترنتی یا جابه‌جایی اشتراکی، مانند تاکسی، دوچرخه اشتراکی یا اسکوتر اشتراکی، چقدر احساس راحتی می‌کنید؟",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره عادت‌های رفت‌وآمد روزانه شماست: چه روش‌هایی استفاده می‌کنید، چگونه آن‌ها را با هم ترکیب می‌کنید و چه امکاناتی برای سفرهای خود دارید. پاسخ‌های شما به ما کمک می‌کند الگوهای رفت‌وآمد روزانه در شهر را بهتر بفهمیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "code": "hu",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - Mindennapi közlekedése",
       "#2. Your Daily Travel": "2. Mindennapi közlekedése",
       "#Welcome to Your Daily Travel": "Üdvözöljük a mindennapi közlekedésről szóló kérdőívben",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a mindennapi közlekedési szokásairól szól: milyen közlekedési módokat használ, hogyan kombinálja őket, és milyen lehetőségek állnak rendelkezésére. Válaszai segítenek jobban megérteni a városi mindennapi közlekedési szokásokat. A részvétel önkéntes és anonim.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Mobility habits": "Közlekedési szokások",
@@ -1499,14 +1643,14 @@
       "#Very comfortable": "Nagyon kényelmesen",
       "#I don't use it at all.": "Egyáltalán nem használom.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Mennyire érzi magát kényelmesen, amikor alkalmazással vásárol vagy érvényesít tömegközlekedési jegyet?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Mennyire érzi magát kényelmesen taxi-, személyszállító vagy megosztott mobilitási alkalmazások használatakor, például taxi, közösségi kerékpár vagy roller esetén?"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Mennyire érzi magát kényelmesen taxi-, személyszállító vagy megosztott mobilitási alkalmazások használatakor, például taxi, közösségi kerékpár vagy roller esetén?",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a mindennapi közlekedési szokásairól szól: milyen közlekedési módokat használ, hogyan kombinálja őket, és milyen lehetőségek állnak rendelkezésére. Válaszai segítenek jobban megérteni a városi mindennapi közlekedési szokásokat. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "code": "ar",
       "#SmartUrbanity - Your Daily Travel": "SmartUrbanity - تنقلاتك اليومية",
       "#2. Your Daily Travel": "2. تنقلاتك اليومية",
       "#Welcome to Your Daily Travel": "مرحبًا بك في استبيان التنقلات اليومية",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary and anonymous.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity عادات تنقلك اليومية: الوسائل التي تستخدمها، وكيف تجمع بينها، وما الإمكانات المتاحة لك في رحلاتك. تساعدنا إجاباتك على فهم أنماط التنقل اليومية في المدينة. المشاركة طوعية ومجهولة الهوية.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Mobility habits": "عادات التنقل",
@@ -1632,7 +1776,8 @@
       "#Very comfortable": "مرتاح جدًا",
       "#I don't use it at all.": "لا أستخدمها إطلاقًا.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "ما مدى راحتك في استخدام التطبيقات لشراء أو تفعيل تذاكر النقل العام؟",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "ما مدى راحتك في استخدام تطبيقات سيارات الأجرة أو خدمات طلب السيارات أو التنقل المشترك، مثل التاكسي أو الدراجات المشتركة أو السكوتر المشترك؟"
+      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "ما مدى راحتك في استخدام تطبيقات سيارات الأجرة أو خدمات طلب السيارات أو التنقل المشترك، مثل التاكسي أو الدراجات المشتركة أو السكوتر المشترك؟",
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity عادات تنقلك اليومية: الوسائل التي تستخدمها، وكيف تجمع بينها، وما الإمكانات المتاحة لك في رحلاتك. تساعدنا إجاباتك على فهم أنماط التنقل اليومية في المدينة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_daily_travel",
