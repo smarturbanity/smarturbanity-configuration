@@ -218,6 +218,7 @@ When a form is offered is pilot configuration, not part of the form. Each pilot 
 - When at least one active campaign is `exclusive`, only the forms of the active exclusive campaigns are offered; otherwise the forms of all active campaigns are offered. Campaigns sharing a `group` belong to the same event. If a form is in several active campaigns, the one with the highest `priority` decides its window.
 - While `pilot_period.start_date` is `null`, every form in `forms/index.json` stays available, as before the schedule existed. With `show_all_in_debug`, debug and review modes always show every form, marked with its schedule status.
 - A form card shows when its window ends ("until 24 Oct", "extended until ...", "opens on ...", "always available") and the form's `estimated_minutes`. Responses should record the id of the campaign through which the form was shown in their `campaign` metadata.
+
 ## Context-dependent configuration
 
 Forms, sections, questions and potentially other configurable components may define conditions based on context.
