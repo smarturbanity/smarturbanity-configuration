@@ -1,0 +1,716 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Getting to public transport",
+    "questionnaire_id": "smarturbanity_pt_access",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Getting to public transport",
+      "description": "<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Getting to public transport",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Do you use public transport (bus, tram, metro, train) at least once a week?",
+            "answer_key": "pt_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Getting to the stop",
+        "description": "<p>Think about the stops and stations you use most.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How many minutes do you usually walk to reach your stop or station?",
+            "answer_key": "pt_walk_minutes",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Less than 5 minutes",
+                "value": "lt_5"
+              },
+              {
+                "text": "5–10 minutes",
+                "value": "5_10"
+              },
+              {
+                "text": "10–15 minutes",
+                "value": "10_15"
+              },
+              {
+                "text": "More than 15 minutes",
+                "value": "gt_15"
+              }
+            ]
+          },
+          {
+            "text": "How safe do you feel crossing the road to reach your stop?",
+            "answer_key": "pt_crossing_safety",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all safe",
+                "value": "not_safe"
+              },
+              {
+                "text": "Slightly safe",
+                "value": "slightly_safe"
+              },
+              {
+                "text": "Moderately safe",
+                "value": "moderately_safe"
+              },
+              {
+                "text": "Very safe",
+                "value": "very_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "completely_safe"
+              }
+            ]
+          },
+          {
+            "text": "How often do you walk further to cross in a safer place near your stop?",
+            "answer_key": "pt_crossing_detour",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How easy is it to get to and use your stops and stations (steps, ramps, space)?",
+            "answer_key": "pt_stop_ease",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": true,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very difficult",
+                "value": "very_difficult"
+              },
+              {
+                "text": "Difficult",
+                "value": "difficult"
+              },
+              {
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy",
+                "value": "very_easy"
+              }
+            ]
+          },
+          {
+            "text": "Without lifts, ramps or step-free routes, how do you get to the stop?",
+            "answer_key": "pt_step_free_need",
+            "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I can't get there",
+                "value": "cannot"
+              },
+              {
+                "text": "I need someone's help",
+                "value": "need_help"
+              },
+              {
+                "text": "On my own, with great effort",
+                "value": "great_effort"
+              },
+              {
+                "text": "On my own, with some difficulty",
+                "value": "some_difficulty"
+              },
+              {
+                "text": "Easily, on my own",
+                "value": "easily"
+              }
+            ]
+          },
+          {
+            "text": "What problems do you find at stops and stations? (Up to 3)",
+            "answer_key": "pt_barriers",
+            "question_type": "multiple_options",
+            "show_if": {
+              "pt_weekly": [
+                "yes"
+              ]
+            },
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No particular problems",
+                "value": "none"
+              },
+              {
+                "text": "Stairs or level changes",
+                "value": "stairs"
+              },
+              {
+                "text": "Getting on or off is difficult",
+                "value": "boarding"
+              },
+              {
+                "text": "Narrow or crowded spaces",
+                "value": "crowded_space"
+              },
+              {
+                "text": "Broken or poorly maintained facilities",
+                "value": "broken"
+              },
+              {
+                "text": "No real-time information",
+                "value": "no_realtime"
+              },
+              {
+                "text": "No seats or shelter",
+                "value": "no_seats_shelter"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Getting to public transport",
+      "#Getting to public transport": "Getting to public transport",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Do you use public transport (bus, tram, metro, train) at least once a week?",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Getting to the stop": "Getting to the stop",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>Think about the stops and stations you use most.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "How many minutes do you usually walk to reach your stop or station?",
+      "#Less than 5 minutes": "Less than 5 minutes",
+      "#5–10 minutes": "5–10 minutes",
+      "#10–15 minutes": "10–15 minutes",
+      "#More than 15 minutes": "More than 15 minutes",
+      "#How safe do you feel crossing the road to reach your stop?": "How safe do you feel crossing the road to reach your stop?",
+      "#Not at all safe": "Not at all safe",
+      "#Slightly safe": "Slightly safe",
+      "#Moderately safe": "Moderately safe",
+      "#Very safe": "Very safe",
+      "#Completely safe": "Completely safe",
+      "#How often do you walk further to cross in a safer place near your stop?": "How often do you walk further to cross in a safer place near your stop?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "How easy is it to get to and use your stops and stations (steps, ramps, space)?",
+      "#Very difficult": "Very difficult",
+      "#Difficult": "Difficult",
+      "#Neither easy nor difficult": "Neither easy nor difficult",
+      "#Easy": "Easy",
+      "#Very easy": "Very easy",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Without lifts, ramps or step-free routes, how do you get to the stop?",
+      "#I can't get there": "I can't get there",
+      "#I need someone's help": "I need someone's help",
+      "#On my own, with great effort": "On my own, with great effort",
+      "#On my own, with some difficulty": "On my own, with some difficulty",
+      "#Easily, on my own": "Easily, on my own",
+      "#What problems do you find at stops and stations? (Up to 3)": "What problems do you find at stops and stations? (Up to 3)",
+      "#No particular problems": "No particular problems",
+      "#Stairs or level changes": "Stairs or level changes",
+      "#Getting on or off is difficult": "Getting on or off is difficult",
+      "#Narrow or crowded spaces": "Narrow or crowded spaces",
+      "#Broken or poorly maintained facilities": "Broken or poorly maintained facilities",
+      "#No real-time information": "No real-time information",
+      "#No seats or shelter": "No seats or shelter",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Raggiungere i mezzi pubblici",
+      "#Getting to public transport": "Raggiungere i mezzi pubblici",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Usi i mezzi pubblici (bus, tram, metro, treno) almeno una volta a settimana?",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Getting to the stop": "Raggiungere la fermata",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>Pensa alle fermate e stazioni che usi di più.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "Quanti minuti cammini di solito per raggiungere la tua fermata o stazione?",
+      "#Less than 5 minutes": "Meno di 5 minuti",
+      "#5–10 minutes": "5–10 minuti",
+      "#10–15 minutes": "10–15 minuti",
+      "#More than 15 minutes": "Più di 15 minuti",
+      "#How safe do you feel crossing the road to reach your stop?": "Quanto ti senti al sicuro quando attraversi la strada per raggiungere la fermata?",
+      "#Not at all safe": "Per niente al sicuro",
+      "#Slightly safe": "Poco al sicuro",
+      "#Moderately safe": "Abbastanza al sicuro",
+      "#Very safe": "Molto al sicuro",
+      "#Completely safe": "Del tutto al sicuro",
+      "#How often do you walk further to cross in a safer place near your stop?": "Quanto spesso allunghi il percorso per attraversare in un punto più sicuro vicino alla fermata?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "Quanto è facile raggiungere e usare le tue fermate e stazioni (gradini, rampe, spazio)?",
+      "#Very difficult": "Molto difficile",
+      "#Difficult": "Difficile",
+      "#Neither easy nor difficult": "Né facile né difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Molto facile",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Senza ascensori, rampe o percorsi senza gradini, come raggiungi la fermata?",
+      "#I can't get there": "Non riesco a raggiungerla",
+      "#I need someone's help": "Mi serve l'aiuto di qualcuno",
+      "#On my own, with great effort": "Da solo/a, con molta fatica",
+      "#On my own, with some difficulty": "Da solo/a, con qualche difficoltà",
+      "#Easily, on my own": "Facilmente, da solo/a",
+      "#What problems do you find at stops and stations? (Up to 3)": "Quali problemi trovi alle fermate e alle stazioni? (Al massimo 3)",
+      "#No particular problems": "Nessun problema particolare",
+      "#Stairs or level changes": "Scale o dislivelli",
+      "#Getting on or off is difficult": "È difficile salire o scendere dal mezzo",
+      "#Narrow or crowded spaces": "Spazi stretti o affollati",
+      "#Broken or poorly maintained facilities": "Strutture rotte o poco curate",
+      "#No real-time information": "Nessuna informazione in tempo reale",
+      "#No seats or shelter": "Nessuna panchina o pensilina",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario riguarda il tragitto a piedi fino alla fermata e l'uso di fermate e stazioni. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Rejoindre les transports en commun",
+      "#Getting to public transport": "Rejoindre les transports en commun",
+      "#Thank you!": "Merci !",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
+      "#Before we start": "Avant de commencer",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Quelques questions rapides pour mettre vos réponses en contexte.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Utilisez-vous les transports en commun (bus, tram, métro, train) au moins une fois par semaine ?",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Getting to the stop": "Rejoindre l’arrêt",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>Pensez aux arrêts et aux gares que vous utilisez le plus.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "Combien de minutes marchez-vous habituellement pour rejoindre votre arrêt ou votre gare ?",
+      "#Less than 5 minutes": "Moins de 5 minutes",
+      "#5–10 minutes": "5 à 10 minutes",
+      "#10–15 minutes": "10 à 15 minutes",
+      "#More than 15 minutes": "Plus de 15 minutes",
+      "#How safe do you feel crossing the road to reach your stop?": "Dans quelle mesure vous sentez-vous en sécurité en traversant la route pour rejoindre votre arrêt ?",
+      "#Not at all safe": "Pas du tout en sécurité",
+      "#Slightly safe": "Un peu en sécurité",
+      "#Moderately safe": "Modérément en sécurité",
+      "#Very safe": "Tout à fait en sécurité",
+      "#Completely safe": "Complètement en sécurité",
+      "#How often do you walk further to cross in a safer place near your stop?": "À quelle fréquence faites-vous un détour pour traverser à un endroit plus sûr près de votre arrêt ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#Always": "Toujours",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "Est-il facile d’accéder à vos arrêts et gares et de les utiliser (marches, rampes, espace) ?",
+      "#Very difficult": "Très difficile",
+      "#Difficult": "Difficile",
+      "#Neither easy nor difficult": "Ni facile ni difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Très facile",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Sans ascenseurs, rampes ou parcours sans marches, comment rejoignez-vous l’arrêt ?",
+      "#I can't get there": "Je ne peux pas y arriver",
+      "#I need someone's help": "J’ai besoin de l’aide de quelqu’un",
+      "#On my own, with great effort": "Seul/Seule, avec beaucoup d’effort",
+      "#On my own, with some difficulty": "Seul/Seule, avec quelques difficultés",
+      "#Easily, on my own": "Facilement, seul/seule",
+      "#What problems do you find at stops and stations? (Up to 3)": "Quels problèmes rencontrez-vous aux arrêts et dans les gares ? (3 au maximum)",
+      "#No particular problems": "Pas de problème particulier",
+      "#Stairs or level changes": "Escaliers ou changements de niveau",
+      "#Getting on or off is difficult": "Monter ou descendre est difficile",
+      "#Narrow or crowded spaces": "Espaces étroits ou bondés",
+      "#Broken or poorly maintained facilities": "Équipements cassés ou mal entretenus",
+      "#No real-time information": "Pas d’information en temps réel",
+      "#No seats or shelter": "Pas de sièges ni d’abri",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire porte sur le trajet à pied jusqu’à votre arrêt et sur l’utilisation des arrêts et des gares. Il prend environ 2 minutes.</p><p>La participation est volontaire. Vos réponses ne sont pas liées à votre nom. Elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Der Weg zum öffentlichen Verkehr",
+      "#Getting to public transport": "Der Weg zum öffentlichen Verkehr",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
+      "#Before we start": "Bevor wir beginnen",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Ein paar kurze Fragen, um Ihre Antworten einzuordnen.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Nutzen Sie den öffentlichen Verkehr (Bus, Straßenbahn, U-Bahn, Zug) mindestens einmal pro Woche?",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Getting to the stop": "Der Weg zur Haltestelle",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>Denken Sie an die Haltestellen und Bahnhöfe, die Sie am häufigsten nutzen.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "Wie viele Minuten gehen Sie normalerweise zu Fuß, um Ihre Haltestelle oder Ihren Bahnhof zu erreichen?",
+      "#Less than 5 minutes": "Weniger als 5 Minuten",
+      "#5–10 minutes": "5–10 Minuten",
+      "#10–15 minutes": "10–15 Minuten",
+      "#More than 15 minutes": "Mehr als 15 Minuten",
+      "#How safe do you feel crossing the road to reach your stop?": "Wie sicher fühlen Sie sich beim Überqueren der Straße auf dem Weg zu Ihrer Haltestelle?",
+      "#Not at all safe": "Überhaupt nicht sicher",
+      "#Slightly safe": "Etwas sicher",
+      "#Moderately safe": "Mäßig sicher",
+      "#Very safe": "Sehr sicher",
+      "#Completely safe": "Vollkommen sicher",
+      "#How often do you walk further to cross in a safer place near your stop?": "Wie oft gehen Sie einen Umweg, um in der Nähe Ihrer Haltestelle an einer sichereren Stelle zu queren?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#Always": "Immer",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "Wie leicht sind Ihre Haltestellen und Bahnhöfe zu erreichen und zu nutzen (Stufen, Rampen, Platz)?",
+      "#Very difficult": "Sehr schwierig",
+      "#Difficult": "Schwierig",
+      "#Neither easy nor difficult": "Weder leicht noch schwierig",
+      "#Easy": "Leicht",
+      "#Very easy": "Sehr leicht",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Wie erreichen Sie die Haltestelle, wenn es keine Aufzüge, Rampen oder stufenlosen Wege gibt?",
+      "#I can't get there": "Ich komme nicht hin",
+      "#I need someone's help": "Ich brauche die Hilfe einer anderen Person",
+      "#On my own, with great effort": "Allein, mit großer Anstrengung",
+      "#On my own, with some difficulty": "Allein, mit einigen Schwierigkeiten",
+      "#Easily, on my own": "Problemlos, allein",
+      "#What problems do you find at stops and stations? (Up to 3)": "Welche Probleme finden Sie an Haltestellen und Bahnhöfen vor? (Bis zu 3)",
+      "#No particular problems": "Keine besonderen Probleme",
+      "#Stairs or level changes": "Treppen oder Höhenunterschiede",
+      "#Getting on or off is difficult": "Ein- oder Aussteigen ist schwierig",
+      "#Narrow or crowded spaces": "Enge oder überfüllte Bereiche",
+      "#Broken or poorly maintained facilities": "Kaputte oder schlecht gewartete Einrichtungen",
+      "#No real-time information": "Keine Echtzeitinformationen",
+      "#No seats or shelter": "Keine Sitzplätze oder kein Wetterschutz",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>In diesem Fragebogen geht es um den Fußweg zu Ihrer Haltestelle und die Nutzung von Haltestellen und Bahnhöfen. Er dauert etwa 2 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten sind nicht mit Ihrem Namen verknüpft. Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Toplu taşımaya ulaşmak",
+      "#Getting to public transport": "Toplu taşımaya ulaşmak",
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
+      "#Before we start": "Başlamadan önce",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Yanıtlarınızı bağlamına oturtmak için birkaç kısa soru.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Toplu taşımayı (otobüs, tramvay, metro, tren) haftada en az bir kez kullanıyor musunuz?",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Getting to the stop": "Durağa ulaşmak",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>En çok kullandığınız durakları ve istasyonları düşünün.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "Durağınıza veya istasyonunuza ulaşmak için genellikle kaç dakika yürüyorsunuz?",
+      "#Less than 5 minutes": "5 dakikadan az",
+      "#5–10 minutes": "5–10 dakika",
+      "#10–15 minutes": "10–15 dakika",
+      "#More than 15 minutes": "15 dakikadan fazla",
+      "#How safe do you feel crossing the road to reach your stop?": "Durağınıza ulaşmak için yolu geçerken kendinizi ne kadar güvende hissediyorsunuz?",
+      "#Not at all safe": "Hiç güvende değil",
+      "#Slightly safe": "Biraz güvende",
+      "#Moderately safe": "Orta derecede güvende",
+      "#Very safe": "Çok güvende",
+      "#Completely safe": "Tamamen güvende",
+      "#How often do you walk further to cross in a safer place near your stop?": "Durağınızın yakınında daha güvenli bir yerden karşıya geçmek için ne sıklıkla daha uzun yürüyorsunuz?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#Always": "Her zaman",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "Duraklarınıza ve istasyonlarınıza ulaşmak ve onları kullanmak ne kadar kolay (basamaklar, rampalar, alan)?",
+      "#Very difficult": "Çok zor",
+      "#Difficult": "Zor",
+      "#Neither easy nor difficult": "Ne kolay ne zor",
+      "#Easy": "Kolay",
+      "#Very easy": "Çok kolay",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Asansör, rampa veya basamaksız güzergâh olmadan durağa nasıl ulaşıyorsunuz?",
+      "#I can't get there": "Ulaşamıyorum",
+      "#I need someone's help": "Birinin yardımına ihtiyacım var",
+      "#On my own, with great effort": "Kendi başıma, büyük çabayla",
+      "#On my own, with some difficulty": "Kendi başıma, biraz güçlükle",
+      "#Easily, on my own": "Kolayca, kendi başıma",
+      "#What problems do you find at stops and stations? (Up to 3)": "Duraklarda ve istasyonlarda hangi sorunlarla karşılaşıyorsunuz? (En fazla 3)",
+      "#No particular problems": "Özel bir sorun yok",
+      "#Stairs or level changes": "Merdivenler veya seviye farkları",
+      "#Getting on or off is difficult": "Binmek veya inmek zor",
+      "#Narrow or crowded spaces": "Dar veya kalabalık alanlar",
+      "#Broken or poorly maintained facilities": "Bozuk veya bakımsız tesisler",
+      "#No real-time information": "Gerçek zamanlı bilgi yok",
+      "#No seats or shelter": "Oturacak yer veya sığınak yok",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu anket, durağınıza yürüyerek ulaşmanız ve durakları ile istasyonları kullanmanızla ilgilidir. Yaklaşık 2 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresinizden türetilen takma bir kodla saklanır; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - رسیدن به حمل‌ونقل عمومی",
+      "#Getting to public transport": "رسیدن به حمل‌ونقل عمومی",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
+      "#Before we start": "پیش از شروع",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>چند پرسش کوتاه برای قراردادن پاسخ‌های شما در بستر مناسب.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "آیا دست‌کم هفته‌ای یک‌بار از حمل‌ونقل عمومی (اتوبوس، تراموا، مترو، قطار) استفاده می‌کنید؟",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Getting to the stop": "رسیدن به ایستگاه",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>به ایستگاه‌هایی فکر کنید که بیشتر از همه استفاده می‌کنید.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "معمولاً چند دقیقه پیاده می‌روید تا به ایستگاه خود برسید؟",
+      "#Less than 5 minutes": "کمتر از ۵ دقیقه",
+      "#5–10 minutes": "۵ تا ۱۰ دقیقه",
+      "#10–15 minutes": "۱۰ تا ۱۵ دقیقه",
+      "#More than 15 minutes": "بیش از ۱۵ دقیقه",
+      "#How safe do you feel crossing the road to reach your stop?": "هنگام عبور از خیابان برای رسیدن به ایستگاه، چقدر احساس امنیت می‌کنید؟",
+      "#Not at all safe": "اصلاً امن نیست",
+      "#Slightly safe": "کمی امن",
+      "#Moderately safe": "نسبتاً امن",
+      "#Very safe": "بسیار امن",
+      "#Completely safe": "کاملاً امن",
+      "#How often do you walk further to cross in a safer place near your stop?": "چند وقت یک‌بار برای عبور از جای امن‌تری نزدیک ایستگاه، مسیر بیشتری را پیاده می‌روید؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#Always": "همیشه",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "رسیدن به ایستگاه‌های شما و استفاده از آن‌ها چقدر آسان است (پله، رمپ، فضا)؟",
+      "#Very difficult": "بسیار دشوار",
+      "#Difficult": "دشوار",
+      "#Neither easy nor difficult": "نه آسان و نه دشوار",
+      "#Easy": "آسان",
+      "#Very easy": "بسیار آسان",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "بدون آسانسور، رمپ یا مسیرهای بدون پله، چگونه به ایستگاه می‌رسید؟",
+      "#I can't get there": "نمی‌توانم به آنجا برسم",
+      "#I need someone's help": "به کمک کسی نیاز دارم",
+      "#On my own, with great effort": "به‌تنهایی، با تلاش زیاد",
+      "#On my own, with some difficulty": "به‌تنهایی، با کمی دشواری",
+      "#Easily, on my own": "به‌آسانی، به‌تنهایی",
+      "#What problems do you find at stops and stations? (Up to 3)": "در ایستگاه‌ها با چه مشکلاتی روبه‌رو می‌شوید؟ (حداکثر ۳ مورد)",
+      "#No particular problems": "مشکل خاصی نیست",
+      "#Stairs or level changes": "پله یا اختلاف سطح",
+      "#Getting on or off is difficult": "سوار یا پیاده شدن دشوار است",
+      "#Narrow or crowded spaces": "فضاهای تنگ یا شلوغ",
+      "#Broken or poorly maintained facilities": "تجهیزات خراب یا بدون نگهداری مناسب",
+      "#No real-time information": "اطلاعات لحظه‌ای وجود ندارد",
+      "#No seats or shelter": "نیمکت یا سرپناه وجود ندارد",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه درباره پیاده رفتن تا ایستگاه و استفاده از ایستگاه‌ها است. حدود ۲ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود. پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - Eljutás a tömegközlekedéshez",
+      "#Getting to public transport": "Eljutás a tömegközlekedéshez",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
+      "#Before we start": "Mielőtt elkezdenénk",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Néhány gyors kérdés, hogy válaszait összefüggéseiben lássuk.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "Használ tömegközlekedést (busz, villamos, metró, vonat) legalább hetente egyszer?",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Getting to the stop": "Eljutás a megállóhoz",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>Gondoljon azokra a megállókra és állomásokra, amelyeket a leggyakrabban használ.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "Általában hány percet gyalogol, hogy elérje a megállóját vagy állomását?",
+      "#Less than 5 minutes": "Kevesebb mint 5 perc",
+      "#5–10 minutes": "5–10 perc",
+      "#10–15 minutes": "10–15 perc",
+      "#More than 15 minutes": "Több mint 15 perc",
+      "#How safe do you feel crossing the road to reach your stop?": "Mennyire érzi magát biztonságban, amikor átkel az úton, hogy elérje a megállóját?",
+      "#Not at all safe": "Egyáltalán nem biztonságban",
+      "#Slightly safe": "Kissé biztonságban",
+      "#Moderately safe": "Közepesen biztonságban",
+      "#Very safe": "Nagyon biztonságban",
+      "#Completely safe": "Teljesen biztonságban",
+      "#How often do you walk further to cross in a safer place near your stop?": "Milyen gyakran gyalogol tovább, hogy a megállója közelében biztonságosabb helyen keljen át?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#Always": "Mindig",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "Mennyire könnyű eljutni a megállóihoz és állomásaihoz, és használni azokat (lépcsők, rámpák, hely)?",
+      "#Very difficult": "Nagyon nehéz",
+      "#Difficult": "Nehéz",
+      "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
+      "#Easy": "Könnyű",
+      "#Very easy": "Nagyon könnyű",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "Lift, rámpa vagy lépcsőmentes útvonal nélkül hogyan jut el a megállóhoz?",
+      "#I can't get there": "Nem tudok eljutni oda",
+      "#I need someone's help": "Valaki segítségére van szükségem",
+      "#On my own, with great effort": "Egyedül, nagy erőfeszítéssel",
+      "#On my own, with some difficulty": "Egyedül, némi nehézséggel",
+      "#Easily, on my own": "Könnyen, egyedül",
+      "#What problems do you find at stops and stations? (Up to 3)": "Milyen problémákat tapasztal a megállókban és állomásokon? (Legfeljebb 3)",
+      "#No particular problems": "Nincs különösebb probléma",
+      "#Stairs or level changes": "Lépcsők vagy szintkülönbségek",
+      "#Getting on or off is difficult": "Nehéz a fel- vagy leszállás",
+      "#Narrow or crowded spaces": "Szűk vagy zsúfolt terek",
+      "#Broken or poorly maintained facilities": "Elromlott vagy rosszul karbantartott létesítmények",
+      "#No real-time information": "Nincs valós idejű tájékoztatás",
+      "#No seats or shelter": "Nincs ülőhely vagy fedett váró",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a kérdőív a megállóhoz vezető gyalogútról, valamint a megállók és állomások használatáról szól. Kitöltése körülbelül 2 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszait nem kapcsoljuk össze a nevével. Az e-mail-címéből képzett álnevesített kód alatt tároljuk őket, hogy a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - Getting to public transport": "SmartUrbanity - الوصول إلى النقل العام",
+      "#Getting to public transport": "الوصول إلى النقل العام",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
+      "#Before we start": "قبل أن نبدأ",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>بضعة أسئلة سريعة لوضع إجاباتك في سياقها.</p>",
+      "#Do you use public transport (bus, tram, metro, train) at least once a week?": "هل تستخدم النقل العام (الحافلة، الترام، المترو، القطار) مرة واحدة في الأسبوع على الأقل؟",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Getting to the stop": "الوصول إلى المحطة",
+      "#<p>Think about the stops and stations you use most.</p>": "<p>فكّر في المحطات ومواقف النقل التي تستخدمها أكثر من غيرها.</p>",
+      "#How many minutes do you usually walk to reach your stop or station?": "كم دقيقة تمشي عادةً للوصول إلى محطتك أو موقفك؟",
+      "#Less than 5 minutes": "أقل من 5 دقائق",
+      "#5–10 minutes": "5–10 دقائق",
+      "#10–15 minutes": "10–15 دقيقة",
+      "#More than 15 minutes": "أكثر من 15 دقيقة",
+      "#How safe do you feel crossing the road to reach your stop?": "ما مدى شعورك بالأمان عند عبور الطريق للوصول إلى محطتك؟",
+      "#Not at all safe": "غير آمن/آمنة على الإطلاق",
+      "#Slightly safe": "آمن/آمنة قليلًا",
+      "#Moderately safe": "آمن/آمنة إلى حد ما",
+      "#Very safe": "آمن/آمنة جدًا",
+      "#Completely safe": "آمن/آمنة تمامًا",
+      "#How often do you walk further to cross in a safer place near your stop?": "كم مرة تمشي مسافة أطول لتعبر من مكان أكثر أمانًا بالقرب من محطتك؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#Always": "دائمًا",
+      "#How easy is it to get to and use your stops and stations (steps, ramps, space)?": "ما مدى سهولة الوصول إلى محطاتك ومواقفك واستخدامها (الدرجات، المنحدرات، المساحة)؟",
+      "#Very difficult": "صعب جدًا",
+      "#Difficult": "صعب",
+      "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
+      "#Easy": "سهل",
+      "#Very easy": "سهل جدًا",
+      "#Without lifts, ramps or step-free routes, how do you get to the stop?": "من دون مصاعد أو منحدرات أو مسارات خالية من الدرجات، كيف تصل إلى المحطة؟",
+      "#I can't get there": "لا أستطيع الوصول إليها",
+      "#I need someone's help": "أحتاج إلى مساعدة شخص ما",
+      "#On my own, with great effort": "بمفردي، بجهد كبير",
+      "#On my own, with some difficulty": "بمفردي، مع بعض الصعوبة",
+      "#Easily, on my own": "بسهولة، بمفردي",
+      "#What problems do you find at stops and stations? (Up to 3)": "ما المشكلات التي تواجهها في المحطات والمواقف؟ (3 كحد أقصى)",
+      "#No particular problems": "لا مشكلات معينة",
+      "#Stairs or level changes": "درج أو اختلافات في المستوى",
+      "#Getting on or off is difficult": "الصعود أو النزول صعب",
+      "#Narrow or crowded spaces": "مساحات ضيقة أو مزدحمة",
+      "#Broken or poorly maintained facilities": "مرافق معطلة أو سيئة الصيانة",
+      "#No real-time information": "لا توجد معلومات فورية",
+      "#No seats or shelter": "لا مقاعد ولا مظلة",
+      "#<p>This questionnaire is about walking to your stop and using stops and stations. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان المشي إلى محطتك واستخدام المحطات والمواقف. يستغرق نحو دقيقتين.</p><p>المشاركة طوعية. إجاباتك غير مرتبطة باسمك. تُحفظ تحت رمز مستعار مشتق من عنوان بريدك الإلكتروني، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_pt_access",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

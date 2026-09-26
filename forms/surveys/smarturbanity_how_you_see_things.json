@@ -1,0 +1,910 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - How you see things",
+    "questionnaire_id": "smarturbanity_how_you_see_things",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 3,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "How you see things",
+      "description": "<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "How you see things",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Which way of travelling do you use most often?",
+            "answer_key": "usual_mode",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "On foot",
+                "value": "walk"
+              },
+              {
+                "text": "Wheelchair or mobility scooter",
+                "value": "wheelchair"
+              },
+              {
+                "text": "Bicycle (own)",
+                "value": "bike"
+              },
+              {
+                "text": "E-bike (own)",
+                "value": "ebike"
+              },
+              {
+                "text": "Shared bike or e-bike",
+                "value": "bike_shared"
+              },
+              {
+                "text": "E-scooter (own)",
+                "value": "escooter"
+              },
+              {
+                "text": "Shared e-scooter",
+                "value": "escooter_shared"
+              },
+              {
+                "text": "Public transport (bus, tram, metro, train)",
+                "value": "transit"
+              },
+              {
+                "text": "Car, as driver",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car, as passenger",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+                "value": "taxi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How you see things",
+        "description": "<p>Tell us how much you agree with each sentence.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "I'd rather take a longer route if it feels safer.",
+            "answer_key": "att_risk_longer_route",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "When I'm out, I often worry about having an accident.",
+            "answer_key": "att_risk_worry",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I avoid traffic situations I find risky, even if it costs me time.",
+            "answer_key": "att_risk_avoid",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "When I choose how to travel, I think about the impact on the environment.",
+            "answer_key": "att_env_think",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I'm willing to spend more time travelling if it pollutes less.",
+            "answer_key": "att_env_time",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "Car traffic is a serious problem for my city.",
+            "answer_key": "att_env_traffic",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I enjoy walking.",
+            "answer_key": "att_walk_enjoy",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "Walking is a practical way to get around my area.",
+            "answer_key": "att_walk_practical",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I would walk more if the streets were safer.",
+            "answer_key": "att_walk_safer",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I trust apps to suggest a good route.",
+            "answer_key": "att_tech_route",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I find it easy to learn how to use new apps.",
+            "answer_key": "att_tech_learn",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "I'm happy to share my location data if it helps improve my city.",
+            "answer_key": "att_tech_share",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?",
+            "answer_key": "street_preference",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "I clearly prefer quiet streets",
+                "value": "strongly_quiet"
+              },
+              {
+                "text": "I rather prefer quiet streets",
+                "value": "rather_quiet"
+              },
+              {
+                "text": "No preference",
+                "value": "no_preference"
+              },
+              {
+                "text": "I rather prefer lively streets",
+                "value": "rather_lively"
+              },
+              {
+                "text": "I clearly prefer lively streets",
+                "value": "strongly_lively"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - How you see things",
+      "#How you see things": "How you see things",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#Which way of travelling do you use most often?": "Which way of travelling do you use most often?",
+      "#On foot": "On foot",
+      "#Wheelchair or mobility scooter": "Wheelchair or mobility scooter",
+      "#Bicycle (own)": "Bicycle (own)",
+      "#E-bike (own)": "E-bike (own)",
+      "#Shared bike or e-bike": "Shared bike or e-bike",
+      "#E-scooter (own)": "E-scooter (own)",
+      "#Shared e-scooter": "Shared e-scooter",
+      "#Public transport (bus, tram, metro, train)": "Public transport (bus, tram, metro, train)",
+      "#Car, as driver": "Car, as driver",
+      "#Car, as passenger": "Car, as passenger",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Motorcycle or moped",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Tell us how much you agree with each sentence.</p>",
+      "#I'd rather take a longer route if it feels safer.": "I'd rather take a longer route if it feels safer.",
+      "#Strongly disagree": "Strongly disagree",
+      "#Disagree": "Disagree",
+      "#Neither agree nor disagree": "Neither agree nor disagree",
+      "#Agree": "Agree",
+      "#Strongly agree": "Strongly agree",
+      "#When I'm out, I often worry about having an accident.": "When I'm out, I often worry about having an accident.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "I avoid traffic situations I find risky, even if it costs me time.",
+      "#When I choose how to travel, I think about the impact on the environment.": "When I choose how to travel, I think about the impact on the environment.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "I'm willing to spend more time travelling if it pollutes less.",
+      "#Car traffic is a serious problem for my city.": "Car traffic is a serious problem for my city.",
+      "#I enjoy walking.": "I enjoy walking.",
+      "#Walking is a practical way to get around my area.": "Walking is a practical way to get around my area.",
+      "#I would walk more if the streets were safer.": "I would walk more if the streets were safer.",
+      "#I trust apps to suggest a good route.": "I trust apps to suggest a good route.",
+      "#I find it easy to learn how to use new apps.": "I find it easy to learn how to use new apps.",
+      "#I'm happy to share my location data if it helps improve my city.": "I'm happy to share my location data if it helps improve my city.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?",
+      "#I clearly prefer quiet streets": "I clearly prefer quiet streets",
+      "#I rather prefer quiet streets": "I rather prefer quiet streets",
+      "#No preference": "No preference",
+      "#I rather prefer lively streets": "I rather prefer lively streets",
+      "#I clearly prefer lively streets": "I clearly prefer lively streets",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - Come la pensi",
+      "#How you see things": "Come la pensi",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#Which way of travelling do you use most often?": "Quale modo di spostarti usi più spesso?",
+      "#On foot": "A piedi",
+      "#Wheelchair or mobility scooter": "Sedia a rotelle o scooter per disabili",
+      "#Bicycle (own)": "Bicicletta (tua)",
+      "#E-bike (own)": "Bici elettrica (tua)",
+      "#Shared bike or e-bike": "Bici o bici elettrica in sharing",
+      "#E-scooter (own)": "Monopattino elettrico (tuo)",
+      "#Shared e-scooter": "Monopattino in sharing",
+      "#Public transport (bus, tram, metro, train)": "Mezzi pubblici (bus, tram, metro, treno)",
+      "#Car, as driver": "Auto, come conducente",
+      "#Car, as passenger": "Auto, come passeggero/a",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle or moped": "Moto o scooter",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente tramite app (ad es. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Dicci quanto sei d'accordo con ogni frase.</p>",
+      "#I'd rather take a longer route if it feels safer.": "Preferisco fare un percorso più lungo se mi sembra più sicuro.",
+      "#Strongly disagree": "Per niente d'accordo",
+      "#Disagree": "Poco d'accordo",
+      "#Neither agree nor disagree": "Né d'accordo né in disaccordo",
+      "#Agree": "Abbastanza d'accordo",
+      "#Strongly agree": "Del tutto d'accordo",
+      "#When I'm out, I often worry about having an accident.": "Quando sono in giro, mi preoccupo spesso di poter avere un incidente.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "Evito le situazioni nel traffico che trovo rischiose, anche se mi costa tempo.",
+      "#When I choose how to travel, I think about the impact on the environment.": "Quando scelgo come spostarmi, penso all'impatto sull'ambiente.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "Sono disposto/a a impiegare più tempo pur di spostarmi inquinando meno.",
+      "#Car traffic is a serious problem for my city.": "Il traffico delle auto è un problema serio per la mia città.",
+      "#I enjoy walking.": "Mi piace camminare.",
+      "#Walking is a practical way to get around my area.": "Camminare è un modo pratico per muoversi nella mia zona.",
+      "#I would walk more if the streets were safer.": "Camminerei di più se le strade fossero più sicure.",
+      "#I trust apps to suggest a good route.": "Mi fido delle app per trovare un buon percorso.",
+      "#I find it easy to learn how to use new apps.": "Imparo facilmente a usare nuove app.",
+      "#I'm happy to share my location data if it helps improve my city.": "Condivido volentieri i miei dati di posizione se aiutano a migliorare la città.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "Quando puoi scegliere, preferisci strade vivaci (persone, negozi, movimento) o strade tranquille?",
+      "#I clearly prefer quiet streets": "Preferisco decisamente strade tranquille",
+      "#I rather prefer quiet streets": "Preferisco un po' strade tranquille",
+      "#No preference": "Nessuna preferenza",
+      "#I rather prefer lively streets": "Preferisco un po' strade vivaci",
+      "#I clearly prefer lively streets": "Preferisco decisamente strade vivaci",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Brevi frasi su sicurezza, ambiente, cammino e tecnologia. Non ci sono risposte giuste o sbagliate. Richiede circa 3 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - Votre vision des choses",
+      "#How you see things": "Votre vision des choses",
+      "#Thank you!": "Merci !",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
+      "#Before we start": "Avant de commencer",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Quelques questions rapides pour mettre vos réponses en contexte.</p>",
+      "#Which way of travelling do you use most often?": "Quel mode de déplacement utilisez-vous le plus souvent ?",
+      "#On foot": "À pied",
+      "#Wheelchair or mobility scooter": "Fauteuil roulant ou scooter de mobilité",
+      "#Bicycle (own)": "Vélo (personnel)",
+      "#E-bike (own)": "Vélo électrique (personnel)",
+      "#Shared bike or e-bike": "Vélo ou vélo électrique en libre-service",
+      "#E-scooter (own)": "Trottinette électrique (personnelle)",
+      "#Shared e-scooter": "Trottinette électrique en libre-service",
+      "#Public transport (bus, tram, metro, train)": "Transports en commun (bus, tram, métro, train)",
+      "#Car, as driver": "Voiture, en tant que conducteur/conductrice",
+      "#Car, as passenger": "Voiture, en tant que passager/passagère",
+      "#Car sharing": "Autopartage",
+      "#Motorcycle or moped": "Moto ou scooter",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi ou service de voiture via application (p. ex. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Dites-nous dans quelle mesure vous êtes d'accord avec chaque phrase.</p>",
+      "#I'd rather take a longer route if it feels safer.": "Je préfère prendre un itinéraire plus long s'il me semble plus sûr.",
+      "#Strongly disagree": "Pas du tout d'accord",
+      "#Disagree": "Plutôt pas d'accord",
+      "#Neither agree nor disagree": "Ni d'accord ni pas d'accord",
+      "#Agree": "Plutôt d'accord",
+      "#Strongly agree": "Tout à fait d'accord",
+      "#When I'm out, I often worry about having an accident.": "Quand je suis dehors, j'ai souvent peur d'avoir un accident.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "J'évite les situations de circulation que je trouve risquées, même si cela me fait perdre du temps.",
+      "#When I choose how to travel, I think about the impact on the environment.": "Quand je choisis comment me déplacer, je pense à l'impact sur l'environnement.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "Je suis prêt/prête à passer plus de temps à me déplacer si cela pollue moins.",
+      "#Car traffic is a serious problem for my city.": "La circulation automobile est un problème sérieux pour ma ville.",
+      "#I enjoy walking.": "J'aime marcher.",
+      "#Walking is a practical way to get around my area.": "Marcher est un moyen pratique de se déplacer dans mon quartier.",
+      "#I would walk more if the streets were safer.": "Je marcherais davantage si les rues étaient plus sûres.",
+      "#I trust apps to suggest a good route.": "Je fais confiance aux applications pour me proposer un bon itinéraire.",
+      "#I find it easy to learn how to use new apps.": "J'apprends facilement à utiliser de nouvelles applications.",
+      "#I'm happy to share my location data if it helps improve my city.": "Je partage volontiers mes données de localisation si cela aide à améliorer ma ville.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "Quand vous avez le choix, préférez-vous les rues animées (gens, commerces, activité) ou les rues calmes ?",
+      "#I clearly prefer quiet streets": "Je préfère nettement les rues calmes",
+      "#I rather prefer quiet streets": "Je préfère plutôt les rues calmes",
+      "#No preference": "Pas de préférence",
+      "#I rather prefer lively streets": "Je préfère plutôt les rues animées",
+      "#I clearly prefer lively streets": "Je préfère nettement les rues animées",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>De courtes affirmations sur la sécurité, l'environnement, la marche et la technologie. Il n'y a pas de bonnes ou de mauvaises réponses. Cela prend environ 3 minutes.</p><p>La participation est volontaire. Vos réponses ne sont pas liées à votre nom. Elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - Wie Sie die Dinge sehen",
+      "#How you see things": "Wie Sie die Dinge sehen",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
+      "#Before we start": "Bevor wir beginnen",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Ein paar kurze Fragen, um Ihre Antworten einzuordnen.</p>",
+      "#Which way of travelling do you use most often?": "Welches Verkehrsmittel nutzen Sie am häufigsten?",
+      "#On foot": "Zu Fuß",
+      "#Wheelchair or mobility scooter": "Rollstuhl oder Elektromobil",
+      "#Bicycle (own)": "Fahrrad (eigenes)",
+      "#E-bike (own)": "E-Bike (eigenes)",
+      "#Shared bike or e-bike": "Leihfahrrad oder Leih-E-Bike (Sharing)",
+      "#E-scooter (own)": "E-Scooter (eigener)",
+      "#Shared e-scooter": "Leih-E-Scooter (Sharing)",
+      "#Public transport (bus, tram, metro, train)": "Öffentlicher Verkehr (Bus, Tram, U-Bahn, Zug)",
+      "#Car, as driver": "Auto, als Fahrer/in",
+      "#Car, as passenger": "Auto, als Mitfahrer/in",
+      "#Car sharing": "Carsharing",
+      "#Motorcycle or moped": "Motorrad oder Moped/Roller",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi oder App-basierter Fahrdienst (z. B. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Sagen Sie uns, wie sehr Sie jedem Satz zustimmen.</p>",
+      "#I'd rather take a longer route if it feels safer.": "Ich nehme lieber einen längeren Weg, wenn er sich sicherer anfühlt.",
+      "#Strongly disagree": "Stimme überhaupt nicht zu",
+      "#Disagree": "Stimme nicht zu",
+      "#Neither agree nor disagree": "Weder noch",
+      "#Agree": "Stimme zu",
+      "#Strongly agree": "Stimme voll und ganz zu",
+      "#When I'm out, I often worry about having an accident.": "Wenn ich unterwegs bin, mache ich mir oft Sorgen, einen Unfall zu haben.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "Ich vermeide Verkehrssituationen, die ich riskant finde, auch wenn es mich Zeit kostet.",
+      "#When I choose how to travel, I think about the impact on the environment.": "Wenn ich wähle, wie ich unterwegs bin, denke ich an die Auswirkungen auf die Umwelt.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "Ich bin bereit, mehr Zeit für den Weg aufzuwenden, wenn es die Umwelt weniger belastet.",
+      "#Car traffic is a serious problem for my city.": "Der Autoverkehr ist ein ernstes Problem für meine Stadt.",
+      "#I enjoy walking.": "Ich gehe gern zu Fuß.",
+      "#Walking is a practical way to get around my area.": "Zu Fuß gehen ist eine praktische Art, in meiner Gegend unterwegs zu sein.",
+      "#I would walk more if the streets were safer.": "Ich würde mehr zu Fuß gehen, wenn die Straßen sicherer wären.",
+      "#I trust apps to suggest a good route.": "Ich vertraue darauf, dass Apps mir eine gute Route vorschlagen.",
+      "#I find it easy to learn how to use new apps.": "Ich lerne leicht, neue Apps zu benutzen.",
+      "#I'm happy to share my location data if it helps improve my city.": "Ich teile gern meine Standortdaten, wenn das hilft, meine Stadt zu verbessern.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "Wenn Sie die Wahl haben, bevorzugen Sie belebte Straßen (Menschen, Geschäfte, Betrieb) oder ruhige Straßen?",
+      "#I clearly prefer quiet streets": "Ich bevorzuge klar ruhige Straßen",
+      "#I rather prefer quiet streets": "Ich bevorzuge eher ruhige Straßen",
+      "#No preference": "Keine Präferenz",
+      "#I rather prefer lively streets": "Ich bevorzuge eher belebte Straßen",
+      "#I clearly prefer lively streets": "Ich bevorzuge klar belebte Straßen",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Kurze Aussagen zu Sicherheit, Umwelt, Zufußgehen und Technologie. Es gibt keine richtigen oder falschen Antworten. Es dauert etwa 3 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - Sizin bakışınız",
+      "#How you see things": "Sizin bakışınız",
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
+      "#Before we start": "Başlamadan önce",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Yanıtlarınızı bağlamına oturtmak için birkaç kısa soru.</p>",
+      "#Which way of travelling do you use most often?": "En sık hangi ulaşım yolunu kullanıyorsunuz?",
+      "#On foot": "Yürüyerek",
+      "#Wheelchair or mobility scooter": "Tekerlekli sandalye veya engelli scooterı",
+      "#Bicycle (own)": "Bisiklet (kendi)",
+      "#E-bike (own)": "Elektrikli bisiklet (kendi)",
+      "#Shared bike or e-bike": "Paylaşımlı bisiklet veya elektrikli bisiklet",
+      "#E-scooter (own)": "Elektrikli scooter (kendi)",
+      "#Shared e-scooter": "Paylaşımlı elektrikli scooter",
+      "#Public transport (bus, tram, metro, train)": "Toplu taşıma (otobüs, tramvay, metro, tren)",
+      "#Car, as driver": "Araba, sürücü olarak",
+      "#Car, as passenger": "Araba, yolcu olarak",
+      "#Car sharing": "Araç paylaşımı",
+      "#Motorcycle or moped": "Motosiklet veya moped/scooter",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taksi veya uygulama tabanlı araç hizmeti (örn. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Her cümleye ne kadar katıldığınızı belirtin.</p>",
+      "#I'd rather take a longer route if it feels safer.": "Daha güvenli hissettiriyorsa daha uzun bir yolu tercih ederim.",
+      "#Strongly disagree": "Kesinlikle katılmıyorum",
+      "#Disagree": "Katılmıyorum",
+      "#Neither agree nor disagree": "Ne katılıyorum ne katılmıyorum",
+      "#Agree": "Katılıyorum",
+      "#Strongly agree": "Kesinlikle katılıyorum",
+      "#When I'm out, I often worry about having an accident.": "Dışarıdayken sık sık kaza geçirmekten endişe ederim.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "Riskli bulduğum trafik durumlarından, zaman kaybettirse bile kaçınırım.",
+      "#When I choose how to travel, I think about the impact on the environment.": "Nasıl yolculuk edeceğimi seçerken çevreye etkisini düşünürüm.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "Daha az kirletiyorsa yolculuğa daha fazla zaman ayırmaya hazırım.",
+      "#Car traffic is a serious problem for my city.": "Araba trafiği şehrim için ciddi bir sorun.",
+      "#I enjoy walking.": "Yürümekten hoşlanırım.",
+      "#Walking is a practical way to get around my area.": "Yürümek, bölgemde dolaşmak için pratik bir yol.",
+      "#I would walk more if the streets were safer.": "Sokaklar daha güvenli olsaydı daha çok yürürdüm.",
+      "#I trust apps to suggest a good route.": "İyi bir rota önermeleri konusunda uygulamalara güvenirim.",
+      "#I find it easy to learn how to use new apps.": "Yeni uygulamaları kullanmayı kolayca öğrenirim.",
+      "#I'm happy to share my location data if it helps improve my city.": "Şehrimi iyileştirmeye yardımcı olacaksa konum verilerimi paylaşmaktan memnuniyet duyarım.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "Seçme şansınız olduğunda hareketli sokakları mı (insanlar, dükkânlar, canlılık) yoksa sakin sokakları mı tercih edersiniz?",
+      "#I clearly prefer quiet streets": "Kesinlikle sakin sokakları tercih ederim",
+      "#I rather prefer quiet streets": "Daha çok sakin sokakları tercih ederim",
+      "#No preference": "Fark etmez",
+      "#I rather prefer lively streets": "Daha çok hareketli sokakları tercih ederim",
+      "#I clearly prefer lively streets": "Kesinlikle hareketli sokakları tercih ederim",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Güvenlik, çevre, yürüme ve teknoloji hakkında kısa ifadeler. Doğru ya da yanlış yanıt yoktur. Yaklaşık 3 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresinizden türetilen takma bir kod altında saklanır; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - نگاه شما",
+      "#How you see things": "نگاه شما",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
+      "#Before we start": "پیش از شروع",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>چند پرسش کوتاه برای قراردادن پاسخ‌های شما در بستر مناسب.</p>",
+      "#Which way of travelling do you use most often?": "بیشتر از چه شیوه‌ای برای جابه‌جایی استفاده می‌کنید؟",
+      "#On foot": "پیاده",
+      "#Wheelchair or mobility scooter": "ویلچر یا اسکوتر معلولان",
+      "#Bicycle (own)": "دوچرخه (شخصی)",
+      "#E-bike (own)": "دوچرخه برقی (شخصی)",
+      "#Shared bike or e-bike": "دوچرخه یا دوچرخه برقی اشتراکی",
+      "#E-scooter (own)": "اسکوتر برقی (شخصی)",
+      "#Shared e-scooter": "اسکوتر برقی اشتراکی",
+      "#Public transport (bus, tram, metro, train)": "حمل‌ونقل عمومی (اتوبوس، تراموا، مترو، قطار)",
+      "#Car, as driver": "خودرو، به‌عنوان راننده",
+      "#Car, as passenger": "خودرو، به‌عنوان سرنشین",
+      "#Car sharing": "خودروی اشتراکی",
+      "#Motorcycle or moped": "موتورسیکلت یا موتور گازی",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "تاکسی یا سرویس خودرو با اپلیکیشن (مثلاً Uber، FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>بگویید با هر جمله چقدر موافق هستید.</p>",
+      "#I'd rather take a longer route if it feels safer.": "اگر مسیر طولانی‌تر امن‌تر به نظر برسد، آن را ترجیح می‌دهم.",
+      "#Strongly disagree": "کاملاً مخالفم",
+      "#Disagree": "مخالفم",
+      "#Neither agree nor disagree": "نه موافقم و نه مخالفم",
+      "#Agree": "موافقم",
+      "#Strongly agree": "کاملاً موافقم",
+      "#When I'm out, I often worry about having an accident.": "وقتی بیرون هستم، اغلب نگرانم که تصادف کنم.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "از موقعیت‌های ترافیکی که پرخطر می‌دانم دوری می‌کنم، حتی اگر وقتم را بگیرد.",
+      "#When I choose how to travel, I think about the impact on the environment.": "وقتی نحوه سفرم را انتخاب می‌کنم، به تأثیر آن بر محیط زیست فکر می‌کنم.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "اگر آلودگی کمتری ایجاد کند، حاضرم برای سفر وقت بیشتری صرف کنم.",
+      "#Car traffic is a serious problem for my city.": "ترافیک خودروها مشکلی جدی برای شهر من است.",
+      "#I enjoy walking.": "از پیاده‌روی لذت می‌برم.",
+      "#Walking is a practical way to get around my area.": "پیاده‌روی راهی عملی برای جابه‌جایی در محله من است.",
+      "#I would walk more if the streets were safer.": "اگر خیابان‌ها امن‌تر بودند، بیشتر پیاده‌روی می‌کردم.",
+      "#I trust apps to suggest a good route.": "برای پیشنهاد مسیر خوب به اپلیکیشن‌ها اعتماد دارم.",
+      "#I find it easy to learn how to use new apps.": "یادگیری استفاده از اپلیکیشن‌های جدید برایم آسان است.",
+      "#I'm happy to share my location data if it helps improve my city.": "اگر به بهبود شهرم کمک کند، با کمال میل داده‌های موقعیت مکانی‌ام را به اشتراک می‌گذارم.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "وقتی امکان انتخاب دارید، خیابان‌های پرجنب‌وجوش (مردم، مغازه‌ها، فعالیت) را ترجیح می‌دهید یا خیابان‌های آرام را؟",
+      "#I clearly prefer quiet streets": "به‌روشنی خیابان‌های آرام را ترجیح می‌دهم",
+      "#I rather prefer quiet streets": "بیشتر خیابان‌های آرام را ترجیح می‌دهم",
+      "#No preference": "ترجیحی ندارم",
+      "#I rather prefer lively streets": "بیشتر خیابان‌های پرجنب‌وجوش را ترجیح می‌دهم",
+      "#I clearly prefer lively streets": "به‌روشنی خیابان‌های پرجنب‌وجوش را ترجیح می‌دهم",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>جمله‌های کوتاهی درباره ایمنی، محیط زیست، پیاده‌روی و فناوری. پاسخ درست یا نادرست وجود ندارد. حدود ۳ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود. پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما به دست می‌آید ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - Ahogy Ön látja",
+      "#How you see things": "Ahogy Ön látja",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
+      "#Before we start": "Mielőtt elkezdenénk",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Néhány gyors kérdés, hogy válaszait összefüggéseiben lássuk.</p>",
+      "#Which way of travelling do you use most often?": "Melyik közlekedési módot használja a leggyakrabban?",
+      "#On foot": "Gyalog",
+      "#Wheelchair or mobility scooter": "Kerekesszék vagy mozgássegítő robogó",
+      "#Bicycle (own)": "Kerékpár (saját)",
+      "#E-bike (own)": "Elektromos kerékpár (saját)",
+      "#Shared bike or e-bike": "Megosztott kerékpár vagy elektromos kerékpár",
+      "#E-scooter (own)": "Elektromos roller (saját)",
+      "#Shared e-scooter": "Megosztott elektromos roller",
+      "#Public transport (bus, tram, metro, train)": "Tömegközlekedés (busz, villamos, metró, vonat)",
+      "#Car, as driver": "Autó, vezetőként",
+      "#Car, as passenger": "Autó, utasként",
+      "#Car sharing": "Autómegosztás",
+      "#Motorcycle or moped": "Motorkerékpár vagy robogó",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi vagy applikációs autós szolgáltatás (pl. Uber, FreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>Mondja el, mennyire ért egyet az egyes mondatokkal.</p>",
+      "#I'd rather take a longer route if it feels safer.": "Inkább hosszabb útvonalat választok, ha biztonságosabbnak érzem.",
+      "#Strongly disagree": "Egyáltalán nem értek egyet",
+      "#Disagree": "Nem értek egyet",
+      "#Neither agree nor disagree": "Egyet is értek, nem is",
+      "#Agree": "Egyetértek",
+      "#Strongly agree": "Teljesen egyetértek",
+      "#When I'm out, I often worry about having an accident.": "Amikor úton vagyok, gyakran aggódom, hogy balesetet szenvedek.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "Elkerülöm a kockázatosnak tartott közlekedési helyzeteket, még ha időbe kerül is.",
+      "#When I choose how to travel, I think about the impact on the environment.": "Amikor kiválasztom, hogyan közlekedem, gondolok a környezetre gyakorolt hatásra.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "Hajlandó vagyok több időt tölteni utazással, ha az kevésbé szennyezi a környezetet.",
+      "#Car traffic is a serious problem for my city.": "Az autóforgalom komoly probléma a városom számára.",
+      "#I enjoy walking.": "Szeretek gyalogolni.",
+      "#Walking is a practical way to get around my area.": "A gyaloglás praktikus módja a közlekedésnek a környékemen.",
+      "#I would walk more if the streets were safer.": "Többet gyalogolnék, ha az utcák biztonságosabbak lennének.",
+      "#I trust apps to suggest a good route.": "Megbízom az alkalmazásokban, hogy jó útvonalat javasolnak.",
+      "#I find it easy to learn how to use new apps.": "Könnyen megtanulom az új alkalmazások használatát.",
+      "#I'm happy to share my location data if it helps improve my city.": "Szívesen megosztom a helyadataimat, ha ez segít jobbá tenni a városomat.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "Ha választhat, az élénk utcákat (emberek, üzletek, nyüzsgés) vagy a csendes utcákat részesíti előnyben?",
+      "#I clearly prefer quiet streets": "Egyértelműen a csendes utcákat részesítem előnyben",
+      "#I rather prefer quiet streets": "Inkább a csendes utcákat részesítem előnyben",
+      "#No preference": "Nincs preferenciám",
+      "#I rather prefer lively streets": "Inkább az élénk utcákat részesítem előnyben",
+      "#I clearly prefer lively streets": "Egyértelműen az élénk utcákat részesítem előnyben",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Rövid állítások a biztonságról, a környezetről, a gyaloglásról és a technológiáról. Nincsenek jó vagy rossz válaszok. Kitöltése körülbelül 3 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszait nem kapcsoljuk össze a nevével. Az e-mail-címéből képzett álnevesített kód alatt tároljuk őket, hogy a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - How you see things": "SmartUrbanity - كيف ترى الأمور",
+      "#How you see things": "كيف ترى الأمور",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
+      "#Before we start": "قبل أن نبدأ",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>بضعة أسئلة سريعة لوضع إجاباتك في سياقها.</p>",
+      "#Which way of travelling do you use most often?": "ما وسيلة التنقل التي تستخدمها أكثر؟",
+      "#On foot": "سيرًا على الأقدام",
+      "#Wheelchair or mobility scooter": "كرسي متحرك أو سكوتر للتنقل",
+      "#Bicycle (own)": "دراجة (خاصة)",
+      "#E-bike (own)": "دراجة كهربائية (خاصة)",
+      "#Shared bike or e-bike": "دراجة أو دراجة كهربائية مشتركة",
+      "#E-scooter (own)": "سكوتر كهربائي (خاص)",
+      "#Shared e-scooter": "سكوتر كهربائي مشترك",
+      "#Public transport (bus, tram, metro, train)": "النقل العام (حافلة، ترام، مترو، قطار)",
+      "#Car, as driver": "سيارة، بصفتي سائقًا/سائقة",
+      "#Car, as passenger": "سيارة، بصفتي راكبًا/راكبة",
+      "#Car sharing": "مشاركة السيارات",
+      "#Motorcycle or moped": "دراجة نارية أو سكوتر",
+      "#Taxi or app-based car service (e.g. Uber, FreeNow)": "تاكسي أو خدمة سيارات عبر تطبيق (مثل Uber وFreeNow)",
+      "#<p>Tell us how much you agree with each sentence.</p>": "<p>أخبرنا إلى أي مدى توافق على كل جملة.</p>",
+      "#I'd rather take a longer route if it feels safer.": "أفضّل سلوك طريق أطول إذا شعرت بأنه أكثر أمانًا.",
+      "#Strongly disagree": "لا أوافق بشدة",
+      "#Disagree": "لا أوافق",
+      "#Neither agree nor disagree": "لا أوافق ولا أعارض",
+      "#Agree": "أوافق",
+      "#Strongly agree": "أوافق بشدة",
+      "#When I'm out, I often worry about having an accident.": "عندما أكون في الخارج، كثيرًا ما أقلق من التعرض لحادث.",
+      "#I avoid traffic situations I find risky, even if it costs me time.": "أتجنب مواقف المرور التي أراها خطرة، حتى لو كلفني ذلك وقتًا.",
+      "#When I choose how to travel, I think about the impact on the environment.": "عندما أختار طريقة تنقلي، أفكر في تأثيرها على البيئة.",
+      "#I'm willing to spend more time travelling if it pollutes less.": "أقبل أن أقضي وقتًا أطول في التنقل إذا كان ذلك أقل تلويثًا.",
+      "#Car traffic is a serious problem for my city.": "حركة السيارات مشكلة خطيرة لمدينتي.",
+      "#I enjoy walking.": "أستمتع بالمشي.",
+      "#Walking is a practical way to get around my area.": "المشي وسيلة عملية للتنقل في منطقتي.",
+      "#I would walk more if the streets were safer.": "كنت سأمشي أكثر لو كانت الشوارع أكثر أمانًا.",
+      "#I trust apps to suggest a good route.": "أثق بالتطبيقات في اقتراح طريق جيد.",
+      "#I find it easy to learn how to use new apps.": "أجد أنه من السهل تعلّم استخدام التطبيقات الجديدة.",
+      "#I'm happy to share my location data if it helps improve my city.": "يسعدني مشاركة بيانات موقعي إذا كان ذلك يساعد على تحسين مدينتي.",
+      "#When you can choose, do you prefer lively streets (people, shops, activity) or quiet streets?": "عندما يكون لديك الخيار، هل تفضّل الشوارع الحيوية (الناس، المتاجر، الحركة) أم الشوارع الهادئة؟",
+      "#I clearly prefer quiet streets": "أفضّل بوضوح الشوارع الهادئة",
+      "#I rather prefer quiet streets": "أفضّل إلى حد ما الشوارع الهادئة",
+      "#No preference": "لا تفضيل",
+      "#I rather prefer lively streets": "أفضّل إلى حد ما الشوارع الحيوية",
+      "#I clearly prefer lively streets": "أفضّل بوضوح الشوارع الحيوية",
+      "#<p>Short statements about safety, the environment, walking and technology. There are no right or wrong answers. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>عبارات قصيرة عن السلامة والبيئة والمشي والتكنولوجيا. لا توجد إجابات صحيحة أو خاطئة. يستغرق نحو 3 دقائق.</p><p>المشاركة طوعية. لا تُربط إجاباتك باسمك، بل تُحفظ تحت رمز مستعار مشتق من عنوان بريدك الإلكتروني، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">تعرّف على المزيد عن SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_how_you_see_things",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}
