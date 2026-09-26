@@ -1,0 +1,522 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Vehicles and apps",
+    "questionnaire_id": "smarturbanity_vehicles_apps",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Vehicles and apps",
+      "description": "<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Vehicles and apps",
+    "sections": [
+      {
+        "title": "Vehicles and apps",
+        "description": "<p>Tell us what you use.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Which of these are available in your household? (Select all that apply)",
+            "answer_key": "hh_vehicles",
+            "question_type": "multiple_options",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "None of these",
+                "value": "none"
+              },
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bicycle or e-bike",
+                "value": "bike"
+              },
+              {
+                "text": "E-scooter",
+                "value": "escooter"
+              }
+            ]
+          },
+          {
+            "text": "Which of these do you use yourself regularly? (Select all that apply)",
+            "answer_key": "vehicles_used",
+            "question_type": "multiple_options",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "None of these",
+                "value": "none"
+              },
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Motorcycle or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bicycle or e-bike",
+                "value": "bike"
+              },
+              {
+                "text": "E-scooter",
+                "value": "escooter"
+              }
+            ]
+          },
+          {
+            "text": "When you need one of your household's vehicles, how easy is it to use it?",
+            "answer_key": "vehicle_ease",
+            "question_type": "single_option",
+            "show_if": {
+              "hh_vehicles": [
+                "car",
+                "motorcycle",
+                "bike",
+                "escooter"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very difficult",
+                "value": "very_difficult"
+              },
+              {
+                "text": "Difficult",
+                "value": "difficult"
+              },
+              {
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy",
+                "value": "very_easy"
+              }
+            ]
+          },
+          {
+            "text": "How comfortable are you using map or navigation apps?",
+            "answer_key": "app_navigation",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
+              },
+              {
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
+              },
+              {
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
+              },
+              {
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
+              },
+              {
+                "text": "Very comfortable",
+                "value": "very_comfortable"
+              },
+              {
+                "text": "I don't use them",
+                "value": "not_used"
+              }
+            ]
+          },
+          {
+            "text": "How comfortable are you using apps to buy or validate public transport tickets?",
+            "answer_key": "app_pt_tickets",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
+              },
+              {
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
+              },
+              {
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
+              },
+              {
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
+              },
+              {
+                "text": "Very comfortable",
+                "value": "very_comfortable"
+              },
+              {
+                "text": "I don't use them",
+                "value": "not_used"
+              }
+            ]
+          },
+          {
+            "text": "How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?",
+            "answer_key": "app_mobility",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
+              },
+              {
+                "text": "Somewhat uncomfortable",
+                "value": "uncomfortable"
+              },
+              {
+                "text": "Neither comfortable nor uncomfortable",
+                "value": "neutral"
+              },
+              {
+                "text": "Somewhat comfortable",
+                "value": "comfortable"
+              },
+              {
+                "text": "Very comfortable",
+                "value": "very_comfortable"
+              },
+              {
+                "text": "I don't use them",
+                "value": "not_used"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Vehicles and apps",
+      "#Vehicles and apps": "Vehicles and apps",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Tell us what you use.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Which of these are available in your household? (Select all that apply)",
+      "#None of these": "None of these",
+      "#Car": "Car",
+      "#Motorcycle or moped": "Motorcycle or moped",
+      "#Bicycle or e-bike": "Bicycle or e-bike",
+      "#E-scooter": "E-scooter",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Which of these do you use yourself regularly? (Select all that apply)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "When you need one of your household's vehicles, how easy is it to use it?",
+      "#Very difficult": "Very difficult",
+      "#Difficult": "Difficult",
+      "#Neither easy nor difficult": "Neither easy nor difficult",
+      "#Easy": "Easy",
+      "#Very easy": "Very easy",
+      "#How comfortable are you using map or navigation apps?": "How comfortable are you using map or navigation apps?",
+      "#Very uncomfortable": "Very uncomfortable",
+      "#Somewhat uncomfortable": "Somewhat uncomfortable",
+      "#Neither comfortable nor uncomfortable": "Neither comfortable nor uncomfortable",
+      "#Somewhat comfortable": "Somewhat comfortable",
+      "#Very comfortable": "Very comfortable",
+      "#I don't use them": "I don't use them",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "How comfortable are you using apps to buy or validate public transport tickets?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Veicoli e app",
+      "#Vehicles and apps": "Veicoli e app",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Dicci cosa usi.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Quali di questi sono disponibili nella tua famiglia? (Puoi sceglierne più di uno)",
+      "#None of these": "Nessuno di questi",
+      "#Car": "Auto",
+      "#Motorcycle or moped": "Moto o scooter",
+      "#Bicycle or e-bike": "Bicicletta o bici elettrica",
+      "#E-scooter": "Monopattino elettrico",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Quali di questi usi tu regolarmente? (Puoi sceglierne più di uno)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "Quando ti serve uno dei veicoli della famiglia, quanto è facile usarlo?",
+      "#Very difficult": "Molto difficile",
+      "#Difficult": "Difficile",
+      "#Neither easy nor difficult": "Né facile né difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Molto facile",
+      "#How comfortable are you using map or navigation apps?": "Quanto ti senti a tuo agio nell'usare app di mappe o navigazione?",
+      "#Very uncomfortable": "Per niente a mio agio",
+      "#Somewhat uncomfortable": "Poco a mio agio",
+      "#Neither comfortable nor uncomfortable": "Né a mio agio né a disagio",
+      "#Somewhat comfortable": "Abbastanza a mio agio",
+      "#Very comfortable": "Del tutto a mio agio",
+      "#I don't use them": "Non le uso",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "Quanto ti senti a tuo agio nell'usare app per comprare o convalidare i biglietti dei mezzi pubblici?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "Quanto ti senti a tuo agio nell'usare app per taxi, auto con conducente o sharing (ad es. Uber, FreeNow, bike sharing)?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Cosa hai a disposizione e quanto ti trovi a tuo agio con le app per spostarti. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Véhicules et applications",
+      "#Vehicles and apps": "Véhicules et applications",
+      "#Thank you!": "Merci !",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
+      "#Before we start": "Avant de commencer",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Quelques questions rapides pour mettre vos réponses en contexte.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Dites-nous ce que vous utilisez.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Lesquels de ces moyens sont disponibles dans votre foyer ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#None of these": "Aucun de ces éléments",
+      "#Car": "Voiture",
+      "#Motorcycle or moped": "Moto ou scooter",
+      "#Bicycle or e-bike": "Vélo ou vélo électrique",
+      "#E-scooter": "Trottinette électrique",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Lesquels utilisez-vous vous-même régulièrement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "Lorsque vous avez besoin d’un des véhicules de votre foyer, dans quelle mesure est-il facile de l’utiliser ?",
+      "#Very difficult": "Très difficile",
+      "#Difficult": "Difficile",
+      "#Neither easy nor difficult": "Ni facile ni difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Très facile",
+      "#How comfortable are you using map or navigation apps?": "Dans quelle mesure êtes-vous à l’aise avec les applications de cartes ou de navigation ?",
+      "#Very uncomfortable": "Très mal à l’aise",
+      "#Somewhat uncomfortable": "Plutôt mal à l’aise",
+      "#Neither comfortable nor uncomfortable": "Ni à l’aise ni mal à l’aise",
+      "#Somewhat comfortable": "Plutôt à l’aise",
+      "#Very comfortable": "Tout à fait à l’aise",
+      "#I don't use them": "Je ne les utilise pas",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "Dans quelle mesure êtes-vous à l’aise avec les applications pour acheter ou valider des titres de transport en commun ?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "Dans quelle mesure êtes-vous à l’aise avec les applications de taxi, de VTC ou de services partagés (p. ex. Uber, FreeNow, vélos en libre-service) ?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce dont vous disposez et votre aisance avec les applications de déplacement. Cela prend environ 2 minutes.</p><p>La participation est volontaire. Vos réponses ne sont pas liées à votre nom. Elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Fahrzeuge und Apps",
+      "#Vehicles and apps": "Fahrzeuge und Apps",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
+      "#Before we start": "Bevor wir beginnen",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Ein paar kurze Fragen, um Ihre Antworten einzuordnen.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Sagen Sie uns, was Sie nutzen.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Welche davon sind in Ihrem Haushalt verfügbar? (Alle zutreffenden auswählen)",
+      "#None of these": "Keine davon",
+      "#Car": "Auto",
+      "#Motorcycle or moped": "Motorrad oder Moped/Roller",
+      "#Bicycle or e-bike": "Fahrrad oder E-Bike",
+      "#E-scooter": "E-Scooter",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Welche davon nutzen Sie selbst regelmäßig? (Alle zutreffenden auswählen)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "Wenn Sie eines der Fahrzeuge Ihres Haushalts brauchen, wie leicht können Sie es nutzen?",
+      "#Very difficult": "Sehr schwierig",
+      "#Difficult": "Schwierig",
+      "#Neither easy nor difficult": "Weder leicht noch schwierig",
+      "#Easy": "Leicht",
+      "#Very easy": "Sehr leicht",
+      "#How comfortable are you using map or navigation apps?": "Wie wohl fühlen Sie sich bei der Nutzung von Karten- oder Navigations-Apps?",
+      "#Very uncomfortable": "Sehr unwohl",
+      "#Somewhat uncomfortable": "Eher unwohl",
+      "#Neither comfortable nor uncomfortable": "Weder wohl noch unwohl",
+      "#Somewhat comfortable": "Eher wohl",
+      "#Very comfortable": "Sehr wohl",
+      "#I don't use them": "Ich nutze sie nicht",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "Wie wohl fühlen Sie sich bei der Nutzung von Apps zum Kauf oder Entwerten von Tickets für den öffentlichen Verkehr?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "Wie wohl fühlen Sie sich bei der Nutzung von Apps für Taxis, Fahrdienste oder Sharing-Angebote (z. B. Uber, FreeNow, Bike-Sharing)?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Was Ihnen zur Verfügung steht und wie wohl Sie sich mit Mobilitäts-Apps fühlen. Es dauert etwa 2 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Araçlar ve uygulamalar",
+      "#Vehicles and apps": "Araçlar ve uygulamalar",
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
+      "#Before we start": "Başlamadan önce",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Yanıtlarınızı bağlamına oturtmak için birkaç kısa soru.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Neler kullandığınızı bize söyleyin.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Bunlardan hangileri hanenizde mevcut? (Uygun olanların tümünü seçin)",
+      "#None of these": "Bunların hiçbiri",
+      "#Car": "Araba",
+      "#Motorcycle or moped": "Motosiklet veya moped/scooter",
+      "#Bicycle or e-bike": "Bisiklet veya elektrikli bisiklet",
+      "#E-scooter": "Elektrikli scooter",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Bunlardan hangilerini siz düzenli olarak kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "Hanenizdeki araçlardan birine ihtiyaç duyduğunuzda onu kullanmak ne kadar kolay?",
+      "#Very difficult": "Çok zor",
+      "#Difficult": "Zor",
+      "#Neither easy nor difficult": "Ne kolay ne zor",
+      "#Easy": "Kolay",
+      "#Very easy": "Çok kolay",
+      "#How comfortable are you using map or navigation apps?": "Harita veya navigasyon uygulamalarını kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
+      "#Very uncomfortable": "Hiç rahat değilim",
+      "#Somewhat uncomfortable": "Biraz rahatsız",
+      "#Neither comfortable nor uncomfortable": "Ne rahat ne rahatsız",
+      "#Somewhat comfortable": "Oldukça rahat",
+      "#Very comfortable": "Çok rahatım",
+      "#I don't use them": "Kullanmıyorum",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "Toplu taşıma bileti satın almak veya onaylatmak için uygulama kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "Taksi, araç çağırma veya paylaşım hizmetleri için uygulama kullanırken kendinizi ne kadar rahat hissediyorsunuz (örn. Uber, FreeNow, bisiklet paylaşımı)?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Nelere sahip olduğunuz ve ulaşım uygulamalarıyla ne kadar rahat olduğunuz. Yaklaşık 2 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez. Yanıtlarınız, e-posta adresinizden türetilen takma bir kod altında saklanır; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - وسایل نقلیه و اپلیکیشن‌ها",
+      "#Vehicles and apps": "وسایل نقلیه و اپلیکیشن‌ها",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
+      "#Before we start": "پیش از شروع",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>چند پرسش کوتاه برای قراردادن پاسخ‌های شما در بستر مناسب.</p>",
+      "#<p>Tell us what you use.</p>": "<p>به ما بگویید از چه چیزهایی استفاده می‌کنید.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "کدام‌یک از این‌ها در خانوار شما موجود است؟ (همه موارد مربوط را انتخاب کنید)",
+      "#None of these": "هیچ‌کدام از این‌ها",
+      "#Car": "خودرو",
+      "#Motorcycle or moped": "موتورسیکلت یا موتور گازی",
+      "#Bicycle or e-bike": "دوچرخه یا دوچرخه برقی",
+      "#E-scooter": "اسکوتر برقی",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "کدام‌یک از این‌ها را خودتان به‌طور منظم استفاده می‌کنید؟ (همه موارد مربوط را انتخاب کنید)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "وقتی به یکی از وسایل نقلیه خانوارتان نیاز دارید، استفاده از آن چقدر آسان است؟",
+      "#Very difficult": "بسیار دشوار",
+      "#Difficult": "دشوار",
+      "#Neither easy nor difficult": "نه آسان و نه دشوار",
+      "#Easy": "آسان",
+      "#Very easy": "بسیار آسان",
+      "#How comfortable are you using map or navigation apps?": "در استفاده از اپلیکیشن‌های نقشه یا مسیریابی چقدر راحت هستید؟",
+      "#Very uncomfortable": "بسیار ناراحت",
+      "#Somewhat uncomfortable": "تا حدی ناراحت",
+      "#Neither comfortable nor uncomfortable": "نه راحت و نه ناراحت",
+      "#Somewhat comfortable": "تا حدی راحت",
+      "#Very comfortable": "کاملاً راحت",
+      "#I don't use them": "از آن‌ها استفاده نمی‌کنم",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "در استفاده از اپلیکیشن‌ها برای خرید یا اعتبارسنجی بلیت حمل‌ونقل عمومی چقدر راحت هستید؟",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "در استفاده از اپلیکیشن‌های تاکسی، خودروی دربستی یا سرویس‌های اشتراکی (مثلاً Uber، FreeNow، دوچرخه اشتراکی) چقدر راحت هستید؟",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چه امکاناتی در اختیار دارید و با اپلیکیشن‌های سفر چقدر راحت هستید. حدود ۲ دقیقه زمان می‌برد.</p><p>شرکت در آن داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود. پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - Járművek és alkalmazások",
+      "#Vehicles and apps": "Járművek és alkalmazások",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
+      "#Before we start": "Mielőtt elkezdenénk",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Néhány gyors kérdés, hogy válaszait összefüggéseiben lássuk.</p>",
+      "#<p>Tell us what you use.</p>": "<p>Mondja el, mit használ.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "Ezek közül melyek állnak rendelkezésre a háztartásában? (Jelölje meg az összes megfelelőt)",
+      "#None of these": "Ezek közül egyik sem",
+      "#Car": "Autó",
+      "#Motorcycle or moped": "Motorkerékpár vagy robogó",
+      "#Bicycle or e-bike": "Kerékpár vagy elektromos kerékpár",
+      "#E-scooter": "Elektromos roller",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "Ezek közül melyeket használja Ön maga rendszeresen? (Jelölje meg az összes megfelelőt)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "Amikor szüksége van a háztartás egyik járművére, mennyire könnyű használnia?",
+      "#Very difficult": "Nagyon nehéz",
+      "#Difficult": "Nehéz",
+      "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
+      "#Easy": "Könnyű",
+      "#Very easy": "Nagyon könnyű",
+      "#How comfortable are you using map or navigation apps?": "Mennyire érzi magát otthonosan a térkép- vagy navigációs alkalmazások használatában?",
+      "#Very uncomfortable": "Nagyon kényelmetlenül",
+      "#Somewhat uncomfortable": "Kissé bizonytalanul",
+      "#Neither comfortable nor uncomfortable": "Se nem magabiztosan, se nem bizonytalanul",
+      "#Somewhat comfortable": "Meglehetősen magabiztosan",
+      "#Very comfortable": "Nagyon kényelmesen",
+      "#I don't use them": "Nem használom őket",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "Mennyire érzi magát otthonosan a tömegközlekedési jegyek vásárlására vagy érvényesítésére szolgáló alkalmazások használatában?",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "Mennyire érzi magát otthonosan a taxi-, fuvarszolgáltató vagy megosztásos alkalmazások használatában (pl. Uber, FreeNow, kerékpármegosztás)?",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mi áll rendelkezésére, és mennyire boldogul az utazási alkalmazásokkal. Kitöltése körülbelül 2 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszait nem kapcsoljuk össze a nevével. A válaszokat az e-mail-címéből képzett álnevesített kód alatt tároljuk, hogy a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - Vehicles and apps": "SmartUrbanity - المركبات والتطبيقات",
+      "#Vehicles and apps": "المركبات والتطبيقات",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
+      "#Before we start": "قبل أن نبدأ",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>بضعة أسئلة سريعة لوضع إجاباتك في سياقها.</p>",
+      "#<p>Tell us what you use.</p>": "<p>أخبرنا بما تستخدمه.</p>",
+      "#Which of these are available in your household? (Select all that apply)": "أي من هذه متاح في أسرتك؟ (اختر كل ما ينطبق)",
+      "#None of these": "لا شيء مما سبق",
+      "#Car": "سيارة",
+      "#Motorcycle or moped": "دراجة نارية أو سكوتر",
+      "#Bicycle or e-bike": "دراجة هوائية أو دراجة كهربائية",
+      "#E-scooter": "سكوتر كهربائي",
+      "#Which of these do you use yourself regularly? (Select all that apply)": "أي من هذه تستخدمه أنت بنفسك بانتظام؟ (اختر كل ما ينطبق)",
+      "#When you need one of your household's vehicles, how easy is it to use it?": "عندما تحتاج إلى إحدى مركبات أسرتك، ما مدى سهولة استخدامها؟",
+      "#Very difficult": "صعب جدًا",
+      "#Difficult": "صعب",
+      "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
+      "#Easy": "سهل",
+      "#Very easy": "سهل جدًا",
+      "#How comfortable are you using map or navigation apps?": "ما مدى ارتياحك لاستخدام تطبيقات الخرائط أو الملاحة؟",
+      "#Very uncomfortable": "لا أشعر بالراحة على الإطلاق",
+      "#Somewhat uncomfortable": "لا أشعر بالراحة كثيرًا",
+      "#Neither comfortable nor uncomfortable": "لا أشعر بالراحة ولا بالانزعاج",
+      "#Somewhat comfortable": "أشعر بالراحة إلى حد ما",
+      "#Very comfortable": "أشعر بالراحة تمامًا",
+      "#I don't use them": "لا أستخدمها",
+      "#How comfortable are you using apps to buy or validate public transport tickets?": "ما مدى ارتياحك لاستخدام التطبيقات لشراء تذاكر النقل العام أو تفعيلها؟",
+      "#How comfortable are you using apps for taxis, car services or sharing (e.g. Uber, FreeNow, bike sharing)?": "ما مدى ارتياحك لاستخدام تطبيقات سيارات الأجرة أو خدمات التوصيل أو المشاركة (مثل Uber وFreeNow ومشاركة الدراجات)؟",
+      "#<p>What you have available and how comfortable you are with travel apps. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ما هو متاح لديك ومدى ارتياحك لتطبيقات التنقل. يستغرق نحو دقيقتين.</p><p>المشاركة طوعية. لا تُربط إجاباتك باسمك. تُخزَّن تحت رمز مستعار مشتق من عنوان بريدك الإلكتروني، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_vehicles_apps",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}

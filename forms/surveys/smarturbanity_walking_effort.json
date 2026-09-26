@@ -1,0 +1,1057 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Walking: effort and improvements",
+    "questionnaire_id": "smarturbanity_walking_effort",
+    "questionnaire_version": "0.2.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 3,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "welcome_page": {
+      "title": "Walking: effort and improvements",
+      "description": "<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "Walking: effort and improvements",
+    "sections": [
+      {
+        "title": "Before we start",
+        "description": "<p>A few quick questions to put your answers in context.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.",
+            "answer_key": "walk_days",
+            "question_type": "single_option",
+            "required": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never or almost never",
+                "value": "none"
+              },
+              {
+                "text": "1–2 days",
+                "value": "1_2"
+              },
+              {
+                "text": "3–4 days",
+                "value": "3_4"
+              },
+              {
+                "text": "5–6 days",
+                "value": "5_6"
+              },
+              {
+                "text": "Every day",
+                "value": "daily"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "What slows you down or stops you",
+        "description": "<p>Tell us how these things affect your walking.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Why do you usually walk? (Select all that apply)",
+            "answer_key": "walk_purposes",
+            "question_type": "multiple_options",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "To go to shops or services",
+                "value": "shops_services"
+              },
+              {
+                "text": "To go to work or study",
+                "value": "work_study"
+              },
+              {
+                "text": "To reach a stop or station",
+                "value": "reach_transit"
+              },
+              {
+                "text": "To take or pick someone up",
+                "value": "escort"
+              },
+              {
+                "text": "To visit people",
+                "value": "visit_people"
+              },
+              {
+                "text": "For a walk or exercise",
+                "value": "leisure_exercise"
+              },
+              {
+                "text": "To walk the dog",
+                "value": "dog"
+              }
+            ]
+          },
+          {
+            "text": "How often do bad pavements or obstacles slow you down?",
+            "answer_key": "slowed_by_pavement",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How much do slopes slow you down when you walk?",
+            "answer_key": "slowed_by_slopes",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "A lot",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ]
+          },
+          {
+            "text": "How important are benches or places to rest for you to complete your walk?",
+            "answer_key": "benches_importance",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not important",
+                "value": "not_important"
+              },
+              {
+                "text": "Slightly important",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately important",
+                "value": "moderately"
+              },
+              {
+                "text": "Very important",
+                "value": "very"
+              },
+              {
+                "text": "Essential: without them I can't walk that far",
+                "value": "essential"
+              }
+            ]
+          },
+          {
+            "text": "How often do you decide not to walk after dark because you don't feel safe?",
+            "answer_key": "skip_after_dark",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you decide not to walk because it is too hot?",
+            "answer_key": "skip_heat",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          },
+          {
+            "text": "How often do you find it hard to find your way on foot because signs are missing or unclear?",
+            "answer_key": "wayfinding",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Walking and you",
+        "description": "<p>Tell us what you think.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Walking helps me stay physically fit.",
+            "answer_key": "walk_physical_health",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "Walking helps me feel better mentally.",
+            "answer_key": "walk_mental_health",
+            "question_type": "single_option",
+            "show_if": {
+              "walk_days": [
+                "1_2",
+                "3_4",
+                "5_6",
+                "daily"
+              ]
+            },
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Strongly disagree",
+                "value": "strongly_disagree"
+              },
+              {
+                "text": "Disagree",
+                "value": "disagree"
+              },
+              {
+                "text": "Neither agree nor disagree",
+                "value": "neutral"
+              },
+              {
+                "text": "Agree",
+                "value": "agree"
+              },
+              {
+                "text": "Strongly agree",
+                "value": "strongly_agree"
+              }
+            ]
+          },
+          {
+            "text": "What would most encourage you to walk more? (Up to 3)",
+            "answer_key": "walk_improvements",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Nothing, things are fine as they are",
+                "value": "nothing"
+              },
+              {
+                "text": "Better and continuous pavements",
+                "value": "better_pavements"
+              },
+              {
+                "text": "Pavements free of cars, bins and scooters",
+                "value": "free_pavements"
+              },
+              {
+                "text": "Safer crossings",
+                "value": "safer_crossings"
+              },
+              {
+                "text": "Slower traffic (e.g. 30 km/h streets)",
+                "value": "slower_traffic"
+              },
+              {
+                "text": "Better street lighting",
+                "value": "lighting"
+              },
+              {
+                "text": "More trees, shade and green spaces",
+                "value": "shade_green"
+              },
+              {
+                "text": "More benches and places to rest",
+                "value": "benches"
+              },
+              {
+                "text": "Cleaner streets",
+                "value": "clean"
+              },
+              {
+                "text": "Fewer bikes and e-scooters on pavements",
+                "value": "fewer_bikes_on_pavement"
+              },
+              {
+                "text": "Clearer signs and maps",
+                "value": "wayfinding"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Walking: effort and improvements",
+      "#Walking: effort and improvements": "Walking: effort and improvements",
+      "#Thank you!": "Thank you!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#Before we start": "Before we start",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>A few quick questions to put your answers in context.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.",
+      "#Never or almost never": "Never or almost never",
+      "#1–2 days": "1–2 days",
+      "#3–4 days": "3–4 days",
+      "#5–6 days": "5–6 days",
+      "#Every day": "Every day",
+      "#What slows you down or stops you": "What slows you down or stops you",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Tell us how these things affect your walking.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Why do you usually walk? (Select all that apply)",
+      "#To go to shops or services": "To go to shops or services",
+      "#To go to work or study": "To go to work or study",
+      "#To reach a stop or station": "To reach a stop or station",
+      "#To take or pick someone up": "To take or pick someone up",
+      "#To visit people": "To visit people",
+      "#For a walk or exercise": "For a walk or exercise",
+      "#To walk the dog": "To walk the dog",
+      "#How often do bad pavements or obstacles slow you down?": "How often do bad pavements or obstacles slow you down?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
+      "#How much do slopes slow you down when you walk?": "How much do slopes slow you down when you walk?",
+      "#Not at all": "Not at all",
+      "#Slightly": "Slightly",
+      "#Moderately": "Moderately",
+      "#A lot": "A lot",
+      "#Extremely": "Extremely",
+      "#How important are benches or places to rest for you to complete your walk?": "How important are benches or places to rest for you to complete your walk?",
+      "#Not important": "Not important",
+      "#Slightly important": "Slightly important",
+      "#Moderately important": "Moderately important",
+      "#Very important": "Very important",
+      "#Essential: without them I can't walk that far": "Essential: without them I can't walk that far",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "How often do you decide not to walk after dark because you don't feel safe?",
+      "#How often do you decide not to walk because it is too hot?": "How often do you decide not to walk because it is too hot?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "How often do you find it hard to find your way on foot because signs are missing or unclear?",
+      "#Walking and you": "Walking and you",
+      "#<p>Tell us what you think.</p>": "<p>Tell us what you think.</p>",
+      "#Walking helps me stay physically fit.": "Walking helps me stay physically fit.",
+      "#Strongly disagree": "Strongly disagree",
+      "#Disagree": "Disagree",
+      "#Neither agree nor disagree": "Neither agree nor disagree",
+      "#Agree": "Agree",
+      "#Strongly agree": "Strongly agree",
+      "#Walking helps me feel better mentally.": "Walking helps me feel better mentally.",
+      "#What would most encourage you to walk more? (Up to 3)": "What would most encourage you to walk more? (Up to 3)",
+      "#Nothing, things are fine as they are": "Nothing, things are fine as they are",
+      "#Better and continuous pavements": "Better and continuous pavements",
+      "#Pavements free of cars, bins and scooters": "Pavements free of cars, bins and scooters",
+      "#Safer crossings": "Safer crossings",
+      "#Slower traffic (e.g. 30 km/h streets)": "Slower traffic (e.g. 30 km/h streets)",
+      "#Better street lighting": "Better street lighting",
+      "#More trees, shade and green spaces": "More trees, shade and green spaces",
+      "#More benches and places to rest": "More benches and places to rest",
+      "#Cleaner streets": "Cleaner streets",
+      "#Fewer bikes and e-scooters on pavements": "Fewer bikes and e-scooters on pavements",
+      "#Clearer signs and maps": "Clearer signs and maps",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Camminare: fatica e miglioramenti",
+      "#Walking: effort and improvements": "Camminare: fatica e miglioramenti",
+      "#Thank you!": "Grazie!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#Before we start": "Prima di iniziare",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Alcune domande veloci per inquadrare le tue risposte.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "In una settimana tipica, in quanti giorni cammini almeno 10 minuti per andare da qualche parte? Conta anche il tragitto fino a una fermata o stazione.",
+      "#Never or almost never": "Mai o quasi mai",
+      "#1–2 days": "1–2 giorni",
+      "#3–4 days": "3–4 giorni",
+      "#5–6 days": "5–6 giorni",
+      "#Every day": "Ogni giorno",
+      "#What slows you down or stops you": "Cosa ti rallenta o ti fa rinunciare",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Dicci come queste cose influiscono sul tuo camminare.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Per quali motivi cammini di solito? (Puoi sceglierne più di uno)",
+      "#To go to shops or services": "Per andare in negozi o servizi",
+      "#To go to work or study": "Per andare al lavoro o a studiare",
+      "#To reach a stop or station": "Per raggiungere una fermata o stazione",
+      "#To take or pick someone up": "Per accompagnare o prendere qualcuno",
+      "#To visit people": "Per andare a trovare qualcuno",
+      "#For a walk or exercise": "Per passeggiare o fare attività fisica",
+      "#To walk the dog": "Per portare a spasso il cane",
+      "#How often do bad pavements or obstacles slow you down?": "Quanto spesso marciapiedi rovinati o ostacoli ti rallentano?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
+      "#How much do slopes slow you down when you walk?": "Quanto ti rallentano le salite quando cammini?",
+      "#Not at all": "Per niente",
+      "#Slightly": "Poco",
+      "#Moderately": "Abbastanza",
+      "#A lot": "Molto",
+      "#Extremely": "Moltissimo",
+      "#How important are benches or places to rest for you to complete your walk?": "Quanto sono importanti le panchine o i punti di sosta per riuscire a completare il tuo percorso?",
+      "#Not important": "Per niente importanti",
+      "#Slightly important": "Poco importanti",
+      "#Moderately important": "Abbastanza importanti",
+      "#Very important": "Molto importanti",
+      "#Essential: without them I can't walk that far": "Indispensabili: senza non riesco a camminare così a lungo",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "Quanto spesso decidi di non camminare dopo il tramonto perché non ti senti al sicuro?",
+      "#How often do you decide not to walk because it is too hot?": "Quanto spesso decidi di non camminare perché fa troppo caldo?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "Quanto spesso fai fatica a orientarti a piedi perché le indicazioni mancano o non sono chiare?",
+      "#Walking and you": "Tu e il camminare",
+      "#<p>Tell us what you think.</p>": "<p>Dicci cosa ne pensi.</p>",
+      "#Walking helps me stay physically fit.": "Camminare mi aiuta a restare in forma.",
+      "#Strongly disagree": "Per niente d'accordo",
+      "#Disagree": "Poco d'accordo",
+      "#Neither agree nor disagree": "Né d'accordo né in disaccordo",
+      "#Agree": "Abbastanza d'accordo",
+      "#Strongly agree": "Del tutto d'accordo",
+      "#Walking helps me feel better mentally.": "Camminare mi aiuta a stare meglio con la testa.",
+      "#What would most encourage you to walk more? (Up to 3)": "Cosa ti incoraggerebbe di più a camminare di più? (Al massimo 3)",
+      "#Nothing, things are fine as they are": "Niente, va bene così",
+      "#Better and continuous pavements": "Marciapiedi migliori e continui",
+      "#Pavements free of cars, bins and scooters": "Marciapiedi liberi da auto, cassonetti e monopattini",
+      "#Safer crossings": "Attraversamenti più sicuri",
+      "#Slower traffic (e.g. 30 km/h streets)": "Traffico più lento (ad es. strade a 30 km/h)",
+      "#Better street lighting": "Illuminazione migliore",
+      "#More trees, shade and green spaces": "Più alberi, ombra e verde",
+      "#More benches and places to rest": "Più panchine e punti di sosta",
+      "#Cleaner streets": "Strade più pulite",
+      "#Fewer bikes and e-scooters on pavements": "Meno bici e monopattini sui marciapiedi",
+      "#Clearer signs and maps": "Indicazioni e mappe più chiare",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Cosa ti rallenta a piedi, cosa ti fa rinunciare e cosa ti aiuterebbe a camminare di più. Richiede circa 3 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Marche : effort et améliorations",
+      "#Walking: effort and improvements": "Marche : effort et améliorations",
+      "#Thank you!": "Merci !",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
+      "#Before we start": "Avant de commencer",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Quelques questions rapides pour mettre vos réponses en contexte.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "Au cours d’une semaine type, combien de jours marchez-vous au moins 10 minutes pour vous rendre quelque part ? Comptez aussi la marche jusqu’à un arrêt de bus ou une gare.",
+      "#Never or almost never": "Jamais ou presque jamais",
+      "#1–2 days": "1 à 2 jours",
+      "#3–4 days": "3 à 4 jours",
+      "#5–6 days": "5 à 6 jours",
+      "#Every day": "Tous les jours",
+      "#What slows you down or stops you": "Ce qui vous ralentit ou vous arrête",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Dites-nous comment ces éléments influencent vos déplacements à pied.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Pourquoi marchez-vous habituellement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#To go to shops or services": "Pour aller dans des commerces ou des services",
+      "#To go to work or study": "Pour aller au travail ou au lieu d’études",
+      "#To reach a stop or station": "Pour rejoindre un arrêt ou une gare",
+      "#To take or pick someone up": "Pour accompagner ou aller chercher quelqu’un",
+      "#To visit people": "Pour rendre visite à des personnes",
+      "#For a walk or exercise": "Pour une promenade ou de l’exercice",
+      "#To walk the dog": "Pour promener le chien",
+      "#How often do bad pavements or obstacles slow you down?": "À quelle fréquence des trottoirs en mauvais état ou des obstacles vous ralentissent-ils ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#Always": "Toujours",
+      "#How much do slopes slow you down when you walk?": "Dans quelle mesure les pentes vous ralentissent-elles lorsque vous marchez ?",
+      "#Not at all": "Pas du tout",
+      "#Slightly": "Légèrement",
+      "#Moderately": "Modérément",
+      "#A lot": "Beaucoup",
+      "#Extremely": "Énormément",
+      "#How important are benches or places to rest for you to complete your walk?": "Quelle importance ont pour vous les bancs ou les endroits où se reposer pour terminer votre trajet à pied ?",
+      "#Not important": "Pas importants",
+      "#Slightly important": "Peu importants",
+      "#Moderately important": "Modérément importants",
+      "#Very important": "Très importants",
+      "#Essential: without them I can't walk that far": "Essentiels : sans eux, je ne peux pas marcher aussi loin",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "À quelle fréquence décidez-vous de ne pas marcher après la tombée de la nuit parce que vous ne vous sentez pas en sécurité ?",
+      "#How often do you decide not to walk because it is too hot?": "À quelle fréquence décidez-vous de ne pas marcher parce qu’il fait trop chaud ?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "À quelle fréquence avez-vous du mal à vous orienter à pied parce que la signalisation est absente ou peu claire ?",
+      "#Walking and you": "La marche et vous",
+      "#<p>Tell us what you think.</p>": "<p>Dites-nous ce que vous en pensez.</p>",
+      "#Walking helps me stay physically fit.": "Marcher m’aide à rester en forme physiquement.",
+      "#Strongly disagree": "Pas du tout d'accord",
+      "#Disagree": "Plutôt pas d'accord",
+      "#Neither agree nor disagree": "Ni d'accord ni pas d'accord",
+      "#Agree": "Plutôt d'accord",
+      "#Strongly agree": "Tout à fait d'accord",
+      "#Walking helps me feel better mentally.": "Marcher m’aide à me sentir mieux mentalement.",
+      "#What would most encourage you to walk more? (Up to 3)": "Qu’est-ce qui vous encouragerait le plus à marcher davantage ? (Jusqu’à 3)",
+      "#Nothing, things are fine as they are": "Rien, tout va bien ainsi",
+      "#Better and continuous pavements": "Des trottoirs meilleurs et continus",
+      "#Pavements free of cars, bins and scooters": "Des trottoirs sans voitures, poubelles ni trottinettes",
+      "#Safer crossings": "Des passages piétons plus sûrs",
+      "#Slower traffic (e.g. 30 km/h streets)": "Une circulation plus lente (p. ex. rues à 30 km/h)",
+      "#Better street lighting": "Un meilleur éclairage public",
+      "#More trees, shade and green spaces": "Plus d’arbres, d’ombre et d’espaces verts",
+      "#More benches and places to rest": "Plus de bancs et d’endroits pour se reposer",
+      "#Cleaner streets": "Des rues plus propres",
+      "#Fewer bikes and e-scooters on pavements": "Moins de vélos et de trottinettes électriques sur les trottoirs",
+      "#Clearer signs and maps": "Une signalisation et des plans plus clairs",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce qui vous ralentit à pied, ce qui vous fait renoncer et ce qui vous aiderait à marcher davantage. Cela prend environ 3 minutes.</p><p>La participation est volontaire. Vos réponses ne sont pas liées à votre nom. Elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Zu Fuß gehen: Aufwand und Verbesserungen",
+      "#Walking: effort and improvements": "Zu Fuß gehen: Aufwand und Verbesserungen",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
+      "#Before we start": "Bevor wir beginnen",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Ein paar kurze Fragen, um Ihre Antworten einzuordnen.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "An wie vielen Tagen einer typischen Woche gehen Sie mindestens 10 Minuten zu Fuß, um irgendwohin zu gelangen? Zählen Sie auch den Weg zu einer Haltestelle oder einem Bahnhof mit.",
+      "#Never or almost never": "Nie oder fast nie",
+      "#1–2 days": "1–2 Tage",
+      "#3–4 days": "3–4 Tage",
+      "#5–6 days": "5–6 Tage",
+      "#Every day": "Jeden Tag",
+      "#What slows you down or stops you": "Was Sie bremst oder aufhält",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Sagen Sie uns, wie sich diese Dinge auf Ihr Zufußgehen auswirken.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Warum gehen Sie normalerweise zu Fuß? (Mehrfachauswahl möglich)",
+      "#To go to shops or services": "Um zu Geschäften oder Dienstleistungen zu gelangen",
+      "#To go to work or study": "Um zur Arbeit oder zum Studien-/Schulort zu gelangen",
+      "#To reach a stop or station": "Um eine Haltestelle oder einen Bahnhof zu erreichen",
+      "#To take or pick someone up": "Um jemanden zu bringen oder abzuholen",
+      "#To visit people": "Um Leute zu besuchen",
+      "#For a walk or exercise": "Zum Spazierengehen oder zur Bewegung",
+      "#To walk the dog": "Um mit dem Hund Gassi zu gehen",
+      "#How often do bad pavements or obstacles slow you down?": "Wie oft bremsen Sie schlechte Gehwege oder Hindernisse aus?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#Always": "Immer",
+      "#How much do slopes slow you down when you walk?": "Wie stark bremsen Sie Steigungen beim Zufußgehen aus?",
+      "#Not at all": "Überhaupt nicht",
+      "#Slightly": "Etwas",
+      "#Moderately": "Mäßig",
+      "#A lot": "Stark",
+      "#Extremely": "Extrem",
+      "#How important are benches or places to rest for you to complete your walk?": "Wie wichtig sind für Sie Bänke oder Rastmöglichkeiten, um Ihren Weg zu Fuß zu schaffen?",
+      "#Not important": "Nicht wichtig",
+      "#Slightly important": "Wenig wichtig",
+      "#Moderately important": "Mäßig wichtig",
+      "#Very important": "Sehr wichtig",
+      "#Essential: without them I can't walk that far": "Unverzichtbar: ohne sie kann ich nicht so weit gehen",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "Wie oft entscheiden Sie sich, nach Einbruch der Dunkelheit nicht zu Fuß zu gehen, weil Sie sich nicht sicher fühlen?",
+      "#How often do you decide not to walk because it is too hot?": "Wie oft entscheiden Sie sich, nicht zu Fuß zu gehen, weil es zu heiß ist?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "Wie oft fällt es Ihnen schwer, sich zu Fuß zurechtzufinden, weil Wegweiser fehlen oder unklar sind?",
+      "#Walking and you": "Zufußgehen und Sie",
+      "#<p>Tell us what you think.</p>": "<p>Sagen Sie uns, was Sie denken.</p>",
+      "#Walking helps me stay physically fit.": "Zufußgehen hilft mir, körperlich fit zu bleiben.",
+      "#Strongly disagree": "Stimme überhaupt nicht zu",
+      "#Disagree": "Stimme nicht zu",
+      "#Neither agree nor disagree": "Weder noch",
+      "#Agree": "Stimme zu",
+      "#Strongly agree": "Stimme voll und ganz zu",
+      "#Walking helps me feel better mentally.": "Zufußgehen hilft mir, mich seelisch besser zu fühlen.",
+      "#What would most encourage you to walk more? (Up to 3)": "Was würde Sie am meisten dazu ermutigen, mehr zu Fuß zu gehen? (Bis zu 3)",
+      "#Nothing, things are fine as they are": "Nichts, es ist gut so, wie es ist",
+      "#Better and continuous pavements": "Bessere und durchgehende Gehwege",
+      "#Pavements free of cars, bins and scooters": "Gehwege frei von Autos, Abfallbehältern und E-Scootern",
+      "#Safer crossings": "Sicherere Querungen",
+      "#Slower traffic (e.g. 30 km/h streets)": "Langsamerer Verkehr (z. B. 30-km/h-Straßen)",
+      "#Better street lighting": "Bessere Straßenbeleuchtung",
+      "#More trees, shade and green spaces": "Mehr Bäume, Schatten und Grünflächen",
+      "#More benches and places to rest": "Mehr Bänke und Rastmöglichkeiten",
+      "#Cleaner streets": "Sauberere Straßen",
+      "#Fewer bikes and e-scooters on pavements": "Weniger Fahrräder und E-Scooter auf den Gehwegen",
+      "#Clearer signs and maps": "Klarere Wegweiser und Karten",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Was Sie zu Fuß bremst, was Sie aufgeben lässt und was Ihnen helfen würde, mehr zu Fuß zu gehen. Es dauert etwa 3 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Yürüme: çaba ve iyileştirmeler",
+      "#Walking: effort and improvements": "Yürüme: çaba ve iyileştirmeler",
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
+      "#Before we start": "Başlamadan önce",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Yanıtlarınızı bağlamına oturtmak için birkaç kısa soru.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "Tipik bir haftada kaç gün bir yere gitmek için en az 10 dakika yürüyorsunuz? Otobüs durağına veya istasyona yürümeyi de dahil edin.",
+      "#Never or almost never": "Hiçbir zaman veya neredeyse hiçbir zaman",
+      "#1–2 days": "1–2 gün",
+      "#3–4 days": "3–4 gün",
+      "#5–6 days": "5–6 gün",
+      "#Every day": "Her gün",
+      "#What slows you down or stops you": "Sizi yavaşlatan veya durduran şeyler",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Bu şeylerin yürümenizi nasıl etkilediğini bize anlatın.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Genellikle neden yürüyorsunuz? (Uygun olanların tümünü seçin)",
+      "#To go to shops or services": "Mağazalara veya hizmetlere gitmek için",
+      "#To go to work or study": "İşe veya okula gitmek için",
+      "#To reach a stop or station": "Bir durağa veya istasyona ulaşmak için",
+      "#To take or pick someone up": "Birini götürmek veya almak için",
+      "#To visit people": "Birilerini ziyaret etmek için",
+      "#For a walk or exercise": "Yürüyüş yapmak veya egzersiz için",
+      "#To walk the dog": "Köpeği gezdirmek için",
+      "#How often do bad pavements or obstacles slow you down?": "Bozuk kaldırımlar veya engeller sizi ne sıklıkla yavaşlatıyor?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#Always": "Her zaman",
+      "#How much do slopes slow you down when you walk?": "Yürürken yokuşlar sizi ne kadar yavaşlatıyor?",
+      "#Not at all": "Hiç",
+      "#Slightly": "Biraz",
+      "#Moderately": "Orta derecede",
+      "#A lot": "Çok",
+      "#Extremely": "Son derece",
+      "#How important are benches or places to rest for you to complete your walk?": "Yürüyüşünüzü tamamlayabilmeniz için banklar veya dinlenme yerleri sizin için ne kadar önemli?",
+      "#Not important": "Önemli değil",
+      "#Slightly important": "Biraz önemli",
+      "#Moderately important": "Orta derecede önemli",
+      "#Very important": "Çok önemli",
+      "#Essential: without them I can't walk that far": "Vazgeçilmez: onlar olmadan o kadar uzun yürüyemem",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "Kendinizi güvende hissetmediğiniz için hava karardıktan sonra ne sıklıkla yürümemeye karar veriyorsunuz?",
+      "#How often do you decide not to walk because it is too hot?": "Hava çok sıcak olduğu için ne sıklıkla yürümemeye karar veriyorsunuz?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "İşaretler eksik veya belirsiz olduğu için yürürken yolunuzu bulmakta ne sıklıkla zorlanıyorsunuz?",
+      "#Walking and you": "Yürümek ve siz",
+      "#<p>Tell us what you think.</p>": "<p>Ne düşündüğünüzü bize söyleyin.</p>",
+      "#Walking helps me stay physically fit.": "Yürümek fiziksel olarak formda kalmama yardımcı oluyor.",
+      "#Strongly disagree": "Kesinlikle katılmıyorum",
+      "#Disagree": "Katılmıyorum",
+      "#Neither agree nor disagree": "Ne katılıyorum ne katılmıyorum",
+      "#Agree": "Katılıyorum",
+      "#Strongly agree": "Kesinlikle katılıyorum",
+      "#Walking helps me feel better mentally.": "Yürümek zihinsel olarak kendimi daha iyi hissetmeme yardımcı oluyor.",
+      "#What would most encourage you to walk more? (Up to 3)": "Daha fazla yürümeniz için sizi en çok ne teşvik ederdi? (En fazla 3)",
+      "#Nothing, things are fine as they are": "Hiçbir şey, böyle iyi",
+      "#Better and continuous pavements": "Daha iyi ve kesintisiz kaldırımlar",
+      "#Pavements free of cars, bins and scooters": "Arabalardan, çöp kutularından ve scooterlardan arınmış kaldırımlar",
+      "#Safer crossings": "Daha güvenli geçitler",
+      "#Slower traffic (e.g. 30 km/h streets)": "Daha yavaş trafik (ör. 30 km/sa sokaklar)",
+      "#Better street lighting": "Daha iyi sokak aydınlatması",
+      "#More trees, shade and green spaces": "Daha fazla ağaç, gölge ve yeşil alan",
+      "#More benches and places to rest": "Daha fazla bank ve dinlenme yeri",
+      "#Cleaner streets": "Daha temiz sokaklar",
+      "#Fewer bikes and e-scooters on pavements": "Kaldırımlarda daha az bisiklet ve elektrikli scooter",
+      "#Clearer signs and maps": "Daha açık işaretler ve haritalar",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Yürürken sizi ne yavaşlatıyor, ne vazgeçiriyor ve daha fazla yürümenize ne yardımcı olurdu. Yaklaşık 3 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresinizden türetilen takma bir kod altında saklanır; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - پیاده‌روی: تلاش و بهبودها",
+      "#Walking: effort and improvements": "پیاده‌روی: تلاش و بهبودها",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
+      "#Before we start": "پیش از شروع",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>چند پرسش کوتاه برای قراردادن پاسخ‌های شما در بستر مناسب.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "در یک هفته معمولی، چند روز برای رسیدن به جایی دست‌کم ۱۰ دقیقه پیاده‌روی می‌کنید؟ پیاده‌روی تا ایستگاه اتوبوس یا قطار را هم حساب کنید.",
+      "#Never or almost never": "هرگز یا تقریباً هرگز",
+      "#1–2 days": "۱ تا ۲ روز",
+      "#3–4 days": "۳ تا ۴ روز",
+      "#5–6 days": "۵ تا ۶ روز",
+      "#Every day": "هر روز",
+      "#What slows you down or stops you": "چه چیزی شما را کند یا متوقف می‌کند",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>به ما بگویید این موارد چگونه بر پیاده‌روی شما اثر می‌گذارند.</p>",
+      "#Why do you usually walk? (Select all that apply)": "معمولاً به چه دلیل پیاده می‌روید؟ (همه موارد مربوط را انتخاب کنید)",
+      "#To go to shops or services": "برای رفتن به مغازه‌ها یا خدمات",
+      "#To go to work or study": "برای رفتن به محل کار یا تحصیل",
+      "#To reach a stop or station": "برای رسیدن به ایستگاه",
+      "#To take or pick someone up": "برای بردن یا آوردن کسی",
+      "#To visit people": "برای دیدار با دیگران",
+      "#For a walk or exercise": "برای قدم‌زدن یا ورزش",
+      "#To walk the dog": "برای گرداندن سگ",
+      "#How often do bad pavements or obstacles slow you down?": "پیاده‌روهای خراب یا موانع چند وقت یک‌بار شما را کند می‌کنند؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#Always": "همیشه",
+      "#How much do slopes slow you down when you walk?": "هنگام پیاده‌روی، سربالایی‌ها چقدر شما را کند می‌کنند؟",
+      "#Not at all": "اصلاً",
+      "#Slightly": "کمی",
+      "#Moderately": "تا حدی",
+      "#A lot": "زیاد",
+      "#Extremely": "به‌شدت",
+      "#How important are benches or places to rest for you to complete your walk?": "نیمکت‌ها یا محل‌های استراحت برای اینکه بتوانید مسیر پیاده‌روی خود را کامل کنید چقدر برای شما مهم‌اند؟",
+      "#Not important": "مهم نیستند",
+      "#Slightly important": "کمی مهم‌اند",
+      "#Moderately important": "تا حدی مهم‌اند",
+      "#Very important": "بسیار مهم‌اند",
+      "#Essential: without them I can't walk that far": "ضروری‌اند: بدون آن‌ها نمی‌توانم آن‌قدر پیاده بروم",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "چند وقت یک‌بار به این دلیل که احساس امنیت نمی‌کنید، تصمیم می‌گیرید پس از تاریکی هوا پیاده نروید؟",
+      "#How often do you decide not to walk because it is too hot?": "چند وقت یک‌بار به این دلیل که هوا خیلی گرم است، تصمیم می‌گیرید پیاده نروید؟",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "چند وقت یک‌بار به دلیل نبود یا نامشخص‌بودن تابلوها، پیدا کردن مسیر پیاده برایتان دشوار می‌شود؟",
+      "#Walking and you": "پیاده‌روی و شما",
+      "#<p>Tell us what you think.</p>": "<p>نظر خود را به ما بگویید.</p>",
+      "#Walking helps me stay physically fit.": "پیاده‌روی به من کمک می‌کند از نظر جسمی سرحال بمانم.",
+      "#Strongly disagree": "کاملاً مخالفم",
+      "#Disagree": "مخالفم",
+      "#Neither agree nor disagree": "نه موافقم و نه مخالفم",
+      "#Agree": "موافقم",
+      "#Strongly agree": "کاملاً موافقم",
+      "#Walking helps me feel better mentally.": "پیاده‌روی به من کمک می‌کند از نظر روحی حال بهتری داشته باشم.",
+      "#What would most encourage you to walk more? (Up to 3)": "چه چیزی بیش از همه شما را به پیاده‌روی بیشتر تشویق می‌کند؟ (حداکثر ۳ مورد)",
+      "#Nothing, things are fine as they are": "هیچ‌چیز، وضعیت همین‌طور خوب است",
+      "#Better and continuous pavements": "پیاده‌روهای بهتر و پیوسته",
+      "#Pavements free of cars, bins and scooters": "پیاده‌روهای خالی از خودرو، سطل زباله و اسکوتر",
+      "#Safer crossings": "گذرگاه‌های امن‌تر",
+      "#Slower traffic (e.g. 30 km/h streets)": "ترافیک کندتر (مثلاً خیابان‌های ۳۰ کیلومتر بر ساعت)",
+      "#Better street lighting": "روشنایی بهتر خیابان",
+      "#More trees, shade and green spaces": "درخت، سایه و فضای سبز بیشتر",
+      "#More benches and places to rest": "نیمکت و محل استراحت بیشتر",
+      "#Cleaner streets": "خیابان‌های تمیزتر",
+      "#Fewer bikes and e-scooters on pavements": "دوچرخه و اسکوتر برقی کمتر روی پیاده‌روها",
+      "#Clearer signs and maps": "تابلوها و نقشه‌های روشن‌تر",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چه چیزی هنگام پیاده‌روی شما را کند می‌کند، چه چیزی باعث می‌شود منصرف شوید و چه چیزی به شما کمک می‌کند بیشتر پیاده بروید. حدود ۳ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. آن‌ها با یک کد مستعار که از نشانی ایمیل شما به دست می‌آید ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - Gyaloglás: erőfeszítés és fejlesztések",
+      "#Walking: effort and improvements": "Gyaloglás: erőfeszítés és fejlesztések",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
+      "#Before we start": "Mielőtt elkezdenénk",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>Néhány gyors kérdés, hogy válaszait összefüggéseiben lássuk.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "Egy átlagos héten hány napon gyalogol legalább 10 percet, hogy eljusson valahová? Számítsa bele a buszmegállóig vagy az állomásig tartó gyaloglást is.",
+      "#Never or almost never": "Soha vagy szinte soha",
+      "#1–2 days": "1–2 nap",
+      "#3–4 days": "3–4 nap",
+      "#5–6 days": "5–6 nap",
+      "#Every day": "Minden nap",
+      "#What slows you down or stops you": "Ami lelassítja vagy megállítja Önt",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>Mondja el, hogyan hatnak ezek a dolgok a gyaloglására.</p>",
+      "#Why do you usually walk? (Select all that apply)": "Általában miért gyalogol? (Több válasz is megjelölhető)",
+      "#To go to shops or services": "Üzletekbe vagy szolgáltatásokhoz",
+      "#To go to work or study": "Munkába vagy tanulni",
+      "#To reach a stop or station": "Megállóhoz vagy állomáshoz",
+      "#To take or pick someone up": "Valakit elkísérni vagy érte menni",
+      "#To visit people": "Látogatóba",
+      "#For a walk or exercise": "Sétálni vagy mozogni",
+      "#To walk the dog": "Kutyát sétáltatni",
+      "#How often do bad pavements or obstacles slow you down?": "Milyen gyakran lassítják le a rossz járdák vagy az akadályok?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#Always": "Mindig",
+      "#How much do slopes slow you down when you walk?": "Mennyire lassítják le az emelkedők gyaloglás közben?",
+      "#Not at all": "Egyáltalán nem",
+      "#Slightly": "Kissé",
+      "#Moderately": "Közepesen",
+      "#A lot": "Nagyon",
+      "#Extremely": "Rendkívül",
+      "#How important are benches or places to rest for you to complete your walk?": "Mennyire fontosak Önnek a padok vagy pihenőhelyek ahhoz, hogy végig tudja gyalogolni az útját?",
+      "#Not important": "Nem fontosak",
+      "#Slightly important": "Kissé fontosak",
+      "#Moderately important": "Közepesen fontosak",
+      "#Very important": "Nagyon fontosak",
+      "#Essential: without them I can't walk that far": "Nélkülözhetetlenek: nélkülük nem tudok olyan messzire gyalogolni",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "Milyen gyakran dönt úgy, hogy sötétedés után nem gyalogol, mert nem érzi magát biztonságban?",
+      "#How often do you decide not to walk because it is too hot?": "Milyen gyakran dönt úgy, hogy nem gyalogol, mert túl meleg van?",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "Milyen gyakran nehéz gyalog eligazodnia, mert hiányoznak vagy nem egyértelműek a táblák?",
+      "#Walking and you": "A gyaloglás és Ön",
+      "#<p>Tell us what you think.</p>": "<p>Mondja el, mit gondol.</p>",
+      "#Walking helps me stay physically fit.": "A gyaloglás segít fizikailag fitten maradni.",
+      "#Strongly disagree": "Egyáltalán nem értek egyet",
+      "#Disagree": "Nem értek egyet",
+      "#Neither agree nor disagree": "Egyet is értek, nem is",
+      "#Agree": "Egyetértek",
+      "#Strongly agree": "Teljesen egyetértek",
+      "#Walking helps me feel better mentally.": "A gyaloglás segít, hogy lelkileg jobban érezzem magam.",
+      "#What would most encourage you to walk more? (Up to 3)": "Mi ösztönözné leginkább arra, hogy többet gyalogoljon? (Legfeljebb 3)",
+      "#Nothing, things are fine as they are": "Semmi, így jó, ahogy van",
+      "#Better and continuous pavements": "Jobb és folyamatos járdák",
+      "#Pavements free of cars, bins and scooters": "Autóktól, kukáktól és rollerektől mentes járdák",
+      "#Safer crossings": "Biztonságosabb átkelők",
+      "#Slower traffic (e.g. 30 km/h streets)": "Lassabb forgalom (pl. 30 km/h-s utcák)",
+      "#Better street lighting": "Jobb közvilágítás",
+      "#More trees, shade and green spaces": "Több fa, árnyék és zöldterület",
+      "#More benches and places to rest": "Több pad és pihenőhely",
+      "#Cleaner streets": "Tisztább utcák",
+      "#Fewer bikes and e-scooters on pavements": "Kevesebb kerékpár és elektromos roller a járdákon",
+      "#Clearer signs and maps": "Egyértelműbb táblák és térképek",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mi lassítja le gyalog, mi miatt adja fel, és mi segítené abban, hogy többet gyalogoljon. Körülbelül 3 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszait nem kapcsoljuk össze a nevével. Az e-mail-címéből képzett álnevesített kód alatt tároljuk őket, hogy a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - Walking: effort and improvements": "SmartUrbanity - المشي: الجهد والتحسينات",
+      "#Walking: effort and improvements": "المشي: الجهد والتحسينات",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
+      "#Before we start": "قبل أن نبدأ",
+      "#<p>A few quick questions to put your answers in context.</p>": "<p>بضعة أسئلة سريعة لوضع إجاباتك في سياقها.</p>",
+      "#In a typical week, on how many days do you walk for at least 10 minutes to get somewhere? Include walking to a bus stop or station.": "في أسبوع عادي، كم يومًا تمشي فيه 10 دقائق على الأقل للوصول إلى مكان ما؟ احسب أيضًا المشي إلى موقف الحافلة أو المحطة.",
+      "#Never or almost never": "أبدًا أو نادرًا جدًا",
+      "#1–2 days": "1–2 يوم",
+      "#3–4 days": "3–4 أيام",
+      "#5–6 days": "5–6 أيام",
+      "#Every day": "كل يوم",
+      "#What slows you down or stops you": "ما الذي يبطئك أو يوقفك",
+      "#<p>Tell us how these things affect your walking.</p>": "<p>أخبرنا كيف تؤثر هذه الأمور في مشيك.</p>",
+      "#Why do you usually walk? (Select all that apply)": "لماذا تمشي عادةً؟ (اختر كل ما ينطبق)",
+      "#To go to shops or services": "للذهاب إلى المتاجر أو الخدمات",
+      "#To go to work or study": "للذهاب إلى العمل أو الدراسة",
+      "#To reach a stop or station": "للوصول إلى موقف أو محطة",
+      "#To take or pick someone up": "لتوصيل شخص أو اصطحابه",
+      "#To visit people": "لزيارة أشخاص",
+      "#For a walk or exercise": "للتنزه أو التمرين",
+      "#To walk the dog": "لتمشية الكلب",
+      "#How often do bad pavements or obstacles slow you down?": "كم مرة تبطئك الأرصفة السيئة أو العوائق؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#Always": "دائمًا",
+      "#How much do slopes slow you down when you walk?": "إلى أي مدى تبطئك المنحدرات عندما تمشي؟",
+      "#Not at all": "على الإطلاق",
+      "#Slightly": "قليلًا",
+      "#Moderately": "بدرجة متوسطة",
+      "#A lot": "كثيرًا",
+      "#Extremely": "للغاية",
+      "#How important are benches or places to rest for you to complete your walk?": "ما مدى أهمية المقاعد أو أماكن الراحة بالنسبة لك لإكمال مشيك؟",
+      "#Not important": "غير مهمة",
+      "#Slightly important": "مهمة قليلًا",
+      "#Moderately important": "مهمة بدرجة متوسطة",
+      "#Very important": "مهمة جدًا",
+      "#Essential: without them I can't walk that far": "ضرورية: من دونها لا أستطيع المشي كل تلك المسافة",
+      "#How often do you decide not to walk after dark because you don't feel safe?": "كم مرة تقرر عدم المشي بعد حلول الظلام لأنك لا تشعر بالأمان؟",
+      "#How often do you decide not to walk because it is too hot?": "كم مرة تقرر عدم المشي لأن الجو حار جدًا؟",
+      "#How often do you find it hard to find your way on foot because signs are missing or unclear?": "كم مرة تجد صعوبة في الاهتداء إلى طريقك سيرًا لأن اللافتات مفقودة أو غير واضحة؟",
+      "#Walking and you": "المشي وأنت",
+      "#<p>Tell us what you think.</p>": "<p>أخبرنا برأيك.</p>",
+      "#Walking helps me stay physically fit.": "يساعدني المشي على الحفاظ على لياقتي البدنية.",
+      "#Strongly disagree": "لا أوافق بشدة",
+      "#Disagree": "لا أوافق",
+      "#Neither agree nor disagree": "لا أوافق ولا أعارض",
+      "#Agree": "أوافق",
+      "#Strongly agree": "أوافق بشدة",
+      "#Walking helps me feel better mentally.": "يساعدني المشي على الشعور بتحسن نفسي.",
+      "#What would most encourage you to walk more? (Up to 3)": "ما الذي يشجعك أكثر على المشي أكثر؟ (حتى 3)",
+      "#Nothing, things are fine as they are": "لا شيء، الأمور جيدة كما هي",
+      "#Better and continuous pavements": "أرصفة أفضل ومتصلة",
+      "#Pavements free of cars, bins and scooters": "أرصفة خالية من السيارات وصناديق القمامة والسكوترات",
+      "#Safer crossings": "معابر أكثر أمانًا",
+      "#Slower traffic (e.g. 30 km/h streets)": "حركة مرور أبطأ (مثلًا شوارع بسرعة 30 كم/س)",
+      "#Better street lighting": "إنارة أفضل للشوارع",
+      "#More trees, shade and green spaces": "مزيد من الأشجار والظل والمساحات الخضراء",
+      "#More benches and places to rest": "مزيد من المقاعد وأماكن الراحة",
+      "#Cleaner streets": "شوارع أنظف",
+      "#Fewer bikes and e-scooters on pavements": "عدد أقل من الدراجات والسكوترات الكهربائية على الأرصفة",
+      "#Clearer signs and maps": "لافتات وخرائط أوضح",
+      "#<p>What slows you down on foot, what makes you give up and what would help you walk more. It takes about 3 minutes.</p><p>Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ما الذي يبطئك سيرًا، وما الذي يجعلك تتخلى عن المشي، وما الذي يساعدك على المشي أكثر. يستغرق نحو 3 دقائق.</p><p>المشاركة طوعية. إجاباتك غير مرتبطة باسمك. تُخزَّن تحت رمز مستعار مشتق من عنوان بريدك الإلكتروني، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_walking_effort",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "response_contract": {
+    "entity": {},
+    "related_entities": [],
+    "geometry": null,
+    "privacy": {
+      "email": "sha256_only",
+      "remove_user_id_supported": true
+    },
+    "id_strategy": "generated_response_id",
+    "subcollection": "surveyResponses/{questionnaireId}/responses/{responseId}"
+  },
+  "default_language": "en"
+}
