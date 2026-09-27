@@ -40,7 +40,7 @@
     const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
     const supported = Array.from(new Set([
       ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat(),
-      "en", "it", "fr", "de", "tr", "fa", "hu", "ar"
+      "en", "it", "fr", "de", "tr", "fa", "hu", "ar", "pl", "da", "lb", "nl"
     ].filter(Boolean)));
     const initial = supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
     window.supportedLanguages = supported;
