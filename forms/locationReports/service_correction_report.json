@@ -1,0 +1,89 @@
+{
+  "questionnaire": {
+    "name": "Service Correction Report",
+    "questionnaire_id": "smarturbanity_service_correction_report",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
+    "image_alt": "#Street with a missing section and a plus sign",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": true
+    },
+    "sections": [
+      {
+        "title": "Why doesn't this service exist?",
+        "description": "Describe what is missing, incorrect, or no longer available.",
+        "questions": [
+          {
+            "text": "Why doesn't this service exist?",
+            "answer_key": "correction_reason",
+            "question_type": "single_option",
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false,
+            "add_other": false,
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "This service no longer exists",
+                "value": "no_longer_exists"
+              },
+              {
+                "text": "This is the wrong location",
+                "value": "wrong_location"
+              },
+              {
+                "text": "This is a duplicate entry",
+                "value": "duplicate_entry"
+              },
+              {
+                "text": "Other",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "text": "Enter the reason this service does not exist",
+            "answer_key": "correction_details",
+            "question_type": "text",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html"
+  },
+  "languages": {
+    "en": {
+      "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
+      "code": "en",
+      "#Why doesn't this service exist?": "Why doesn't this service exist?",
+      "#Describe what is missing, incorrect, or no longer available.": "Describe what is missing, incorrect, or no longer available.",
+      "#This service no longer exists": "This service no longer exists",
+      "#This is the wrong location": "This is the wrong location",
+      "#This is a duplicate entry": "This is a duplicate entry",
+      "#Other": "Other",
+      "#Enter the reason this service does not exist": "Enter the reason this service does not exist"
+    },
+    "it": {
+      "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
+      "code": "it",
+      "#Why doesn't this service exist?": "Perché questo servizio non esiste?",
+      "#Describe what is missing, incorrect, or no longer available.": "Descrivi cosa manca, è errato o non è più disponibile.",
+      "#This service no longer exists": "Questo servizio non esiste più",
+      "#This is the wrong location": "Questa è la posizione sbagliata",
+      "#This is a duplicate entry": "Questa è una voce duplicata",
+      "#Other": "Altro",
+      "#Enter the reason this service does not exist": "Indica il motivo per cui questo servizio non esiste"
+    }
+  },
+  "id": "smarturbanity_service_correction_report",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "spatial_contribution",
+  "default_language": "en"
+}
