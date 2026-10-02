@@ -496,6 +496,7 @@
         "showDetailsPromptAfterSubmit": true,
         "steps": [
           "location_feature",
+          "secondary_location_feature",
           "service_feature",
           "details_feature",
           "summary_feature"
@@ -510,7 +511,7 @@
             "required": true,
             "step": "location",
             "label": "Location",
-            "title": "Service location"
+            "title": "Select the access point for the service"
           },
           "service_feature": {
             "enabled": true,
@@ -548,9 +549,9 @@
           "secondary_location_feature": {
             "enabled": true,
             "required": false,
-            "step": "service",
+            "step": "location",
             "label": "Secondary access points",
-            "title": "Secondary access points",
+            "title": "Secondary entrances",
             "buttonText": "Add point",
             "openText": "Close",
             "collapsible": true,

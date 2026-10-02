@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience on the Move",
     "questionnaire_id": "smarturbanity_experience_on_the_move",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -203,13 +204,10 @@
               {
                 "text": "I don't usually feel anxious or overwhelmed",
                 "value": "i_don_t_usually_feel_anxious_or_overwhel"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           },
           {
             "text": "Compared to other travel options available to you (e.g., walking, driving, public transport), how would you rate the overall effort required by your usual mode of travel?",
@@ -235,12 +233,9 @@
               {
                 "text": "Far more demanding than alternatives (physically or mentally)",
                 "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I don't know",
-                "value": "i_don_t_know"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "How does the level of 'liveliness' (the presence of other people, shops, and activity) on your route affect your journey?",

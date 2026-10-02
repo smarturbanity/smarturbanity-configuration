@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - About You",
     "questionnaire_id": "smarturbanity_about_you",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -64,12 +65,9 @@
               {
                 "text": "85 or older",
                 "value": "85_or_older"
-              },
-              {
-                "text": "Prefer not to say",
-                "value": "prefer_not_to_say"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What is your gender?",
@@ -83,16 +81,10 @@
               {
                 "text": "Female",
                 "value": "female"
-              },
-              {
-                "text": "Other",
-                "value": "other"
-              },
-              {
-                "text": "Prefer not to say",
-                "value": "prefer_not_to_say"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Do you currently live with any dependents (such as children, elderly individuals, or others who rely on you for care)?",
@@ -238,12 +230,9 @@
               {
                 "text": "Adult learner (student)",
                 "value": "adult_learner_student"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "Do you currently work remotely (partly or fully)?",
@@ -583,12 +572,9 @@
               {
                 "text": "I live outside Rome",
                 "value": "i_live_outside_rome"
-              },
-              {
-                "text": "I don't know",
-                "value": "i_don_t_know"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "In which neighbourhood of Municipio XII do you currently live?",
@@ -662,10 +648,6 @@
                 "value": "stay"
               },
               {
-                "text": "I don't know",
-                "value": "idk"
-              },
-              {
                 "text": "1",
                 "value": "1"
               },
@@ -725,7 +707,8 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "Which is the second Municipio you travel to most frequently?",
@@ -752,10 +735,6 @@
             },
             "options": [
               {
-                "text": "I don't know",
-                "value": "idk"
-              },
-              {
                 "text": "1",
                 "value": "1"
               },
@@ -815,7 +794,8 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "Which is the third Municipio you travel to most frequently?",
@@ -842,10 +822,6 @@
             },
             "options": [
               {
-                "text": "I don't know",
-                "value": "idk"
-              },
-              {
                 "text": "1",
                 "value": "1"
               },
@@ -905,7 +881,8 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
@@ -960,12 +937,9 @@
               {
                 "text": "I rarely or never travel outside my neighborhood",
                 "value": "i_rarely_or_never_travel_outside_my_neig"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "How strongly do you feel connected to the place where you live and the people in your community?",

@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -179,12 +180,9 @@
               {
                 "text": "I do not experience significant difficulties",
                 "value": "i_do_not_experience_significant_difficul"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
@@ -230,12 +228,9 @@
               {
                 "text": "I do not experience significant difficulties",
                 "value": "i_do_not_experience_significant_difficul"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "How often do you use shared mobility services (bike-share, e-scooter, car-share)?",
@@ -458,13 +453,10 @@
               {
                 "text": "Lack of flexibility",
                 "value": "lack_of_flexibility"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           },
           {
             "text": "When choosing how to travel, which factors matter most to you?",
@@ -507,12 +499,9 @@
               {
                 "text": "Flexibility and independence",
                 "value": "flexibility_and_independence"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           }
         ]
       },
@@ -543,14 +532,11 @@
                 "value": "e_scooter"
               },
               {
-                "text": "Other",
-                "value": "other"
-              },
-              {
                 "text": "No vehicle available",
                 "value": "no_vehicle_available"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "Which of the following do you personally use regularly? (Select all that apply)",
@@ -574,14 +560,11 @@
                 "value": "e_scooter"
               },
               {
-                "text": "Other",
-                "value": "other"
-              },
-              {
                 "text": "None",
                 "value": "none"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "If any vehicle is available in your household, how easy is it for you to use it when needed?",
@@ -589,7 +572,7 @@
             "question_type": "single_option",
             "show_if": {
               "hh_vehicles_v1": [
-                "other",
+                "Other",
                 "e_scooter",
                 "bicycle_e_bike",
                 "motorcycle",

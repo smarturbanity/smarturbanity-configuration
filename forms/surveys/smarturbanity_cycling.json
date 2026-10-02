@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Cycling",
     "questionnaire_id": "smarturbanity_cycling",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -177,12 +178,9 @@
               {
                 "text": "I don't face any physical barrier",
                 "value": "i_don_t_face_any_physical_barrier"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "If you encounter poor road or path surfaces (potholes, cobblestones, or uneven ground), how does it affect your cycling?",
@@ -347,13 +345,10 @@
               {
                 "text": "None — no category negatively affects my feeling of safety",
                 "value": "none_no_category_negatively_affects_my_f"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           },
           {
             "text": "How confident are you in your ability to anticipate and react to dangerous situations while cycling (e.g., car doors opening suddenly, vehicles cutting across, or blind junctions)?",
@@ -526,13 +521,10 @@
               {
                 "text": "Nothing — I am satisfied with current conditions",
                 "value": "nothing_i_am_satisfied_with_current_cond"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           }
         ]
       }

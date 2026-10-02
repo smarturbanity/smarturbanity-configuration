@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Safety and Environment",
     "questionnaire_id": "smarturbanity_safety_environment",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -95,13 +96,10 @@
               {
                 "text": "I don't feel insecure at all",
                 "value": "i_don_t_feel_insecure_at_all"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           },
           {
             "text": "How safe (e.g. accidents, road conditions) do you consider your typical travel environment to be?",
@@ -166,13 +164,10 @@
               {
                 "text": "I don't feel unsafe at all",
                 "value": "i_don_t_feel_unsafe_at_all"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true
           }
         ]
       },

@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Public Transport",
     "questionnaire_id": "smarturbanity_public_transport",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -71,12 +72,9 @@
               {
                 "text": "Completely accessible",
                 "value": "completely_accessible"
-              },
-              {
-                "text": "I don't know",
-                "value": "i_don_t_know"
               }
-            ]
+            ],
+            "add_i_dont_know": true
           },
           {
             "text": "Which specific barriers did you face while using public transport stops?",
@@ -118,12 +116,9 @@
               {
                 "text": "I don't face any specific barrier",
                 "value": "i_don_t_face_any_specific_barrier"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true
           },
           {
             "text": "How does the presence of other people make you feel during your trip?",
