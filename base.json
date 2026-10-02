@@ -492,18 +492,12 @@
       "serviceClaimMaxCandidates": 20,
       "accessPointSnapDistanceM": 5,
       "serviceForm": {
-        "enableSecondaryEntrances": true,
         "showDetailsPromptAfterSubmit": true,
         "steps": [
           "location_feature",
-          "secondary_location_feature",
           "service_feature",
           "details_feature",
           "summary_feature"
-        ],
-        "postSubmitDetailFeatures": [
-          "opportunity_feature",
-          "secondary_location_feature"
         ],
         "features": {
           "location_feature": {
@@ -544,17 +538,6 @@
             "buttonText": "Add opportunities",
             "openText": "Done",
             "collapsible": false,
-            "openByDefault": false
-          },
-          "secondary_location_feature": {
-            "enabled": true,
-            "required": false,
-            "step": "location",
-            "label": "Secondary access points",
-            "title": "Secondary entrances",
-            "buttonText": "Add point",
-            "openText": "Close",
-            "collapsible": true,
             "openByDefault": false
           }
         }
