@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "privacy": true,
+      "adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -73,7 +74,10 @@
                 "text": "Taxi or similar service (e.g. Uber, Bolt)",
                 "value": "taxi_or_similar_service_e_g_uber_bolt"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
@@ -124,7 +128,10 @@
                 "text": "I don't use any combination",
                 "value": "i_don_t_use_any_combination"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
@@ -179,12 +186,11 @@
               {
                 "text": "I do not experience significant difficulties",
                 "value": "i_do_not_experience_significant_difficul"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
@@ -230,12 +236,11 @@
               {
                 "text": "I do not experience significant difficulties",
                 "value": "i_do_not_experience_significant_difficul"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How often do you use shared mobility services (bike-share, e-scooter, car-share)?",
@@ -266,7 +271,10 @@
                 "text": "Daily",
                 "value": "daily"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "At what times of day do you most often travel? (Select all that apply)",
@@ -297,7 +305,10 @@
                 "text": "After 20:00 (evening/night)",
                 "value": "after_20"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
@@ -316,7 +327,10 @@
                 "text": "Often with colleagues or friends",
                 "value": "often_with_colleagues_or_friends"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
@@ -351,7 +365,10 @@
                 "text": "Caring/Escort",
                 "value": "caring_escort"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "On average, how often do you make your most frequent journey?",
@@ -378,7 +395,10 @@
                 "text": "Less than once a month (Rarely)",
                 "value": "lt_monthly"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       },
@@ -412,7 +432,10 @@
                 "text": "Very satisfied",
                 "value": "very_satisfied"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Which aspects of your current primary mode of transport are you most dissatisfied with?",
@@ -458,13 +481,12 @@
               {
                 "text": "Lack of flexibility",
                 "value": "lack_of_flexibility"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
-            "max_answers": 3
+            "max_answers": 3,
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "When choosing how to travel, which factors matter most to you?",
@@ -507,12 +529,11 @@
               {
                 "text": "Flexibility and independence",
                 "value": "flexibility_and_independence"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       },
@@ -543,14 +564,13 @@
                 "value": "e_scooter"
               },
               {
-                "text": "Other",
-                "value": "other"
-              },
-              {
                 "text": "No vehicle available",
                 "value": "no_vehicle_available"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Which of the following do you personally use regularly? (Select all that apply)",
@@ -574,14 +594,13 @@
                 "value": "e_scooter"
               },
               {
-                "text": "Other",
-                "value": "other"
-              },
-              {
                 "text": "None",
                 "value": "none"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "If any vehicle is available in your household, how easy is it for you to use it when needed?",
@@ -589,7 +608,7 @@
             "question_type": "single_option",
             "show_if": {
               "hh_vehicles_v1": [
-                "other",
+                "Other",
                 "e_scooter",
                 "bicycle_e_bike",
                 "motorcycle",
@@ -617,7 +636,10 @@
                 "text": "Very easy (almost always available)",
                 "value": "very_easy"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How comfortable are you using navigation or map apps for travel?",
@@ -648,7 +670,10 @@
                 "text": "I don't use it at all.",
                 "value": "not_used"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How comfortable are you using apps to buy or validate public transport tickets?",
@@ -679,7 +704,10 @@
                 "text": "I don't use it at all.",
                 "value": "not_used"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?",
@@ -710,7 +738,10 @@
                 "text": "I don't use it at all.",
                 "value": "not_used"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       }

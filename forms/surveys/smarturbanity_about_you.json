@@ -2,13 +2,14 @@
   "questionnaire": {
     "name": "SmartUrbanity - About You",
     "questionnaire_id": "smarturbanity_about_you",
-    "questionnaire_version": "0.1.1",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "privacy": true,
+      "adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "welcome_page": {
@@ -64,12 +65,11 @@
               {
                 "text": "85 or older",
                 "value": "85_or_older"
-              },
-              {
-                "text": "Prefer not to say",
-                "value": "prefer_not_to_say"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true,
+            "add_other": false,
+            "add_i_dont_know": false
           },
           {
             "text": "What is your gender?",
@@ -83,16 +83,11 @@
               {
                 "text": "Female",
                 "value": "female"
-              },
-              {
-                "text": "Other",
-                "value": "other"
-              },
-              {
-                "text": "Prefer not to say",
-                "value": "prefer_not_to_say"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": true,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you currently live with any dependents (such as children, elderly individuals, or others who rely on you for care)?",
@@ -107,7 +102,10 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How many adults, including yourself, live together in your household?",
@@ -134,7 +132,10 @@
                 "text": "5 or more",
                 "value": "5_plus"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "What is your highest completed level of education?",
@@ -165,7 +166,10 @@
                 "text": "Doctorate degree",
                 "value": "doctorate"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Which economic status do you think best describes your household?",
@@ -192,7 +196,10 @@
                 "text": "We are financially very comfortable and can easily afford extra expenses",
                 "value": "very_comfortable"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Which best describes your employment status?",
@@ -238,12 +245,11 @@
               {
                 "text": "Adult learner (student)",
                 "value": "adult_learner_student"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you currently work remotely (partly or fully)?",
@@ -266,7 +272,10 @@
                 "text": "I am not currently employed",
                 "value": "i_am_not_currently_employed"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
@@ -289,7 +298,10 @@
                 "text": "I am not currently employed",
                 "value": "i_am_not_currently_employed"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you have any condition or limitation that affects your ability to move independently?",
@@ -308,7 +320,10 @@
                 "text": "Yes, I have a permanent mobility condition/limitation",
                 "value": "yes_i_have_a_permanent_mobility_conditio"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
@@ -323,7 +338,10 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you hold a valid driving license? (Car, motorcycle or both)",
@@ -338,7 +356,10 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Do you belong to any of these groups?",
@@ -365,7 +386,10 @@
                 "text": "None",
                 "value": "none"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       },
@@ -399,7 +423,10 @@
                 "text": "More than 2 km",
                 "value": "gt_2km"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.",
@@ -426,7 +453,10 @@
                 "text": "Daily / Near Daily (6–7 days)",
                 "value": "daily_near_daily_67_days"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How would you describe your current level of physical fitness (strength, endurance, and overall health)?",
@@ -453,7 +483,10 @@
                 "text": "High",
                 "value": "high"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "What is your approximate height?",
@@ -480,7 +513,10 @@
                 "text": "195 cm or more",
                 "value": "195_plus"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       },
@@ -510,7 +546,10 @@
                 "text": "I’m here temporarily for another reason (Visitor)",
                 "value": "reason"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "In which Municipio of Rome do you currently live?",
@@ -583,12 +622,11 @@
               {
                 "text": "I live outside Rome",
                 "value": "i_live_outside_rome"
-              },
-              {
-                "text": "I don't know",
-                "value": "i_don_t_know"
               }
-            ]
+            ],
+            "add_i_dont_know": true,
+            "add_other": false,
+            "add_prefer_not_to_say": false
           },
           {
             "text": "In which neighbourhood of Municipio XII do you currently live?",
@@ -650,7 +688,10 @@
                 "text": "VILLINI",
                 "value": "villini"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "Apart from your main Municipio, which other Municipio in Rome do you travel to most frequently?",
@@ -660,10 +701,6 @@
               {
                 "text": "I mainly stay within my own Municipio",
                 "value": "stay"
-              },
-              {
-                "text": "I don't know",
-                "value": "idk"
               },
               {
                 "text": "1",
@@ -725,7 +762,10 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true,
+            "add_other": false,
+            "add_prefer_not_to_say": false
           },
           {
             "text": "Which is the second Municipio you travel to most frequently?",
@@ -752,10 +792,6 @@
             },
             "options": [
               {
-                "text": "I don't know",
-                "value": "idk"
-              },
-              {
                 "text": "1",
                 "value": "1"
               },
@@ -815,7 +851,10 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true,
+            "add_other": false,
+            "add_prefer_not_to_say": false
           },
           {
             "text": "Which is the third Municipio you travel to most frequently?",
@@ -842,10 +881,6 @@
             },
             "options": [
               {
-                "text": "I don't know",
-                "value": "idk"
-              },
-              {
                 "text": "1",
                 "value": "1"
               },
@@ -905,7 +940,10 @@
                 "text": "15",
                 "value": "15"
               }
-            ]
+            ],
+            "add_i_dont_know": true,
+            "add_other": false,
+            "add_prefer_not_to_say": false
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
@@ -960,12 +998,11 @@
               {
                 "text": "I rarely or never travel outside my neighborhood",
                 "value": "i_rarely_or_never_travel_outside_my_neig"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
-            ]
+            ],
+            "add_other": true,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           },
           {
             "text": "How strongly do you feel connected to the place where you live and the people in your community?",
@@ -992,7 +1029,10 @@
                 "text": "Very connected",
                 "value": "very_connected"
               }
-            ]
+            ],
+            "add_other": false,
+            "add_prefer_not_to_say": false,
+            "add_i_dont_know": false
           }
         ]
       }

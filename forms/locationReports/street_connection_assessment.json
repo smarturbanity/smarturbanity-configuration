@@ -2,15 +2,16 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
     "estimated_minutes": 5,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "privacy": true,
+      "adult": true
     },
     "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
     "sections": [
@@ -118,7 +119,7 @@
             "answer_key": "connection_form",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -141,10 +142,6 @@
               {
                 "text": "Other type of connection",
                 "value": "other"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           },
@@ -153,7 +150,7 @@
             "answer_key": "pedestrian_access",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -172,10 +169,6 @@
               {
                 "text": "No, pedestrians cannot or should not use it",
                 "value": "not_possible"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -189,7 +182,7 @@
             "answer_key": "bicycle_access",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -212,10 +205,6 @@
               {
                 "text": "No, bicycles cannot or should not use it",
                 "value": "not_possible"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -230,7 +219,7 @@
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -248,10 +237,6 @@
               {
                 "text": "Escalator",
                 "value": "escalator"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
             "show_if": {
@@ -306,7 +291,7 @@
             "answer_key": "lanes_crossed",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -329,10 +314,6 @@
               {
                 "text": "5 or more lanes",
                 "value": "5_plus"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -344,7 +325,7 @@
             "answer_key": "connection_clarity",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -367,10 +348,6 @@
               {
                 "text": "Very difficult",
                 "value": "5_very_difficult"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           },
@@ -444,7 +421,7 @@
             "answer_key": "waiting_or_stopping_space",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -463,10 +440,6 @@
               {
                 "text": "No waiting or stopping space is needed here",
                 "value": "not_needed"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           },
@@ -475,7 +448,7 @@
             "answer_key": "users_with_difficulty",
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -506,10 +479,6 @@
               {
                 "text": "No one in particular",
                 "value": "none"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           }
@@ -525,7 +494,7 @@
             "answer_key": "pedestrian_use_difficulty",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -548,10 +517,6 @@
               {
                 "text": "I avoid using it if possible",
                 "value": "5_avoid_if_possible"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -565,7 +530,7 @@
             "answer_key": "pedestrian_perceived_risk",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -588,10 +553,6 @@
               {
                 "text": "Extremely risky",
                 "value": "5_extremely_risky"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -605,7 +566,7 @@
             "answer_key": "cyclist_use_difficulty",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -628,10 +589,6 @@
               {
                 "text": "I avoid using it if possible",
                 "value": "5_avoid_if_possible"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -645,7 +602,7 @@
             "answer_key": "cyclist_perceived_risk",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -668,10 +625,6 @@
               {
                 "text": "Extremely risky",
                 "value": "5_extremely_risky"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -685,7 +638,7 @@
             "answer_key": "driver_yielding",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -708,10 +661,6 @@
               {
                 "text": "Always or almost always",
                 "value": "5_always"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -723,7 +672,7 @@
             "answer_key": "signal_wait_time",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -746,10 +695,6 @@
               {
                 "text": "More than 2 minutes",
                 "value": "5_more_than_2min"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -765,7 +710,7 @@
             "answer_key": "tunnel_perceived_safety",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -788,10 +733,6 @@
               {
                 "text": "Very unsafe",
                 "value": "5_very_unsafe"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -803,7 +744,7 @@
             "answer_key": "bridge_perceived_safety",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -826,10 +767,6 @@
               {
                 "text": "Very unsafe",
                 "value": "5_very_unsafe"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -848,7 +785,7 @@
             "answer_key": "connection_improvement_importance",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -871,10 +808,6 @@
               {
                 "text": "Very urgent",
                 "value": "5_very_urgent"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           },
@@ -883,7 +816,7 @@
             "answer_key": "main_improvements_needed",
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -918,10 +851,6 @@
               {
                 "text": "Nothing important",
                 "value": "nothing"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ]
           },
@@ -966,7 +895,7 @@
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -992,10 +921,6 @@
               {
                 "text": "It is not clear if people can cycle here",
                 "value": "cycling_use_unclear"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
             "show_if": {
@@ -1012,7 +937,7 @@
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -1050,10 +975,6 @@
               {
                 "text": "Nothing / not relevant",
                 "value": "none_or_not_relevant"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
             "show_if": {
@@ -1116,7 +1037,7 @@
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -1138,10 +1059,6 @@
               {
                 "text": "No clear problem",
                 "value": "none"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
             "show_if": {
@@ -1154,8 +1071,8 @@
             "answer_key": "bridge_cover",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
-            "add_other": false,
+            "add_i_dont_know": true,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -1173,14 +1090,6 @@
               {
                 "text": "Glass or transparent panels",
                 "value": "transparent_panels"
-              },
-              {
-                "text": "Other",
-                "value": "other"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -1283,7 +1192,7 @@
             "answer_key": "unsafe_use_observed",
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
-            "add_i_dont_know": false,
+            "add_i_dont_know": true,
             "add_other": false,
             "checks_inline": false,
             "options": [
@@ -1306,10 +1215,6 @@
               {
                 "text": "Very often",
                 "value": "5_very_often"
-              },
-              {
-                "text": "I don't know",
-                "value": "dont_know"
               }
             ],
             "show_if": {
@@ -1322,7 +1227,7 @@
             "question_type": "multiple_options",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "options": [
               {
@@ -1344,10 +1249,6 @@
               {
                 "text": "Vehicles stop or park on the connection",
                 "value": "vehicles_block_connection"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ],
             "show_if": {

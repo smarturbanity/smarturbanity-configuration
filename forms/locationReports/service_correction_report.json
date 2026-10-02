@@ -2,15 +2,16 @@
   "questionnaire": {
     "name": "Service Correction Report",
     "questionnaire_id": "smarturbanity_service_correction_report",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "1.0.1",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
     "image_alt": "#Street with a missing section and a plus sign",
     "estimated_minutes": 1,
     "options": {
       "review_mode": true,
-      "ask_consent": false,
-      "save_user_id": true
+      "save_user_id": true,
+      "privacy": true,
+      "adult": true
     },
     "sections": [
       {
@@ -23,7 +24,7 @@
             "question_type": "single_option",
             "add_prefer_not_to_say": false,
             "add_i_dont_know": false,
-            "add_other": false,
+            "add_other": true,
             "checks_inline": false,
             "required": true,
             "options": [
@@ -38,10 +39,6 @@
               {
                 "text": "This is a duplicate entry",
                 "value": "duplicate_entry"
-              },
-              {
-                "text": "Other",
-                "value": "other"
               }
             ]
           },
