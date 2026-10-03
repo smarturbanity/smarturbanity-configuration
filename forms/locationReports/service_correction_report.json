@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Service Correction Report",
     "questionnaire_id": "smarturbanity_service_correction_report",
-    "questionnaire_version": "1.0.1",
+    "questionnaire_version": "1.1.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
     "image_alt": "#Street with a missing section and a plus sign",
@@ -15,36 +15,252 @@
     },
     "sections": [
       {
-        "title": "Why doesn't this service exist?",
-        "description": "Describe what is missing, incorrect, or no longer available.",
+        "title": "Fix this service",
+        "description": "Tell us what is wrong so we can correct the map.",
         "questions": [
           {
-            "text": "Why doesn't this service exist?",
+            "text": "What is wrong with this service?",
             "answer_key": "correction_reason",
             "question_type": "single_option",
             "add_other": true,
+            "other_input": {
+              "text": "Tell us what is wrong",
+              "answer_key": "correction_reason_other",
+              "type": "text",
+              "required": true
+            },
             "checks_inline": false,
             "required": true,
             "options": [
               {
-                "text": "This service no longer exists",
+                "text": "It no longer exists",
                 "value": "no_longer_exists"
               },
               {
-                "text": "This is the wrong location",
+                "text": "It is in the wrong place",
                 "value": "wrong_location"
               },
               {
-                "text": "This is a duplicate entry",
+                "text": "It is a duplicate of another service",
                 "value": "duplicate_entry"
+              },
+              {
+                "text": "Its information is wrong (name, type, hours...)",
+                "value": "wrong_information"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A few quick details",
+        "description": "These answers help us fix the right thing.",
+        "questions": [
+          {
+            "text": "When did it close?",
+            "answer_key": "closed_when",
+            "question_type": "single_option",
+            "show_if": {
+              "correction_reason": [
+                "no_longer_exists"
+              ]
+            },
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "Less than a month ago",
+                "value": "lt_month"
+              },
+              {
+                "text": "This year",
+                "value": "this_year"
+              },
+              {
+                "text": "More than a year ago",
+                "value": "gt_year"
+              },
+              {
+                "text": "I don't know",
+                "value": "unknown"
               }
             ]
           },
           {
-            "text": "Enter the reason this service does not exist",
+            "text": "How do you know?",
+            "answer_key": "closed_source",
+            "question_type": "single_option",
+            "show_if": {
+              "correction_reason": [
+                "no_longer_exists"
+              ]
+            },
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "I saw it on site",
+                "value": "on_site"
+              },
+              {
+                "text": "Local knowledge",
+                "value": "local_knowledge"
+              },
+              {
+                "text": "Official source or website",
+                "value": "official_source"
+              },
+              {
+                "text": "Other",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "text": "Is something else there now?",
+            "answer_key": "replaced_by",
+            "question_type": "text",
+            "show_if": {
+              "correction_reason": [
+                "no_longer_exists"
+              ]
+            },
+            "required": false
+          },
+          {
+            "text": "Where is it really?",
+            "answer_key": "real_location",
+            "question_type": "text",
+            "show_if": {
+              "correction_reason": [
+                "wrong_location"
+              ]
+            },
+            "required": true,
+            "placeholder": "Address or a short description"
+          },
+          {
+            "text": "How far is it from the marked place?",
+            "answer_key": "location_distance",
+            "question_type": "single_option",
+            "show_if": {
+              "correction_reason": [
+                "wrong_location"
+              ]
+            },
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "About the same street",
+                "value": "same_street"
+              },
+              {
+                "text": "Within 200 m",
+                "value": "within_200m"
+              },
+              {
+                "text": "Farther",
+                "value": "farther"
+              },
+              {
+                "text": "I don't know",
+                "value": "unknown"
+              }
+            ]
+          },
+          {
+            "text": "Which service is it a duplicate of?",
+            "answer_key": "duplicate_of",
+            "question_type": "text",
+            "show_if": {
+              "correction_reason": [
+                "duplicate_entry"
+              ]
+            },
+            "required": true,
+            "placeholder": "Name or address"
+          },
+          {
+            "text": "Which entry is the right one?",
+            "answer_key": "duplicate_keep",
+            "question_type": "single_option",
+            "show_if": {
+              "correction_reason": [
+                "duplicate_entry"
+              ]
+            },
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "This one",
+                "value": "this_one"
+              },
+              {
+                "text": "The other one",
+                "value": "other_one"
+              },
+              {
+                "text": "Not sure",
+                "value": "not_sure"
+              }
+            ]
+          },
+          {
+            "text": "Which information is wrong?",
+            "answer_key": "wrong_fields",
+            "question_type": "multiple_options",
+            "show_if": {
+              "correction_reason": [
+                "wrong_information"
+              ]
+            },
+            "checks_inline": false,
+            "required": true,
+            "options": [
+              {
+                "text": "Name",
+                "value": "name"
+              },
+              {
+                "text": "Type of service",
+                "value": "service_type"
+              },
+              {
+                "text": "Opening hours",
+                "value": "opening_hours"
+              },
+              {
+                "text": "Contact",
+                "value": "contact"
+              },
+              {
+                "text": "Accessibility",
+                "value": "accessibility"
+              },
+              {
+                "text": "Other",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "text": "What is the correct information?",
+            "answer_key": "correct_information",
+            "question_type": "textarea",
+            "show_if": {
+              "correction_reason": [
+                "wrong_information"
+              ]
+            },
+            "required": true
+          },
+          {
+            "text": "Anything else we should know?",
             "answer_key": "correction_details",
             "question_type": "text",
-            "required": true
+            "required": false
           }
         ]
       }
@@ -55,24 +271,92 @@
     "en": {
       "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
       "code": "en",
-      "#Why doesn't this service exist?": "Why doesn't this service exist?",
-      "#Describe what is missing, incorrect, or no longer available.": "Describe what is missing, incorrect, or no longer available.",
-      "#This service no longer exists": "This service no longer exists",
-      "#This is the wrong location": "This is the wrong location",
-      "#This is a duplicate entry": "This is a duplicate entry",
+      "#Fix this service": "Fix this service",
+      "#Tell us what is wrong so we can correct the map.": "Tell us what is wrong so we can correct the map.",
+      "#A few quick details": "A few quick details",
+      "#These answers help us fix the right thing.": "These answers help us fix the right thing.",
+      "#What is wrong with this service?": "What is wrong with this service?",
+      "#It no longer exists": "It no longer exists",
+      "#It is in the wrong place": "It is in the wrong place",
+      "#It is a duplicate of another service": "It is a duplicate of another service",
+      "#Its information is wrong (name, type, hours...)": "Its information is wrong (name, type, hours...)",
       "#Other": "Other",
-      "#Enter the reason this service does not exist": "Enter the reason this service does not exist"
+      "#Tell us what is wrong": "Tell us what is wrong",
+      "#When did it close?": "When did it close?",
+      "#Less than a month ago": "Less than a month ago",
+      "#This year": "This year",
+      "#More than a year ago": "More than a year ago",
+      "#I don't know": "I don't know",
+      "#How do you know?": "How do you know?",
+      "#I saw it on site": "I saw it on site",
+      "#Local knowledge": "Local knowledge",
+      "#Official source or website": "Official source or website",
+      "#Is something else there now?": "Is something else there now?",
+      "#Where is it really?": "Where is it really?",
+      "#Address or a short description": "Address or a short description",
+      "#How far is it from the marked place?": "How far is it from the marked place?",
+      "#About the same street": "About the same street",
+      "#Within 200 m": "Within 200 m",
+      "#Farther": "Farther",
+      "#Which service is it a duplicate of?": "Which service is it a duplicate of?",
+      "#Name or address": "Name or address",
+      "#Which entry is the right one?": "Which entry is the right one?",
+      "#This one": "This one",
+      "#The other one": "The other one",
+      "#Not sure": "Not sure",
+      "#Which information is wrong?": "Which information is wrong?",
+      "#Name": "Name",
+      "#Type of service": "Type of service",
+      "#Opening hours": "Opening hours",
+      "#Contact": "Contact",
+      "#Accessibility": "Accessibility",
+      "#What is the correct information?": "What is the correct information?",
+      "#Anything else we should know?": "Anything else we should know?"
     },
     "it": {
       "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
       "code": "it",
-      "#Why doesn't this service exist?": "Perché questo servizio non esiste?",
-      "#Describe what is missing, incorrect, or no longer available.": "Descrivi cosa manca, è errato o non è più disponibile.",
-      "#This service no longer exists": "Questo servizio non esiste più",
-      "#This is the wrong location": "Questa è la posizione sbagliata",
-      "#This is a duplicate entry": "Questa è una voce duplicata",
+      "#Fix this service": "Correggi questo servizio",
+      "#Tell us what is wrong so we can correct the map.": "Dicci cosa non va, così possiamo correggere la mappa.",
+      "#A few quick details": "Qualche dettaglio rapido",
+      "#These answers help us fix the right thing.": "Queste risposte ci aiutano a correggere la cosa giusta.",
+      "#What is wrong with this service?": "Cosa non va in questo servizio?",
+      "#It no longer exists": "Non esiste più",
+      "#It is in the wrong place": "È nel posto sbagliato",
+      "#It is a duplicate of another service": "È un duplicato di un altro servizio",
+      "#Its information is wrong (name, type, hours...)": "Le sue informazioni sono sbagliate (nome, tipo, orari...)",
       "#Other": "Altro",
-      "#Enter the reason this service does not exist": "Indica il motivo per cui questo servizio non esiste"
+      "#Tell us what is wrong": "Dicci cosa non va",
+      "#When did it close?": "Quando ha chiuso?",
+      "#Less than a month ago": "Meno di un mese fa",
+      "#This year": "Quest'anno",
+      "#More than a year ago": "Più di un anno fa",
+      "#I don't know": "Non lo so",
+      "#How do you know?": "Come lo sai?",
+      "#I saw it on site": "L'ho visto di persona",
+      "#Local knowledge": "Lo so perché conosco la zona",
+      "#Official source or website": "Fonte ufficiale o sito web",
+      "#Is something else there now?": "C'è qualcos'altro adesso?",
+      "#Where is it really?": "Dov'è davvero?",
+      "#Address or a short description": "Indirizzo o breve descrizione",
+      "#How far is it from the marked place?": "Quanto dista dal punto segnato?",
+      "#About the same street": "Più o meno la stessa strada",
+      "#Within 200 m": "Entro 200 m",
+      "#Farther": "Più lontano",
+      "#Which service is it a duplicate of?": "Di quale servizio è un duplicato?",
+      "#Name or address": "Nome o indirizzo",
+      "#Which entry is the right one?": "Quale voce è quella giusta?",
+      "#This one": "Questa",
+      "#The other one": "L'altra",
+      "#Not sure": "Non sono sicuro",
+      "#Which information is wrong?": "Quali informazioni sono sbagliate?",
+      "#Name": "Nome",
+      "#Type of service": "Tipo di servizio",
+      "#Opening hours": "Orari di apertura",
+      "#Contact": "Contatti",
+      "#Accessibility": "Accessibilità",
+      "#What is the correct information?": "Qual è l'informazione corretta?",
+      "#Anything else we should know?": "C'è altro che dovremmo sapere?"
     }
   },
   "id": "smarturbanity_service_correction_report",
