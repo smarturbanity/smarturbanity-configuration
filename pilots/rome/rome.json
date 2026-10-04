@@ -27,6 +27,12 @@
         "bike": {"property": "osm.bicycle"}
       }
     },
+    "package_properties": {
+      "segments": {"omit_null": true, "properties": ["name", "sped", "segment_type", "access", "infrastructure", "access_rules.walk.allowed", "access_rules.walk.forward.allowed", "access_rules.walk.backward.allowed", "access_rules.bike.allowed", "access_rules.bike.forward.allowed", "access_rules.bike.backward.allowed", "access_rules.car.allowed", "access_rules.car.forward.allowed", "access_rules.car.backward.allowed", "physical_infrastructure.layer", "physical_infrastructure.level", "physical_infrastructure.bridge", "physical_infrastructure.tunnel", "physical_infrastructure.barrier", "physical_infrastructure.width_m", "osm.id", "osm.segment", "osm.direction", "osm.oneway", "osm.oneway:foot", "osm.oneway:bicycle", "osm.cycleway", "osm.cycleway:left", "osm.cycleway:right", "osm.cycleway:both", "osm.foot:forward", "osm.foot:backward", "osm.bicycle:forward", "osm.bicycle:backward", "osm.junction", "osm.crossing", "osm.tunnel", "osm.bridge", "osm.layer", "osm.level", "osm.barrier", "osm.node_controls", "osm.alt_name"]},
+      "areas": {"omit_null": true, "properties": ["source_area_id", "source_layer_id", "inside_study_area", "name", "denominazi", "tipo", "municipio", "classe_fun", "habitants_total", "habitants_students", "habitants_workers", "habitants_retired", "buildings_total", "buildings_residential", "buildings_commercial"]},
+      "nodes": {"properties": []},
+      "connections": {"properties": ["walk_access", "bike_access"]}
+    },
     "default_area_group_id": "neighbourhoods",
     "area_groups": {
       "neighbourhoods": {"name": "Quartieri", "order": 10, "view": "access_inspector", "icon": "bi-map", "source_layers": ["su_areas"]},
