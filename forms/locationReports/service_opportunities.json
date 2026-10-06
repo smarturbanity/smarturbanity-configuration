@@ -1,0 +1,55 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity Service Opportunities",
+    "questionnaire_id": "smarturbanity_service_opportunities",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "options": {
+      "review_mode": true,
+      "ask_consent": false,
+      "save_user_id": false
+    },
+    "sections": [
+      {
+        "title": "Service opportunities",
+        "description": "Confirm which opportunities this service provides.",
+        "questions": [
+          {
+            "text": "Which opportunities does this service provide?",
+            "answer_key": "service_opportunities",
+            "question_type": "matrix",
+            "row_source": "opportunities",
+            "row_filter": {
+              "mapping_source": "service_opportunity_mapping",
+              "relation": "provides_opportunity"
+            },
+            "add_other": true,
+            "columns": [
+              {
+                "key": "exists",
+                "label": "Does this opportunity exist?",
+                "type": "boolean"
+              },
+              {
+                "key": "desired_here",
+                "label": "Would you like this opportunity to be available here?",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en"
+    },
+    "it": {
+      "code": "it"
+    }
+  },
+  "id": "smarturbanity_service_opportunities",
+  "db_set": "questionnaires",
+  "default_language": "en"
+}
