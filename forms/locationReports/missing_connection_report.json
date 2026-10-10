@@ -1,0 +1,331 @@
+{
+  "questionnaire": {
+    "name": "Missing Connection Report",
+    "questionnaire_id": "smarturbanity_missing_connection_report",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
+    "image_alt": "#Street with a missing section and a plus sign",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "sections": [
+      {
+        "title": "Missing connection",
+        "description": "Tell us about the crossing or connection that is missing here.",
+        "questions": [
+          {
+            "text": "What kind of connection is needed here?",
+            "answer_key": "needed_connection_form",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "At street level",
+                "value": "street_level"
+              },
+              {
+                "text": "Under the road / underpass",
+                "value": "under_road"
+              },
+              {
+                "text": "Over the road / bridge",
+                "value": "over_road"
+              },
+              {
+                "text": "Change in level, such as stairs, ramp, elevator or escalator",
+                "value": "level_change"
+              },
+              {
+                "text": "Other type of connection",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "text": "How urgent is it to add this connection?",
+            "answer_key": "missing_element_urgency",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not urgent",
+                "value": "1_not_urgent"
+              },
+              {
+                "text": "Slightly urgent",
+                "value": "2_slightly_urgent"
+              },
+              {
+                "text": "Moderately urgent",
+                "value": "3_moderately_urgent"
+              },
+              {
+                "text": "Urgent",
+                "value": "4_urgent"
+              },
+              {
+                "text": "Very urgent",
+                "value": "5_very_urgent"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
+          },
+          {
+            "text": "Who would it help most?",
+            "answer_key": "proposal_beneficiaries",
+            "question_type": "multiple_options",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "People on foot",
+                "value": "pedestrian"
+              },
+              {
+                "text": "People in a wheelchair or with a pram",
+                "value": "wheelchair"
+              },
+              {
+                "text": "People on a bike or e-scooter",
+                "value": "cyclist"
+              },
+              {
+                "text": "Public transport users",
+                "value": "pt_user"
+              },
+              {
+                "text": "Everyone",
+                "value": "everyone"
+              }
+            ]
+          },
+          {
+            "text": "What should reviewers know about this location?",
+            "answer_key": "observation_details",
+            "question_type": "textarea",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html"
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
+      "#Missing Connection Report": "Missing Connection Report",
+      "#Missing connection": "Missing connection",
+      "#Tell us about the crossing or connection that is missing here.": "Tell us about the crossing or connection that is missing here.",
+      "#What kind of connection is needed here?": "What kind of connection is needed here?",
+      "#How urgent is it to add this connection?": "How urgent is it to add this connection?",
+      "#At street level": "At street level",
+      "#Under the road / underpass": "Under the road / underpass",
+      "#Over the road / bridge": "Over the road / bridge",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Change in level, such as stairs, ramp, elevator or escalator",
+      "#Other type of connection": "Other type of connection",
+      "#Not urgent": "Not urgent",
+      "#Slightly urgent": "Slightly urgent",
+      "#Moderately urgent": "Moderately urgent",
+      "#Urgent": "Urgent",
+      "#Very urgent": "Very urgent",
+      "#Who would it help most?": "Who would it help most?",
+      "#People on foot": "People on foot",
+      "#People in a wheelchair or with a pram": "People in a wheelchair or with a pram",
+      "#People on a bike or e-scooter": "People on a bike or e-scooter",
+      "#Public transport users": "Public transport users",
+      "#Everyone": "Everyone",
+      "#What should reviewers know about this location?": "What should reviewers know about this location?"
+    },
+    "it": {
+      "code": "it",
+      "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
+      "#Missing Connection Report": "Segnalazione di collegamento mancante",
+      "#Missing connection": "Collegamento mancante",
+      "#Tell us about the crossing or connection that is missing here.": "Raccontaci l'attraversamento o il collegamento che qui manca.",
+      "#What kind of connection is needed here?": "Che tipo di collegamento servirebbe qui?",
+      "#How urgent is it to add this connection?": "Quanto è urgente aggiungere questo collegamento?",
+      "#At street level": "A livello strada",
+      "#Under the road / underpass": "Sotto la strada / sottopasso",
+      "#Over the road / bridge": "Sopra la strada / ponte",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Cambio di quota, come scale, rampa, ascensore o scala mobile",
+      "#Other type of connection": "Altro tipo di collegamento",
+      "#Not urgent": "Non urgente",
+      "#Slightly urgent": "Poco urgente",
+      "#Moderately urgent": "Abbastanza urgente",
+      "#Urgent": "Urgente",
+      "#Very urgent": "Molto urgente",
+      "#Who would it help most?": "A chi sarebbe più utile?",
+      "#People on foot": "Persone a piedi",
+      "#People in a wheelchair or with a pram": "Persone in sedia a rotelle o con passeggino",
+      "#People on a bike or e-scooter": "Persone in bici o monopattino",
+      "#Public transport users": "Chi usa i mezzi pubblici",
+      "#Everyone": "Tutti",
+      "#What should reviewers know about this location?": "Cosa dovrebbero sapere i revisori su questo luogo?"
+    },
+    "fr": {
+      "code": "fr",
+      "#Street with a missing section and a plus sign": "Rue avec un tronçon manquant et un signe plus",
+      "#Missing Connection Report": "Signalement de liaison manquante",
+      "#Missing connection": "Liaison manquante",
+      "#Tell us about the crossing or connection that is missing here.": "Parlez-nous de la traversée ou de la liaison qui manque ici.",
+      "#What kind of connection is needed here?": "Quel type de liaison faudrait-il ici ?",
+      "#How urgent is it to add this connection?": "À quel point est-il urgent d’ajouter cette liaison ?",
+      "#At street level": "Au niveau de la rue",
+      "#Under the road / underpass": "Sous la route / passage souterrain",
+      "#Over the road / bridge": "Au-dessus de la route / passerelle",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Changement de niveau, par exemple escalier, rampe, ascenseur ou escalator",
+      "#Other type of connection": "Autre type de liaison",
+      "#Not urgent": "Pas urgent",
+      "#Slightly urgent": "Peu urgent",
+      "#Moderately urgent": "Modérément urgent",
+      "#Urgent": "Urgent",
+      "#Very urgent": "Très urgent",
+      "#Who would it help most?": "À qui cela serait-il le plus utile ?",
+      "#People on foot": "Personnes à pied",
+      "#People in a wheelchair or with a pram": "Personnes en fauteuil roulant ou avec une poussette",
+      "#People on a bike or e-scooter": "Personnes à vélo ou en trottinette",
+      "#Public transport users": "Usagers des transports en commun",
+      "#Everyone": "Tout le monde",
+      "#What should reviewers know about this location?": "Que devraient savoir les personnes chargées de la vérification à propos de cet endroit ?"
+    },
+    "de": {
+      "code": "de",
+      "#Street with a missing section and a plus sign": "Straße mit einem fehlenden Abschnitt und einem Pluszeichen",
+      "#Missing Connection Report": "Meldung einer fehlenden Verbindung",
+      "#Missing connection": "Fehlende Verbindung",
+      "#Tell us about the crossing or connection that is missing here.": "Beschreiben Sie den Übergang oder die Verbindung, die hier fehlt.",
+      "#What kind of connection is needed here?": "Welche Art von Verbindung wird hier gebraucht?",
+      "#How urgent is it to add this connection?": "Wie dringend sollte diese Verbindung geschaffen werden?",
+      "#At street level": "Auf Straßenniveau",
+      "#Under the road / underpass": "Unter der Straße / Unterführung",
+      "#Over the road / bridge": "Über der Straße / Brücke",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Höhenwechsel, etwa Treppe, Rampe, Aufzug oder Rolltreppe",
+      "#Other type of connection": "Andere Art von Verbindung",
+      "#Not urgent": "Nicht dringend",
+      "#Slightly urgent": "Wenig dringend",
+      "#Moderately urgent": "Mäßig dringend",
+      "#Urgent": "Dringend",
+      "#Very urgent": "Sehr dringend",
+      "#Who would it help most?": "Wem würde es am meisten helfen?",
+      "#People on foot": "Menschen zu Fuß",
+      "#People in a wheelchair or with a pram": "Menschen im Rollstuhl oder mit Kinderwagen",
+      "#People on a bike or e-scooter": "Menschen mit Fahrrad oder E-Scooter",
+      "#Public transport users": "Nutzende des öffentlichen Verkehrs",
+      "#Everyone": "Allen",
+      "#What should reviewers know about this location?": "Was sollten die Prüfenden über diesen Ort wissen?"
+    },
+    "tr": {
+      "code": "tr",
+      "#Street with a missing section and a plus sign": "Eksik bir bölümü ve artı işareti olan sokak",
+      "#Missing Connection Report": "Eksik Bağlantı Bildirimi",
+      "#Missing connection": "Eksik bağlantı",
+      "#Tell us about the crossing or connection that is missing here.": "Burada eksik olan geçidi veya bağlantıyı anlatın.",
+      "#What kind of connection is needed here?": "Burada ne tür bir bağlantıya ihtiyaç var?",
+      "#How urgent is it to add this connection?": "Bu bağlantıyı eklemek ne kadar acil?",
+      "#At street level": "Sokak seviyesinde",
+      "#Under the road / underpass": "Yolun altında / alt geçit",
+      "#Over the road / bridge": "Yolun üstünde / köprü",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Merdiven, rampa, asansör veya yürüyen merdiven gibi seviye değişikliği",
+      "#Other type of connection": "Başka bir bağlantı türü",
+      "#Not urgent": "Acil değil",
+      "#Slightly urgent": "Biraz acil",
+      "#Moderately urgent": "Orta derecede acil",
+      "#Urgent": "Acil",
+      "#Very urgent": "Çok acil",
+      "#Who would it help most?": "En çok kime yardımcı olur?",
+      "#People on foot": "Yayalar",
+      "#People in a wheelchair or with a pram": "Tekerlekli sandalye kullananlar veya bebek arabası olanlar",
+      "#People on a bike or e-scooter": "Bisiklet veya e-scooter kullananlar",
+      "#Public transport users": "Toplu taşıma kullananlar",
+      "#Everyone": "Herkes",
+      "#What should reviewers know about this location?": "İnceleyenler bu konum hakkında ne bilmeli?"
+    },
+    "fa": {
+      "code": "fa",
+      "#Street with a missing section and a plus sign": "خیابانی با یک بخش ناقص و علامت به‌علاوه",
+      "#Missing Connection Report": "گزارش ارتباط گمشده",
+      "#Missing connection": "ارتباط گمشده",
+      "#Tell us about the crossing or connection that is missing here.": "درباره گذرگاه یا ارتباطی که اینجا وجود ندارد به ما بگویید.",
+      "#What kind of connection is needed here?": "اینجا چه نوع ارتباطی لازم است؟",
+      "#How urgent is it to add this connection?": "افزودن این ارتباط چقدر فوری است؟",
+      "#At street level": "هم‌سطح خیابان",
+      "#Under the road / underpass": "زیر جاده / زیرگذر",
+      "#Over the road / bridge": "بالای جاده / پل",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "تغییر سطح، مانند پله، رمپ، آسانسور یا پله‌برقی",
+      "#Other type of connection": "نوع دیگری از ارتباط",
+      "#Not urgent": "فوری نیست",
+      "#Slightly urgent": "کمی فوری",
+      "#Moderately urgent": "با فوریت متوسط",
+      "#Urgent": "فوری",
+      "#Very urgent": "بسیار فوری",
+      "#Who would it help most?": "بیشتر به چه کسانی کمک می‌کند؟",
+      "#People on foot": "افراد پیاده",
+      "#People in a wheelchair or with a pram": "افراد با ویلچر یا کالسکه",
+      "#People on a bike or e-scooter": "افراد با دوچرخه یا اسکوتر برقی",
+      "#Public transport users": "کاربران حمل‌ونقل عمومی",
+      "#Everyone": "همه",
+      "#What should reviewers know about this location?": "بازبینان باید درباره این مکان چه بدانند؟"
+    },
+    "hu": {
+      "code": "hu",
+      "#Street with a missing section and a plus sign": "Utca egy hiányzó szakasszal és egy pluszjellel",
+      "#Missing Connection Report": "Hiányzó kapcsolat bejelentése",
+      "#Missing connection": "Hiányzó kapcsolat",
+      "#Tell us about the crossing or connection that is missing here.": "Írja le, milyen átkelő vagy kapcsolat hiányzik itt.",
+      "#What kind of connection is needed here?": "Milyen kapcsolatra lenne itt szükség?",
+      "#How urgent is it to add this connection?": "Mennyire sürgős ennek a kapcsolatnak a kiépítése?",
+      "#At street level": "Utcaszinten",
+      "#Under the road / underpass": "Az út alatt / aluljáró",
+      "#Over the road / bridge": "Az út felett / híd",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "Szintkülönbség, például lépcső, rámpa, lift vagy mozgólépcső",
+      "#Other type of connection": "Más típusú kapcsolat",
+      "#Not urgent": "Nem sürgős",
+      "#Slightly urgent": "Kissé sürgős",
+      "#Moderately urgent": "Közepesen sürgős",
+      "#Urgent": "Sürgős",
+      "#Very urgent": "Nagyon sürgős",
+      "#Who would it help most?": "Kinek segítene a legtöbbet?",
+      "#People on foot": "Gyalogosoknak",
+      "#People in a wheelchair or with a pram": "Kerekesszékeseknek vagy babakocsival közlekedőknek",
+      "#People on a bike or e-scooter": "Kerékpárral vagy elektromos rollerrel közlekedőknek",
+      "#Public transport users": "Tömegközlekedést használóknak",
+      "#Everyone": "Mindenkinek",
+      "#What should reviewers know about this location?": "Mit érdemes tudniuk az ellenőrzőknek erről a helyről?"
+    },
+    "ar": {
+      "code": "ar",
+      "#Street with a missing section and a plus sign": "شارع به جزء مفقود وعلامة زائد",
+      "#Missing Connection Report": "بلاغ عن رابط مفقود",
+      "#Missing connection": "رابط مفقود",
+      "#Tell us about the crossing or connection that is missing here.": "أخبرنا عن المعبر أو الرابط المفقود هنا.",
+      "#What kind of connection is needed here?": "ما نوع الرابط المطلوب هنا؟",
+      "#How urgent is it to add this connection?": "ما مدى إلحاح إضافة هذا الرابط؟",
+      "#At street level": "على مستوى الشارع",
+      "#Under the road / underpass": "تحت الطريق / نفق سفلي",
+      "#Over the road / bridge": "فوق الطريق / جسر",
+      "#Change in level, such as stairs, ramp, elevator or escalator": "تغيّر في المستوى، مثل درج أو منحدر أو مصعد أو سلم متحرك",
+      "#Other type of connection": "نوع آخر من الروابط",
+      "#Not urgent": "غير عاجل",
+      "#Slightly urgent": "عاجل قليلًا",
+      "#Moderately urgent": "متوسط الإلحاح",
+      "#Urgent": "عاجل",
+      "#Very urgent": "عاجل جدًا",
+      "#Who would it help most?": "مَن سيستفيد منه أكثر؟",
+      "#People on foot": "المشاة",
+      "#People in a wheelchair or with a pram": "مستخدمو الكراسي المتحركة أو عربات الأطفال",
+      "#People on a bike or e-scooter": "راكبو الدراجات أو السكوترات الكهربائية",
+      "#Public transport users": "مستخدمو النقل العام",
+      "#Everyone": "الجميع",
+      "#What should reviewers know about this location?": "ما الذي ينبغي أن يعرفه المراجعون عن هذا الموقع؟"
+    }
+  }
+}

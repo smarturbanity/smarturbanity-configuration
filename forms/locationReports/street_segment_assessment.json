@@ -2,7 +2,7 @@
 	"questionnaire": {
 		"name": "Street Segment Assessment",
 		"questionnaire_id": "street_segment_assessment",
-		"questionnaire_version": "0.1.3",
+		"questionnaire_version": "0.2.0",
 		"project": "SmartUrbanity",
 		"image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
 		"image_alt": "#Street section with a magnifying glass",
@@ -101,8 +101,8 @@
 				]
 			},
 			{
-				"title": "Describe this street segment",
-				"description": "Look at the place. Answer only what you can see.",
+				"title": "Quick assessment",
+				"description": "Answer these first. Then you can finish or add optional details.",
 				"backgroundColor": "#f0f0f0",
 				"questions": [
 					{
@@ -144,47 +144,6 @@
 						]
 					},
 					{
-						"text": "How easy is it for people to pass each other on the walking path?",
-						"answer_key": "walking_width_passability",
-						"question_type": "single_option",
-						"show_if": {
-							"assessment_perspective": [
-								"pedestrian"
-							],
-							"walk_facility": [
-								"shoulder",
-								"shared_ped_bike_path",
-								"level_walking_area",
-								"raised_sidewalk",
-								"dedicated_pedestrian_area"
-							]
-						},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Only one person can walk at a time",
-								"value": "1_one_person_only"
-							},
-							{
-								"text": "Two people can pass, but one usually steps aside",
-								"value": "2_pass_with_step_aside"
-							},
-							{
-								"text": "Two people can walk side by side",
-								"value": "3_two_side_by_side"
-							},
-							{
-								"text": "Small groups can pass each other",
-								"value": "4_small_groups"
-							},
-							{
-								"text": "Very wide, with plenty of room to move",
-								"value": "5_very_wide"
-							}
-						]
-					},
-					{
 						"text": "Is there cycling infrastructure on this street?",
 						"answer_key": "bike_facility",
 						"question_type": "single_option",
@@ -210,157 +169,6 @@
 							}
 						]
 					},
-					{
-						"text": "How is the cycling space separated from walking or motor traffic?",
-						"answer_key": "bike_separation",
-						"question_type": "multiple_options",
-						"show_if": {
-							"assessment_perspective": [
-								"cyclist"
-							],
-							"bike_facility": "dedicated_bike_facility"
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Paint or road markings only",
-								"value": "markings_only"
-							},
-							{
-								"text": "Bollards, barriers, kerbs, or planters",
-								"value": "physical_separation"
-							},
-							{
-								"text": "Parked cars",
-								"value": "parked_cars"
-							},
-							{
-								"text": "Separate from people walking, at the same level",
-								"value": "separate_same_level"
-							},
-							{
-								"text": "Different level or kerb from people walking",
-								"value": "different_level_from_pedestrians"
-							}
-						]
-					},
-					{
-						"text": "Who else commonly uses the cycling space?",
-						"answer_key": "bike_intrusion_users",
-						"question_type": "multiple_options",
-						"show_if": {
-							"assessment_perspective": [
-								"cyclist"
-							],
-							"bike_facility": [
-								"shared_with_traffic",
-								"dedicated_bike_facility"
-							]
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "None",
-								"value": "none"
-							},
-							{
-								"text": "Cars",
-								"value": "cars"
-							},
-							{
-								"text": "Motorcycles",
-								"value": "motorcycles"
-							},
-							{
-								"text": "Public transport vehicles",
-								"value": "public_transport_vehicles"
-							},
-							{
-								"text": "People walking",
-								"value": "pedestrians"
-							}
-						]
-					},
-					{
-						"text": "How fast does motor traffic feel on this street?",
-						"answer_key": "traffic_speed_feeling",
-						"question_type": "single_option",
-						"show_if": {},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Very slow or traffic-calmed",
-								"value": "1_very_slow"
-							},
-							{
-								"text": "Slow",
-								"value": "2_slow"
-							},
-							{
-								"text": "Moderate",
-								"value": "3_moderate"
-							},
-							{
-								"text": "Fast",
-								"value": "4_fast"
-							},
-							{
-								"text": "Very fast",
-								"value": "5_very_fast"
-							}
-						]
-					},
-					{
-						"text": "What makes traffic interaction difficult here?",
-						"answer_key": "traffic_interaction_problems",
-						"question_type": "multiple_options",
-						"show_if": {},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "No clear problem",
-								"value": "none"
-							},
-							{
-								"text": "Poor visibility",
-								"value": "poor_visibility"
-							},
-							{
-								"text": "Vehicles drive too fast",
-								"value": "vehicles_too_fast"
-							},
-							{
-								"text": "Vehicles pass too close",
-								"value": "close_passing"
-							},
-							{
-								"text": "Difficult turns or side access",
-								"value": "difficult_turns_access"
-							},
-							{
-								"text": "Double parking or stopped vehicles",
-								"value": "double_parking_stopped"
-							},
-							{
-								"text": "Bus or tram interaction",
-								"value": "pt_interaction"
-							}
-						]
-					}
-				]
-			},
-			{
-				"title": "Your experience here",
-				"description": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
-				"backgroundColor": "#f0f0f0",
-				"questions": [
 					{
 						"text": "Which best describes using this street segment while walking?",
 						"answer_key": "pedestrian_use_difficulty",
@@ -428,142 +236,6 @@
 								"pedestrian"
 							]
 						}
-					},
-					{
-						"text": "How often do surface problems slow you down or make you change path while walking?",
-						"answer_key": "pedestrian_surface_problem_frequency",
-						"question_type": "single_option",
-						"show_if": {
-							"assessment_perspective": [
-								"pedestrian"
-							]
-						},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Never or almost never",
-								"value": "1_never"
-							},
-							{
-								"text": "Rarely",
-								"value": "2_rarely"
-							},
-							{
-								"text": "Sometimes",
-								"value": "3_sometimes"
-							},
-							{
-								"text": "Often",
-								"value": "4_often"
-							},
-							{
-								"text": "Very often",
-								"value": "5_very_often"
-							}
-						]
-					},
-					{
-						"text": "How often do obstacles block or reduce your space while walking?",
-						"answer_key": "pedestrian_obstacle_frequency",
-						"question_type": "single_option",
-						"show_if": {
-							"assessment_perspective": [
-								"pedestrian"
-							]
-						},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Never or almost never",
-								"value": "1_never"
-							},
-							{
-								"text": "Rarely",
-								"value": "2_rarely"
-							},
-							{
-								"text": "Sometimes",
-								"value": "3_sometimes"
-							},
-							{
-								"text": "Often",
-								"value": "4_often"
-							},
-							{
-								"text": "Very often",
-								"value": "5_very_often"
-							}
-						]
-					},
-					{
-						"text": "How often does this segment feel too crowded?",
-						"answer_key": "crowding_frequency",
-						"question_type": "single_option",
-						"show_if": {
-							"assessment_perspective": [
-								"pedestrian"
-							]
-						},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Never or almost never",
-								"value": "1_never"
-							},
-							{
-								"text": "Rarely",
-								"value": "2_rarely"
-							},
-							{
-								"text": "Sometimes",
-								"value": "3_sometimes"
-							},
-							{
-								"text": "Often",
-								"value": "4_often"
-							},
-							{
-								"text": "Very often",
-								"value": "5_very_often"
-							}
-						]
-					},
-					{
-						"text": "How often do motor vehicles pass too close while you are walking?",
-						"answer_key": "pedestrian_close_passing_frequency",
-						"question_type": "single_option",
-						"show_if": {
-							"assessment_perspective": [
-								"pedestrian"
-							]
-						},
-						"add_i_dont_know": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Never or almost never",
-								"value": "1_never"
-							},
-							{
-								"text": "Rarely",
-								"value": "2_rarely"
-							},
-							{
-								"text": "Sometimes",
-								"value": "3_sometimes"
-							},
-							{
-								"text": "Often",
-								"value": "4_often"
-							},
-							{
-								"text": "Very often",
-								"value": "5_very_often"
-							}
-						]
 					},
 					{
 						"text": "Which best describes using this street segment while cycling?",
@@ -634,10 +306,373 @@
 						}
 					},
 					{
+						"text": "Would you like to add a few optional details?",
+						"answer_key": "continue_audit",
+						"question_type": "single_option",
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "No, finish the assessment",
+								"value": "no_finish"
+							},
+							{
+								"text": "Yes, add optional details",
+								"value": "yes_audit"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Describe this street segment",
+				"description": "Look at the place. Answer only what you can see.",
+				"backgroundColor": "#f0f0f0",
+				"questions": [
+					{
+						"text": "How easy is it for people to pass each other on the walking path?",
+						"answer_key": "walking_width_passability",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							],
+							"walk_facility": [
+								"shoulder",
+								"shared_ped_bike_path",
+								"level_walking_area",
+								"raised_sidewalk",
+								"dedicated_pedestrian_area"
+							]
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Only one person can walk at a time",
+								"value": "1_one_person_only"
+							},
+							{
+								"text": "Two people can pass, but one usually steps aside",
+								"value": "2_pass_with_step_aside"
+							},
+							{
+								"text": "Two people can walk side by side",
+								"value": "3_two_side_by_side"
+							},
+							{
+								"text": "Small groups can pass each other",
+								"value": "4_small_groups"
+							},
+							{
+								"text": "Very wide, with plenty of room to move",
+								"value": "5_very_wide"
+							}
+						]
+					},
+					{
+						"text": "How is the cycling space separated from walking or motor traffic?",
+						"answer_key": "bike_separation",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"cyclist"
+							],
+							"bike_facility": "dedicated_bike_facility"
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Paint or road markings only",
+								"value": "markings_only"
+							},
+							{
+								"text": "Bollards, barriers, kerbs, or planters",
+								"value": "physical_separation"
+							},
+							{
+								"text": "Parked cars",
+								"value": "parked_cars"
+							},
+							{
+								"text": "Separate from people walking, at the same level",
+								"value": "separate_same_level"
+							},
+							{
+								"text": "Different level or kerb from people walking",
+								"value": "different_level_from_pedestrians"
+							}
+						]
+					},
+					{
+						"text": "Who else commonly uses the cycling space?",
+						"answer_key": "bike_intrusion_users",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"cyclist"
+							],
+							"bike_facility": [
+								"shared_with_traffic",
+								"dedicated_bike_facility"
+							]
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Cars",
+								"value": "cars"
+							},
+							{
+								"text": "Motorcycles",
+								"value": "motorcycles"
+							},
+							{
+								"text": "Public transport vehicles",
+								"value": "public_transport_vehicles"
+							},
+							{
+								"text": "People walking",
+								"value": "pedestrians"
+							},
+							{
+								"text": "None",
+								"value": "none"
+							}
+						]
+					},
+					{
+						"text": "How fast does motor traffic feel on this street?",
+						"answer_key": "traffic_speed_feeling",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit"
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Very slow or traffic-calmed",
+								"value": "1_very_slow"
+							},
+							{
+								"text": "Slow",
+								"value": "2_slow"
+							},
+							{
+								"text": "Moderate",
+								"value": "3_moderate"
+							},
+							{
+								"text": "Fast",
+								"value": "4_fast"
+							},
+							{
+								"text": "Very fast",
+								"value": "5_very_fast"
+							}
+						]
+					},
+					{
+						"text": "What makes traffic interaction difficult here?",
+						"answer_key": "traffic_interaction_problems",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit"
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Poor visibility",
+								"value": "poor_visibility"
+							},
+							{
+								"text": "Vehicles drive too fast",
+								"value": "vehicles_too_fast"
+							},
+							{
+								"text": "Vehicles pass too close",
+								"value": "close_passing"
+							},
+							{
+								"text": "Difficult turns or side access",
+								"value": "difficult_turns_access"
+							},
+							{
+								"text": "Double parking or stopped vehicles",
+								"value": "double_parking_stopped"
+							},
+							{
+								"text": "Bus or tram interaction",
+								"value": "pt_interaction"
+							},
+							{
+								"text": "No clear problem",
+								"value": "none"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Your experience here",
+				"description": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
+				"backgroundColor": "#f0f0f0",
+				"questions": [
+					{
+						"text": "How often do surface problems slow you down or make you change path while walking?",
+						"answer_key": "pedestrian_surface_problem_frequency",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Never or almost never",
+								"value": "1_never"
+							},
+							{
+								"text": "Rarely",
+								"value": "2_rarely"
+							},
+							{
+								"text": "Sometimes",
+								"value": "3_sometimes"
+							},
+							{
+								"text": "Often",
+								"value": "4_often"
+							},
+							{
+								"text": "Very often",
+								"value": "5_very_often"
+							}
+						]
+					},
+					{
+						"text": "How often do obstacles block or reduce your space while walking?",
+						"answer_key": "pedestrian_obstacle_frequency",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Never or almost never",
+								"value": "1_never"
+							},
+							{
+								"text": "Rarely",
+								"value": "2_rarely"
+							},
+							{
+								"text": "Sometimes",
+								"value": "3_sometimes"
+							},
+							{
+								"text": "Often",
+								"value": "4_often"
+							},
+							{
+								"text": "Very often",
+								"value": "5_very_often"
+							}
+						]
+					},
+					{
+						"text": "How often does this segment feel too crowded?",
+						"answer_key": "crowding_frequency",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Never or almost never",
+								"value": "1_never"
+							},
+							{
+								"text": "Rarely",
+								"value": "2_rarely"
+							},
+							{
+								"text": "Sometimes",
+								"value": "3_sometimes"
+							},
+							{
+								"text": "Often",
+								"value": "4_often"
+							},
+							{
+								"text": "Very often",
+								"value": "5_very_often"
+							}
+						]
+					},
+					{
+						"text": "How often do motor vehicles pass too close while you are walking?",
+						"answer_key": "pedestrian_close_passing_frequency",
+						"question_type": "single_option",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Never or almost never",
+								"value": "1_never"
+							},
+							{
+								"text": "Rarely",
+								"value": "2_rarely"
+							},
+							{
+								"text": "Sometimes",
+								"value": "3_sometimes"
+							},
+							{
+								"text": "Often",
+								"value": "4_often"
+							},
+							{
+								"text": "Very often",
+								"value": "5_very_often"
+							}
+						]
+					},
+					{
 						"text": "How often do surface problems slow you down or make you change path while cycling?",
 						"answer_key": "cyclist_surface_problem_frequency",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -672,6 +707,7 @@
 						"answer_key": "cyclist_obstacle_frequency",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -706,6 +742,7 @@
 						"answer_key": "bike_intrusion_frequency",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"cyclist"
 							],
@@ -747,6 +784,7 @@
 						"answer_key": "cyclist_close_passing_frequency",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -788,6 +826,7 @@
 						"answer_key": "desired_walking_path",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"pedestrian"
 							],
@@ -823,6 +862,7 @@
 						"answer_key": "desired_bike_facility",
 						"question_type": "single_option",
 						"show_if": {
+							"continue_audit": "yes_audit",
 							"assessment_perspective": [
 								"cyclist"
 							],
@@ -880,7 +920,10 @@
 								"text": "Very urgent",
 								"value": "5_very_urgent"
 							}
-						]
+						],
+						"show_if": {
+							"continue_audit": "yes_audit"
+						}
 					},
 					{
 						"text": "What would improve this street segment most?",
@@ -933,28 +976,18 @@
 								"text": "Nothing important",
 								"value": "nothing"
 							}
-						]
+						],
+						"show_if": {
+							"continue_audit": "yes_audit"
+						}
 					},
 					{
 						"text": "Anything else you want to add?",
 						"answer_key": "additional_comments",
-						"question_type": "text"
-					},
-					{
-						"text": "Would you like to add a few optional details?",
-						"answer_key": "continue_audit",
-						"question_type": "single_option",
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "No, finish the assessment",
-								"value": "no_finish"
-							},
-							{
-								"text": "Yes, add optional details",
-								"value": "yes_audit"
-							}
-						]
+						"question_type": "text",
+						"show_if": {
+							"continue_audit": "yes_audit"
+						}
 					}
 				]
 			},
@@ -1103,10 +1136,6 @@
 						"checks_inline": false,
 						"options": [
 							{
-								"text": "No clear problem",
-								"value": "none"
-							},
-							{
 								"text": "Uneven surface",
 								"value": "uneven_surface"
 							},
@@ -1141,6 +1170,10 @@
 							{
 								"text": "Water collects after rain",
 								"value": "water_collects"
+							},
+							{
+								"text": "No clear problem",
+								"value": "none"
 							}
 						]
 					},
@@ -1165,10 +1198,6 @@
 						"add_other": true,
 						"checks_inline": false,
 						"options": [
-							{
-								"text": "No clear obstacle",
-								"value": "none"
-							},
 							{
 								"text": "Parked cars",
 								"value": "parked_cars"
@@ -1212,6 +1241,10 @@
 							{
 								"text": "Flooded areas after rain",
 								"value": "flooding"
+							},
+							{
+								"text": "No clear obstacle",
+								"value": "none"
 							}
 						]
 					},
@@ -1351,10 +1384,6 @@
 						"checks_inline": false,
 						"options": [
 							{
-								"text": "No clear problem",
-								"value": "none"
-							},
-							{
 								"text": "Uneven surface",
 								"value": "uneven_surface"
 							},
@@ -1389,6 +1418,10 @@
 							{
 								"text": "Uncomfortable vibration",
 								"value": "surface_vibration"
+							},
+							{
+								"text": "No clear problem",
+								"value": "none"
 							}
 						]
 					},
@@ -1410,10 +1443,6 @@
 						"add_other": true,
 						"checks_inline": false,
 						"options": [
-							{
-								"text": "No clear obstacle",
-								"value": "none"
-							},
 							{
 								"text": "Narrow sections",
 								"value": "narrow_sections"
@@ -1457,6 +1486,10 @@
 							{
 								"text": "Public transport stop or people waiting",
 								"value": "pt_stop_waiting"
+							},
+							{
+								"text": "No clear obstacle",
+								"value": "none"
 							}
 						]
 					},
@@ -1699,7 +1732,9 @@
 			"#Two or three": "Two or three",
 			"#Four or five": "Four or five",
 			"#Six or more": "Six or more",
-			"#I cannot tell": "I cannot tell"
+			"#I cannot tell": "I cannot tell",
+			"#Quick assessment": "Quick assessment",
+			"#Answer these first. Then you can finish or add optional details.": "Answer these first. Then you can finish or add optional details."
 		},
 		"it": {
 			"#Street section with a magnifying glass": "Tratto di strada con una lente d'ingrandimento",
@@ -1896,7 +1931,9 @@
 			"#Two or three": "Due o tre",
 			"#Four or five": "Quattro o cinque",
 			"#Six or more": "Sei o più",
-			"#I cannot tell": "Non riesco a stabilirlo"
+			"#I cannot tell": "Non riesco a stabilirlo",
+			"#Quick assessment": "Valutazione rapida",
+			"#Answer these first. Then you can finish or add optional details.": "Rispondi prima a queste. Poi puoi terminare o aggiungere dettagli facoltativi."
 		},
 		"fr": {
 			"#Street section with a magnifying glass": "Tronçon de rue avec une loupe",
@@ -2093,7 +2130,9 @@
 			"#Two or three": "Deux ou trois",
 			"#Four or five": "Quatre ou cinq",
 			"#Six or more": "Six ou plus",
-			"#I cannot tell": "Je ne peux pas le déterminer"
+			"#I cannot tell": "Je ne peux pas le déterminer",
+			"#Quick assessment": "Évaluation rapide",
+			"#Answer these first. Then you can finish or add optional details.": "Répondez d’abord à ces questions. Ensuite, vous pouvez terminer ou ajouter des détails facultatifs."
 		},
 		"de": {
 			"#Street section with a magnifying glass": "Straßenabschnitt mit einer Lupe",
@@ -2290,7 +2329,9 @@
 			"#Two or three": "Zwei oder drei",
 			"#Four or five": "Vier oder fünf",
 			"#Six or more": "Sechs oder mehr",
-			"#I cannot tell": "Ich kann es nicht beurteilen"
+			"#I cannot tell": "Ich kann es nicht beurteilen",
+			"#Quick assessment": "Schnelle Bewertung",
+			"#Answer these first. Then you can finish or add optional details.": "Beantworten Sie zuerst diese Fragen. Danach können Sie abschließen oder optionale Details hinzufügen."
 		},
 		"tr": {
 			"#Street section with a magnifying glass": "Büyüteçli sokak bölümü",
@@ -2487,7 +2528,9 @@
 			"#Two or three": "İki veya üç",
 			"#Four or five": "Dört veya beş",
 			"#Six or more": "Altı veya daha fazla",
-			"#I cannot tell": "Anlayamıyorum"
+			"#I cannot tell": "Anlayamıyorum",
+			"#Quick assessment": "Hızlı değerlendirme",
+			"#Answer these first. Then you can finish or add optional details.": "Önce bunları yanıtlayın. Ardından bitirebilir veya isteğe bağlı ayrıntılar ekleyebilirsiniz."
 		},
 		"fa": {
 			"#Street section with a magnifying glass": "بخشی از خیابان با ذره‌بین",
@@ -2684,7 +2727,9 @@
 			"#Two or three": "دو یا سه",
 			"#Four or five": "چهار یا پنج",
 			"#Six or more": "شش یا بیشتر",
-			"#I cannot tell": "نمی‌توانم تشخیص دهم"
+			"#I cannot tell": "نمی‌توانم تشخیص دهم",
+			"#Quick assessment": "ارزیابی سریع",
+			"#Answer these first. Then you can finish or add optional details.": "ابتدا به این پرسش‌ها پاسخ دهید. سپس می‌توانید پایان دهید یا جزئیات اختیاری اضافه کنید."
 		},
 		"hu": {
 			"#Street section with a magnifying glass": "Utcaszakasz nagyítóval",
@@ -2881,7 +2926,9 @@
 			"#Two or three": "Kettő vagy három",
 			"#Four or five": "Négy vagy öt",
 			"#Six or more": "Hat vagy több",
-			"#I cannot tell": "Nem tudom megállapítani"
+			"#I cannot tell": "Nem tudom megállapítani",
+			"#Quick assessment": "Gyors értékelés",
+			"#Answer these first. Then you can finish or add optional details.": "Először ezekre válaszoljon. Utána befejezheti, vagy hozzáadhat választható részleteket."
 		},
 		"ar": {
 			"#Street section with a magnifying glass": "جزء من شارع مع عدسة مكبرة",
@@ -3078,7 +3125,9 @@
 			"#Two or three": "اثنان أو ثلاثة",
 			"#Four or five": "أربعة أو خمسة",
 			"#Six or more": "ستة أو أكثر",
-			"#I cannot tell": "لا أستطيع التحديد"
+			"#I cannot tell": "لا أستطيع التحديد",
+			"#Quick assessment": "تقييم سريع",
+			"#Answer these first. Then you can finish or add optional details.": "أجب عن هذه الأسئلة أولًا. بعد ذلك يمكنك الإنهاء أو إضافة تفاصيل اختيارية."
 		}
 	},
 	"id": "street_segment_assessment",

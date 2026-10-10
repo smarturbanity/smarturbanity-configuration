@@ -169,6 +169,16 @@ A form definition should describe the form itself, while its availability can de
 
 This avoids creating separate copies of the same form for every pilot.
 
+Every form is self-standing: it asks its own context questions (point of view, how often the person uses the place) and does not rely on answers given in another form. An application may pre-fill such a question from an earlier answer, but the person confirms it in the form.
+
+### Minimum and details
+
+The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), the use difficulty and the perceived risk for the selected mode, and the perceived safety of an underpass or a bridge. These are the indicators the infrastructure view uses. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition.
+
+### Missing elements
+
+A missing crossing or connection uses `missing_connection_report`; a missing walking or cycling path uses `missing_path_report`. Both reuse option sets of the assessments (`connection_form`, `walk_facility`, `bike_facility`) and of the improvement proposal (`proposal_beneficiaries`), so their answers can be compared. `missing_network_element_report` remains for reports that a mapped element does not exist.
+
 ### Questionnaire consent
 
 Every form starts with one common eligibility screen: data-processing consent, an
@@ -282,6 +292,8 @@ Configuration files should be version controlled through Git.
 Individual configuration objects may additionally expose explicit schema or configuration versions where required, particularly for reusable definitions and forms.
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
+
+Applications check the `questionnaire_version` of each form they load against the version they expect, so a changed form needs a new version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
 
 ## Scope
 

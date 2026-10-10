@@ -2,7 +2,7 @@
   "config_type": "smarturbanity_survey_campaigns",
   "config_version": "0.1.0",
   "pilot_id": "rome",
-  "pilot_period": {"start_date": null, "end_date": null, "timezone": "Europe/Rome"},
+  "pilot_period": {"start_date": "2026-11-07", "end_date": null, "timezone": "Europe/Rome"},
   "rules": {
     "show_all_in_debug": true
   },
@@ -75,7 +75,12 @@
       "enabled": true,
       "priority": 0,
       "window": {"from_week": 2, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
-      "area": null,
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 1000
+      },
       "exclusive": false,
       "questionnaires": ["street_connection_assessment"]
     },
@@ -84,7 +89,12 @@
       "enabled": true,
       "priority": 0,
       "window": {"from_week": 3, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
-      "area": null,
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 1000
+      },
       "exclusive": false,
       "questionnaires": ["street_segment_assessment"]
     },
@@ -102,39 +112,44 @@
       "enabled": true,
       "priority": 0,
       "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
-      "area": null,
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 1000
+      },
       "exclusive": false,
       "questionnaires": [
         "smarturbanity_geolocated_perception_report",
-        "smarturbanity_near_miss_report",
-        "smarturbanity_missing_network_element_report"
+        "smarturbanity_missing_connection_report",
+        "smarturbanity_missing_path_report"
       ]
     },
     "rome_test_event_surveys": {
-      "name": "Test event 24 October: questionnaires",
+      "name": "Public presentation 7 November: questionnaires",
       "enabled": true,
       "priority": 10,
       "window": {
         "from_week": null,
         "until_week": null,
-        "valid_from": "2026-10-24",
-        "valid_until": "2026-10-24",
+        "valid_from": "2026-11-07",
+        "valid_until": "2026-11-07",
         "extended_until": null
       },
       "area": null,
       "exclusive": true,
       "questionnaires": ["smarturbanity_about_you", "smarturbanity_walking"],
-      "group": "rome_test_event_2026_10_24"
+      "group": "rome_public_event_2026_11_07"
     },
     "rome_test_event_reports": {
-      "name": "Test event 24 October: reports near Largo Ravizza",
+      "name": "Public presentation 7 November: reports near Largo Ravizza",
       "enabled": true,
       "priority": 10,
       "window": {
         "from_week": null,
         "until_week": null,
-        "valid_from": "2026-10-24",
-        "valid_until": "2026-10-24",
+        "valid_from": "2026-11-07",
+        "valid_until": "2026-11-07",
         "extended_until": null
       },
       "area": {
@@ -147,11 +162,11 @@
       "questionnaires": [
         "street_connection_assessment",
         "street_segment_assessment",
-        "smarturbanity_missing_network_element_report",
-        "smarturbanity_geolocated_perception_report",
-        "smarturbanity_near_miss_report"
+        "smarturbanity_missing_connection_report",
+        "smarturbanity_missing_path_report",
+        "smarturbanity_geolocated_perception_report"
       ],
-      "group": "rome_test_event_2026_10_24"
+      "group": "rome_public_event_2026_11_07"
     }
   }
 }

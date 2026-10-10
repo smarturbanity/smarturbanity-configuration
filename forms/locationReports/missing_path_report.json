@@ -1,0 +1,343 @@
+{
+  "questionnaire": {
+    "name": "Missing Path Report",
+    "questionnaire_id": "smarturbanity_missing_path_report",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
+    "image_alt": "#Street with a missing section and a plus sign",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "sections": [
+      {
+        "title": "Missing path",
+        "description": "Tell us about the walking or cycling path that is missing here.",
+        "questions": [
+          {
+            "text": "What kind of path is needed here?",
+            "answer_key": "needed_path_type",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Road shoulder available for walking",
+                "value": "shoulder"
+              },
+              {
+                "text": "Shared walking and cycling path",
+                "value": "shared_ped_bike_path"
+              },
+              {
+                "text": "Walking area at the same level as the road",
+                "value": "level_walking_area"
+              },
+              {
+                "text": "Raised sidewalk",
+                "value": "raised_sidewalk"
+              },
+              {
+                "text": "Dedicated walking street or area",
+                "value": "dedicated_pedestrian_area"
+              },
+              {
+                "text": "Dedicated cycling infrastructure",
+                "value": "dedicated_bike_facility"
+              }
+            ]
+          },
+          {
+            "text": "How urgent is it to add this path?",
+            "answer_key": "missing_element_urgency",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not urgent",
+                "value": "1_not_urgent"
+              },
+              {
+                "text": "Slightly urgent",
+                "value": "2_slightly_urgent"
+              },
+              {
+                "text": "Moderately urgent",
+                "value": "3_moderately_urgent"
+              },
+              {
+                "text": "Urgent",
+                "value": "4_urgent"
+              },
+              {
+                "text": "Very urgent",
+                "value": "5_very_urgent"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
+          },
+          {
+            "text": "Who would it help most?",
+            "answer_key": "proposal_beneficiaries",
+            "question_type": "multiple_options",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "People on foot",
+                "value": "pedestrian"
+              },
+              {
+                "text": "People in a wheelchair or with a pram",
+                "value": "wheelchair"
+              },
+              {
+                "text": "People on a bike or e-scooter",
+                "value": "cyclist"
+              },
+              {
+                "text": "Public transport users",
+                "value": "pt_user"
+              },
+              {
+                "text": "Everyone",
+                "value": "everyone"
+              }
+            ]
+          },
+          {
+            "text": "What should reviewers know about this location?",
+            "answer_key": "observation_details",
+            "question_type": "textarea",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html"
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
+      "#Missing Path Report": "Missing Path Report",
+      "#Missing path": "Missing path",
+      "#Tell us about the walking or cycling path that is missing here.": "Tell us about the walking or cycling path that is missing here.",
+      "#What kind of path is needed here?": "What kind of path is needed here?",
+      "#How urgent is it to add this path?": "How urgent is it to add this path?",
+      "#Road shoulder available for walking": "Road shoulder available for walking",
+      "#Shared walking and cycling path": "Shared walking and cycling path",
+      "#Walking area at the same level as the road": "Walking area at the same level as the road",
+      "#Raised sidewalk": "Raised sidewalk",
+      "#Dedicated walking street or area": "Dedicated walking street or area",
+      "#Dedicated cycling infrastructure": "Dedicated cycling infrastructure",
+      "#Not urgent": "Not urgent",
+      "#Slightly urgent": "Slightly urgent",
+      "#Moderately urgent": "Moderately urgent",
+      "#Urgent": "Urgent",
+      "#Very urgent": "Very urgent",
+      "#Who would it help most?": "Who would it help most?",
+      "#People on foot": "People on foot",
+      "#People in a wheelchair or with a pram": "People in a wheelchair or with a pram",
+      "#People on a bike or e-scooter": "People on a bike or e-scooter",
+      "#Public transport users": "Public transport users",
+      "#Everyone": "Everyone",
+      "#What should reviewers know about this location?": "What should reviewers know about this location?"
+    },
+    "it": {
+      "code": "it",
+      "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
+      "#Missing Path Report": "Segnalazione di percorso mancante",
+      "#Missing path": "Percorso mancante",
+      "#Tell us about the walking or cycling path that is missing here.": "Raccontaci il percorso a piedi o in bicicletta che qui manca.",
+      "#What kind of path is needed here?": "Che tipo di percorso servirebbe qui?",
+      "#How urgent is it to add this path?": "Quanto è urgente aggiungere questo percorso?",
+      "#Road shoulder available for walking": "Banchina stradale utilizzabile a piedi",
+      "#Shared walking and cycling path": "Percorso condiviso da persone a piedi e in bicicletta",
+      "#Walking area at the same level as the road": "Spazio pedonale allo stesso livello della carreggiata",
+      "#Raised sidewalk": "Marciapiede rialzato",
+      "#Dedicated walking street or area": "Strada o area riservata alle persone a piedi",
+      "#Dedicated cycling infrastructure": "Spazio dedicato alle biciclette",
+      "#Not urgent": "Non urgente",
+      "#Slightly urgent": "Poco urgente",
+      "#Moderately urgent": "Abbastanza urgente",
+      "#Urgent": "Urgente",
+      "#Very urgent": "Molto urgente",
+      "#Who would it help most?": "A chi sarebbe più utile?",
+      "#People on foot": "Persone a piedi",
+      "#People in a wheelchair or with a pram": "Persone in sedia a rotelle o con passeggino",
+      "#People on a bike or e-scooter": "Persone in bici o monopattino",
+      "#Public transport users": "Chi usa i mezzi pubblici",
+      "#Everyone": "Tutti",
+      "#What should reviewers know about this location?": "Cosa dovrebbero sapere i revisori su questo luogo?"
+    },
+    "fr": {
+      "code": "fr",
+      "#Street with a missing section and a plus sign": "Rue avec un tronçon manquant et un signe plus",
+      "#Missing Path Report": "Signalement de cheminement manquant",
+      "#Missing path": "Cheminement manquant",
+      "#Tell us about the walking or cycling path that is missing here.": "Parlez-nous du cheminement piéton ou cyclable qui manque ici.",
+      "#What kind of path is needed here?": "Quel type de cheminement faudrait-il ici ?",
+      "#How urgent is it to add this path?": "À quel point est-il urgent d’ajouter ce cheminement ?",
+      "#Road shoulder available for walking": "Accotement disponible pour marcher",
+      "#Shared walking and cycling path": "Chemin partagé pour la marche et le vélo",
+      "#Walking area at the same level as the road": "Espace piéton au même niveau que la chaussée",
+      "#Raised sidewalk": "Trottoir surélevé",
+      "#Dedicated walking street or area": "Rue ou zone réservée aux piétons",
+      "#Dedicated cycling infrastructure": "Aménagement cyclable réservé",
+      "#Not urgent": "Pas urgent",
+      "#Slightly urgent": "Peu urgent",
+      "#Moderately urgent": "Modérément urgent",
+      "#Urgent": "Urgent",
+      "#Very urgent": "Très urgent",
+      "#Who would it help most?": "À qui cela serait-il le plus utile ?",
+      "#People on foot": "Personnes à pied",
+      "#People in a wheelchair or with a pram": "Personnes en fauteuil roulant ou avec une poussette",
+      "#People on a bike or e-scooter": "Personnes à vélo ou en trottinette",
+      "#Public transport users": "Usagers des transports en commun",
+      "#Everyone": "Tout le monde",
+      "#What should reviewers know about this location?": "Que devraient savoir les personnes chargées de la vérification à propos de cet endroit ?"
+    },
+    "de": {
+      "code": "de",
+      "#Street with a missing section and a plus sign": "Straße mit einem fehlenden Abschnitt und einem Pluszeichen",
+      "#Missing Path Report": "Meldung eines fehlenden Weges",
+      "#Missing path": "Fehlender Weg",
+      "#Tell us about the walking or cycling path that is missing here.": "Beschreiben Sie den Geh- oder Radweg, der hier fehlt.",
+      "#What kind of path is needed here?": "Welche Art von Weg wird hier gebraucht?",
+      "#How urgent is it to add this path?": "Wie dringend sollte dieser Weg geschaffen werden?",
+      "#Road shoulder available for walking": "Straßenrand/Seitenstreifen zum Gehen vorhanden",
+      "#Shared walking and cycling path": "Gemeinsamer Geh- und Radweg",
+      "#Walking area at the same level as the road": "Gehbereich auf gleicher Höhe wie die Fahrbahn",
+      "#Raised sidewalk": "Erhöhter Gehweg",
+      "#Dedicated walking street or area": "Eigene Fußgängerstraße oder eigener Fußgängerbereich",
+      "#Dedicated cycling infrastructure": "Eigene Radinfrastruktur",
+      "#Not urgent": "Nicht dringend",
+      "#Slightly urgent": "Wenig dringend",
+      "#Moderately urgent": "Mäßig dringend",
+      "#Urgent": "Dringend",
+      "#Very urgent": "Sehr dringend",
+      "#Who would it help most?": "Wem würde es am meisten helfen?",
+      "#People on foot": "Menschen zu Fuß",
+      "#People in a wheelchair or with a pram": "Menschen im Rollstuhl oder mit Kinderwagen",
+      "#People on a bike or e-scooter": "Menschen mit Fahrrad oder E-Scooter",
+      "#Public transport users": "Nutzende des öffentlichen Verkehrs",
+      "#Everyone": "Allen",
+      "#What should reviewers know about this location?": "Was sollten die Prüfenden über diesen Ort wissen?"
+    },
+    "tr": {
+      "code": "tr",
+      "#Street with a missing section and a plus sign": "Eksik bir bölümü ve artı işareti olan sokak",
+      "#Missing Path Report": "Eksik Yol Bildirimi",
+      "#Missing path": "Eksik yol",
+      "#Tell us about the walking or cycling path that is missing here.": "Burada eksik olan yürüyüş veya bisiklet yolunu anlatın.",
+      "#What kind of path is needed here?": "Burada ne tür bir yola ihtiyaç var?",
+      "#How urgent is it to add this path?": "Bu yolu eklemek ne kadar acil?",
+      "#Road shoulder available for walking": "Yol kenarı yürümek için kullanılabilir",
+      "#Shared walking and cycling path": "Ortak yaya ve bisiklet yolu",
+      "#Walking area at the same level as the road": "Yürüyüş alanı yol ile aynı seviyede",
+      "#Raised sidewalk": "Yükseltilmiş kaldırım",
+      "#Dedicated walking street or area": "Yürümeye ayrılmış sokak veya alan",
+      "#Dedicated cycling infrastructure": "Ayrılmış bisiklet altyapısı",
+      "#Not urgent": "Acil değil",
+      "#Slightly urgent": "Biraz acil",
+      "#Moderately urgent": "Orta derecede acil",
+      "#Urgent": "Acil",
+      "#Very urgent": "Çok acil",
+      "#Who would it help most?": "En çok kime yardımcı olur?",
+      "#People on foot": "Yayalar",
+      "#People in a wheelchair or with a pram": "Tekerlekli sandalye kullananlar veya bebek arabası olanlar",
+      "#People on a bike or e-scooter": "Bisiklet veya e-scooter kullananlar",
+      "#Public transport users": "Toplu taşıma kullananlar",
+      "#Everyone": "Herkes",
+      "#What should reviewers know about this location?": "İnceleyenler bu konum hakkında ne bilmeli?"
+    },
+    "fa": {
+      "code": "fa",
+      "#Street with a missing section and a plus sign": "خیابانی با یک بخش ناقص و علامت به‌علاوه",
+      "#Missing Path Report": "گزارش مسیر گمشده",
+      "#Missing path": "مسیر گمشده",
+      "#Tell us about the walking or cycling path that is missing here.": "درباره مسیر پیاده یا دوچرخه‌ای که اینجا وجود ندارد به ما بگویید.",
+      "#What kind of path is needed here?": "اینجا چه نوع مسیری لازم است؟",
+      "#How urgent is it to add this path?": "افزودن این مسیر چقدر فوری است؟",
+      "#Road shoulder available for walking": "شانه خیابان برای پیاده‌روی قابل استفاده است",
+      "#Shared walking and cycling path": "مسیر مشترک پیاده و دوچرخه",
+      "#Walking area at the same level as the road": "فضای پیاده در همان سطح خیابان",
+      "#Raised sidewalk": "پیاده‌رو مرتفع",
+      "#Dedicated walking street or area": "خیابان یا محدوده اختصاصی پیاده",
+      "#Dedicated cycling infrastructure": "زیرساخت اختصاصی دوچرخه",
+      "#Not urgent": "فوری نیست",
+      "#Slightly urgent": "کمی فوری",
+      "#Moderately urgent": "با فوریت متوسط",
+      "#Urgent": "فوری",
+      "#Very urgent": "بسیار فوری",
+      "#Who would it help most?": "بیشتر به چه کسانی کمک می‌کند؟",
+      "#People on foot": "افراد پیاده",
+      "#People in a wheelchair or with a pram": "افراد با ویلچر یا کالسکه",
+      "#People on a bike or e-scooter": "افراد با دوچرخه یا اسکوتر برقی",
+      "#Public transport users": "کاربران حمل‌ونقل عمومی",
+      "#Everyone": "همه",
+      "#What should reviewers know about this location?": "بازبینان باید درباره این مکان چه بدانند؟"
+    },
+    "hu": {
+      "code": "hu",
+      "#Street with a missing section and a plus sign": "Utca egy hiányzó szakasszal és egy pluszjellel",
+      "#Missing Path Report": "Hiányzó útvonal bejelentése",
+      "#Missing path": "Hiányzó útvonal",
+      "#Tell us about the walking or cycling path that is missing here.": "Írja le, milyen gyalogos vagy kerékpáros útvonal hiányzik itt.",
+      "#What kind of path is needed here?": "Milyen útvonalra lenne itt szükség?",
+      "#How urgent is it to add this path?": "Mennyire sürgős ennek az útvonalnak a kiépítése?",
+      "#Road shoulder available for walking": "Útpadka használható gyaloglásra",
+      "#Shared walking and cycling path": "Közös gyalog- és kerékpárút",
+      "#Walking area at the same level as the road": "Gyalogos terület az úttal azonos szinten",
+      "#Raised sidewalk": "Megemelt járda",
+      "#Dedicated walking street or area": "Kijelölt gyalogos utca vagy terület",
+      "#Dedicated cycling infrastructure": "Kijelölt kerékpáros infrastruktúra",
+      "#Not urgent": "Nem sürgős",
+      "#Slightly urgent": "Kissé sürgős",
+      "#Moderately urgent": "Közepesen sürgős",
+      "#Urgent": "Sürgős",
+      "#Very urgent": "Nagyon sürgős",
+      "#Who would it help most?": "Kinek segítene a legtöbbet?",
+      "#People on foot": "Gyalogosoknak",
+      "#People in a wheelchair or with a pram": "Kerekesszékeseknek vagy babakocsival közlekedőknek",
+      "#People on a bike or e-scooter": "Kerékpárral vagy elektromos rollerrel közlekedőknek",
+      "#Public transport users": "Tömegközlekedést használóknak",
+      "#Everyone": "Mindenkinek",
+      "#What should reviewers know about this location?": "Mit érdemes tudniuk az ellenőrzőknek erről a helyről?"
+    },
+    "ar": {
+      "code": "ar",
+      "#Street with a missing section and a plus sign": "شارع به جزء مفقود وعلامة زائد",
+      "#Missing Path Report": "بلاغ عن مسار مفقود",
+      "#Missing path": "مسار مفقود",
+      "#Tell us about the walking or cycling path that is missing here.": "أخبرنا عن مسار المشي أو الدراجات المفقود هنا.",
+      "#What kind of path is needed here?": "ما نوع المسار المطلوب هنا؟",
+      "#How urgent is it to add this path?": "ما مدى إلحاح إضافة هذا المسار؟",
+      "#Road shoulder available for walking": "كتف الطريق متاح للمشي",
+      "#Shared walking and cycling path": "مسار مشترك للمشي وركوب الدراجات",
+      "#Walking area at the same level as the road": "مساحة مشاة على نفس مستوى الطريق",
+      "#Raised sidewalk": "رصيف مرتفع",
+      "#Dedicated walking street or area": "شارع أو منطقة مخصصة للمشي",
+      "#Dedicated cycling infrastructure": "بنية تحتية مخصصة للدراجات",
+      "#Not urgent": "غير عاجل",
+      "#Slightly urgent": "عاجل قليلًا",
+      "#Moderately urgent": "متوسط الإلحاح",
+      "#Urgent": "عاجل",
+      "#Very urgent": "عاجل جدًا",
+      "#Who would it help most?": "مَن سيستفيد منه أكثر؟",
+      "#People on foot": "المشاة",
+      "#People in a wheelchair or with a pram": "مستخدمو الكراسي المتحركة أو عربات الأطفال",
+      "#People on a bike or e-scooter": "راكبو الدراجات أو السكوترات الكهربائية",
+      "#Public transport users": "مستخدمو النقل العام",
+      "#Everyone": "الجميع",
+      "#What should reviewers know about this location?": "ما الذي ينبغي أن يعرفه المراجعون عن هذا الموقع؟"
+    }
+  }
+}

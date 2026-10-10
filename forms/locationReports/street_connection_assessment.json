@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.1.3",
+    "questionnaire_version": "0.2.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -101,8 +101,8 @@
         ]
       },
       {
-        "title": "Describe this connection",
-        "description": "Look at the place. Answer only what you can see.",
+        "title": "Quick assessment",
+        "description": "Answer these first. Then you can finish or add optional details.",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -134,327 +134,6 @@
               }
             ]
           },
-          {
-            "text": "Can people walking use this connection?",
-            "answer_key": "pedestrian_access",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Yes, clearly and comfortably",
-                "value": "yes_clear"
-              },
-              {
-                "text": "Yes, but it is not very clear",
-                "value": "yes_unclear"
-              },
-              {
-                "text": "Yes, but with difficulty",
-                "value": "yes_difficult"
-              },
-              {
-                "text": "No, pedestrians cannot or should not use it",
-                "value": "not_possible"
-              }
-            ],
-            "show_if": {
-              "assessment_perspective": [
-                "pedestrian"
-              ]
-            }
-          },
-          {
-            "text": "Can bicycles use this connection?",
-            "answer_key": "bicycle_access",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Yes, with a dedicated bicycle space",
-                "value": "dedicated_bicycle_space"
-              },
-              {
-                "text": "Yes, shared with people walking",
-                "value": "shared_with_pedestrians"
-              },
-              {
-                "text": "Yes, shared with traffic",
-                "value": "shared_with_traffic"
-              },
-              {
-                "text": "Yes, but people cycling probably need to dismount",
-                "value": "dismount_needed"
-              },
-              {
-                "text": "No, bicycles cannot or should not use it",
-                "value": "not_possible"
-              }
-            ],
-            "show_if": {
-              "assessment_perspective": [
-                "cyclist"
-              ]
-            }
-          },
-          {
-            "text": "Which elements are part of this connection?",
-            "answer_key": "connection_elements",
-            "question_type": "multiple_options",
-            "add_other": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Stairs",
-                "value": "stairs"
-              },
-              {
-                "text": "Ramp",
-                "value": "ramp"
-              },
-              {
-                "text": "Elevator",
-                "value": "elevator"
-              },
-              {
-                "text": "Escalator",
-                "value": "escalator"
-              }
-            ],
-            "show_if": {
-              "connection_form": [
-                "under_road",
-                "over_road",
-                "level_change",
-                "other"
-              ]
-            }
-          },
-          {
-            "text": "When people use this connection, how is crossing controlled?",
-            "answer_key": "traffic_control",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "There is no signal or clear priority",
-                "value": "no_control"
-              },
-              {
-                "text": "Vehicles should give way, but there is no signal",
-                "value": "priority_no_signal"
-              },
-              {
-                "text": "There is a signal and conflicting vehicles are stopped when people cross",
-                "value": "protected_signal"
-              },
-              {
-                "text": "There is a signal, but turning vehicles may still cross the path",
-                "value": "permissive_signal_with_turning_conflict"
-              },
-              {
-                "text": "There is a signal, but priority is unclear",
-                "value": "unclear_signal_priority"
-              },
-              {
-                "text": "I don't know / I cannot tell",
-                "value": "dont_know"
-              }
-            ],
-            "show_if": {
-              "connection_form": "street_level"
-            }
-          },
-          {
-            "text": "How many traffic lanes must people cross here?",
-            "answer_key": "lanes_crossed",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "1 lane",
-                "value": "1"
-              },
-              {
-                "text": "2 lanes",
-                "value": "2"
-              },
-              {
-                "text": "3 lanes",
-                "value": "3"
-              },
-              {
-                "text": "4 lanes",
-                "value": "4"
-              },
-              {
-                "text": "5 or more lanes",
-                "value": "5_plus"
-              }
-            ],
-            "show_if": {
-              "connection_form": "street_level"
-            }
-          },
-          {
-            "text": "How easy is it to understand where people should go?",
-            "answer_key": "connection_clarity",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Very easy",
-                "value": "1_very_easy"
-              },
-              {
-                "text": "Easy",
-                "value": "2_easy"
-              },
-              {
-                "text": "Neither easy nor difficult",
-                "value": "3_neutral"
-              },
-              {
-                "text": "Difficult",
-                "value": "4_difficult"
-              },
-              {
-                "text": "Very difficult",
-                "value": "5_very_difficult"
-              }
-            ]
-          },
-          {
-            "text": "Before crossing, can people clearly see approaching vehicles or bicycles?",
-            "answer_key": "street_level_visibility",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Yes, clearly",
-                "value": "1_clear"
-              },
-              {
-                "text": "Partly",
-                "value": "2_partly"
-              },
-              {
-                "text": "No, visibility is poor",
-                "value": "3_poor"
-              },
-              {
-                "text": "Not relevant / I cannot tell",
-                "value": "not_relevant_or_dont_know"
-              }
-            ],
-            "show_if": {
-              "connection_form": "street_level"
-            }
-          },
-          {
-            "text": "Can people clearly see the path and the exit?",
-            "answer_key": "spatial_visibility",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Yes, the path and exit are clearly visible",
-                "value": "1_clear"
-              },
-              {
-                "text": "Partly, some areas are hidden",
-                "value": "2_partly"
-              },
-              {
-                "text": "No, there are blind corners or hidden areas",
-                "value": "3_poor"
-              },
-              {
-                "text": "Not relevant / I cannot tell",
-                "value": "not_relevant_or_dont_know"
-              }
-            ],
-            "show_if": {
-              "connection_form": [
-                "under_road",
-                "over_road",
-                "level_change",
-                "other"
-              ]
-            }
-          },
-          {
-            "text": "Is there enough room to wait or stop safely?",
-            "answer_key": "waiting_or_stopping_space",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "No safe place",
-                "value": "1_no_safe_space"
-              },
-              {
-                "text": "A place exists, but it is too small",
-                "value": "2_too_small"
-              },
-              {
-                "text": "Enough safe space",
-                "value": "3_enough_space"
-              },
-              {
-                "text": "No waiting or stopping space is needed here",
-                "value": "not_needed"
-              }
-            ]
-          },
-          {
-            "text": "Who might face barriers when using this connection?",
-            "answer_key": "users_with_difficulty",
-            "question_type": "multiple_options",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "People using wheelchairs",
-                "value": "wheelchair_users"
-              },
-              {
-                "text": "People using a walker or walking aid",
-                "value": "walking_aid_users"
-              },
-              {
-                "text": "People with strollers",
-                "value": "stroller_users"
-              },
-              {
-                "text": "People on bicycles",
-                "value": "bicycle_users"
-              },
-              {
-                "text": "Blind or visually impaired people",
-                "value": "blind_or_visually_impaired"
-              },
-              {
-                "text": "Older people or people who need more time",
-                "value": "older_slow_walkers"
-              },
-              {
-                "text": "No one in particular",
-                "value": "none"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Your experience here",
-        "description": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
-        "backgroundColor": "#f0f0f0",
-        "questions": [
           {
             "text": "Which best describes using this connection while walking?",
             "answer_key": "pedestrian_use_difficulty",
@@ -592,74 +271,6 @@
             }
           },
           {
-            "text": "When there is no signal, how often do people driving stop for people using this connection?",
-            "answer_key": "driver_yielding",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Never",
-                "value": "1_never"
-              },
-              {
-                "text": "Rarely",
-                "value": "2_rarely"
-              },
-              {
-                "text": "About half of the time",
-                "value": "3_half"
-              },
-              {
-                "text": "Usually",
-                "value": "4_usually"
-              },
-              {
-                "text": "Always or almost always",
-                "value": "5_always"
-              }
-            ],
-            "show_if": {
-              "traffic_control": "priority_no_signal"
-            }
-          },
-          {
-            "text": "At the signal, how long do people usually wait for green?",
-            "answer_key": "signal_wait_time",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Less than 10 seconds",
-                "value": "1_less_than_10s"
-              },
-              {
-                "text": "10–30 seconds",
-                "value": "2_10_30s"
-              },
-              {
-                "text": "30–60 seconds",
-                "value": "3_30_60s"
-              },
-              {
-                "text": "1–2 minutes",
-                "value": "4_1_2min"
-              },
-              {
-                "text": "More than 2 minutes",
-                "value": "5_more_than_2min"
-              }
-            ],
-            "show_if": {
-              "traffic_control": [
-                "protected_signal",
-                "permissive_signal_with_turning_conflict",
-                "unclear_signal_priority"
-              ]
-            }
-          },
-          {
             "text": "How safe do you feel in this underpass?",
             "answer_key": "tunnel_perceived_safety",
             "question_type": "single_option",
@@ -722,6 +333,436 @@
             "show_if": {
               "connection_form": "over_road"
             }
+          },
+          {
+            "text": "Would you like to add a few optional details?",
+            "answer_key": "continue_audit",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No, finish the assessment",
+                "value": "no_finish"
+              },
+              {
+                "text": "Yes, add optional details",
+                "value": "yes_audit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Describe this connection",
+        "description": "Look at the place. Answer only what you can see.",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Can people walking use this connection?",
+            "answer_key": "pedestrian_access",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, clearly and comfortably",
+                "value": "yes_clear"
+              },
+              {
+                "text": "Yes, but it is not very clear",
+                "value": "yes_unclear"
+              },
+              {
+                "text": "Yes, but with difficulty",
+                "value": "yes_difficult"
+              },
+              {
+                "text": "No, pedestrians cannot or should not use it",
+                "value": "not_possible"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "assessment_perspective": [
+                "pedestrian"
+              ]
+            }
+          },
+          {
+            "text": "Can bicycles use this connection?",
+            "answer_key": "bicycle_access",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, with a dedicated bicycle space",
+                "value": "dedicated_bicycle_space"
+              },
+              {
+                "text": "Yes, shared with people walking",
+                "value": "shared_with_pedestrians"
+              },
+              {
+                "text": "Yes, shared with traffic",
+                "value": "shared_with_traffic"
+              },
+              {
+                "text": "Yes, but people cycling probably need to dismount",
+                "value": "dismount_needed"
+              },
+              {
+                "text": "No, bicycles cannot or should not use it",
+                "value": "not_possible"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "assessment_perspective": [
+                "cyclist"
+              ]
+            }
+          },
+          {
+            "text": "Which elements are part of this connection?",
+            "answer_key": "connection_elements",
+            "question_type": "multiple_options",
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Stairs",
+                "value": "stairs"
+              },
+              {
+                "text": "Ramp",
+                "value": "ramp"
+              },
+              {
+                "text": "Elevator",
+                "value": "elevator"
+              },
+              {
+                "text": "Escalator",
+                "value": "escalator"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": [
+                "under_road",
+                "over_road",
+                "level_change",
+                "other"
+              ]
+            }
+          },
+          {
+            "text": "When people use this connection, how is crossing controlled?",
+            "answer_key": "traffic_control",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "There is no signal or clear priority",
+                "value": "no_control"
+              },
+              {
+                "text": "Vehicles should give way, but there is no signal",
+                "value": "priority_no_signal"
+              },
+              {
+                "text": "There is a signal and conflicting vehicles are stopped when people cross",
+                "value": "protected_signal"
+              },
+              {
+                "text": "There is a signal, but turning vehicles may still cross the path",
+                "value": "permissive_signal_with_turning_conflict"
+              },
+              {
+                "text": "There is a signal, but priority is unclear",
+                "value": "unclear_signal_priority"
+              },
+              {
+                "text": "I don't know / I cannot tell",
+                "value": "dont_know"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": "street_level"
+            }
+          },
+          {
+            "text": "How many traffic lanes must people cross here?",
+            "answer_key": "lanes_crossed",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "1 lane",
+                "value": "1"
+              },
+              {
+                "text": "2 lanes",
+                "value": "2"
+              },
+              {
+                "text": "3 lanes",
+                "value": "3"
+              },
+              {
+                "text": "4 lanes",
+                "value": "4"
+              },
+              {
+                "text": "5 or more lanes",
+                "value": "5_plus"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": "street_level"
+            }
+          },
+          {
+            "text": "How easy is it to understand where people should go?",
+            "answer_key": "connection_clarity",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Very easy",
+                "value": "1_very_easy"
+              },
+              {
+                "text": "Easy",
+                "value": "2_easy"
+              },
+              {
+                "text": "Neither easy nor difficult",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Difficult",
+                "value": "4_difficult"
+              },
+              {
+                "text": "Very difficult",
+                "value": "5_very_difficult"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
+          },
+          {
+            "text": "Before crossing, can people clearly see approaching vehicles or bicycles?",
+            "answer_key": "street_level_visibility",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, clearly",
+                "value": "1_clear"
+              },
+              {
+                "text": "Partly",
+                "value": "2_partly"
+              },
+              {
+                "text": "No, visibility is poor",
+                "value": "3_poor"
+              },
+              {
+                "text": "Not relevant / I cannot tell",
+                "value": "not_relevant_or_dont_know"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": "street_level"
+            }
+          },
+          {
+            "text": "Can people clearly see the path and the exit?",
+            "answer_key": "spatial_visibility",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, the path and exit are clearly visible",
+                "value": "1_clear"
+              },
+              {
+                "text": "Partly, some areas are hidden",
+                "value": "2_partly"
+              },
+              {
+                "text": "No, there are blind corners or hidden areas",
+                "value": "3_poor"
+              },
+              {
+                "text": "Not relevant / I cannot tell",
+                "value": "not_relevant_or_dont_know"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": [
+                "under_road",
+                "over_road",
+                "level_change",
+                "other"
+              ]
+            }
+          },
+          {
+            "text": "Is there enough room to wait or stop safely?",
+            "answer_key": "waiting_or_stopping_space",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No safe place",
+                "value": "1_no_safe_space"
+              },
+              {
+                "text": "A place exists, but it is too small",
+                "value": "2_too_small"
+              },
+              {
+                "text": "Enough safe space",
+                "value": "3_enough_space"
+              },
+              {
+                "text": "No waiting or stopping space is needed here",
+                "value": "not_needed"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
+          },
+          {
+            "text": "Who might face barriers when using this connection?",
+            "answer_key": "users_with_difficulty",
+            "question_type": "multiple_options",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "People using wheelchairs",
+                "value": "wheelchair_users"
+              },
+              {
+                "text": "People using a walker or walking aid",
+                "value": "walking_aid_users"
+              },
+              {
+                "text": "People with strollers",
+                "value": "stroller_users"
+              },
+              {
+                "text": "People on bicycles",
+                "value": "bicycle_users"
+              },
+              {
+                "text": "Blind or visually impaired people",
+                "value": "blind_or_visually_impaired"
+              },
+              {
+                "text": "Older people or people who need more time",
+                "value": "older_slow_walkers"
+              },
+              {
+                "text": "No one in particular",
+                "value": "none"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Your experience here",
+        "description": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "When there is no signal, how often do people driving stop for people using this connection?",
+            "answer_key": "driver_yielding",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "1_never"
+              },
+              {
+                "text": "Rarely",
+                "value": "2_rarely"
+              },
+              {
+                "text": "About half of the time",
+                "value": "3_half"
+              },
+              {
+                "text": "Usually",
+                "value": "4_usually"
+              },
+              {
+                "text": "Always or almost always",
+                "value": "5_always"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "traffic_control": "priority_no_signal"
+            }
+          },
+          {
+            "text": "At the signal, how long do people usually wait for green?",
+            "answer_key": "signal_wait_time",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Less than 10 seconds",
+                "value": "1_less_than_10s"
+              },
+              {
+                "text": "10–30 seconds",
+                "value": "2_10_30s"
+              },
+              {
+                "text": "30–60 seconds",
+                "value": "3_30_60s"
+              },
+              {
+                "text": "1–2 minutes",
+                "value": "4_1_2min"
+              },
+              {
+                "text": "More than 2 minutes",
+                "value": "5_more_than_2min"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "traffic_control": [
+                "protected_signal",
+                "permissive_signal_with_turning_conflict",
+                "unclear_signal_priority"
+              ]
+            }
           }
         ]
       },
@@ -757,7 +798,10 @@
                 "text": "Very urgent",
                 "value": "5_very_urgent"
               }
-            ]
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
           },
           {
             "text": "What would improve this connection most?",
@@ -798,29 +842,19 @@
                 "text": "Nothing important",
                 "value": "nothing"
               }
-            ]
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
           },
           {
             "text": "Anything else you want to add?",
             "answer_key": "additional_comments",
             "question_type": "text",
-            "checks_inline": false
-          },
-          {
-            "text": "Would you like to add a few optional details?",
-            "answer_key": "continue_audit",
-            "question_type": "single_option",
             "checks_inline": false,
-            "options": [
-              {
-                "text": "No, finish the assessment",
-                "value": "no_finish"
-              },
-              {
-                "text": "Yes, add optional details",
-                "value": "yes_audit"
-              }
-            ]
+            "show_if": {
+              "continue_audit": "yes_audit"
+            }
           }
         ]
       },
@@ -1384,7 +1418,9 @@
       "#People cross against the red light": "People cross against the red light",
       "#People cycle in pedestrian-only space": "People cycle in pedestrian-only space",
       "#People walk in bicycle-only space": "People walk in bicycle-only space",
-      "#Vehicles stop or park on the connection": "Vehicles stop or park on the connection"
+      "#Vehicles stop or park on the connection": "Vehicles stop or park on the connection",
+      "#Quick assessment": "Quick assessment",
+      "#Answer these first. Then you can finish or add optional details.": "Answer these first. Then you can finish or add optional details."
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -1585,7 +1621,9 @@
       "#People cross against the red light": "Le persone attraversano con il rosso",
       "#People cycle in pedestrian-only space": "Persone in bicicletta usano spazi riservati a chi va a piedi",
       "#People walk in bicycle-only space": "Persone a piedi usano spazi riservati alle biciclette",
-      "#Vehicles stop or park on the connection": "I veicoli si fermano o parcheggiano sul collegamento"
+      "#Vehicles stop or park on the connection": "I veicoli si fermano o parcheggiano sul collegamento",
+      "#Quick assessment": "Valutazione rapida",
+      "#Answer these first. Then you can finish or add optional details.": "Rispondi prima a queste. Poi puoi terminare o aggiungere dettagli facoltativi."
     },
     "fr": {
       "#Crossroads with zebra crossings and a check mark": "Carrefour avec passages piétons et une coche",
@@ -1786,7 +1824,9 @@
       "#People cross against the red light": "Des personnes traversent au feu rouge",
       "#People cycle in pedestrian-only space": "Des personnes circulent à vélo dans un espace réservé aux piétons",
       "#People walk in bicycle-only space": "Des personnes marchent dans un espace réservé aux vélos",
-      "#Vehicles stop or park on the connection": "Des véhicules s’arrêtent ou stationnent sur la liaison"
+      "#Vehicles stop or park on the connection": "Des véhicules s’arrêtent ou stationnent sur la liaison",
+      "#Quick assessment": "Évaluation rapide",
+      "#Answer these first. Then you can finish or add optional details.": "Répondez d’abord à ces questions. Ensuite, vous pouvez terminer ou ajouter des détails facultatifs."
     },
     "de": {
       "#Crossroads with zebra crossings and a check mark": "Kreuzung mit Zebrastreifen und einem Häkchen",
@@ -1987,7 +2027,9 @@
       "#People cross against the red light": "Personen queren bei Rot",
       "#People cycle in pedestrian-only space": "Personen fahren im reinen Fußgängerbereich Rad",
       "#People walk in bicycle-only space": "Personen gehen im reinen Fahrradbereich zu Fuß",
-      "#Vehicles stop or park on the connection": "Fahrzeuge halten oder parken auf der Verbindung"
+      "#Vehicles stop or park on the connection": "Fahrzeuge halten oder parken auf der Verbindung",
+      "#Quick assessment": "Schnelle Bewertung",
+      "#Answer these first. Then you can finish or add optional details.": "Beantworten Sie zuerst diese Fragen. Danach können Sie abschließen oder optionale Details hinzufügen."
     },
     "tr": {
       "#Crossroads with zebra crossings and a check mark": "Yaya geçitleri ve onay işareti olan kavşak",
@@ -2188,7 +2230,9 @@
       "#People cross against the red light": "İnsanlar kırmızı ışıkta geçiyor",
       "#People cycle in pedestrian-only space": "İnsanlar yalnızca yayalara ayrılmış alanda bisiklet sürüyor",
       "#People walk in bicycle-only space": "İnsanlar yalnızca bisiklete ayrılmış alanda yürüyor",
-      "#Vehicles stop or park on the connection": "Araçlar bağlantı üzerinde duruyor veya park ediyor"
+      "#Vehicles stop or park on the connection": "Araçlar bağlantı üzerinde duruyor veya park ediyor",
+      "#Quick assessment": "Hızlı değerlendirme",
+      "#Answer these first. Then you can finish or add optional details.": "Önce bunları yanıtlayın. Ardından bitirebilir veya isteğe bağlı ayrıntılar ekleyebilirsiniz."
     },
     "fa": {
       "#Crossroads with zebra crossings and a check mark": "چهارراه با خط‌کشی عابر پیاده و علامت تیک",
@@ -2389,7 +2433,9 @@
       "#People cross against the red light": "مردم با چراغ قرمز عبور می‌کنند",
       "#People cycle in pedestrian-only space": "مردم در فضای ویژه عابر پیاده دوچرخه‌سواری می‌کنند",
       "#People walk in bicycle-only space": "مردم در فضای ویژه دوچرخه پیاده راه می‌روند",
-      "#Vehicles stop or park on the connection": "خودروها روی ارتباط توقف یا پارک می‌کنند"
+      "#Vehicles stop or park on the connection": "خودروها روی ارتباط توقف یا پارک می‌کنند",
+      "#Quick assessment": "ارزیابی سریع",
+      "#Answer these first. Then you can finish or add optional details.": "ابتدا به این پرسش‌ها پاسخ دهید. سپس می‌توانید پایان دهید یا جزئیات اختیاری اضافه کنید."
     },
     "hu": {
       "#Crossroads with zebra crossings and a check mark": "Kereszteződés zebrákkal és egy pipával",
@@ -2590,7 +2636,9 @@
       "#People cross against the red light": "Az emberek piros jelzésnél kelnek át",
       "#People cycle in pedestrian-only space": "Az emberek csak gyalogosoknak fenntartott helyen kerékpároznak",
       "#People walk in bicycle-only space": "Az emberek csak kerékpárosoknak fenntartott helyen gyalogolnak",
-      "#Vehicles stop or park on the connection": "Járművek állnak meg vagy parkolnak a kapcsolaton"
+      "#Vehicles stop or park on the connection": "Járművek állnak meg vagy parkolnak a kapcsolaton",
+      "#Quick assessment": "Gyors értékelés",
+      "#Answer these first. Then you can finish or add optional details.": "Először ezekre válaszoljon. Utána befejezheti, vagy hozzáadhat választható részleteket."
     },
     "ar": {
       "#Crossroads with zebra crossings and a check mark": "تقاطع مع ممرات مشاة وعلامة صح",
@@ -2791,7 +2839,9 @@
       "#People cross against the red light": "يعبر الناس مع الإشارة الحمراء",
       "#People cycle in pedestrian-only space": "يركب الناس الدراجات في مساحة مخصصة للمشاة فقط",
       "#People walk in bicycle-only space": "يمشي الناس في مساحة مخصصة للدراجات فقط",
-      "#Vehicles stop or park on the connection": "تتوقف المركبات أو تصطف على الرابط"
+      "#Vehicles stop or park on the connection": "تتوقف المركبات أو تصطف على الرابط",
+      "#Quick assessment": "تقييم سريع",
+      "#Answer these first. Then you can finish or add optional details.": "أجب عن هذه الأسئلة أولًا. بعد ذلك يمكنك الإنهاء أو إضافة تفاصيل اختيارية."
     }
   },
   "id": "Street Connection",
