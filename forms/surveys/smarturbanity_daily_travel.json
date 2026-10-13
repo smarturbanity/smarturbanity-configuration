@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.2.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -16,7 +16,7 @@
       "title": "Welcome to Your Daily Travel",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_how_you_get_around.svg",
       "image_alt": "#Person walking, bicycle and bus",
-      "description": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -30,29 +30,126 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
+            "text": "Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?",
+            "answer_key": "freq_trip_purpose_v1",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Work or professional business",
+                "value": "work_or_professional_business"
+              },
+              {
+                "text": "Education",
+                "value": "education"
+              },
+              {
+                "text": "Shopping or daily activities",
+                "value": "shopping_or_daily_activities"
+              },
+              {
+                "text": "Appointments (medical, legal, banking)",
+                "value": "appointments_medical_legal_banking"
+              },
+              {
+                "text": "Social/Leisure",
+                "value": "social_leisure"
+              },
+              {
+                "text": "Health/Exercise",
+                "value": "health_exercise"
+              },
+              {
+                "text": "Accompanying or assisting someone (e.g. to school or medical visits)",
+                "value": "caring_escort"
+              }
+            ]
+          },
+          {
+            "text": "On average, how often do you make your usual trip?",
+            "answer_key": "freq_trip_frequency",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "5 or more days a week (Daily/Commuter)",
+                "value": "5_plus_week"
+              },
+              {
+                "text": "3–4 days a week (Frequent)",
+                "value": "3_4_week"
+              },
+              {
+                "text": "1–2 days a week (Regular)",
+                "value": "1_2_week"
+              },
+              {
+                "text": "1–3 times a month (Occasional)",
+                "value": "1_3_month"
+              },
+              {
+                "text": "Less than once a month (Rarely)",
+                "value": "lt_monthly"
+              }
+            ]
+          },
+          {
+            "text": "On your usual trip, do you usually travel alone or with other people?",
+            "answer_key": "freq_trip_company_v1",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Mostly alone",
+                "value": "mostly_alone"
+              },
+              {
+                "text": "Accompanying children or people I look after",
+                "value": "accompanying_others"
+              },
+              {
+                "text": "Accompanied by someone who helps me",
+                "value": "accompanied_by_helper"
+              },
+              {
+                "text": "Often with family members",
+                "value": "often_with_family_members"
+              },
+              {
+                "text": "Often with colleagues or friends",
+                "value": "often_with_colleagues_or_friends"
+              }
+            ]
+          },
+          {
             "text": "Which travel mode do you most often use for your trips?",
             "answer_key": "usual_mode_v1",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Walking (as the main mode for the trip, not short access or transfer walking)",
-                "value": "walking_as_the_main_mode_for_the_trip_no"
+                "text": "On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)",
+                "value": "walking_or_wheelchair"
               },
               {
-                "text": "Car",
-                "value": "car"
+                "text": "Car (as driver)",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car (as passenger)",
+                "value": "car_passenger"
               },
               {
                 "text": "Car sharing",
                 "value": "car_sharing"
               },
               {
-                "text": "Motorcycle",
+                "text": "Motorcycle, scooter or moped",
                 "value": "motorcycle"
               },
               {
                 "text": "Public transport",
                 "value": "public_transport"
+              },
+              {
+                "text": "School bus or shuttle service",
+                "value": "school_bus_or_shuttle"
               },
               {
                 "text": "Bicycle/e-bike (private)",
@@ -77,16 +174,17 @@
             ]
           },
           {
-            "text": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
+            "text": "Which of these modes do you combine in the same trip at least once a week?",
             "answer_key": "v1_do_you_use_any_combination_of_the_fo",
             "question_type": "multiple_options",
+            "required": true,
             "options": [
               {
-                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
-                "value": "walking_as_the_main_mode_for_most_of_the"
+                "text": "Walking (stretches of at least 10 minutes)",
+                "value": "walking_10_min"
               },
               {
-                "text": "Car",
+                "text": "Car (as driver or passenger)",
                 "value": "car"
               },
               {
@@ -94,12 +192,20 @@
                 "value": "car_sharing"
               },
               {
-                "text": "Motorcycle",
+                "text": "Motorcycle, scooter or moped",
                 "value": "motorcycle"
               },
               {
-                "text": "Public transport",
-                "value": "public_transport"
+                "text": "Bus or tram",
+                "value": "bus_tram"
+              },
+              {
+                "text": "Metro",
+                "value": "metro"
+              },
+              {
+                "text": "Regional or suburban train",
+                "value": "train"
               },
               {
                 "text": "Bicycle/e-bike (private)",
@@ -123,7 +229,8 @@
               },
               {
                 "text": "I don't use any combination",
-                "value": "i_don_t_use_any_combination"
+                "value": "i_don_t_use_any_combination",
+                "exclusive": true
               }
             ]
           },
@@ -131,10 +238,17 @@
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
             "answer_key": "multimodal_difficulties_v1",
             "question_type": "multiple_options",
+            "show_if": {
+              "v1_do_you_use_any_combination_of_the_fo": {
+                "not": [
+                  "i_don_t_use_any_combination"
+                ]
+              }
+            },
             "max_answers": 3,
             "options": [
               {
-                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+                "text": "Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)",
                 "value": "vehicles_are_too_crowded_e_g_no_space_fo"
               },
               {
@@ -150,6 +264,10 @@
                 "value": "complicated_transfers_stations_far_apart"
               },
               {
+                "text": "The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)",
+                "value": "stop_hard_to_reach_on_foot"
+              },
+              {
                 "text": "Travel time becomes too long",
                 "value": "travel_time_becomes_too_long"
               },
@@ -160,6 +278,10 @@
               {
                 "text": "Safety concerns (traffic, theft, unsafe areas)",
                 "value": "safety_concerns_traffic_theft_unsafe_are"
+              },
+              {
+                "text": "Services are infrequent or do not run in the evening",
+                "value": "infrequent_or_no_evening_service"
               },
               {
                 "text": "Lack of reliable information (schedules, delays)",
@@ -179,7 +301,8 @@
               },
               {
                 "text": "I do not experience significant difficulties",
-                "value": "i_do_not_experience_significant_difficul"
+                "value": "i_do_not_experience_significant_difficul",
+                "exclusive": true
               }
             ],
             "add_other": true
@@ -187,7 +310,15 @@
           {
             "text": "When you face these difficulties, how do you mostly respond?",
             "answer_key": "multimodal_response_v1",
-            "question_type": "single_option",
+            "question_type": "multiple_options",
+            "show_if": {
+              "v1_do_you_use_any_combination_of_the_fo": {
+                "not": [
+                  "i_don_t_use_any_combination"
+                ]
+              }
+            },
+            "max_answers": 2,
             "options": [
               {
                 "text": "I stop using one of the modes (e.g. stop bringing my bike)",
@@ -227,7 +358,8 @@
               },
               {
                 "text": "I do not experience significant difficulties",
-                "value": "i_do_not_experience_significant_difficul"
+                "value": "i_do_not_experience_significant_difficul",
+                "exclusive": true
               }
             ],
             "add_other": true
@@ -277,101 +409,24 @@
                 "value": "7_10"
               },
               {
-                "text": "10:00-14:00 (midday)",
-                "value": "10_14"
+                "text": "10:00-16:00 (daytime)",
+                "value": "10_16"
               },
               {
-                "text": "14:00-18:00 (afternoon rush)",
-                "value": "14_18"
+                "text": "16:00-20:00 (afternoon and evening rush)",
+                "value": "16_20"
               },
               {
-                "text": "18:00-20:00 (evening return)",
-                "value": "18_20"
+                "text": "20:00-22:00 (evening)",
+                "value": "20_22"
               },
               {
-                "text": "After 20:00 (evening/night)",
-                "value": "after_20"
-              }
-            ]
-          },
-          {
-            "text": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
-            "answer_key": "freq_trip_company_v1",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Mostly alone",
-                "value": "mostly_alone"
+                "text": "After 22:00 (night)",
+                "value": "after_22"
               },
               {
-                "text": "Often with family members",
-                "value": "often_with_family_members"
-              },
-              {
-                "text": "Often with colleagues or friends",
-                "value": "often_with_colleagues_or_friends"
-              }
-            ]
-          },
-          {
-            "text": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
-            "answer_key": "freq_trip_purpose_v1",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Work or professional business",
-                "value": "work_or_professional_business"
-              },
-              {
-                "text": "Education",
-                "value": "education"
-              },
-              {
-                "text": "Shopping or daily activities",
-                "value": "shopping_or_daily_activities"
-              },
-              {
-                "text": "Appointments (medical,legal,banking)",
-                "value": "appointments_medical_legal_banking"
-              },
-              {
-                "text": "Social/Leisure",
-                "value": "social_leisure"
-              },
-              {
-                "text": "Health/Exercise",
-                "value": "health_exercise"
-              },
-              {
-                "text": "Caring/Escort",
-                "value": "caring_escort"
-              }
-            ]
-          },
-          {
-            "text": "On average, how often do you make your most frequent journey?",
-            "answer_key": "freq_trip_frequency",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "5 or more days a week (Daily/Commuter)",
-                "value": "5_plus_week"
-              },
-              {
-                "text": "3–4 days a week (Frequent)",
-                "value": "3_4_week"
-              },
-              {
-                "text": "1–2 days a week (Regular)",
-                "value": "1_2_week"
-              },
-              {
-                "text": "1–3 times a month (Occasional)",
-                "value": "1_3_month"
-              },
-              {
-                "text": "Less than once a month (Rarely)",
-                "value": "lt_monthly"
+                "text": "Variable hours or shifts",
+                "value": "variable"
               }
             ]
           }
@@ -386,6 +441,7 @@
             "text": "Overall, how satisfied are you with your current primary mode of transport?",
             "answer_key": "usual_mode_satisfaction",
             "question_type": "single_option",
+            "required": true,
             "options": [
               {
                 "text": "Very dissatisfied",
@@ -413,11 +469,15 @@
             "text": "Which aspects of your current primary mode of transport are you most dissatisfied with?",
             "answer_key": "usual_mode_dissatisfied_v1",
             "question_type": "multiple_options",
+            "show_if": {
+              "usual_mode_satisfaction": [
+                "very_dissatisfied",
+                "dissatisfied",
+                "neutral"
+              ]
+            },
+            "max_answers": 3,
             "options": [
-              {
-                "text": "I am satisfied with my current primary mode of transport",
-                "value": "i_am_satisfied_with_my_current_primary_m"
-              },
               {
                 "text": "Travel Time/Speed",
                 "value": "travel_time_speed"
@@ -431,6 +491,14 @@
                 "value": "reliability_predictability"
               },
               {
+                "text": "Frequency of services and waiting times",
+                "value": "frequency_and_waiting"
+              },
+              {
+                "text": "Service in the evening and on public holidays",
+                "value": "evening_and_holiday_service"
+              },
+              {
                 "text": "Comfort",
                 "value": "comfort"
               },
@@ -439,8 +507,12 @@
                 "value": "safety_security"
               },
               {
-                "text": "Accessibility/Convenience",
-                "value": "accessibility_convenience"
+                "text": "Accessibility (barriers, stairs, getting on board)",
+                "value": "accessibility"
+              },
+              {
+                "text": "Convenience",
+                "value": "convenience"
               },
               {
                 "text": "Crowding/Availability of space",
@@ -455,7 +527,6 @@
                 "value": "lack_of_flexibility"
               }
             ],
-            "max_answers": 3,
             "add_other": true
           },
           {
@@ -493,12 +564,20 @@
                 "value": "personal_safety_and_security"
               },
               {
-                "text": "Time Efficiency",
+                "text": "Barrier-free access (no stairs, accessible vehicles)",
+                "value": "barrier_free_access"
+              },
+              {
+                "text": "Travel time",
                 "value": "time_efficiency"
               },
               {
                 "text": "Flexibility and independence",
                 "value": "flexibility_and_independence"
+              },
+              {
+                "text": "Being able to bring children, a pushchair or shopping",
+                "value": "bring_children_or_shopping"
               }
             ],
             "add_other": true
@@ -511,7 +590,7 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Which of the following vehicles are available in your household? (Select all that apply)",
+            "text": "Which of the following vehicles are available in your household? (Count only vehicles used by adults.)",
             "answer_key": "hh_vehicles_v1",
             "question_type": "multiple_options",
             "options": [
@@ -520,7 +599,11 @@
                 "value": "car"
               },
               {
-                "text": "Motorcycle",
+                "text": "Car adapted for a person with disability",
+                "value": "adapted_car"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
                 "value": "motorcycle"
               },
               {
@@ -532,8 +615,13 @@
                 "value": "e_scooter"
               },
               {
+                "text": "Powered wheelchair or mobility scooter",
+                "value": "powered_wheelchair"
+              },
+              {
                 "text": "No vehicle available",
-                "value": "no_vehicle_available"
+                "value": "no_vehicle_available",
+                "exclusive": true
               }
             ],
             "add_other": true
@@ -548,7 +636,7 @@
                 "value": "car"
               },
               {
-                "text": "Motorcycle",
+                "text": "Motorcycle, scooter or moped",
                 "value": "motorcycle"
               },
               {
@@ -560,6 +648,10 @@
                 "value": "e_scooter"
               },
               {
+                "text": "Powered wheelchair or mobility scooter",
+                "value": "powered_wheelchair"
+              },
+              {
                 "text": "None",
                 "value": "none"
               }
@@ -567,7 +659,7 @@
             "add_other": true
           },
           {
-            "text": "If any vehicle is available in your household, how easy is it for you to use it when needed?",
+            "text": "How easy is it for you to use a vehicle of your household when you need it?",
             "answer_key": "vehicle_ease",
             "question_type": "single_option",
             "show_if": {
@@ -576,16 +668,18 @@
                 "e_scooter",
                 "bicycle_e_bike",
                 "motorcycle",
-                "car"
+                "car",
+                "adapted_car",
+                "powered_wheelchair"
               ]
             },
             "options": [
               {
-                "text": "Very difficult (rarely available)",
+                "text": "Very difficult",
                 "value": "very_difficult"
               },
               {
-                "text": "Difficult (often unavailable or shared)",
+                "text": "Difficult",
                 "value": "difficult"
               },
               {
@@ -593,12 +687,16 @@
                 "value": "neutral"
               },
               {
-                "text": "Easy (usually available)",
+                "text": "Easy",
                 "value": "easy"
               },
               {
-                "text": "Very easy (almost always available)",
+                "text": "Very easy",
                 "value": "very_easy"
+              },
+              {
+                "text": "I don't use it because I don't drive or can't drive it",
+                "value": "does_not_drive"
               }
             ]
           },
@@ -665,7 +763,7 @@
             ]
           },
           {
-            "text": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?",
+            "text": "How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?",
             "answer_key": "app_mobility",
             "question_type": "single_option",
             "options": [
@@ -711,21 +809,16 @@
       "#Mobility habits": "Mobility habits",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Questions about how you typically get around on a day-to-day basis.</p>",
       "#Which travel mode do you most often use for your trips?": "Which travel mode do you most often use for your trips?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "Walking (as the main mode for the trip, not short access or transfer walking)",
       "#Car": "Car",
       "#Car sharing": "Car sharing",
-      "#Motorcycle": "Motorcycle",
       "#Public transport": "Public transport",
       "#Bicycle/e-bike (private)": "Bicycle/e-bike (private)",
       "#Bicycle/e-bike (shared)": "Bicycle/e-bike (shared)",
       "#e-scooter (private)": "e-scooter (private)",
       "#e-scooter (shared)": "e-scooter (shared)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
       "#I don't use any combination": "I don't use any combination",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Poor coordination between modes (long waiting times, missed connections)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
       "#Complicated transfers (stations far apart, unclear routes)": "Complicated transfers (stations far apart, unclear routes)",
@@ -758,23 +851,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "At what times of day do you most often travel? (Select all that apply)",
       "#Before 7:00": "Before 7:00",
       "#7:00-10:00 (morning rush)": "7:00-10:00 (morning rush)",
-      "#10:00-14:00 (midday)": "10:00-14:00 (midday)",
-      "#14:00-18:00 (afternoon rush)": "14:00-18:00 (afternoon rush)",
-      "#18:00-20:00 (evening return)": "18:00-20:00 (evening return)",
-      "#After 20:00 (evening/night)": "After 20:00 (evening/night)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
       "#Mostly alone": "Mostly alone",
       "#Often with family members": "Often with family members",
       "#Often with colleagues or friends": "Often with colleagues or friends",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
       "#Work or professional business": "Work or professional business",
       "#Education": "Education",
       "#Shopping or daily activities": "Shopping or daily activities",
-      "#Appointments (medical,legal,banking)": "Appointments (medical,legal,banking)",
       "#Social/Leisure": "Social/Leisure",
       "#Health/Exercise": "Health/Exercise",
-      "#Caring/Escort": "Caring/Escort",
-      "#On average, how often do you make your most frequent journey?": "On average, how often do you make your most frequent journey?",
       "#5 or more days a week (Daily/Commuter)": "5 or more days a week (Daily/Commuter)",
       "#3–4 days a week (Frequent)": "3–4 days a week (Frequent)",
       "#1–2 days a week (Regular)": "1–2 days a week (Regular)",
@@ -789,13 +873,11 @@
       "#Satisfied": "Satisfied",
       "#Very satisfied": "Very satisfied",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Which aspects of your current primary mode of transport are you most dissatisfied with?",
-      "#I am satisfied with my current primary mode of transport": "I am satisfied with my current primary mode of transport",
       "#Travel Time/Speed": "Travel Time/Speed",
       "#Cost/Value for money": "Cost/Value for money",
       "#Reliability/Predictability": "Reliability/Predictability",
       "#Comfort": "Comfort",
       "#Safety/Security": "Safety/Security",
-      "#Accessibility/Convenience": "Accessibility/Convenience",
       "#Crowding/Availability of space": "Crowding/Availability of space",
       "#Environmental impact": "Environmental impact",
       "#Lack of flexibility": "Lack of flexibility",
@@ -807,22 +889,15 @@
       "#Reliability and Predictability": "Reliability and Predictability",
       "#Social status": "Social status",
       "#Personal safety and security": "Personal safety and security",
-      "#Time Efficiency": "Time Efficiency",
       "#Flexibility and independence": "Flexibility and independence",
       "#Resources": "Resources",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Questions about the vehicles and tools available to you for travel.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Which of the following vehicles are available in your household? (Select all that apply)",
       "#Bicycle/e-bike": "Bicycle/e-bike",
       "#E-scooter": "E-scooter",
       "#No vehicle available": "No vehicle available",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Which of the following do you personally use regularly? (Select all that apply)",
       "#None": "None",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "If any vehicle is available in your household, how easy is it for you to use it when needed?",
-      "#Very difficult (rarely available)": "Very difficult (rarely available)",
-      "#Difficult (often unavailable or shared)": "Difficult (often unavailable or shared)",
       "#Neither easy nor difficult": "Neither easy nor difficult",
-      "#Easy (usually available)": "Easy (usually available)",
-      "#Very easy (almost always available)": "Very easy (almost always available)",
       "#How comfortable are you using navigation or map apps for travel?": "How comfortable are you using navigation or map apps for travel?",
       "#Very uncomfortable": "Very uncomfortable",
       "#Somewhat uncomfortable": "Somewhat uncomfortable",
@@ -831,8 +906,50 @@
       "#Very comfortable": "Very comfortable",
       "#I don't use it at all.": "I don't use it at all.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "How comfortable are you using apps to buy or validate public transport tickets?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?",
+      "#Appointments (medical, legal, banking)": "Appointments (medical, legal, banking)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Accompanying or assisting someone (e.g. to school or medical visits)",
+      "#On average, how often do you make your usual trip?": "On average, how often do you make your usual trip?",
+      "#On your usual trip, do you usually travel alone or with other people?": "On your usual trip, do you usually travel alone or with other people?",
+      "#Accompanying children or people I look after": "Accompanying children or people I look after",
+      "#Accompanied by someone who helps me": "Accompanied by someone who helps me",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)",
+      "#Car (as driver)": "Car (as driver)",
+      "#Car (as passenger)": "Car (as passenger)",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#School bus or shuttle service": "School bus or shuttle service",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Which of these modes do you combine in the same trip at least once a week?",
+      "#Walking (stretches of at least 10 minutes)": "Walking (stretches of at least 10 minutes)",
+      "#Car (as driver or passenger)": "Car (as driver or passenger)",
+      "#Bus or tram": "Bus or tram",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Regional or suburban train",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)",
+      "#Services are infrequent or do not run in the evening": "Services are infrequent or do not run in the evening",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (daytime)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (afternoon and evening rush)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (evening)",
+      "#After 22:00 (night)": "After 22:00 (night)",
+      "#Variable hours or shifts": "Variable hours or shifts",
+      "#Frequency of services and waiting times": "Frequency of services and waiting times",
+      "#Service in the evening and on public holidays": "Service in the evening and on public holidays",
+      "#Accessibility (barriers, stairs, getting on board)": "Accessibility (barriers, stairs, getting on board)",
+      "#Convenience": "Convenience",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Barrier-free access (no stairs, accessible vehicles)",
+      "#Travel time": "Travel time",
+      "#Being able to bring children, a pushchair or shopping": "Being able to bring children, a pushchair or shopping",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Which of the following vehicles are available in your household? (Count only vehicles used by adults.)",
+      "#Car adapted for a person with disability": "Car adapted for a person with disability",
+      "#Powered wheelchair or mobility scooter": "Powered wheelchair or mobility scooter",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "How easy is it for you to use a vehicle of your household when you need it?",
+      "#Very difficult": "Very difficult",
+      "#Difficult": "Difficult",
+      "#Easy": "Easy",
+      "#Very easy": "Very easy",
+      "#I don't use it because I don't drive or can't drive it": "I don't use it because I don't drive or can't drive it",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?"
     },
     "it": {
       "#Person walking, bicycle and bus": "Persona che cammina, bicicletta e autobus",
@@ -845,25 +962,20 @@
       "#Mobility habits": "Abitudini di mobilità",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Domande su come ti sposti abitualmente nella vita quotidiana.</p>",
       "#Which travel mode do you most often use for your trips?": "Quale mezzo di trasporto utilizzi più frequentemente per i tuoi spostamenti?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "A piedi (come modalità principale dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
       "#Car": "Auto",
       "#Car sharing": "Car sharing",
-      "#Motorcycle": "Moto",
       "#Public transport": "Trasporto pubblico",
       "#Bicycle/e-bike (private)": "Bicicletta/e-bike (privata)",
       "#Bicycle/e-bike (shared)": "Bicicletta/e-bike (condivisa)",
       "#e-scooter (private)": "Monopattino elettrico (privato)",
       "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o servizio simile (ad es. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Utilizzi una combinazione dei seguenti mezzi nello stesso spostamento almeno una volta alla settimana? (Seleziona tutte le opzioni applicabili)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
       "#I don't use any combination": "Non utilizzo alcuna combinazione di mezzi",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
       "#Complicated transfers (stations far apart, unclear routes)": "Cambi complicati (stazioni distanti tra loro, percorsi poco chiari)",
-      "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
+      "#Travel time becomes too long": "Lo spostamento richiede troppo tempo",
       "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
       "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
       "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
@@ -892,23 +1004,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "In quali momenti della giornata ti sposti più frequentemente? (Seleziona tutte le opzioni applicabili)",
       "#Before 7:00": "Prima delle 7:00",
       "#7:00-10:00 (morning rush)": "7:00-10:00 (ora di punta mattutina)",
-      "#10:00-14:00 (midday)": "10:00-14:00 (metà giornata)",
-      "#14:00-18:00 (afternoon rush)": "14:00-18:00 (ora di punta pomeridiana)",
-      "#18:00-20:00 (evening return)": "18:00-20:00 (rientro serale)",
-      "#After 20:00 (evening/night)": "Dopo le 20:00 (sera/notte)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Negli spostamenti che effettui più spesso durante una settimana tipica, viaggi di solito da solo/a o con altre persone?",
       "#Mostly alone": "Principalmente da solo/a",
       "#Often with family members": "Spesso con familiari",
       "#Often with colleagues or friends": "Spesso con colleghi o amici",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Qual è lo scopo principale del tuo spostamento più frequente? (Pensa allo spostamento che effettui più spesso durante una settimana tipica.)",
       "#Work or professional business": "Lavoro o attività professionali",
       "#Education": "Studio o formazione",
       "#Shopping or daily activities": "Acquisti o attività quotidiane",
-      "#Appointments (medical,legal,banking)": "Appuntamenti (medici, legali, bancari)",
       "#Social/Leisure": "Socialità/tempo libero",
       "#Health/Exercise": "Salute/attività fisica",
-      "#Caring/Escort": "Assistenza/accompagnamento",
-      "#On average, how often do you make your most frequent journey?": "In media, con quale frequenza effettui il tuo spostamento più frequente?",
       "#5 or more days a week (Daily/Commuter)": "5 o più giorni alla settimana (quotidiano/pendolare)",
       "#3–4 days a week (Frequent)": "3-4 giorni alla settimana (frequente)",
       "#1–2 days a week (Regular)": "1-2 giorni alla settimana (regolare)",
@@ -917,19 +1020,17 @@
       "#Preferences & Satisfaction": "Preferenze e soddisfazione",
       "#<p>Questions about what matters to you when choosing how to travel.</p>": "<p>Domande su ciò che consideri importante quando scegli come spostarti.</p>",
       "#Overall, how satisfied are you with your current primary mode of transport?": "Nel complesso, quanto sei soddisfatto/a della tua attuale modalità di trasporto principale?",
-      "#Very dissatisfied": "Per niente soddisfatto/a",
+      "#Very dissatisfied": "Molto insoddisfatto/a",
       "#Dissatisfied": "Insoddisfatto/a",
       "#Neither satisfied nor dissatisfied": "Né soddisfatto/a né insoddisfatto/a",
       "#Satisfied": "Soddisfatto/a",
       "#Very satisfied": "Molto soddisfatto/a",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Quali aspetti della tua attuale modalità di trasporto principale ti rendono maggiormente insoddisfatto/a?",
-      "#I am satisfied with my current primary mode of transport": "Sono soddisfatto/a della mia attuale modalità di trasporto principale",
-      "#Travel Time/Speed": "Tempo di viaggio/velocità",
+      "#Travel Time/Speed": "Tempo di spostamento/velocità",
       "#Cost/Value for money": "Costo/rapporto qualità-prezzo",
       "#Reliability/Predictability": "Affidabilità/prevedibilità",
       "#Comfort": "Comfort",
       "#Safety/Security": "Sicurezza personale e stradale",
-      "#Accessibility/Convenience": "Accessibilità/praticità",
       "#Crowding/Availability of space": "Affollamento/disponibilità di spazio",
       "#Environmental impact": "Impatto ambientale",
       "#Lack of flexibility": "Mancanza di flessibilità",
@@ -941,22 +1042,15 @@
       "#Reliability and Predictability": "Affidabilità e prevedibilità",
       "#Social status": "Status sociale",
       "#Personal safety and security": "Sicurezza personale",
-      "#Time Efficiency": "Efficienza in termini di tempo",
       "#Flexibility and independence": "Flessibilità e indipendenza",
       "#Resources": "Risorse",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Domande sui veicoli e sugli strumenti disponibili per i tuoi spostamenti.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Quali dei seguenti veicoli sono disponibili nel tuo nucleo familiare? (Seleziona tutte le opzioni applicabili)",
       "#Bicycle/e-bike": "Bicicletta/e-bike",
       "#E-scooter": "Monopattino elettrico",
       "#No vehicle available": "Nessun veicolo disponibile",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Quali dei seguenti mezzi utilizzi personalmente con regolarità? (Seleziona tutte le opzioni applicabili)",
       "#None": "Nessuno",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "Se nel tuo nucleo familiare è disponibile un veicolo, quanto è facile per te utilizzarlo quando ne hai bisogno?",
-      "#Very difficult (rarely available)": "Molto difficile (raramente disponibile)",
-      "#Difficult (often unavailable or shared)": "Difficile (spesso non disponibile o condiviso)",
       "#Neither easy nor difficult": "Né facile né difficile",
-      "#Easy (usually available)": "Facile (solitamente disponibile)",
-      "#Very easy (almost always available)": "Molto facile (quasi sempre disponibile)",
       "#How comfortable are you using navigation or map apps for travel?": "Quanto ti senti a tuo agio nell'utilizzare app di navigazione o mappe per i tuoi spostamenti?",
       "#Very uncomfortable": "Per niente a mio agio",
       "#Somewhat uncomfortable": "Poco a mio agio",
@@ -965,8 +1059,50 @@
       "#Very comfortable": "Molto a mio agio",
       "#I don't use it at all.": "Non le utilizzo affatto.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Quanto ti senti a tuo agio nell'utilizzare app per acquistare o convalidare i biglietti del trasporto pubblico?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Quanto ti senti a tuo agio nell'utilizzare app di ride-hailing o di mobilità condivisa (ad es. taxi, bike sharing, scooter sharing)?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulle tue abitudini quotidiane di mobilità: i mezzi che utilizzi, la frequenza con cui li combini e le risorse disponibili per i tuoi spostamenti. Le tue risposte ci aiutano a comprendere i modelli di mobilità quotidiana in città. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulle tue abitudini quotidiane di mobilità: i mezzi che utilizzi, la frequenza con cui li combini e le risorse disponibili per i tuoi spostamenti. Le tue risposte ci aiutano a comprendere i modelli di mobilità quotidiana in città. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il tuo indirizzo email non viene mai salvato e questo questionario non registra la tua posizione.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Pensa allo spostamento che fai più spesso in una settimana tipica: in questi questionari lo chiamiamo il tuo spostamento abituale. Qual è il suo scopo principale?",
+      "#Appointments (medical, legal, banking)": "Appuntamenti (medici, legali, bancari)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Accompagnare o assistere qualcuno (ad esempio a scuola o a visite mediche)",
+      "#On average, how often do you make your usual trip?": "In media, con quale frequenza fai il tuo spostamento abituale?",
+      "#On your usual trip, do you usually travel alone or with other people?": "Durante il tuo spostamento abituale, di solito ti sposti da solo/a o con altre persone?",
+      "#Accompanying children or people I look after": "Accompagno bambini o persone che assisto",
+      "#Accompanied by someone who helps me": "Accompagnato/a da qualcuno che mi aiuta",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "A piedi o in carrozzina (come modalità principale dello spostamento, non solo brevi tratti per raggiungere una fermata o per cambiare mezzo)",
+      "#Car (as driver)": "Auto (alla guida)",
+      "#Car (as passenger)": "Auto (come passeggero/a)",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#School bus or shuttle service": "Scuolabus o navetta",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Quali di questi mezzi usi insieme nello stesso spostamento almeno una volta alla settimana?",
+      "#Walking (stretches of at least 10 minutes)": "A piedi (tratti di almeno 10 minuti)",
+      "#Car (as driver or passenger)": "Auto (alla guida o come passeggero/a)",
+      "#Bus or tram": "Autobus o tram",
+      "#Metro": "Metropolitana",
+      "#Regional or suburban train": "Treno regionale o suburbano",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "I mezzi sono troppo affollati (ad es. non c’è spazio per bicicletta, passeggino, carrozzina o bagagli)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "La fermata o la stazione è difficile da raggiungere a piedi (marciapiede assente, scale, attraversamenti difficili)",
+      "#Services are infrequent or do not run in the evening": "Le corse sono rare o assenti la sera",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (in giornata)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (ora di punta del pomeriggio e della sera)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (sera)",
+      "#After 22:00 (night)": "Dopo le 22:00 (notte)",
+      "#Variable hours or shifts": "Orari variabili o a turni",
+      "#Frequency of services and waiting times": "Frequenza delle corse e tempi di attesa",
+      "#Service in the evening and on public holidays": "Servizio di sera e nei giorni festivi",
+      "#Accessibility (barriers, stairs, getting on board)": "Accessibilità (barriere, scale, salire a bordo)",
+      "#Convenience": "Praticità",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Accessibilità senza barriere (niente scale, mezzi accessibili)",
+      "#Travel time": "Tempo di spostamento",
+      "#Being able to bring children, a pushchair or shopping": "Poter portare con sé bambini, passeggino o spesa",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Quali dei seguenti veicoli sono disponibili nel tuo nucleo familiare? (Conta solo i veicoli usati da persone adulte.)",
+      "#Car adapted for a person with disability": "Auto adattata per persona con disabilità",
+      "#Powered wheelchair or mobility scooter": "Carrozzina elettrica o scooter per la mobilità",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "Quanto è facile per te usare un veicolo del tuo nucleo familiare quando ne hai bisogno?",
+      "#Very difficult": "Molto difficile",
+      "#Difficult": "Difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Molto facile",
+      "#I don't use it because I don't drive or can't drive it": "Non lo uso perché non guido o non posso guidarlo",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "Quanto ti senti a tuo agio nell’usare app per chiamare un taxi o un’auto con conducente (ad es. Uber) o per noleggiare mezzi in condivisione (biciclette, monopattini, auto)?"
     },
     "fr": {
       "#Person walking, bicycle and bus": "Personne à pied, vélo et bus",
@@ -979,21 +1115,16 @@
       "#Mobility habits": "Habitudes de déplacement",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Questions sur la façon dont vous vous déplacez habituellement au quotidien.</p>",
       "#Which travel mode do you most often use for your trips?": "Quel mode de transport utilisez-vous le plus souvent pour vos déplacements ?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "Marche (comme mode principal du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
       "#Car": "Voiture",
       "#Car sharing": "Autopartage",
-      "#Motorcycle": "Moto",
       "#Public transport": "Transports publics",
       "#Bicycle/e-bike (private)": "Vélo / vélo électrique (personnel)",
       "#Bicycle/e-bike (shared)": "Vélo / vélo électrique (partagé)",
       "#e-scooter (private)": "Trottinette électrique (personnelle)",
       "#e-scooter (shared)": "Trottinette électrique (partagée)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Utilisez-vous au moins une fois par semaine plusieurs des modes suivants au cours d’un même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
       "#I don't use any combination": "Je ne combine pas plusieurs modes",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Les véhicules sont trop remplis (par ex. pas de place pour un vélo ou des bagages)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Mauvaise coordination entre les modes (longues attentes, correspondances manquées)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Manque d’infrastructures (par ex. pas de stationnement vélo ou vélo non autorisé dans les transports publics)",
       "#Complicated transfers (stations far apart, unclear routes)": "Correspondances compliquées (stations éloignées, itinéraires peu clairs)",
@@ -1026,23 +1157,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "À quels moments de la journée vous déplacez-vous le plus souvent ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Before 7:00": "Avant 7 h",
       "#7:00-10:00 (morning rush)": "7 h-10 h (heure de pointe du matin)",
-      "#10:00-14:00 (midday)": "10 h-14 h (milieu de journée)",
-      "#14:00-18:00 (afternoon rush)": "14 h-18 h (après-midi)",
-      "#18:00-20:00 (evening return)": "18 h-20 h (retour du soir)",
-      "#After 20:00 (evening/night)": "Après 20 h (soir / nuit)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Pour les trajets que vous faites le plus souvent pendant une semaine habituelle, voyagez-vous généralement seul(e) ou avec d’autres personnes ?",
       "#Mostly alone": "Le plus souvent seul(e)",
       "#Often with family members": "Souvent avec des membres de ma famille",
       "#Often with colleagues or friends": "Souvent avec des collègues ou des amis",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Quel est le but principal de votre trajet le plus fréquent ? (Pensez au trajet que vous faites le plus souvent pendant une semaine habituelle.)",
       "#Work or professional business": "Travail ou activité professionnelle",
       "#Education": "Études",
       "#Shopping or daily activities": "Achats ou activités quotidiennes",
-      "#Appointments (medical,legal,banking)": "Rendez-vous (médical, juridique, bancaire)",
       "#Social/Leisure": "Vie sociale / loisirs",
       "#Health/Exercise": "Santé / activité physique",
-      "#Caring/Escort": "Accompagnement ou aide à une autre personne",
-      "#On average, how often do you make your most frequent journey?": "En moyenne, à quelle fréquence faites-vous votre trajet le plus fréquent ?",
       "#5 or more days a week (Daily/Commuter)": "5 jours ou plus par semaine (quotidien / domicile-travail)",
       "#3–4 days a week (Frequent)": "3 à 4 jours par semaine (fréquent)",
       "#1–2 days a week (Regular)": "1 à 2 jours par semaine (régulier)",
@@ -1057,13 +1179,11 @@
       "#Satisfied": "Satisfait(e)",
       "#Very satisfied": "Très satisfait(e)",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Quels aspects de votre principal mode de transport actuel vous satisfont le moins ?",
-      "#I am satisfied with my current primary mode of transport": "Je suis satisfait(e) de mon principal mode de transport actuel",
       "#Travel Time/Speed": "Temps de trajet / vitesse",
       "#Cost/Value for money": "Coût / rapport qualité-prix",
       "#Reliability/Predictability": "Fiabilité / prévisibilité",
       "#Comfort": "Confort",
       "#Safety/Security": "Sécurité routière / sécurité personnelle",
-      "#Accessibility/Convenience": "Accessibilité / facilité d’utilisation",
       "#Crowding/Availability of space": "Affluence / espace disponible",
       "#Environmental impact": "Impact sur l’environnement",
       "#Lack of flexibility": "Manque de flexibilité",
@@ -1075,22 +1195,15 @@
       "#Reliability and Predictability": "Fiabilité et prévisibilité",
       "#Social status": "Statut social",
       "#Personal safety and security": "Sécurité personnelle et routière",
-      "#Time Efficiency": "Gain de temps",
       "#Flexibility and independence": "Flexibilité et autonomie",
       "#Resources": "Ressources disponibles",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Questions sur les véhicules et les outils dont vous disposez pour vos déplacements.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Quels véhicules sont disponibles dans votre foyer ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Bicycle/e-bike": "Vélo / vélo électrique",
       "#E-scooter": "Trottinette électrique",
       "#No vehicle available": "Aucun véhicule disponible",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Parmi les modes suivants, lesquels utilisez-vous personnellement de façon régulière ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#None": "Aucun",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "Si un véhicule est disponible dans votre foyer, est-il facile pour vous de l’utiliser lorsque vous en avez besoin ?",
-      "#Very difficult (rarely available)": "Très difficile (rarement disponible)",
-      "#Difficult (often unavailable or shared)": "Difficile (souvent indisponible ou partagé)",
       "#Neither easy nor difficult": "Ni facile ni difficile",
-      "#Easy (usually available)": "Facile (généralement disponible)",
-      "#Very easy (almost always available)": "Très facile (presque toujours disponible)",
       "#How comfortable are you using navigation or map apps for travel?": "Êtes-vous à l’aise pour utiliser des applications de navigation ou de cartes pendant vos déplacements ?",
       "#Very uncomfortable": "Très mal à l’aise",
       "#Somewhat uncomfortable": "Plutôt mal à l’aise",
@@ -1099,8 +1212,50 @@
       "#Very comfortable": "Très à l’aise",
       "#I don't use it at all.": "Je ne les utilise pas du tout.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Êtes-vous à l’aise pour utiliser des applications afin d’acheter ou de valider des titres de transport public ?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Êtes-vous à l’aise pour utiliser des applications de VTC ou de mobilité partagée, par exemple taxi, vélo partagé ou trottinette partagée ?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos habitudes de déplacement au quotidien : les modes de transport que vous utilisez, la façon dont vous les combinez et les moyens dont vous disposez pour vos trajets. Vos réponses nous aident à mieux comprendre les déplacements quotidiens dans la ville. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos habitudes de déplacement au quotidien : les modes de transport que vous utilisez, la façon dont vous les combinez et les moyens dont vous disposez pour vos trajets. Vos réponses nous aident à mieux comprendre les déplacements quotidiens dans la ville. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Votre adresse e-mail elle-même n’est jamais enregistrée et ce questionnaire n’enregistre pas votre position.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Pensez au trajet que vous faites le plus souvent au cours d’une semaine type : dans ces questionnaires, nous l’appelons votre trajet habituel. Quel est son motif principal ?",
+      "#Appointments (medical, legal, banking)": "Rendez-vous (médical, juridique, bancaire)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Accompagner ou aider quelqu’un (par exemple à l’école ou à des rendez-vous médicaux)",
+      "#On average, how often do you make your usual trip?": "En moyenne, à quelle fréquence faites-vous votre trajet habituel ?",
+      "#On your usual trip, do you usually travel alone or with other people?": "Lors de votre trajet habituel, vous déplacez-vous généralement seul(e) ou avec d’autres personnes ?",
+      "#Accompanying children or people I look after": "J’accompagne des enfants ou des personnes dont je m’occupe",
+      "#Accompanied by someone who helps me": "Accompagné(e) par une personne qui m’aide",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "À pied ou en fauteuil roulant (comme mode principal du trajet, pas seulement de courts trajets pour rejoindre un arrêt ou changer de moyen de transport)",
+      "#Car (as driver)": "Voiture (en tant que conducteur/conductrice)",
+      "#Car (as passenger)": "Voiture (en tant que passager/passagère)",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#School bus or shuttle service": "Bus scolaire ou navette",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Lesquels de ces moyens de transport combinez-vous dans un même trajet au moins une fois par semaine ?",
+      "#Walking (stretches of at least 10 minutes)": "À pied (trajets d’au moins 10 minutes)",
+      "#Car (as driver or passenger)": "Voiture (conducteur/conductrice ou passager/passagère)",
+      "#Bus or tram": "Bus ou tramway",
+      "#Metro": "Métro",
+      "#Regional or suburban train": "Train régional ou de banlieue",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "Les véhicules sont trop bondés (par exemple pas de place pour un vélo, une poussette, un fauteuil roulant ou des bagages)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "L’arrêt ou la gare est difficile à atteindre à pied (pas de trottoir, escaliers, traversées difficiles)",
+      "#Services are infrequent or do not run in the evening": "Les passages sont rares ou inexistants le soir",
+      "#10:00-16:00 (daytime)": "10 h-16 h (journée)",
+      "#16:00-20:00 (afternoon and evening rush)": "16 h-20 h (heure de pointe de l’après-midi et du soir)",
+      "#20:00-22:00 (evening)": "20 h-22 h (soirée)",
+      "#After 22:00 (night)": "Après 22 h (nuit)",
+      "#Variable hours or shifts": "Horaires variables ou postés",
+      "#Frequency of services and waiting times": "Fréquence des passages et temps d’attente",
+      "#Service in the evening and on public holidays": "Service le soir et les jours fériés",
+      "#Accessibility (barriers, stairs, getting on board)": "Accessibilité (obstacles, escaliers, montée à bord)",
+      "#Convenience": "Praticité",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Accès sans obstacles (pas d’escaliers, véhicules accessibles)",
+      "#Travel time": "Temps de trajet",
+      "#Being able to bring children, a pushchair or shopping": "Pouvoir emmener des enfants, une poussette ou des courses",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Lesquels des véhicules suivants sont disponibles dans votre foyer ? (Ne comptez que les véhicules utilisés par des adultes.)",
+      "#Car adapted for a person with disability": "Voiture adaptée pour une personne en situation de handicap",
+      "#Powered wheelchair or mobility scooter": "Fauteuil roulant électrique ou scooter pour personnes à mobilité réduite",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "Dans quelle mesure vous est-il facile d’utiliser un véhicule de votre foyer quand vous en avez besoin ?",
+      "#Very difficult": "Très difficile",
+      "#Difficult": "Difficile",
+      "#Easy": "Facile",
+      "#Very easy": "Très facile",
+      "#I don't use it because I don't drive or can't drive it": "Je ne l’utilise pas parce que je ne conduis pas ou ne peux pas le conduire",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "Dans quelle mesure êtes-vous à l’aise avec les applications pour appeler un taxi ou une voiture avec chauffeur (par ex. Uber) ou pour louer des véhicules partagés (vélos, trottinettes, voitures) ?"
     },
     "de": {
       "#Person walking, bicycle and bus": "Gehende Person, Fahrrad und Bus",
@@ -1113,21 +1268,16 @@
       "#Mobility habits": "Mobilitätsgewohnheiten",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Fragen dazu, wie Sie sich im Alltag normalerweise fortbewegen.</p>",
       "#Which travel mode do you most often use for your trips?": "Welches Verkehrsmittel nutzen Sie für Ihre Wege am häufigsten?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den Weg, nicht nur für kurze Zuwege oder Umstiege)",
       "#Car": "Auto",
       "#Car sharing": "Carsharing",
-      "#Motorcycle": "Motorrad",
       "#Public transport": "Öffentliche Verkehrsmittel",
       "#Bicycle/e-bike (private)": "Fahrrad / E-Bike (privat)",
       "#Bicycle/e-bike (shared)": "Fahrrad / E-Bike (Sharing)",
       "#e-scooter (private)": "E-Scooter (privat)",
       "#e-scooter (shared)": "E-Scooter (Sharing)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Kombinieren Sie mindestens einmal pro Woche mehrere der folgenden Verkehrsmittel innerhalb derselben Fahrt? (Wählen Sie alles Zutreffende aus)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
       "#I don't use any combination": "Ich kombiniere keine Verkehrsmittel",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad oder Gepäck)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Schlechte Abstimmung zwischen Verkehrsmitteln (lange Wartezeiten, verpasste Anschlüsse)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Fehlende Infrastruktur (z. B. keine Fahrradabstellplätze oder Fahrräder dürfen nicht mitgenommen werden)",
       "#Complicated transfers (stations far apart, unclear routes)": "Kompliziertes Umsteigen (Haltestellen weit auseinander, unklare Wege)",
@@ -1160,23 +1310,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "Zu welchen Tageszeiten sind Sie am häufigsten unterwegs? (Wählen Sie alles Zutreffende aus)",
       "#Before 7:00": "Vor 7:00 Uhr",
       "#7:00-10:00 (morning rush)": "7:00-10:00 Uhr (morgendliche Stoßzeit)",
-      "#10:00-14:00 (midday)": "10:00-14:00 Uhr (Mittagszeit)",
-      "#14:00-18:00 (afternoon rush)": "14:00-18:00 Uhr (Nachmittag)",
-      "#18:00-20:00 (evening return)": "18:00-20:00 Uhr (Abendlicher Rückweg)",
-      "#After 20:00 (evening/night)": "Nach 20:00 Uhr (Abend / Nacht)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Bei den Wegen, die Sie in einer typischen Woche am häufigsten machen: Sind Sie dabei normalerweise allein oder mit anderen Personen unterwegs?",
       "#Mostly alone": "Meist allein",
       "#Often with family members": "Oft mit Familienmitgliedern",
       "#Often with colleagues or friends": "Oft mit Kollegen oder Freunden",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Was ist der Hauptzweck Ihres häufigsten Weges? (Denken Sie an den Weg, den Sie in einer typischen Woche am häufigsten machen.)",
       "#Work or professional business": "Arbeit oder berufliche Tätigkeit",
       "#Education": "Ausbildung oder Studium",
       "#Shopping or daily activities": "Einkaufen oder tägliche Erledigungen",
-      "#Appointments (medical,legal,banking)": "Termine (medizinisch, rechtlich, Bank)",
       "#Social/Leisure": "Soziale Aktivitäten / Freizeit",
       "#Health/Exercise": "Gesundheit / Sport",
-      "#Caring/Escort": "Begleitung oder Betreuung einer anderen Person",
-      "#On average, how often do you make your most frequent journey?": "Wie oft machen Sie im Durchschnitt Ihren häufigsten Weg?",
       "#5 or more days a week (Daily/Commuter)": "5 oder mehr Tage pro Woche (täglich / Pendeln)",
       "#3–4 days a week (Frequent)": "3-4 Tage pro Woche (häufig)",
       "#1–2 days a week (Regular)": "1-2 Tage pro Woche (regelmäßig)",
@@ -1191,13 +1332,11 @@
       "#Satisfied": "Zufrieden",
       "#Very satisfied": "Sehr zufrieden",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Mit welchen Aspekten Ihres derzeit wichtigsten Verkehrsmittels sind Sie am unzufriedensten?",
-      "#I am satisfied with my current primary mode of transport": "Ich bin mit meinem derzeit wichtigsten Verkehrsmittel zufrieden",
       "#Travel Time/Speed": "Fahrzeit / Geschwindigkeit",
       "#Cost/Value for money": "Kosten / Preis-Leistungs-Verhältnis",
       "#Reliability/Predictability": "Zuverlässigkeit / Planbarkeit",
       "#Comfort": "Komfort",
       "#Safety/Security": "Verkehrssicherheit / persönliche Sicherheit",
-      "#Accessibility/Convenience": "Barrierefreiheit / einfache Nutzung",
       "#Crowding/Availability of space": "Überfüllung / verfügbarer Platz",
       "#Environmental impact": "Umweltauswirkungen",
       "#Lack of flexibility": "Fehlende Flexibilität",
@@ -1209,22 +1348,15 @@
       "#Reliability and Predictability": "Zuverlässigkeit und Planbarkeit",
       "#Social status": "Sozialer Status",
       "#Personal safety and security": "Persönliche Sicherheit und Verkehrssicherheit",
-      "#Time Efficiency": "Zeitersparnis",
       "#Flexibility and independence": "Flexibilität und Unabhängigkeit",
       "#Resources": "Verfügbare Mittel",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Fragen zu Fahrzeugen und Hilfsmitteln, die Ihnen für Ihre Wege zur Verfügung stehen.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Welche der folgenden Fahrzeuge stehen in Ihrem Haushalt zur Verfügung? (Wählen Sie alles Zutreffende aus)",
       "#Bicycle/e-bike": "Fahrrad / E-Bike",
       "#E-scooter": "E-Scooter",
       "#No vehicle available": "Kein Fahrzeug verfügbar",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Welche der folgenden Möglichkeiten nutzen Sie persönlich regelmäßig? (Wählen Sie alles Zutreffende aus)",
       "#None": "Keine",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "Wenn in Ihrem Haushalt ein Fahrzeug verfügbar ist: Wie leicht können Sie es nutzen, wenn Sie es brauchen?",
-      "#Very difficult (rarely available)": "Sehr schwierig (selten verfügbar)",
-      "#Difficult (often unavailable or shared)": "Schwierig (oft nicht verfügbar oder wird geteilt)",
       "#Neither easy nor difficult": "Weder leicht noch schwierig",
-      "#Easy (usually available)": "Leicht (meist verfügbar)",
-      "#Very easy (almost always available)": "Sehr leicht (fast immer verfügbar)",
       "#How comfortable are you using navigation or map apps for travel?": "Wie wohl fühlen Sie sich bei der Nutzung von Navigations- oder Karten-Apps für Ihre Wege?",
       "#Very uncomfortable": "Sehr unwohl",
       "#Somewhat uncomfortable": "Eher unwohl",
@@ -1233,8 +1365,50 @@
       "#Very comfortable": "Sehr wohl",
       "#I don't use it at all.": "Ich nutze sie gar nicht.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Wie wohl fühlen Sie sich bei der Nutzung von Apps zum Kaufen oder Entwerten von Tickets für den öffentlichen Verkehr?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Wie wohl fühlen Sie sich bei der Nutzung von Taxi-, Fahrdienst- oder Sharing-Apps, zum Beispiel für Taxi, Leihrad oder E-Scooter?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihren täglichen Mobilitätsgewohnheiten: Welche Verkehrsmittel Sie nutzen, wie oft Sie sie kombinieren und welche Möglichkeiten Ihnen für Ihre Wege zur Verfügung stehen. Ihre Antworten helfen uns, tägliche Mobilitätsmuster in der Stadt besser zu verstehen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihren täglichen Mobilitätsgewohnheiten: Welche Verkehrsmittel Sie nutzen, wie oft Sie sie kombinieren und welche Möglichkeiten Ihnen für Ihre Wege zur Verfügung stehen. Ihre Antworten helfen uns, tägliche Mobilitätsmuster in der Stadt besser zu verstehen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Ihre E-Mail-Adresse selbst wird nie gespeichert, und dieser Fragebogen erfasst Ihren Standort nicht.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Denken Sie an den Weg, den Sie in einer typischen Woche am häufigsten zurücklegen: In diesen Fragebögen nennen wir ihn Ihren üblichen Weg. Was ist sein Hauptzweck?",
+      "#Appointments (medical, legal, banking)": "Termine (medizinisch, rechtlich, Bank)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Jemanden begleiten oder betreuen (z. B. zur Schule oder zu Arztterminen)",
+      "#On average, how often do you make your usual trip?": "Wie oft legen Sie Ihren üblichen Weg durchschnittlich zurück?",
+      "#On your usual trip, do you usually travel alone or with other people?": "Sind Sie auf Ihrem üblichen Weg meist allein oder mit anderen Personen unterwegs?",
+      "#Accompanying children or people I look after": "Ich begleite Kinder oder Personen, die ich betreue",
+      "#Accompanied by someone who helps me": "In Begleitung einer Person, die mir hilft",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "Zu Fuß oder im Rollstuhl (als Hauptverkehrsmittel des Weges, nicht nur kurze Strecken zur Haltestelle oder zum Umsteigen)",
+      "#Car (as driver)": "Auto (als Fahrerin oder Fahrer)",
+      "#Car (as passenger)": "Auto (als Mitfahrerin oder Mitfahrer)",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#School bus or shuttle service": "Schulbus oder Shuttle",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Welche dieser Verkehrsmittel kombinieren Sie mindestens einmal pro Woche auf demselben Weg?",
+      "#Walking (stretches of at least 10 minutes)": "Zu Fuß (Abschnitte von mindestens 10 Minuten)",
+      "#Car (as driver or passenger)": "Auto (als Fahrer/in oder Mitfahrer/in)",
+      "#Bus or tram": "Bus oder Straßenbahn",
+      "#Metro": "U-Bahn/Metro",
+      "#Regional or suburban train": "Regional- oder S-Bahn",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad, Kinderwagen, Rollstuhl oder Gepäck)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "Die Haltestelle oder der Bahnhof ist zu Fuß schwer erreichbar (kein Gehweg, Treppen, schwierige Querungen)",
+      "#Services are infrequent or do not run in the evening": "Die Verbindungen sind selten oder fahren abends nicht",
+      "#10:00-16:00 (daytime)": "10:00-16:00 Uhr (tagsüber)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 Uhr (Nachmittags- und Abendverkehr)",
+      "#20:00-22:00 (evening)": "20:00-22:00 Uhr (abends)",
+      "#After 22:00 (night)": "Nach 22:00 Uhr (nachts)",
+      "#Variable hours or shifts": "Wechselnde Zeiten oder Schichtdienst",
+      "#Frequency of services and waiting times": "Taktung und Wartezeiten",
+      "#Service in the evening and on public holidays": "Angebot abends und an Feiertagen",
+      "#Accessibility (barriers, stairs, getting on board)": "Barrierefreiheit (Hindernisse, Treppen, Einsteigen)",
+      "#Convenience": "Praktische Handhabung",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Barrierefreier Zugang (keine Treppen, barrierefreie Fahrzeuge)",
+      "#Travel time": "Zeitaufwand für den Weg",
+      "#Being able to bring children, a pushchair or shopping": "Kinder, Kinderwagen oder Einkäufe mitnehmen können",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Welche der folgenden Fahrzeuge stehen in Ihrem Haushalt zur Verfügung? (Zählen Sie nur Fahrzeuge, die von Erwachsenen genutzt werden.)",
+      "#Car adapted for a person with disability": "Für Menschen mit Behinderung umgebautes Auto",
+      "#Powered wheelchair or mobility scooter": "Elektrorollstuhl oder Elektromobil (Seniorenmobil)",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "Wie leicht können Sie ein Fahrzeug Ihres Haushalts nutzen, wenn Sie es brauchen?",
+      "#Very difficult": "Sehr schwierig",
+      "#Difficult": "Schwierig",
+      "#Easy": "Leicht",
+      "#Very easy": "Sehr leicht",
+      "#I don't use it because I don't drive or can't drive it": "Ich nutze es nicht, weil ich nicht fahre oder es nicht fahren kann",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "Wie gut kommen Sie mit Apps zurecht, mit denen man ein Taxi oder einen Fahrdienst (z. B. Uber) ruft oder Sharing-Fahrzeuge (Fahrräder, E-Scooter, Autos) mietet?"
     },
     "tr": {
       "#Person walking, bicycle and bus": "Yürüyen kişi, bisiklet ve otobüs",
@@ -1247,21 +1421,16 @@
       "#Mobility habits": "Ulaşım Alışkanlıkları",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Günlük yaşamda genellikle nasıl hareket ettiğiniz hakkında sorular.</p>",
       "#Which travel mode do you most often use for your trips?": "Yolculuklarınızda en sık hangi ulaşım seçeneğini kullanıyorsunuz?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "Yürüme (yolculuğun ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
       "#Car": "Otomobil",
       "#Car sharing": "Araç paylaşımı",
-      "#Motorcycle": "Motosiklet",
       "#Public transport": "Toplu taşıma",
       "#Bicycle/e-bike (private)": "Bisiklet / elektrikli bisiklet (kişisel)",
       "#Bicycle/e-bike (shared)": "Bisiklet / elektrikli bisiklet (paylaşımlı)",
       "#e-scooter (private)": "E-scooter (kişisel)",
       "#e-scooter (shared)": "E-scooter (paylaşımlı)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Aynı yolculukta aşağıdaki ulaşım seçeneklerinden birkaçını haftada en az bir kez birlikte kullanıyor musunuz? (Uygun olanların tümünü seçin)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
       "#I don't use any combination": "Herhangi bir ulaşım seçeneği kombinasyonu kullanmıyorum",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Araçlar çok kalabalık (ör. bisiklet veya bagaj için yer yok)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Ulaşım seçenekleri arasında kötü koordinasyon var (uzun bekleme süreleri, kaçırılan bağlantılar)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Altyapı eksik (ör. bisiklet parkı yok veya toplu taşımaya bisikletle binilemiyor)",
       "#Complicated transfers (stations far apart, unclear routes)": "Aktarmalar karmaşık (istasyonlar birbirinden uzak, güzergâhlar belirsiz)",
@@ -1294,23 +1463,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "En sık günün hangi saatlerinde yolculuk yaparsınız? (Uygun olanların tümünü seçin)",
       "#Before 7:00": "07.00’den önce",
       "#7:00-10:00 (morning rush)": "07.00-10.00 (sabah yoğunluğu)",
-      "#10:00-14:00 (midday)": "10.00-14.00 (öğle saatleri)",
-      "#14:00-18:00 (afternoon rush)": "14.00-18.00 (öğleden sonra)",
-      "#18:00-20:00 (evening return)": "18.00-20.00 (akşam dönüşü)",
-      "#After 20:00 (evening/night)": "20.00’den sonra (akşam / gece)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Tipik bir haftada en sık yaptığınız yolculuklarda genellikle yalnız mı yoksa başka kişilerle mi seyahat edersiniz?",
       "#Mostly alone": "Çoğunlukla yalnız",
       "#Often with family members": "Sık sık aile üyeleriyle",
       "#Often with colleagues or friends": "Sık sık iş arkadaşları veya arkadaşlarla",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "En sık yaptığınız yolculuğun temel amacı nedir? (Tipik bir haftada en sık yaptığınız yolculuğu düşünün.)",
       "#Work or professional business": "İş veya mesleki faaliyet",
       "#Education": "Eğitim",
       "#Shopping or daily activities": "Alışveriş veya günlük işler",
-      "#Appointments (medical,legal,banking)": "Randevular (sağlık, hukuk, banka)",
       "#Social/Leisure": "Sosyal etkinlik / boş zaman",
       "#Health/Exercise": "Sağlık / egzersiz",
-      "#Caring/Escort": "Birine bakım veya eşlik etme",
-      "#On average, how often do you make your most frequent journey?": "En sık yaptığınız yolculuğu ortalama ne sıklıkta yaparsınız?",
       "#5 or more days a week (Daily/Commuter)": "Haftada 5 gün veya daha fazla (günlük / işe gidip gelme)",
       "#3–4 days a week (Frequent)": "Haftada 3-4 gün (sık)",
       "#1–2 days a week (Regular)": "Haftada 1-2 gün (düzenli)",
@@ -1325,13 +1485,11 @@
       "#Satisfied": "Memnunum",
       "#Very satisfied": "Çok memnunum",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Şu anda en sık kullandığınız ulaşım seçeneğinin hangi yönlerinden en az memnunsunuz?",
-      "#I am satisfied with my current primary mode of transport": "Şu anda en sık kullandığım ulaşım seçeneğinden memnunum",
       "#Travel Time/Speed": "Yolculuk süresi / hız",
       "#Cost/Value for money": "Maliyet / ödediğim paranın karşılığı",
       "#Reliability/Predictability": "Güvenilirlik / öngörülebilirlik",
       "#Comfort": "Konfor",
       "#Safety/Security": "Trafik güvenliği / kişisel güvenlik",
-      "#Accessibility/Convenience": "Erişilebilirlik / kullanım kolaylığı",
       "#Crowding/Availability of space": "Kalabalık / mevcut alan",
       "#Environmental impact": "Çevresel etki",
       "#Lack of flexibility": "Esneklik eksikliği",
@@ -1343,22 +1501,15 @@
       "#Reliability and Predictability": "Güvenilirlik ve öngörülebilirlik",
       "#Social status": "Sosyal statü",
       "#Personal safety and security": "Kişisel güvenlik ve trafik güvenliği",
-      "#Time Efficiency": "Zaman tasarrufu",
       "#Flexibility and independence": "Esneklik ve bağımsızlık",
       "#Resources": "Mevcut İmkânlar",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Yolculuklarınızda kullanabileceğiniz araçlar ve araç gereçler hakkında sorular.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Hanenizde aşağıdaki araçlardan hangileri mevcut? (Uygun olanların tümünü seçin)",
       "#Bicycle/e-bike": "Bisiklet / elektrikli bisiklet",
       "#E-scooter": "E-scooter",
       "#No vehicle available": "Mevcut araç yok",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Aşağıdakilerden hangilerini düzenli olarak kendiniz kullanıyorsunuz? (Uygun olanların tümünü seçin)",
       "#None": "Hiçbiri",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "Hanenizde herhangi bir araç varsa, ihtiyaç duyduğunuzda onu kullanmanız ne kadar kolay?",
-      "#Very difficult (rarely available)": "Çok zor (nadiren kullanılabilir)",
-      "#Difficult (often unavailable or shared)": "Zor (sık sık kullanılamıyor veya başkalarıyla paylaşılıyor)",
       "#Neither easy nor difficult": "Ne kolay ne zor",
-      "#Easy (usually available)": "Kolay (genellikle kullanılabilir)",
-      "#Very easy (almost always available)": "Çok kolay (neredeyse her zaman kullanılabilir)",
       "#How comfortable are you using navigation or map apps for travel?": "Yolculuklarınızda navigasyon veya harita uygulamalarını kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
       "#Very uncomfortable": "Çok rahatsız",
       "#Somewhat uncomfortable": "Biraz rahatsız",
@@ -1367,8 +1518,50 @@
       "#Very comfortable": "Çok rahat",
       "#I don't use it at all.": "Hiç kullanmıyorum.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Toplu taşıma bileti satın almak veya doğrulamak için uygulama kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Taksi, araç çağırma veya paylaşımlı ulaşım uygulamalarını, örneğin taksi, bisiklet paylaşımı veya scooter paylaşımı için, kullanırken kendinizi ne kadar rahat hissediyorsunuz?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi günlük ulaşım alışkanlıklarınızla ilgilidir: hangi ulaşım seçeneklerini kullandığınız, bunları ne sıklıkta birleştirdiğiniz ve yolculuklarınız için hangi imkânlara sahip olduğunuz. Yanıtlarınız şehirdeki günlük yolculuk düzenlerini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi günlük ulaşım alışkanlıklarınızla ilgilidir: hangi ulaşım seçeneklerini kullandığınız, bunları ne sıklıkta birleştirdiğiniz ve yolculuklarınız için hangi imkânlara sahip olduğunuz. Yanıtlarınız şehirdeki günlük yolculuk düzenlerini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır. E-posta adresinizin kendisi hiçbir zaman saklanmaz ve bu anket konumunuzu kaydetmez.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Tipik bir haftada en sık yaptığınız yolculuğu düşünün: bu anketlerde buna olağan yolculuğunuz diyoruz. Bu yolculuğun asıl amacı nedir?",
+      "#Appointments (medical, legal, banking)": "Randevular (sağlık, hukuk, banka)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Birine eşlik etmek veya yardım etmek (örneğin okula veya doktor randevularına)",
+      "#On average, how often do you make your usual trip?": "Olağan yolculuğunuzu ortalama ne sıklıkla yapıyorsunuz?",
+      "#On your usual trip, do you usually travel alone or with other people?": "Olağan yolculuğunuzu genellikle yalnız mı yoksa başka kişilerle mi yapıyorsunuz?",
+      "#Accompanying children or people I look after": "Çocuklara veya baktığım kişilere eşlik ediyorum",
+      "#Accompanied by someone who helps me": "Bana yardım eden biri eşliğinde",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "Yürüyerek veya tekerlekli sandalyeyle (yalnızca durağa ulaşmak ya da aktarma yapmak için kısa yürüyüşler değil, yolculuğun ana biçimi olarak)",
+      "#Car (as driver)": "Otomobil (sürücü olarak)",
+      "#Car (as passenger)": "Otomobil (yolcu olarak)",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#School bus or shuttle service": "Okul servisi veya servis aracı",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Aşağıdaki ulaşım türlerinden hangilerini haftada en az bir kez aynı yolculukta birlikte kullanıyorsunuz?",
+      "#Walking (stretches of at least 10 minutes)": "Yürüyerek (en az 10 dakikalık bölümler)",
+      "#Car (as driver or passenger)": "Otomobil (sürücü veya yolcu olarak)",
+      "#Bus or tram": "Otobüs veya tramvay",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Bölgesel veya banliyö treni",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "Araçlar çok kalabalık (örneğin bisiklet, bebek arabası, tekerlekli sandalye veya bagaj için yer yok)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "Durağa veya istasyona yürüyerek ulaşmak zor (kaldırım yok, merdivenler, zor geçitler)",
+      "#Services are infrequent or do not run in the evening": "Seferler seyrek veya akşamları hiç yok",
+      "#10:00-16:00 (daytime)": "10.00-16.00 (gün içi)",
+      "#16:00-20:00 (afternoon and evening rush)": "16.00-20.00 (öğleden sonra ve akşam yoğunluğu)",
+      "#20:00-22:00 (evening)": "20.00-22.00 (akşam)",
+      "#After 22:00 (night)": "22.00’den sonra (gece)",
+      "#Variable hours or shifts": "Değişken saatler veya vardiyalı",
+      "#Frequency of services and waiting times": "Sefer sıklığı ve bekleme süreleri",
+      "#Service in the evening and on public holidays": "Akşamları ve resmî tatillerde hizmet",
+      "#Accessibility (barriers, stairs, getting on board)": "Erişilebilirlik (engeller, merdivenler, araca binme)",
+      "#Convenience": "Kullanım kolaylığı",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Engelsiz erişim (merdiven yok, erişilebilir araçlar)",
+      "#Travel time": "Yolculuk süresi",
+      "#Being able to bring children, a pushchair or shopping": "Çocukları, bebek arabasını veya alışverişi yanımda götürebilmek",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Hanenizde aşağıdaki araçlardan hangileri var? (Yalnızca yetişkinlerin kullandığı araçları sayın.)",
+      "#Car adapted for a person with disability": "Engelli bir kişi için uyarlanmış otomobil",
+      "#Powered wheelchair or mobility scooter": "Akülü tekerlekli sandalye veya engelli skuteri",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "İhtiyaç duyduğunuzda hanenizdeki bir aracı kullanmak sizin için ne kadar kolay?",
+      "#Very difficult": "Çok zor",
+      "#Difficult": "Zor",
+      "#Easy": "Kolay",
+      "#Very easy": "Çok kolay",
+      "#I don't use it because I don't drive or can't drive it": "Kullanmıyorum çünkü araç kullanmıyorum veya bu aracı kullanamıyorum",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "Taksi veya şoförlü araç çağırmak (örneğin Uber) ya da paylaşımlı araç (bisiklet, e-skuter, otomobil) kiralamak için uygulama kullanırken kendinizi ne kadar rahat hissediyorsunuz?"
     },
     "fa": {
       "#Person walking, bicycle and bus": "فرد پیاده، دوچرخه و اتوبوس",
@@ -1381,21 +1574,16 @@
       "#Mobility habits": "عادت‌های رفت‌وآمد",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>سؤال‌هایی درباره اینکه در زندگی روزمره معمولاً چگونه جابه‌جا می‌شوید.</p>",
       "#Which travel mode do you most often use for your trips?": "برای سفرهای خود بیشتر از کدام روش رفت‌وآمد استفاده می‌کنید؟",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "پیاده‌روی (به عنوان روش اصلی سفر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیله دیگر یا تعویض وسیله)",
       "#Car": "خودرو",
       "#Car sharing": "خودروی اشتراکی",
-      "#Motorcycle": "موتورسیکلت",
       "#Public transport": "حمل‌ونقل عمومی",
       "#Bicycle/e-bike (private)": "دوچرخه / دوچرخه برقی (شخصی)",
       "#Bicycle/e-bike (shared)": "دوچرخه / دوچرخه برقی (اشتراکی)",
       "#e-scooter (private)": "اسکوتر برقی (شخصی)",
       "#e-scooter (shared)": "اسکوتر برقی (اشتراکی)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "آیا حداقل هفته‌ای یک بار در یک سفر از ترکیبی از روش‌های زیر استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیله دیگر یا تعویض وسیله)",
       "#I don't use any combination": "از ترکیب چند روش استفاده نمی‌کنم",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "وسیله‌ها خیلی شلوغ هستند (مثلاً جا برای دوچرخه یا بار وجود ندارد)",
       "#Poor coordination between modes (long waiting times, missed connections)": "هماهنگی بین روش‌ها ضعیف است (انتظار طولانی، از دست دادن وسیله بعدی)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "زیرساخت کافی نیست (مثلاً پارک دوچرخه وجود ندارد یا بردن دوچرخه در حمل‌ونقل عمومی ممکن نیست)",
       "#Complicated transfers (stations far apart, unclear routes)": "تعویض وسیله پیچیده است (ایستگاه‌ها از هم دورند، مسیرها نامشخص‌اند)",
@@ -1428,23 +1616,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "بیشتر در چه ساعت‌هایی از روز سفر می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Before 7:00": "قبل از ۷:۰۰",
       "#7:00-10:00 (morning rush)": "۷:۰۰ تا ۱۰:۰۰ (ساعت شلوغی صبح)",
-      "#10:00-14:00 (midday)": "۱۰:۰۰ تا ۱۴:۰۰ (میانه روز)",
-      "#14:00-18:00 (afternoon rush)": "۱۴:۰۰ تا ۱۸:۰۰ (بعدازظهر)",
-      "#18:00-20:00 (evening return)": "۱۸:۰۰ تا ۲۰:۰۰ (بازگشت عصر)",
-      "#After 20:00 (evening/night)": "بعد از ۲۰:۰۰ (عصر / شب)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "در سفرهایی که در یک هفته معمولی بیشتر انجام می‌دهید، معمولاً تنها سفر می‌کنید یا با دیگران؟",
       "#Mostly alone": "بیشتر تنها",
       "#Often with family members": "اغلب با اعضای خانواده",
       "#Often with colleagues or friends": "اغلب با همکاران یا دوستان",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "هدف اصلی پرتکرارترین سفر شما چیست؟ (سفری را در نظر بگیرید که در یک هفته معمولی بیشتر انجام می‌دهید.)",
       "#Work or professional business": "کار یا فعالیت حرفه‌ای",
       "#Education": "تحصیل",
       "#Shopping or daily activities": "خرید یا کارهای روزمره",
-      "#Appointments (medical,legal,banking)": "قرارها (پزشکی، حقوقی، بانکی)",
       "#Social/Leisure": "فعالیت اجتماعی / تفریح",
       "#Health/Exercise": "سلامت / ورزش",
-      "#Caring/Escort": "مراقبت یا همراهی فرد دیگر",
-      "#On average, how often do you make your most frequent journey?": "به طور متوسط پرتکرارترین سفر خود را چند وقت یک بار انجام می‌دهید؟",
       "#5 or more days a week (Daily/Commuter)": "هفته‌ای ۵ روز یا بیشتر (روزانه / رفت‌وآمد کاری)",
       "#3–4 days a week (Frequent)": "هفته‌ای ۳ تا ۴ روز (زیاد)",
       "#1–2 days a week (Regular)": "هفته‌ای ۱ تا ۲ روز (منظم)",
@@ -1459,13 +1638,11 @@
       "#Satisfied": "راضی",
       "#Very satisfied": "بسیار راضی",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "از کدام بخش‌های روش اصلی رفت‌وآمد فعلی خود بیشتر ناراضی هستید؟",
-      "#I am satisfied with my current primary mode of transport": "از روش اصلی رفت‌وآمد فعلی خود راضی هستم",
       "#Travel Time/Speed": "زمان سفر / سرعت",
       "#Cost/Value for money": "هزینه / ارزش در برابر پول پرداختی",
       "#Reliability/Predictability": "قابل اعتماد بودن / قابل پیش‌بینی بودن",
       "#Comfort": "راحتی",
       "#Safety/Security": "ایمنی ترافیکی / امنیت شخصی",
-      "#Accessibility/Convenience": "دسترس‌پذیری / سهولت استفاده",
       "#Crowding/Availability of space": "شلوغی / فضای موجود",
       "#Environmental impact": "اثر بر محیط‌زیست",
       "#Lack of flexibility": "انعطاف‌پذیری کم",
@@ -1477,22 +1654,15 @@
       "#Reliability and Predictability": "قابل اعتماد بودن و قابل پیش‌بینی بودن",
       "#Social status": "جایگاه اجتماعی",
       "#Personal safety and security": "امنیت شخصی و ایمنی ترافیکی",
-      "#Time Efficiency": "صرفه‌جویی در زمان",
       "#Flexibility and independence": "انعطاف‌پذیری و استقلال",
       "#Resources": "امکانات در دسترس",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>سؤال‌هایی درباره وسایل نقلیه و ابزارهایی که برای سفر در اختیار دارید.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "کدام وسیله‌های زیر در خانوار شما در دسترس است؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Bicycle/e-bike": "دوچرخه / دوچرخه برقی",
       "#E-scooter": "اسکوتر برقی",
       "#No vehicle available": "هیچ وسیله‌ای در دسترس نیست",
       "#Which of the following do you personally use regularly? (Select all that apply)": "کدام یک از گزینه‌های زیر را خودتان به طور منظم استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#None": "هیچ‌کدام",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "اگر وسیله‌ای در خانوار شما وجود دارد، وقتی به آن نیاز دارید استفاده از آن چقدر آسان است؟",
-      "#Very difficult (rarely available)": "بسیار دشوار (به ندرت در دسترس است)",
-      "#Difficult (often unavailable or shared)": "دشوار (اغلب در دسترس نیست یا مشترک است)",
       "#Neither easy nor difficult": "نه آسان و نه دشوار",
-      "#Easy (usually available)": "آسان (معمولاً در دسترس است)",
-      "#Very easy (almost always available)": "بسیار آسان (تقریباً همیشه در دسترس است)",
       "#How comfortable are you using navigation or map apps for travel?": "هنگام استفاده از برنامه‌های مسیریابی یا نقشه برای سفر چقدر احساس راحتی می‌کنید؟",
       "#Very uncomfortable": "بسیار ناراحت",
       "#Somewhat uncomfortable": "کمی ناراحت",
@@ -1501,8 +1671,50 @@
       "#Very comfortable": "بسیار راحت",
       "#I don't use it at all.": "اصلاً استفاده نمی‌کنم.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "هنگام استفاده از برنامه برای خرید یا اعتبارسنجی بلیت حمل‌ونقل عمومی چقدر احساس راحتی می‌کنید؟",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "هنگام استفاده از برنامه‌های تاکسی اینترنتی یا جابه‌جایی اشتراکی، مانند تاکسی، دوچرخه اشتراکی یا اسکوتر اشتراکی، چقدر احساس راحتی می‌کنید؟",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره عادت‌های رفت‌وآمد روزانه شماست: چه روش‌هایی استفاده می‌کنید، چگونه آن‌ها را با هم ترکیب می‌کنید و چه امکاناتی برای سفرهای خود دارید. پاسخ‌های شما به ما کمک می‌کند الگوهای رفت‌وآمد روزانه در شهر را بهتر بفهمیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره عادت‌های رفت‌وآمد روزانه شماست: چه روش‌هایی استفاده می‌کنید، چگونه آن‌ها را با هم ترکیب می‌کنید و چه امکاناتی برای سفرهای خود دارید. پاسخ‌های شما به ما کمک می‌کند الگوهای رفت‌وآمد روزانه در شهر را بهتر بفهمیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. خودِ نشانی ایمیل شما هرگز ذخیره نمی‌شود و این پرسشنامه موقعیت مکانی شما را ثبت نمی‌کند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "به سفری فکر کنید که در یک هفته معمول بیش از همه انجام می‌دهید: در این پرسشنامه‌ها آن را سفر معمول شما می‌نامیم. هدف اصلی آن چیست؟",
+      "#Appointments (medical, legal, banking)": "قرارها (پزشکی، حقوقی، بانکی)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "همراهی یا کمک به کسی (مثلاً به مدرسه یا ویزیت پزشکی)",
+      "#On average, how often do you make your usual trip?": "به‌طور میانگین، سفر معمول خود را هر چند وقت یک‌بار انجام می‌دهید؟",
+      "#On your usual trip, do you usually travel alone or with other people?": "در سفر معمول خود، معمولاً تنها رفت‌وآمد می‌کنید یا با افراد دیگر؟",
+      "#Accompanying children or people I look after": "کودکان یا افرادی را که از آن‌ها مراقبت می‌کنم همراهی می‌کنم",
+      "#Accompanied by someone who helps me": "همراه با کسی که به من کمک می‌کند",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "پیاده یا با ویلچر (به‌عنوان شیوه اصلی سفر، نه فقط مسیرهای کوتاه برای رسیدن به ایستگاه یا تعویض وسیله)",
+      "#Car (as driver)": "خودرو (به‌عنوان راننده)",
+      "#Car (as passenger)": "خودرو (به‌عنوان سرنشین)",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#School bus or shuttle service": "سرویس مدرسه یا شاتل",
+      "#Which of these modes do you combine in the same trip at least once a week?": "کدام‌یک از این وسایل را دست‌کم هفته‌ای یک بار در یک سفر با هم ترکیب می‌کنید؟",
+      "#Walking (stretches of at least 10 minutes)": "پیاده (بخش‌هایی دست‌کم ۱۰ دقیقه‌ای)",
+      "#Car (as driver or passenger)": "خودرو (به‌عنوان راننده یا سرنشین)",
+      "#Bus or tram": "اتوبوس یا تراموا",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار منطقه‌ای یا حومه‌ای",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "وسایل نقلیه بیش از حد شلوغ‌اند (مثلاً جایی برای دوچرخه، کالسکه، ویلچر یا چمدان نیست)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "رسیدن پیاده به ایستگاه دشوار است (نبود پیاده‌رو، پله، گذرگاه‌های دشوار)",
+      "#Services are infrequent or do not run in the evening": "سرویس‌ها کم‌تعدادند یا عصرها و شب‌ها کار نمی‌کنند",
+      "#10:00-16:00 (daytime)": "۱۰:۰۰ تا ۱۶:۰۰ (طول روز)",
+      "#16:00-20:00 (afternoon and evening rush)": "۱۶:۰۰ تا ۲۰:۰۰ (ساعات شلوغی بعدازظهر و عصر)",
+      "#20:00-22:00 (evening)": "۲۰:۰۰ تا ۲۲:۰۰ (اوایل شب)",
+      "#After 22:00 (night)": "بعد از ۲۲:۰۰ (شب)",
+      "#Variable hours or shifts": "ساعات متغیر یا شیفتی",
+      "#Frequency of services and waiting times": "تعداد دفعات حرکت و زمان انتظار",
+      "#Service in the evening and on public holidays": "سرویس‌دهی در عصر و شب و روزهای تعطیل",
+      "#Accessibility (barriers, stairs, getting on board)": "دسترس‌پذیری (موانع، پله‌ها، سوار شدن)",
+      "#Convenience": "سهولت استفاده",
+      "#Barrier-free access (no stairs, accessible vehicles)": "دسترسی بدون مانع (بدون پله، وسایل نقلیه دسترس‌پذیر)",
+      "#Travel time": "مدت زمان سفر",
+      "#Being able to bring children, a pushchair or shopping": "امکان همراه بردن کودکان، کالسکه یا خرید",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "کدام‌یک از وسایل نقلیه زیر در خانوار شما در دسترس است؟ (فقط وسایلی را بشمارید که بزرگسالان استفاده می‌کنند.)",
+      "#Car adapted for a person with disability": "خودروی تطبیق‌یافته برای فرد دارای معلولیت",
+      "#Powered wheelchair or mobility scooter": "ویلچر برقی یا اسکوتر مخصوص افراد کم‌توان حرکتی",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "وقتی لازم دارید، استفاده از وسیله نقلیه خانوار برایتان چقدر آسان است؟",
+      "#Very difficult": "خیلی دشوار",
+      "#Difficult": "دشوار",
+      "#Easy": "آسان",
+      "#Very easy": "خیلی آسان",
+      "#I don't use it because I don't drive or can't drive it": "از آن استفاده نمی‌کنم چون رانندگی نمی‌کنم یا نمی‌توانم آن را برانم",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "استفاده از اپلیکیشن‌ها برای درخواست تاکسی یا خودرو با راننده (مثلاً اوبر) یا اجاره وسایل نقلیه اشتراکی (دوچرخه، اسکوتر برقی، خودرو) برایتان چقدر راحت است؟"
     },
     "hu": {
       "#Person walking, bicycle and bus": "Gyalogló személy, kerékpár és busz",
@@ -1515,21 +1727,16 @@
       "#Mobility habits": "Közlekedési szokások",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>Kérdések arról, hogyan közlekedik általában a mindennapokban.</p>",
       "#Which travel mode do you most often use for your trips?": "Melyik közlekedési módot használja a leggyakrabban?",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "Gyaloglás (az út fő közlekedési módjaként, nem csak rövid rá- vagy átszállási gyaloglásként)",
       "#Car": "Autó",
       "#Car sharing": "Autómegosztás",
-      "#Motorcycle": "Motorkerékpár",
       "#Public transport": "Tömegközlekedés",
       "#Bicycle/e-bike (private)": "Kerékpár / e-bike (saját)",
       "#Bicycle/e-bike (shared)": "Kerékpár / e-bike (megosztott)",
       "#e-scooter (private)": "Elektromos roller (saját)",
       "#e-scooter (shared)": "Elektromos roller (megosztott)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Használ legalább hetente egyszer több közlekedési módot ugyanazon az utazáson belül? (Jelölje meg az összes megfelelőt)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (az út nagy részének fő közlekedési módjaként, nem csak rövid rá- vagy átszállási gyaloglásként)",
       "#I don't use any combination": "Nem kombinálok több közlekedési módot",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "A járművek túl zsúfoltak (pl. nincs hely kerékpárnak vagy csomagnak)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Gyenge az összehangolás a közlekedési módok között (hosszú várakozás, lekésett csatlakozás)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Hiányos az infrastruktúra (pl. nincs kerékpárparkoló vagy nem lehet kerékpárt vinni a tömegközlekedésre)",
       "#Complicated transfers (stations far apart, unclear routes)": "Bonyolult az átszállás (az állomások messze vannak egymástól, az útvonalak nem egyértelműek)",
@@ -1562,23 +1769,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "A nap mely időszakaiban közlekedik leggyakrabban? (Jelölje meg az összes megfelelőt)",
       "#Before 7:00": "7:00 előtt",
       "#7:00-10:00 (morning rush)": "7:00-10:00 (reggeli csúcsidő)",
-      "#10:00-14:00 (midday)": "10:00-14:00 (napközben)",
-      "#14:00-18:00 (afternoon rush)": "14:00-18:00 (délután)",
-      "#18:00-20:00 (evening return)": "18:00-20:00 (esti hazatérés)",
-      "#After 20:00 (evening/night)": "20:00 után (este / éjszaka)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Egy tipikus héten a leggyakoribb utazásai során általában egyedül vagy másokkal közlekedik?",
       "#Mostly alone": "Többnyire egyedül",
       "#Often with family members": "Gyakran családtagokkal",
       "#Often with colleagues or friends": "Gyakran kollégákkal vagy barátokkal",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Mi a leggyakoribb utazásának fő célja? (Gondoljon arra az útra, amelyet egy tipikus héten a leggyakrabban megtesz.)",
       "#Work or professional business": "Munka vagy üzleti tevékenység",
       "#Education": "Oktatás",
       "#Shopping or daily activities": "Vásárlás vagy mindennapi ügyintézés",
-      "#Appointments (medical,legal,banking)": "Időpontok (orvosi, jogi, banki)",
       "#Social/Leisure": "Társasági élet / szabadidő",
       "#Health/Exercise": "Egészség / testmozgás",
-      "#Caring/Escort": "Gondozás vagy más személy kísérése",
-      "#On average, how often do you make your most frequent journey?": "Átlagosan milyen gyakran teszi meg a leggyakoribb útját?",
       "#5 or more days a week (Daily/Commuter)": "Hetente 5 vagy több napon (napi / ingázás)",
       "#3–4 days a week (Frequent)": "Hetente 3-4 napon (gyakran)",
       "#1–2 days a week (Regular)": "Hetente 1-2 napon (rendszeresen)",
@@ -1593,13 +1791,11 @@
       "#Satisfied": "Elégedett",
       "#Very satisfied": "Nagyon elégedett",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "Mely szempontokkal a legkevésbé elégedett a jelenleg leggyakrabban használt közlekedési módjánál?",
-      "#I am satisfied with my current primary mode of transport": "Elégedett vagyok a jelenleg leggyakrabban használt közlekedési módommal",
       "#Travel Time/Speed": "Utazási idő / sebesség",
       "#Cost/Value for money": "Költség / ár-érték arány",
       "#Reliability/Predictability": "Megbízhatóság / kiszámíthatóság",
       "#Comfort": "Kényelem",
       "#Safety/Security": "Közlekedésbiztonság / személyes biztonság",
-      "#Accessibility/Convenience": "Akadálymentesség / könnyű használat",
       "#Crowding/Availability of space": "Zsúfoltság / rendelkezésre álló hely",
       "#Environmental impact": "Környezeti hatás",
       "#Lack of flexibility": "Rugalmasság hiánya",
@@ -1611,22 +1807,15 @@
       "#Reliability and Predictability": "Megbízhatóság és kiszámíthatóság",
       "#Social status": "Társadalmi státusz",
       "#Personal safety and security": "Személyes biztonság és közlekedésbiztonság",
-      "#Time Efficiency": "Időmegtakarítás",
       "#Flexibility and independence": "Rugalmasság és önállóság",
       "#Resources": "Rendelkezésre álló lehetőségek",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>Kérdések azokról a járművekről és eszközökről, amelyek rendelkezésére állnak a közlekedéshez.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "Mely járművek állnak rendelkezésre a háztartásában? (Jelölje meg az összes megfelelőt)",
       "#Bicycle/e-bike": "Kerékpár / e-bike",
       "#E-scooter": "Elektromos roller",
       "#No vehicle available": "Nincs elérhető jármű",
       "#Which of the following do you personally use regularly? (Select all that apply)": "Az alábbiak közül melyeket használja személyesen rendszeresen? (Jelölje meg az összes megfelelőt)",
       "#None": "Egyik sem",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "Ha van jármű a háztartásában, mennyire könnyű használnia, amikor szüksége van rá?",
-      "#Very difficult (rarely available)": "Nagyon nehéz (ritkán elérhető)",
-      "#Difficult (often unavailable or shared)": "Nehéz (gyakran nem elérhető vagy meg kell osztani)",
       "#Neither easy nor difficult": "Sem könnyű, sem nehéz",
-      "#Easy (usually available)": "Könnyű (általában elérhető)",
-      "#Very easy (almost always available)": "Nagyon könnyű (szinte mindig elérhető)",
       "#How comfortable are you using navigation or map apps for travel?": "Mennyire érzi magát kényelmesen navigációs vagy térképes alkalmazások használatakor?",
       "#Very uncomfortable": "Nagyon kényelmetlenül",
       "#Somewhat uncomfortable": "Kissé kényelmetlenül",
@@ -1635,8 +1824,50 @@
       "#Very comfortable": "Nagyon kényelmesen",
       "#I don't use it at all.": "Egyáltalán nem használom.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "Mennyire érzi magát kényelmesen, amikor alkalmazással vásárol vagy érvényesít tömegközlekedési jegyet?",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "Mennyire érzi magát kényelmesen taxi-, személyszállító vagy megosztott mobilitási alkalmazások használatakor, például taxi, közösségi kerékpár vagy roller esetén?",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a mindennapi közlekedési szokásairól szól: milyen közlekedési módokat használ, hogyan kombinálja őket, és milyen lehetőségek állnak rendelkezésére. Válaszai segítenek jobban megérteni a városi mindennapi közlekedési szokásokat. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a mindennapi közlekedési szokásairól szól: milyen közlekedési módokat használ, hogyan kombinálja őket, és milyen lehetőségek állnak rendelkezésére. Válaszai segítenek jobban megérteni a városi mindennapi közlekedési szokásokat. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni. Magát az e-mail-címét soha nem tároljuk, és ez a kérdőív nem rögzíti a tartózkodási helyét.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "Gondoljon arra az útra, amelyet egy átlagos héten a leggyakrabban tesz meg: ezekben a kérdőívekben ezt nevezzük szokásos útjának. Mi ennek az útnak a fő célja?",
+      "#Appointments (medical, legal, banking)": "Időpontok (orvosi, jogi, banki)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "Valakinek a kísérése vagy segítése (például iskolába vagy orvoshoz)",
+      "#On average, how often do you make your usual trip?": "Átlagosan milyen gyakran teszi meg a szokásos útját?",
+      "#On your usual trip, do you usually travel alone or with other people?": "A szokásos útján általában egyedül vagy másokkal együtt közlekedik?",
+      "#Accompanying children or people I look after": "Gyermekeket vagy általam gondozott személyeket kísérek",
+      "#Accompanied by someone who helps me": "Valaki elkísér, aki segít nekem",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "Gyalog vagy kerekesszékkel (az út fő módjaként, nem csak rövid szakaszokon a megállóig vagy átszálláskor)",
+      "#Car (as driver)": "Autó (vezetőként)",
+      "#Car (as passenger)": "Autó (utasként)",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#School bus or shuttle service": "Iskolabusz vagy transzferjárat",
+      "#Which of these modes do you combine in the same trip at least once a week?": "Az alábbi közlekedési módok közül melyeket kombinálja ugyanazon az úton legalább hetente egyszer?",
+      "#Walking (stretches of at least 10 minutes)": "Gyalog (legalább 10 perces szakaszok)",
+      "#Car (as driver or passenger)": "Autó (vezetőként vagy utasként)",
+      "#Bus or tram": "Busz vagy villamos",
+      "#Metro": "Metró",
+      "#Regional or suburban train": "Regionális vagy elővárosi vonat",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "A járművek túlzsúfoltak (például nincs hely kerékpárnak, babakocsinak, kerekesszéknek vagy csomagnak)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "A megálló vagy állomás gyalog nehezen érhető el (nincs járda, lépcsők, nehéz átkelés)",
+      "#Services are infrequent or do not run in the evening": "Ritkán járnak a járatok, vagy este nem közlekednek",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (napközben)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (délutáni és esti csúcsidő)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (este)",
+      "#After 22:00 (night)": "22:00 után (éjszaka)",
+      "#Variable hours or shifts": "Változó időpontok vagy műszakbeosztás",
+      "#Frequency of services and waiting times": "Járatsűrűség és várakozási idő",
+      "#Service in the evening and on public holidays": "Esti és ünnepnapi közlekedés",
+      "#Accessibility (barriers, stairs, getting on board)": "Akadálymentesség (akadályok, lépcsők, felszállás)",
+      "#Convenience": "Kényelmes használat",
+      "#Barrier-free access (no stairs, accessible vehicles)": "Akadálymentes hozzáférés (nincs lépcső, akadálymentes járművek)",
+      "#Travel time": "Utazási idő",
+      "#Being able to bring children, a pushchair or shopping": "Hogy gyermeket, babakocsit vagy bevásárlást is magammal vihessek",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "Az alábbi járművek közül melyek állnak rendelkezésre a háztartásában? (Csak a felnőttek által használt járműveket számolja.)",
+      "#Car adapted for a person with disability": "Fogyatékossággal élő személy számára átalakított autó",
+      "#Powered wheelchair or mobility scooter": "Elektromos kerekesszék vagy mozgássegítő robogó",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "Mennyire könnyű Önnek használni a háztartás egyik járművét, amikor szüksége van rá?",
+      "#Very difficult": "Nagyon nehéz",
+      "#Difficult": "Nehéz",
+      "#Easy": "Könnyű",
+      "#Very easy": "Nagyon könnyű",
+      "#I don't use it because I don't drive or can't drive it": "Nem használom, mert nem vezetek, vagy nem tudom vezetni",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "Mennyire érzi magát magabiztosnak olyan alkalmazások használatában, amelyekkel taxit vagy sofőrös autót hívhat (például Uber), illetve megosztott járművet (kerékpárt, elektromos rollert, autót) bérelhet?"
     },
     "ar": {
       "#Person walking, bicycle and bus": "شخص يمشي ودراجة هوائية وحافلة",
@@ -1649,21 +1880,16 @@
       "#Mobility habits": "عادات التنقل",
       "#<p>Questions about how you typically get around on a day-to-day basis.</p>": "<p>أسئلة عن الطريقة التي تتنقل بها عادةً في حياتك اليومية.</p>",
       "#Which travel mode do you most often use for your trips?": "ما وسيلة التنقل التي تستخدمها غالبًا في رحلاتك؟",
-      "#Walking (as the main mode for the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية للرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
       "#Car": "السيارة",
       "#Car sharing": "مشاركة السيارات",
-      "#Motorcycle": "الدراجة النارية",
       "#Public transport": "النقل العام",
       "#Bicycle/e-bike (private)": "الدراجة / الدراجة الكهربائية (شخصية)",
       "#Bicycle/e-bike (shared)": "الدراجة / الدراجة الكهربائية (مشتركة)",
       "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
       "#e-scooter (shared)": "السكوتر الكهربائي (مشترك)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "هل تستخدم مزيجًا من الوسائل التالية في الرحلة نفسها مرة واحدة على الأقل في الأسبوع؟ (اختر كل ما ينطبق)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
       "#I don't use any combination": "لا أستخدم أكثر من وسيلة في الرحلة نفسها",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تواجهها عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "المركبات مزدحمة جدًا (مثل عدم وجود مساحة للدراجة أو الأمتعة)",
       "#Poor coordination between modes (long waiting times, missed connections)": "ضعف التنسيق بين الوسائل (انتظار طويل، فقدان وسيلة الربط)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "نقص البنية التحتية (مثل عدم وجود موقف للدراجات أو عدم السماح بالدراجة في النقل العام)",
       "#Complicated transfers (stations far apart, unclear routes)": "التبديل بين الوسائل معقد (المحطات بعيدة عن بعضها، الطرق غير واضحة)",
@@ -1696,23 +1922,14 @@
       "#At what times of day do you most often travel? (Select all that apply)": "في أي أوقات من اليوم تتنقل غالبًا؟ (اختر كل ما ينطبق)",
       "#Before 7:00": "قبل الساعة 7:00",
       "#7:00-10:00 (morning rush)": "7:00-10:00 (ذروة الصباح)",
-      "#10:00-14:00 (midday)": "10:00-14:00 (منتصف اليوم)",
-      "#14:00-18:00 (afternoon rush)": "14:00-18:00 (بعد الظهر)",
-      "#18:00-20:00 (evening return)": "18:00-20:00 (العودة مساءً)",
-      "#After 20:00 (evening/night)": "بعد 20:00 (المساء / الليل)",
-      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "في الرحلات التي تقوم بها غالبًا خلال أسبوع عادي، هل تتنقل عادةً وحدك أم مع أشخاص آخرين؟",
       "#Mostly alone": "غالبًا وحدي",
       "#Often with family members": "غالبًا مع أفراد العائلة",
       "#Often with colleagues or friends": "غالبًا مع الزملاء أو الأصدقاء",
-      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "ما الغرض الرئيسي من رحلتك الأكثر تكرارًا؟ (فكر في الرحلة التي تقوم بها غالبًا خلال أسبوع عادي.)",
       "#Work or professional business": "العمل أو نشاط مهني",
       "#Education": "التعليم",
       "#Shopping or daily activities": "التسوق أو الأنشطة اليومية",
-      "#Appointments (medical,legal,banking)": "المواعيد (طبية، قانونية، مصرفية)",
       "#Social/Leisure": "نشاط اجتماعي / ترفيه",
       "#Health/Exercise": "الصحة / الرياضة",
-      "#Caring/Escort": "رعاية شخص آخر أو مرافقته",
-      "#On average, how often do you make your most frequent journey?": "في المتوسط، كم مرة تقوم برحلتك الأكثر تكرارًا؟",
       "#5 or more days a week (Daily/Commuter)": "5 أيام أو أكثر في الأسبوع (يوميًا / تنقل للعمل)",
       "#3–4 days a week (Frequent)": "3-4 أيام في الأسبوع (متكرر)",
       "#1–2 days a week (Regular)": "1-2 يوم في الأسبوع (منتظم)",
@@ -1727,13 +1944,11 @@
       "#Satisfied": "راضٍ",
       "#Very satisfied": "راضٍ جدًا",
       "#Which aspects of your current primary mode of transport are you most dissatisfied with?": "ما الجوانب التي لا ترضيك أكثر في وسيلة التنقل الرئيسية التي تستخدمها حاليًا؟",
-      "#I am satisfied with my current primary mode of transport": "أنا راضٍ عن وسيلة التنقل الرئيسية التي أستخدمها حاليًا",
       "#Travel Time/Speed": "وقت الرحلة / السرعة",
       "#Cost/Value for money": "التكلفة / القيمة مقابل المال",
       "#Reliability/Predictability": "الموثوقية / إمكانية التوقع",
       "#Comfort": "الراحة",
       "#Safety/Security": "السلامة المرورية / الأمان الشخصي",
-      "#Accessibility/Convenience": "سهولة الوصول / سهولة الاستخدام",
       "#Crowding/Availability of space": "الازدحام / المساحة المتاحة",
       "#Environmental impact": "الأثر البيئي",
       "#Lack of flexibility": "قلة المرونة",
@@ -1745,22 +1960,15 @@
       "#Reliability and Predictability": "الموثوقية وإمكانية التوقع",
       "#Social status": "المكانة الاجتماعية",
       "#Personal safety and security": "الأمان الشخصي والسلامة المرورية",
-      "#Time Efficiency": "توفير الوقت",
       "#Flexibility and independence": "المرونة والاستقلالية",
       "#Resources": "الموارد المتاحة",
       "#<p>Questions about the vehicles and tools available to you for travel.</p>": "<p>أسئلة عن المركبات والأدوات المتاحة لك للتنقل.</p>",
-      "#Which of the following vehicles are available in your household? (Select all that apply)": "أي من المركبات التالية متاحة في أسرتك؟ (اختر كل ما ينطبق)",
       "#Bicycle/e-bike": "دراجة / دراجة كهربائية",
       "#E-scooter": "سكوتر كهربائي",
       "#No vehicle available": "لا توجد مركبة متاحة",
       "#Which of the following do you personally use regularly? (Select all that apply)": "أي من الخيارات التالية تستخدمه أنت شخصيًا بشكل منتظم؟ (اختر كل ما ينطبق)",
       "#None": "لا شيء",
-      "#If any vehicle is available in your household, how easy is it for you to use it when needed?": "إذا كانت هناك مركبة متاحة في أسرتك، فما مدى سهولة استخدامها عندما تحتاج إليها؟",
-      "#Very difficult (rarely available)": "صعب جدًا (نادراً ما تكون متاحة)",
-      "#Difficult (often unavailable or shared)": "صعب (غالبًا غير متاحة أو مشتركة مع شخص آخر)",
       "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
-      "#Easy (usually available)": "سهل (متاحة عادةً)",
-      "#Very easy (almost always available)": "سهل جدًا (متاحة تقريبًا دائمًا)",
       "#How comfortable are you using navigation or map apps for travel?": "ما مدى راحتك في استخدام تطبيقات الملاحة أو الخرائط أثناء التنقل؟",
       "#Very uncomfortable": "غير مرتاح جدًا",
       "#Somewhat uncomfortable": "غير مرتاح إلى حد ما",
@@ -1769,8 +1977,50 @@
       "#Very comfortable": "مرتاح جدًا",
       "#I don't use it at all.": "لا أستخدمها إطلاقًا.",
       "#How comfortable are you using apps to buy or validate public transport tickets?": "ما مدى راحتك في استخدام التطبيقات لشراء أو تفعيل تذاكر النقل العام؟",
-      "#How comfortable are you using ride-hailing or shared mobility apps (e.g., taxi, bike-share, scooter-share)?": "ما مدى راحتك في استخدام تطبيقات سيارات الأجرة أو خدمات طلب السيارات أو التنقل المشترك، مثل التاكسي أو الدراجات المشتركة أو السكوتر المشترك؟",
-      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity عادات تنقلك اليومية: الوسائل التي تستخدمها، وكيف تجمع بينها، وما الإمكانات المتاحة لك في رحلاتك. تساعدنا إجاباتك على فهم أنماط التنقل اليومية في المدينة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+      "#<p>This SmartUrbanity questionnaire focuses on your everyday mobility habits: the modes you use, how often you combine them, and which resources are available for your trips. Your answers help us understand daily travel patterns in the city. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together. Your email address itself is never saved, and this questionnaire does not record your location.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity عادات تنقلك اليومية: الوسائل التي تستخدمها، وكيف تجمع بينها، وما الإمكانات المتاحة لك في رحلاتك. تساعدنا إجاباتك على فهم أنماط التنقل اليومية في المدينة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. لا يُحفَظ عنوان بريدك الإلكتروني نفسه أبدًا، ولا يسجّل هذا الاستبيان موقعك.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
+      "#Think of the trip you make most often in a typical week: in these questionnaires we call it your usual trip. What is its main purpose?": "فكّر في التنقل الذي تقوم به أكثر من غيره في أسبوع عادي: نسمّيه في هذه الاستبيانات تنقّلك المعتاد. ما الغرض الرئيسي منه؟",
+      "#Appointments (medical, legal, banking)": "المواعيد (طبية، قانونية، مصرفية)",
+      "#Accompanying or assisting someone (e.g. to school or medical visits)": "مرافقة شخص ما أو مساعدته (مثلًا إلى المدرسة أو المواعيد الطبية)",
+      "#On average, how often do you make your usual trip?": "في المتوسط، كم مرة تقوم بتنقّلك المعتاد؟",
+      "#On your usual trip, do you usually travel alone or with other people?": "في تنقّلك المعتاد، هل تتنقل عادةً بمفردك أم مع أشخاص آخرين؟",
+      "#Accompanying children or people I look after": "أرافق أطفالًا أو أشخاصًا أعتني بهم",
+      "#Accompanied by someone who helps me": "برفقة شخص يساعدني",
+      "#On foot or in a wheelchair (as the main mode of the trip, not just short walks to reach a stop or to change)": "سيرًا على الأقدام أو بالكرسي المتحرك (كوسيلة رئيسية للتنقل، وليس فقط مسافات قصيرة للوصول إلى محطة أو لتغيير وسيلة النقل)",
+      "#Car (as driver)": "سيارة (كسائق)",
+      "#Car (as passenger)": "سيارة (كراكب)",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#School bus or shuttle service": "حافلة مدرسية أو خدمة نقل مكوكية",
+      "#Which of these modes do you combine in the same trip at least once a week?": "أي من وسائل النقل هذه تجمع بينها في التنقل نفسه مرة واحدة على الأقل في الأسبوع؟",
+      "#Walking (stretches of at least 10 minutes)": "سيرًا على الأقدام (مسافات لا تقل عن 10 دقائق)",
+      "#Car (as driver or passenger)": "سيارة (كسائق أو راكب)",
+      "#Bus or tram": "حافلة أو ترام",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار إقليمي أو قطار ضواحي",
+      "#Vehicles are too crowded (e.g. no space for a bicycle, pushchair, wheelchair or luggage)": "وسائل النقل مزدحمة جدًا (مثلًا لا مكان لدراجة أو عربة أطفال أو كرسي متحرك أو أمتعة)",
+      "#The stop or station is hard to reach on foot (no pavement, stairs, difficult crossings)": "يصعب الوصول إلى المحطة سيرًا على الأقدام (لا يوجد رصيف، درج، معابر صعبة)",
+      "#Services are infrequent or do not run in the evening": "الرحلات قليلة أو لا تعمل في المساء",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (خلال النهار)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (ذروة بعد الظهر والمساء)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (المساء)",
+      "#After 22:00 (night)": "بعد 22:00 (الليل)",
+      "#Variable hours or shifts": "أوقات متغيرة أو نظام مناوبات",
+      "#Frequency of services and waiting times": "تواتر الرحلات وأوقات الانتظار",
+      "#Service in the evening and on public holidays": "الخدمة في المساء وأيام العطل الرسمية",
+      "#Accessibility (barriers, stairs, getting on board)": "إمكانية الوصول (العوائق، الدرج، الصعود إلى المركبة)",
+      "#Convenience": "سهولة الاستخدام",
+      "#Barrier-free access (no stairs, accessible vehicles)": "وصول خالٍ من العوائق (بلا درج، مركبات مهيأة)",
+      "#Travel time": "مدة التنقل",
+      "#Being able to bring children, a pushchair or shopping": "إمكانية اصطحاب الأطفال أو عربة الأطفال أو المشتريات",
+      "#Which of the following vehicles are available in your household? (Count only vehicles used by adults.)": "أي من المركبات التالية متوفرة في أسرتك؟ (احسب فقط المركبات التي يستخدمها البالغون.)",
+      "#Car adapted for a person with disability": "سيارة مهيأة لشخص من ذوي الإعاقة",
+      "#Powered wheelchair or mobility scooter": "كرسي متحرك كهربائي أو سكوتر للتنقل",
+      "#How easy is it for you to use a vehicle of your household when you need it?": "ما مدى سهولة استخدامك لمركبة من مركبات أسرتك عندما تحتاج إليها؟",
+      "#Very difficult": "صعب جدًا",
+      "#Difficult": "صعب",
+      "#Easy": "سهل",
+      "#Very easy": "سهل جدًا",
+      "#I don't use it because I don't drive or can't drive it": "لا أستخدمها لأنني لا أقود أو لا أستطيع قيادتها",
+      "#How comfortable are you using apps to call a taxi or a car with driver (e.g. Uber) or to rent shared vehicles (bicycles, e-scooters, cars)?": "ما مدى ارتياحك لاستخدام التطبيقات لطلب سيارة أجرة أو سيارة مع سائق (مثل Uber) أو لاستئجار مركبات مشتركة (دراجات، سكوترات كهربائية، سيارات)؟"
     }
   },
   "id": "smarturbanity_daily_travel",

@@ -1,9 +1,10 @@
 {
   "questionnaire": {
-    "name": "SmartUrbanity Service Opportunities",
+    "name": "SmartUrbanity - What can be done at this service",
     "questionnaire_id": "smarturbanity_service_opportunities",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "1.1.0",
     "project": "SmartUrbanity",
+    "estimated_minutes": 1,
     "options": {
       "review_mode": true,
       "ask_consent": false,
@@ -11,11 +12,11 @@
     },
     "sections": [
       {
-        "title": "Service opportunities",
-        "description": "Confirm which opportunities this service provides.",
+        "title": "What can be done at this service",
+        "description": "For each activity, tell us whether people can do it at this service.",
         "questions": [
           {
-            "text": "Which opportunities does this service provide?",
+            "text": "What can people do at this service?",
             "answer_key": "service_opportunities",
             "question_type": "matrix",
             "row_source": "opportunities",
@@ -27,12 +28,12 @@
             "columns": [
               {
                 "key": "exists",
-                "label": "Does this opportunity exist?",
+                "label": "Can it be done here?",
                 "type": "boolean"
               },
               {
                 "key": "desired_here",
-                "label": "Would you like this opportunity to be available here?",
+                "label": "Would you like it to be possible here?",
                 "type": "boolean"
               }
             ]
@@ -43,10 +44,92 @@
   },
   "languages": {
     "en": {
-      "code": "en"
+      "code": "en",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - What can be done at this service",
+      "#What can be done at this service": "What can be done at this service",
+      "#For each activity, tell us whether people can do it at this service.": "For each activity, tell us whether people can do it at this service.",
+      "#What can people do at this service?": "What can people do at this service?",
+      "#Can it be done here?": "Can it be done here?",
+      "#Would you like it to be possible here?": "Would you like it to be possible here?",
+      "#Other": "Other",
+      "#Please specify": "Please specify"
     },
     "it": {
-      "code": "it"
+      "code": "it",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Cosa si può fare in questo servizio",
+      "#What can be done at this service": "Cosa si può fare in questo servizio",
+      "#For each activity, tell us whether people can do it at this service.": "Per ogni attività, dicci se si può fare in questo servizio.",
+      "#What can people do at this service?": "Cosa si può fare in questo servizio?",
+      "#Can it be done here?": "Si può fare qui?",
+      "#Would you like it to be possible here?": "Vorresti che si potesse fare qui?",
+      "#Other": "Altro",
+      "#Please specify": "Specifica"
+    },
+    "fr": {
+      "code": "fr",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Ce que l’on peut faire dans ce service",
+      "#What can be done at this service": "Ce que l’on peut faire dans ce service",
+      "#For each activity, tell us whether people can do it at this service.": "Pour chaque activité, dites-nous si on peut la faire dans ce service.",
+      "#What can people do at this service?": "Que peut-on faire dans ce service ?",
+      "#Can it be done here?": "Peut-on le faire ici ?",
+      "#Would you like it to be possible here?": "Aimeriez-vous que ce soit possible ici ?",
+      "#Other": "Autre",
+      "#Please specify": "Veuillez préciser"
+    },
+    "de": {
+      "code": "de",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Was man bei diesem Dienst tun kann",
+      "#What can be done at this service": "Was man bei diesem Dienst tun kann",
+      "#For each activity, tell us whether people can do it at this service.": "Sagen Sie uns für jede Tätigkeit, ob man sie bei diesem Dienst erledigen kann.",
+      "#What can people do at this service?": "Was kann man bei diesem Dienst tun?",
+      "#Can it be done here?": "Kann man das hier tun?",
+      "#Would you like it to be possible here?": "Würden Sie sich wünschen, dass es hier möglich ist?",
+      "#Other": "Sonstiges",
+      "#Please specify": "Bitte angeben"
+    },
+    "tr": {
+      "code": "tr",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Bu hizmette neler yapılabilir",
+      "#What can be done at this service": "Bu hizmette neler yapılabilir",
+      "#For each activity, tell us whether people can do it at this service.": "Her etkinlik için bu hizmette yapılıp yapılamayacağını bize söyleyin.",
+      "#What can people do at this service?": "Bu hizmette insanlar neler yapabilir?",
+      "#Can it be done here?": "Burada yapılabilir mi?",
+      "#Would you like it to be possible here?": "Burada yapılabilmesini ister misiniz?",
+      "#Other": "Diğer",
+      "#Please specify": "Lütfen belirtin"
+    },
+    "fa": {
+      "code": "fa",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - در این خدمت چه کارهایی می‌توان انجام داد",
+      "#What can be done at this service": "در این خدمت چه کارهایی می‌توان انجام داد",
+      "#For each activity, tell us whether people can do it at this service.": "برای هر فعالیت به ما بگویید آیا می‌توان آن را در این خدمت انجام داد.",
+      "#What can people do at this service?": "مردم در این خدمت چه کارهایی می‌توانند انجام دهند؟",
+      "#Can it be done here?": "آیا اینجا می‌توان انجامش داد؟",
+      "#Would you like it to be possible here?": "دوست دارید اینجا امکان‌پذیر باشد؟",
+      "#Other": "سایر",
+      "#Please specify": "لطفاً مشخص کنید"
+    },
+    "hu": {
+      "code": "hu",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Mit lehet intézni ennél a szolgáltatásnál",
+      "#What can be done at this service": "Mit lehet intézni ennél a szolgáltatásnál",
+      "#For each activity, tell us whether people can do it at this service.": "Minden tevékenységnél mondja el, hogy elvégezhető-e ennél a szolgáltatásnál.",
+      "#What can people do at this service?": "Mit lehet intézni ennél a szolgáltatásnál?",
+      "#Can it be done here?": "Elvégezhető itt?",
+      "#Would you like it to be possible here?": "Szeretné, ha itt lehetséges lenne?",
+      "#Other": "Egyéb",
+      "#Please specify": "Kérjük, pontosítsa"
+    },
+    "ar": {
+      "code": "ar",
+      "#SmartUrbanity - What can be done at this service": "SmartUrbanity - ما الذي يمكن فعله في هذه الخدمة",
+      "#What can be done at this service": "ما الذي يمكن فعله في هذه الخدمة",
+      "#For each activity, tell us whether people can do it at this service.": "لكل نشاط، أخبرنا ما إذا كان يمكن القيام به في هذه الخدمة.",
+      "#What can people do at this service?": "ما الذي يمكن للناس فعله في هذه الخدمة؟",
+      "#Can it be done here?": "هل يمكن القيام به هنا؟",
+      "#Would you like it to be possible here?": "هل تودّ أن يكون ذلك ممكنًا هنا؟",
+      "#Other": "أخرى",
+      "#Please specify": "يرجى التحديد"
     }
   },
   "id": "smarturbanity_service_opportunities",
