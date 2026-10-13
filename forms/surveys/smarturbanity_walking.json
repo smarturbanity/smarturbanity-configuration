@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.",
-            "answer_key": "walk_days_v1",
+            "answer_key": "walk_days",
             "question_type": "single_option",
             "required": true,
             "options": [
@@ -47,11 +47,12 @@
           },
           {
             "text": "What stops you from getting around on foot more often? (Select all that apply)",
-            "answer_key": "walk_why_not_v1",
+            "help": "We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.",
+            "answer_key": "walk_why_not",
             "question_type": "multiple_options",
             "required": false,
             "show_if": {
-              "walk_days_v1": "no"
+              "walk_days": "no"
             },
             "add_other": true,
             "add_prefer_not_to_say": true,
@@ -96,10 +97,11 @@
           },
           {
             "text": "Which of the following physical barriers do you face on your walking route? (Select all that apply)",
-            "answer_key": "v1_which_of_the_following_physical_barr",
+            "help": "A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.",
+            "answer_key": "walk_physical_barriers",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -152,10 +154,10 @@
           },
           {
             "text": "How do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) affect your journey?",
-            "answer_key": "v1_how_do_poor_sidewalk_conditions_e_g",
+            "answer_key": "walk_sidewalk_condition_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -186,10 +188,10 @@
           },
           {
             "text": "How do temporary obstacles (e.g., roadworks, bins, or e-scooters and motorbikes parked on the sidewalk) typically affect your walking route?",
-            "answer_key": "avoid_obstacles_v1",
+            "answer_key": "avoid_obstacles",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -216,10 +218,10 @@
           },
           {
             "text": "To what extent does the steepness of your route affect your walking?",
-            "answer_key": "v1_to_what_extent_does_the_steepness_of",
+            "answer_key": "walk_slope_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -246,10 +248,11 @@
           },
           {
             "text": "How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?",
-            "answer_key": "avoid_dangerous_crossing_v1",
+            "help": "A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.",
+            "answer_key": "avoid_dangerous_crossing",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -276,10 +279,10 @@
           },
           {
             "text": "How does the availability of benches and rest areas affect your ability to complete your journey?",
-            "answer_key": "benches_importance_v1",
+            "answer_key": "benches_importance",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -306,10 +309,10 @@
           },
           {
             "text": "How does street lighting affect your walking after dark, both for seeing where you are going and for feeling safe from other people?",
-            "answer_key": "v1_how_does_the_quality_of_street_light",
+            "answer_key": "walk_lighting_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -340,10 +343,10 @@
           },
           {
             "text": "How does the presence (or lack) of trees, parks, or green spaces affect your route choice?",
-            "answer_key": "prefer_pleasant_v1",
+            "answer_key": "prefer_pleasant",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -370,10 +373,10 @@
           },
           {
             "text": "How does shade and heat (e.g., from sun exposure or hot pavement) affect your walking journeys during warmer months?",
-            "answer_key": "v1_how_does_shade_and_heat_e_g_from_sun",
+            "answer_key": "walk_heat_shade_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -400,10 +403,11 @@
           },
           {
             "text": "How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?",
-            "answer_key": "wayfinding_v1",
+            "help": "Wayfinding means the signs, maps and arrows that show the way to a place.",
+            "answer_key": "wayfinding",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -430,10 +434,10 @@
           },
           {
             "text": "How do traffic levels and congestion on your route typically affect your walking experience?",
-            "answer_key": "avoid_fast_traffic_v1",
+            "answer_key": "avoid_fast_traffic",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -460,10 +464,10 @@
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while walking?",
-            "answer_key": "risky_road_users_v1",
+            "answer_key": "risky_road_users",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "max_answers": 3,
             "options": [
@@ -509,10 +513,10 @@
           },
           {
             "text": "When you walk on the sidewalk, how often do bicycles or e-scooters ride close past you?",
-            "answer_key": "riding_on_pavement_v1",
+            "answer_key": "riding_on_pavement",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -539,10 +543,10 @@
           },
           {
             "text": "How does walking alongside or crossing high-speed roads (e.g., fast-moving or wide multi-lane roads) affect your sense of safety?",
-            "answer_key": "fast_vehicles_v1",
+            "answer_key": "fast_vehicles",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -569,10 +573,10 @@
           },
           {
             "text": "Does walking as part of your daily travel contribute positively to your physical or mental health?",
-            "answer_key": "v1_does_walking_as_part_of_your_daily_t",
+            "answer_key": "walk_health_benefit",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -599,10 +603,10 @@
           },
           {
             "text": "What improvements would most encourage you to walk more often or for longer distances?",
-            "answer_key": "walk_improvements_v1",
+            "answer_key": "walk_improvements",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "max_answers": 3,
             "options": [
@@ -680,6 +684,7 @@
       "#Yes": "Yes",
       "#No": "No",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Which of the following physical barriers do you face on your walking route? (Select all that apply)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.",
       "#Steps or steep curbs without ramps": "Steps or steep curbs without ramps",
       "#Missing or broken dropped kerbs at crossings": "Missing or broken dropped kerbs at crossings",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Paths too narrow for a wheelchair, stroller, or two people to pass",
@@ -706,6 +711,7 @@
       "#Significantly": "Significantly",
       "#Extremely": "Extremely",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.",
       "#Crossings are well placed and I feel safe using them": "Crossings are well placed and I feel safe using them",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Crossings are too infrequent and I sometimes have to cross in unsafe places",
       "#The poor quality or lack of crossings forces me to significantly change my route": "The poor quality or lack of crossings forces me to significantly change my route",
@@ -773,6 +779,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "What stops you from getting around on foot more often? (Select all that apply)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.",
       "#Destinations are too far away": "Destinations are too far away",
       "#Steep slopes or stairs on the way": "Steep slopes or stairs on the way",
       "#Sidewalks missing, too narrow or blocked": "Sidewalks missing, too narrow or blocked",
@@ -794,6 +801,7 @@
       "#I do not walk after dark for other reasons": "I do not walk after dark for other reasons",
       "#I choose greener or more pleasant routes even when they are longer": "I choose greener or more pleasant routes even when they are longer",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "Wayfinding means the signs, maps and arrows that show the way to a place.",
       "#I know the area, so I do not need signs": "I know the area, so I do not need signs",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)",
@@ -822,6 +830,7 @@
       "#Yes": "Sì",
       "#No": "No",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Quali dei seguenti ostacoli fisici incontri lungo il tuo percorso a piedi? (Seleziona tutte le opzioni applicabili)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "Lo scivolo del marciapiede è un tratto del bordo abbassato al livello della strada in corrispondenza di un attraversamento.",
       "#Steps or steep curbs without ramps": "Gradini o marciapiedi con bordi alti senza rampe",
       "#Missing or broken dropped kerbs at crossings": "Scivoli del marciapiede mancanti o danneggiati agli attraversamenti",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Percorsi troppo stretti per il passaggio di una sedia a rotelle, un passeggino o due persone",
@@ -848,6 +857,7 @@
       "#Significantly": "Significativamente",
       "#Extremely": "Estremamente",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "In che modo la qualità e la disponibilità degli attraversamenti pedonali (ad es. strisce pedonali, semafori pedonali o isole salvagente) influenzano il tuo spostamento?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "L'isola salvagente è un piccolo spazio rialzato in mezzo alla strada dove i pedoni possono fermarsi durante l'attraversamento.",
       "#Crossings are well placed and I feel safe using them": "Gli attraversamenti sono ben posizionati e mi sento al sicuro quando li utilizzo",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Gli attraversamenti sono troppo distanti tra loro e a volte devo attraversare in punti non sicuri",
       "#The poor quality or lack of crossings forces me to significantly change my route": "La scarsa qualità o la mancanza di attraversamenti mi costringe a modificare significativamente il percorso",
@@ -915,6 +925,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza come pedone. Le tue risposte ci aiutano a comprendere le condizioni e gli ostacoli che le persone incontrano quando si spostano a piedi in città e a individuare opportunità per rendere gli spostamenti a piedi più sicuri, confortevoli e piacevoli. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Ti sposti a piedi almeno una volta alla settimana per raggiungere una destinazione, e non solo per arrivare a una fermata o a un veicolo parcheggiato? Conta anche se ti muovi in sedia a rotelle, con il deambulatore, il bastone o il passeggino, oppure con qualcuno che ti accompagna.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "Che cosa ti impedisce di spostarti a piedi più spesso? (Seleziona tutte le opzioni applicabili)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "Lo chiediamo per capire che cosa limita gli spostamenti a piedi per persone diverse. Rispondere è facoltativo e puoi anche scegliere di non dirlo.",
       "#Destinations are too far away": "Le destinazioni sono troppo lontane",
       "#Steep slopes or stairs on the way": "Salite ripide o scale lungo il percorso",
       "#Sidewalks missing, too narrow or blocked": "Marciapiedi assenti, troppo stretti o ingombri",
@@ -936,6 +947,7 @@
       "#I do not walk after dark for other reasons": "Non cammino dopo il tramonto per altri motivi",
       "#I choose greener or more pleasant routes even when they are longer": "Scelgo percorsi più verdi o piacevoli anche quando sono più lunghi",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "In che modo la qualità della segnaletica e delle indicazioni lungo il percorso influisce sulla facilità con cui ti orienti a piedi?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "Per indicazioni di orientamento intendiamo cartelli, mappe e frecce che mostrano la strada per arrivare in un luogo.",
       "#I know the area, so I do not need signs": "Conosco la zona: non mi servono i segnali",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "Noto il traffico, ma il marciapiede mi tiene a distanza e mi sento al sicuro",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Tassisti o autisti di auto a noleggio con conducente (NCC, servizi tramite app)",
@@ -964,6 +976,7 @@
       "#Yes": "Oui",
       "#No": "Non",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Quels obstacles physiques rencontrez-vous sur vos trajets à pied ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "Une bordure abaissée est une partie de la bordure du trottoir mise au niveau de la chaussée à une traversée.",
       "#Steps or steep curbs without ramps": "Marches ou bordures hautes sans rampe",
       "#Missing or broken dropped kerbs at crossings": "Bordures abaissées absentes ou endommagées aux traversées",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Chemins trop étroits pour un fauteuil roulant, une poussette ou le passage de deux personnes",
@@ -990,6 +1003,7 @@
       "#Significantly": "Beaucoup",
       "#Extremely": "Énormément",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "Comment la qualité et la disponibilité des passages piétons, par exemple passages zébrés, feux piétons ou îlots centraux, influencent-elles votre trajet ?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "Un îlot central est un petit espace surélevé au milieu de la chaussée où les piétons peuvent s'arrêter pendant la traversée.",
       "#Crossings are well placed and I feel safe using them": "Les traversées sont bien placées et je me sens en sécurité en les utilisant",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Les traversées sont trop rares et je dois parfois traverser à des endroits peu sûrs",
       "#The poor quality or lack of crossings forces me to significantly change my route": "Le mauvais état ou le manque de traversées m’oblige à changer fortement mon itinéraire",
@@ -1057,6 +1071,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience en tant que piéton. Vos réponses nous aident à comprendre les conditions et les obstacles rencontrés lorsque l’on marche en ville et à trouver des moyens de rendre la marche plus sûre, plus confortable et plus agréable. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Vous déplacez-vous à pied au moins une fois par semaine pour vous rendre quelque part, et pas seulement pour rejoindre un arrêt ou un véhicule garé ? Cela compte aussi si vous vous déplacez en fauteuil roulant, avec un déambulateur, une canne ou une poussette, ou accompagné(e) par quelqu'un.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "Qu'est-ce qui vous empêche de vous déplacer à pied plus souvent ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "Nous posons cette question pour comprendre ce qui limite la marche selon les personnes. Répondre est facultatif, et vous pouvez aussi choisir de ne pas le dire.",
       "#Destinations are too far away": "Les destinations sont trop éloignées",
       "#Steep slopes or stairs on the way": "Des pentes raides ou des escaliers sur le trajet",
       "#Sidewalks missing, too narrow or blocked": "Des trottoirs absents, trop étroits ou encombrés",
@@ -1078,6 +1093,7 @@
       "#I do not walk after dark for other reasons": "Je ne marche pas après la tombée de la nuit pour d'autres raisons",
       "#I choose greener or more pleasant routes even when they are longer": "Je choisis des itinéraires plus verts ou plus agréables, même lorsqu'ils sont plus longs",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "Comment la qualité de la signalisation et de l'orientation sur votre trajet influence-t-elle la facilité avec laquelle vous trouvez votre chemin à pied ?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "L'orientation désigne les panneaux, plans et flèches qui indiquent le chemin vers un lieu.",
       "#I know the area, so I do not need signs": "Je connais le quartier, je n'ai donc pas besoin de panneaux",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "Je remarque la circulation, mais le trottoir me tient à bonne distance et je me sens en sécurité",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Chauffeurs de taxi ou de voitures avec chauffeur (VTC, services par application)",
@@ -1106,6 +1122,7 @@
       "#Yes": "Ja",
       "#No": "Nein",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Welche körperlichen oder baulichen Hindernisse begegnen Ihnen auf Ihren Wegen zu Fuß? (Wählen Sie alles Zutreffende aus)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "Ein abgesenkter Bordstein ist ein Teil der Bordsteinkante, der an einer Querung auf Fahrbahnhöhe abgesenkt ist.",
       "#Steps or steep curbs without ramps": "Stufen oder hohe Bordsteine ohne Rampe",
       "#Missing or broken dropped kerbs at crossings": "Fehlende oder beschädigte abgesenkte Bordsteine an Querungen",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Wege, die zu schmal für Rollstuhl, Kinderwagen oder zwei Personen nebeneinander sind",
@@ -1132,6 +1149,7 @@
       "#Significantly": "Stark",
       "#Extremely": "Sehr stark",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "Wie beeinflussen Qualität und Verfügbarkeit von Fußgängerquerungen, zum Beispiel Zebrastreifen, Fußgängerampeln oder Mittelinseln, Ihren Weg?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "Eine Mittelinsel ist ein kleiner erhöhter Bereich in der Straßenmitte, auf dem Fußgänger beim Überqueren anhalten können.",
       "#Crossings are well placed and I feel safe using them": "Die Querungen liegen gut und ich fühle mich dort sicher",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Es gibt zu wenige Querungen und ich muss manchmal an unsicheren Stellen die Straße überqueren",
       "#The poor quality or lack of crossings forces me to significantly change my route": "Schlechte oder fehlende Querungen zwingen mich, meine Route deutlich zu ändern",
@@ -1199,6 +1217,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung als Fußgängerin oder Fußgänger. Ihre Antworten helfen uns zu verstehen, welche Bedingungen und Hindernisse Menschen beim Gehen in der Stadt erleben und wie Gehen sicherer, angenehmer und komfortabler werden kann. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Sind Sie mindestens einmal pro Woche zu Fuß unterwegs, um ein Ziel zu erreichen, und nicht nur, um zu einer Haltestelle oder einem geparkten Fahrzeug zu gelangen? Es zählt auch, wenn Sie sich im Rollstuhl, mit Rollator, Gehstock oder Kinderwagen oder in Begleitung einer anderen Person fortbewegen.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "Was hält Sie davon ab, häufiger zu Fuß unterwegs zu sein? (Wählen Sie alles Zutreffende aus)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "Wir fragen dies, um zu verstehen, was das Zufußgehen für verschiedene Menschen einschränkt. Die Antwort ist freiwillig, und Sie können auch angeben, dass Sie es lieber nicht sagen möchten.",
       "#Destinations are too far away": "Die Ziele sind zu weit entfernt",
       "#Steep slopes or stairs on the way": "Steile Anstiege oder Treppen auf dem Weg",
       "#Sidewalks missing, too narrow or blocked": "Gehwege fehlen, sind zu schmal oder versperrt",
@@ -1220,6 +1239,7 @@
       "#I do not walk after dark for other reasons": "Ich gehe aus anderen Gründen nach Einbruch der Dunkelheit nicht zu Fuß",
       "#I choose greener or more pleasant routes even when they are longer": "Ich wähle grünere oder angenehmere Wege, auch wenn sie länger sind",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "Wie beeinflusst die Qualität von Beschilderung und Orientierungshilfen auf Ihrem Weg, wie leicht Sie sich zu Fuß zurechtfinden?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "Mit Wegweisung sind Schilder, Karten und Pfeile gemeint, die den Weg zu einem Ort zeigen.",
       "#I know the area, so I do not need signs": "Ich kenne die Gegend und brauche keine Schilder",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "Ich bemerke den Verkehr, aber der Gehweg hält mich auf sicherem Abstand und ich fühle mich sicher",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Taxifahrer oder Fahrer von Mietwagen mit Fahrer (auch über Apps gebuchte Fahrdienste)",
@@ -1248,6 +1268,7 @@
       "#Yes": "Evet",
       "#No": "Hayır",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Yürüdüğünüz güzergâhlarda aşağıdaki fiziksel engellerden hangileriyle karşılaşıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "Alçaltılmış kaldırım kenarı, bir geçiş noktasında yol seviyesine indirilmiş kaldırım bölümüdür.",
       "#Steps or steep curbs without ramps": "Rampa olmayan basamaklar veya yüksek kaldırımlar",
       "#Missing or broken dropped kerbs at crossings": "Geçişlerde eksik veya bozuk alçaltılmış kaldırım kenarları",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Tekerlekli sandalye, bebek arabası veya iki kişinin yan yana geçmesi için çok dar yollar",
@@ -1274,6 +1295,7 @@
       "#Significantly": "Çok",
       "#Extremely": "Çok fazla",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "Yaya geçitlerinin kalitesi ve bulunabilirliği, örneğin yaya geçitleri, yaya sinyalleri veya orta refüjler, yolculuğunuzu nasıl etkiler?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "Orta refüj, yolun ortasında yayaların karşıya geçerken durabildiği küçük, yükseltilmiş bir alandır.",
       "#Crossings are well placed and I feel safe using them": "Geçitler iyi yerlerde ve kullanırken kendimi güvende hissediyorum",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Geçitler çok seyrek; bazen güvensiz yerlerden karşıya geçmek zorunda kalıyorum",
       "#The poor quality or lack of crossings forces me to significantly change my route": "Geçitlerin kötü olması veya hiç olmaması güzergâhımı önemli ölçüde değiştirmeme neden oluyor",
@@ -1341,6 +1363,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi yaya olarak yaşadığınız deneyimlerle ilgilidir. Yanıtlarınız, insanların şehirde yürürken karşılaştığı koşulları ve engelleri anlamamıza ve yürümeyi daha güvenli, rahat ve keyifli hale getirecek fırsatları belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Bir yere ulaşmak için, yalnızca bir durağa ya da park edilmiş bir araca gitmek için değil, haftada en az bir kez yaya olarak yolculuk ediyor musunuz? Tekerlekli sandalye, yürüteç, baston veya bebek arabasıyla ya da birinin eşliğinde hareket etmeniz de sayılır.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "Daha sık yaya olarak yolculuk etmenizi engelleyen nedir? (Uygun olanların tümünü seçin)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "Bunu, farklı kişiler için yürümeyi neyin sınırladığını anlamak için soruyoruz. Yanıt vermek isteğe bağlıdır; belirtmemeyi de seçebilirsiniz.",
       "#Destinations are too far away": "Gideceğim yerler çok uzak",
       "#Steep slopes or stairs on the way": "Yol üzerinde dik yokuşlar veya merdivenler",
       "#Sidewalks missing, too narrow or blocked": "Kaldırımların olmaması, çok dar olması veya kapalı olması",
@@ -1362,6 +1385,7 @@
       "#I do not walk after dark for other reasons": "Başka nedenlerle hava karardıktan sonra yürümüyorum",
       "#I choose greener or more pleasant routes even when they are longer": "Daha uzun olsalar bile daha yeşil veya daha hoş güzergâhları seçiyorum",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "Güzergâhınızdaki tabelaların ve yön bulma işaretlerinin kalitesi, yaya olarak yolunuzu ne kadar kolay bulduğunuzu nasıl etkiliyor?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "Yön bulma işaretleri, bir yere giden yolu gösteren tabelalar, haritalar ve oklardır.",
       "#I know the area, so I do not need signs": "Bölgeyi tanıyorum, bu yüzden tabelalara ihtiyacım yok",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "Trafiği fark ediyorum, ancak kaldırım beni güvenli bir mesafede tutuyor ve kendimi güvende hissediyorum",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Taksi şoförleri veya şoförlü kiralık araç sürücüleri (uygulama üzerinden çağrılan hizmetler dahil)",
@@ -1390,6 +1414,7 @@
       "#Yes": "بله",
       "#No": "خیر",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "در مسیرهای پیاده‌روی با کدام موانع فیزیکی روبه‌رو می‌شوید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "جدول کوتاه‌شده بخشی از لبهٔ پیاده‌رو است که در محل عبور هم‌سطح خیابان پایین آورده شده است.",
       "#Steps or steep curbs without ramps": "پله یا جدول بلند بدون رمپ",
       "#Missing or broken dropped kerbs at crossings": "نبود یا خرابی جدول کوتاه‌شده در محل عبور",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "مسیرهایی که برای ویلچر، کالسکه یا عبور دو نفر در کنار هم خیلی باریک‌اند",
@@ -1416,6 +1441,7 @@
       "#Significantly": "زیاد",
       "#Extremely": "خیلی زیاد",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "کیفیت و تعداد گذرگاه‌های عابر، مانند خط عابر، چراغ عابر یا جزیره میانی، چگونه بر سفر شما اثر می‌گذارد؟",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "جزیرهٔ میانی فضای کوچک و برجسته‌ای در وسط خیابان است که عابران هنگام عبور می‌توانند روی آن بایستند.",
       "#Crossings are well placed and I feel safe using them": "گذرگاه‌ها جای مناسبی دارند و هنگام استفاده احساس امنیت می‌کنم",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "گذرگاه‌ها کم هستند و گاهی مجبورم از محل ناامن عبور کنم",
       "#The poor quality or lack of crossings forces me to significantly change my route": "کیفیت پایین یا نبود گذرگاه مجبورم می‌کند مسیرم را به‌طور قابل توجهی تغییر دهم",
@@ -1483,6 +1509,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما به عنوان عابر پیاده است. پاسخ‌های شما کمک می‌کند شرایط و موانعی را که مردم هنگام پیاده‌روی در شهر با آن روبه‌رو می‌شوند بهتر بشناسیم و راه‌هایی برای ایمن‌تر، راحت‌تر و لذت‌بخش‌تر شدن پیاده‌روی پیدا کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "آیا دست‌کم هفته‌ای یک بار برای رسیدن به یک مقصد پیاده جابه‌جا می‌شوید، و نه فقط برای رسیدن به ایستگاه یا یک وسیلهٔ نقلیهٔ پارک‌شده؟ جابه‌جایی با ویلچر، واکر، عصا یا کالسکهٔ کودک، یا همراه با کسی که شما را همراهی می‌کند نیز حساب می‌شود.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "چه چیزی مانع می‌شود که بیشتر پیاده جابه‌جا شوید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "این را می‌پرسیم تا بفهمیم چه چیزی پیاده‌روی را برای افراد مختلف محدود می‌کند. پاسخ دادن اختیاری است و می‌توانید ترجیح دهید آن را نگویید.",
       "#Destinations are too far away": "مقصدها خیلی دور هستند",
       "#Steep slopes or stairs on the way": "سربالایی‌های تند یا پله در مسیر",
       "#Sidewalks missing, too narrow or blocked": "پیاده‌رو وجود ندارد، خیلی باریک است یا مسدود شده است",
@@ -1504,6 +1531,7 @@
       "#I do not walk after dark for other reasons": "به دلایل دیگر پس از تاریک شدن هوا پیاده‌روی نمی‌کنم",
       "#I choose greener or more pleasant routes even when they are longer": "مسیرهای سبزتر یا دلپذیرتر را انتخاب می‌کنم، حتی اگر طولانی‌تر باشند",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "کیفیت تابلوها و راهنماهای مسیریابی در مسیرتان چه تأثیری بر آسانی پیدا کردن راه به‌عنوان عابر پیاده دارد؟",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "منظور از راهنمای مسیر، تابلوها، نقشه‌ها و فلش‌هایی است که راه رسیدن به یک مکان را نشان می‌دهند.",
       "#I know the area, so I do not need signs": "منطقه را می‌شناسم، پس به تابلو نیازی ندارم",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "ترافیک را متوجه می‌شوم، اما پیاده‌رو مرا در فاصلهٔ امنی نگه می‌دارد و احساس امنیت می‌کنم",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "رانندگان تاکسی یا خودروهای کرایه‌ای با راننده (از جمله سرویس‌های اینترنتی)",
@@ -1532,6 +1560,7 @@
       "#Yes": "Igen",
       "#No": "Nem",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "Milyen fizikai akadályokkal találkozik gyalogos útvonalán? (Jelölje meg az összes megfelelőt)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "A lesüllyesztett járdaszegély a járdaszegélynek az a része, amelyet egy átkelőnél az úttest szintjére süllyesztettek.",
       "#Steps or steep curbs without ramps": "Lépcsők vagy magas szegélyek rámpa nélkül",
       "#Missing or broken dropped kerbs at crossings": "Hiányzó vagy sérült lesüllyesztett járdaszegélyek az átkelőknél",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "Túl keskeny utak kerekesszékhez, babakocsihoz vagy két ember egymás melletti elhaladásához",
@@ -1558,6 +1587,7 @@
       "#Significantly": "Jelentősen",
       "#Extremely": "Rendkívül",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "Hogyan befolyásolja az utazását a gyalogos átkelőhelyek minősége és elérhetősége, például zebra, gyalogos jelzőlámpa vagy középsziget?",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "A középsziget az úttest közepén lévő kis, kiemelt terület, ahol a gyalogosok átkelés közben megállhatnak.",
       "#Crossings are well placed and I feel safe using them": "Az átkelőhelyek jó helyen vannak, és biztonságban érzem magam használat közben",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "Túl kevés az átkelőhely, ezért néha nem biztonságos helyen kell átkelnem",
       "#The poor quality or lack of crossings forces me to significantly change my route": "A rossz minőségű vagy hiányzó átkelőhelyek miatt jelentősen módosítanom kell az útvonalamat",
@@ -1625,6 +1655,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a gyalogosként szerzett tapasztalatairól szól. Válaszai segítenek megérteni, milyen körülményekkel és akadályokkal találkoznak az emberek városi gyaloglás közben, és hogyan lehet a gyaloglást biztonságosabbá, kényelmesebbé és kellemesebbé tenni. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "Legalább hetente egyszer gyalog jut el valahová, és nem csak egy megállóhoz vagy egy parkoló járműhöz? Az is számít, ha kerekesszékkel, járókerettel, bottal vagy babakocsival, illetve kísérővel közlekedik.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "Mi akadályozza abban, hogy gyakrabban közlekedjen gyalog? (Jelölje meg az összes megfelelőt)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "Azért kérdezzük, hogy megértsük, mi korlátozza a gyaloglást a különböző emberek számára. A válaszadás nem kötelező, és azt is választhatja, hogy nem kívánja megadni.",
       "#Destinations are too far away": "Az úti célok túl messze vannak",
       "#Steep slopes or stairs on the way": "Meredek emelkedők vagy lépcsők az útvonalon",
       "#Sidewalks missing, too narrow or blocked": "A járda hiányzik, túl keskeny vagy el van torlaszolva",
@@ -1646,6 +1677,7 @@
       "#I do not walk after dark for other reasons": "Más okokból nem járok gyalog sötétedés után",
       "#I choose greener or more pleasant routes even when they are longer": "Akkor is a zöldebb vagy kellemesebb útvonalakat választom, ha hosszabbak",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "Hogyan befolyásolja az útvonalán lévő táblák és útbaigazítás minősége, hogy gyalogosként mennyire könnyen igazodik el?",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "Útbaigazításon azokat a táblákat, térképeket és nyilakat értjük, amelyek egy adott helyre mutatják az utat.",
       "#I know the area, so I do not need signs": "Ismerem a környéket, ezért nincs szükségem táblákra",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "Észreveszem a forgalmat, de a járda biztonságos távolságban tart, és biztonságban érzem magam",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "Taxisofőrök vagy sofőrös bérautók vezetői (alkalmazáson keresztül rendelt szolgáltatások is)",
@@ -1674,6 +1706,7 @@
       "#Yes": "نعم",
       "#No": "لا",
       "#Which of the following physical barriers do you face on your walking route? (Select all that apply)": "ما العوائق المادية التي تواجهها على طريقك أثناء المشي؟ (اختر كل ما ينطبق)",
+      "#A dropped kerb is a section of the kerb lowered to the level of the road at a crossing.": "الحافة المنخفضة جزء من حافة الرصيف خُفِّض إلى مستوى الطريق عند المعبر.",
       "#Steps or steep curbs without ramps": "درجات أو حواف مرتفعة من دون منحدر",
       "#Missing or broken dropped kerbs at crossings": "غياب أو تلف الحواف المنخفضة عند المعابر",
       "#Paths too narrow for a wheelchair, stroller, or two people to pass": "مسارات ضيقة جدًا لكرسي متحرك أو عربة أطفال أو مرور شخصين بجانب بعضهما",
@@ -1700,6 +1733,7 @@
       "#Significantly": "يؤثر كثيرًا",
       "#Extremely": "يؤثر بدرجة كبيرة جدًا",
       "#How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?": "كيف تؤثر جودة وتوفر معابر المشاة، مثل ممرات المشاة أو إشارات المشاة أو الجزر الوسطية، في رحلتك؟",
+      "#A crossing island is a small raised area in the middle of the road where pedestrians can stop while crossing.": "الجزيرة الوسطية مساحة صغيرة مرتفعة في منتصف الطريق يمكن للمشاة التوقف عليها أثناء العبور.",
       "#Crossings are well placed and I feel safe using them": "المعابر في أماكن مناسبة وأشعر بالأمان عند استخدامها",
       "#Crossings are too infrequent and I sometimes have to cross in unsafe places": "المعابر قليلة جدًا وأضطر أحيانًا إلى العبور من أماكن غير آمنة",
       "#The poor quality or lack of crossings forces me to significantly change my route": "سوء جودة المعابر أو غيابها يجبرني على تغيير طريقي بشكل كبير",
@@ -1767,6 +1801,7 @@
       "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك كمشاة. تساعدنا إجاباتك على فهم الظروف والعوائق التي يواجهها الناس عند المشي في المدينة، وعلى تحديد فرص لجعل المشي أكثر أمانًا وراحة ومتعة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you get around on foot at least once a week to reach a destination, and not only to get to a stop or a parked vehicle? It also counts if you move with a wheelchair, walker, cane or stroller, or with someone accompanying you.": "هل تتنقّل سيرًا على الأقدام مرة واحدة على الأقل في الأسبوع للوصول إلى وجهة ما، وليس فقط للوصول إلى محطة أو إلى مركبة متوقفة؟ يُحتسب ذلك أيضًا إذا كنت تتنقّل بكرسي متحرك أو بمشّاية أو بعصا أو بعربة أطفال، أو برفقة شخص يرافقك.",
       "#What stops you from getting around on foot more often? (Select all that apply)": "ما الذي يمنعك من التنقّل سيرًا على الأقدام أكثر؟ (اختر كل ما ينطبق)",
+      "#We ask this to understand what limits walking for different people. Answering is optional, and you can also choose not to say.": "نسأل عن ذلك لنفهم ما الذي يحدّ من المشي لدى أشخاص مختلفين. الإجابة اختيارية، ويمكنك أيضًا اختيار عدم الإفصاح.",
       "#Destinations are too far away": "الوجهات بعيدة جدًا",
       "#Steep slopes or stairs on the way": "منحدرات شديدة أو سلالم على الطريق",
       "#Sidewalks missing, too narrow or blocked": "الأرصفة غير موجودة أو ضيقة جدًا أو مسدودة",
@@ -1788,6 +1823,7 @@
       "#I do not walk after dark for other reasons": "لا أمشي بعد حلول الظلام لأسباب أخرى",
       "#I choose greener or more pleasant routes even when they are longer": "أختار طرقًا أكثر خضرة أو متعة حتى لو كانت أطول",
       "#How does the quality of signs and wayfinding on your route affect how easily you find your way as a pedestrian?": "كيف تؤثر جودة اللافتات وإرشادات الاتجاهات على طريقك في مدى سهولة إيجادك لطريقك كمشاة؟",
+      "#Wayfinding means the signs, maps and arrows that show the way to a place.": "نقصد بإرشادات الطريق اللافتات والخرائط والأسهم التي تدلّ على الطريق إلى مكان ما.",
       "#I know the area, so I do not need signs": "أعرف المنطقة، لذلك لا أحتاج إلى اللافتات",
       "#I notice the traffic, but the sidewalk keeps me at a safe distance and I feel safe": "ألاحظ حركة المرور، لكن الرصيف يبقيني على مسافة آمنة وأشعر بالأمان",
       "#Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)": "سائقو سيارات الأجرة أو سيارات الإيجار مع سائق (بما في ذلك الخدمات عبر التطبيقات)",

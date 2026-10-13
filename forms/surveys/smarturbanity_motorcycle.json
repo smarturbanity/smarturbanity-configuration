@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)",
-            "answer_key": "v1_do_you_use_a_motorcycle_or_scooter_f",
+            "answer_key": "moto_weekly",
             "question_type": "single_option",
             "required": true,
             "options": [
@@ -47,11 +47,12 @@
           },
           {
             "text": "Why don't you ride a motorcycle or scooter more often? (Select all that apply)",
-            "answer_key": "moto_why_not_v1",
+            "help": "We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.",
+            "answer_key": "moto_why_not",
             "question_type": "multiple_options",
             "required": false,
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "no"
+              "moto_weekly": "no"
             },
             "add_other": true,
             "add_prefer_not_to_say": true,
@@ -88,10 +89,11 @@
           },
           {
             "text": "How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?",
+            "help": "Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.",
             "answer_key": "moto_calming",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -118,10 +120,10 @@
           },
           {
             "text": "How do parked cars or narrow lanes typically impact your ability to maneuver safely on your route?",
-            "answer_key": "moto_narrow_v1",
+            "answer_key": "moto_narrow",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -148,10 +150,10 @@
           },
           {
             "text": "How do road surface conditions (potholes, cobblestones, tram tracks) affect your riding?",
-            "answer_key": "moto_road_surface_v1",
+            "answer_key": "moto_road_surface",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -178,10 +180,11 @@
           },
           {
             "text": "How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?",
+            "help": "A blind spot is the area around a vehicle that the driver cannot see in the mirrors.",
             "answer_key": "moto_hazard_confidence",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -208,10 +211,11 @@
           },
           {
             "text": "To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?",
+            "help": "Tailgating means following another vehicle at a very short distance.",
             "answer_key": "moto_driver_stress",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -238,10 +242,10 @@
           },
           {
             "text": "How adequate are motorcycle-specific parking facilities in your city? Think about secure parking and designated spaces near destinations.",
-            "answer_key": "moto_parking_v1",
+            "answer_key": "moto_parking",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -269,10 +273,10 @@
           },
           {
             "text": "To what extent does the presence of charging stations (for electric motorcycles/scooters) influence your willingness to use your vehicle?",
-            "answer_key": "moto_charging_v1",
+            "answer_key": "moto_charging",
             "question_type": "single_option",
             "show_if": {
-              "v1_do_you_use_a_motorcycle_or_scooter_f": "yes"
+              "moto_weekly": "yes"
             },
             "options": [
               {
@@ -330,6 +334,7 @@
       "#Moderately confident": "Moderately confident",
       "#Extremely confident": "Extremely confident",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?",
+      "#Tailgating means following another vehicle at a very short distance.": "Tailgating means following another vehicle at a very short distance.",
       "#Not stressful at all, it doesn't affect me": "Not stressful at all, it doesn't affect me",
       "#Slightly stressful, it occasionally bothers me": "Slightly stressful, it occasionally bothers me",
       "#Moderately stressful, I notice it but manage": "Moderately stressful, I notice it but manage",
@@ -351,6 +356,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Why don't you ride a motorcycle or scooter more often? (Select all that apply)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.",
       "#I don't have a licence or a vehicle": "I don't have a licence or a vehicle",
       "#It feels too dangerous in traffic": "It feels too dangerous in traffic",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Poor road surfaces (potholes, cobblestones, tram tracks)",
@@ -361,6 +367,7 @@
       "#Other": "Other",
       "#Prefer not to say": "Prefer not to say",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.",
       "#No problem, I can handle these situations": "No problem, I can handle these situations",
       "#I have to maneuver with difficulty": "I have to maneuver with difficulty",
       "#I feel in danger": "I feel in danger",
@@ -372,6 +379,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "I avoid some roads because of their surface, even if the route is longer",
       "#I have fallen or nearly fallen because of the road surface": "I have fallen or nearly fallen because of the road surface",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "A blind spot is the area around a vehicle that the driver cannot see in the mirrors.",
       "#Very confident": "Very confident",
       "#I don't know": "I don't know"
     },
@@ -399,6 +407,7 @@
       "#Moderately confident": "Abbastanza capace",
       "#Extremely confident": "Del tutto capace",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "In che misura il comportamento degli altri conducenti (ad es. cambi improvvisi di corsia, guida troppo ravvicinata o mancata precedenza) influisce sul tuo livello di stress durante uno spostamento?",
+      "#Tailgating means following another vehicle at a very short distance.": "Per guida troppo ravvicinata intendiamo seguire un altro veicolo a distanza molto ridotta.",
       "#Not stressful at all, it doesn't affect me": "Per niente stressante, non mi influenza",
       "#Slightly stressful, it occasionally bothers me": "Poco stressante, occasionalmente mi disturba",
       "#Moderately stressful, I notice it but manage": "Moderatamente stressante, me ne accorgo ma riesco a gestirlo",
@@ -420,6 +429,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e la tua esperienza durante gli spostamenti in moto o scooter. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Guidi una moto, uno scooter o un motorino almeno una volta alla settimana per i tuoi spostamenti? (Il monopattino non conta: è compreso nel questionario sulla bicicletta.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Perché non usi più spesso la moto o lo scooter? (Seleziona tutte le opzioni applicabili)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Lo chiediamo per capire che cosa limita l'uso della moto e dello scooter per persone diverse. Rispondere è facoltativo e puoi anche scegliere di non dirlo.",
       "#I don't have a licence or a vehicle": "Non ho la patente o il mezzo",
       "#It feels too dangerous in traffic": "Mi sembra troppo pericoloso nel traffico",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Manto stradale in cattive condizioni (buche, sampietrini, binari del tram)",
@@ -430,6 +440,7 @@
       "#Other": "Altro",
       "#Prefer not to say": "Preferisco non rispondere",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "In che modo gli interventi di moderazione del traffico (ad es. dossi, bande sonore rallentatrici, restringimenti della carreggiata) influenzano la tua percezione di sicurezza mentre guidi?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "Le bande sonore rallentatrici sono strisce in rilievo o scanalate trasversali alla strada che fanno vibrare i veicoli. Un restringimento della carreggiata è un punto in cui la strada è resa più stretta.",
       "#No problem, I can handle these situations": "Nessun problema, riesco a gestire queste situazioni",
       "#I have to maneuver with difficulty": "Devo manovrare con difficoltà",
       "#I feel in danger": "Mi sento in pericolo",
@@ -441,6 +452,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "Evito alcune strade per le condizioni del manto, anche se il percorso è più lungo",
       "#I have fallen or nearly fallen because of the road surface": "Sono caduto/a o ho rischiato di cadere a causa del manto stradale",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Quanto ti senti capace di evitare incidenti causati dall'apertura improvvisa delle portiere delle auto o da conducenti che non controllano gli angoli ciechi?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "L'angolo cieco è la zona intorno a un veicolo che chi guida non riesce a vedere negli specchietti.",
       "#Very confident": "Molto capace",
       "#I don't know": "Non lo so"
     },
@@ -468,6 +480,7 @@
       "#Moderately confident": "Modérément en confiance",
       "#Extremely confident": "Entièrement en confiance",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "Dans quelle mesure le comportement des autres conducteurs, par exemple les changements brusques de voie, le fait de suivre de trop près ou de ne pas céder le passage, augmente-t-il votre stress pendant un trajet ?",
+      "#Tailgating means following another vehicle at a very short distance.": "Suivre de trop près signifie rouler à très courte distance derrière un autre véhicule.",
       "#Not stressful at all, it doesn't affect me": "Pas du tout stressant : cela ne m’affecte pas",
       "#Slightly stressful, it occasionally bothers me": "Un peu stressant : cela me gêne parfois",
       "#Moderately stressful, I notice it but manage": "Modérément stressant : je le remarque, mais je le gère",
@@ -489,6 +502,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience pendant vos déplacements en moto ou en scooter. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Conduisez-vous une moto, un scooter ou un cyclomoteur au moins une fois par semaine pour vos déplacements ? (Les trottinettes électriques ne comptent pas ici : elles sont traitées dans le questionnaire sur le vélo.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Pourquoi n'utilisez-vous pas plus souvent une moto ou un scooter ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Nous posons cette question pour comprendre ce qui limite l'usage de la moto et du scooter selon les personnes. Répondre est facultatif, et vous pouvez aussi choisir de ne pas le dire.",
       "#I don't have a licence or a vehicle": "Je n'ai pas le permis ou pas de véhicule",
       "#It feels too dangerous in traffic": "Cela me semble trop dangereux dans la circulation",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Le mauvais état de la chaussée (nids-de-poule, pavés, rails de tramway)",
@@ -499,6 +513,7 @@
       "#Other": "Autre",
       "#Prefer not to say": "Je préfère ne pas répondre",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "Comment les dispositifs qui ralentissent la circulation, par exemple les ralentisseurs, bandes rugueuses ou rétrécissements de chaussée, influencent-ils votre sentiment de sécurité lorsque vous conduisez ?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "Les bandes rugueuses sont des lignes en relief ou creusées en travers de la chaussée qui font vibrer les véhicules. Un rétrécissement de chaussée est un endroit où la voie est rendue plus étroite.",
       "#No problem, I can handle these situations": "Aucun problème, je gère ces situations",
       "#I have to maneuver with difficulty": "Je dois manœuvrer avec difficulté",
       "#I feel in danger": "Je me sens en danger",
@@ -510,6 +525,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "J'évite certaines routes à cause de leur revêtement, même si le trajet est plus long",
       "#I have fallen or nearly fallen because of the road surface": "Je suis tombé(e) ou j'ai failli tomber à cause du revêtement",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "À quel point vous sentez-vous capable d’éviter un accident causé par une portière de voiture qui s’ouvre soudainement ou par un conducteur qui ne vérifie pas son angle mort ?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "L'angle mort est la zone autour d'un véhicule que le conducteur ne peut pas voir dans ses rétroviseurs.",
       "#Very confident": "Très en confiance",
       "#I don't know": "Je ne sais pas"
     },
@@ -537,6 +553,7 @@
       "#Moderately confident": "Mäßig sicher",
       "#Extremely confident": "Vollkommen sicher",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "Wie stark beeinflusst das Verhalten anderer Fahrer, zum Beispiel plötzliche Spurwechsel, dichtes Auffahren oder fehlendes Vorlassen, Ihren Stress während der Fahrt?",
+      "#Tailgating means following another vehicle at a very short distance.": "Dichtes Auffahren bedeutet, einem anderen Fahrzeug mit sehr geringem Abstand zu folgen.",
       "#Not stressful at all, it doesn't affect me": "Gar nicht stressig — es beeinflusst mich nicht",
       "#Slightly stressful, it occasionally bothers me": "Etwas stressig — es stört mich gelegentlich",
       "#Moderately stressful, I notice it but manage": "Mäßig stressig — ich merke es, komme aber damit zurecht",
@@ -558,6 +575,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Fahrten mit Motorrad oder Roller erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Fahren Sie mindestens einmal pro Woche Motorrad, Motorroller oder Moped, um irgendwohin zu gelangen? (E-Scooter zählen hier nicht: Sie werden im Fragebogen zum Radfahren behandelt.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Warum fahren Sie nicht häufiger Motorrad oder Motorroller? (Wählen Sie alles Zutreffende aus)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Wir fragen dies, um zu verstehen, was die Nutzung von Motorrad und Roller für verschiedene Menschen einschränkt. Die Antwort ist freiwillig, und Sie können auch angeben, dass Sie es lieber nicht sagen möchten.",
       "#I don't have a licence or a vehicle": "Ich habe keinen Führerschein oder kein Fahrzeug",
       "#It feels too dangerous in traffic": "Es erscheint mir im Verkehr zu gefährlich",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Schlechte Fahrbahnoberflächen (Schlaglöcher, Kopfsteinpflaster, Straßenbahnschienen)",
@@ -568,6 +586,7 @@
       "#Other": "Anderes",
       "#Prefer not to say": "Ich möchte nicht antworten",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "Wie beeinflussen Maßnahmen zur Verkehrsberuhigung, zum Beispiel Bremsschwellen, Rüttelstreifen oder Fahrbahnverengungen, Ihr Sicherheitsgefühl beim Fahren?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "Rüttelstreifen sind erhöhte oder eingefräste Querstreifen auf der Fahrbahn, die Fahrzeuge vibrieren lassen. Eine Fahrbahnverengung ist eine Stelle, an der die Fahrbahn schmaler gemacht wird.",
       "#No problem, I can handle these situations": "Kein Problem, ich komme mit diesen Situationen zurecht",
       "#I have to maneuver with difficulty": "Ich muss mühsam manövrieren",
       "#I feel in danger": "Ich fühle mich in Gefahr",
@@ -579,6 +598,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "Ich meide manche Straßen wegen ihres Belags, auch wenn der Weg länger ist",
       "#I have fallen or nearly fallen because of the road surface": "Ich bin wegen des Fahrbahnbelags gestürzt oder fast gestürzt",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Wie sicher fühlen Sie sich darin, Unfälle durch plötzlich geöffnete Autotüren oder nicht kontrollierte tote Winkel zu vermeiden?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "Der tote Winkel ist der Bereich um ein Fahrzeug, den die fahrende Person in den Spiegeln nicht sehen kann.",
       "#Very confident": "Sehr sicher",
       "#I don't know": "Ich weiß es nicht"
     },
@@ -606,6 +626,7 @@
       "#Moderately confident": "Orta düzeyde güvende hissediyorum",
       "#Extremely confident": "Tamamen güvende hissediyorum",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "Diğer sürücülerin ani şerit değiştirmesi, çok yakından takip etmesi veya yol vermemesi gibi davranışları sürüş sırasında stresinizi ne kadar etkiler?",
+      "#Tailgating means following another vehicle at a very short distance.": "Çok yakından takip, başka bir aracı çok kısa mesafeden izlemek demektir.",
       "#Not stressful at all, it doesn't affect me": "Hiç stresli değil — beni etkilemez",
       "#Slightly stressful, it occasionally bothers me": "Biraz stresli — bazen rahatsız eder",
       "#Moderately stressful, I notice it but manage": "Orta derecede stresli — fark ederim ama başa çıkabilirim",
@@ -627,6 +648,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi motosiklet veya scooter ile yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Bir yerlere gitmek için haftada en az bir kez motosiklet, scooter veya moped kullanıyor musunuz? (Elektrikli scooterlar burada sayılmaz: bisiklet anketinde ele alınıyorlar.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Neden daha sık motosiklet veya scooter kullanmıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Bunu, farklı kişiler için motosiklet ve scooter kullanımını neyin sınırladığını anlamak için soruyoruz. Yanıt vermek isteğe bağlıdır; belirtmemeyi de seçebilirsiniz.",
       "#I don't have a licence or a vehicle": "Ehliyetim veya aracım yok",
       "#It feels too dangerous in traffic": "Trafikte bana çok tehlikeli geliyor",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Kötü yol yüzeyleri (çukurlar, parke taşları, tramvay rayları)",
@@ -637,6 +659,7 @@
       "#Other": "Diğer",
       "#Prefer not to say": "Yanıtlamak istemiyorum",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "Hız kesici, titreşim şeridi veya yol daraltmaları gibi trafiği yavaşlatan uygulamalar sürüş sırasında güvenlik hissinizi nasıl etkiler?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "Titreşim şeritleri, yol boyunca enine uzanan ve araçları titreştiren kabartmalı ya da oluklu çizgilerdir. Yol daraltması, taşıt yolunun daraltıldığı noktadır.",
       "#No problem, I can handle these situations": "Sorun değil, bu durumlarla başa çıkabiliyorum",
       "#I have to maneuver with difficulty": "Manevra yapmakta zorlanıyorum",
       "#I feel in danger": "Kendimi tehlikede hissediyorum",
@@ -648,6 +671,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "Güzergâh daha uzun olsa bile yüzeyi nedeniyle bazı yollardan kaçınıyorum",
       "#I have fallen or nearly fallen because of the road surface": "Yol yüzeyi yüzünden düştüm veya düşmek üzereydim",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Aniden açılan otomobil kapıları veya sürücülerin kör noktayı kontrol etmemesi nedeniyle oluşabilecek kazalardan kaçınma konusunda kendinizi ne kadar güvende hissediyorsunuz?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "Kör nokta, bir aracın çevresinde sürücünün aynalarda göremediği alandır.",
       "#Very confident": "Çok güvende hissediyorum",
       "#I don't know": "Bilmiyorum"
     },
@@ -675,6 +699,7 @@
       "#Moderately confident": "تا حد متوسط مطمئنم",
       "#Extremely confident": "کاملاً مطمئنم",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "رفتار سایر رانندگان، مانند تغییر ناگهانی خط، حرکت خیلی نزدیک یا راه ندادن، تا چه اندازه بر استرس شما هنگام رانندگی اثر دارد؟",
+      "#Tailgating means following another vehicle at a very short distance.": "حرکت خیلی نزدیک یعنی دنبال کردن وسیلهٔ دیگری با فاصلهٔ بسیار کم.",
       "#Not stressful at all, it doesn't affect me": "اصلاً استرس‌زا نیست؛ اثری بر من ندارد",
       "#Slightly stressful, it occasionally bothers me": "کمی استرس‌زا است؛ گاهی آزارم می‌دهد",
       "#Moderately stressful, I notice it but manage": "تا حد متوسط استرس‌زا است؛ متوجه می‌شوم اما مدیریت می‌کنم",
@@ -696,6 +721,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام رفت‌وآمد با موتورسیکلت یا اسکوتر است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "آیا دست‌کم هفته‌ای یک بار برای رفت‌وآمد موتورسیکلت، اسکوتر موتوری یا موتور گازی می‌رانید؟ (اسکوتر برقی ایستاده در اینجا حساب نمی‌شود: در پرسشنامهٔ دوچرخه به آن پرداخته شده است.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "چرا بیشتر از موتورسیکلت یا اسکوتر موتوری استفاده نمی‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "این را می‌پرسیم تا بفهمیم چه چیزی استفاده از موتورسیکلت و اسکوتر را برای افراد مختلف محدود می‌کند. پاسخ دادن اختیاری است و می‌توانید ترجیح دهید آن را نگویید.",
       "#I don't have a licence or a vehicle": "گواهینامه یا وسیلهٔ نقلیه ندارم",
       "#It feels too dangerous in traffic": "در ترافیک به نظرم خیلی خطرناک است",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "سطح نامناسب جاده (چاله، سنگ‌فرش، ریل تراموا)",
@@ -706,6 +732,7 @@
       "#Other": "سایر",
       "#Prefer not to say": "ترجیح می‌دهم پاسخ ندهم",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "عناصر آرام‌سازی ترافیک مانند سرعت‌گیر، نوار لرزاننده یا باریک‌سازی سواره‌رو چه اثری بر احساس امنیت شما هنگام رانندگی دارد؟",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "نوارهای لرزاننده خطوط برجسته یا شیاردار عرضی روی خیابان هستند که وسایل نقلیه را به لرزش درمی‌آورند. باریک‌سازی سواره‌رو نقطه‌ای است که عرض خیابان در آن کمتر شده است.",
       "#No problem, I can handle these situations": "مشکلی نیست، از پس این شرایط برمی‌آیم",
       "#I have to maneuver with difficulty": "باید به‌سختی مانور بدهم",
       "#I feel in danger": "احساس خطر می‌کنم",
@@ -717,6 +744,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "به خاطر سطح بعضی جاده‌ها از آن‌ها دوری می‌کنم، حتی اگر مسیر طولانی‌تر شود",
       "#I have fallen or nearly fallen because of the road surface": "به خاطر سطح جاده زمین خورده‌ام یا نزدیک بود زمین بخورم",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "در جلوگیری از تصادف ناشی از باز شدن ناگهانی در خودرو یا بررسی نکردن نقطه کور توسط رانندگان چقدر به توانایی خود اطمینان دارید؟",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "نقطهٔ کور بخشی از اطراف خودرو است که راننده نمی‌تواند آن را در آینه‌ها ببیند.",
       "#Very confident": "خیلی مطمئنم",
       "#I don't know": "نمی‌دانم"
     },
@@ -744,6 +772,7 @@
       "#Moderately confident": "Közepesen magabiztos vagyok",
       "#Extremely confident": "Teljesen magabiztos vagyok",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "Mennyire növeli a stresszét más járművezetők viselkedése, például a hirtelen sávváltás, a túl szoros követés vagy az elsőbbség meg nem adása?",
+      "#Tailgating means following another vehicle at a very short distance.": "A túl szoros követés azt jelenti, hogy valaki nagyon kis távolságra halad egy másik jármű mögött.",
       "#Not stressful at all, it doesn't affect me": "Egyáltalán nem stresszes — nem befolyásol",
       "#Slightly stressful, it occasionally bothers me": "Kissé stresszes — néha zavar",
       "#Moderately stressful, I notice it but manage": "Közepesen stresszes — észreveszem, de tudom kezelni",
@@ -765,6 +794,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal motorkerékpárral vagy robogóval közlekedve. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Vezet motorkerékpárt, robogót vagy segédmotoros kerékpárt legalább hetente egyszer, hogy eljusson valahová? (Az elektromos roller itt nem számít: arról a kerékpáros kérdőív szól.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Miért nem motorozik vagy robogózik gyakrabban? (Jelölje meg az összes megfelelőt)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Azért kérdezzük, hogy megértsük, mi korlátozza a motor és a robogó használatát a különböző emberek számára. A válaszadás nem kötelező, és azt is választhatja, hogy nem kívánja megadni.",
       "#I don't have a licence or a vehicle": "Nincs jogosítványom vagy járművem",
       "#It feels too dangerous in traffic": "Túl veszélyesnek tűnik a forgalomban",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "Rossz útburkolat (kátyúk, macskakő, villamossínek)",
@@ -775,6 +805,7 @@
       "#Other": "Egyéb",
       "#Prefer not to say": "Nem szeretnék válaszolni",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "Hogyan befolyásolják a forgalomlassító elemek, például fekvőrendőrök, rezgőcsíkok vagy úttest-szűkítések a biztonságérzetét vezetés közben?",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "A rezgőcsíkok az úttesten keresztben futó kiemelt vagy bemart sávok, amelyek megrezegtetik a járműveket. Az úttest-szűkítés olyan pont, ahol az úttestet keskenyebbé teszik.",
       "#No problem, I can handle these situations": "Nem probléma, meg tudom oldani ezeket a helyzeteket",
       "#I have to maneuver with difficulty": "Nehezen tudok manőverezni",
       "#I feel in danger": "Veszélyben érzem magam",
@@ -786,6 +817,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "Egyes utakat a burkolatuk miatt elkerülök, még ha hosszabb is az útvonal",
       "#I have fallen or nearly fallen because of the road surface": "Az útburkolat miatt elestem vagy majdnem elestem",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Mennyire érzi magát magabiztosnak abban, hogy elkerülje a hirtelen kinyíló autóajtó vagy a holttér ellenőrzésének elmulasztása miatt kialakuló balesetet?",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "A holttér a jármű körüli terület, amelyet a vezető nem lát a tükrökben.",
       "#Very confident": "Nagyon magabiztos vagyok",
       "#I don't know": "Nem tudom"
     },
@@ -813,6 +845,7 @@
       "#Moderately confident": "واثق بدرجة متوسطة",
       "#Extremely confident": "واثق تمامًا",
       "#To what extent does the behavior of other drivers (e.g., sudden lane changes, tailgating, or not yielding) affect your stress levels during a trip?": "إلى أي مدى يؤثر سلوك السائقين الآخرين، مثل تغيير الحارة فجأة أو القيادة قريبًا جدًا أو عدم إعطاء الأولوية، في مستوى التوتر لديك أثناء الرحلة؟",
+      "#Tailgating means following another vehicle at a very short distance.": "القيادة قريبًا جدًا تعني السير خلف مركبة أخرى على مسافة قصيرة جدًا.",
       "#Not stressful at all, it doesn't affect me": "غير مسبب للتوتر إطلاقًا — لا يؤثر فيّ",
       "#Slightly stressful, it occasionally bothers me": "مسبب للتوتر قليلًا — يزعجني أحيانًا",
       "#Moderately stressful, I notice it but manage": "مسبب للتوتر بدرجة متوسطة — ألاحظه لكنني أتعامل معه",
@@ -834,6 +867,7 @@
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالدراجة النارية أو السكوتر. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "هل تقود دراجة نارية أو سكوترًا أو دراجة بخارية صغيرة مرة واحدة على الأقل في الأسبوع للتنقّل؟ (لا يُحتسب السكوتر الكهربائي هنا: فهو مشمول في استبيان الدراجة الهوائية.)",
       "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "لماذا لا تقود الدراجة النارية أو السكوتر أكثر؟ (اختر كل ما ينطبق)",
+      "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "نسأل عن ذلك لنفهم ما الذي يحدّ من استخدام الدراجة النارية والسكوتر لدى أشخاص مختلفين. الإجابة اختيارية، ويمكنك أيضًا اختيار عدم الإفصاح.",
       "#I don't have a licence or a vehicle": "ليست لدي رخصة أو مركبة",
       "#It feels too dangerous in traffic": "يبدو لي خطيرًا جدًا وسط حركة المرور",
       "#Poor road surfaces (potholes, cobblestones, tram tracks)": "سوء حالة سطح الطريق (الحفر، الحجارة المرصوفة، سكك الترام)",
@@ -844,6 +878,7 @@
       "#Other": "أخرى",
       "#Prefer not to say": "أفضل عدم الإجابة",
       "#How do traffic-calming features (e.g., speed bumps, rumble strips, road narrowings) affect your sense of safety while riding?": "كيف تؤثر وسائل تهدئة حركة المرور، مثل المطبات أو الشرائط الاهتزازية أو تضييق الطريق، في شعورك بالأمان أثناء القيادة؟",
+      "#Rumble strips are raised or grooved lines across the road that make vehicles vibrate. A road narrowing is a point where the carriageway is made narrower.": "الشرائط الاهتزازية خطوط بارزة أو محفورة بعرض الطريق تجعل المركبات تهتز. وتضييق الطريق نقطة يُجعل فيها عرض الطريق أضيق.",
       "#No problem, I can handle these situations": "لا مشكلة، أستطيع التعامل مع هذه المواقف",
       "#I have to maneuver with difficulty": "أضطر إلى المناورة بصعوبة",
       "#I feel in danger": "أشعر بالخطر",
@@ -855,6 +890,7 @@
       "#I avoid some roads because of their surface, even if the route is longer": "أتجنب بعض الطرق بسبب حالة سطحها، حتى لو كان المسار أطول",
       "#I have fallen or nearly fallen because of the road surface": "سقطت أو كدت أسقط بسبب سطح الطريق",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "ما مدى ثقتك في قدرتك على تجنب الحوادث الناتجة عن فتح باب سيارة فجأة أو عدم فحص السائق للنقطة العمياء؟",
+      "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "النقطة العمياء هي المنطقة المحيطة بالمركبة التي لا يستطيع السائق رؤيتها في المرايا.",
       "#Very confident": "واثق جدًا",
       "#I don't know": "لا أعرف"
     }
