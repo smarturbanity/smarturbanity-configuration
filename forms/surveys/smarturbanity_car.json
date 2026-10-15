@@ -2,9 +2,9 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Driving",
     "questionnaire_id": "smarturbanity_car",
-    "questionnaire_version": "0.2.0",
+    "questionnaire_version": "0.1.2",
     "project": "SmartUrbanity",
-    "estimated_minutes": 4,
+    "estimated_minutes": 3,
     "options": {
       "review_mode": true,
       "save_user_id": true,
@@ -25,12 +25,12 @@
     "title": "7. Your Experience With Driving",
     "sections": [
       {
-        "title": "Driving and alternatives",
-        "description": "<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>",
+        "title": "Car Travel",
+        "description": "<p>Questions about your relationship with car travel and alternatives.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.",
+            "text": "Do you use a car for your daily travel at least once a week?",
             "answer_key": "car_weekly",
             "question_type": "single_option",
             "required": true,
@@ -46,65 +46,14 @@
             ]
           },
           {
-            "text": "Why don't you drive, or why do you drive so rarely? (Select all that apply)",
-            "help": "We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.",
-            "answer_key": "car_why_not",
-            "question_type": "multiple_options",
-            "required": false,
-            "show_if": {
-              "car_weekly": "no"
-            },
-            "add_other": true,
-            "add_prefer_not_to_say": true,
-            "options": [
-              {
-                "text": "I don't need to: other ways of getting around suit me better",
-                "value": "no_need_other_modes_suit_me_better"
-              },
-              {
-                "text": "I don't have a driving licence",
-                "value": "no_driving_licence"
-              },
-              {
-                "text": "I don't have a car available",
-                "value": "no_car_available"
-              },
-              {
-                "text": "Costs (fuel, insurance, parking)",
-                "value": "costs"
-              },
-              {
-                "text": "Parking is hard to find",
-                "value": "parking_hard_to_find"
-              },
-              {
-                "text": "Traffic and congestion",
-                "value": "traffic_and_congestion"
-              },
-              {
-                "text": "My health, a disability or my age makes it difficult",
-                "value": "health_disability_or_age"
-              },
-              {
-                "text": "Environmental reasons",
-                "value": "environmental_reasons"
-              }
-            ]
-          },
-          {
-            "text": "What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?",
-            "help": "Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.",
-            "answer_key": "car_sustainable_motivation",
+            "text": "What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?",
+            "answer_key": "car_sustainable_motivation_v1",
             "question_type": "multiple_options",
             "show_if": {
               "car_weekly": "yes"
             },
             "max_answers": 3,
             "options": [
-              {
-                "text": "More frequent and reliable public transport, also in the evening",
-                "value": "more_frequent_reliable_public_transport"
-              },
               {
                 "text": "Lower travel costs",
                 "value": "lower_travel_costs"
@@ -130,8 +79,8 @@
                 "value": "greater_comfort_and_convenience"
               },
               {
-                "text": "Feeling more capable and at ease using these modes",
-                "value": "feeling_more_capable_and_at_ease"
+                "text": "Feeling more confident or secure using these modes",
+                "value": "feeling_more_confident_or_secure_using_t"
               },
               {
                 "text": "Environmental concerns or sustainability values",
@@ -142,17 +91,8 @@
                 "value": "more_enjoyable_travel_experiences"
               },
               {
-                "text": "Routes and vehicles that are accessible for my disability or health condition",
-                "value": "accessible_routes_and_vehicles"
-              },
-              {
-                "text": "I need the car for my situation (e.g., disability, children, loads, work shifts)",
-                "value": "i_need_the_car_for_my_situation"
-              },
-              {
                 "text": "I am not interested in using these modes more often",
-                "value": "i_am_not_interested_in_using_these_modes",
-                "exclusive": true
+                "value": "i_am_not_interested_in_using_these_modes"
               }
             ],
             "add_other": true
@@ -174,19 +114,104 @@
                 "value": "no"
               },
               {
-                "text": "I could not use them for health or disability reasons",
-                "value": "could_not_use_health_or_disability"
-              },
-              {
                 "text": "Not sure",
                 "value": "not_sure"
               }
             ]
           },
           {
-            "text": "How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?",
-            "help": "A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.",
-            "answer_key": "car_cost_sensitivity",
+            "text": "When delays occur (e.g., congestion, accidents), how do they affect your stress levels?",
+            "answer_key": "v1_when_delays_occur_e_g_congestion_acc",
+            "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
+            "options": [
+              {
+                "text": "Not stressful at all",
+                "value": "not_stressful_at_all"
+              },
+              {
+                "text": "Slightly stressful",
+                "value": "slightly_stressful"
+              },
+              {
+                "text": "Moderately stressful",
+                "value": "moderately_stressful"
+              },
+              {
+                "text": "Very stressful",
+                "value": "very_stressful"
+              },
+              {
+                "text": "Extremely stressful",
+                "value": "extremely_stressful"
+              }
+            ]
+          },
+          {
+            "text": "When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?",
+            "answer_key": "v1_when_delays_occur_e_g_traffic_conges",
+            "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
+            "options": [
+              {
+                "text": "Not at all affected",
+                "value": "not_at_all_affected"
+              },
+              {
+                "text": "Slightly affected",
+                "value": "slightly_affected"
+              },
+              {
+                "text": "Moderately affected",
+                "value": "moderately_affected"
+              },
+              {
+                "text": "Very affected",
+                "value": "very_affected"
+              },
+              {
+                "text": "Extremely affected",
+                "value": "extremely_affected"
+              }
+            ]
+          },
+          {
+            "text": "How do congestion levels influence your route choice or departure time?",
+            "answer_key": "car_congestion_adapt_v1",
+            "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly (occasionally adjust route or time)",
+                "value": "slightly_occasionally_adjust_route_or_ti"
+              },
+              {
+                "text": "Moderately (sometimes change route or departure time)",
+                "value": "moderately_sometimes_change_route_or_dep"
+              },
+              {
+                "text": "Strongly (frequently change route or time)",
+                "value": "strongly_frequently_change_route_or_time"
+              },
+              {
+                "text": "Always (plan trips specifically to avoid congestion)",
+                "value": "always_plan_trips_specifically_to_avoid"
+              }
+            ]
+          },
+          {
+            "text": "How would increased driving-related costs (fuel, tolls, parking) affect your car usage?",
+            "answer_key": "car_cost_sensitivity_v1",
             "question_type": "single_option",
             "show_if": {
               "car_weekly": "yes"
@@ -211,17 +236,12 @@
               {
                 "text": "Would stop using car for most trips",
                 "value": "would_stop_using_car_for_most_trips"
-              },
-              {
-                "text": "I could not reduce it: I have no alternative",
-                "value": "could_not_reduce_no_alternative"
               }
-            ],
-            "add_i_dont_know": true
+            ]
           },
           {
             "text": "To what extent do emissions concerns influence your travel behavior?",
-            "answer_key": "car_emissions",
+            "answer_key": "car_emissions_v1",
             "question_type": "single_option",
             "show_if": {
               "car_weekly": "yes"
@@ -278,178 +298,49 @@
                 "value": "much_more"
               }
             ]
-          }
-        ]
-      },
-      {
-        "title": "Traffic, delays and parking",
-        "description": "<p>Questions about how traffic, delays and parking affect your trips by car.</p>",
-        "backgroundColor": "#f0f0f0",
-        "questions": [
-          {
-            "text": "How stressful do you find delays when you drive (e.g., congestion, crashes)?",
-            "answer_key": "car_delay_stress",
-            "question_type": "single_option",
-            "show_if": {
-              "car_weekly": "yes"
-            },
-            "options": [
-              {
-                "text": "Not stressful at all",
-                "value": "not_stressful_at_all"
-              },
-              {
-                "text": "Slightly stressful",
-                "value": "slightly_stressful"
-              },
-              {
-                "text": "Moderately stressful",
-                "value": "moderately_stressful"
-              },
-              {
-                "text": "Very stressful",
-                "value": "very_stressful"
-              },
-              {
-                "text": "Extremely stressful",
-                "value": "extremely_stressful"
-              }
-            ]
           },
           {
-            "text": "How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?",
-            "answer_key": "car_delay_schedule_impact",
+            "text": "To what extent is finding a parking space at your destination an issue for you?",
+            "answer_key": "car_parking_issue_v1",
             "question_type": "single_option",
             "show_if": {
               "car_weekly": "yes"
             },
             "options": [
               {
-                "text": "Not at all",
-                "value": "not_at_all_affected"
+                "text": "Not an Issue",
+                "value": "not_an_issue"
               },
               {
-                "text": "A little",
-                "value": "slightly_affected"
+                "text": "Minor Issue",
+                "value": "minor_issue"
               },
               {
-                "text": "Somewhat",
-                "value": "moderately_affected"
+                "text": "Significant Issue",
+                "value": "significant_issue"
               },
               {
-                "text": "A lot",
-                "value": "very_affected"
+                "text": "Major Issue",
+                "value": "major_issue"
               },
               {
-                "text": "Very much",
-                "value": "extremely_affected"
+                "text": "Critical Issue",
+                "value": "critical_issue"
               }
             ]
-          },
-          {
-            "text": "How do congestion levels influence your route choice or departure time?",
-            "answer_key": "car_congestion_adapt",
-            "question_type": "single_option",
-            "show_if": {
-              "car_weekly": "yes"
-            },
-            "options": [
-              {
-                "text": "Not at all",
-                "value": "not_at_all"
-              },
-              {
-                "text": "Slightly (occasionally adjust route or time)",
-                "value": "slightly_occasionally_adjust_route_or_ti"
-              },
-              {
-                "text": "Moderately (sometimes change route or departure time)",
-                "value": "moderately_sometimes_change_route_or_dep"
-              },
-              {
-                "text": "Strongly (frequently change route or time)",
-                "value": "strongly_frequently_change_route_or_time"
-              },
-              {
-                "text": "Always (plan trips specifically to avoid congestion)",
-                "value": "always_plan_trips_specifically_to_avoid"
-              }
-            ]
-          },
-          {
-            "text": "How often is finding a parking space at your destination a problem for you?",
-            "answer_key": "car_parking_issue",
-            "question_type": "single_option",
-            "show_if": {
-              "car_weekly": "yes"
-            },
-            "options": [
-              {
-                "text": "Never",
-                "value": "never"
-              },
-              {
-                "text": "Rarely",
-                "value": "rarely"
-              },
-              {
-                "text": "Sometimes",
-                "value": "sometimes"
-              },
-              {
-                "text": "Often",
-                "value": "often"
-              },
-              {
-                "text": "Always",
-                "value": "always"
-              }
-            ]
-          },
-          {
-            "text": "If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?",
-            "help": "A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.",
-            "answer_key": "car_disabled_parking",
-            "question_type": "single_option",
-            "show_if": {
-              "car_weekly": "yes"
-            },
-            "options": [
-              {
-                "text": "Never",
-                "value": "never"
-              },
-              {
-                "text": "Rarely",
-                "value": "rarely"
-              },
-              {
-                "text": "Sometimes",
-                "value": "sometimes"
-              },
-              {
-                "text": "Often",
-                "value": "often"
-              },
-              {
-                "text": "Always",
-                "value": "always"
-              },
-              {
-                "text": "I don't have a disabled parking permit",
-                "value": "no_disabled_parking_permit"
-              }
-            ],
-            "add_prefer_not_to_say": true
           },
           {
             "text": "How do parking difficulties typically affect your travel decisions?",
-            "answer_key": "car_parking_decisions",
-            "question_type": "multiple_options",
+            "answer_key": "v1_how_do_parking_difficulties_typicall",
+            "question_type": "single_option",
             "show_if": {
               "car_weekly": "yes"
             },
             "options": [
+              {
+                "text": "They do not affect my travel decisions",
+                "value": "they_do_not_affect_my_travel_decisions"
+              },
               {
                 "text": "They make my journey less convenient or more stressful",
                 "value": "they_make_my_journey_less_convenient_or"
@@ -465,14 +356,8 @@
               {
                 "text": "They make me choose another mode of transport instead of driving",
                 "value": "they_make_me_choose_another_mode_of_tran"
-              },
-              {
-                "text": "They do not affect my travel decisions",
-                "value": "they_do_not_affect_my_travel_decisions",
-                "exclusive": true
               }
-            ],
-            "max_answers": 3
+            ]
           }
         ]
       }
@@ -487,34 +372,44 @@
       "#Welcome to Your Experience With Driving": "Welcome to Your Experience With Driving",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#Driving and alternatives": "Driving and alternatives",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>",
+      "#Car Travel": "Car Travel",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Questions about your relationship with car travel and alternatives.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Do you use a car for your daily travel at least once a week?",
       "#Yes": "Yes",
       "#No": "No",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?",
       "#Lower travel costs": "Lower travel costs",
       "#Safer routes and environments": "Safer routes and environments",
       "#Better walking, cycling, or micromobility infrastructure": "Better walking, cycling, or micromobility infrastructure",
       "#Shorter or more reliable travel times": "Shorter or more reliable travel times",
       "#Better weather or climate conditions": "Better weather or climate conditions",
       "#Greater comfort and convenience": "Greater comfort and convenience",
-      "#Feeling more capable and at ease using these modes": "Feeling more capable and at ease using these modes",
+      "#Feeling more confident or secure using these modes": "Feeling more confident or secure using these modes",
       "#Environmental concerns or sustainability values": "Environmental concerns or sustainability values",
       "#More enjoyable travel experiences": "More enjoyable travel experiences",
       "#I am not interested in using these modes more often": "I am not interested in using these modes more often",
       "#Other": "Other",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "If you were given free access to a shared bicycle or e-scooter, would you use it?",
       "#Not sure": "Not sure",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "When delays occur (e.g., congestion, accidents), how do they affect your stress levels?",
       "#Not stressful at all": "Not stressful at all",
       "#Slightly stressful": "Slightly stressful",
       "#Moderately stressful": "Moderately stressful",
       "#Very stressful": "Very stressful",
       "#Extremely stressful": "Extremely stressful",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?",
+      "#Not at all affected": "Not at all affected",
+      "#Slightly affected": "Slightly affected",
+      "#Moderately affected": "Moderately affected",
+      "#Very affected": "Very affected",
+      "#Extremely affected": "Extremely affected",
       "#How do congestion levels influence your route choice or departure time?": "How do congestion levels influence your route choice or departure time?",
       "#Not at all": "Not at all",
       "#Slightly (occasionally adjust route or time)": "Slightly (occasionally adjust route or time)",
       "#Moderately (sometimes change route or departure time)": "Moderately (sometimes change route or departure time)",
       "#Strongly (frequently change route or time)": "Strongly (frequently change route or time)",
       "#Always (plan trips specifically to avoid congestion)": "Always (plan trips specifically to avoid congestion)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "How would increased driving-related costs (fuel, tolls, parking) affect your car usage?",
       "#No change in usage": "No change in usage",
       "#Slight reduction in car use": "Slight reduction in car use",
       "#Moderate reduction in car use": "Moderate reduction in car use",
@@ -532,52 +427,19 @@
       "#About the same": "About the same",
       "#More comfortable": "More comfortable",
       "#Much more comfortable": "Much more comfortable",
+      "#To what extent is finding a parking space at your destination an issue for you?": "To what extent is finding a parking space at your destination an issue for you?",
+      "#Not an Issue": "Not an Issue",
+      "#Minor Issue": "Minor Issue",
+      "#Significant Issue": "Significant Issue",
+      "#Major Issue": "Major Issue",
+      "#Critical Issue": "Critical Issue",
       "#How do parking difficulties typically affect your travel decisions?": "How do parking difficulties typically affect your travel decisions?",
       "#They do not affect my travel decisions": "They do not affect my travel decisions",
       "#They make my journey less convenient or more stressful": "They make my journey less convenient or more stressful",
       "#They make me change my route or destination": "They make me change my route or destination",
       "#They make me postpone, avoid, or cancel some trips": "They make me postpone, avoid, or cancel some trips",
       "#They make me choose another mode of transport instead of driving": "They make me choose another mode of transport instead of driving",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Why don't you drive, or why do you drive so rarely? (Select all that apply)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.",
-      "#I don't have a driving licence": "I don't have a driving licence",
-      "#I don't have a car available": "I don't have a car available",
-      "#Costs (fuel, insurance, parking)": "Costs (fuel, insurance, parking)",
-      "#Parking is hard to find": "Parking is hard to find",
-      "#Traffic and congestion": "Traffic and congestion",
-      "#My health, a disability or my age makes it difficult": "My health, a disability or my age makes it difficult",
-      "#Environmental reasons": "Environmental reasons",
-      "#I don't need to: other ways of getting around suit me better": "I don't need to: other ways of getting around suit me better",
-      "#Prefer not to say": "Prefer not to say",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.",
-      "#More frequent and reliable public transport, also in the evening": "More frequent and reliable public transport, also in the evening",
-      "#Routes and vehicles that are accessible for my disability or health condition": "Routes and vehicles that are accessible for my disability or health condition",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "I need the car for my situation (e.g., disability, children, loads, work shifts)",
-      "#I could not use them for health or disability reasons": "I could not use them for health or disability reasons",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "How stressful do you find delays when you drive (e.g., congestion, crashes)?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?",
-      "#A little": "A little",
-      "#Somewhat": "Somewhat",
-      "#A lot": "A lot",
-      "#Very much": "Very much",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.",
-      "#I could not reduce it: I have no alternative": "I could not reduce it: I have no alternative",
-      "#I don't know": "I don't know",
-      "#How often is finding a parking space at your destination a problem for you?": "How often is finding a parking space at your destination a problem for you?",
-      "#Never": "Never",
-      "#Rarely": "Rarely",
-      "#Sometimes": "Sometimes",
-      "#Often": "Often",
-      "#Always": "Always",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.",
-      "#I don't have a disabled parking permit": "I don't have a disabled parking permit",
-      "#Traffic, delays and parking": "Traffic, delays and parking",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Questions about how traffic, delays and parking affect your trips by car.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "#Car on a street": "Auto su una strada",
@@ -587,43 +449,53 @@
       "#Welcome to Your Experience With Driving": "Benvenuto/a nel questionario sulla tua esperienza con l'auto",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#Driving and alternatives": "La guida e le alternative",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Domande su quanto guidi e su che cosa potrebbe rendere più interessanti altri modi di spostarti.</p>",
+      "#Car Travel": "Spostamenti in auto",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Domande sul tuo rapporto con gli spostamenti in auto e con le modalità alternative.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Utilizzi l'auto per i tuoi spostamenti quotidiani almeno una volta alla settimana?",
       "#Yes": "Sì",
       "#No": "No",
-      "#Lower travel costs": "Costi degli spostamenti più bassi",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "Cosa ti motiverebbe a utilizzare più spesso modalità di trasporto sostenibili (a piedi, in bicicletta, mobilità condivisa)?",
+      "#Lower travel costs": "Costi di viaggio più bassi",
       "#Safer routes and environments": "Percorsi e ambienti più sicuri",
       "#Better walking, cycling, or micromobility infrastructure": "Migliori infrastrutture pedonali, ciclabili o per la micromobilità",
-      "#Shorter or more reliable travel times": "Tempi di spostamento più brevi o più affidabili",
+      "#Shorter or more reliable travel times": "Tempi di viaggio più brevi o più affidabili",
       "#Better weather or climate conditions": "Migliori condizioni meteorologiche o climatiche",
       "#Greater comfort and convenience": "Maggiore comfort e praticità",
-      "#Feeling more capable and at ease using these modes": "Sentirmi più capace e a mio agio nell'utilizzare queste modalità",
+      "#Feeling more confident or secure using these modes": "Sentirmi più sicuro/a e a mio agio nell'utilizzare queste modalità",
       "#Environmental concerns or sustainability values": "Preoccupazioni ambientali o valori legati alla sostenibilità",
-      "#More enjoyable travel experiences": "Spostamenti più piacevoli",
+      "#More enjoyable travel experiences": "Esperienze di viaggio più piacevoli",
       "#I am not interested in using these modes more often": "Non sono interessato/a a utilizzare più spesso queste modalità",
       "#Other": "Altro",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "Se avessi accesso gratuito a una bicicletta condivisa o a un monopattino elettrico, lo utilizzeresti?",
       "#Not sure": "Non sono sicuro/a",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "Quando si verificano ritardi (ad esempio per congestione o incidenti), in che modo influiscono sul tuo livello di stress?",
       "#Not stressful at all": "Per niente stressante",
       "#Slightly stressful": "Poco stressante",
       "#Moderately stressful": "Moderatamente stressante",
       "#Very stressful": "Molto stressante",
       "#Extremely stressful": "Estremamente stressante",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "Quando si verificano ritardi (ad es. per traffico, congestione o incidenti), in che modo influiscono sui tuoi impegni quotidiani?",
+      "#Not at all affected": "Per niente influenzati",
+      "#Slightly affected": "Poco influenzati",
+      "#Moderately affected": "Moderatamente influenzati",
+      "#Very affected": "Molto influenzati",
+      "#Extremely affected": "Estremamente influenzati",
       "#How do congestion levels influence your route choice or departure time?": "In che modo i livelli di congestione influenzano la scelta del percorso o dell'orario di partenza?",
       "#Not at all": "Per niente",
       "#Slightly (occasionally adjust route or time)": "Poco (occasionalmente modifico il percorso o l'orario)",
       "#Moderately (sometimes change route or departure time)": "Moderatamente (a volte cambio il percorso o l'orario di partenza)",
       "#Strongly (frequently change route or time)": "Molto (cambio frequentemente il percorso o l'orario)",
       "#Always (plan trips specifically to avoid congestion)": "Sempre (pianifico appositamente gli spostamenti per evitare la congestione)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "In che modo un aumento dei costi legati all'uso dell'auto (carburante, pedaggi, parcheggio) influenzerebbe il tuo utilizzo dell'auto?",
       "#No change in usage": "Nessun cambiamento nell'utilizzo",
       "#Slight reduction in car use": "Leggera riduzione dell'uso dell'auto",
       "#Moderate reduction in car use": "Moderata riduzione dell'uso dell'auto",
       "#Significant reduction in car use": "Significativa riduzione dell'uso dell'auto",
       "#Would stop using car for most trips": "Smetterei di utilizzare l'auto per la maggior parte degli spostamenti",
-      "#To what extent do emissions concerns influence your travel behavior?": "In che misura le preoccupazioni relative alle emissioni influenzano le tue scelte di spostamento?",
-      "#Not at all, emissions concerns do not influence my travel choices": "Per niente, le preoccupazioni relative alle emissioni non influenzano le mie scelte di spostamento",
+      "#To what extent do emissions concerns influence your travel behavior?": "In che misura le preoccupazioni relative alle emissioni influenzano le tue scelte di viaggio?",
+      "#Not at all, emissions concerns do not influence my travel choices": "Per niente, le preoccupazioni relative alle emissioni non influenzano le mie scelte di viaggio",
       "#Slightly, I occasionally think about emissions when choosing how to travel": "Poco, occasionalmente penso alle emissioni quando scelgo come spostarmi",
-      "#Moderately, emissions concerns sometimes influence my travel decisions": "Moderatamente, le preoccupazioni relative alle emissioni a volte influenzano le mie decisioni di spostamento",
+      "#Moderately, emissions concerns sometimes influence my travel decisions": "Moderatamente, le preoccupazioni relative alle emissioni a volte influenzano le mie decisioni di viaggio",
       "#Strongly, emissions concerns regularly affect how I travel": "Molto, le preoccupazioni relative alle emissioni influenzano regolarmente il mio modo di spostarmi",
       "#Very strongly, I actively try to reduce car use because of emissions concerns": "Moltissimo, cerco attivamente di ridurre l'uso dell'auto a causa delle preoccupazioni relative alle emissioni",
       "#How comfortable do you find traveling by car compared to other modes?": "Quanto trovi confortevole viaggiare in auto rispetto ad altre modalità di trasporto?",
@@ -632,52 +504,19 @@
       "#About the same": "Più o meno uguale",
       "#More comfortable": "Più confortevole",
       "#Much more comfortable": "Molto più confortevole",
-      "#How do parking difficulties typically affect your travel decisions?": "In che modo le difficoltà di parcheggio influenzano normalmente le tue decisioni di spostamento?",
-      "#They do not affect my travel decisions": "Non influenzano le mie decisioni di spostamento",
-      "#They make my journey less convenient or more stressful": "Rendono il mio spostamento meno comodo o più stressante",
+      "#To what extent is finding a parking space at your destination an issue for you?": "In che misura trovare un parcheggio a destinazione rappresenta un problema per te?",
+      "#Not an Issue": "Non è un problema",
+      "#Minor Issue": "Un problema minore",
+      "#Significant Issue": "Un problema significativo",
+      "#Major Issue": "Un problema importante",
+      "#Critical Issue": "Un problema critico",
+      "#How do parking difficulties typically affect your travel decisions?": "In che modo le difficoltà di parcheggio influenzano normalmente le tue decisioni di viaggio?",
+      "#They do not affect my travel decisions": "Non influenzano le mie decisioni di viaggio",
+      "#They make my journey less convenient or more stressful": "Rendono il mio viaggio meno comodo o più stressante",
       "#They make me change my route or destination": "Mi portano a cambiare percorso o destinazione",
       "#They make me postpone, avoid, or cancel some trips": "Mi portano a rimandare, evitare o annullare alcuni spostamenti",
       "#They make me choose another mode of transport instead of driving": "Mi portano a scegliere un'altra modalità di trasporto invece dell'auto",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e le tue esperienze durante gli spostamenti in auto. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Guidi un'auto almeno una volta alla settimana per i tuoi spostamenti? Considera solo gli spostamenti in cui sei tu alla guida.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Perché non guidi, o perché guidi così poco? (Seleziona tutte le opzioni applicabili)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "Lo chiediamo per capire che cosa limita l'uso dell'auto per persone diverse. Rispondere è facoltativo e puoi anche scegliere di non dirlo.",
-      "#I don't have a driving licence": "Non ho la patente",
-      "#I don't have a car available": "Non ho un'auto a disposizione",
-      "#Costs (fuel, insurance, parking)": "I costi (carburante, assicurazione, parcheggio)",
-      "#Parking is hard to find": "È difficile trovare parcheggio",
-      "#Traffic and congestion": "Il traffico e la congestione",
-      "#My health, a disability or my age makes it difficult": "La mia salute, una disabilità o l'età me lo rendono difficile",
-      "#Environmental reasons": "Motivi ambientali",
-      "#I don't need to: other ways of getting around suit me better": "Non mi serve: altri modi di spostarmi sono più adatti a me",
-      "#Prefer not to say": "Preferisco non rispondere",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "Cosa ti motiverebbe a utilizzare più spesso modalità di trasporto sostenibili (a piedi, in bicicletta, trasporto pubblico, mezzi condivisi)?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "I mezzi condivisi sono biciclette, monopattini o auto che si possono noleggiare per poco tempo, spesso tramite un'app. Per micromobilità intendiamo veicoli piccoli e leggeri come biciclette e monopattini.",
-      "#More frequent and reliable public transport, also in the evening": "Un trasporto pubblico più frequente e affidabile, anche di sera",
-      "#Routes and vehicles that are accessible for my disability or health condition": "Percorsi e mezzi accessibili per la mia disabilità o condizione di salute",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Per le mie esigenze l'auto è necessaria (ad es. disabilità, figli, carichi, turni di lavoro)",
-      "#I could not use them for health or disability reasons": "Non potrei usarli per motivi di salute o disabilità",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "Quanto ti stressano i ritardi quando guidi (ad esempio per congestione o incidenti)?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "Quanto i ritardi (ad es. per traffico, congestione o incidenti) cambiano i tuoi impegni quotidiani?",
-      "#A little": "Poco",
-      "#Somewhat": "Abbastanza",
-      "#A lot": "Molto",
-      "#Very much": "Moltissimo",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "In che modo un aumento dei costi legati all'uso dell'auto (carburante, pedaggi, parcheggio, permessi per le zone a traffico limitato) influenzerebbe il tuo utilizzo dell'auto?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "La zona a traffico limitato (ZTL) è un'area, per esempio un centro storico, in cui le auto possono entrare solo con un permesso.",
-      "#I could not reduce it: I have no alternative": "Non potrei ridurlo: non ho alternative",
-      "#I don't know": "Non lo so",
-      "#How often is finding a parking space at your destination a problem for you?": "Quanto spesso trovare parcheggio a destinazione è un problema per te?",
-      "#Never": "Mai",
-      "#Rarely": "Raramente",
-      "#Sometimes": "A volte",
-      "#Often": "Spesso",
-      "#Always": "Sempre",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "Se hai il contrassegno per persone con disabilità: quanto spesso i posti riservati a destinazione sono occupati da altri o mancano del tutto?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "Il contrassegno per persone con disabilità è il permesso ufficiale che consente di parcheggiare nei posti riservati alle persone con disabilità. Lo chiediamo per capire se questi posti sono davvero disponibili. Rispondere è facoltativo e puoi anche scegliere di non dirlo.",
-      "#I don't have a disabled parking permit": "Non ho il contrassegno per persone con disabilità",
-      "#Traffic, delays and parking": "Traffico, ritardi e parcheggio",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Domande su come traffico, ritardi e parcheggio influiscono sui tuoi spostamenti in auto.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e le tue esperienze durante gli spostamenti in auto. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "#Car on a street": "Voiture dans une rue",
@@ -687,34 +526,44 @@
       "#Welcome to Your Experience With Driving": "Bienvenue dans le questionnaire sur votre expérience de la conduite",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#Driving and alternatives": "La conduite et les alternatives",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Questions pour savoir si vous conduisez et ce qui pourrait rendre d'autres façons de vous déplacer plus intéressantes.</p>",
+      "#Car Travel": "Déplacements en voiture",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Questions sur vos déplacements en voiture et les autres possibilités de transport.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Utilisez-vous une voiture pour vos déplacements quotidiens au moins une fois par semaine ?",
       "#Yes": "Oui",
       "#No": "Non",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "Qu’est-ce qui vous encouragerait à utiliser plus souvent des modes de déplacement durables, comme la marche, le vélo ou la mobilité partagée ?",
       "#Lower travel costs": "Des coûts de déplacement plus faibles",
       "#Safer routes and environments": "Des itinéraires et des environnements plus sûrs",
       "#Better walking, cycling, or micromobility infrastructure": "De meilleures infrastructures pour la marche, le vélo ou la micromobilité",
       "#Shorter or more reliable travel times": "Des temps de trajet plus courts ou plus fiables",
       "#Better weather or climate conditions": "De meilleures conditions météo ou climatiques",
       "#Greater comfort and convenience": "Plus de confort et de facilité",
-      "#Feeling more capable and at ease using these modes": "Me sentir plus capable et plus à l'aise avec ces modes",
+      "#Feeling more confident or secure using these modes": "Me sentir plus en confiance ou en sécurité avec ces modes",
       "#Environmental concerns or sustainability values": "Des préoccupations environnementales ou des valeurs liées au développement durable",
       "#More enjoyable travel experiences": "Des déplacements plus agréables",
       "#I am not interested in using these modes more often": "Je ne souhaite pas utiliser ces modes plus souvent",
       "#Other": "Autre",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "Si vous aviez gratuitement accès à un vélo partagé ou à une trottinette électrique, l’utiliseriez-vous ?",
       "#Not sure": "Je ne sais pas",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "Quand il y a des retards, par exemple à cause des embouteillages ou d’un accident, quel effet ont-ils sur votre niveau de stress ?",
       "#Not stressful at all": "Pas du tout stressant",
       "#Slightly stressful": "Un peu stressant",
       "#Moderately stressful": "Moyennement stressant",
       "#Very stressful": "Très stressant",
       "#Extremely stressful": "Extrêmement stressant",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "Quand il y a des retards, par exemple à cause du trafic, des embouteillages ou d’un accident, quel effet ont-ils sur votre emploi du temps quotidien ?",
+      "#Not at all affected": "Aucun effet",
+      "#Slightly affected": "Un faible effet",
+      "#Moderately affected": "Un effet modéré",
+      "#Very affected": "Un effet important",
+      "#Extremely affected": "Un effet très important",
       "#How do congestion levels influence your route choice or departure time?": "Dans quelle mesure les embouteillages influencent-ils votre choix d’itinéraire ou votre heure de départ ?",
       "#Not at all": "Pas du tout",
       "#Slightly (occasionally adjust route or time)": "Un peu (je change parfois d’itinéraire ou d’horaire)",
       "#Moderately (sometimes change route or departure time)": "Modérément (je change parfois d’itinéraire ou d’heure de départ)",
       "#Strongly (frequently change route or time)": "Beaucoup (je change souvent d’itinéraire ou d’horaire)",
       "#Always (plan trips specifically to avoid congestion)": "Toujours (j’organise mes déplacements pour éviter les embouteillages)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "Si les coûts liés à la conduite augmentaient, par exemple le carburant, les péages ou le stationnement, quel effet cela aurait-il sur votre usage de la voiture ?",
       "#No change in usage": "Aucun changement",
       "#Slight reduction in car use": "Une légère réduction de mon usage de la voiture",
       "#Moderate reduction in car use": "Une réduction modérée de mon usage de la voiture",
@@ -732,52 +581,19 @@
       "#About the same": "À peu près aussi confortables",
       "#More comfortable": "Plus confortables",
       "#Much more comfortable": "Beaucoup plus confortables",
+      "#To what extent is finding a parking space at your destination an issue for you?": "Dans quelle mesure est-il difficile pour vous de trouver une place de stationnement à destination ?",
+      "#Not an Issue": "Ce n’est pas un problème",
+      "#Minor Issue": "Petit problème",
+      "#Significant Issue": "Problème important",
+      "#Major Issue": "Problème majeur",
+      "#Critical Issue": "Problème critique",
       "#How do parking difficulties typically affect your travel decisions?": "Comment les difficultés de stationnement influencent-elles généralement vos décisions de déplacement ?",
       "#They do not affect my travel decisions": "Elles n’influencent pas mes décisions de déplacement",
       "#They make my journey less convenient or more stressful": "Elles rendent mon trajet moins pratique ou plus stressant",
       "#They make me change my route or destination": "Elles me font changer d’itinéraire ou de destination",
       "#They make me postpone, avoid, or cancel some trips": "Elles me font reporter, éviter ou annuler certains déplacements",
       "#They make me choose another mode of transport instead of driving": "Elles me font choisir un autre mode de transport au lieu de conduire",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience lors de vos déplacements en voiture. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Conduisez-vous une voiture au moins une fois par semaine pour vos déplacements ? Ne comptez que les trajets où vous êtes au volant.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Pourquoi ne conduisez-vous pas, ou pourquoi si rarement ? (Sélectionnez toutes les réponses qui s’appliquent)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "Nous posons cette question pour comprendre ce qui limite la conduite selon les personnes. Répondre est facultatif, et vous pouvez aussi choisir de ne pas le dire.",
-      "#I don't have a driving licence": "Je n'ai pas le permis de conduire",
-      "#I don't have a car available": "Je n'ai pas de voiture à disposition",
-      "#Costs (fuel, insurance, parking)": "Les coûts (carburant, assurance, stationnement)",
-      "#Parking is hard to find": "Il est difficile de trouver une place de stationnement",
-      "#Traffic and congestion": "La circulation et les embouteillages",
-      "#My health, a disability or my age makes it difficult": "Ma santé, un handicap ou mon âge rendent cela difficile",
-      "#Environmental reasons": "Des raisons environnementales",
-      "#I don't need to: other ways of getting around suit me better": "Je n'en ai pas besoin : d'autres moyens de déplacement me conviennent mieux",
-      "#Prefer not to say": "Je préfère ne pas répondre",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "Qu’est-ce qui vous encouragerait à utiliser plus souvent des modes de déplacement durables, comme la marche, le vélo, les transports en commun ou les véhicules partagés ?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "Les véhicules partagés sont des vélos, des trottinettes électriques ou des voitures que l'on peut louer pour une courte durée, souvent via une application. La micromobilité désigne les véhicules petits et légers comme les vélos et les trottinettes électriques.",
-      "#More frequent and reliable public transport, also in the evening": "Des transports en commun plus fréquents et plus fiables, y compris le soir",
-      "#Routes and vehicles that are accessible for my disability or health condition": "Des itinéraires et des véhicules accessibles compte tenu de mon handicap ou de mon état de santé",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "J'ai besoin de la voiture dans ma situation (par ex. handicap, enfants, charges, horaires de travail décalés)",
-      "#I could not use them for health or disability reasons": "Je ne pourrais pas les utiliser pour des raisons de santé ou de handicap",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "À quel point les retards sont-ils stressants pour vous quand vous conduisez (par exemple à cause des embouteillages ou d’un accident) ?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "Dans quelle mesure les retards (par ex. circulation, embouteillages, accidents) modifient-ils votre emploi du temps quotidien ?",
-      "#A little": "Un peu",
-      "#Somewhat": "Moyennement",
-      "#A lot": "Beaucoup",
-      "#Very much": "Énormément",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "Si les coûts liés à la conduite augmentaient, par exemple le carburant, les péages, le stationnement ou les permis d’accès aux zones à circulation limitée, quel effet cela aurait-il sur votre usage de la voiture ?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "Une zone à circulation limitée est un secteur, par exemple un centre historique, où les voitures ne peuvent entrer qu'avec une autorisation.",
-      "#I could not reduce it: I have no alternative": "Je ne pourrais pas la réduire : je n'ai pas d'alternative",
-      "#I don't know": "Je ne sais pas",
-      "#How often is finding a parking space at your destination a problem for you?": "À quelle fréquence trouver une place de stationnement à destination est-il un problème pour vous ?",
-      "#Never": "Jamais",
-      "#Rarely": "Rarement",
-      "#Sometimes": "Parfois",
-      "#Often": "Souvent",
-      "#Always": "Toujours",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "Si vous avez une carte de stationnement pour personnes handicapées : à quelle fréquence les places réservées à destination sont-elles occupées par d'autres ou inexistantes ?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "La carte de stationnement pour personnes handicapées est le document officiel qui permet de se garer sur les places réservées aux personnes handicapées. Nous posons cette question pour savoir si ces places sont vraiment disponibles. Répondre est facultatif, et vous pouvez aussi choisir de ne pas le dire.",
-      "#I don't have a disabled parking permit": "Je n'ai pas de carte de stationnement pour personnes handicapées",
-      "#Traffic, delays and parking": "Circulation, retards et stationnement",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Questions sur l'effet de la circulation, des retards et du stationnement sur vos déplacements en voiture.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience lors de vos déplacements en voiture. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "#Car on a street": "Auto auf einer Straße",
@@ -787,34 +603,44 @@
       "#Welcome to Your Experience With Driving": "Willkommen beim Fragebogen zu Ihrer Erfahrung beim Autofahren",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#Driving and alternatives": "Autofahren und Alternativen",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Fragen dazu, ob Sie Auto fahren und was andere Arten der Fortbewegung attraktiver machen könnte.</p>",
+      "#Car Travel": "Autofahrten",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Fragen zu Ihren Autofahrten und zu möglichen Alternativen.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Nutzen Sie mindestens einmal pro Woche ein Auto für Ihre täglichen Wege?",
       "#Yes": "Ja",
       "#No": "Nein",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "Was würde Sie dazu motivieren, häufiger nachhaltige Verkehrsmittel wie Gehen, Radfahren oder geteilte Mobilität zu nutzen?",
       "#Lower travel costs": "Niedrigere Fahrtkosten",
       "#Safer routes and environments": "Sicherere Wege und Umgebungen",
       "#Better walking, cycling, or micromobility infrastructure": "Bessere Infrastruktur zum Gehen, Radfahren oder für Mikromobilität",
       "#Shorter or more reliable travel times": "Kürzere oder verlässlichere Fahrzeiten",
       "#Better weather or climate conditions": "Bessere Wetter- oder Klimabedingungen",
       "#Greater comfort and convenience": "Mehr Komfort und Bequemlichkeit",
-      "#Feeling more capable and at ease using these modes": "Mich bei der Nutzung dieser Verkehrsmittel fähiger und wohler fühlen",
+      "#Feeling more confident or secure using these modes": "Mehr Vertrauen oder ein größeres Sicherheitsgefühl bei der Nutzung dieser Verkehrsmittel",
       "#Environmental concerns or sustainability values": "Umweltgründe oder der Wunsch nach mehr Nachhaltigkeit",
       "#More enjoyable travel experiences": "Angenehmere Wege",
       "#I am not interested in using these modes more often": "Ich möchte diese Verkehrsmittel nicht häufiger nutzen",
       "#Other": "Anderes",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "Wenn Sie kostenlos ein Leihrad oder einen E-Scooter nutzen könnten, würden Sie das tun?",
       "#Not sure": "Ich weiß es nicht",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "Wenn es zu Verzögerungen kommt, zum Beispiel durch Stau oder Unfälle: Wie wirkt sich das auf Ihren Stress aus?",
       "#Not stressful at all": "Überhaupt nicht stressig",
       "#Slightly stressful": "Etwas stressig",
       "#Moderately stressful": "Mäßig stressig",
       "#Very stressful": "Sehr stressig",
       "#Extremely stressful": "Extrem stressig",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "Wenn es zu Verzögerungen kommt, zum Beispiel durch Verkehr, Stau oder Unfälle: Wie wirkt sich das auf Ihren Tagesablauf aus?",
+      "#Not at all affected": "Gar nicht",
+      "#Slightly affected": "Etwas",
+      "#Moderately affected": "Mäßig",
+      "#Very affected": "Stark",
+      "#Extremely affected": "Sehr stark",
       "#How do congestion levels influence your route choice or departure time?": "Wie stark beeinflusst Stau Ihre Wahl der Route oder Ihre Abfahrtszeit?",
       "#Not at all": "Gar nicht",
       "#Slightly (occasionally adjust route or time)": "Etwas (ich ändere gelegentlich Route oder Uhrzeit)",
       "#Moderately (sometimes change route or departure time)": "Mäßig (ich ändere manchmal Route oder Abfahrtszeit)",
       "#Strongly (frequently change route or time)": "Stark (ich ändere häufig Route oder Uhrzeit)",
       "#Always (plan trips specifically to avoid congestion)": "Immer (ich plane Fahrten gezielt so, dass ich Stau vermeide)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "Wenn die Kosten des Autofahrens steigen würden, zum Beispiel Kraftstoff, Maut oder Parken: Wie würde sich das auf Ihre Autonutzung auswirken?",
       "#No change in usage": "Keine Änderung",
       "#Slight reduction in car use": "Ich würde das Auto etwas weniger nutzen",
       "#Moderate reduction in car use": "Ich würde das Auto deutlich weniger nutzen",
@@ -832,52 +658,19 @@
       "#About the same": "Etwa gleich",
       "#More comfortable": "Komfortabler",
       "#Much more comfortable": "Viel komfortabler",
+      "#To what extent is finding a parking space at your destination an issue for you?": "Wie groß ist für Sie das Problem, am Ziel einen Parkplatz zu finden?",
+      "#Not an Issue": "Kein Problem",
+      "#Minor Issue": "Kleines Problem",
+      "#Significant Issue": "Deutliches Problem",
+      "#Major Issue": "Großes Problem",
+      "#Critical Issue": "Sehr großes Problem",
       "#How do parking difficulties typically affect your travel decisions?": "Wie beeinflussen Parkplatzprobleme normalerweise Ihre Entscheidungen bei Wegen und Fahrten?",
       "#They do not affect my travel decisions": "Sie beeinflussen meine Entscheidungen nicht",
       "#They make my journey less convenient or more stressful": "Sie machen meine Fahrt weniger bequem oder stressiger",
       "#They make me change my route or destination": "Sie führen dazu, dass ich Route oder Ziel ändere",
       "#They make me postpone, avoid, or cancel some trips": "Sie führen dazu, dass ich manche Wege verschiebe, vermeide oder absage",
       "#They make me choose another mode of transport instead of driving": "Sie führen dazu, dass ich statt des Autos ein anderes Verkehrsmittel wähle",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Autofahrten erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Fahren Sie mindestens einmal pro Woche selbst Auto, um irgendwohin zu gelangen? Zählen Sie nur Fahrten, bei denen Sie am Steuer sitzen.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Warum fahren Sie nicht oder so selten Auto? (Wählen Sie alles Zutreffende aus)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "Wir fragen dies, um zu verstehen, was das Autofahren für verschiedene Menschen einschränkt. Die Antwort ist freiwillig, und Sie können auch angeben, dass Sie es lieber nicht sagen möchten.",
-      "#I don't have a driving licence": "Ich habe keinen Führerschein",
-      "#I don't have a car available": "Mir steht kein Auto zur Verfügung",
-      "#Costs (fuel, insurance, parking)": "Die Kosten (Kraftstoff, Versicherung, Parken)",
-      "#Parking is hard to find": "Es ist schwer, einen Parkplatz zu finden",
-      "#Traffic and congestion": "Verkehr und Staus",
-      "#My health, a disability or my age makes it difficult": "Meine Gesundheit, eine Behinderung oder mein Alter machen es mir schwer",
-      "#Environmental reasons": "Umweltgründe",
-      "#I don't need to: other ways of getting around suit me better": "Ich brauche es nicht: Andere Fortbewegungsarten passen besser zu mir",
-      "#Prefer not to say": "Ich möchte nicht antworten",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "Was würde Sie dazu motivieren, häufiger nachhaltige Verkehrsmittel wie Gehen, Radfahren, öffentliche Verkehrsmittel oder geteilte Fahrzeuge zu nutzen?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "Geteilte Fahrzeuge sind Fahrräder, E-Scooter oder Autos, die man für kurze Zeit mieten kann, oft per App. Mikromobilität bezeichnet kleine, leichte Fahrzeuge wie Fahrräder und E-Scooter.",
-      "#More frequent and reliable public transport, also in the evening": "Häufigere und zuverlässigere öffentliche Verkehrsmittel, auch am Abend",
-      "#Routes and vehicles that are accessible for my disability or health condition": "Wege und Fahrzeuge, die für meine Behinderung oder meinen Gesundheitszustand zugänglich sind",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Ich bin in meiner Situation auf das Auto angewiesen (z. B. Behinderung, Kinder, Lasten, Schichtarbeit)",
-      "#I could not use them for health or disability reasons": "Ich könnte sie aus gesundheitlichen Gründen oder wegen einer Behinderung nicht nutzen",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "Wie stressig finden Sie Verzögerungen beim Autofahren (zum Beispiel durch Stau oder Unfälle)?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "Wie stark verändern Verzögerungen (z. B. durch Verkehr, Stau oder Unfälle) Ihren Tagesablauf?",
-      "#A little": "Ein wenig",
-      "#Somewhat": "Einigermaßen",
-      "#A lot": "Stark",
-      "#Very much": "Sehr stark",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "Wenn die Kosten des Autofahrens steigen würden, zum Beispiel Kraftstoff, Maut, Parken oder Zufahrtsgenehmigungen für verkehrsbeschränkte Zonen: Wie würde sich das auf Ihre Autonutzung auswirken?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "Eine verkehrsbeschränkte Zone ist ein Bereich, zum Beispiel eine Altstadt, in den Autos nur mit Genehmigung einfahren dürfen.",
-      "#I could not reduce it: I have no alternative": "Ich könnte sie nicht reduzieren: Ich habe keine Alternative",
-      "#I don't know": "Ich weiß es nicht",
-      "#How often is finding a parking space at your destination a problem for you?": "Wie oft ist es für Sie ein Problem, am Ziel einen Parkplatz zu finden?",
-      "#Never": "Nie",
-      "#Rarely": "Selten",
-      "#Sometimes": "Manchmal",
-      "#Often": "Oft",
-      "#Always": "Immer",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "Wenn Sie einen Parkausweis für Menschen mit Behinderung haben: Wie oft sind die reservierten Plätze an Ihrem Ziel von anderen belegt oder gar nicht vorhanden?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "Der Parkausweis für Menschen mit Behinderung ist der amtliche Ausweis, mit dem man auf den für Menschen mit Behinderung reservierten Plätzen parken darf. Wir fragen dies, um zu verstehen, ob diese Plätze wirklich verfügbar sind. Die Antwort ist freiwillig, und Sie können auch angeben, dass Sie es lieber nicht sagen möchten.",
-      "#I don't have a disabled parking permit": "Ich habe keinen Parkausweis für Menschen mit Behinderung",
-      "#Traffic, delays and parking": "Verkehr, Verzögerungen und Parken",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Fragen dazu, wie Verkehr, Verzögerungen und Parken Ihre Autofahrten beeinflussen.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Autofahrten erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "#Car on a street": "Sokakta bir araba",
@@ -887,34 +680,44 @@
       "#Welcome to Your Experience With Driving": "Otomobil Kullanma Deneyimi Anketine Hoş Geldiniz",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#Driving and alternatives": "Araba Kullanımı ve Alternatifler",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Araba kullanıp kullanmadığınız ve diğer ulaşım yollarını neyin daha cazip hale getirebileceği hakkında sorular.</p>",
+      "#Car Travel": "Otomobille Yolculuk",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Otomobil kullanımı ve alternatif ulaşım seçenekleriyle ilişkiniz hakkında sorular.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Günlük yolculuklarınızda haftada en az bir kez otomobil kullanıyor musunuz?",
       "#Yes": "Evet",
       "#No": "Hayır",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "Yürüme, bisiklet veya paylaşımlı ulaşım gibi sürdürülebilir ulaşım seçeneklerini daha sık kullanmanızı ne teşvik ederdi?",
       "#Lower travel costs": "Daha düşük ulaşım maliyetleri",
       "#Safer routes and environments": "Daha güvenli güzergâhlar ve çevreler",
       "#Better walking, cycling, or micromobility infrastructure": "Yürüme, bisiklet veya mikromobilite için daha iyi altyapı",
       "#Shorter or more reliable travel times": "Daha kısa veya daha güvenilir yolculuk süreleri",
       "#Better weather or climate conditions": "Daha iyi hava veya iklim koşulları",
       "#Greater comfort and convenience": "Daha fazla konfor ve kolaylık",
-      "#Feeling more capable and at ease using these modes": "Bu ulaşım seçeneklerini kullanırken kendimi daha yetkin ve rahat hissetmek",
+      "#Feeling more confident or secure using these modes": "Bu ulaşım seçeneklerini kullanırken kendimi daha güvende hissetmek",
       "#Environmental concerns or sustainability values": "Çevreyle ilgili kaygılar veya sürdürülebilirlik değerleri",
       "#More enjoyable travel experiences": "Daha keyifli yolculuklar",
       "#I am not interested in using these modes more often": "Bu ulaşım seçeneklerini daha sık kullanmak istemiyorum",
       "#Other": "Diğer",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "Paylaşımlı bir bisiklet veya e-scooter’ı ücretsiz kullanabilseydiniz kullanır mıydınız?",
       "#Not sure": "Emin değilim",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "Gecikmeler olduğunda, örneğin trafik sıkışıklığı veya kaza nedeniyle, stres düzeyiniz nasıl etkilenir?",
       "#Not stressful at all": "Hiç stresli değil",
       "#Slightly stressful": "Biraz stresli",
       "#Moderately stressful": "Orta derecede stresli",
       "#Very stressful": "Çok stresli",
       "#Extremely stressful": "Son derece stresli",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "Gecikmeler olduğunda, örneğin trafik, sıkışıklık veya kaza nedeniyle, günlük programınız nasıl etkilenir?",
+      "#Not at all affected": "Hiç etkilenmez",
+      "#Slightly affected": "Biraz etkilenir",
+      "#Moderately affected": "Orta düzeyde etkilenir",
+      "#Very affected": "Çok etkilenir",
+      "#Extremely affected": "Son derece etkilenir",
       "#How do congestion levels influence your route choice or departure time?": "Trafik sıkışıklığı güzergâh seçiminizi veya yola çıkış saatinizi ne ölçüde etkiler?",
       "#Not at all": "Hiç",
       "#Slightly (occasionally adjust route or time)": "Biraz (bazen güzergâhı veya saati değiştiririm)",
       "#Moderately (sometimes change route or departure time)": "Orta düzeyde (bazen güzergâhı veya çıkış saatini değiştiririm)",
       "#Strongly (frequently change route or time)": "Çok (sık sık güzergâhı veya saati değiştiririm)",
       "#Always (plan trips specifically to avoid congestion)": "Her zaman (yolculuklarımı özellikle sıkışıklıktan kaçınacak şekilde planlarım)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "Yakıt, geçiş ücreti veya otopark gibi otomobil kullanma maliyetleri artsaydı otomobil kullanımınız nasıl etkilenirdi?",
       "#No change in usage": "Kullanımım değişmezdi",
       "#Slight reduction in car use": "Otomobili biraz daha az kullanırdım",
       "#Moderate reduction in car use": "Otomobili orta düzeyde daha az kullanırdım",
@@ -932,52 +735,19 @@
       "#About the same": "Yaklaşık aynı",
       "#More comfortable": "Daha konforlu",
       "#Much more comfortable": "Çok daha konforlu",
+      "#To what extent is finding a parking space at your destination an issue for you?": "Varış noktanızda park yeri bulmak sizin için ne kadar büyük bir sorundur?",
+      "#Not an Issue": "Sorun değil",
+      "#Minor Issue": "Küçük bir sorun",
+      "#Significant Issue": "Önemli bir sorun",
+      "#Major Issue": "Büyük bir sorun",
+      "#Critical Issue": "Çok ciddi bir sorun",
       "#How do parking difficulties typically affect your travel decisions?": "Park etme güçlükleri ulaşım kararlarınızı genellikle nasıl etkiler?",
       "#They do not affect my travel decisions": "Ulaşım kararlarımı etkilemez",
       "#They make my journey less convenient or more stressful": "Yolculuğumu daha zahmetli veya daha stresli hale getirir",
       "#They make me change my route or destination": "Güzergâhımı veya gideceğim yeri değiştirmeme neden olur",
       "#They make me postpone, avoid, or cancel some trips": "Bazı yolculukları ertelememe, yapmamama veya iptal etmeme neden olur",
       "#They make me choose another mode of transport instead of driving": "Otomobil yerine başka bir ulaşım seçeneği kullanmama neden olur",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi otomobille yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Bir yerlere gitmek için haftada en az bir kez otomobil kullanıyor musunuz? Yalnızca direksiyonda sizin olduğunuz yolculukları sayın.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Neden araba kullanmıyorsunuz ya da neden bu kadar az kullanıyorsunuz? (Uygun olanların tümünü seçin)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "Bunu, farklı kişiler için araba kullanmayı neyin sınırladığını anlamak için soruyoruz. Yanıt vermek isteğe bağlıdır; belirtmemeyi de seçebilirsiniz.",
-      "#I don't have a driving licence": "Ehliyetim yok",
-      "#I don't have a car available": "Kullanabileceğim bir arabam yok",
-      "#Costs (fuel, insurance, parking)": "Maliyetler (yakıt, sigorta, otopark)",
-      "#Parking is hard to find": "Park yeri bulmak zor",
-      "#Traffic and congestion": "Trafik ve sıkışıklık",
-      "#My health, a disability or my age makes it difficult": "Sağlığım, bir engelim veya yaşım bunu zorlaştırıyor",
-      "#Environmental reasons": "Çevresel nedenler",
-      "#I don't need to: other ways of getting around suit me better": "Gerek duymuyorum: başka ulaşım yolları bana daha uygun",
-      "#Prefer not to say": "Yanıtlamak istemiyorum",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "Yürüme, bisiklet, toplu taşıma veya paylaşımlı araçlar gibi sürdürülebilir ulaşım seçeneklerini daha sık kullanmanızı ne teşvik ederdi?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "Paylaşımlı araçlar, çoğu zaman bir uygulama üzerinden kısa süreliğine kiralanabilen bisiklet, e-scooter ya da arabalardır. Mikromobilite, bisiklet ve e-scooter gibi küçük ve hafif araçlar demektir.",
-      "#More frequent and reliable public transport, also in the evening": "Akşamları da dahil olmak üzere daha sık ve güvenilir toplu taşıma",
-      "#Routes and vehicles that are accessible for my disability or health condition": "Engelime veya sağlık durumuma uygun, erişilebilir güzergâhlar ve araçlar",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Durumum gereği arabaya ihtiyacım var (ör. engellilik, çocuklar, yük taşıma, vardiyalı çalışma)",
-      "#I could not use them for health or disability reasons": "Sağlık veya engellilik nedeniyle bunları kullanamazdım",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "Araba kullanırken yaşadığınız gecikmeleri (örneğin trafik sıkışıklığı veya kaza nedeniyle) ne kadar stresli buluyorsunuz?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "Gecikmeler (ör. trafik, sıkışıklık, kazalar) günlük programınızı ne kadar değiştiriyor?",
-      "#A little": "Biraz",
-      "#Somewhat": "Kısmen",
-      "#A lot": "Çok",
-      "#Very much": "Çok fazla",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "Yakıt, geçiş ücreti, otopark veya trafiğe kısıtlı bölgeler için giriş izni gibi otomobil kullanma maliyetleri artsaydı otomobil kullanımınız nasıl etkilenirdi?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "Trafiğe kısıtlı bölge, örneğin tarihi bir merkez gibi, arabaların yalnızca izinle girebildiği bir alandır.",
-      "#I could not reduce it: I have no alternative": "Azaltamazdım: başka seçeneğim yok",
-      "#I don't know": "Bilmiyorum",
-      "#How often is finding a parking space at your destination a problem for you?": "Gittiğiniz yerde park yeri bulmak ne sıklıkla sizin için sorun oluyor?",
-      "#Never": "Hiçbir zaman",
-      "#Rarely": "Nadiren",
-      "#Sometimes": "Bazen",
-      "#Often": "Sık sık",
-      "#Always": "Her zaman",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "Engelli park kartınız varsa: gittiğiniz yerdeki ayrılmış park yerleri ne sıklıkla başkaları tarafından işgal ediliyor veya hiç bulunmuyor?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "Engelli park kartı, engelli kişilere ayrılmış yerlere park etmeye izin veren resmi karttır. Bunu, bu yerlerin gerçekten kullanılabilir olup olmadığını anlamak için soruyoruz. Yanıt vermek isteğe bağlıdır; belirtmemeyi de seçebilirsiniz.",
-      "#I don't have a disabled parking permit": "Engelli park kartım yok",
-      "#Traffic, delays and parking": "Trafik, Gecikmeler ve Park",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Trafik, gecikmeler ve parkın araba yolculuklarınızı nasıl etkilediği hakkında sorular.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi otomobille yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "#Car on a street": "خودرو در خیابان",
@@ -987,34 +757,44 @@
       "#Welcome to Your Experience With Driving": "به پرسشنامه تجربه رانندگی خوش آمدید",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#Driving and alternatives": "رانندگی و گزینه‌های جایگزین",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>پرسش‌هایی دربارهٔ اینکه آیا رانندگی می‌کنید و چه چیزی می‌تواند روش‌های دیگر جابه‌جایی را جذاب‌تر کند.</p>",
+      "#Car Travel": "سفر با خودرو",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>سؤال‌هایی درباره استفاده شما از خودرو و گزینه‌های جایگزین.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد روزانه از خودرو استفاده می‌کنید؟",
       "#Yes": "بله",
       "#No": "خیر",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "چه چیزی شما را تشویق می‌کند بیشتر از روش‌های پایدار مانند پیاده‌روی، دوچرخه‌سواری یا وسایل اشتراکی استفاده کنید؟",
       "#Lower travel costs": "هزینه کمتر سفر",
       "#Safer routes and environments": "مسیرها و محیط‌های امن‌تر",
       "#Better walking, cycling, or micromobility infrastructure": "زیرساخت بهتر برای پیاده‌روی، دوچرخه‌سواری یا وسایل کوچک برقی",
       "#Shorter or more reliable travel times": "زمان سفر کوتاه‌تر یا قابل پیش‌بینی‌تر",
       "#Better weather or climate conditions": "شرایط بهتر آب‌وهوا یا اقلیم",
       "#Greater comfort and convenience": "راحتی و سهولت بیشتر",
-      "#Feeling more capable and at ease using these modes": "احساس توانایی و راحتی بیشتر هنگام استفاده از این روش‌ها",
+      "#Feeling more confident or secure using these modes": "احساس اطمینان یا امنیت بیشتر هنگام استفاده از این روش‌ها",
       "#Environmental concerns or sustainability values": "نگرانی‌های محیط‌زیستی یا اهمیت دادن به پایداری",
       "#More enjoyable travel experiences": "تجربه سفر لذت‌بخش‌تر",
       "#I am not interested in using these modes more often": "علاقه‌ای ندارم بیشتر از این روش‌ها استفاده کنم",
       "#Other": "سایر",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "اگر امکان استفاده رایگان از دوچرخه اشتراکی یا اسکوتر برقی را داشتید، از آن استفاده می‌کردید؟",
       "#Not sure": "مطمئن نیستم",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "وقتی تأخیر پیش می‌آید، مثلاً به دلیل ترافیک یا تصادف، چه اندازه باعث استرس شما می‌شود؟",
       "#Not stressful at all": "اصلاً استرس‌زا نیست",
       "#Slightly stressful": "کمی استرس‌زا",
       "#Moderately stressful": "تا حد متوسط استرس‌زا",
       "#Very stressful": "خیلی استرس‌زا",
       "#Extremely stressful": "بسیار استرس‌زا",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "وقتی تأخیر پیش می‌آید، مثلاً به دلیل ترافیک، ازدحام یا تصادف، برنامه روزانه شما چقدر تحت تأثیر قرار می‌گیرد؟",
+      "#Not at all affected": "اصلاً تحت تأثیر قرار نمی‌گیرد",
+      "#Slightly affected": "کمی تحت تأثیر قرار می‌گیرد",
+      "#Moderately affected": "تا حد متوسط تحت تأثیر قرار می‌گیرد",
+      "#Very affected": "خیلی تحت تأثیر قرار می‌گیرد",
+      "#Extremely affected": "بسیار زیاد تحت تأثیر قرار می‌گیرد",
       "#How do congestion levels influence your route choice or departure time?": "ترافیک تا چه اندازه انتخاب مسیر یا زمان حرکت شما را تغییر می‌دهد؟",
       "#Not at all": "اصلاً",
       "#Slightly (occasionally adjust route or time)": "کمی (گاهی مسیر یا زمان را تغییر می‌دهم)",
       "#Moderately (sometimes change route or departure time)": "تا حد متوسط (گاهی مسیر یا زمان حرکت را عوض می‌کنم)",
       "#Strongly (frequently change route or time)": "زیاد (اغلب مسیر یا زمان را تغییر می‌دهم)",
       "#Always (plan trips specifically to avoid congestion)": "همیشه (سفرها را طوری برنامه‌ریزی می‌کنم که از ترافیک دوری کنم)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "اگر هزینه‌های رانندگی مثل سوخت، عوارض یا پارکینگ افزایش پیدا کند، استفاده شما از خودرو چگونه تغییر می‌کند؟",
       "#No change in usage": "تغییری نمی‌کند",
       "#Slight reduction in car use": "کمی کمتر از خودرو استفاده می‌کنم",
       "#Moderate reduction in car use": "تا حد متوسط کمتر از خودرو استفاده می‌کنم",
@@ -1032,52 +812,19 @@
       "#About the same": "تقریباً یکسان",
       "#More comfortable": "راحت‌تر",
       "#Much more comfortable": "خیلی راحت‌تر",
+      "#To what extent is finding a parking space at your destination an issue for you?": "پیدا کردن جای پارک در مقصد برای شما چقدر مشکل است؟",
+      "#Not an Issue": "اصلاً مشکل نیست",
+      "#Minor Issue": "مشکل کوچک",
+      "#Significant Issue": "مشکل قابل توجه",
+      "#Major Issue": "مشکل بزرگ",
+      "#Critical Issue": "مشکل بسیار جدی",
       "#How do parking difficulties typically affect your travel decisions?": "مشکلات پارک کردن معمولاً چگونه بر تصمیم‌های سفر شما اثر می‌گذارد؟",
       "#They do not affect my travel decisions": "بر تصمیم‌های سفر من اثری ندارد",
       "#They make my journey less convenient or more stressful": "سفر را سخت‌تر یا پراسترس‌تر می‌کند",
       "#They make me change my route or destination": "باعث می‌شود مسیر یا مقصد را تغییر دهم",
       "#They make me postpone, avoid, or cancel some trips": "باعث می‌شود بعضی سفرها را عقب بیندازم، انجام ندهم یا لغو کنم",
       "#They make me choose another mode of transport instead of driving": "باعث می‌شود به جای رانندگی از روش دیگری استفاده کنم",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام سفر با خودرو است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "آیا دست‌کم هفته‌ای یک بار برای رفت‌وآمد خودرو رانندگی می‌کنید؟ فقط سفرهایی را حساب کنید که خودتان راننده هستید.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "چرا رانندگی نمی‌کنید یا چرا این‌قدر کم رانندگی می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "این را می‌پرسیم تا بفهمیم چه چیزی رانندگی را برای افراد مختلف محدود می‌کند. پاسخ دادن اختیاری است و می‌توانید ترجیح دهید آن را نگویید.",
-      "#I don't have a driving licence": "گواهینامهٔ رانندگی ندارم",
-      "#I don't have a car available": "خودرویی در اختیار ندارم",
-      "#Costs (fuel, insurance, parking)": "هزینه‌ها (سوخت، بیمه، پارکینگ)",
-      "#Parking is hard to find": "پیدا کردن جای پارک سخت است",
-      "#Traffic and congestion": "ترافیک و شلوغی",
-      "#My health, a disability or my age makes it difficult": "وضعیت سلامتی، معلولیت یا سنم این کار را دشوار می‌کند",
-      "#Environmental reasons": "دلایل زیست‌محیطی",
-      "#I don't need to: other ways of getting around suit me better": "نیازی ندارم: روش‌های دیگر جابه‌جایی برایم مناسب‌ترند",
-      "#Prefer not to say": "ترجیح می‌دهم پاسخ ندهم",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "چه چیزی شما را تشویق می‌کند بیشتر از روش‌های پایدار مانند پیاده‌روی، دوچرخه‌سواری، حمل‌ونقل عمومی یا وسایل اشتراکی استفاده کنید؟",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "وسایل اشتراکی دوچرخه، اسکوتر برقی یا خودروهایی هستند که می‌توان آن‌ها را برای مدت کوتاهی، اغلب با یک اپلیکیشن، کرایه کرد. منظور از وسایل کوچک برقی، وسایل سبک و کوچکی مانند دوچرخه و اسکوتر برقی است.",
-      "#More frequent and reliable public transport, also in the evening": "حمل‌ونقل عمومی پرتکرارتر و قابل‌اعتمادتر، حتی در عصر و شب",
-      "#Routes and vehicles that are accessible for my disability or health condition": "مسیرها و وسایل نقلیه‌ای که برای معلولیت یا وضعیت سلامتی من قابل دسترسی باشند",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "با شرایطی که دارم به خودرو نیاز دارم (مثلاً معلولیت، کودکان، بار، شیفت کاری)",
-      "#I could not use them for health or disability reasons": "به دلایل سلامتی یا معلولیت نمی‌توانستم از آن‌ها استفاده کنم",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "تأخیرها هنگام رانندگی (مثلاً به دلیل ترافیک یا تصادف) چقدر برای شما استرس‌زا است؟",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "تأخیرها (مثلاً به دلیل ترافیک، شلوغی یا تصادف) تا چه اندازه برنامهٔ روزانهٔ شما را تغییر می‌دهند؟",
-      "#A little": "کمی",
-      "#Somewhat": "تا حدی",
-      "#A lot": "زیاد",
-      "#Very much": "خیلی زیاد",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "اگر هزینه‌های رانندگی مثل سوخت، عوارض، پارکینگ یا مجوز ورود به محدوده‌های ترافیکی افزایش پیدا کند، استفاده شما از خودرو چگونه تغییر می‌کند؟",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "محدودهٔ ترافیکی منطقه‌ای است، مثلاً مرکز تاریخی شهر، که خودروها فقط با مجوز می‌توانند وارد آن شوند.",
-      "#I could not reduce it: I have no alternative": "نمی‌توانستم آن را کم کنم: جایگزینی ندارم",
-      "#I don't know": "نمی‌دانم",
-      "#How often is finding a parking space at your destination a problem for you?": "هر چند وقت یک بار پیدا کردن جای پارک در مقصد برایتان مشکل است؟",
-      "#Never": "هرگز",
-      "#Rarely": "به‌ندرت",
-      "#Sometimes": "گاهی",
-      "#Often": "اغلب",
-      "#Always": "همیشه",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "اگر کارت پارک ویژهٔ افراد دارای معلولیت دارید: هر چند وقت یک بار جاهای پارک ویژه در مقصد توسط دیگران اشغال شده‌اند یا اصلاً وجود ندارند؟",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "کارت پارک ویژهٔ افراد دارای معلولیت کارت رسمی است که اجازهٔ پارک در جاهای ویژهٔ افراد دارای معلولیت را می‌دهد. این را می‌پرسیم تا بفهمیم آیا این جاها واقعاً در دسترس‌اند. پاسخ دادن اختیاری است و می‌توانید ترجیح دهید آن را نگویید.",
-      "#I don't have a disabled parking permit": "کارت پارک ویژهٔ افراد دارای معلولیت ندارم",
-      "#Traffic, delays and parking": "ترافیک، تأخیر و پارک",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>پرسش‌هایی دربارهٔ اثر ترافیک، تأخیر و پارک بر سفرهای شما با خودرو.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام سفر با خودرو است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "#Car on a street": "Autó az utcán",
@@ -1087,34 +834,44 @@
       "#Welcome to Your Experience With Driving": "Üdvözöljük az autóvezetési tapasztalatokról szóló kérdőívben",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#Driving and alternatives": "Autóvezetés és alternatívák",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>Kérdések arról, hogy vezet-e autót, és mi tehetné vonzóbbá a közlekedés más módjait.</p>",
+      "#Car Travel": "Autós közlekedés",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Kérdések az autóhasználatról és az alternatív közlekedési lehetőségekről.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "Használ autót a mindennapi közlekedéshez legalább hetente egyszer?",
       "#Yes": "Igen",
       "#No": "Nem",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "Mi ösztönözné arra, hogy gyakrabban használjon fenntartható közlekedési módokat, például gyaloglást, kerékpárt vagy megosztott mobilitást?",
       "#Lower travel costs": "Alacsonyabb utazási költségek",
       "#Safer routes and environments": "Biztonságosabb útvonalak és környezet",
       "#Better walking, cycling, or micromobility infrastructure": "Jobb gyalogos, kerékpáros vagy mikromobilitási infrastruktúra",
       "#Shorter or more reliable travel times": "Rövidebb vagy kiszámíthatóbb utazási idő",
       "#Better weather or climate conditions": "Kedvezőbb időjárási vagy éghajlati körülmények",
       "#Greater comfort and convenience": "Nagyobb kényelem és egyszerűbb használat",
-      "#Feeling more capable and at ease using these modes": "Nagyobb magabiztosság és könnyedség ezen módok használatakor",
+      "#Feeling more confident or secure using these modes": "Nagyobb magabiztosság vagy biztonságérzet ezen módok használatakor",
       "#Environmental concerns or sustainability values": "Környezetvédelmi szempontok vagy a fenntarthatóság fontossága",
       "#More enjoyable travel experiences": "Kellemesebb utazási élmény",
       "#I am not interested in using these modes more often": "Nem szeretném ezeket a módokat gyakrabban használni",
       "#Other": "Egyéb",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "Ha ingyenesen használhatna közösségi kerékpárt vagy elektromos rollert, használná?",
       "#Not sure": "Nem vagyok biztos benne",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "Ha késés történik, például torlódás vagy baleset miatt, mennyire növeli ez a stresszét?",
       "#Not stressful at all": "Egyáltalán nem stresszes",
       "#Slightly stressful": "Kissé stresszes",
       "#Moderately stressful": "Közepesen stresszes",
       "#Very stressful": "Nagyon stresszes",
       "#Extremely stressful": "Rendkívül stresszes",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "Ha késés történik, például forgalom, torlódás vagy baleset miatt, mennyire befolyásolja ez a napi időbeosztását?",
+      "#Not at all affected": "Egyáltalán nem befolyásolja",
+      "#Slightly affected": "Kissé befolyásolja",
+      "#Moderately affected": "Közepesen befolyásolja",
+      "#Very affected": "Nagyon befolyásolja",
+      "#Extremely affected": "Rendkívül befolyásolja",
       "#How do congestion levels influence your route choice or departure time?": "Mennyire befolyásolja a torlódás az útvonalválasztását vagy az indulás időpontját?",
       "#Not at all": "Egyáltalán nem",
       "#Slightly (occasionally adjust route or time)": "Kissé (néha módosítom az útvonalat vagy az időpontot)",
       "#Moderately (sometimes change route or departure time)": "Közepesen (néha módosítom az útvonalat vagy az indulás idejét)",
       "#Strongly (frequently change route or time)": "Erősen (gyakran módosítom az útvonalat vagy az időpontot)",
       "#Always (plan trips specifically to avoid congestion)": "Mindig (kifejezetten úgy tervezem az utakat, hogy elkerüljem a torlódást)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "Ha nőnének az autózással kapcsolatos költségek, például az üzemanyag, útdíj vagy parkolás, hogyan változna az autóhasználata?",
       "#No change in usage": "Nem változna",
       "#Slight reduction in car use": "Kissé kevesebbet használnám az autót",
       "#Moderate reduction in car use": "Közepesen csökkenteném az autóhasználatot",
@@ -1132,52 +889,19 @@
       "#About the same": "Nagyjából ugyanolyan",
       "#More comfortable": "Kényelmesebb",
       "#Much more comfortable": "Sokkal kényelmesebb",
+      "#To what extent is finding a parking space at your destination an issue for you?": "Mekkora problémát jelent Önnek parkolóhelyet találni az úti céljánál?",
+      "#Not an Issue": "Nem jelent problémát",
+      "#Minor Issue": "Kisebb probléma",
+      "#Significant Issue": "Jelentős probléma",
+      "#Major Issue": "Nagy probléma",
+      "#Critical Issue": "Nagyon súlyos probléma",
       "#How do parking difficulties typically affect your travel decisions?": "Hogyan befolyásolják általában a parkolási nehézségek az utazási döntéseit?",
       "#They do not affect my travel decisions": "Nem befolyásolják az utazási döntéseimet",
       "#They make my journey less convenient or more stressful": "Kényelmetlenebbé vagy stresszesebbé teszik az utat",
       "#They make me change my route or destination": "Arra késztetnek, hogy módosítsam az útvonalat vagy az úti célt",
       "#They make me postpone, avoid, or cancel some trips": "Arra késztetnek, hogy egyes utakat elhalasszak, elkerüljek vagy lemondjak",
       "#They make me choose another mode of transport instead of driving": "Arra késztetnek, hogy autózás helyett más közlekedési módot válasszak",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal autózás közben. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "Vezet autót legalább hetente egyszer, hogy eljusson valahová? Csak azokat az utakat számolja, amelyeken Ön vezet.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "Miért nem vezet autót, vagy miért csak ilyen ritkán? (Jelölje meg az összes megfelelőt)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "Azért kérdezzük, hogy megértsük, mi korlátozza az autóvezetést a különböző emberek számára. A válaszadás nem kötelező, és azt is választhatja, hogy nem kívánja megadni.",
-      "#I don't have a driving licence": "Nincs jogosítványom",
-      "#I don't have a car available": "Nincs rendelkezésemre álló autó",
-      "#Costs (fuel, insurance, parking)": "A költségek (üzemanyag, biztosítás, parkolás)",
-      "#Parking is hard to find": "Nehéz parkolóhelyet találni",
-      "#Traffic and congestion": "A forgalom és a torlódások",
-      "#My health, a disability or my age makes it difficult": "Az egészségi állapotom, egy fogyatékosság vagy a korom megnehezíti",
-      "#Environmental reasons": "Környezetvédelmi okok",
-      "#I don't need to: other ways of getting around suit me better": "Nincs rá szükségem: más közlekedési módok jobban megfelelnek nekem",
-      "#Prefer not to say": "Nem szeretnék válaszolni",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "Mi ösztönözné arra, hogy gyakrabban használjon fenntartható közlekedési módokat, például gyaloglást, kerékpárt, tömegközlekedést vagy közösségi járműveket?",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "Közösségi járművek azok a kerékpárok, elektromos rollerek vagy autók, amelyeket rövid időre, gyakran alkalmazáson keresztül lehet kibérelni. A mikromobilitás kis, könnyű járműveket jelent, például kerékpárokat és elektromos rollereket.",
-      "#More frequent and reliable public transport, also in the evening": "Gyakoribb és megbízhatóbb tömegközlekedés, este is",
-      "#Routes and vehicles that are accessible for my disability or health condition": "A fogyatékosságomnak vagy egészségi állapotomnak megfelelően akadálymentes útvonalak és járművek",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "A helyzetem miatt szükségem van az autóra (pl. fogyatékosság, gyerekek, csomagok, műszakos munka)",
-      "#I could not use them for health or disability reasons": "Egészségi okokból vagy fogyatékosság miatt nem tudnám használni őket",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "Mennyire stresszesek Önnek a késések vezetés közben (például torlódás vagy baleset miatt)?",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "Mennyire változtatják meg a késések (pl. forgalom, torlódás, balesetek) a napi programját?",
-      "#A little": "Kicsit",
-      "#Somewhat": "Közepesen",
-      "#A lot": "Nagyon",
-      "#Very much": "Rendkívül",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "Ha nőnének az autózással kapcsolatos költségek, például az üzemanyag, útdíj, parkolás vagy a forgalomkorlátozott övezetek behajtási engedélye, hogyan változna az autóhasználata?",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "A forgalomkorlátozott övezet olyan terület, például egy történelmi belváros, ahová autóval csak engedéllyel lehet behajtani.",
-      "#I could not reduce it: I have no alternative": "Nem tudnám csökkenteni: nincs más lehetőségem",
-      "#I don't know": "Nem tudom",
-      "#How often is finding a parking space at your destination a problem for you?": "Milyen gyakran okoz gondot parkolóhelyet találni az úti célján?",
-      "#Never": "Soha",
-      "#Rarely": "Ritkán",
-      "#Sometimes": "Néha",
-      "#Often": "Gyakran",
-      "#Always": "Mindig",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "Ha van mozgáskorlátozott parkolási igazolványa: milyen gyakran foglalják el mások a fenntartott helyeket az úti célján, vagy hiányoznak teljesen?",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "A mozgáskorlátozott parkolási igazolvány az a hivatalos kártya, amellyel a mozgáskorlátozottak számára fenntartott helyeken lehet parkolni. Azért kérdezzük, hogy megértsük, valóban szabadok-e ezek a helyek. A válaszadás nem kötelező, és azt is választhatja, hogy nem kívánja megadni.",
-      "#I don't have a disabled parking permit": "Nincs mozgáskorlátozott parkolási igazolványom",
-      "#Traffic, delays and parking": "Forgalom, késések és parkolás",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>Kérdések arról, hogyan befolyásolja a forgalom, a késések és a parkolás az autós útjait.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal autózás közben. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "#Car on a street": "سيارة في شارع",
@@ -1187,34 +911,44 @@
       "#Welcome to Your Experience With Driving": "مرحبًا بك في استبيان تجربة القيادة",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#Driving and alternatives": "القيادة والبدائل",
-      "#<p>Questions about whether you drive and what could make other ways of getting around more attractive.</p>": "<p>أسئلة حول ما إذا كنت تقود السيارة، وما الذي قد يجعل طرق التنقّل الأخرى أكثر جاذبية.</p>",
+      "#Car Travel": "التنقل بالسيارة",
+      "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>أسئلة عن استخدامك للسيارة والبدائل المتاحة.</p>",
+      "#Do you use a car for your daily travel at least once a week?": "هل تستخدم السيارة في تنقلاتك اليومية مرة واحدة على الأقل في الأسبوع؟",
       "#Yes": "نعم",
       "#No": "لا",
+      "#What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?": "ما الذي قد يشجعك على استخدام وسائل تنقل مستدامة أكثر، مثل المشي أو ركوب الدراجة أو التنقل المشترك؟",
       "#Lower travel costs": "تكلفة أقل للتنقل",
       "#Safer routes and environments": "طرق وبيئات أكثر أمانًا",
       "#Better walking, cycling, or micromobility infrastructure": "بنية تحتية أفضل للمشي أو ركوب الدراجة أو وسائل التنقل الصغيرة",
       "#Shorter or more reliable travel times": "أوقات سفر أقصر أو أكثر موثوقية",
       "#Better weather or climate conditions": "ظروف جوية أو مناخية أفضل",
       "#Greater comfort and convenience": "راحة وسهولة أكبر",
-      "#Feeling more capable and at ease using these modes": "الشعور بمزيد من القدرة والارتياح عند استخدام هذه الوسائل",
+      "#Feeling more confident or secure using these modes": "الشعور بمزيد من الثقة أو الأمان عند استخدام هذه الوسائل",
       "#Environmental concerns or sustainability values": "الاهتمام بالبيئة أو الاستدامة",
       "#More enjoyable travel experiences": "تجارب تنقل أكثر متعة",
       "#I am not interested in using these modes more often": "لا أرغب في استخدام هذه الوسائل أكثر",
       "#Other": "أخرى",
       "#If you were given free access to a shared bicycle or e-scooter, would you use it?": "إذا كان بإمكانك استخدام دراجة مشتركة أو سكوتر كهربائي مجانًا، هل ستستخدمه؟",
       "#Not sure": "لست متأكدًا",
+      "#When delays occur (e.g., congestion, accidents), how do they affect your stress levels?": "عند حدوث تأخير، مثل الازدحام أو الحوادث، كيف يؤثر ذلك في مستوى التوتر لديك؟",
       "#Not stressful at all": "غير مسبب للتوتر إطلاقًا",
       "#Slightly stressful": "مسبب للتوتر قليلًا",
       "#Moderately stressful": "مسبب للتوتر بدرجة متوسطة",
       "#Very stressful": "مسبب للتوتر كثيرًا",
       "#Extremely stressful": "مسبب للتوتر بدرجة كبيرة جدًا",
+      "#When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?": "عند حدوث تأخير، مثل حركة المرور أو الازدحام أو الحوادث، كيف يؤثر ذلك في جدولك اليومي؟",
+      "#Not at all affected": "لا يؤثر إطلاقًا",
+      "#Slightly affected": "يؤثر قليلًا",
+      "#Moderately affected": "يؤثر بدرجة متوسطة",
+      "#Very affected": "يؤثر كثيرًا",
+      "#Extremely affected": "يؤثر بدرجة كبيرة جدًا",
       "#How do congestion levels influence your route choice or departure time?": "إلى أي مدى يؤثر الازدحام في اختيارك للطريق أو وقت الانطلاق؟",
       "#Not at all": "لا يؤثر إطلاقًا",
       "#Slightly (occasionally adjust route or time)": "قليلًا (أغيّر الطريق أو الوقت أحيانًا)",
       "#Moderately (sometimes change route or departure time)": "بدرجة متوسطة (أغيّر الطريق أو وقت الانطلاق أحيانًا)",
       "#Strongly (frequently change route or time)": "بدرجة كبيرة (أغيّر الطريق أو الوقت كثيرًا)",
       "#Always (plan trips specifically to avoid congestion)": "دائمًا (أخطط للرحلات خصيصًا لتجنب الازدحام)",
+      "#How would increased driving-related costs (fuel, tolls, parking) affect your car usage?": "إذا ارتفعت تكاليف القيادة مثل الوقود أو الرسوم أو مواقف السيارات، كيف سيؤثر ذلك في استخدامك للسيارة؟",
       "#No change in usage": "لن يتغير استخدامي",
       "#Slight reduction in car use": "سأقلل استخدام السيارة قليلًا",
       "#Moderate reduction in car use": "سأقلل استخدام السيارة بدرجة متوسطة",
@@ -1232,52 +966,19 @@
       "#About the same": "متقاربة تقريبًا",
       "#More comfortable": "أكثر راحة",
       "#Much more comfortable": "أكثر راحة بكثير",
+      "#To what extent is finding a parking space at your destination an issue for you?": "ما حجم مشكلة العثور على مكان لوقوف السيارة عند وجهتك؟",
+      "#Not an Issue": "ليست مشكلة",
+      "#Minor Issue": "مشكلة بسيطة",
+      "#Significant Issue": "مشكلة واضحة",
+      "#Major Issue": "مشكلة كبيرة",
+      "#Critical Issue": "مشكلة شديدة",
       "#How do parking difficulties typically affect your travel decisions?": "كيف تؤثر صعوبات الوقوف عادةً في قراراتك المتعلقة بالتنقل؟",
       "#They do not affect my travel decisions": "لا تؤثر في قراراتي",
       "#They make my journey less convenient or more stressful": "تجعل الرحلة أقل راحة أو أكثر توترًا",
       "#They make me change my route or destination": "تدفعني إلى تغيير الطريق أو الوجهة",
       "#They make me postpone, avoid, or cancel some trips": "تدفعني إلى تأجيل بعض الرحلات أو تجنبها أو إلغائها",
       "#They make me choose another mode of transport instead of driving": "تدفعني إلى اختيار وسيلة أخرى بدلًا من القيادة",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالسيارة. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
-      "#Do you drive a car at least once a week to get to places? Count only the trips in which you are the driver.": "هل تقود سيارة مرة واحدة على الأقل في الأسبوع للتنقّل؟ احتسب فقط الرحلات التي تكون فيها أنت السائق.",
-      "#Why don't you drive, or why do you drive so rarely? (Select all that apply)": "لماذا لا تقود السيارة، أو لماذا تقودها نادرًا؟ (اختر كل ما ينطبق)",
-      "#We ask this to understand what limits driving for different people. Answering is optional, and you can also choose not to say.": "نسأل عن ذلك لنفهم ما الذي يحدّ من قيادة السيارة لدى أشخاص مختلفين. الإجابة اختيارية، ويمكنك أيضًا اختيار عدم الإفصاح.",
-      "#I don't have a driving licence": "ليست لدي رخصة قيادة",
-      "#I don't have a car available": "لا تتوفر لدي سيارة",
-      "#Costs (fuel, insurance, parking)": "التكاليف (الوقود، التأمين، مواقف السيارات)",
-      "#Parking is hard to find": "يصعب العثور على مكان لركن السيارة",
-      "#Traffic and congestion": "حركة المرور والازدحام",
-      "#My health, a disability or my age makes it difficult": "صحتي أو إعاقة أو عمري يجعل ذلك صعبًا",
-      "#Environmental reasons": "أسباب بيئية",
-      "#I don't need to: other ways of getting around suit me better": "لا أحتاج إلى ذلك: وسائل تنقّل أخرى تناسبني أكثر",
-      "#Prefer not to say": "أفضل عدم الإجابة",
-      "#What would motivate you to use sustainable travel modes (walking, cycling, public transport, shared vehicles) more often?": "ما الذي قد يشجعك على استخدام وسائل تنقل مستدامة أكثر، مثل المشي أو ركوب الدراجة أو النقل العام أو المركبات المشتركة؟",
-      "#Shared vehicles are bicycles, e-scooters or cars that can be rented for a short time, often through an app. Micromobility means small, light vehicles such as bicycles and e-scooters.": "المركبات المشتركة دراجات أو سكوترات كهربائية أو سيارات يمكن استئجارها لوقت قصير، غالبًا عبر تطبيق. ونقصد بوسائل التنقل الصغيرة المركبات الصغيرة والخفيفة مثل الدراجات والسكوترات الكهربائية.",
-      "#More frequent and reliable public transport, also in the evening": "نقل عام أكثر تواترًا وموثوقية، حتى في المساء",
-      "#Routes and vehicles that are accessible for my disability or health condition": "طرق ومركبات يسهل استخدامها مع إعاقتي أو حالتي الصحية",
-      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "أحتاج إلى السيارة بسبب ظروفي (مثل الإعاقة أو الأطفال أو الأحمال أو نوبات العمل)",
-      "#I could not use them for health or disability reasons": "لن أتمكن من استخدامها لأسباب صحية أو بسبب إعاقة",
-      "#How stressful do you find delays when you drive (e.g., congestion, crashes)?": "ما مدى التوتر الذي تسببه لك التأخيرات أثناء القيادة (مثل الازدحام أو الحوادث)؟",
-      "#How much do delays (e.g., traffic, congestion, crashes) change your daily schedule?": "إلى أي مدى تغيّر التأخيرات (مثل حركة المرور أو الازدحام أو الحوادث) جدولك اليومي؟",
-      "#A little": "قليلًا",
-      "#Somewhat": "إلى حد ما",
-      "#A lot": "كثيرًا",
-      "#Very much": "كثيرًا جدًا",
-      "#How would increased driving-related costs (fuel, tolls, parking, permits for limited traffic zones) affect your car usage?": "إذا ارتفعت تكاليف القيادة مثل الوقود أو الرسوم أو مواقف السيارات أو تصاريح دخول المناطق المقيدة لحركة المرور، كيف سيؤثر ذلك في استخدامك للسيارة؟",
-      "#A limited traffic zone is an area, such as a historic centre, that cars may enter only with a permit.": "المنطقة المقيدة لحركة المرور منطقة، مثل وسط المدينة التاريخي، لا يمكن للسيارات دخولها إلا بتصريح.",
-      "#I could not reduce it: I have no alternative": "لن أستطيع تقليله: ليس لدي بديل",
-      "#I don't know": "لا أعرف",
-      "#How often is finding a parking space at your destination a problem for you?": "كم مرة يكون العثور على مكان لركن السيارة عند وجهتك مشكلة بالنسبة لك؟",
-      "#Never": "أبدًا",
-      "#Rarely": "نادرًا",
-      "#Sometimes": "أحيانًا",
-      "#Often": "غالبًا",
-      "#Always": "دائمًا",
-      "#If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?": "إذا كانت لديك بطاقة ركن لذوي الإعاقة: كم مرة تكون الأماكن المخصصة عند وجهتك مشغولة من قبل آخرين أو غير موجودة؟",
-      "#A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.": "بطاقة الركن لذوي الإعاقة هي البطاقة الرسمية التي تسمح بالركن في الأماكن المخصصة للأشخاص ذوي الإعاقة. نسأل عن ذلك لنفهم ما إذا كانت هذه الأماكن متاحة فعلًا. الإجابة اختيارية، ويمكنك أيضًا اختيار عدم الإفصاح.",
-      "#I don't have a disabled parking permit": "ليست لدي بطاقة ركن لذوي الإعاقة",
-      "#Traffic, delays and parking": "حركة المرور والتأخيرات وأماكن الركن",
-      "#<p>Questions about how traffic, delays and parking affect your trips by car.</p>": "<p>أسئلة عن تأثير حركة المرور والتأخيرات وأماكن الركن في تنقلاتك بالسيارة.</p>"
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالسيارة. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_car",
