@@ -191,6 +191,19 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
+Every pilot has its own privacy notice, because each pilot has its own data controller. The notice lives in
+`pilots/<pilot>/privacy/` (`privacy.html`, the full notice, and `privacy-short.html`, its summary) and the pilot
+declares it with the consent version it belongs to, so a new notice version asks for consent again. A relative
+`privacy_link` is relative to the repository root: an application resolves it against the copy of this repository it
+serves, so the notice also opens offline:
+
+```json
+{"questionnaires": {"consent": {"version": "2.0.0-draft", "privacy_link": "pilots/rome/privacy/privacy.html"}}}
+```
+
+`docs/privacy-smarturbanity.html` is the common framework of all pilots and lists their notices; it stays the
+`privacy_link` of `base.json` for a pilot without its own notice. The pages share `docs/assets/SmartUrbanity`.
+
 `email.uid_salt` is the project salt used to compute the pseudonymous participant
 code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and is
 not a secret; keep it unchanged, because changing it separates future answers from
