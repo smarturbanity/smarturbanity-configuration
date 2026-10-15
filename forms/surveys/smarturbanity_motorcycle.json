@@ -25,8 +25,8 @@
     "title": "6. Your Experience With Motorcycle Travel",
     "sections": [
       {
-        "title": "Motorcycle",
-        "description": "<p>Questions about your experience as a motorcycle or scooter rider.</p>",
+        "title": "Motorcycle and scooter use",
+        "description": "<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "text": "Why don't you ride a motorcycle or scooter more often? (Select all that apply)",
+            "text": "Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)",
             "help": "We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.",
             "answer_key": "moto_why_not",
             "question_type": "multiple_options",
@@ -57,6 +57,10 @@
             "add_other": true,
             "add_prefer_not_to_say": true,
             "options": [
+              {
+                "text": "I don't need to: other ways of getting around suit me better",
+                "value": "no_need_other_modes_suit_me_better"
+              },
               {
                 "text": "I don't have a licence or a vehicle",
                 "value": "no_licence_or_vehicle"
@@ -80,10 +84,6 @@
               {
                 "text": "My health, a disability or my age makes it difficult",
                 "value": "health_disability_or_age"
-              },
-              {
-                "text": "I don't need to: other ways of getting around suit me better",
-                "value": "no_need_other_modes_suit_me_better"
               }
             ]
           },
@@ -171,13 +171,35 @@
               {
                 "text": "I avoid some roads because of their surface, even if the route is longer",
                 "value": "avoid_roads_because_of_surface"
-              },
-              {
-                "text": "I have fallen or nearly fallen because of the road surface",
-                "value": "fallen_or_nearly_fallen"
               }
             ]
           },
+          {
+            "text": "In the last 12 months, have you fallen or nearly fallen because of the road surface?",
+            "answer_key": "moto_road_surface_fall",
+            "question_type": "single_option",
+            "show_if": {
+              "moto_weekly": "yes"
+            },
+            "add_prefer_not_to_say": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other road users, parking and charging",
+        "description": "<p>Questions about other drivers, parking and charging for your vehicle.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
           {
             "text": "How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?",
             "help": "A blind spot is the area around a vehicle that the driver cannot see in the mirrors.",
@@ -318,8 +340,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Welcome to Your Experience With Motorcycle Travel",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#Motorcycle": "Motorcycle",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Questions about your experience as a motorcycle or scooter rider.</p>",
+      "#Motorcycle and scooter use": "Motorcycle and scooter use",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>",
       "#Yes": "Yes",
       "#No": "No",
       "#Make me feel much less safe": "Make me feel much less safe",
@@ -355,7 +377,7 @@
       "#Extremely influential": "Extremely influential",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Why don't you ride a motorcycle or scooter more often? (Select all that apply)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.",
       "#I don't have a licence or a vehicle": "I don't have a licence or a vehicle",
       "#It feels too dangerous in traffic": "It feels too dangerous in traffic",
@@ -377,11 +399,13 @@
       "#I slow down or change my line, but I feel safe": "I slow down or change my line, but I feel safe",
       "#I often feel in danger": "I often feel in danger",
       "#I avoid some roads because of their surface, even if the route is longer": "I avoid some roads because of their surface, even if the route is longer",
-      "#I have fallen or nearly fallen because of the road surface": "I have fallen or nearly fallen because of the road surface",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "In the last 12 months, have you fallen or nearly fallen because of the road surface?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "A blind spot is the area around a vehicle that the driver cannot see in the mirrors.",
       "#Very confident": "Very confident",
-      "#I don't know": "I don't know"
+      "#I don't know": "I don't know",
+      "#Other road users, parking and charging": "Other road users, parking and charging",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Questions about other drivers, parking and charging for your vehicle.</p>"
     },
     "it": {
       "#Motorcycle on a street": "Moto su una strada",
@@ -391,8 +415,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Benvenuto/a nel questionario sulla tua esperienza con la moto",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#Motorcycle": "Moto",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Domande sulla tua esperienza come conducente di moto o scooter.</p>",
+      "#Motorcycle and scooter use": "Uso della moto e dello scooter",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Domande sull'uso della moto, dello scooter o del motorino e su come la strada influisce sulla tua guida.</p>",
       "#Yes": "Sì",
       "#No": "No",
       "#Make me feel much less safe": "Mi fanno sentire molto meno sicuro/a",
@@ -428,7 +452,7 @@
       "#Extremely influential": "Estremamente influente",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e la tua esperienza durante gli spostamenti in moto o scooter. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Guidi una moto, uno scooter o un motorino almeno una volta alla settimana per i tuoi spostamenti? (Il monopattino non conta: è compreso nel questionario sulla bicicletta.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Perché non usi più spesso la moto o lo scooter? (Seleziona tutte le opzioni applicabili)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Perché non usi la moto o lo scooter, o perché li usi così poco? (Seleziona tutte le opzioni applicabili)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Lo chiediamo per capire che cosa limita l'uso della moto e dello scooter per persone diverse. Rispondere è facoltativo e puoi anche scegliere di non dirlo.",
       "#I don't have a licence or a vehicle": "Non ho la patente o il mezzo",
       "#It feels too dangerous in traffic": "Mi sembra troppo pericoloso nel traffico",
@@ -450,11 +474,13 @@
       "#I slow down or change my line, but I feel safe": "Rallento o cambio traiettoria, ma mi sento al sicuro",
       "#I often feel in danger": "Mi sento spesso in pericolo",
       "#I avoid some roads because of their surface, even if the route is longer": "Evito alcune strade per le condizioni del manto, anche se il percorso è più lungo",
-      "#I have fallen or nearly fallen because of the road surface": "Sono caduto/a o ho rischiato di cadere a causa del manto stradale",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "Negli ultimi 12 mesi sei caduto/a o hai rischiato di cadere a causa del manto stradale?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Quanto ti senti capace di evitare incidenti causati dall'apertura improvvisa delle portiere delle auto o da conducenti che non controllano gli angoli ciechi?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "L'angolo cieco è la zona intorno a un veicolo che chi guida non riesce a vedere negli specchietti.",
       "#Very confident": "Molto capace",
-      "#I don't know": "Non lo so"
+      "#I don't know": "Non lo so",
+      "#Other road users, parking and charging": "Altri utenti della strada, parcheggio e ricarica",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Domande sugli altri conducenti, sul parcheggio e sulla ricarica del tuo veicolo.</p>"
     },
     "fr": {
       "#Motorcycle on a street": "Moto dans une rue",
@@ -464,8 +490,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Bienvenue dans le questionnaire sur votre expérience en moto ou scooter",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#Motorcycle": "Moto ou scooter",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Questions sur votre expérience lorsque vous vous déplacez en moto ou en scooter.</p>",
+      "#Motorcycle and scooter use": "Usage de la moto et du scooter",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Questions pour savoir si vous conduisez une moto, un scooter ou un cyclomoteur et comment la route influence votre conduite.</p>",
       "#Yes": "Oui",
       "#No": "Non",
       "#Make me feel much less safe": "Ils me font sentir beaucoup moins en sécurité",
@@ -501,7 +527,7 @@
       "#Extremely influential": "Énormément",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience pendant vos déplacements en moto ou en scooter. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Conduisez-vous une moto, un scooter ou un cyclomoteur au moins une fois par semaine pour vos déplacements ? (Les trottinettes électriques ne comptent pas ici : elles sont traitées dans le questionnaire sur le vélo.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Pourquoi n'utilisez-vous pas plus souvent une moto ou un scooter ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Pourquoi n'utilisez-vous pas de moto ou de scooter, ou pourquoi si rarement ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Nous posons cette question pour comprendre ce qui limite l'usage de la moto et du scooter selon les personnes. Répondre est facultatif, et vous pouvez aussi choisir de ne pas le dire.",
       "#I don't have a licence or a vehicle": "Je n'ai pas le permis ou pas de véhicule",
       "#It feels too dangerous in traffic": "Cela me semble trop dangereux dans la circulation",
@@ -523,11 +549,13 @@
       "#I slow down or change my line, but I feel safe": "Je ralentis ou change de trajectoire, mais je me sens en sécurité",
       "#I often feel in danger": "Je me sens souvent en danger",
       "#I avoid some roads because of their surface, even if the route is longer": "J'évite certaines routes à cause de leur revêtement, même si le trajet est plus long",
-      "#I have fallen or nearly fallen because of the road surface": "Je suis tombé(e) ou j'ai failli tomber à cause du revêtement",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "Au cours des 12 derniers mois, êtes-vous tombé(e) ou avez-vous failli tomber à cause de l’état de la chaussée ?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "À quel point vous sentez-vous capable d’éviter un accident causé par une portière de voiture qui s’ouvre soudainement ou par un conducteur qui ne vérifie pas son angle mort ?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "L'angle mort est la zone autour d'un véhicule que le conducteur ne peut pas voir dans ses rétroviseurs.",
       "#Very confident": "Très en confiance",
-      "#I don't know": "Je ne sais pas"
+      "#I don't know": "Je ne sais pas",
+      "#Other road users, parking and charging": "Autres usagers de la route, stationnement et recharge",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Questions sur les autres conducteurs, le stationnement et la recharge de votre véhicule.</p>"
     },
     "de": {
       "#Motorcycle on a street": "Motorrad auf einer Straße",
@@ -537,8 +565,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Willkommen beim Fragebogen zu Ihrer Erfahrung mit Motorrad oder Roller",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#Motorcycle": "Motorrad oder Roller",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Fragen zu Ihren Erfahrungen beim Fahren mit Motorrad oder Roller.</p>",
+      "#Motorcycle and scooter use": "Nutzung von Motorrad und Roller",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Fragen dazu, ob Sie Motorrad, Motorroller oder Moped fahren und wie die Straße Ihr Fahren beeinflusst.</p>",
       "#Yes": "Ja",
       "#No": "Nein",
       "#Make me feel much less safe": "Sie geben mir deutlich weniger Sicherheit",
@@ -574,7 +602,7 @@
       "#Extremely influential": "Sehr stark",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Fahrten mit Motorrad oder Roller erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Fahren Sie mindestens einmal pro Woche Motorrad, Motorroller oder Moped, um irgendwohin zu gelangen? (E-Scooter zählen hier nicht: Sie werden im Fragebogen zum Radfahren behandelt.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Warum fahren Sie nicht häufiger Motorrad oder Motorroller? (Wählen Sie alles Zutreffende aus)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Warum fahren Sie nicht oder so selten Motorrad oder Motorroller? (Wählen Sie alles Zutreffende aus)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Wir fragen dies, um zu verstehen, was die Nutzung von Motorrad und Roller für verschiedene Menschen einschränkt. Die Antwort ist freiwillig, und Sie können auch angeben, dass Sie es lieber nicht sagen möchten.",
       "#I don't have a licence or a vehicle": "Ich habe keinen Führerschein oder kein Fahrzeug",
       "#It feels too dangerous in traffic": "Es erscheint mir im Verkehr zu gefährlich",
@@ -596,11 +624,13 @@
       "#I slow down or change my line, but I feel safe": "Ich fahre langsamer oder ändere meine Linie, fühle mich aber sicher",
       "#I often feel in danger": "Ich fühle mich oft in Gefahr",
       "#I avoid some roads because of their surface, even if the route is longer": "Ich meide manche Straßen wegen ihres Belags, auch wenn der Weg länger ist",
-      "#I have fallen or nearly fallen because of the road surface": "Ich bin wegen des Fahrbahnbelags gestürzt oder fast gestürzt",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "Sind Sie in den letzten 12 Monaten wegen des Fahrbahnbelags gestürzt oder beinahe gestürzt?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Wie sicher fühlen Sie sich darin, Unfälle durch plötzlich geöffnete Autotüren oder nicht kontrollierte tote Winkel zu vermeiden?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "Der tote Winkel ist der Bereich um ein Fahrzeug, den die fahrende Person in den Spiegeln nicht sehen kann.",
       "#Very confident": "Sehr sicher",
-      "#I don't know": "Ich weiß es nicht"
+      "#I don't know": "Ich weiß es nicht",
+      "#Other road users, parking and charging": "Andere Verkehrsteilnehmende, Parken und Laden",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Fragen zu anderen Fahrenden, zum Parken und zum Laden Ihres Fahrzeugs.</p>"
     },
     "tr": {
       "#Motorcycle on a street": "Sokakta bir motosiklet",
@@ -610,8 +640,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Motosiklet veya Scooter Deneyimi Anketine Hoş Geldiniz",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#Motorcycle": "Motosiklet veya Scooter",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Motosiklet veya scooter kullanırken yaşadığınız deneyimler hakkında sorular.</p>",
+      "#Motorcycle and scooter use": "Motosiklet ve Scooter Kullanımı",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Motosiklet, scooter veya moped kullanıp kullanmadığınız ve yolun sürüşünüzü nasıl etkilediğiyle ilgili sorular.</p>",
       "#Yes": "Evet",
       "#No": "Hayır",
       "#Make me feel much less safe": "Kendimi çok daha az güvende hissetmeme neden olur",
@@ -647,7 +677,7 @@
       "#Extremely influential": "Çok güçlü etkiler",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi motosiklet veya scooter ile yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Bir yerlere gitmek için haftada en az bir kez motosiklet, scooter veya moped kullanıyor musunuz? (Elektrikli scooterlar burada sayılmaz: bisiklet anketinde ele alınıyorlar.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Neden daha sık motosiklet veya scooter kullanmıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Motosiklet veya scooter neden kullanmıyorsunuz ya da neden bu kadar az kullanıyorsunuz? (Uygun olanların tümünü seçin)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Bunu, farklı kişiler için motosiklet ve scooter kullanımını neyin sınırladığını anlamak için soruyoruz. Yanıt vermek isteğe bağlıdır; belirtmemeyi de seçebilirsiniz.",
       "#I don't have a licence or a vehicle": "Ehliyetim veya aracım yok",
       "#It feels too dangerous in traffic": "Trafikte bana çok tehlikeli geliyor",
@@ -669,11 +699,13 @@
       "#I slow down or change my line, but I feel safe": "Yavaşlıyorum veya şeridimi değiştiriyorum ama kendimi güvende hissediyorum",
       "#I often feel in danger": "Kendimi sık sık tehlikede hissediyorum",
       "#I avoid some roads because of their surface, even if the route is longer": "Güzergâh daha uzun olsa bile yüzeyi nedeniyle bazı yollardan kaçınıyorum",
-      "#I have fallen or nearly fallen because of the road surface": "Yol yüzeyi yüzünden düştüm veya düşmek üzereydim",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "Son 12 ay içinde yol yüzeyi yüzünden düştünüz mü ya da düşmek üzere oldunuz mu?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Aniden açılan otomobil kapıları veya sürücülerin kör noktayı kontrol etmemesi nedeniyle oluşabilecek kazalardan kaçınma konusunda kendinizi ne kadar güvende hissediyorsunuz?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "Kör nokta, bir aracın çevresinde sürücünün aynalarda göremediği alandır.",
       "#Very confident": "Çok güvende hissediyorum",
-      "#I don't know": "Bilmiyorum"
+      "#I don't know": "Bilmiyorum",
+      "#Other road users, parking and charging": "Diğer Yol Kullanıcıları, Park ve Şarj",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Diğer sürücüler, park ve aracınızın şarjı hakkında sorular.</p>"
     },
     "fa": {
       "#Motorcycle on a street": "موتورسیکلت در خیابان",
@@ -683,8 +715,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "به پرسشنامه تجربه موتورسیکلت یا اسکوتر خوش آمدید",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#Motorcycle": "موتورسیکلت یا اسکوتر",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>سؤال‌هایی درباره تجربه شما هنگام استفاده از موتورسیکلت یا اسکوتر.</p>",
+      "#Motorcycle and scooter use": "استفاده از موتورسیکلت و اسکوتر",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>پرسش‌هایی دربارهٔ اینکه آیا موتورسیکلت، اسکوتر موتوری یا موتور گازی می‌رانید و وضعیت جاده چه اثری بر رانندگی شما دارد.</p>",
       "#Yes": "بله",
       "#No": "خیر",
       "#Make me feel much less safe": "باعث می‌شود خیلی کمتر احساس امنیت کنم",
@@ -720,7 +752,7 @@
       "#Extremely influential": "خیلی زیاد اثر دارد",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام رفت‌وآمد با موتورسیکلت یا اسکوتر است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "آیا دست‌کم هفته‌ای یک بار برای رفت‌وآمد موتورسیکلت، اسکوتر موتوری یا موتور گازی می‌رانید؟ (اسکوتر برقی ایستاده در اینجا حساب نمی‌شود: در پرسشنامهٔ دوچرخه به آن پرداخته شده است.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "چرا بیشتر از موتورسیکلت یا اسکوتر موتوری استفاده نمی‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "چرا از موتورسیکلت یا اسکوتر موتوری استفاده نمی‌کنید یا چرا این‌قدر کم استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "این را می‌پرسیم تا بفهمیم چه چیزی استفاده از موتورسیکلت و اسکوتر را برای افراد مختلف محدود می‌کند. پاسخ دادن اختیاری است و می‌توانید ترجیح دهید آن را نگویید.",
       "#I don't have a licence or a vehicle": "گواهینامه یا وسیلهٔ نقلیه ندارم",
       "#It feels too dangerous in traffic": "در ترافیک به نظرم خیلی خطرناک است",
@@ -742,11 +774,13 @@
       "#I slow down or change my line, but I feel safe": "سرعتم را کم می‌کنم یا مسیر حرکتم را تغییر می‌دهم، اما احساس امنیت می‌کنم",
       "#I often feel in danger": "اغلب احساس خطر می‌کنم",
       "#I avoid some roads because of their surface, even if the route is longer": "به خاطر سطح بعضی جاده‌ها از آن‌ها دوری می‌کنم، حتی اگر مسیر طولانی‌تر شود",
-      "#I have fallen or nearly fallen because of the road surface": "به خاطر سطح جاده زمین خورده‌ام یا نزدیک بود زمین بخورم",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "در ۱۲ ماه گذشته آیا به خاطر سطح جاده زمین خورده‌اید یا نزدیک بوده زمین بخورید؟",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "در جلوگیری از تصادف ناشی از باز شدن ناگهانی در خودرو یا بررسی نکردن نقطه کور توسط رانندگان چقدر به توانایی خود اطمینان دارید؟",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "نقطهٔ کور بخشی از اطراف خودرو است که راننده نمی‌تواند آن را در آینه‌ها ببیند.",
       "#Very confident": "خیلی مطمئنم",
-      "#I don't know": "نمی‌دانم"
+      "#I don't know": "نمی‌دانم",
+      "#Other road users, parking and charging": "دیگر کاربران جاده، پارک و شارژ",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>پرسش‌هایی دربارهٔ رانندگان دیگر، پارک و شارژ وسیلهٔ نقلیهٔ شما.</p>"
     },
     "hu": {
       "#Motorcycle on a street": "Motorkerékpár az utcán",
@@ -756,8 +790,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "Üdvözöljük a motorkerékpáros vagy robogós tapasztalatokról szóló kérdőívben",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#Motorcycle": "Motorkerékpár vagy robogó",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Kérdések a motorkerékpárral vagy robogóval szerzett tapasztalatairól.</p>",
+      "#Motorcycle and scooter use": "Motor- és robogóhasználat",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>Kérdések arról, hogy vezet-e motorkerékpárt, robogót vagy segédmotoros kerékpárt, és hogyan befolyásolja az út a vezetését.</p>",
       "#Yes": "Igen",
       "#No": "Nem",
       "#Make me feel much less safe": "Sokkal kevésbé érzem magam biztonságban",
@@ -793,7 +827,7 @@
       "#Extremely influential": "Rendkívül befolyásolja",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal motorkerékpárral vagy robogóval közlekedve. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "Vezet motorkerékpárt, robogót vagy segédmotoros kerékpárt legalább hetente egyszer, hogy eljusson valahová? (Az elektromos roller itt nem számít: arról a kerékpáros kérdőív szól.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "Miért nem motorozik vagy robogózik gyakrabban? (Jelölje meg az összes megfelelőt)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "Miért nem motorozik vagy robogózik, vagy miért csak ilyen ritkán? (Jelölje meg az összes megfelelőt)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "Azért kérdezzük, hogy megértsük, mi korlátozza a motor és a robogó használatát a különböző emberek számára. A válaszadás nem kötelező, és azt is választhatja, hogy nem kívánja megadni.",
       "#I don't have a licence or a vehicle": "Nincs jogosítványom vagy járművem",
       "#It feels too dangerous in traffic": "Túl veszélyesnek tűnik a forgalomban",
@@ -815,11 +849,13 @@
       "#I slow down or change my line, but I feel safe": "Lassítok vagy módosítom az íveimet, de biztonságban érzem magam",
       "#I often feel in danger": "Gyakran veszélyben érzem magam",
       "#I avoid some roads because of their surface, even if the route is longer": "Egyes utakat a burkolatuk miatt elkerülök, még ha hosszabb is az útvonal",
-      "#I have fallen or nearly fallen because of the road surface": "Az útburkolat miatt elestem vagy majdnem elestem",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "Az elmúlt 12 hónapban elesett vagy majdnem elesett az útburkolat miatt?",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "Mennyire érzi magát magabiztosnak abban, hogy elkerülje a hirtelen kinyíló autóajtó vagy a holttér ellenőrzésének elmulasztása miatt kialakuló balesetet?",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "A holttér a jármű körüli terület, amelyet a vezető nem lát a tükrökben.",
       "#Very confident": "Nagyon magabiztos vagyok",
-      "#I don't know": "Nem tudom"
+      "#I don't know": "Nem tudom",
+      "#Other road users, parking and charging": "Többi közlekedő, parkolás és töltés",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>Kérdések a többi járművezetőről, a parkolásról és a járműve töltéséről.</p>"
     },
     "ar": {
       "#Motorcycle on a street": "دراجة نارية في شارع",
@@ -829,8 +865,8 @@
       "#Welcome to Your Experience With Motorcycle Travel": "مرحبًا بك في استبيان تجربة الدراجة النارية أو السكوتر",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#Motorcycle": "الدراجة النارية أو السكوتر",
-      "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>أسئلة عن تجربتك عند استخدام الدراجة النارية أو السكوتر.</p>",
+      "#Motorcycle and scooter use": "استخدام الدراجة النارية والسكوتر",
+      "#<p>Questions about whether you ride a motorcycle, scooter or moped and how the road affects your riding.</p>": "<p>أسئلة حول ما إذا كنت تقود دراجة نارية أو سكوترًا أو دراجة بخارية صغيرة، وكيف يؤثر الطريق في قيادتك.</p>",
       "#Yes": "نعم",
       "#No": "لا",
       "#Make me feel much less safe": "تجعلني أشعر بأمان أقل بكثير",
@@ -866,7 +902,7 @@
       "#Extremely influential": "يؤثر بدرجة كبيرة جدًا",
       "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالدراجة النارية أو السكوتر. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you ride a motorcycle, scooter or moped at least once a week to get to places? (E-scooters do not count here: they are covered in the cycling questionnaire.)": "هل تقود دراجة نارية أو سكوترًا أو دراجة بخارية صغيرة مرة واحدة على الأقل في الأسبوع للتنقّل؟ (لا يُحتسب السكوتر الكهربائي هنا: فهو مشمول في استبيان الدراجة الهوائية.)",
-      "#Why don't you ride a motorcycle or scooter more often? (Select all that apply)": "لماذا لا تقود الدراجة النارية أو السكوتر أكثر؟ (اختر كل ما ينطبق)",
+      "#Why don't you ride a motorcycle or scooter, or why do you ride so rarely? (Select all that apply)": "لماذا لا تقود الدراجة النارية أو السكوتر، أو لماذا تقودها نادرًا؟ (اختر كل ما ينطبق)",
       "#We ask this to understand what limits the use of motorcycles and scooters for different people. Answering is optional, and you can also choose not to say.": "نسأل عن ذلك لنفهم ما الذي يحدّ من استخدام الدراجة النارية والسكوتر لدى أشخاص مختلفين. الإجابة اختيارية، ويمكنك أيضًا اختيار عدم الإفصاح.",
       "#I don't have a licence or a vehicle": "ليست لدي رخصة أو مركبة",
       "#It feels too dangerous in traffic": "يبدو لي خطيرًا جدًا وسط حركة المرور",
@@ -888,11 +924,13 @@
       "#I slow down or change my line, but I feel safe": "أخفف السرعة أو أغيّر مساري، لكنني أشعر بالأمان",
       "#I often feel in danger": "كثيرًا ما أشعر بالخطر",
       "#I avoid some roads because of their surface, even if the route is longer": "أتجنب بعض الطرق بسبب حالة سطحها، حتى لو كان المسار أطول",
-      "#I have fallen or nearly fallen because of the road surface": "سقطت أو كدت أسقط بسبب سطح الطريق",
+      "#In the last 12 months, have you fallen or nearly fallen because of the road surface?": "خلال الأشهر الاثني عشر الماضية، هل سقطت أو كدت تسقط بسبب سطح الطريق؟",
       "#How confident are you in your ability to avoid crashes caused by “dooring” (car doors opening suddenly) or drivers failing to check blind spots?": "ما مدى ثقتك في قدرتك على تجنب الحوادث الناتجة عن فتح باب سيارة فجأة أو عدم فحص السائق للنقطة العمياء؟",
       "#A blind spot is the area around a vehicle that the driver cannot see in the mirrors.": "النقطة العمياء هي المنطقة المحيطة بالمركبة التي لا يستطيع السائق رؤيتها في المرايا.",
       "#Very confident": "واثق جدًا",
-      "#I don't know": "لا أعرف"
+      "#I don't know": "لا أعرف",
+      "#Other road users, parking and charging": "مستخدمو الطريق الآخرون والوقوف والشحن",
+      "#<p>Questions about other drivers, parking and charging for your vehicle.</p>": "<p>أسئلة عن السائقين الآخرين وأماكن الوقوف وشحن مركبتك.</p>"
     }
   },
   "id": "smarturbanity_motorcycle",
