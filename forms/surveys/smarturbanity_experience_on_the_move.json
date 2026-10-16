@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience on the Move",
     "questionnaire_id": "smarturbanity_experience_on_the_move",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "How would you describe your emotional state during a typical journey?",
-            "answer_key": "emotional_state_v1",
+            "answer_key": "emotional_state",
             "question_type": "single_option",
             "options": [
               {
@@ -54,7 +54,8 @@
                 "text": "Very relaxed",
                 "value": "very_relaxed"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Thinking about your typical journey, how does the time it actually takes compare to how long you expect it to take?",
@@ -108,11 +109,13 @@
                 "text": "Exhausted",
                 "value": "exhausted"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal",
+            "required": true
           },
           {
             "text": "If your typical journey makes you feel tired, what do you think is the main cause?",
-            "answer_key": "tiredness_cause_v1",
+            "answer_key": "tiredness_cause",
             "question_type": "single_option",
             "options": [
               {
@@ -135,11 +138,19 @@
                 "text": "I usually do not feel tired after my trips",
                 "value": "i_usually_do_not_feel_tired_after_my_tri"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "tiredness": {
+                "not": [
+                  "not_tired"
+                ]
+              }
+            }
           },
           {
             "text": "How often do you feel anxious or overwhelmed during your typical journey?",
-            "answer_key": "anxiety_frequency_v1",
+            "answer_key": "anxiety_frequency",
             "question_type": "single_option",
             "options": [
               {
@@ -162,11 +173,13 @@
                 "text": "Constantly",
                 "value": "constantly"
               }
-            ]
+            ],
+            "privacy_classification": "special_category_health",
+            "required": true
           },
           {
             "text": "What specifically makes you feel anxious or overwhelmed during your typical journey?",
-            "answer_key": "anxiety_causes_v1",
+            "answer_key": "anxiety_causes",
             "question_type": "multiple_options",
             "options": [
               {
@@ -199,7 +212,9 @@
               },
               {
                 "text": "Physical health concerns (pain, breathlessness, dizziness)",
-                "value": "physical_health_concerns_pain_breathless"
+                "value": "physical_health_concerns_pain_breathless",
+                "privacy_classification": "special_category_health",
+                "special_category": "health"
               },
               {
                 "text": "I don't usually feel anxious or overwhelmed",
@@ -207,11 +222,19 @@
               }
             ],
             "max_answers": 3,
-            "add_other": true
+            "add_other": true,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "anxiety_frequency": {
+                "not": [
+                  "never"
+                ]
+              }
+            }
           },
           {
             "text": "Compared to other travel options available to you (e.g., walking, driving, public transport), how would you rate the overall effort required by your usual mode of travel?",
-            "answer_key": "effort_vs_alternatives_v1",
+            "answer_key": "effort_vs_alternatives",
             "question_type": "single_option",
             "options": [
               {
@@ -266,7 +289,8 @@
           }
         ]
       }
-    ]
+    ],
+    "privacy_classification": "heightened_personal"
   },
   "languages": {
     "en": {

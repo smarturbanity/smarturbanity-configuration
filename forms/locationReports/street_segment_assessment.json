@@ -2,7 +2,7 @@
 	"questionnaire": {
 		"name": "Street Segment Assessment",
 		"questionnaire_id": "street_segment_assessment",
-		"questionnaire_version": "0.2.0",
+		"questionnaire_version": "0.2.1",
 		"project": "SmartUrbanity",
 		"image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
 		"image_alt": "#Street section with a magnifying glass",
@@ -35,7 +35,8 @@
 								"value": "cyclist"
 							}
 						],
-						"show_if": {}
+						"show_if": {},
+						"required": true
 					},
 					{
 						"text": "Which of these describe your trip today?",
@@ -57,7 +58,9 @@
 							},
 							{
 								"text": "Using a wheelchair or mobility aid",
-								"value": "mobility_aid"
+								"value": "mobility_aid",
+								"privacy_classification": "special_category_health",
+								"special_category": "health"
 							},
 							{
 								"text": "Travelling with a stroller",
@@ -68,7 +71,8 @@
 								"value": "none"
 							}
 						],
-						"show_if": {}
+						"show_if": {},
+						"required": true
 					},
 					{
 						"text": "How often do you use or pass this street segment?",
@@ -96,7 +100,8 @@
 								"text": "Almost every day",
 								"value": "5_daily"
 							}
-						]
+						],
+						"required": true
 					}
 				]
 			},
@@ -141,7 +146,8 @@
 								"text": "Dedicated walking street or area",
 								"value": "dedicated_pedestrian_area"
 							}
-						]
+						],
+						"required": true
 					},
 					{
 						"text": "Is there cycling infrastructure on this street?",
@@ -167,7 +173,8 @@
 								"text": "Dedicated cycling infrastructure",
 								"value": "dedicated_bike_facility"
 							}
-						]
+						],
+						"required": true
 					},
 					{
 						"text": "Which best describes using this street segment while walking?",
@@ -201,7 +208,8 @@
 							"assessment_perspective": [
 								"pedestrian"
 							]
-						}
+						},
+						"required": true
 					},
 					{
 						"text": "How risky does it feel to use this street segment while walking?",
@@ -235,7 +243,8 @@
 							"assessment_perspective": [
 								"pedestrian"
 							]
-						}
+						},
+						"required": true
 					},
 					{
 						"text": "Which best describes using this street segment while cycling?",
@@ -269,7 +278,8 @@
 							"assessment_perspective": [
 								"cyclist"
 							]
-						}
+						},
+						"required": true
 					},
 					{
 						"text": "How risky does it feel to use this street segment while cycling?",
@@ -303,7 +313,8 @@
 							"assessment_perspective": [
 								"cyclist"
 							]
-						}
+						},
+						"required": true
 					},
 					{
 						"text": "Would you like to add a few optional details?",
@@ -319,7 +330,8 @@
 								"text": "Yes, add optional details",
 								"value": "yes_audit"
 							}
-						]
+						],
+						"required": true
 					}
 				]
 			},
@@ -334,15 +346,15 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"pedestrian"
-							],
 							"walk_facility": [
 								"shoulder",
-								"shared_ped_bike_path",
-								"level_walking_area",
 								"raised_sidewalk",
+								"level_walking_area",
+								"shared_ped_bike_path",
 								"dedicated_pedestrian_area"
+							],
+							"assessment_perspective": [
+								"pedestrian"
 							]
 						},
 						"add_i_dont_know": true,
@@ -368,7 +380,8 @@
 								"text": "Very wide, with plenty of room to move",
 								"value": "5_very_wide"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How is the cycling space separated from walking or motor traffic?",
@@ -376,10 +389,12 @@
 						"question_type": "multiple_options",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_facility": [
+								"dedicated_bike_facility"
+							],
 							"assessment_perspective": [
 								"cyclist"
-							],
-							"bike_facility": "dedicated_bike_facility"
+							]
 						},
 						"add_i_dont_know": true,
 						"add_other": true,
@@ -405,7 +420,8 @@
 								"text": "Different level or kerb from people walking",
 								"value": "different_level_from_pedestrians"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "Who else commonly uses the cycling space?",
@@ -413,12 +429,12 @@
 						"question_type": "multiple_options",
 						"show_if": {
 							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"cyclist"
-							],
 							"bike_facility": [
 								"shared_with_traffic",
 								"dedicated_bike_facility"
+							],
+							"assessment_perspective": [
+								"cyclist"
 							]
 						},
 						"add_i_dont_know": true,
@@ -445,7 +461,8 @@
 								"text": "None",
 								"value": "none"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How fast does motor traffic feel on this street?",
@@ -477,7 +494,8 @@
 								"text": "Very fast",
 								"value": "5_very_fast"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "What makes traffic interaction difficult here?",
@@ -518,7 +536,8 @@
 								"text": "No clear problem",
 								"value": "none"
 							}
-						]
+						],
+						"required": false
 					}
 				]
 			},
@@ -528,11 +547,145 @@
 				"backgroundColor": "#f0f0f0",
 				"questions": [
 					{
+						"text": "What problems affect the walking surface?",
+						"answer_key": "walking_surface_problems",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Uneven surface",
+								"value": "uneven_surface"
+							},
+							{
+								"text": "Cracks",
+								"value": "cracks"
+							},
+							{
+								"text": "Potholes",
+								"value": "potholes"
+							},
+							{
+								"text": "Raised edges or bumps",
+								"value": "raised_edges_bumps"
+							},
+							{
+								"text": "Tree roots",
+								"value": "tree_roots"
+							},
+							{
+								"text": "Side slope feels uncomfortable",
+								"value": "side_slope"
+							},
+							{
+								"text": "Steps or sudden level changes",
+								"value": "level_changes"
+							},
+							{
+								"text": "Slippery when wet",
+								"value": "slippery_wet"
+							},
+							{
+								"text": "Water collects after rain",
+								"value": "water_collects"
+							},
+							{
+								"text": "No clear problem",
+								"value": "none"
+							}
+						],
+						"required": false
+					},
+					{
+						"text": "What obstacles reduce the walking space?",
+						"answer_key": "walking_obstacles",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"pedestrian"
+							]
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Parked cars",
+								"value": "parked_cars"
+							},
+							{
+								"text": "Bicycles, e-scooters, or motorcycles parked on the sidewalk",
+								"value": "micromobility_parked"
+							},
+							{
+								"text": "Trees, poles, signs, or utility boxes",
+								"value": "fixed_objects"
+							},
+							{
+								"text": "Overgrown plants or weeds",
+								"value": "vegetation"
+							},
+							{
+								"text": "Outdoor café or restaurant seating",
+								"value": "outdoor_seating"
+							},
+							{
+								"text": "Shop displays or street vendors",
+								"value": "shop_displays_vendors"
+							},
+							{
+								"text": "Waste bins or rubbish bags",
+								"value": "waste_bins_bags"
+							},
+							{
+								"text": "Dog waste",
+								"value": "dog_waste"
+							},
+							{
+								"text": "Construction works",
+								"value": "construction"
+							},
+							{
+								"text": "People waiting in queues",
+								"value": "queues"
+							},
+							{
+								"text": "Flooded areas after rain",
+								"value": "flooding"
+							},
+							{
+								"text": "No clear obstacle",
+								"value": "none"
+							}
+						],
+						"required": false
+					},
+					{
 						"text": "How often do surface problems slow you down or make you change path while walking?",
 						"answer_key": "pedestrian_surface_problem_frequency",
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"walking_surface_problems": [
+								"uneven_surface",
+								"cracks",
+								"potholes",
+								"raised_edges_bumps",
+								"tree_roots",
+								"side_slope",
+								"level_changes",
+								"slippery_wet",
+								"water_collects",
+								"Other"
+							],
 							"assessment_perspective": [
 								"pedestrian"
 							]
@@ -560,7 +713,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often do obstacles block or reduce your space while walking?",
@@ -568,6 +722,20 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"walking_obstacles": [
+								"parked_cars",
+								"micromobility_parked",
+								"fixed_objects",
+								"vegetation",
+								"outdoor_seating",
+								"shop_displays_vendors",
+								"waste_bins_bags",
+								"dog_waste",
+								"construction",
+								"queues",
+								"flooding",
+								"Other"
+							],
 							"assessment_perspective": [
 								"pedestrian"
 							]
@@ -595,7 +763,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often does this segment feel too crowded?",
@@ -630,7 +799,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often do motor vehicles pass too close while you are walking?",
@@ -665,7 +835,130 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
+					},
+					{
+						"text": "What problems affect cycling comfort?",
+						"answer_key": "bike_surface_problems",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"cyclist"
+							]
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Uneven surface",
+								"value": "uneven_surface"
+							},
+							{
+								"text": "Cracks",
+								"value": "cracks"
+							},
+							{
+								"text": "Potholes",
+								"value": "potholes"
+							},
+							{
+								"text": "Raised edges or bumps",
+								"value": "raised_edges_bumps"
+							},
+							{
+								"text": "Tree roots",
+								"value": "tree_roots"
+							},
+							{
+								"text": "Slippery when wet",
+								"value": "slippery_wet"
+							},
+							{
+								"text": "Loose gravel or debris",
+								"value": "loose_gravel_debris"
+							},
+							{
+								"text": "Sudden level changes",
+								"value": "level_changes"
+							},
+							{
+								"text": "Uncomfortable vibration",
+								"value": "surface_vibration"
+							},
+							{
+								"text": "No clear problem",
+								"value": "none"
+							}
+						],
+						"required": false
+					},
+					{
+						"text": "What obstacles make cycling difficult?",
+						"answer_key": "bike_obstacles",
+						"question_type": "multiple_options",
+						"show_if": {
+							"continue_audit": "yes_audit",
+							"assessment_perspective": [
+								"cyclist"
+							]
+						},
+						"add_i_dont_know": true,
+						"add_other": true,
+						"checks_inline": false,
+						"options": [
+							{
+								"text": "Narrow sections",
+								"value": "narrow_sections"
+							},
+							{
+								"text": "Parked cars",
+								"value": "parked_cars"
+							},
+							{
+								"text": "Vehicles stopping in the cycle lane",
+								"value": "vehicles_stopping"
+							},
+							{
+								"text": "E-scooters, bicycles, or motorcycles parked on the facility",
+								"value": "micromobility_parked"
+							},
+							{
+								"text": "Trees, poles, signs, or utility boxes",
+								"value": "fixed_objects"
+							},
+							{
+								"text": "Outdoor café or restaurant seating",
+								"value": "outdoor_seating"
+							},
+							{
+								"text": "Shop displays or street vendors",
+								"value": "shop_displays_vendors"
+							},
+							{
+								"text": "Waste bins or rubbish bags",
+								"value": "waste_bins_bags"
+							},
+							{
+								"text": "Construction works",
+								"value": "construction"
+							},
+							{
+								"text": "Flooded areas after rain",
+								"value": "flooding"
+							},
+							{
+								"text": "Public transport stop or people waiting",
+								"value": "pt_stop_waiting"
+							},
+							{
+								"text": "No clear obstacle",
+								"value": "none"
+							}
+						],
+						"required": false
 					},
 					{
 						"text": "How often do surface problems slow you down or make you change path while cycling?",
@@ -673,6 +966,18 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_surface_problems": [
+								"uneven_surface",
+								"cracks",
+								"potholes",
+								"raised_edges_bumps",
+								"tree_roots",
+								"slippery_wet",
+								"loose_gravel_debris",
+								"level_changes",
+								"surface_vibration",
+								"Other"
+							],
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -700,7 +1005,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often do obstacles block or reduce your space while cycling?",
@@ -708,6 +1014,20 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_obstacles": [
+								"narrow_sections",
+								"parked_cars",
+								"vehicles_stopping",
+								"micromobility_parked",
+								"fixed_objects",
+								"outdoor_seating",
+								"shop_displays_vendors",
+								"waste_bins_bags",
+								"construction",
+								"flooding",
+								"pt_stop_waiting",
+								"Other"
+							],
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -735,7 +1055,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often is the cycling space shared with other people or vehicles?",
@@ -777,7 +1098,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How often do motor vehicles pass too close while you are cycling?",
@@ -812,7 +1134,8 @@
 								"text": "Very often",
 								"value": "5_very_often"
 							}
-						]
+						],
+						"required": false
 					}
 				]
 			},
@@ -827,10 +1150,13 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"walk_facility": [
+								"no_walk_space",
+								"shoulder"
+							],
 							"assessment_perspective": [
 								"pedestrian"
-							],
-							"walk_facility": "no_walk_space"
+							]
 						},
 						"add_i_dont_know": true,
 						"checks_inline": false,
@@ -855,7 +1181,8 @@
 								"text": "Yes",
 								"value": "5_yes"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "Should cycling infrastructure be added here?",
@@ -863,10 +1190,12 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_facility": [
+								"no_bike_facility"
+							],
 							"assessment_perspective": [
 								"cyclist"
-							],
-							"bike_facility": "no_bike_facility"
+							]
 						},
 						"add_i_dont_know": true,
 						"checks_inline": false,
@@ -891,7 +1220,8 @@
 								"text": "Yes",
 								"value": "5_yes"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How urgent is it to improve this street segment?",
@@ -923,7 +1253,8 @@
 						],
 						"show_if": {
 							"continue_audit": "yes_audit"
-						}
+						},
+						"required": false
 					},
 					{
 						"text": "What would improve this street segment most?",
@@ -979,7 +1310,8 @@
 						],
 						"show_if": {
 							"continue_audit": "yes_audit"
-						}
+						},
+						"required": false
 					},
 					{
 						"text": "Anything else you want to add?",
@@ -987,7 +1319,9 @@
 						"question_type": "text",
 						"show_if": {
 							"continue_audit": "yes_audit"
-						}
+						},
+						"privacy_classification": "heightened_personal",
+						"required": false
 					}
 				]
 			},
@@ -1002,10 +1336,12 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"walk_facility": [
+								"raised_sidewalk"
+							],
 							"assessment_perspective": [
 								"pedestrian"
-							],
-							"walk_facility": "raised_sidewalk"
+							]
 						},
 						"add_i_dont_know": true,
 						"add_other": true,
@@ -1027,7 +1363,8 @@
 								"text": "Planted strip, bushes, or planters",
 								"value": "planted_strip"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "If the walking area is at road level, how is it separated from traffic?",
@@ -1060,7 +1397,8 @@
 								"text": "Planted strip, bushes, or planters",
 								"value": "planted_strip"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "Does this walking path include stairs?",
@@ -1068,10 +1406,16 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"walk_facility": [
+								"shoulder",
+								"raised_sidewalk",
+								"level_walking_area",
+								"shared_ped_bike_path",
+								"dedicated_pedestrian_area"
+							],
 							"assessment_perspective": [
 								"pedestrian"
-							],
-							"walk_facility": "dedicated_pedestrian_area"
+							]
 						},
 						"add_i_dont_know": true,
 						"checks_inline": false,
@@ -1084,7 +1428,8 @@
 								"text": "Yes",
 								"value": "yes"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How many steps are there?",
@@ -1112,141 +1457,8 @@
 								"text": "More than 20 steps",
 								"value": "3_more_than_20_steps"
 							}
-						]
-					},
-					{
-						"text": "What problems affect the walking surface?",
-						"answer_key": "walking_surface_problems",
-						"question_type": "multiple_options",
-						"show_if": {
-							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"pedestrian"
-							],
-							"walk_facility": [
-								"shoulder",
-								"shared_ped_bike_path",
-								"level_walking_area",
-								"raised_sidewalk",
-								"dedicated_pedestrian_area"
-							]
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Uneven surface",
-								"value": "uneven_surface"
-							},
-							{
-								"text": "Cracks",
-								"value": "cracks"
-							},
-							{
-								"text": "Potholes",
-								"value": "potholes"
-							},
-							{
-								"text": "Raised edges or bumps",
-								"value": "raised_edges_bumps"
-							},
-							{
-								"text": "Tree roots",
-								"value": "tree_roots"
-							},
-							{
-								"text": "Side slope feels uncomfortable",
-								"value": "side_slope"
-							},
-							{
-								"text": "Steps or sudden level changes",
-								"value": "level_changes"
-							},
-							{
-								"text": "Slippery when wet",
-								"value": "slippery_wet"
-							},
-							{
-								"text": "Water collects after rain",
-								"value": "water_collects"
-							},
-							{
-								"text": "No clear problem",
-								"value": "none"
-							}
-						]
-					},
-					{
-						"text": "What obstacles reduce the walking space?",
-						"answer_key": "walking_obstacles",
-						"question_type": "multiple_options",
-						"show_if": {
-							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"pedestrian"
-							],
-							"walk_facility": [
-								"shoulder",
-								"shared_ped_bike_path",
-								"level_walking_area",
-								"raised_sidewalk",
-								"dedicated_pedestrian_area"
-							]
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Parked cars",
-								"value": "parked_cars"
-							},
-							{
-								"text": "Bicycles, e-scooters, or motorcycles parked on the sidewalk",
-								"value": "micromobility_parked"
-							},
-							{
-								"text": "Trees, poles, signs, or utility boxes",
-								"value": "fixed_objects"
-							},
-							{
-								"text": "Overgrown plants or weeds",
-								"value": "vegetation"
-							},
-							{
-								"text": "Outdoor café or restaurant seating",
-								"value": "outdoor_seating"
-							},
-							{
-								"text": "Shop displays or street vendors",
-								"value": "shop_displays_vendors"
-							},
-							{
-								"text": "Waste bins or rubbish bags",
-								"value": "waste_bins_bags"
-							},
-							{
-								"text": "Dog waste",
-								"value": "dog_waste"
-							},
-							{
-								"text": "Construction works",
-								"value": "construction"
-							},
-							{
-								"text": "People waiting in queues",
-								"value": "queues"
-							},
-							{
-								"text": "Flooded areas after rain",
-								"value": "flooding"
-							},
-							{
-								"text": "No clear obstacle",
-								"value": "none"
-							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "Which accessibility features are available?",
@@ -1254,15 +1466,15 @@
 						"question_type": "multiple_options",
 						"show_if": {
 							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"pedestrian"
-							],
 							"walk_facility": [
 								"shoulder",
-								"shared_ped_bike_path",
-								"level_walking_area",
 								"raised_sidewalk",
+								"level_walking_area",
+								"shared_ped_bike_path",
 								"dedicated_pedestrian_area"
+							],
+							"assessment_perspective": [
+								"pedestrian"
 							]
 						},
 						"add_i_dont_know": true,
@@ -1288,7 +1500,8 @@
 								"text": "None of these",
 								"value": "none"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "Is the cycling infrastructure one-way or two-way?",
@@ -1296,10 +1509,12 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_facility": [
+								"dedicated_bike_facility"
+							],
 							"assessment_perspective": [
 								"cyclist"
-							],
-							"bike_facility": "dedicated_bike_facility"
+							]
 						},
 						"add_i_dont_know": true,
 						"checks_inline": false,
@@ -1312,7 +1527,8 @@
 								"text": "Two-way cycling facility",
 								"value": "two_way"
 							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "What surface does the cycling infrastructure have?",
@@ -1320,12 +1536,12 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"cyclist"
-							],
 							"bike_facility": [
 								"shared_with_traffic",
 								"dedicated_bike_facility"
+							],
+							"assessment_perspective": [
+								"cyclist"
 							]
 						},
 						"add_i_dont_know": true,
@@ -1363,135 +1579,8 @@
 								"text": "Other or unclear",
 								"value": "other_unclear"
 							}
-						]
-					},
-					{
-						"text": "What problems affect cycling comfort?",
-						"answer_key": "bike_surface_problems",
-						"question_type": "multiple_options",
-						"show_if": {
-							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"cyclist"
-							],
-							"bike_facility": [
-								"shared_with_traffic",
-								"dedicated_bike_facility"
-							]
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Uneven surface",
-								"value": "uneven_surface"
-							},
-							{
-								"text": "Cracks",
-								"value": "cracks"
-							},
-							{
-								"text": "Potholes",
-								"value": "potholes"
-							},
-							{
-								"text": "Raised edges or bumps",
-								"value": "raised_edges_bumps"
-							},
-							{
-								"text": "Tree roots",
-								"value": "tree_roots"
-							},
-							{
-								"text": "Slippery when wet",
-								"value": "slippery_wet"
-							},
-							{
-								"text": "Loose gravel or debris",
-								"value": "loose_gravel_debris"
-							},
-							{
-								"text": "Sudden level changes",
-								"value": "level_changes"
-							},
-							{
-								"text": "Uncomfortable vibration",
-								"value": "surface_vibration"
-							},
-							{
-								"text": "No clear problem",
-								"value": "none"
-							}
-						]
-					},
-					{
-						"text": "What obstacles make cycling difficult?",
-						"answer_key": "bike_obstacles",
-						"question_type": "multiple_options",
-						"show_if": {
-							"continue_audit": "yes_audit",
-							"assessment_perspective": [
-								"cyclist"
-							],
-							"bike_facility": [
-								"shared_with_traffic",
-								"dedicated_bike_facility"
-							]
-						},
-						"add_i_dont_know": true,
-						"add_other": true,
-						"checks_inline": false,
-						"options": [
-							{
-								"text": "Narrow sections",
-								"value": "narrow_sections"
-							},
-							{
-								"text": "Parked cars",
-								"value": "parked_cars"
-							},
-							{
-								"text": "Vehicles stopping in the cycle lane",
-								"value": "vehicles_stopping"
-							},
-							{
-								"text": "E-scooters, bicycles, or motorcycles parked on the facility",
-								"value": "micromobility_parked"
-							},
-							{
-								"text": "Trees, poles, signs, or utility boxes",
-								"value": "fixed_objects"
-							},
-							{
-								"text": "Outdoor café or restaurant seating",
-								"value": "outdoor_seating"
-							},
-							{
-								"text": "Shop displays or street vendors",
-								"value": "shop_displays_vendors"
-							},
-							{
-								"text": "Waste bins or rubbish bags",
-								"value": "waste_bins_bags"
-							},
-							{
-								"text": "Construction works",
-								"value": "construction"
-							},
-							{
-								"text": "Flooded areas after rain",
-								"value": "flooding"
-							},
-							{
-								"text": "Public transport stop or people waiting",
-								"value": "pt_stop_waiting"
-							},
-							{
-								"text": "No clear obstacle",
-								"value": "none"
-							}
-						]
+						],
+						"required": false
 					},
 					{
 						"text": "How many places are there where motor vehicles cross or enter the cycling space?",
@@ -1499,6 +1588,9 @@
 						"question_type": "single_option",
 						"show_if": {
 							"continue_audit": "yes_audit",
+							"bike_facility": [
+								"dedicated_bike_facility"
+							],
 							"assessment_perspective": [
 								"cyclist"
 							]
@@ -1530,11 +1622,13 @@
 								"text": "I cannot tell",
 								"value": "dont_know"
 							}
-						]
+						],
+						"required": false
 					}
 				]
 			}
-		]
+		],
+		"privacy_classification": "heightened_personal"
 	},
 	"languages": {
 		"en": {

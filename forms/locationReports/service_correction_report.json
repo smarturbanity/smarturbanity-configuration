@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Service Correction Report",
     "questionnaire_id": "smarturbanity_service_correction_report",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "1.1.1",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
     "image_alt": "#Street with a missing section and a plus sign",
@@ -125,7 +125,8 @@
                 "no_longer_exists"
               ]
             },
-            "required": false
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Where is it really?",
@@ -136,8 +137,9 @@
                 "wrong_location"
               ]
             },
-            "required": true,
-            "placeholder": "Address or a short description"
+            "required": false,
+            "placeholder": "Address or a short description",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How far is it from the marked place?",
@@ -178,8 +180,9 @@
                 "duplicate_entry"
               ]
             },
-            "required": true,
-            "placeholder": "Name or address"
+            "required": false,
+            "placeholder": "Name or address",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Which entry is the right one?",
@@ -254,18 +257,21 @@
                 "wrong_information"
               ]
             },
-            "required": true
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Anything else we should know?",
             "answer_key": "correction_details",
             "question_type": "text",
-            "required": false
+            "required": false,
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
     ],
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html"
+    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "privacy_classification": "heightened_personal"
   },
   "languages": {
     "en": {

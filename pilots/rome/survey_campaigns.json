@@ -1,8 +1,8 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.1.0",
+  "config_version": "0.1.1",
   "pilot_id": "rome",
-  "pilot_period": {"start_date": "2026-11-07", "end_date": null, "timezone": "Europe/Rome"},
+  "pilot_period": {"start_date": "2026-11-14", "end_date": null, "timezone": "Europe/Rome"},
   "rules": {
     "show_all_in_debug": true
   },
@@ -111,7 +111,7 @@
       "name": "Reports",
       "enabled": true,
       "priority": 0,
-      "window": {"from_week": 1, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
+      "window": {"from_week": 2, "until_week": null, "valid_from": null, "valid_until": null, "extended_until": null},
       "area": {
         "type": "circle",
         "label": "Largo Alessandrina Ravizza",
@@ -126,30 +126,30 @@
       ]
     },
     "rome_test_event_surveys": {
-      "name": "Public presentation 7 November: questionnaires",
+      "name": "Beta kickoff 14 November: questionnaires",
       "enabled": true,
       "priority": 10,
       "window": {
         "from_week": null,
         "until_week": null,
-        "valid_from": "2026-11-07",
-        "valid_until": "2026-11-07",
+        "valid_from": "2026-11-14",
+        "valid_until": "2026-11-14",
         "extended_until": null
       },
       "area": null,
       "exclusive": true,
       "questionnaires": ["smarturbanity_about_you", "smarturbanity_walking"],
-      "group": "rome_public_event_2026_11_07"
+      "group": "rome_beta_kickoff_2026_11_14"
     },
     "rome_test_event_reports": {
-      "name": "Public presentation 7 November: reports near Largo Ravizza",
+      "name": "Beta kickoff 14 November: walks near Largo Ravizza",
       "enabled": true,
       "priority": 10,
       "window": {
         "from_week": null,
         "until_week": null,
-        "valid_from": "2026-11-07",
-        "valid_until": "2026-11-07",
+        "valid_from": "2026-11-14",
+        "valid_until": "2026-11-14",
         "extended_until": null
       },
       "area": {
@@ -166,7 +166,41 @@
         "smarturbanity_missing_path_report",
         "smarturbanity_geolocated_perception_report"
       ],
-      "group": "rome_public_event_2026_11_07"
+      "group": "rome_beta_kickoff_2026_11_14"
+    }
+  },
+  "languages": {
+    "it": {
+      "code": "it",
+      "#About you": "Su di te",
+      "#Walking": "A piedi",
+      "#Safety and environment": "Sicurezza e ambiente",
+      "#Daily mobility": "Spostamenti di tutti i giorni",
+      "#Public transport": "Mezzi pubblici",
+      "#Cycling": "In bicicletta",
+      "#Car and motorcycle": "Auto e moto",
+      "#Crossings": "Attraversamenti",
+      "#Pavements": "Marciapiedi",
+      "#Trips": "I tuoi spostamenti",
+      "#Reports": "Segnalazioni",
+      "#Beta kickoff 14 November: questionnaires": "Avvio della beta, 14 novembre: questionari",
+      "#Beta kickoff 14 November: walks near Largo Ravizza": "Avvio della beta, 14 novembre: passeggiate vicino a Largo Ravizza"
+    },
+    "en": {
+      "code": "en",
+      "#About you": "About you",
+      "#Walking": "Walking",
+      "#Safety and environment": "Safety and surroundings",
+      "#Daily mobility": "Everyday trips",
+      "#Public transport": "Public transport",
+      "#Cycling": "Cycling",
+      "#Car and motorcycle": "Car and motorcycle",
+      "#Crossings": "Crossings",
+      "#Pavements": "Pavements",
+      "#Trips": "Your trips",
+      "#Reports": "Reports",
+      "#Beta kickoff 14 November: questionnaires": "Beta launch, 14 November: questionnaires",
+      "#Beta kickoff 14 November: walks near Largo Ravizza": "Beta launch, 14 November: walks near Largo Ravizza"
     }
   }
 }
