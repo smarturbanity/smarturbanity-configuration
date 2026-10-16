@@ -2,7 +2,8 @@
   "questionnaire": {
     "name": "SmartUrbanity - About You",
     "questionnaire_id": "smarturbanity_about_you",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
+    "privacy_classification": "heightened_personal",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -31,7 +32,8 @@
         "questions": [
           {
             "text": "What is your age group? (Participation is limited to adults aged 18 or older)",
-            "answer_key": "age_group_v1",
+            "answer_key": "age_group",
+            "legacy_answer_keys": ["age_group_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -71,7 +73,8 @@
           },
           {
             "text": "What is your gender?",
-            "answer_key": "gender_v1",
+            "answer_key": "gender",
+            "legacy_answer_keys": ["gender_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -188,7 +191,8 @@
           },
           {
             "text": "Which best describes your employment status?",
-            "answer_key": "employment_v1",
+            "answer_key": "employment",
+            "legacy_answer_keys": ["employment_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -236,7 +240,8 @@
           },
           {
             "text": "Do you currently work remotely (partly or fully)?",
-            "answer_key": "remote_work_v1",
+            "answer_key": "remote_work",
+            "legacy_answer_keys": ["remote_work_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -259,7 +264,8 @@
           },
           {
             "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
-            "answer_key": "flexible_hours_v1",
+            "answer_key": "flexible_hours",
+            "legacy_answer_keys": ["flexible_hours_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -282,7 +288,9 @@
           },
           {
             "text": "Do you have any condition or limitation that affects your ability to move independently?",
-            "answer_key": "mobility_limitation_v1",
+            "answer_key": "mobility_limitation",
+            "legacy_answer_keys": ["mobility_limitation_v1"],
+            "privacy_classification": "special_category_health",
             "question_type": "single_option",
             "options": [
               {
@@ -331,7 +339,8 @@
           },
           {
             "text": "Do you belong to any of these groups?",
-            "answer_key": "professional_role_v1",
+            "answer_key": "professional_role",
+            "legacy_answer_keys": ["professional_role_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -366,6 +375,7 @@
           {
             "text": "On average, how far can you walk without taking a long break (e.g., more than 5 minutes)?",
             "answer_key": "walk_distance",
+            "privacy_classification": "special_category_health",
             "question_type": "single_option",
             "options": [
               {
@@ -392,7 +402,9 @@
           },
           {
             "text": "How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.",
-            "answer_key": "active_days_v1",
+            "answer_key": "active_days",
+            "legacy_answer_keys": ["active_days_v1"],
+            "privacy_classification": "heightened_personal",
             "question_type": "single_option",
             "options": [
               {
@@ -419,7 +431,9 @@
           },
           {
             "text": "How would you describe your current level of physical fitness (strength, endurance, and overall health)?",
-            "answer_key": "fitness_v1",
+            "answer_key": "fitness",
+            "legacy_answer_keys": ["fitness_v1"],
+            "privacy_classification": "special_category_health",
             "question_type": "single_option",
             "options": [
               {
@@ -447,6 +461,7 @@
           {
             "text": "What is your approximate height?",
             "answer_key": "height",
+            "privacy_classification": "heightened_personal",
             "question_type": "single_option",
             "options": [
               {
@@ -503,7 +518,8 @@
           },
           {
             "text": "In which Municipio of Rome do you currently live?",
-            "answer_key": "v1_in_which_municipio_of_rome_do_you_cu",
+            "answer_key": "in_which_municipio_of_rome_do_you_cu",
+            "legacy_answer_keys": ["v1_in_which_municipio_of_rome_do_you_cu"],
             "question_type": "single_option",
             "show_if": {
               "residence": [
@@ -799,7 +815,8 @@
           },
           {
             "text": "Which is the third Municipio you travel to most frequently?",
-            "answer_key": "frequent_areas_v1",
+            "answer_key": "frequent_areas",
+            "legacy_answer_keys": ["frequent_areas_v1"],
             "question_type": "single_option",
             "show_if": {
               "second": [
@@ -886,7 +903,8 @@
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
-            "answer_key": "reasons_outside_v1",
+            "answer_key": "reasons_outside",
+            "legacy_answer_keys": ["reasons_outside_v1"],
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
@@ -900,7 +918,8 @@
               },
               {
                 "text": "Healthcare (doctor, pharmacy, hospital)",
-                "value": "healthcare_doctor_pharmacy_hospital"
+                "value": "healthcare_doctor_pharmacy_hospital",
+                "privacy_classification": "special_category_health"
               },
               {
                 "text": "Schools or childcare",
@@ -943,7 +962,8 @@
           },
           {
             "text": "How strongly do you feel connected to the place where you live and the people in your community?",
-            "answer_key": "place_attachment_v1",
+            "answer_key": "place_attachment",
+            "legacy_answer_keys": ["place_attachment_v1"],
             "question_type": "single_option",
             "options": [
               {

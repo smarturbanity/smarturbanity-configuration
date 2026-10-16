@@ -15,6 +15,29 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
+## Questionnaire privacy labels
+
+Every form declares `questionnaire.privacy_classification`. Questions and individual
+options may override that label. The values are:
+
+- `personal_data`: responses are linked to a participant record;
+- `heightened_personal`: details such as demographics, habitual travel, precise
+  location or open text warrant additional handling, but are not automatically
+  special-category data under GDPR Article 9;
+- `special_category_health`: an answer may reveal a person's physical or mental
+  health, injury or disability. An option-level label applies only when that option
+  is selected; a question-level label applies to every answer to that question.
+
+These labels are an inventory for review and downstream handling. They do not
+themselves grant a lawful basis, collect explicit consent, restrict access or
+redact exported responses. Those behaviors require separate application controls.
+See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
+
+`legacy_answer_keys` lists previously stored answer keys when a question's
+`answer_key` changes. Keep these aliases for historical analysis; do not rewrite
+saved responses. The form's `questionnaire_version` still identifies which key
+set was used when a response was collected.
+
 ## Repository structure
 
 The intended structure is:

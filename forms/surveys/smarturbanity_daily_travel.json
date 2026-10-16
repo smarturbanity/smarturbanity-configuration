@@ -2,7 +2,8 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
+    "privacy_classification": "heightened_personal",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -31,7 +32,8 @@
         "questions": [
           {
             "text": "Which travel mode do you most often use for your trips?",
-            "answer_key": "usual_mode_v1",
+            "answer_key": "usual_mode",
+            "legacy_answer_keys": ["usual_mode_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -78,7 +80,8 @@
           },
           {
             "text": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
-            "answer_key": "v1_do_you_use_any_combination_of_the_fo",
+            "answer_key": "do_you_use_any_combination_of_the_fo",
+            "legacy_answer_keys": ["v1_do_you_use_any_combination_of_the_fo"],
             "question_type": "multiple_options",
             "options": [
               {
@@ -129,7 +132,8 @@
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
-            "answer_key": "multimodal_difficulties_v1",
+            "answer_key": "multimodal_difficulties",
+            "legacy_answer_keys": ["multimodal_difficulties_v1"],
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
@@ -186,7 +190,8 @@
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
-            "answer_key": "multimodal_response_v1",
+            "answer_key": "multimodal_response",
+            "legacy_answer_keys": ["multimodal_response_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -234,7 +239,8 @@
           },
           {
             "text": "How often do you use shared mobility services (bike-share, e-scooter, car-share)?",
-            "answer_key": "shared_frequency_v1",
+            "answer_key": "shared_frequency",
+            "legacy_answer_keys": ["shared_frequency_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -296,7 +302,8 @@
           },
           {
             "text": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
-            "answer_key": "freq_trip_company_v1",
+            "answer_key": "freq_trip_company",
+            "legacy_answer_keys": ["freq_trip_company_v1"],
             "question_type": "single_option",
             "options": [
               {
@@ -315,7 +322,9 @@
           },
           {
             "text": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
-            "answer_key": "freq_trip_purpose_v1",
+            "answer_key": "freq_trip_purpose",
+            "legacy_answer_keys": ["freq_trip_purpose_v1"],
+            "privacy_classification": "heightened_personal",
             "question_type": "single_option",
             "options": [
               {
@@ -411,7 +420,8 @@
           },
           {
             "text": "Which aspects of your current primary mode of transport are you most dissatisfied with?",
-            "answer_key": "usual_mode_dissatisfied_v1",
+            "answer_key": "usual_mode_dissatisfied",
+            "legacy_answer_keys": ["usual_mode_dissatisfied_v1"],
             "question_type": "multiple_options",
             "options": [
               {
@@ -460,7 +470,8 @@
           },
           {
             "text": "When choosing how to travel, which factors matter most to you?",
-            "answer_key": "choice_factors_v1",
+            "answer_key": "choice_factors",
+            "legacy_answer_keys": ["choice_factors_v1"],
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
@@ -512,7 +523,8 @@
         "questions": [
           {
             "text": "Which of the following vehicles are available in your household? (Select all that apply)",
-            "answer_key": "hh_vehicles_v1",
+            "answer_key": "hh_vehicles",
+            "legacy_answer_keys": ["hh_vehicles_v1"],
             "question_type": "multiple_options",
             "options": [
               {
@@ -540,7 +552,8 @@
           },
           {
             "text": "Which of the following do you personally use regularly? (Select all that apply)",
-            "answer_key": "vehicles_used_v1",
+            "answer_key": "vehicles_used",
+            "legacy_answer_keys": ["vehicles_used_v1"],
             "question_type": "multiple_options",
             "options": [
               {
@@ -571,7 +584,7 @@
             "answer_key": "vehicle_ease",
             "question_type": "single_option",
             "show_if": {
-              "hh_vehicles_v1": [
+              "hh_vehicles": [
                 "Other",
                 "e_scooter",
                 "bicycle_e_bike",
