@@ -15,6 +15,22 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
+## Questionnaire privacy labels
+
+Every form declares `questionnaire.privacy_classification`. A question or an
+individual option can carry a more specific label:
+
+- `personal_data`: the response is linked to a participant record;
+- `heightened_personal`: the response warrants additional handling, for example
+  because it contains a location, a habitual travel pattern or free text;
+- `special_category_health`: the response may reveal health, injury or disability.
+
+`special_category: "health"` separately flags a question or option for review.
+Option-level labels apply only when that option is selected. These labels are
+metadata for review and downstream handling; they do not themselves collect
+consent, restrict access or redact exports. The legal treatment and application
+controls need separate review.
+
 ## Repository structure
 
 The intended structure is:
@@ -194,7 +210,7 @@ Every form is self-standing: it asks its own context questions (point of view, h
 
 ### Minimum and details
 
-The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), the use difficulty and the perceived risk for the selected mode, and the perceived safety of an underpass or a bridge. These are the indicators the infrastructure view uses. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition.
+The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), the use difficulty and the perceived risk for the selected mode, and the perceived safety of an underpass or a bridge when applicable. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true`; detail questions carry `"required": false`. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition.
 
 ### Missing elements
 
@@ -212,10 +228,18 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
-`email.uid_salt` is the project salt used to compute the pseudonymous participant
-code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and is
-not a secret; keep it unchanged, because changing it separates future answers from
-earlier ones. The email itself is never stored.
+Each pilot may provide its own privacy notice and consent version. Rome declares
+`pilots/rome/privacy/privacy.html` under `questionnaires.consent.privacy_link` and
+its shorter summary at `pilots/rome/privacy/privacy-short.html`. A relative link is
+resolved from the repository root, including when the configuration is served
+offline. The Rome notice and consent version are drafts pending controller review.
+
+`participant_code_destination` describes the service that returns the pseudonymous
+participant code. The client sends the participant identifier or an account token
+to that service; it does not compute the code from a salt in this configuration.
+The configured destination currently points to the spatial server mock at
+`/api/v1/participant-codes`. Application and service support is required before
+using this configuration in a running pilot.
 
 The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
@@ -227,7 +251,7 @@ When a form is offered is pilot configuration, not part of the form. Each pilot 
 {
   "config_type": "smarturbanity_survey_campaigns",
   "pilot_id": "rome",
-  "pilot_period": {"start_date": "2026-10-05", "end_date": null, "timezone": "Europe/Rome"},
+  "pilot_period": {"start_date": "2026-11-14", "end_date": null, "timezone": "Europe/Rome"},
   "rules": {"show_all_in_debug": true},
   "campaigns": {
     "rome_walking": {
@@ -314,7 +338,7 @@ Individual configuration objects may additionally expose explicit schema or conf
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
 
-Applications check the `questionnaire_version` of each form they load against the version they expect, so a changed form needs a new version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
+Applications check the `questionnaire_version` of each form they load against the version they expect. Changed answer keys, visibility or requiredness need a new form version and a matching application update. Historical responses must be interpreted with their form version when keys have been renamed. Adding privacy labels alone does not change the response contract and retains the form version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
 
 ## Scope
 

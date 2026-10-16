@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - How this place feels",
     "questionnaire_id": "smarturbanity_geolocated_perception_report",
-    "questionnaire_version": "0.2.2",
+    "questionnaire_version": "0.2.3",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -42,7 +42,9 @@
               },
               {
                 "text": "In a wheelchair or mobility scooter",
-                "value": "wheelchair"
+                "value": "wheelchair",
+                "privacy_classification": "special_category_health",
+                "special_category": "health"
               },
               {
                 "text": "By bike or e-scooter",
@@ -113,7 +115,8 @@
                 "text": "Every day or almost",
                 "value": "daily"
               }
-            ]
+            ],
+            "required": true
           },
           {
             "text": "How safe from traffic do you feel here?",
@@ -253,7 +256,15 @@
                 "text": "Yes, whenever I can",
                 "value": "always"
               }
-            ]
+            ],
+            "show_if": {
+              "place_use_frequency": [
+                "lt_monthly",
+                "monthly",
+                "weekly",
+                "daily"
+              ]
+            }
           },
           {
             "text": "What influenced your answers most, for better or worse? (Up to 3)",
@@ -608,11 +619,13 @@
                 "yes"
               ]
             },
-            "checks_inline": false
+            "checks_inline": false,
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
-    ]
+    ],
+    "privacy_classification": "heightened_personal"
   },
   "languages": {
     "en": {

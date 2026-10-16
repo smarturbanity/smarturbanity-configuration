@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - About You",
     "questionnaire_id": "smarturbanity_about_you",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "What is your age group? (Participation is limited to adults aged 18 or older)",
-            "answer_key": "age_group_v1",
+            "answer_key": "age_group",
             "question_type": "single_option",
             "options": [
               {
@@ -71,7 +71,7 @@
           },
           {
             "text": "What is your gender?",
-            "answer_key": "gender_v1",
+            "answer_key": "gender",
             "question_type": "single_option",
             "options": [
               {
@@ -188,7 +188,7 @@
           },
           {
             "text": "Which best describes your employment status?",
-            "answer_key": "employment_v1",
+            "answer_key": "employment",
             "question_type": "single_option",
             "options": [
               {
@@ -232,11 +232,12 @@
                 "value": "adult_learner_student"
               }
             ],
-            "add_other": true
+            "add_other": true,
+            "required": true
           },
           {
             "text": "Do you currently work remotely (partly or fully)?",
-            "answer_key": "remote_work_v1",
+            "answer_key": "remote_work",
             "question_type": "single_option",
             "options": [
               {
@@ -255,11 +256,20 @@
                 "text": "I am not currently employed",
                 "value": "i_am_not_currently_employed"
               }
-            ]
+            ],
+            "show_if": {
+              "employment": [
+                "employed_full_time",
+                "employed_part_time",
+                "occasionally_employed",
+                "self_employed_freelance_full_time",
+                "self_employed_freelance_part_time"
+              ]
+            }
           },
           {
             "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
-            "answer_key": "flexible_hours_v1",
+            "answer_key": "flexible_hours",
             "question_type": "single_option",
             "options": [
               {
@@ -278,11 +288,20 @@
                 "text": "I am not currently employed",
                 "value": "i_am_not_currently_employed"
               }
-            ]
+            ],
+            "show_if": {
+              "employment": [
+                "employed_full_time",
+                "employed_part_time",
+                "occasionally_employed",
+                "self_employed_freelance_full_time",
+                "self_employed_freelance_part_time"
+              ]
+            }
           },
           {
             "text": "Do you have any condition or limitation that affects your ability to move independently?",
-            "answer_key": "mobility_limitation_v1",
+            "answer_key": "mobility_limitation",
             "question_type": "single_option",
             "options": [
               {
@@ -297,7 +316,9 @@
                 "text": "Yes, I have a permanent mobility condition/limitation",
                 "value": "yes_i_have_a_permanent_mobility_conditio"
               }
-            ]
+            ],
+            "privacy_classification": "special_category_health",
+            "special_category": "health"
           },
           {
             "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
@@ -331,7 +352,7 @@
           },
           {
             "text": "Do you belong to any of these groups?",
-            "answer_key": "professional_role_v1",
+            "answer_key": "professional_role",
             "question_type": "single_option",
             "options": [
               {
@@ -388,11 +409,13 @@
                 "text": "More than 2 km",
                 "value": "gt_2km"
               }
-            ]
+            ],
+            "privacy_classification": "special_category_health",
+            "special_category": "health"
           },
           {
             "text": "How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.",
-            "answer_key": "active_days_v1",
+            "answer_key": "active_days",
             "question_type": "single_option",
             "options": [
               {
@@ -415,11 +438,12 @@
                 "text": "Daily / Near Daily (6–7 days)",
                 "value": "daily_near_daily_67_days"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How would you describe your current level of physical fitness (strength, endurance, and overall health)?",
-            "answer_key": "fitness_v1",
+            "answer_key": "fitness",
             "question_type": "single_option",
             "options": [
               {
@@ -442,7 +466,9 @@
                 "text": "High",
                 "value": "high"
               }
-            ]
+            ],
+            "privacy_classification": "special_category_health",
+            "special_category": "health"
           },
           {
             "text": "What is your approximate height?",
@@ -469,7 +495,8 @@
                 "text": "195 cm or more",
                 "value": "195_plus"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal"
           }
         ]
       },
@@ -499,17 +526,18 @@
                 "text": "I’m here temporarily for another reason (Visitor)",
                 "value": "reason"
               }
-            ]
+            ],
+            "required": true
           },
           {
             "text": "In which Municipio of Rome do you currently live?",
-            "answer_key": "v1_in_which_municipio_of_rome_do_you_cu",
+            "answer_key": "home_municipio",
             "question_type": "single_option",
             "show_if": {
               "residence": [
+                "travel",
                 "visit",
-                "reason",
-                "travel"
+                "reason"
               ]
             },
             "options": [
@@ -886,7 +914,7 @@
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
-            "answer_key": "reasons_outside_v1",
+            "answer_key": "reasons_outside",
             "question_type": "multiple_options",
             "max_answers": 3,
             "options": [
@@ -900,7 +928,8 @@
               },
               {
                 "text": "Healthcare (doctor, pharmacy, hospital)",
-                "value": "healthcare_doctor_pharmacy_hospital"
+                "value": "healthcare_doctor_pharmacy_hospital",
+                "privacy_classification": "special_category_health"
               },
               {
                 "text": "Schools or childcare",
@@ -939,11 +968,12 @@
                 "value": "i_rarely_or_never_travel_outside_my_neig"
               }
             ],
-            "add_other": true
+            "add_other": true,
+            "required": true
           },
           {
             "text": "How strongly do you feel connected to the place where you live and the people in your community?",
-            "answer_key": "place_attachment_v1",
+            "answer_key": "place_attachment",
             "question_type": "single_option",
             "options": [
               {
@@ -970,7 +1000,8 @@
           }
         ]
       }
-    ]
+    ],
+    "privacy_classification": "heightened_personal"
   },
   "languages": {
     "en": {

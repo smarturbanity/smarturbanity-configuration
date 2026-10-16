@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Walking",
     "questionnaire_id": "smarturbanity_walking",
-    "questionnaire_version": "0.1.2",
+    "questionnaire_version": "0.1.3",
     "project": "SmartUrbanity",
     "estimated_minutes": 7,
     "options": {
@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)",
-            "answer_key": "walk_days_v1",
+            "answer_key": "walk_days",
             "question_type": "single_option",
             "required": true,
             "options": [
@@ -47,10 +47,10 @@
           },
           {
             "text": "Which of the following physical barriers do you face on your walking route? (Select all that apply)",
-            "answer_key": "v1_which_of_the_following_physical_barr",
+            "answer_key": "walk_physical_barriers",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -90,10 +90,10 @@
           },
           {
             "text": "How do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) affect your journey?",
-            "answer_key": "v1_how_do_poor_sidewalk_conditions_e_g",
+            "answer_key": "walk_sidewalk_condition_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -120,10 +120,10 @@
           },
           {
             "text": "How do temporary obstacles (e.g., roadworks, bins, or parked scooters) typically affect your walking route?",
-            "answer_key": "avoid_obstacles_v1",
+            "answer_key": "avoid_obstacles",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -150,10 +150,10 @@
           },
           {
             "text": "To what extent does the steepness of your route affect your walking?",
-            "answer_key": "v1_to_what_extent_does_the_steepness_of",
+            "answer_key": "walk_slope_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -180,10 +180,10 @@
           },
           {
             "text": "How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?",
-            "answer_key": "avoid_dangerous_crossing_v1",
+            "answer_key": "avoid_dangerous_crossing",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -210,10 +210,10 @@
           },
           {
             "text": "How does the availability of benches and rest areas affect your ability to complete your journey?",
-            "answer_key": "benches_importance_v1",
+            "answer_key": "benches_importance",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -236,14 +236,15 @@
                 "text": "I rely on rest areas to make my journey possible; without them I could not travel this far",
                 "value": "i_rely_on_rest_areas_to_make_my_journey"
               }
-            ]
+            ],
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "How does the quality of street lighting affect your choice of route or your decision to walk after dark?",
-            "answer_key": "v1_how_does_the_quality_of_street_light",
+            "answer_key": "walk_lighting_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -270,10 +271,10 @@
           },
           {
             "text": "How does the presence (or lack) of trees, parks, or green spaces affect your route choice?",
-            "answer_key": "prefer_pleasant_v1",
+            "answer_key": "prefer_pleasant",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -300,10 +301,10 @@
           },
           {
             "text": "How does shade and heat (e.g., from sun exposure or hot pavement) affect your walking journeys during warmer months?",
-            "answer_key": "v1_how_does_shade_and_heat_e_g_from_sun",
+            "answer_key": "walk_heat_shade_effect",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -330,10 +331,10 @@
           },
           {
             "text": "How does the quality of signs and wayfinding on your route affect your confidence as a pedestrian?",
-            "answer_key": "wayfinding_v1",
+            "answer_key": "wayfinding",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -360,10 +361,10 @@
           },
           {
             "text": "How do traffic levels and congestion on your route typically affect your walking experience?",
-            "answer_key": "avoid_fast_traffic_v1",
+            "answer_key": "avoid_fast_traffic",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -390,10 +391,10 @@
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while walking?",
-            "answer_key": "risky_road_users_v1",
+            "answer_key": "risky_road_users",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "max_answers": 3,
             "options": [
@@ -438,10 +439,10 @@
           },
           {
             "text": "How do cyclists and e-scooter riders affect your sense of safety while walking?",
-            "answer_key": "riding_on_pavement_v1",
+            "answer_key": "riding_on_pavement",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -468,10 +469,10 @@
           },
           {
             "text": "How does walking alongside or crossing high-speed roads (e.g., main roads or highways) affect your sense of safety?",
-            "answer_key": "fast_vehicles_v1",
+            "answer_key": "fast_vehicles",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -498,10 +499,10 @@
           },
           {
             "text": "Does walking as part of your daily travel contribute positively to your physical or mental health?",
-            "answer_key": "v1_does_walking_as_part_of_your_daily_t",
+            "answer_key": "walk_health_benefit",
             "question_type": "single_option",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "options": [
               {
@@ -524,14 +525,16 @@
                 "text": "Very much, walking is a key part of my physical and mental wellbeing",
                 "value": "very_much_walking_is_a_key_part_of_my_ph"
               }
-            ]
+            ],
+            "privacy_classification": "heightened_personal",
+            "special_category": "health"
           },
           {
             "text": "What improvements would most encourage you to walk more often or for longer distances?",
-            "answer_key": "walk_improvements_v1",
+            "answer_key": "walk_improvements",
             "question_type": "multiple_options",
             "show_if": {
-              "walk_days_v1": "yes"
+              "walk_days": "yes"
             },
             "max_answers": 3,
             "options": [
@@ -576,7 +579,8 @@
           }
         ]
       }
-    ]
+    ],
+    "privacy_classification": "personal_data"
   },
   "languages": {
     "en": {

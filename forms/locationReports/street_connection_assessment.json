@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.2.0",
+    "questionnaire_version": "0.2.1",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -35,7 +35,8 @@
                 "value": "cyclist"
               }
             ],
-            "show_if": {}
+            "show_if": {},
+            "required": true
           },
           {
             "text": "Which of these describe your trip today?",
@@ -57,7 +58,9 @@
               },
               {
                 "text": "Using a wheelchair or mobility aid",
-                "value": "mobility_aid"
+                "value": "mobility_aid",
+                "privacy_classification": "special_category_health",
+                "special_category": "health"
               },
               {
                 "text": "Travelling with a stroller",
@@ -68,7 +71,8 @@
                 "value": "none"
               }
             ],
-            "show_if": {}
+            "show_if": {},
+            "required": true
           },
           {
             "text": "How often do you use or pass this connection?",
@@ -96,7 +100,8 @@
                 "text": "Almost every day",
                 "value": "5_daily"
               }
-            ]
+            ],
+            "required": true
           }
         ]
       },
@@ -132,7 +137,8 @@
                 "text": "Other type of connection",
                 "value": "other"
               }
-            ]
+            ],
+            "required": true
           },
           {
             "text": "Which best describes using this connection while walking?",
@@ -166,7 +172,8 @@
               "assessment_perspective": [
                 "pedestrian"
               ]
-            }
+            },
+            "required": true
           },
           {
             "text": "How risky does it feel to use this connection while walking?",
@@ -200,7 +207,8 @@
               "assessment_perspective": [
                 "pedestrian"
               ]
-            }
+            },
+            "required": true
           },
           {
             "text": "Which best describes using this connection while cycling?",
@@ -234,7 +242,8 @@
               "assessment_perspective": [
                 "cyclist"
               ]
-            }
+            },
+            "required": true
           },
           {
             "text": "How risky does it feel to use this connection while cycling?",
@@ -268,7 +277,8 @@
               "assessment_perspective": [
                 "cyclist"
               ]
-            }
+            },
+            "required": true
           },
           {
             "text": "How safe do you feel in this underpass?",
@@ -300,7 +310,8 @@
             ],
             "show_if": {
               "connection_form": "under_road"
-            }
+            },
+            "required": true
           },
           {
             "text": "How safe do you feel on this bridge?",
@@ -332,7 +343,8 @@
             ],
             "show_if": {
               "connection_form": "over_road"
-            }
+            },
+            "required": true
           },
           {
             "text": "Would you like to add a few optional details?",
@@ -348,7 +360,8 @@
                 "text": "Yes, add optional details",
                 "value": "yes_audit"
               }
-            ]
+            ],
+            "required": true
           }
         ]
       },
@@ -386,7 +399,8 @@
               "assessment_perspective": [
                 "pedestrian"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "Can bicycles use this connection?",
@@ -421,7 +435,8 @@
               "assessment_perspective": [
                 "cyclist"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "Which elements are part of this connection?",
@@ -455,7 +470,8 @@
                 "level_change",
                 "other"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "When people use this connection, how is crossing controlled?",
@@ -491,7 +507,8 @@
             "show_if": {
               "continue_audit": "yes_audit",
               "connection_form": "street_level"
-            }
+            },
+            "required": false
           },
           {
             "text": "How many traffic lanes must people cross here?",
@@ -524,7 +541,8 @@
             "show_if": {
               "continue_audit": "yes_audit",
               "connection_form": "street_level"
-            }
+            },
+            "required": false
           },
           {
             "text": "How easy is it to understand where people should go?",
@@ -556,7 +574,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "Before crossing, can people clearly see approaching vehicles or bicycles?",
@@ -584,7 +603,8 @@
             "show_if": {
               "continue_audit": "yes_audit",
               "connection_form": "street_level"
-            }
+            },
+            "required": false
           },
           {
             "text": "Can people clearly see the path and the exit?",
@@ -617,7 +637,8 @@
                 "level_change",
                 "other"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "Is there enough room to wait or stop safely?",
@@ -645,7 +666,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "Who might face barriers when using this connection?",
@@ -685,7 +707,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           }
         ]
       },
@@ -724,8 +747,12 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit",
-              "traffic_control": "priority_no_signal"
-            }
+              "traffic_control": [
+                "no_control",
+                "priority_no_signal"
+              ]
+            },
+            "required": false
           },
           {
             "text": "At the signal, how long do people usually wait for green?",
@@ -762,7 +789,8 @@
                 "permissive_signal_with_turning_conflict",
                 "unclear_signal_priority"
               ]
-            }
+            },
+            "required": false
           }
         ]
       },
@@ -801,7 +829,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "What would improve this connection most?",
@@ -845,7 +874,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "Anything else you want to add?",
@@ -854,7 +884,9 @@
             "checks_inline": false,
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "privacy_classification": "heightened_personal",
+            "required": false
           }
         ]
       },
@@ -901,7 +933,8 @@
                 "4_difficult",
                 "5_very_difficult"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "What blocks the view, if anything?",
@@ -948,8 +981,14 @@
               }
             ],
             "show_if": {
-              "continue_audit": "yes_audit"
-            }
+              "continue_audit": "yes_audit",
+              "connection_form": "street_level",
+              "street_level_visibility": [
+                "2_partly",
+                "3_poor"
+              ]
+            },
+            "required": false
           },
           {
             "text": "What helps people use this connection safely?",
@@ -996,7 +1035,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "What problems do you see in this underpass?",
@@ -1029,7 +1069,8 @@
             "show_if": {
               "continue_audit": "yes_audit",
               "connection_form": "under_road"
-            }
+            },
+            "required": false
           },
           {
             "text": "Is this bridge covered?",
@@ -1059,7 +1100,8 @@
             "show_if": {
               "continue_audit": "yes_audit",
               "connection_form": "over_road"
-            }
+            },
+            "required": false
           },
           {
             "text": "For stairs, what helps people use them?",
@@ -1101,7 +1143,8 @@
               "connection_elements": [
                 "stairs"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "For a ramp, what helps people use it?",
@@ -1143,7 +1186,8 @@
               "connection_elements": [
                 "ramp"
               ]
-            }
+            },
+            "required": false
           },
           {
             "text": "How often do you observe potentially conflicting uses of this connection?",
@@ -1175,7 +1219,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit"
-            }
+            },
+            "required": false
           },
           {
             "text": "Which situations do you observe?",
@@ -1212,11 +1257,13 @@
                 "4_often",
                 "5_very_often"
               ]
-            }
+            },
+            "required": false
           }
         ]
       }
-    ]
+    ],
+    "privacy_classification": "heightened_personal"
   },
   "languages": {
     "en": {
