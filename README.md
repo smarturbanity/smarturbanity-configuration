@@ -175,6 +175,10 @@ Every form is self-standing: it asks its own context questions (point of view, h
 
 The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition.
 
+### Special-category data
+
+`special_category: "health"` marks GDPR art. 9 health data, pending legal review; no runtime behaviour yet. It sits on a question when the whole question collects the respondent's own health, disability, aid use, functional capacity or health effects, and on an option when only that option does. Questions about other people or the infrastructure, and healthcare as a destination, are not marked.
+
 ### Missing elements
 
 A missing crossing or connection uses `missing_connection_report`; a missing walking or cycling path uses `missing_path_report`. Both reuse option sets of the assessments (`connection_form`, `walk_facility`, `bike_facility`) and of the improvement proposal (`proposal_beneficiaries`), so their answers can be compared. `missing_network_element_report` remains for reports that a mapped element does not exist. The missing connection splits `level_change` into `ramp_or_lift` and `stairs` and adds `exists_closed`; the missing path adds `accessible_sidewalk`, `passage_through_area`, `other` and "I don't know" and drops `shoulder`. Map them to the assessment sets when comparing answers.

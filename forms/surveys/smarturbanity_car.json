@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Driving",
     "questionnaire_id": "smarturbanity_car",
-    "questionnaire_version": "0.2.0",
+    "questionnaire_version": "0.2.1",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -83,7 +83,8 @@
               },
               {
                 "text": "My health, a disability or my age makes it difficult",
-                "value": "health_disability_or_age"
+                "value": "health_disability_or_age",
+                "special_category": "health"
               },
               {
                 "text": "Environmental reasons",
@@ -143,11 +144,13 @@
               },
               {
                 "text": "Routes and vehicles that are accessible for my disability or health condition",
-                "value": "accessible_routes_and_vehicles"
+                "value": "accessible_routes_and_vehicles",
+                "special_category": "health"
               },
               {
                 "text": "I need the car for my situation (e.g., disability, children, loads, work shifts)",
-                "value": "i_need_the_car_for_my_situation"
+                "value": "i_need_the_car_for_my_situation",
+                "special_category": "health"
               },
               {
                 "text": "I am not interested in using these modes more often",
@@ -175,7 +178,8 @@
               },
               {
                 "text": "I could not use them for health or disability reasons",
-                "value": "could_not_use_health_or_disability"
+                "value": "could_not_use_health_or_disability",
+                "special_category": "health"
               },
               {
                 "text": "Not sure",
@@ -410,6 +414,7 @@
             "text": "If you have a disabled parking permit: how often are the reserved spaces at your destination occupied by others or missing?",
             "help": "A disabled parking permit is the official card that allows parking in spaces reserved for people with disabilities. We ask this to understand whether these spaces are really available. Answering is optional, and you can also choose not to say.",
             "answer_key": "car_disabled_parking",
+            "special_category": "health",
             "question_type": "single_option",
             "show_if": {
               "car_weekly": "yes"
