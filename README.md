@@ -63,6 +63,11 @@ configuration revision compatible with the currently deployed CityMaaS form
 versions. The `fallbackPath` values are CityMaaS package paths used when an online
 source is unavailable. Advance the pinned source URLs with the CityMaaS form and
 participant-code support in one coordinated release.
+Each manifest also declares the compatible `forms/` catalog and the privacy notice
+links used by its installations. The Access Lab manifest overrides only the notice
+version and links; consent text and participant settings remain in `base.json` and
+the selected pilot. A deployed installation requires the online sources because it
+does not bundle this repository as a fallback.
 
 ## Shared definitions
 
