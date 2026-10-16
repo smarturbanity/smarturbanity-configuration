@@ -15,6 +15,24 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
+## Questionnaire privacy labels
+
+Every form declares `questionnaire.privacy_classification`. Questions and individual
+options may override that label. The values are:
+
+- `personal_data`: responses are linked to a participant record;
+- `heightened_personal`: details such as demographics, habitual travel, precise
+  location or open text warrant additional handling, but are not automatically
+  special-category data under GDPR Article 9;
+- `special_category_health`: an answer may reveal a person's physical or mental
+  health, injury or disability. An option-level label applies only when that option
+  is selected; a question-level label applies to every answer to that question.
+
+These labels are an inventory for review and downstream handling. They do not
+themselves grant a lawful basis, collect explicit consent, restrict access or
+redact exported responses. Those behaviors require separate application controls.
+See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
+
 ## Repository structure
 
 The intended structure is:
@@ -311,7 +329,7 @@ Individual configuration objects may additionally expose explicit schema or conf
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
 
-Applications check the `questionnaire_version` of each form they load against the version they expect, so a changed form needs a new version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
+Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
 
 ## Scope
 
