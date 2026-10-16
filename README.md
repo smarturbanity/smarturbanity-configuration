@@ -208,10 +208,11 @@ serves, so the notice also opens offline:
 `docs/privacy-smarturbanity.html` is the common framework of all pilots and lists their notices; it stays the
 `privacy_link` of `base.json` for a pilot without its own notice. The pages share `docs/assets/SmartUrbanity`.
 
-`email.uid_salt` is the project salt used to compute the pseudonymous participant
-code `SHA256(salt + email.toLowerCase().trim())`. It is shipped to browsers and is
-not a secret; keep it unchanged, because changing it separates future answers from
-earlier ones. The email itself is never stored.
+`participant_code_destination` is the participant-code service of Movesion, a response destination descriptor:
+the app posts the person's email or mobile number (`{marker}`) or, for a signed-in Movesion account, only its access
+token (`Authorization: Bearer`), and receives the pseudonymous participant code (`{code}`). The browser never computes
+the code and the configuration holds no salt; the email or number itself is never stored. Until Movesion's service
+exists the destination points to the spatial server mock's `/api/v1/participant-codes`.
 
 The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
