@@ -32,6 +32,10 @@ smarturbanity-configuration/
 │   ├── tripSurveys/
 │   └── locationReports/
 │
+├── manifests/
+│   ├── smarturbanity.json
+│   └── smarturbanity_surveys.json
+│
 ├── pilots/
 │   ├── rome/
 │   ├── karlsruhe/
@@ -48,6 +52,17 @@ pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes
 is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
+
+## CityMaaS manifests
+
+`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
+`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
+CityMaaS loads these manifests from this repository. Their nested source URLs are
+temporarily pinned to commit `bede6a3b769f1ee1ac92bf6340bd9fc2747c3b9d`, the
+configuration revision compatible with the currently deployed CityMaaS form
+versions. The `fallbackPath` values are CityMaaS package paths used when an online
+source is unavailable. Advance the pinned source URLs with the CityMaaS form and
+participant-code support in one coordinated release.
 
 ## Shared definitions
 
