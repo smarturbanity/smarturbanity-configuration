@@ -164,6 +164,11 @@ the Municipio XII polygons define the Study Area boundary only. Areas outside
 that boundary may remain loaded only when fully contained by `data_bbox`, but
 Access Inspector shows them with one neutral colour instead of a KPI class.
 
+`data_model.package_properties` lists, per element kind, the attributes the spatial
+database exposes to applications. Rome's connections expose `walk_access`,
+`bike_access` and the derived attributes `crossing_kind` and `crossing_users` that
+forms may use to prefill a question (see [Prefill from element attributes](#prefill-from-element-attributes)).
+
 ## Extensions and overrides
 
 Some SmartUrbanity definitions are shared across pilots, while others may require local adaptation.
@@ -211,7 +216,37 @@ Every form is self-standing: it asks its own context questions (point of view, h
 
 ### Minimum and details
 
-The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition.
+The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), for a street crossing how it is controlled (`crossing_kind`) and who it is for (`crossing_users`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition. `crossing_kind` and `crossing_users` declare `prefill_from`, so with a known element attribute they cost one confirmation each.
+
+### Prefill from element attributes
+
+A question of a form that assesses a mapped element may declare `"prefill_from": "element.<attribute>"`. The value comes from that attribute of the assessed element (the response `entity`) as exposed by the spatial database, today the mock and later the server. The database merges several sources, among them OpenStreetMap; a form never names a source tag such as `osm.crossing`, because mapping a source to an attribute belongs to the database import.
+
+- Only `single_option` questions declare it, and the attribute's values are `value`s of that question's options.
+- When the element has the attribute and its value is one of the options, the application shows the question with that option selected and says that it comes from the map. The person confirms it or chooses another answer, including "I don't know".
+- When the attribute is missing, `null` or not one of the options, nothing is selected and the question is asked normally. A missing attribute never means "no", and the import leaves the attribute empty when its sources disagree.
+- A prefilled value is a proposal, not an answer: it enters `answers` only when the person confirms it. A question hidden by `show_if` is not prefilled, and `required` keeps its meaning.
+- Without asking, the response records in `meta.prefill` how each question that declares `prefill_from` was answered: `{"<answer_key>": "confirmed" | "changed" | "asked"}`, where `asked` means there was no proposal. It measures how often the database is right and is not an answer.
+- Adding `prefill_from` to a question changes application behaviour, so the form needs a new version (see [Versioning](#versioning)).
+
+Element attributes available for prefill:
+
+| Attribute | Element | Values |
+| --- | --- | --- |
+| `element.crossing_kind` | connection of type `crossing` | `signal`, `marked_no_signal`, `unmarked` |
+| `element.crossing_users` | connection of type `crossing` | `pedestrians_only`, `shared_ped_bike`, `separate_bike_lane`, `bikes_not_marked` |
+
+The import derives them; this table records the intended mapping from OpenStreetMap for Rome so that importers agree. `crossing_kind` reads `crossing` on the crossing node and on the crossing segments of the connection:
+
+| OpenStreetMap `crossing` | `crossing_kind` |
+| --- | --- |
+| `traffic_signals`, `zebra;traffic_signals` | `signal` |
+| `zebra`, `marked` | `marked_no_signal` |
+| `uncontrolled` | `marked_no_signal`, less reliable; whether to set it or leave the attribute empty is still open |
+| `unmarked` | `unmarked` |
+| `traffic_island` only, any other value, or segments that disagree | no value |
+
+`crossing_users` is set only with evidence: a crossing segment with `cycleway=crossing` gives `shared_ped_bike`, or `separate_bike_lane` when a source shows separate bicycle markings; `bicycle=no` (`bike_access: false`) gives `pedestrians_only`. `bike_access: true` alone gives no value, because it does not say how the crossing is marked. An island (`traffic_island`, `crossing:island`), the push button, the audible signal, tactile paving and kerbs are not imported yet, so no question is prefilled from them.
 
 ### Special-category data
 
@@ -343,7 +378,7 @@ Individual configuration objects may additionally expose explicit schema or conf
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
 
-Applications check the `questionnaire_version` of each form they load against the version they expect. Changed answer keys, visibility or requiredness need a new form version and a matching application update. Historical responses must be interpreted with their form version when keys have been renamed. Adding privacy labels alone does not change the response contract and retains the form version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
+Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. [docs/QUESTIONNAIRE_CHANGES.md](docs/QUESTIONNAIRE_CHANGES.md) lists the keys, options and conditions each form version changes. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
 
 ## Scope
 
