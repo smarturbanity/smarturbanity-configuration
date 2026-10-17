@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.3.1",
+    "questionnaire_version": "0.4.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -147,6 +147,62 @@
                 "value": "other"
               }
             ],
+            "required": true
+          },
+          {
+            "text": "How is this crossing controlled?",
+            "answer_key": "crossing_kind",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "prefill_from": "element.crossing_kind",
+            "options": [
+              {
+                "text": "With a traffic light",
+                "value": "signal"
+              },
+              {
+                "text": "Zebra crossing without a traffic light",
+                "value": "marked_no_signal"
+              },
+              {
+                "text": "No zebra stripes and no traffic light",
+                "value": "unmarked"
+              }
+            ],
+            "show_if": {
+              "connection_form": "street_level"
+            },
+            "required": true
+          },
+          {
+            "text": "Who is this crossing for?",
+            "answer_key": "crossing_users",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "prefill_from": "element.crossing_users",
+            "options": [
+              {
+                "text": "Only for people walking",
+                "value": "pedestrians_only"
+              },
+              {
+                "text": "Shared: bicycles and pedestrians together",
+                "value": "shared_ped_bike"
+              },
+              {
+                "text": "There are separate markings for bicycles next to the pedestrian ones",
+                "value": "separate_bike_lane"
+              },
+              {
+                "text": "Not marked for bicycles, but bicycles use it",
+                "value": "bikes_not_marked"
+              }
+            ],
+            "show_if": {
+              "connection_form": "street_level"
+            },
             "required": true
           },
           {
@@ -434,6 +490,50 @@
             "required": false
           },
           {
+            "text": "By bicycle or e-scooter, what problems do you find at this crossing?",
+            "answer_key": "cyclist_crossing_problems",
+            "question_type": "multiple_options",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "The cycle path stops before or after the crossing",
+                "value": "bike_path_interrupted"
+              },
+              {
+                "text": "There is no crossing for bicycles: people use the zebra crossing",
+                "value": "no_bike_crossing"
+              },
+              {
+                "text": "Cars do not give way to bicycles",
+                "value": "not_yielding"
+              },
+              {
+                "text": "Cars or motorcycles stopped on the cycle path near the crossing",
+                "value": "bike_path_blocked"
+              },
+              {
+                "text": "A curb or step at the entrance of the cycle path",
+                "value": "kerb_at_entry"
+              },
+              {
+                "text": "Tram tracks to cross",
+                "value": "tram_tracks"
+              },
+              {
+                "text": "No clear problem",
+                "value": "none"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "assessment_perspective": [
+                "cyclist"
+              ]
+            },
+            "required": false
+          },
+          {
             "text": "Which elements are part of this place?",
             "answer_key": "connection_elements",
             "question_type": "multiple_options",
@@ -569,6 +669,62 @@
             "required": false
           },
           {
+            "text": "How do you get the green light to cross?",
+            "answer_key": "signal_call",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "It comes by itself, every cycle",
+                "value": "automatic"
+              },
+              {
+                "text": "You have to press the button, and it works",
+                "value": "push_button_working"
+              },
+              {
+                "text": "There is a button, but it does not work",
+                "value": "push_button_broken"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "crossing_kind": [
+                "signal"
+              ]
+            },
+            "required": false
+          },
+          {
+            "text": "Does the traffic light have a sound signal for people who cannot see?",
+            "answer_key": "audible_signal_status",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, and it works",
+                "value": "working"
+              },
+              {
+                "text": "Yes, but it does not work or can barely be heard",
+                "value": "broken"
+              },
+              {
+                "text": "No, there is none",
+                "value": "missing"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "crossing_kind": [
+                "signal"
+              ]
+            },
+            "required": false
+          },
+          {
             "text": "How many traffic lanes must people cross here?",
             "help": "A traffic lane is a strip of road for one line of moving vehicles. Bus lanes count, parking spaces do not.",
             "answer_key": "lanes_crossed",
@@ -641,6 +797,10 @@
                 "value": "parked_or_stopped_vehicles"
               },
               {
+                "text": "Parked motorcycles, mopeds or e-scooters",
+                "value": "two_wheelers_parked"
+              },
+              {
                 "text": "Trees or plants",
                 "value": "vegetation"
               },
@@ -651,6 +811,10 @@
               {
                 "text": "Signs, poles, boxes, or street furniture",
                 "value": "street_furniture"
+              },
+              {
+                "text": "Outdoor café or restaurant seating",
+                "value": "outdoor_seating"
               },
               {
                 "text": "Wall, fence, or building corner",
@@ -917,6 +1081,14 @@
                 "value": "non_slip_surface"
               },
               {
+                "text": "Markings or colored surface for bicycles",
+                "value": "bike_crossing_markings"
+              },
+              {
+                "text": "Traffic light for bicycles",
+                "value": "bike_signal"
+              },
+              {
                 "text": "None of these",
                 "value": "none"
               }
@@ -925,6 +1097,60 @@
               "continue_audit": "yes_audit"
             },
             "add_i_dont_know": true,
+            "required": false
+          },
+          {
+            "text": "What problems do you see at this crossing?",
+            "answer_key": "street_crossing_problems",
+            "question_type": "multiple_options",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "The stripes are faded or worn away",
+                "value": "faded_markings"
+              },
+              {
+                "text": "There is no curb ramp",
+                "value": "missing_curb_ramp"
+              },
+              {
+                "text": "There is a curb ramp, but cars or motorcycles park in front of it",
+                "value": "curb_ramp_blocked"
+              },
+              {
+                "text": "The curb ramp is broken or has a step to the road",
+                "value": "curb_ramp_damaged"
+              },
+              {
+                "text": "Cars or motorcycles parked on the crossing",
+                "value": "vehicles_parked_on_crossing"
+              },
+              {
+                "text": "Tram tracks to cross",
+                "value": "tram_tracks"
+              },
+              {
+                "text": "Cobblestones, potholes or damaged paving on the crossing",
+                "value": "uneven_paving"
+              },
+              {
+                "text": "Standing water after rain",
+                "value": "water_collects"
+              },
+              {
+                "text": "The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths",
+                "value": "bike_path_crosses_sidewalk"
+              },
+              {
+                "text": "No clear problem",
+                "value": "none"
+              }
+            ],
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "connection_form": "street_level"
+            },
             "required": false
           },
           {
@@ -1247,10 +1473,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit",
-              "traffic_control": [
-                "protected_signal",
-                "permissive_signal_with_turning_conflict",
-                "unclear_signal_priority"
+              "crossing_kind": [
+                "signal"
               ]
             },
             "required": false
@@ -1276,10 +1500,8 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit",
-              "traffic_control": [
-                "protected_signal",
-                "permissive_signal_with_turning_conflict",
-                "unclear_signal_priority"
+              "crossing_kind": [
+                "signal"
               ]
             },
             "add_i_dont_know": true,
@@ -1337,6 +1559,10 @@
               {
                 "text": "Motorcycles or e-scooters ride on the sidewalk",
                 "value": "motor_vehicles_on_sidewalk"
+              },
+              {
+                "text": "Motorcycles and mopeds weaving between stopped cars while people cross",
+                "value": "two_wheelers_filtering"
               },
               {
                 "text": "People cross outside the marked place",
@@ -1429,8 +1655,16 @@
                 "value": "zebra_crossing"
               },
               {
+                "text": "Sound signal at the traffic light for people who cannot see",
+                "value": "audible_signal"
+              },
+              {
                 "text": "More visible signs or markings (where they already exist)",
                 "value": "clearer_signs_markings"
+              },
+              {
+                "text": "Protect the crossing and curb ramp from parking (for example with bollards)",
+                "value": "protect_curb_ramp"
               },
               {
                 "text": "Better lighting",
@@ -1459,6 +1693,10 @@
               {
                 "text": "Better maintenance or cleaning",
                 "value": "maintenance_cleaning"
+              },
+              {
+                "text": "Connect the cycle path from one side of the crossing to the other",
+                "value": "connect_bike_path"
               },
               {
                 "text": "Nothing important",
@@ -1738,7 +1976,47 @@
       "#Please do not write names or other personal data.": "Please do not write names or other personal data.",
       "#Other": "Other",
       "#I don't know": "I don't know",
-      "#Street Connection Assessment – User Friendly": "Assess a crossing"
+      "#Street Connection Assessment – User Friendly": "Assess a crossing",
+      "#How is this crossing controlled?": "How is this crossing controlled?",
+      "#With a traffic light": "With a traffic light",
+      "#No zebra stripes and no traffic light": "No zebra stripes and no traffic light",
+      "#Who is this crossing for?": "Who is this crossing for?",
+      "#Only for people walking": "Only for people walking",
+      "#Shared: bicycles and pedestrians together": "Shared: bicycles and pedestrians together",
+      "#There are separate markings for bicycles next to the pedestrian ones": "There are separate markings for bicycles next to the pedestrian ones",
+      "#Not marked for bicycles, but bicycles use it": "Not marked for bicycles, but bicycles use it",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "By bicycle or e-scooter, what problems do you find at this crossing?",
+      "#The cycle path stops before or after the crossing": "The cycle path stops before or after the crossing",
+      "#There is no crossing for bicycles: people use the zebra crossing": "There is no crossing for bicycles: people use the zebra crossing",
+      "#Cars do not give way to bicycles": "Cars do not give way to bicycles",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Cars or motorcycles stopped on the cycle path near the crossing",
+      "#A curb or step at the entrance of the cycle path": "A curb or step at the entrance of the cycle path",
+      "#Tram tracks to cross": "Tram tracks to cross",
+      "#How do you get the green light to cross?": "How do you get the green light to cross?",
+      "#It comes by itself, every cycle": "It comes by itself, every cycle",
+      "#You have to press the button, and it works": "You have to press the button, and it works",
+      "#There is a button, but it does not work": "There is a button, but it does not work",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Does the traffic light have a sound signal for people who cannot see?",
+      "#Yes, and it works": "Yes, and it works",
+      "#Yes, but it does not work or can barely be heard": "Yes, but it does not work or can barely be heard",
+      "#No, there is none": "No, there is none",
+      "#What problems do you see at this crossing?": "What problems do you see at this crossing?",
+      "#The stripes are faded or worn away": "The stripes are faded or worn away",
+      "#There is no curb ramp": "There is no curb ramp",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "There is a curb ramp, but cars or motorcycles park in front of it",
+      "#The curb ramp is broken or has a step to the road": "The curb ramp is broken or has a step to the road",
+      "#Cars or motorcycles parked on the crossing": "Cars or motorcycles parked on the crossing",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Cobblestones, potholes or damaged paving on the crossing",
+      "#Standing water after rain": "Standing water after rain",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths",
+      "#Parked motorcycles, mopeds or e-scooters": "Parked motorcycles, mopeds or e-scooters",
+      "#Outdoor café or restaurant seating": "Outdoor café or restaurant seating",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Motorcycles and mopeds weaving between stopped cars while people cross",
+      "#Markings or colored surface for bicycles": "Markings or colored surface for bicycles",
+      "#Traffic light for bicycles": "Traffic light for bicycles",
+      "#Sound signal at the traffic light for people who cannot see": "Sound signal at the traffic light for people who cannot see",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protect the crossing and curb ramp from parking (for example with bollards)",
+      "#Connect the cycle path from one side of the crossing to the other": "Connect the cycle path from one side of the crossing to the other"
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -1989,7 +2267,47 @@
       "#Please do not write names or other personal data.": "Per favore non scrivere nomi o altri dati personali.",
       "#Other": "Altro",
       "#I don't know": "Non lo so",
-      "#Street Connection Assessment – User Friendly": "Valutazione di un attraversamento"
+      "#Street Connection Assessment – User Friendly": "Valutazione di un attraversamento",
+      "#How is this crossing controlled?": "Com'è regolato questo attraversamento?",
+      "#With a traffic light": "Con semaforo",
+      "#No zebra stripes and no traffic light": "Senza strisce né semaforo",
+      "#Who is this crossing for?": "Per chi è questo attraversamento?",
+      "#Only for people walking": "Solo per chi va a piedi",
+      "#Shared: bicycles and pedestrians together": "Ciclopedonale: bici e pedoni insieme",
+      "#There are separate markings for bicycles next to the pedestrian ones": "Ci sono strisce a parte per le bici, accanto a quelle pedonali",
+      "#Not marked for bicycles, but bicycles use it": "Non è segnato per le bici, ma le bici ci passano",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "In bici o in monopattino, quali problemi trovi in questo attraversamento?",
+      "#The cycle path stops before or after the crossing": "La ciclabile si interrompe prima o dopo l'attraversamento",
+      "#There is no crossing for bicycles: people use the zebra crossing": "Non c'è un passaggio per le bici: si usano le strisce pedonali",
+      "#Cars do not give way to bicycles": "Le auto non danno la precedenza alle bici",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Auto o moto ferme sulla ciclabile vicino all'attraversamento",
+      "#A curb or step at the entrance of the cycle path": "Un cordolo o un gradino all'ingresso della ciclabile",
+      "#Tram tracks to cross": "Binari del tram da attraversare",
+      "#How do you get the green light to cross?": "Come si ottiene il verde per attraversare?",
+      "#It comes by itself, every cycle": "Arriva da solo, a ogni ciclo",
+      "#You have to press the button, and it works": "Bisogna premere il pulsante, e funziona",
+      "#There is a button, but it does not work": "C'è il pulsante, ma non funziona",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Il semaforo ha il segnale sonoro per chi non vede?",
+      "#Yes, and it works": "Sì, e funziona",
+      "#Yes, but it does not work or can barely be heard": "Sì, ma non funziona o si sente appena",
+      "#No, there is none": "No, manca",
+      "#What problems do you see at this crossing?": "Quali problemi vedi in questo attraversamento?",
+      "#The stripes are faded or worn away": "Le strisce sono sbiadite o cancellate",
+      "#There is no curb ramp": "Manca lo scivolo del marciapiede",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "Lo scivolo c'è, ma auto o moto ci parcheggiano davanti",
+      "#The curb ramp is broken or has a step to the road": "Lo scivolo è rotto o ha un gradino con la strada",
+      "#Cars or motorcycles parked on the crossing": "Auto o moto parcheggiate sulle strisce",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Sampietrini, buche o pavimentazione rovinata sull'attraversamento",
+      "#Standing water after rain": "Acqua ferma dopo la pioggia",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La ciclabile taglia il marciapiede: bici e pedoni si incrociano",
+      "#Parked motorcycles, mopeds or e-scooters": "Moto, motorini o monopattini parcheggiati",
+      "#Outdoor café or restaurant seating": "Tavoli esterni di bar o ristoranti (dehors)",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Moto e motorini che passano tra le auto ferme mentre si attraversa",
+      "#Markings or colored surface for bicycles": "Strisce o colore a terra per le bici",
+      "#Traffic light for bicycles": "Semaforo per le bici",
+      "#Sound signal at the traffic light for people who cannot see": "Segnale sonoro al semaforo per chi non vede",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Proteggere strisce e scivolo dalla sosta (per esempio con dissuasori)",
+      "#Connect the cycle path from one side of the crossing to the other": "Collegare la ciclabile da una parte all'altra dell'attraversamento"
     },
     "fr": {
       "#Crossroads with zebra crossings and a check mark": "Carrefour avec passages piétons et une coche",
@@ -2239,7 +2557,47 @@
       "#Anything else you want to add?": "Souhaitez-vous ajouter autre chose ?",
       "#Please do not write names or other personal data.": "Merci de ne pas écrire de noms ni d’autres données personnelles.",
       "#Other": "Autre",
-      "#I don't know": "Je ne sais pas"
+      "#I don't know": "Je ne sais pas",
+      "#How is this crossing controlled?": "Comment ce passage est-il régulé ?",
+      "#With a traffic light": "Avec un feu de circulation",
+      "#No zebra stripes and no traffic light": "Sans marquage ni feu",
+      "#Who is this crossing for?": "À qui ce passage est-il destiné ?",
+      "#Only for people walking": "Seulement pour les personnes à pied",
+      "#Shared: bicycles and pedestrians together": "Mixte : vélos et piétons ensemble",
+      "#There are separate markings for bicycles next to the pedestrian ones": "Il y a un marquage séparé pour les vélos, à côté de celui des piétons",
+      "#Not marked for bicycles, but bicycles use it": "Pas marqué pour les vélos, mais les vélos y passent",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "À vélo ou en trottinette électrique, quels problèmes rencontrez-vous sur ce passage ?",
+      "#The cycle path stops before or after the crossing": "La piste cyclable s'interrompt avant ou après le passage",
+      "#There is no crossing for bicycles: people use the zebra crossing": "Il n'y a pas de passage pour les vélos : on utilise le passage piéton",
+      "#Cars do not give way to bicycles": "Les voitures ne cèdent pas le passage aux vélos",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Voitures ou motos arrêtées sur la piste cyclable près du passage",
+      "#A curb or step at the entrance of the cycle path": "Une bordure ou une marche à l'entrée de la piste cyclable",
+      "#Tram tracks to cross": "Rails de tramway à traverser",
+      "#How do you get the green light to cross?": "Comment obtient-on le feu vert pour traverser ?",
+      "#It comes by itself, every cycle": "Il arrive tout seul, à chaque cycle",
+      "#You have to press the button, and it works": "Il faut appuyer sur le bouton, et il fonctionne",
+      "#There is a button, but it does not work": "Il y a un bouton, mais il ne fonctionne pas",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Le feu a-t-il un signal sonore pour les personnes qui ne voient pas ?",
+      "#Yes, and it works": "Oui, et il fonctionne",
+      "#Yes, but it does not work or can barely be heard": "Oui, mais il ne fonctionne pas ou s'entend à peine",
+      "#No, there is none": "Non, il n'y en a pas",
+      "#What problems do you see at this crossing?": "Quels problèmes voyez-vous sur ce passage ?",
+      "#The stripes are faded or worn away": "Le marquage est effacé ou usé",
+      "#There is no curb ramp": "Il n'y a pas de bateau de trottoir",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "Il y a un bateau de trottoir, mais des voitures ou des motos se garent devant",
+      "#The curb ramp is broken or has a step to the road": "Le bateau de trottoir est abîmé ou forme une marche avec la chaussée",
+      "#Cars or motorcycles parked on the crossing": "Voitures ou motos garées sur le passage piéton",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Pavés, nids-de-poule ou revêtement abîmé sur le passage",
+      "#Standing water after rain": "Eau stagnante après la pluie",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La piste cyclable coupe le trottoir : vélos et piétons se croisent",
+      "#Parked motorcycles, mopeds or e-scooters": "Motos, scooters ou trottinettes électriques garés",
+      "#Outdoor café or restaurant seating": "Terrasses de cafés ou de restaurants",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Motos et scooters qui se faufilent entre les voitures arrêtées pendant qu'on traverse",
+      "#Markings or colored surface for bicycles": "Marquage ou revêtement coloré pour les vélos",
+      "#Traffic light for bicycles": "Feu pour les vélos",
+      "#Sound signal at the traffic light for people who cannot see": "Signal sonore au feu pour les personnes qui ne voient pas",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protéger le passage et le bateau de trottoir du stationnement (par exemple avec des potelets)",
+      "#Connect the cycle path from one side of the crossing to the other": "Relier la piste cyclable d'un côté à l'autre du passage"
     },
     "de": {
       "#Crossroads with zebra crossings and a check mark": "Kreuzung mit Zebrastreifen und einem Häkchen",
@@ -2489,7 +2847,47 @@
       "#Anything else you want to add?": "Möchten Sie noch etwas hinzufügen?",
       "#Please do not write names or other personal data.": "Bitte schreiben Sie keine Namen oder anderen persönlichen Daten.",
       "#Other": "Sonstiges",
-      "#I don't know": "Ich weiß es nicht"
+      "#I don't know": "Ich weiß es nicht",
+      "#How is this crossing controlled?": "Wie ist dieser Übergang geregelt?",
+      "#With a traffic light": "Mit Ampel",
+      "#No zebra stripes and no traffic light": "Ohne Markierung und ohne Ampel",
+      "#Who is this crossing for?": "Für wen ist dieser Übergang gedacht?",
+      "#Only for people walking": "Nur für Menschen zu Fuß",
+      "#Shared: bicycles and pedestrians together": "Gemeinsam: Fahrräder und Fußgänger zusammen",
+      "#There are separate markings for bicycles next to the pedestrian ones": "Es gibt eigene Markierungen für Fahrräder neben denen für Fußgänger",
+      "#Not marked for bicycles, but bicycles use it": "Nicht für Fahrräder markiert, aber Fahrräder fahren hier",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "Mit dem Fahrrad oder E-Scooter: Welche Probleme haben Sie an diesem Übergang?",
+      "#The cycle path stops before or after the crossing": "Der Radweg endet vor oder nach dem Übergang",
+      "#There is no crossing for bicycles: people use the zebra crossing": "Es gibt keinen Übergang für Fahrräder: man nutzt den Zebrastreifen",
+      "#Cars do not give way to bicycles": "Autos lassen Fahrräder nicht vor",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Autos oder Motorräder halten auf dem Radweg nahe dem Übergang",
+      "#A curb or step at the entrance of the cycle path": "Ein Bordstein oder eine Stufe an der Einfahrt zum Radweg",
+      "#Tram tracks to cross": "Straßenbahngleise, die man überqueren muss",
+      "#How do you get the green light to cross?": "Wie bekommt man Grün zum Überqueren?",
+      "#It comes by itself, every cycle": "Es kommt von selbst, bei jedem Umlauf",
+      "#You have to press the button, and it works": "Man muss den Knopf drücken, und er funktioniert",
+      "#There is a button, but it does not work": "Es gibt einen Knopf, aber er funktioniert nicht",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Hat die Ampel ein Tonsignal für Menschen, die nicht sehen können?",
+      "#Yes, and it works": "Ja, und es funktioniert",
+      "#Yes, but it does not work or can barely be heard": "Ja, aber es funktioniert nicht oder ist kaum zu hören",
+      "#No, there is none": "Nein, es fehlt",
+      "#What problems do you see at this crossing?": "Welche Probleme sehen Sie an diesem Übergang?",
+      "#The stripes are faded or worn away": "Die Markierungen sind verblasst oder abgenutzt",
+      "#There is no curb ramp": "Es gibt keinen abgesenkten Bordstein",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "Es gibt einen abgesenkten Bordstein, aber Autos oder Motorräder parken davor",
+      "#The curb ramp is broken or has a step to the road": "Der abgesenkte Bordstein ist kaputt oder hat eine Stufe zur Fahrbahn",
+      "#Cars or motorcycles parked on the crossing": "Autos oder Motorräder parken auf dem Übergang",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Kopfsteinpflaster, Schlaglöcher oder beschädigter Belag auf dem Übergang",
+      "#Standing water after rain": "Stehendes Wasser nach Regen",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Der Radweg schneidet den Gehweg: Fahrräder und Fußgänger kreuzen sich",
+      "#Parked motorcycles, mopeds or e-scooters": "Geparkte Motorräder, Motorroller oder E-Scooter",
+      "#Outdoor café or restaurant seating": "Außensitzplätze von Cafés oder Restaurants",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Motorräder und Motorroller, die zwischen stehenden Autos durchfahren, während man überquert",
+      "#Markings or colored surface for bicycles": "Markierungen oder farbiger Belag für Fahrräder",
+      "#Traffic light for bicycles": "Ampel für Fahrräder",
+      "#Sound signal at the traffic light for people who cannot see": "Tonsignal an der Ampel für Menschen, die nicht sehen können",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Übergang und abgesenkten Bordstein vor Falschparkern schützen (zum Beispiel mit Pollern)",
+      "#Connect the cycle path from one side of the crossing to the other": "Den Radweg von einer Seite des Übergangs zur anderen verbinden"
     },
     "tr": {
       "#Crossroads with zebra crossings and a check mark": "Yaya geçitleri ve onay işareti olan kavşak",
@@ -2739,7 +3137,47 @@
       "#Anything else you want to add?": "Eklemek istediğiniz başka bir şey var mı?",
       "#Please do not write names or other personal data.": "Lütfen isim veya başka kişisel bilgi yazmayın.",
       "#Other": "Diğer",
-      "#I don't know": "Bilmiyorum"
+      "#I don't know": "Bilmiyorum",
+      "#How is this crossing controlled?": "Bu geçit nasıl düzenleniyor?",
+      "#With a traffic light": "Trafik ışıklı",
+      "#No zebra stripes and no traffic light": "Ne çizgi ne de trafik ışığı var",
+      "#Who is this crossing for?": "Bu geçit kimler için?",
+      "#Only for people walking": "Yalnızca yürüyenler için",
+      "#Shared: bicycles and pedestrians together": "Ortak: bisikletler ve yayalar birlikte",
+      "#There are separate markings for bicycles next to the pedestrian ones": "Yaya çizgilerinin yanında bisikletler için ayrı çizgiler var",
+      "#Not marked for bicycles, but bicycles use it": "Bisikletler için işaretli değil, ama bisikletler buradan geçiyor",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "Bisikletle ya da elektrikli scooterla bu geçitte hangi sorunlarla karşılaşıyorsunuz?",
+      "#The cycle path stops before or after the crossing": "Bisiklet yolu geçitten önce ya da sonra kesiliyor",
+      "#There is no crossing for bicycles: people use the zebra crossing": "Bisikletler için geçit yok: yaya geçidi kullanılıyor",
+      "#Cars do not give way to bicycles": "Arabalar bisikletlere yol vermiyor",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Geçidin yakınında bisiklet yolunda duran araba ya da motosikletler",
+      "#A curb or step at the entrance of the cycle path": "Bisiklet yolunun girişinde bordür ya da basamak",
+      "#Tram tracks to cross": "Geçilmesi gereken tramvay rayları",
+      "#How do you get the green light to cross?": "Karşıya geçmek için yeşil ışık nasıl yanıyor?",
+      "#It comes by itself, every cycle": "Her döngüde kendiliğinden yanıyor",
+      "#You have to press the button, and it works": "Düğmeye basmak gerekiyor ve çalışıyor",
+      "#There is a button, but it does not work": "Düğme var ama çalışmıyor",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Trafik ışığında göremeyen kişiler için sesli sinyal var mı?",
+      "#Yes, and it works": "Evet ve çalışıyor",
+      "#Yes, but it does not work or can barely be heard": "Evet, ama çalışmıyor ya da zor duyuluyor",
+      "#No, there is none": "Hayır, yok",
+      "#What problems do you see at this crossing?": "Bu geçitte hangi sorunları görüyorsunuz?",
+      "#The stripes are faded or worn away": "Çizgiler soluk ya da silinmiş",
+      "#There is no curb ramp": "Bordür rampası yok",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "Bordür rampası var, ama önüne araba ya da motosiklet park ediliyor",
+      "#The curb ramp is broken or has a step to the road": "Bordür rampası kırık ya da yolla arasında basamak var",
+      "#Cars or motorcycles parked on the crossing": "Geçidin üzerine park etmiş araba ya da motosikletler",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Geçitte parke taşı, çukur ya da bozuk kaplama",
+      "#Standing water after rain": "Yağmurdan sonra biriken su",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Bisiklet yolu kaldırımı kesiyor: bisikletler ve yayalar kesişiyor",
+      "#Parked motorcycles, mopeds or e-scooters": "Park edilmiş motosiklet, mopet ya da elektrikli scooterlar",
+      "#Outdoor café or restaurant seating": "Kafe veya restoranların dış oturma alanları",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Karşıya geçilirken duran arabaların arasından geçen motosiklet ve mopetler",
+      "#Markings or colored surface for bicycles": "Bisikletler için çizgiler ya da renkli zemin",
+      "#Traffic light for bicycles": "Bisikletler için trafik ışığı",
+      "#Sound signal at the traffic light for people who cannot see": "Göremeyen kişiler için trafik ışığında sesli sinyal",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Geçidi ve bordür rampasını park etmeye karşı korumak (örneğin babalarla)",
+      "#Connect the cycle path from one side of the crossing to the other": "Bisiklet yolunu geçidin bir yanından diğerine bağlamak"
     },
     "fa": {
       "#Crossroads with zebra crossings and a check mark": "چهارراه با خط‌کشی عابر پیاده و علامت تیک",
@@ -2989,7 +3427,47 @@
       "#Anything else you want to add?": "آیا می‌خواهید چیز دیگری اضافه کنید؟",
       "#Please do not write names or other personal data.": "لطفاً نام یا اطلاعات شخصی دیگر ننویسید.",
       "#Other": "سایر",
-      "#I don't know": "نمی‌دانم"
+      "#I don't know": "نمی‌دانم",
+      "#How is this crossing controlled?": "این گذرگاه چگونه کنترل می‌شود؟",
+      "#With a traffic light": "با چراغ راهنمایی",
+      "#No zebra stripes and no traffic light": "بدون خط‌کشی و بدون چراغ راهنمایی",
+      "#Who is this crossing for?": "این گذرگاه برای چه کسانی است؟",
+      "#Only for people walking": "فقط برای کسانی که پیاده می‌روند",
+      "#Shared: bicycles and pedestrians together": "مشترک: دوچرخه و عابر پیاده با هم",
+      "#There are separate markings for bicycles next to the pedestrian ones": "کنار خط‌کشی عابر پیاده، خط‌کشی جداگانه‌ای برای دوچرخه هست",
+      "#Not marked for bicycles, but bicycles use it": "برای دوچرخه علامت‌گذاری نشده، اما دوچرخه‌ها از آن رد می‌شوند",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "با دوچرخه یا اسکوتر برقی، در این گذرگاه با چه مشکلاتی روبه‌رو می‌شوید؟",
+      "#The cycle path stops before or after the crossing": "مسیر دوچرخه قبل یا بعد از گذرگاه قطع می‌شود",
+      "#There is no crossing for bicycles: people use the zebra crossing": "گذرگاهی برای دوچرخه نیست: از خط عابر پیاده استفاده می‌شود",
+      "#Cars do not give way to bicycles": "خودروها به دوچرخه‌ها حق تقدم نمی‌دهند",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "خودرو یا موتورسیکلت متوقف روی مسیر دوچرخه نزدیک گذرگاه",
+      "#A curb or step at the entrance of the cycle path": "لبه یا پله در ورودی مسیر دوچرخه",
+      "#Tram tracks to cross": "ریل تراموا که باید از آن رد شد",
+      "#How do you get the green light to cross?": "چطور چراغ سبز برای عبور روشن می‌شود؟",
+      "#It comes by itself, every cycle": "خودش در هر چرخه روشن می‌شود",
+      "#You have to press the button, and it works": "باید دکمه را فشار داد و کار می‌کند",
+      "#There is a button, but it does not work": "دکمه هست، اما کار نمی‌کند",
+      "#Does the traffic light have a sound signal for people who cannot see?": "آیا چراغ راهنمایی برای کسانی که نمی‌بینند علامت صوتی دارد؟",
+      "#Yes, and it works": "بله، و کار می‌کند",
+      "#Yes, but it does not work or can barely be heard": "بله، اما کار نمی‌کند یا به‌سختی شنیده می‌شود",
+      "#No, there is none": "نه، ندارد",
+      "#What problems do you see at this crossing?": "چه مشکلاتی در این گذرگاه می‌بینید؟",
+      "#The stripes are faded or worn away": "خط‌کشی کم‌رنگ یا پاک شده است",
+      "#There is no curb ramp": "رمپ لبه پیاده‌رو وجود ندارد",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "رمپ هست، اما خودرو یا موتورسیکلت جلوی آن پارک می‌کنند",
+      "#The curb ramp is broken or has a step to the road": "رمپ خراب است یا با خیابان پله دارد",
+      "#Cars or motorcycles parked on the crossing": "خودرو یا موتورسیکلت پارک‌شده روی خط عابر پیاده",
+      "#Cobblestones, potholes or damaged paving on the crossing": "سنگ‌فرش، چاله یا کف خراب روی گذرگاه",
+      "#Standing water after rain": "آب ایستاده پس از باران",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسیر دوچرخه پیاده‌رو را قطع می‌کند: دوچرخه‌ها و عابران با هم تلاقی می‌کنند",
+      "#Parked motorcycles, mopeds or e-scooters": "موتورسیکلت، موتور گازی یا اسکوتر برقی پارک‌شده",
+      "#Outdoor café or restaurant seating": "میز و صندلی بیرونی کافه یا رستوران",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "موتورسیکلت‌ها و موتورهای گازی که هنگام عبور از میان خودروهای ایستاده رد می‌شوند",
+      "#Markings or colored surface for bicycles": "خط‌کشی یا رنگ کف برای دوچرخه",
+      "#Traffic light for bicycles": "چراغ راهنمایی برای دوچرخه",
+      "#Sound signal at the traffic light for people who cannot see": "علامت صوتی در چراغ راهنمایی برای کسانی که نمی‌بینند",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "محافظت از خط عابر و رمپ در برابر پارک (برای مثال با میله‌های مانع)",
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسیر دوچرخه از یک سوی گذرگاه به سوی دیگر"
     },
     "hu": {
       "#Crossroads with zebra crossings and a check mark": "Kereszteződés zebrákkal és egy pipával",
@@ -3239,7 +3717,47 @@
       "#Anything else you want to add?": "Szeretne még valamit hozzátenni?",
       "#Please do not write names or other personal data.": "Kérjük, ne írjon neveket vagy más személyes adatot.",
       "#Other": "Egyéb",
-      "#I don't know": "Nem tudom"
+      "#I don't know": "Nem tudom",
+      "#How is this crossing controlled?": "Hogyan szabályozott ez az átkelő?",
+      "#With a traffic light": "Jelzőlámpával",
+      "#No zebra stripes and no traffic light": "Felfestés és jelzőlámpa nélkül",
+      "#Who is this crossing for?": "Kinek szól ez az átkelő?",
+      "#Only for people walking": "Csak gyalogosoknak",
+      "#Shared: bicycles and pedestrians together": "Közös: kerékpárosok és gyalogosok együtt",
+      "#There are separate markings for bicycles next to the pedestrian ones": "A gyalogos felfestés mellett külön felfestés van a kerékpárosoknak",
+      "#Not marked for bicycles, but bicycles use it": "Nincs kerékpárosoknak felfestve, de a kerékpárosok itt kelnek át",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "Kerékpárral vagy elektromos rollerrel milyen problémákat tapasztal ennél az átkelőnél?",
+      "#The cycle path stops before or after the crossing": "A kerékpárút megszakad az átkelő előtt vagy után",
+      "#There is no crossing for bicycles: people use the zebra crossing": "Nincs kerékpáros átkelő: a zebrát használják",
+      "#Cars do not give way to bicycles": "Az autók nem adnak elsőbbséget a kerékpárosoknak",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "Autók vagy motorok állnak a kerékpárúton az átkelő közelében",
+      "#A curb or step at the entrance of the cycle path": "Szegély vagy lépcső a kerékpárút bejáratánál",
+      "#Tram tracks to cross": "Átkelendő villamossínek",
+      "#How do you get the green light to cross?": "Hogyan lesz zöld az átkeléshez?",
+      "#It comes by itself, every cycle": "Magától jön, minden ciklusban",
+      "#You have to press the button, and it works": "Meg kell nyomni a gombot, és működik",
+      "#There is a button, but it does not work": "Van gomb, de nem működik",
+      "#Does the traffic light have a sound signal for people who cannot see?": "Van a jelzőlámpán hangjelzés azoknak, akik nem látnak?",
+      "#Yes, and it works": "Igen, és működik",
+      "#Yes, but it does not work or can barely be heard": "Igen, de nem működik, vagy alig hallható",
+      "#No, there is none": "Nem, hiányzik",
+      "#What problems do you see at this crossing?": "Milyen problémákat lát ennél az átkelőnél?",
+      "#The stripes are faded or worn away": "A felfestés kifakult vagy lekopott",
+      "#There is no curb ramp": "Nincs szegélyrámpa",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "Van szegélyrámpa, de autók vagy motorok parkolnak elé",
+      "#The curb ramp is broken or has a step to the road": "A szegélyrámpa törött, vagy lépcső van az úttest felé",
+      "#Cars or motorcycles parked on the crossing": "Az átkelőn parkoló autók vagy motorok",
+      "#Cobblestones, potholes or damaged paving on the crossing": "Macskakő, kátyú vagy sérült burkolat az átkelőn",
+      "#Standing water after rain": "Eső után megálló víz",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "A kerékpárút átvágja a járdát: kerékpárosok és gyalogosok keresztezik egymást",
+      "#Parked motorcycles, mopeds or e-scooters": "Parkoló motorok, robogók vagy elektromos rollerek",
+      "#Outdoor café or restaurant seating": "Kávézók vagy éttermek kültéri ülőhelyei",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "Motorok és robogók, amelyek átkelés közben a megálló autók között cikáznak",
+      "#Markings or colored surface for bicycles": "Felfestés vagy színes burkolat a kerékpárosoknak",
+      "#Traffic light for bicycles": "Kerékpáros jelzőlámpa",
+      "#Sound signal at the traffic light for people who cannot see": "Hangjelzés a jelzőlámpán azoknak, akik nem látnak",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "Az átkelő és a szegélyrámpa védelme a parkolástól (például oszlopokkal)",
+      "#Connect the cycle path from one side of the crossing to the other": "A kerékpárút összekötése az átkelő egyik oldalától a másikig"
     },
     "ar": {
       "#Crossroads with zebra crossings and a check mark": "تقاطع مع ممرات مشاة وعلامة صح",
@@ -3489,7 +4007,47 @@
       "#Anything else you want to add?": "هل تريد إضافة شيء آخر؟",
       "#Please do not write names or other personal data.": "من فضلك لا تكتب أسماء أو بيانات شخصية أخرى.",
       "#Other": "أخرى",
-      "#I don't know": "لا أعرف"
+      "#I don't know": "لا أعرف",
+      "#How is this crossing controlled?": "كيف يُنظَّم هذا المعبر؟",
+      "#With a traffic light": "بإشارة مرور ضوئية",
+      "#No zebra stripes and no traffic light": "بدون خطوط وبدون إشارة ضوئية",
+      "#Who is this crossing for?": "لمن هذا المعبر؟",
+      "#Only for people walking": "للمشاة فقط",
+      "#Shared: bicycles and pedestrians together": "مشترك: الدراجات والمشاة معًا",
+      "#There are separate markings for bicycles next to the pedestrian ones": "توجد خطوط منفصلة للدراجات بجانب خطوط المشاة",
+      "#Not marked for bicycles, but bicycles use it": "غير مُعلَّم للدراجات، لكن الدراجات تمر منه",
+      "#By bicycle or e-scooter, what problems do you find at this crossing?": "بالدراجة أو السكوتر الكهربائي، ما المشكلات التي تواجهها في هذا المعبر؟",
+      "#The cycle path stops before or after the crossing": "مسار الدراجات ينقطع قبل المعبر أو بعده",
+      "#There is no crossing for bicycles: people use the zebra crossing": "لا يوجد معبر للدراجات: يُستخدم ممر المشاة",
+      "#Cars do not give way to bicycles": "السيارات لا تعطي الأولوية للدراجات",
+      "#Cars or motorcycles stopped on the cycle path near the crossing": "سيارات أو دراجات نارية متوقفة على مسار الدراجات قرب المعبر",
+      "#A curb or step at the entrance of the cycle path": "حافة أو درجة عند مدخل مسار الدراجات",
+      "#Tram tracks to cross": "سكك ترام يجب عبورها",
+      "#How do you get the green light to cross?": "كيف تحصل على الإشارة الخضراء للعبور؟",
+      "#It comes by itself, every cycle": "تأتي تلقائيًا في كل دورة",
+      "#You have to press the button, and it works": "يجب الضغط على الزر، وهو يعمل",
+      "#There is a button, but it does not work": "يوجد زر، لكنه لا يعمل",
+      "#Does the traffic light have a sound signal for people who cannot see?": "هل لإشارة المرور إشارة صوتية لمن لا يرون؟",
+      "#Yes, and it works": "نعم، وهي تعمل",
+      "#Yes, but it does not work or can barely be heard": "نعم، لكنها لا تعمل أو بالكاد تُسمع",
+      "#No, there is none": "لا، غير موجودة",
+      "#What problems do you see at this crossing?": "ما المشكلات التي تراها في هذا المعبر؟",
+      "#The stripes are faded or worn away": "الخطوط باهتة أو ممسوحة",
+      "#There is no curb ramp": "لا يوجد منحدر عند حافة الرصيف",
+      "#There is a curb ramp, but cars or motorcycles park in front of it": "يوجد منحدر، لكن السيارات أو الدراجات النارية تقف أمامه",
+      "#The curb ramp is broken or has a step to the road": "المنحدر مكسور أو توجد درجة بينه وبين الطريق",
+      "#Cars or motorcycles parked on the crossing": "سيارات أو دراجات نارية متوقفة على ممر المشاة",
+      "#Cobblestones, potholes or damaged paving on the crossing": "حجارة رصف أو حفر أو رصف متضرر على المعبر",
+      "#Standing water after rain": "مياه راكدة بعد المطر",
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسار الدراجات يقطع الرصيف: الدراجات والمشاة يتقاطعون",
+      "#Parked motorcycles, mopeds or e-scooters": "دراجات نارية أو دراجات صغيرة أو سكوترات كهربائية متوقفة",
+      "#Outdoor café or restaurant seating": "جلسات خارجية للمقاهي أو المطاعم",
+      "#Motorcycles and mopeds weaving between stopped cars while people cross": "دراجات نارية وصغيرة تمر بين السيارات المتوقفة أثناء العبور",
+      "#Markings or colored surface for bicycles": "خطوط أو أرضية ملونة للدراجات",
+      "#Traffic light for bicycles": "إشارة ضوئية للدراجات",
+      "#Sound signal at the traffic light for people who cannot see": "إشارة صوتية عند الإشارة الضوئية لمن لا يرون",
+      "#Protect the crossing and curb ramp from parking (for example with bollards)": "حماية المعبر والمنحدر من الوقوف (مثلًا بأعمدة حاجزة)",
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسار الدراجات من جانب المعبر إلى الجانب الآخر"
     }
   },
   "id": "Street Connection",
