@@ -17,20 +17,19 @@ Applications should consume these configuration files rather than maintain indep
 
 ## Questionnaire privacy labels
 
-Every form declares `questionnaire.privacy_classification`. Questions and individual
-options may override that label. The values are:
+Every form declares `questionnaire.privacy_classification`. A question or an
+individual option can carry a more specific label:
 
-- `personal_data`: responses are linked to a participant record;
-- `heightened_personal`: details such as demographics, habitual travel, precise
-  location or open text warrant additional handling, but are not automatically
-  special-category data under GDPR Article 9;
-- `special_category_health`: an answer may reveal a person's physical or mental
-  health, injury or disability. An option-level label applies only when that option
-  is selected; a question-level label applies to every answer to that question.
+- `personal_data`: the response is linked to a participant record;
+- `heightened_personal`: the response warrants additional handling, for example
+  because it contains a location, a habitual travel pattern or free text;
+- `special_category_health`: the response may reveal health, injury or disability.
 
-These labels are an inventory for review and downstream handling. They do not
-themselves grant a lawful basis, collect explicit consent, restrict access or
-redact exported responses. Those behaviors require separate application controls.
+`special_category: "health"` separately flags a question or option for review.
+Option-level labels apply only when that option is selected. These labels are
+metadata for review and downstream handling; they do not themselves collect
+consent, restrict access or redact exports. The legal treatment and application
+controls need separate review.
 See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
 
 ## Repository structure
@@ -50,6 +49,10 @@ smarturbanity-configuration/
 │   ├── tripSurveys/
 │   └── locationReports/
 │
+├── manifests/
+│   ├── smarturbanity.json
+│   └── smarturbanity_surveys.json
+│
 ├── pilots/
 │   ├── rome/
 │   ├── karlsruhe/
@@ -66,6 +69,23 @@ pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes
 is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
+
+## CityMaaS manifests
+
+`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
+`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
+CityMaaS loads these manifests from this repository. Their nested source URLs are
+temporarily pinned to commit `bede6a3b769f1ee1ac92bf6340bd9fc2747c3b9d`, the
+configuration revision compatible with the currently deployed CityMaaS form
+versions. The `fallbackPath` values refer to the local debug checkout, when present;
+they do not cause that checkout to be included in a deployment. Advance the pinned
+source URLs with the CityMaaS form and participant-code support in one coordinated
+release.
+Each manifest also declares the compatible `forms/` catalog and the privacy notice
+links used by its installations. The Access Lab manifest overrides only the notice
+version and links; consent text and participant settings remain in `base.json` and
+the selected pilot. A deployed installation requires the online sources because it
+does not bundle this repository as a fallback.
 
 ## Shared definitions
 
@@ -248,24 +268,18 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
-Every pilot has its own privacy notice, because each pilot has its own data controller. The notice lives in
-`pilots/<pilot>/privacy/` (`privacy.html`, the full notice, and `privacy-short.html`, its summary) and the pilot
-declares it with the consent version it belongs to, so a new notice version asks for consent again. A relative
-`privacy_link` is relative to the repository root: an application resolves it against the copy of this repository it
-serves, so the notice also opens offline:
+Each pilot may provide its own privacy notice and consent version. Rome declares
+`pilots/rome/privacy/privacy.html` under `questionnaires.consent.privacy_link` and
+its shorter summary at `pilots/rome/privacy/privacy-short.html`. A relative link is
+resolved from the repository root, including when the configuration is served
+offline. The Rome notice and consent version are drafts pending controller review.
 
-```json
-{"questionnaires": {"consent": {"version": "2.0.0-draft", "privacy_link": "pilots/rome/privacy/privacy.html"}}}
-```
-
-`docs/privacy-smarturbanity.html` is the common framework of all pilots and lists their notices; it stays the
-`privacy_link` of `base.json` for a pilot without its own notice. The pages share `docs/assets/SmartUrbanity`.
-
-`participant_code_destination` is the participant-code service of Movesion, a response destination descriptor:
-the app posts the person's email or mobile number (`{marker}`) or, for a signed-in Movesion account, only its access
-token (`Authorization: Bearer`), and receives the pseudonymous participant code (`{code}`). The browser never computes
-the code and the configuration holds no salt; the email or number itself is never stored. Until Movesion's service
-exists the destination points to the spatial server mock's `/api/v1/participant-codes`.
+`participant_code_destination` describes the service that returns the pseudonymous
+participant code. The client sends the participant identifier or an account token
+to that service; it does not compute the code from a salt in this configuration.
+The configured destination currently points to the spatial server mock at
+`/api/v1/participant-codes`. Application and service support is required before
+using this configuration in a running pilot.
 
 The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
@@ -277,7 +291,7 @@ When a form is offered is pilot configuration, not part of the form. Each pilot 
 {
   "config_type": "smarturbanity_survey_campaigns",
   "pilot_id": "rome",
-  "pilot_period": {"start_date": "2026-10-05", "end_date": null, "timezone": "Europe/Rome"},
+  "pilot_period": {"start_date": "2026-11-14", "end_date": null, "timezone": "Europe/Rome"},
   "rules": {"show_all_in_debug": true},
   "campaigns": {
     "rome_walking": {
