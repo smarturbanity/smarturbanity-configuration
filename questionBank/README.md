@@ -25,7 +25,15 @@ in the flow; question wording, help, option labels and their translations live
 in the question files. This includes the generated “Other”, “I don't know” and
 “Prefer not to say” labels when the current form supplies their translations.
 
-The **primary exchange format** is one self-contained question-bank collection:
+`feed.json` is the generated read model containing every question definition and
+flow in this repository. The framework may load it once and call
+`selectQuestionnaire(feed, questionnaireId)` from `select.mjs` to obtain the
+question definitions needed by one questionnaire. A future database adapter can
+provide the same collection shape to that selector. Edit the individual question
+and flow files, then run `build.mjs`; `build.mjs --check` also detects a stale feed.
+Importing a collection regenerates the feed together with the compiled forms.
+
+The **exchange format** is a self-contained question-bank collection:
 
 ```json
 {
@@ -54,15 +62,16 @@ version. A changed definition needs a higher question version, and every flow
 that uses it must pin that version. A changed flow needs a higher questionnaire
 version. `--check` shows how many bank and generated form files would change.
 Questions not yet placed in a flow may be included as `available_for_future`.
-The packer and importer also accept multiple flows for internal migration and
-verification snapshots; that is not the per-questionnaire exchange deliverable.
+The packer and importer also accept multiple flows for migration and verification
+snapshots. `feed.json` is the complete read snapshot; the per-questionnaire files
+are selections of that snapshot for exchange and editing.
 
 The existing `forms/` JSON remains the compiled questionnaire and response
 format consumed by the current application. It can be reproduced from this bank:
 
 ```sh
-node questionBank/build.mjs --check   # compare all 22 generated forms with forms/
-node questionBank/build.mjs           # write the forms after intentional edits
+node questionBank/build.mjs --check   # compare forms/ and feed.json with the sources
+node questionBank/build.mjs           # regenerate forms/ and feed.json after edits
 node questionBank/audit.mjs           # list variants and repeated prompts across IDs
 node questionBank/build.mjs --export-dir ../legacy-questionnaires
 node questionBank/import.mjs ../legacy-questionnaires/smarturbanity_about_you.json --check

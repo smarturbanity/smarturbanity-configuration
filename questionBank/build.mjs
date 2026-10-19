@@ -16,6 +16,7 @@ if (exportArg >= 0 && !process.argv[exportArg + 1]) throw Error('--export-dir re
 if (exportDir) fs.mkdirSync(exportDir, {recursive: true});
 const questions = new Map();
 const uses = new Map();
+const feedFlows = [];
 
 if (new Set(catalog.questions).size !== catalog.questions.length || new Set(catalog.flows).size !== catalog.flows.length) {
   throw Error('Question bank index contains duplicate paths');
@@ -38,6 +39,7 @@ let count = 0;
 let written = 0;
 for (const relative of catalog.flows) {
   const flow = JSON.parse(fs.readFileSync(path.join(bankRoot, relative), 'utf8'));
+  feedFlows.push(flow);
   if (flow.flow_schema_version !== 1) throw Error(`Unsupported flow schema: ${relative}`);
   if (!flow.output || !flow.form) throw Error(`Incomplete flow: ${relative}`);
   const target = path.resolve(repositoryRoot, flow.output);
@@ -107,6 +109,18 @@ for (const [id, entry] of questions) {
     if (!sameSet(usage.variants.get(variantId) ?? new Set(), variant.source_questionnaires)) {
       throw Error(`Variant sources disagree for ${id}/${variantId}`);
     }
+  }
+}
+if (!exportDir) {
+  const feedPath = path.join(bankRoot, 'feed.json');
+  const feed = {question_bank_collection_version: 1, questions: [...questions.values()], flows: feedFlows};
+  const expected = JSON.stringify(feed, null, 2) + '\n';
+  if (checkOnly) {
+    if (!fs.existsSync(feedPath) || fs.readFileSync(feedPath, 'utf8') !== expected) {
+      throw Error('Generated question feed differs: questionBank/feed.json');
+    }
+  } else if (!fs.existsSync(feedPath) || fs.readFileSync(feedPath, 'utf8') !== expected) {
+    fs.writeFileSync(feedPath, expected);
   }
 }
 console.log(checkOnly

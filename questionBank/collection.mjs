@@ -196,7 +196,7 @@ function importCollection(collection, checkOnly) {
     fs.writeFileSync(path.join(stageBank, 'index.json'), JSON.stringify(stageIndex, null, 2) + '\n');
     const generated = execFileSync(process.execPath, [path.join(stageBank, 'build.mjs')], {cwd: stageRoot, encoding: 'utf8'}).trim();
     execFileSync(process.execPath, [path.join(stageBank, 'build.mjs'), '--check'], {cwd: stageRoot, encoding: 'utf8'});
-    const bankPaths = ['index.json', ...stageIndex.questions, ...stageIndex.flows];
+    const bankPaths = ['index.json', 'feed.json', ...stageIndex.questions, ...stageIndex.flows];
     const outputPaths = [...new Set([...localFlows.values()].map(item => item.flow.output))];
     const changedBank = bankPaths.filter(relative => differs(path.join(stageBank, relative), path.join(bankRoot, relative)));
     const changedForms = outputPaths.filter(relative => differs(path.join(stageRoot, relative), path.join(repositoryRoot, relative)));
