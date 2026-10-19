@@ -4,6 +4,17 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Cycle crossing protection (2026-10-19)
+
+`street_connection_assessment` 0.6.0 adds `bike_path_unprotected` to the existing
+optional `cyclist_crossing_problems` detail question, behind
+`continue_audit=yes_audit` for the cyclist perspective. It records lack of physical
+separation from motor traffic, independently of continuity, parked vehicles and
+right of way. All eight form languages include the option. Existing keys, option
+values, required minimum and consent remain unchanged. Earlier responses lack
+this option; absence is not a negative answer. The Access Together bundled manifest
+selects 0.6.0.
+
 ## Access Together retest (2026-10-19)
 
 `street_connection_assessment` 0.5.0 extends the minimum approved for the next
