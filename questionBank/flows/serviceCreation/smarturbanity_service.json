@@ -1,0 +1,218 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/serviceCreation/smarturbanity_service.json",
+  "form": {
+    "questionnaire": {
+      "questionnaire_id": "smarturbanity_service",
+      "questionnaire_version": "0.1.0",
+      "name": "#Service",
+      "sections": [
+        {
+          "id": "access_points",
+          "hub_feature": "location_feature",
+          "title": "#Access points",
+          "required": true,
+          "repeat": {
+            "min_items": 1
+          },
+          "questions": [
+            {
+              "question_ref": "smarturbanity.access_point",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "service",
+          "hub_feature": "service_feature",
+          "title": "#Service details",
+          "required": true,
+          "questions": [
+            {
+              "question_ref": "smarturbanity.providedName",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.description",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.categoryId",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.serviceTypeId",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.serviceSubtype",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "opportunities",
+          "hub_feature": "opportunity_feature",
+          "title": "#Opportunities",
+          "required": true,
+          "min_available": 1,
+          "question_reference": {
+            "workflow_id": "service_opportunities",
+            "answer_key": "service_opportunities"
+          },
+          "questions": [
+            {
+              "question_ref": "smarturbanity.service_opportunities",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        }
+      ],
+      "row_sources": {},
+      "project": "SmartUrbanity"
+    },
+    "row_sources": {},
+    "languages": {
+      "en": {
+        "code": "en",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - What can be done at this service",
+        "#What can be done at this service": "What can be done at this service",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.",
+        "#What can people do at this service?": "What can people do at this service?",
+        "#Can it be done here?": "Can it be done here?",
+        "#Yes, it can be done here": "Yes, it can be done here",
+        "#No, and I would like it to be possible here": "No, and I would like it to be possible here",
+        "#No": "No",
+        "#I don't know": "I don't know",
+        "#Other": "Other",
+        "#Please specify": "Please specify"
+      },
+      "it": {
+        "code": "it",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Cosa si può fare in questo servizio",
+        "#What can be done at this service": "Cosa si può fare in questo servizio",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Per ogni attività, dicci se si può fare in questo servizio. Questa risposta è anonima e non è collegata al tuo profilo.",
+        "#What can people do at this service?": "Cosa si può fare in questo servizio?",
+        "#Can it be done here?": "Si può fare qui?",
+        "#Yes, it can be done here": "Sì, si può fare qui",
+        "#No, and I would like it to be possible here": "No, e vorrei che si potesse fare qui",
+        "#No": "No",
+        "#I don't know": "Non lo so",
+        "#Other": "Altro",
+        "#Please specify": "Specifica"
+      },
+      "fr": {
+        "code": "fr",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Ce que l’on peut faire dans ce service",
+        "#What can be done at this service": "Ce que l’on peut faire dans ce service",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Pour chaque activité, dites-nous si on peut la faire dans ce service. Cette réponse est anonyme et n’est pas liée à votre profil.",
+        "#What can people do at this service?": "Que peut-on faire dans ce service ?",
+        "#Can it be done here?": "Peut-on le faire ici ?",
+        "#Yes, it can be done here": "Oui, on peut le faire ici",
+        "#No, and I would like it to be possible here": "Non, et j’aimerais que ce soit possible ici",
+        "#No": "Non",
+        "#I don't know": "Je ne sais pas",
+        "#Other": "Autre",
+        "#Please specify": "Veuillez préciser"
+      },
+      "de": {
+        "code": "de",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Was man bei diesem Dienst tun kann",
+        "#What can be done at this service": "Was man bei diesem Dienst tun kann",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Sagen Sie uns für jede Tätigkeit, ob man sie bei diesem Dienst erledigen kann. Diese Antwort ist anonym und nicht mit Ihrem Profil verknüpft.",
+        "#What can people do at this service?": "Was kann man bei diesem Dienst tun?",
+        "#Can it be done here?": "Kann man das hier tun?",
+        "#Yes, it can be done here": "Ja, das kann man hier tun",
+        "#No, and I would like it to be possible here": "Nein, und ich würde mir wünschen, dass es hier möglich ist",
+        "#No": "Nein",
+        "#I don't know": "Ich weiß nicht",
+        "#Other": "Sonstiges",
+        "#Please specify": "Bitte angeben"
+      },
+      "tr": {
+        "code": "tr",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Bu hizmette neler yapılabilir",
+        "#What can be done at this service": "Bu hizmette neler yapılabilir",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Her etkinlik için bu hizmette yapılıp yapılamayacağını bize söyleyin. Bu yanıt anonimdir ve profilinizle ilişkilendirilmez.",
+        "#What can people do at this service?": "Bu hizmette insanlar neler yapabilir?",
+        "#Can it be done here?": "Burada yapılabilir mi?",
+        "#Yes, it can be done here": "Evet, burada yapılabilir",
+        "#No, and I would like it to be possible here": "Hayır ama burada yapılabilmesini isterim",
+        "#No": "Hayır",
+        "#I don't know": "Bilmiyorum",
+        "#Other": "Diğer",
+        "#Please specify": "Lütfen belirtin"
+      },
+      "fa": {
+        "code": "fa",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - در این خدمت چه کارهایی می‌توان انجام داد",
+        "#What can be done at this service": "در این خدمت چه کارهایی می‌توان انجام داد",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "برای هر فعالیت به ما بگویید آیا می‌توان آن را در این خدمت انجام داد. این پاسخ ناشناس است و به نمایه‌ی شما مرتبط نمی‌شود.",
+        "#What can people do at this service?": "مردم در این خدمت چه کارهایی می‌توانند انجام دهند؟",
+        "#Can it be done here?": "آیا اینجا می‌توان انجامش داد؟",
+        "#Yes, it can be done here": "بله، اینجا می‌توان انجامش داد",
+        "#No, and I would like it to be possible here": "نه، و دوست دارم اینجا امکان‌پذیر باشد",
+        "#No": "نه",
+        "#I don't know": "نمی‌دانم",
+        "#Other": "سایر",
+        "#Please specify": "لطفاً مشخص کنید"
+      },
+      "hu": {
+        "code": "hu",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Mit lehet intézni ennél a szolgáltatásnál",
+        "#What can be done at this service": "Mit lehet intézni ennél a szolgáltatásnál",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Minden tevékenységnél mondja el, hogy elvégezhető-e ennél a szolgáltatásnál. Ez a válasz névtelen, és nincs összekapcsolva a profiljával.",
+        "#What can people do at this service?": "Mit lehet intézni ennél a szolgáltatásnál?",
+        "#Can it be done here?": "Elvégezhető itt?",
+        "#Yes, it can be done here": "Igen, itt elvégezhető",
+        "#No, and I would like it to be possible here": "Nem, de szeretném, ha itt lehetséges lenne",
+        "#No": "Nem",
+        "#I don't know": "Nem tudom",
+        "#Other": "Egyéb",
+        "#Please specify": "Kérjük, pontosítsa"
+      },
+      "ar": {
+        "code": "ar",
+        "#SmartUrbanity - What can be done at this service": "SmartUrbanity - ما الذي يمكن فعله في هذه الخدمة",
+        "#What can be done at this service": "ما الذي يمكن فعله في هذه الخدمة",
+        "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "لكل نشاط، أخبرنا ما إذا كان يمكن القيام به في هذه الخدمة. هذه الإجابة مجهولة الهوية وغير مرتبطة بملفك الشخصي.",
+        "#What can people do at this service?": "ما الذي يمكن للناس فعله في هذه الخدمة؟",
+        "#Can it be done here?": "هل يمكن القيام به هنا؟",
+        "#Yes, it can be done here": "نعم، يمكن القيام به هنا",
+        "#No, and I would like it to be possible here": "لا، وأودّ أن يكون ذلك ممكنًا هنا",
+        "#No": "لا",
+        "#I don't know": "لا أعرف",
+        "#Other": "أخرى",
+        "#Please specify": "يرجى التحديد"
+      }
+    }
+  }
+}

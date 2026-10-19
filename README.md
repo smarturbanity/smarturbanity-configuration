@@ -17,12 +17,14 @@ Applications should consume these configuration files rather than maintain indep
 
 ## Question bank and questionnaire flows
 
-`questionBank/questions/<project>/<key>.json` gives each questionnaire question
-one catalog file identified by project and answer key. It includes translations,
+`questionBank/questions/<id>.json` gives each questionnaire question
+one catalog file named exactly by its ID (`<lowercase project>.<answer_key>`). It includes translations,
 source questionnaire provenance and any explicit wording variants. The files in
 `questionBank/flows/` compose questions into ordered, conditional questionnaires.
 For the current applications, `node questionBank/build.mjs` generates the legacy
 `forms/` JSON; `node questionBank/build.mjs --check` verifies that it matches.
+The same builder exports autonomous questionnaire JSON for colleagues, and
+`questionBank/import.mjs` brings an edited JSON back into the bank.
 See [questionBank/README.md](questionBank/README.md) for the format and editing
 workflow.
 
