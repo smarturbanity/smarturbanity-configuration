@@ -1,0 +1,370 @@
+{
+  "version": "0.2.0",
+  "questionnaire_catalog": {
+    "source": "local",
+    "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms"
+  },
+  "questionnaires": {
+    "consent": {
+      "version": "1.2.0-draft",
+      "privacy_link": "https://smarturbanity.github.io/smarturbanity-configuration/privacy-access-lab.html",
+      "transparency_link": "https://smarturbanity.github.io/smarturbanity-configuration/privacy-smarturbanity.html"
+    }
+  },
+  "configuration_sources": {
+    "defaults": {
+      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/base.json",
+      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/base.json"
+    },
+    "pilot": {
+      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}/{pilot}.json",
+      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}/{pilot}.json"
+    },
+    "merge": "deep"
+  },
+  "content": {
+    "form_workflows": [
+      {
+        "id": "network_link_assessment",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "assessment",
+        "target_entity_types": [
+          "network_link"
+        ],
+        "target_entity_group": "segments",
+        "questionnaire": {
+          "id": "street_segment_assessment",
+          "version": "0.4.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/street_segment_assessment.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "network_connection_assessment",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "assessment",
+        "target_entity_types": [
+          "network_connection"
+        ],
+        "target_entity_group": "connections",
+        "questionnaire": {
+          "id": "street_connection_assessment",
+          "version": "0.5.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/street_connection_assessment.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "missing_network_link_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "missing_link"
+        ],
+        "questionnaire": {
+          "id": "smarturbanity_missing_path_report",
+          "version": "1.1.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/missing_path_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "geolocated_perception_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "perception",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "geolocated_observation"
+        ],
+        "questionnaire": {
+          "id": "smarturbanity_geolocated_perception_report",
+          "version": "0.3.1",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/geolocated_perception_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "missing_network_connection_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "missing_connection"
+        ],
+        "questionnaire": {
+          "id": "smarturbanity_missing_connection_report",
+          "version": "1.1.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/missing_connection_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "network_link_nonexistent_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "nonexistent_link"
+        ],
+        "target_entity_group": "segments",
+        "questionnaire": {
+          "id": "smarturbanity_missing_network_element_report",
+          "version": "1.0.1",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/missing_network_element_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "network_connection_nonexistent_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "nonexistent_connection"
+        ],
+        "target_entity_group": "connections",
+        "questionnaire": {
+          "id": "smarturbanity_missing_network_element_report",
+          "version": "1.0.1",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/missing_network_element_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "service_correction_report",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "access_hub_service",
+        "contribution_type": "report",
+        "target_entity_types": [
+          "service"
+        ],
+        "target_entity_group": "access_points",
+        "questionnaire": {
+          "id": "smarturbanity_service_correction_report",
+          "version": "1.2.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/service_correction_report.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "service_opportunities",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "access_hub_service_form",
+        "contribution_type": "opportunities",
+        "target_entity_types": [
+          "service"
+        ],
+        "target_entity_group": "access_points",
+        "questionnaire": {
+          "id": "smarturbanity_service_opportunities",
+          "version": "1.1.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/service_opportunities.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/services",
+          "map_response": "entity_group_record",
+          "collection": "services",
+          "envelope": "array"
+        }
+      },
+      {
+        "id": "improvement_proposal",
+        "enabled": true,
+        "publication_state": "published",
+        "view_id": "infrastructure",
+        "contribution_type": "proposal",
+        "target_entity_types": [
+          "improvement_proposal"
+        ],
+        "questionnaire": {
+          "id": "smarturbanity_improvement_proposal",
+          "version": "1.1.0",
+          "path": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/forms/locationReports/improvement_proposal.json"
+        },
+        "response_destination": {
+          "type": "database",
+          "server": "smarturbanity_spatial_address",
+          "path": "/api/v1/entity-groups/feedback_contributions",
+          "map_response": "entity_group_record",
+          "collection": "feedback_contributions",
+          "envelope": "array"
+        }
+      }
+    ],
+    "perception_publication": {
+      "policy_id": "access_hub_perception_publication",
+      "policy_version": "0.1.0",
+      "status": "provisional_default",
+      "approval": "Provisional conservative default; Sapienza (WP2) and CTLup decide the thresholds, approved by the DPO.",
+      "minimum_contributor_count": 5,
+      "minimum_evidence_count": 10,
+      "time_window_days": 365,
+      "included_evidence": [
+        "moderated",
+        "validated"
+      ],
+      "maximum_missing_share": 0.5,
+      "accepted_aggregation_versions": [
+        "perception_aspects_v1"
+      ],
+      "aspects": [
+        {
+          "id": "traffic_safety",
+          "label": "#Safety from traffic",
+          "bi_class": "bi-shield-check",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_traffic_safety",
+          "scale": [
+            "not_safe",
+            "slightly_safe",
+            "moderately_safe",
+            "very_safe",
+            "completely_safe"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "personal_security",
+          "label": "#Personal security",
+          "bi_class": "bi-person-check",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_personal_security",
+          "scale": [
+            "not_safe",
+            "slightly_safe",
+            "moderately_safe",
+            "very_safe",
+            "completely_safe"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "pleasantness",
+          "label": "#Pleasantness",
+          "bi_class": "bi-emoji-smile",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_pleasantness",
+          "scale": [
+            "very_unpleasant",
+            "unpleasant",
+            "neutral",
+            "pleasant",
+            "very_pleasant"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "overall_impression",
+          "label": "#Overall impression",
+          "bi_class": "bi-eye",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_overall",
+          "scale": [
+            "very_negative",
+            "negative",
+            "neutral",
+            "positive",
+            "very_positive"
+          ],
+          "rating_direction": "higher_is_better"
+        }
+      ]
+    },
+    "datasets": [
+      {
+        "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/definitions/types",
+        "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/definitions/types"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/definitions/mappings",
+        "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/definitions/mappings"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}",
+        "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}"
+      }
+    ]
+  }
+}
