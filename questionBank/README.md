@@ -25,16 +25,46 @@ in the flow; question wording, help, option labels and their translations live
 in the question files. This includes the generated “Other”, “I don't know” and
 “Prefer not to say” labels when the current form supplies their translations.
 
-The existing `forms/` JSON remains the standalone exchange and response format
-consumed by the current application. It can be reproduced from this bank:
+The **primary exchange format** is one self-contained question-bank collection:
+
+```json
+{
+  "question_bank_collection_version": 1,
+  "questions": ["complete question entries, each ID once"],
+  "flows": ["complete flow entries with question references"]
+}
+```
+
+It can contain one questionnaire, several goal-based flows, or the whole bank.
+Every referenced question is included with its translations and provenance.
+The framework resolves the references and creates the real questionnaire JSON
+for a repository. Export and import from this repository with:
+
+```sh
+node questionBank/collection.mjs export ../smarturbanity-collection.json
+node questionBank/collection.mjs export ../walking-collection.json smarturbanity_walking
+node questionBank/collection.mjs import ../smarturbanity-collection.json --check
+node questionBank/collection.mjs import ../smarturbanity-collection.json
+```
+
+Import checks the entire collection in a temporary copy before writing. It
+rejects missing definitions, invalid references, answer-key collisions,
+regressive versions and changed content under the same question or questionnaire
+version. A changed definition needs a higher question version, and every flow
+that uses it must pin that version. A changed flow needs a higher questionnaire
+version. `--check` shows how many bank and generated form files would change.
+Questions not yet placed in a flow may be included as `available_for_future`.
+
+The existing `forms/` JSON remains the compiled questionnaire and response
+format consumed by the current application. It can be reproduced from this bank:
 
 ```sh
 node questionBank/build.mjs --check   # compare all 22 generated forms with forms/
 node questionBank/build.mjs           # write the forms after intentional edits
 node questionBank/audit.mjs           # list variants and repeated prompts across IDs
-node questionBank/build.mjs --export-dir ../questionnaires-for-colleagues
-node questionBank/import.mjs ../questionnaires-for-colleagues/smarturbanity_about_you.json --check
-node questionBank/import.mjs ../questionnaires-for-colleagues/smarturbanity_about_you.json
+node questionBank/build.mjs --export-dir ../legacy-questionnaires
+node questionBank/import.mjs ../legacy-questionnaires/smarturbanity_about_you.json --check
+node questionBank/import.mjs ../legacy-questionnaires/smarturbanity_about_you.json
 ```
 
 Edit a question file to change its wording or translation wherever that variant
@@ -43,9 +73,11 @@ welcome and final copy. Update `questionBank/index.json` when adding a question
 or flow. Keep the original `answer_key` and option values when existing responses
 must remain comparable; create a new key when the meaning or answer scale changes.
 
-Export writes one autonomous JSON per questionnaire, with the same envelope as
-`forms/`. When its content matches `forms/`, the export is byte-for-byte identical.
-Import accepts an existing questionnaire's standalone JSON, first builds and
+The `build --export-dir` and `import.mjs` commands are compatibility tools for
+individual legacy questionnaire files. They are separate from the one-file
+collection exchange. Legacy export writes one JSON per questionnaire with the
+same envelope as `forms/`; when its content matches `forms/`, the export is
+byte-for-byte identical. Legacy import accepts an existing questionnaire's JSON, first builds and
 checks a temporary candidate, then updates its flow, question variants and
 `forms/` file. `--check` previews the import without changing repository files.
 Edits to a shared question in one questionnaire create a variant so that other

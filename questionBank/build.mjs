@@ -99,7 +99,9 @@ for (const [id, entry] of questions) {
   const usage = uses.get(id);
   if (!sameSet(usage.forms, entry.source_questionnaires)) throw Error(`Source questionnaires disagree for ${id}`);
   if (entry.retired === true && usage.forms.size) throw Error(`Retired question is still used: ${id}`);
-  if (entry.retired !== true && !usage.forms.size) throw Error(`Unused question must be marked retired: ${id}`);
+  if (entry.retired !== true && entry.available_for_future !== true && !usage.forms.size) {
+    throw Error(`Unused question must be marked retired or available_for_future: ${id}`);
+  }
   if (entry.review_required !== (Object.keys(entry.variants).length > 1)) throw Error(`Review flag disagrees for ${id}`);
   for (const [variantId, variant] of Object.entries(entry.variants)) {
     if (!sameSet(usage.variants.get(variantId) ?? new Set(), variant.source_questionnaires)) {

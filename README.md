@@ -23,8 +23,9 @@ source questionnaire provenance and any explicit wording variants. The files in
 `questionBank/flows/` compose questions into ordered, conditional questionnaires.
 For the current applications, `node questionBank/build.mjs` generates the legacy
 `forms/` JSON; `node questionBank/build.mjs --check` verifies that it matches.
-The same builder exports autonomous questionnaire JSON for colleagues, and
-`questionBank/import.mjs` brings an edited JSON back into the bank.
+The primary exchange format is one autonomous JSON collection with question
+definitions and flows; `questionBank/collection.mjs` packs or imports it. The
+legacy per-questionnaire JSON remains a compiled output for current applications.
 See [questionBank/README.md](questionBank/README.md) for the format and editing
 workflow.
 
