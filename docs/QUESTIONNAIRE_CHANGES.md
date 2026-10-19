@@ -4,6 +4,21 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Access Together retest (2026-10-19)
+
+`street_connection_assessment` 0.5.0 extends the minimum approved for the next
+research round. The existing `traffic_control` question moves before
+`continue_audit`, becomes required, and keeps its street-level condition, keys,
+options and explicit unknown answer. Its detail dependants remain optional behind
+the audit gate. A required street-level `refuge_island` question records yes, no
+or unknown independently of signal control and crossing users. All eight form
+languages include the new question. Earlier versions have no island answer;
+absence must never be analysed as no.
+
+The minimum has a variable total: walking, cycling, both, street-level, bridge
+and underpass routes ask different applicable questions. Assessment still precedes
+an office dossier. This revision adds no health question or consent.
+
 ## Round 4 crossings and cycle paths (2026-10-17)
 
 Proposals P1–P12 of the Round 4 resident study, approved by the owner on

@@ -220,6 +220,14 @@ The street connection and street segment assessments start with a short minimum 
 
 ### Prefill from element attributes
 
+From connection assessment 0.5.0, the minimum also asks the existing detailed
+traffic-control distinction and whether a refuge island is present, for
+street-level connections only. Both are required with an explicit unknown answer.
+The minimum's total varies with the selected modes and connection type; clients
+must derive it from applicable questions rather than promise eight questions.
+Signal-call, audible-signal, waiting-time and green-time details remain behind
+`continue_audit=yes_audit`. See the versioned change record before comparing rounds.
+
 A question of a form that assesses a mapped element may declare `"prefill_from": "element.<attribute>"`. The value comes from that attribute of the assessed element (the response `entity`) as exposed by the spatial database, today the mock and later the server. The database merges several sources, among them OpenStreetMap; a form never names a source tag such as `osm.crossing`, because mapping a source to an attribute belongs to the database import.
 
 - Only `single_option` questions declare it, and the attribute's values are `value`s of that question's options.

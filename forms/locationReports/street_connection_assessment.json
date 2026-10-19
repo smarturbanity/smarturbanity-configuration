@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.4.0",
+    "questionnaire_version": "0.5.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -390,6 +390,65 @@
             "required": true
           },
           {
+            "text": "How does this crossing work?",
+            "help": "Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.",
+            "answer_key": "traffic_control",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "There is no zebra crossing and no traffic light",
+                "value": "no_control"
+              },
+              {
+                "text": "Zebra crossing without a traffic light",
+                "value": "priority_no_signal"
+              },
+              {
+                "text": "Traffic light: when it is green for me, the cars are stopped",
+                "value": "protected_signal"
+              },
+              {
+                "text": "Traffic light, but turning cars still pass",
+                "value": "permissive_signal_with_turning_conflict"
+              },
+              {
+                "text": "There is a traffic light, but it is unclear who should go",
+                "value": "unclear_signal_priority"
+              },
+              {
+                "text": "The traffic light is broken or switched off",
+                "value": "signal_broken"
+              }
+            ],
+            "show_if": {
+              "connection_form": "street_level"
+            },
+            "add_i_dont_know": true,
+            "required": true
+          },
+          {
+            "text": "Is there a refuge island where people can stop between traffic lanes?",
+            "answer_key": "refuge_island",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "add_i_dont_know": true,
+            "show_if": {
+              "connection_form": "street_level"
+            },
+            "required": true
+          },
+          {
             "text": "Would you like to add more details? There are about 10 to 22 optional questions, depending on the place and on how you move (about 3–7 minutes).",
             "answer_key": "continue_audit",
             "question_type": "single_option",
@@ -625,45 +684,6 @@
               "connection_elements": [
                 "escalator"
               ]
-            },
-            "add_i_dont_know": true,
-            "required": false
-          },
-          {
-            "text": "How does this crossing work?",
-            "help": "Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.",
-            "answer_key": "traffic_control",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "There is no zebra crossing and no traffic light",
-                "value": "no_control"
-              },
-              {
-                "text": "Zebra crossing without a traffic light",
-                "value": "priority_no_signal"
-              },
-              {
-                "text": "Traffic light: when it is green for me, the cars are stopped",
-                "value": "protected_signal"
-              },
-              {
-                "text": "Traffic light, but turning cars still pass",
-                "value": "permissive_signal_with_turning_conflict"
-              },
-              {
-                "text": "There is a traffic light, but it is unclear who should go",
-                "value": "unclear_signal_priority"
-              },
-              {
-                "text": "The traffic light is broken or switched off",
-                "value": "signal_broken"
-              }
-            ],
-            "show_if": {
-              "continue_audit": "yes_audit",
-              "connection_form": "street_level"
             },
             "add_i_dont_know": true,
             "required": false
@@ -2016,7 +2036,8 @@
       "#Traffic light for bicycles": "Traffic light for bicycles",
       "#Sound signal at the traffic light for people who cannot see": "Sound signal at the traffic light for people who cannot see",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protect the crossing and curb ramp from parking (for example with bollards)",
-      "#Connect the cycle path from one side of the crossing to the other": "Connect the cycle path from one side of the crossing to the other"
+      "#Connect the cycle path from one side of the crossing to the other": "Connect the cycle path from one side of the crossing to the other",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Is there a refuge island where people can stop between traffic lanes?"
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -2307,7 +2328,8 @@
       "#Traffic light for bicycles": "Semaforo per le bici",
       "#Sound signal at the traffic light for people who cannot see": "Segnale sonoro al semaforo per chi non vede",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Proteggere strisce e scivolo dalla sosta (per esempio con dissuasori)",
-      "#Connect the cycle path from one side of the crossing to the other": "Collegare la ciclabile da una parte all'altra dell'attraversamento"
+      "#Connect the cycle path from one side of the crossing to the other": "Collegare la ciclabile da una parte all'altra dell'attraversamento",
+      "#Is there a refuge island where people can stop between traffic lanes?": "È presente un’isola salvagente dove fermarsi tra le corsie?"
     },
     "fr": {
       "#Crossroads with zebra crossings and a check mark": "Carrefour avec passages piétons et une coche",
@@ -2597,7 +2619,8 @@
       "#Traffic light for bicycles": "Feu pour les vélos",
       "#Sound signal at the traffic light for people who cannot see": "Signal sonore au feu pour les personnes qui ne voient pas",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protéger le passage et le bateau de trottoir du stationnement (par exemple avec des potelets)",
-      "#Connect the cycle path from one side of the crossing to the other": "Relier la piste cyclable d'un côté à l'autre du passage"
+      "#Connect the cycle path from one side of the crossing to the other": "Relier la piste cyclable d'un côté à l'autre du passage",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Y a-t-il un îlot refuge où s’arrêter entre les voies de circulation ?"
     },
     "de": {
       "#Crossroads with zebra crossings and a check mark": "Kreuzung mit Zebrastreifen und einem Häkchen",
@@ -2887,7 +2910,8 @@
       "#Traffic light for bicycles": "Ampel für Fahrräder",
       "#Sound signal at the traffic light for people who cannot see": "Tonsignal an der Ampel für Menschen, die nicht sehen können",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Übergang und abgesenkten Bordstein vor Falschparkern schützen (zum Beispiel mit Pollern)",
-      "#Connect the cycle path from one side of the crossing to the other": "Den Radweg von einer Seite des Übergangs zur anderen verbinden"
+      "#Connect the cycle path from one side of the crossing to the other": "Den Radweg von einer Seite des Übergangs zur anderen verbinden",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Gibt es eine Schutzinsel, auf der man zwischen den Fahrspuren warten kann?"
     },
     "tr": {
       "#Crossroads with zebra crossings and a check mark": "Yaya geçitleri ve onay işareti olan kavşak",
@@ -3177,7 +3201,8 @@
       "#Traffic light for bicycles": "Bisikletler için trafik ışığı",
       "#Sound signal at the traffic light for people who cannot see": "Göremeyen kişiler için trafik ışığında sesli sinyal",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Geçidi ve bordür rampasını park etmeye karşı korumak (örneğin babalarla)",
-      "#Connect the cycle path from one side of the crossing to the other": "Bisiklet yolunu geçidin bir yanından diğerine bağlamak"
+      "#Connect the cycle path from one side of the crossing to the other": "Bisiklet yolunu geçidin bir yanından diğerine bağlamak",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Trafik şeritleri arasında beklenebilecek bir refüj adası var mı?"
     },
     "fa": {
       "#Crossroads with zebra crossings and a check mark": "چهارراه با خط‌کشی عابر پیاده و علامت تیک",
@@ -3467,7 +3492,8 @@
       "#Traffic light for bicycles": "چراغ راهنمایی برای دوچرخه",
       "#Sound signal at the traffic light for people who cannot see": "علامت صوتی در چراغ راهنمایی برای کسانی که نمی‌بینند",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "محافظت از خط عابر و رمپ در برابر پارک (برای مثال با میله‌های مانع)",
-      "#Connect the cycle path from one side of the crossing to the other": "وصل مسیر دوچرخه از یک سوی گذرگاه به سوی دیگر"
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسیر دوچرخه از یک سوی گذرگاه به سوی دیگر",
+      "#Is there a refuge island where people can stop between traffic lanes?": "آیا جزیرهٔ میانی برای توقف بین خط‌های عبور خودروها وجود دارد؟"
     },
     "hu": {
       "#Crossroads with zebra crossings and a check mark": "Kereszteződés zebrákkal és egy pipával",
@@ -3757,7 +3783,8 @@
       "#Traffic light for bicycles": "Kerékpáros jelzőlámpa",
       "#Sound signal at the traffic light for people who cannot see": "Hangjelzés a jelzőlámpán azoknak, akik nem látnak",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Az átkelő és a szegélyrámpa védelme a parkolástól (például oszlopokkal)",
-      "#Connect the cycle path from one side of the crossing to the other": "A kerékpárút összekötése az átkelő egyik oldalától a másikig"
+      "#Connect the cycle path from one side of the crossing to the other": "A kerékpárút összekötése az átkelő egyik oldalától a másikig",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Van menedéksziget, ahol meg lehet állni a forgalmi sávok között?"
     },
     "ar": {
       "#Crossroads with zebra crossings and a check mark": "تقاطع مع ممرات مشاة وعلامة صح",
@@ -4047,7 +4074,8 @@
       "#Traffic light for bicycles": "إشارة ضوئية للدراجات",
       "#Sound signal at the traffic light for people who cannot see": "إشارة صوتية عند الإشارة الضوئية لمن لا يرون",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "حماية المعبر والمنحدر من الوقوف (مثلًا بأعمدة حاجزة)",
-      "#Connect the cycle path from one side of the crossing to the other": "وصل مسار الدراجات من جانب المعبر إلى الجانب الآخر"
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسار الدراجات من جانب المعبر إلى الجانب الآخر",
+      "#Is there a refuge island where people can stop between traffic lanes?": "هل توجد جزيرة أمان يمكن الوقوف عليها بين مسارات المركبات؟"
     }
   },
   "id": "Street Connection",
