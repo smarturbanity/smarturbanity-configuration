@@ -31,6 +31,7 @@ for (const relative of catalog.questions) {
 }
 
 let count = 0;
+let written = 0;
 for (const relative of catalog.flows) {
   const flow = JSON.parse(fs.readFileSync(path.join(bankRoot, relative), 'utf8'));
   if (flow.flow_schema_version !== 1) throw Error(`Unsupported flow schema: ${relative}`);
@@ -72,11 +73,13 @@ for (const relative of catalog.flows) {
     });
   }
   form.languages = translations;
+  const current = fs.existsSync(target) ? JSON.parse(fs.readFileSync(target, 'utf8')) : null;
+  const unchanged = current !== null && isDeepStrictEqual(sortDeep(form), sortDeep(current));
   if (checkOnly) {
-    const current = JSON.parse(fs.readFileSync(target, 'utf8'));
-    if (!isDeepStrictEqual(sortDeep(form), sortDeep(current))) throw Error(`Generated form differs: ${flow.output}`);
-  } else {
+    if (!unchanged) throw Error(`Generated form differs: ${flow.output}`);
+  } else if (!unchanged) {
     fs.writeFileSync(target, JSON.stringify(form, null, 2) + '\n');
+    written++;
   }
   count++;
 }
@@ -90,7 +93,9 @@ for (const [id, entry] of questions) {
     }
   }
 }
-console.log(`${checkOnly ? 'Verified' : 'Generated'} ${count} questionnaire forms from ${questions.size} question files.`);
+console.log(checkOnly
+  ? `Verified ${count} questionnaire forms from ${questions.size} question files.`
+  : `Checked ${count} questionnaire forms from ${questions.size} question files; wrote ${written} changed forms.`);
 
 function sameSet(actual, expected) {
   return actual.size === expected.length && expected.every(value => actual.has(value));
