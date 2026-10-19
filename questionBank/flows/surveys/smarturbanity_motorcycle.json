@@ -1,0 +1,206 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/surveys/smarturbanity_motorcycle.json",
+  "form": {
+    "questionnaire": {
+      "name": "SmartUrbanity - Your Experience With Motorcycle Travel",
+      "questionnaire_id": "smarturbanity_motorcycle",
+      "questionnaire_version": "0.1.3",
+      "project": "SmartUrbanity",
+      "estimated_minutes": 2,
+      "options": {
+        "review_mode": true,
+        "save_user_id": true,
+        "ask_consent": true,
+        "ask_adult": true
+      },
+      "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+      "welcome_page": {
+        "title": "Welcome to Your Experience With Motorcycle Travel",
+        "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_motorcycle.svg",
+        "image_alt": "#Motorcycle on a street",
+        "description": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      },
+      "final_page": {
+        "title": "Thank you!",
+        "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+      },
+      "title": "6. Your Experience With Motorcycle Travel",
+      "sections": [
+        {
+          "title": "Motorcycle",
+          "description": "<p>Questions about your experience as a motorcycle or scooter rider.</p>",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "SmartUrbanity:moto_weekly",
+              "overrides": {
+                "required": true
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_calming",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_narrow",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_hazard_confidence",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_driver_stress",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_parking",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:moto_charging",
+              "overrides": {
+                "show_if": {
+                  "moto_weekly": "yes"
+                }
+              },
+              "variant": "default"
+            }
+          ]
+        }
+      ],
+      "privacy_classification": "personal_data"
+    },
+    "languages": {
+      "en": {
+        "#Motorcycle on a street": "Motorcycle on a street",
+        "code": "en",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - Your Experience With Motorcycle Travel",
+        "#6. Your Experience With Motorcycle Travel": "6. Your Experience With Motorcycle Travel",
+        "#Welcome to Your Experience With Motorcycle Travel": "Welcome to Your Experience With Motorcycle Travel",
+        "#Thank you!": "Thank you!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+        "#Motorcycle": "Motorcycle",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Questions about your experience as a motorcycle or scooter rider.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      },
+      "it": {
+        "#Motorcycle on a street": "Moto su una strada",
+        "code": "it",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - La tua esperienza con la moto",
+        "#6. Your Experience With Motorcycle Travel": "6. La tua esperienza con la moto",
+        "#Welcome to Your Experience With Motorcycle Travel": "Benvenuto/a nel questionario sulla tua esperienza con la moto",
+        "#Thank you!": "Grazie!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+        "#Motorcycle": "Moto",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Domande sulla tua esperienza come conducente di moto o scooter.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e la tua esperienza durante gli spostamenti in moto o scooter. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      },
+      "fr": {
+        "#Motorcycle on a street": "Moto dans une rue",
+        "code": "fr",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - Votre expérience en moto ou scooter",
+        "#6. Your Experience With Motorcycle Travel": "6. Votre expérience en moto ou scooter",
+        "#Welcome to Your Experience With Motorcycle Travel": "Bienvenue dans le questionnaire sur votre expérience en moto ou scooter",
+        "#Thank you!": "Merci !",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+        "#Motorcycle": "Moto ou scooter",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Questions sur votre expérience lorsque vous vous déplacez en moto ou en scooter.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience pendant vos déplacements en moto ou en scooter. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      },
+      "de": {
+        "#Motorcycle on a street": "Motorrad auf einer Straße",
+        "code": "de",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - Ihre Erfahrung mit Motorrad oder Roller",
+        "#6. Your Experience With Motorcycle Travel": "6. Ihre Erfahrung mit Motorrad oder Roller",
+        "#Welcome to Your Experience With Motorcycle Travel": "Willkommen beim Fragebogen zu Ihrer Erfahrung mit Motorrad oder Roller",
+        "#Thank you!": "Vielen Dank!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+        "#Motorcycle": "Motorrad oder Roller",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Fragen zu Ihren Erfahrungen beim Fahren mit Motorrad oder Roller.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Fahrten mit Motorrad oder Roller erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      },
+      "tr": {
+        "#Motorcycle on a street": "Sokakta bir motosiklet",
+        "code": "tr",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - Motosiklet veya Scooter Deneyiminiz",
+        "#6. Your Experience With Motorcycle Travel": "6. Motosiklet veya Scooter Deneyiminiz",
+        "#Welcome to Your Experience With Motorcycle Travel": "Motosiklet veya Scooter Deneyimi Anketine Hoş Geldiniz",
+        "#Thank you!": "Teşekkür ederiz!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+        "#Motorcycle": "Motosiklet veya Scooter",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Motosiklet veya scooter kullanırken yaşadığınız deneyimler hakkında sorular.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi motosiklet veya scooter ile yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      },
+      "fa": {
+        "#Motorcycle on a street": "موتورسیکلت در خیابان",
+        "code": "fa",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - تجربه شما با موتورسیکلت یا اسکوتر",
+        "#6. Your Experience With Motorcycle Travel": "6. تجربه شما با موتورسیکلت یا اسکوتر",
+        "#Welcome to Your Experience With Motorcycle Travel": "به پرسشنامه تجربه موتورسیکلت یا اسکوتر خوش آمدید",
+        "#Thank you!": "سپاسگزاریم!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+        "#Motorcycle": "موتورسیکلت یا اسکوتر",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>سؤال‌هایی درباره تجربه شما هنگام استفاده از موتورسیکلت یا اسکوتر.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام رفت‌وآمد با موتورسیکلت یا اسکوتر است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      },
+      "hu": {
+        "#Motorcycle on a street": "Motorkerékpár az utcán",
+        "code": "hu",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - Motorkerékpáros vagy robogós tapasztalatai",
+        "#6. Your Experience With Motorcycle Travel": "6. Motorkerékpáros vagy robogós tapasztalatai",
+        "#Welcome to Your Experience With Motorcycle Travel": "Üdvözöljük a motorkerékpáros vagy robogós tapasztalatokról szóló kérdőívben",
+        "#Thank you!": "Köszönjük!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+        "#Motorcycle": "Motorkerékpár vagy robogó",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>Kérdések a motorkerékpárral vagy robogóval szerzett tapasztalatairól.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal motorkerékpárral vagy robogóval közlekedve. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      },
+      "ar": {
+        "#Motorcycle on a street": "دراجة نارية في شارع",
+        "code": "ar",
+        "#SmartUrbanity - Your Experience With Motorcycle Travel": "SmartUrbanity - تجربتك مع الدراجة النارية أو السكوتر",
+        "#6. Your Experience With Motorcycle Travel": "6. تجربتك مع الدراجة النارية أو السكوتر",
+        "#Welcome to Your Experience With Motorcycle Travel": "مرحبًا بك في استبيان تجربة الدراجة النارية أو السكوتر",
+        "#Thank you!": "شكرًا لك!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+        "#Motorcycle": "الدراجة النارية أو السكوتر",
+        "#<p>Questions about your experience as a motorcycle or scooter rider.</p>": "<p>أسئلة عن تجربتك عند استخدام الدراجة النارية أو السكوتر.</p>",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by motorcycle or scooter. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالدراجة النارية أو السكوتر. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+      }
+    },
+    "id": "smarturbanity_motorcycle",
+    "db_set": "questionnaires",
+    "response_format": "planeasy.response",
+    "response_schema_version": "2.0",
+    "response_kind": "survey",
+    "default_language": "en"
+  }
+}

@@ -15,6 +15,17 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
+## Question bank and questionnaire flows
+
+`questionBank/questions/<project>/<key>.json` gives each questionnaire question
+one catalog file identified by project and answer key. It includes translations,
+source questionnaire provenance and any explicit wording variants. The files in
+`questionBank/flows/` compose questions into ordered, conditional questionnaires.
+For the current applications, `node questionBank/build.mjs` generates the legacy
+`forms/` JSON; `node questionBank/build.mjs --check` verifies that it matches.
+See [questionBank/README.md](questionBank/README.md) for the format and editing
+workflow.
+
 ## Questionnaire privacy labels
 
 Every form declares `questionnaire.privacy_classification`. A question or an

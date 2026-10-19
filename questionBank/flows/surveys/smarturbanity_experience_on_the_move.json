@@ -1,0 +1,217 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/surveys/smarturbanity_experience_on_the_move.json",
+  "form": {
+    "questionnaire": {
+      "name": "SmartUrbanity - Your Experience on the Move",
+      "questionnaire_id": "smarturbanity_experience_on_the_move",
+      "questionnaire_version": "0.1.3",
+      "project": "SmartUrbanity",
+      "estimated_minutes": 3,
+      "options": {
+        "review_mode": true,
+        "save_user_id": true,
+        "ask_consent": true,
+        "ask_adult": true
+      },
+      "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+      "welcome_page": {
+        "title": "Welcome to Your Experience on the Move",
+        "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_how_you_see_things.svg",
+        "image_alt": "#Eye and speech bubble",
+        "description": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      },
+      "final_page": {
+        "title": "Thank you!",
+        "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+      },
+      "title": "4. Your Experience On the Move",
+      "sections": [
+        {
+          "title": "Emotional experience",
+          "description": "<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "SmartUrbanity:emotional_state",
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:time_vs_expected",
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:tiredness",
+              "overrides": {
+                "required": true
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:tiredness_cause",
+              "overrides": {
+                "show_if": {
+                  "tiredness": {
+                    "not": [
+                      "not_tired"
+                    ]
+                  }
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:anxiety_frequency",
+              "overrides": {
+                "required": true
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:anxiety_causes",
+              "overrides": {
+                "show_if": {
+                  "anxiety_frequency": {
+                    "not": [
+                      "never"
+                    ]
+                  }
+                }
+              },
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:effort_vs_alternatives",
+              "variant": "default"
+            },
+            {
+              "question_ref": "SmartUrbanity:street_preference_v1",
+              "variant": "default"
+            }
+          ]
+        }
+      ],
+      "privacy_classification": "heightened_personal"
+    },
+    "languages": {
+      "en": {
+        "#Eye and speech bubble": "Eye and speech bubble",
+        "code": "en",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - Your Experience on the Move",
+        "#4. Your Experience On the Move": "4. Your Experience On the Move",
+        "#Welcome to Your Experience on the Move": "Welcome to Your Experience on the Move",
+        "#Thank you!": "Thank you!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+        "#Emotional experience": "Emotional experience",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>",
+        "#Other": "Other",
+        "#I don't know": "I don't know",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      },
+      "it": {
+        "#Eye and speech bubble": "Occhio e fumetto",
+        "code": "it",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - La tua esperienza durante gli spostamenti",
+        "#4. Your Experience On the Move": "4. La tua esperienza durante gli spostamenti",
+        "#Welcome to Your Experience on the Move": "Benvenuto/a nel questionario sulla tua esperienza durante gli spostamenti",
+        "#Thank you!": "Grazie!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+        "#Emotional experience": "Esperienza emotiva",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>Le seguenti domande si riferiscono al tuo spostamento abituale, cioè quello che effettui più frequentemente nella vita quotidiana, ad esempio per andare al lavoro, all'università, a scuola, a fare acquisti o per altre attività regolari.</p>",
+        "#Other": "Altro",
+        "#I don't know": "Non lo so",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e le tue esperienze durante gli spostamenti, inclusi gli spostamenti a piedi, in bicicletta, con il trasporto pubblico, in auto e in moto, nonché la qualità dei percorsi. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      },
+      "fr": {
+        "#Eye and speech bubble": "Œil et bulle de dialogue",
+        "code": "fr",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - Votre expérience pendant vos déplacements",
+        "#4. Your Experience On the Move": "4. Votre expérience pendant vos déplacements",
+        "#Welcome to Your Experience on the Move": "Bienvenue dans le questionnaire sur votre expérience pendant vos déplacements",
+        "#Thank you!": "Merci !",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+        "#Emotional experience": "Ressenti pendant le trajet",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>Les questions suivantes concernent votre trajet habituel, c’est-à-dire celui que vous faites le plus souvent dans votre vie quotidienne, par exemple pour aller au travail, à l’université, à l’école, faire des courses ou participer à d’autres activités régulières.</p>",
+        "#Other": "Autre",
+        "#I don't know": "Je ne sais pas",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience pendant vos déplacements, notamment à pied, à vélo, en transports publics, en voiture ou à moto, ainsi que sur la qualité des itinéraires. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      },
+      "de": {
+        "#Eye and speech bubble": "Auge und Sprechblase",
+        "code": "de",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - Ihre Erfahrung unterwegs",
+        "#4. Your Experience On the Move": "4. Ihre Erfahrung unterwegs",
+        "#Welcome to Your Experience on the Move": "Willkommen beim Fragebogen zu Ihrer Erfahrung unterwegs",
+        "#Thank you!": "Vielen Dank!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+        "#Emotional experience": "Gefühl während der Fahrt",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>Die folgenden Fragen beziehen sich auf Ihren typischen Weg, also den Weg, den Sie im Alltag am häufigsten machen, zum Beispiel zur Arbeit, Universität, Schule, zum Einkaufen oder zu anderen regelmäßigen Aktivitäten.</p>",
+        "#Other": "Anderes",
+        "#I don't know": "Ich weiß es nicht",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie sich während Ihrer Wege fühlen und was Sie dabei erleben, zum Beispiel zu Fuß, mit dem Fahrrad, mit öffentlichen Verkehrsmitteln, mit dem Auto oder Motorrad sowie in Bezug auf die Qualität der Wege. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      },
+      "tr": {
+        "#Eye and speech bubble": "Göz ve konuşma balonu",
+        "code": "tr",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - Yolculuk Deneyiminiz",
+        "#4. Your Experience On the Move": "4. Yolculuk Deneyiminiz",
+        "#Welcome to Your Experience on the Move": "Yolculuk Deneyimi Anketine Hoş Geldiniz",
+        "#Thank you!": "Teşekkür ederiz!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+        "#Emotional experience": "Yolculuk Sırasındaki Duygular",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>Aşağıdaki sorular tipik yolculuğunuzla ilgilidir. Bu, günlük yaşamda en sık yaptığınız yolculuktur; örneğin işe, üniversiteye, okula, alışverişe veya düzenli başka bir etkinliğe giderken yaptığınız yolculuk.</p>",
+        "#Other": "Diğer",
+        "#I don't know": "Bilmiyorum",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi yürürken, bisiklete binerken, toplu taşıma kullanırken, otomobille veya motosikletle seyahat ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Güzergâh kalitesi de bu deneyimin bir parçasıdır. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      },
+      "fa": {
+        "#Eye and speech bubble": "چشم و حباب گفتگو",
+        "code": "fa",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - تجربه شما در رفت‌وآمد",
+        "#4. Your Experience On the Move": "4. تجربه شما در رفت‌وآمد",
+        "#Welcome to Your Experience on the Move": "به پرسشنامه تجربه رفت‌وآمد خوش آمدید",
+        "#Thank you!": "سپاسگزاریم!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+        "#Emotional experience": "احساس در طول سفر",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>سؤال‌های زیر درباره سفر معمول شماست؛ یعنی سفری که در زندگی روزمره بیشتر انجام می‌دهید، مثلاً رفتن به محل کار، دانشگاه، مدرسه، خرید یا فعالیت‌های منظم دیگر.</p>",
+        "#Other": "سایر",
+        "#I don't know": "نمی‌دانم",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام رفت‌وآمد است؛ از جمله پیاده‌روی، دوچرخه‌سواری، حمل‌ونقل عمومی، خودرو، موتورسیکلت و کیفیت مسیر. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      },
+      "hu": {
+        "#Eye and speech bubble": "Szem és szóbuborék",
+        "code": "hu",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - Utazási tapasztalatai",
+        "#4. Your Experience On the Move": "4. Utazási tapasztalatai",
+        "#Welcome to Your Experience on the Move": "Üdvözöljük az utazási tapasztalatokról szóló kérdőívben",
+        "#Thank you!": "Köszönjük!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+        "#Emotional experience": "Érzelmi élmény",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>A következő kérdések az Ön tipikus utazására vonatkoznak, vagyis arra az útra, amelyet a mindennapi életben a leggyakrabban tesz meg, például munkába, egyetemre, iskolába, vásárolni vagy más rendszeres tevékenységhez.</p>",
+        "#Other": "Egyéb",
+        "#I don't know": "Nem tudom",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal utazás közben, például gyalog, kerékpárral, tömegközlekedéssel, autóval vagy motorkerékpárral, valamint milyen az útvonal minősége. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      },
+      "ar": {
+        "#Eye and speech bubble": "عين وفقاعة كلام",
+        "code": "ar",
+        "#SmartUrbanity - Your Experience on the Move": "SmartUrbanity - تجربتك أثناء التنقل",
+        "#4. Your Experience On the Move": "4. تجربتك أثناء التنقل",
+        "#Welcome to Your Experience on the Move": "مرحبًا بك في استبيان تجربة التنقل",
+        "#Thank you!": "شكرًا لك!",
+        "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+        "#Emotional experience": "الشعور أثناء الرحلة",
+        "#<p>The following questions refer to your typical journey (the trip you most commonly make in your daily life, such as travelling to work, university, school, shopping, or other regular activities).</p>": "<p>تشير الأسئلة التالية إلى رحلتك المعتادة، أي الرحلة التي تقوم بها غالبًا في حياتك اليومية، مثل الذهاب إلى العمل أو الجامعة أو المدرسة أو التسوق أو أي نشاط منتظم آخر.</p>",
+        "#Other": "أخرى",
+        "#I don't know": "لا أعرف",
+        "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling, including walking, cycling, public transport, car, motorcycle and route quality. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل، بما في ذلك المشي وركوب الدراجة والنقل العام والسيارة والدراجة النارية وجودة الطريق. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+      }
+    },
+    "id": "smarturbanity_experience_on_the_move",
+    "db_set": "questionnaires",
+    "response_format": "planeasy.response",
+    "response_schema_version": "2.0",
+    "response_kind": "survey",
+    "default_language": "en"
+  }
+}
