@@ -47,11 +47,15 @@ function validateCollection(collection) {
     throw Error('Unsupported question bank collection');
   }
   const questions = new Map();
+  const questionPaths = new Set();
   for (const entry of collection.questions) {
     if (entry.question_id !== questionId(entry.project, entry.key) || !Number.isInteger(entry.version) || entry.version < 1) {
       throw Error(`Invalid question identity or version: ${entry.question_id}`);
     }
     if (questions.has(entry.question_id)) throw Error(`Repeated question ID: ${entry.question_id}`);
+    const questionPath = `questions/${entry.question_id}.json`.toLowerCase();
+    if (questionPaths.has(questionPath)) throw Error(`Question filename collision: ${entry.question_id}`);
+    questionPaths.add(questionPath);
     if (!entry.origin_questionnaire || !entry.variants || !Object.keys(entry.variants).length) {
       throw Error(`Incomplete question: ${entry.question_id}`);
     }
@@ -62,10 +66,13 @@ function validateCollection(collection) {
   for (const flow of collection.flows) {
     if (flow?.flow_schema_version !== 1 || !flow.form?.questionnaire) throw Error('Invalid flow');
     const formId = flow.form.questionnaire.questionnaire_id;
-    if (!/^[A-Za-z0-9_]+$/.test(formId ?? '') || formIds.has(formId)) throw Error(`Invalid or repeated questionnaire: ${formId}`);
-    formIds.add(formId);
-    if (!safeOutput(flow.output) || outputs.has(flow.output)) throw Error(`Invalid or repeated form output: ${flow.output}`);
-    outputs.add(flow.output);
+    const formIdKey = String(formId ?? '').toLowerCase();
+    if (!/^[A-Za-z0-9_]+$/.test(formId ?? '') || formIds.has(formIdKey)) throw Error(`Invalid or repeated questionnaire: ${formId}`);
+    formIds.add(formIdKey);
+    if (!safeOutput(flow.output)) throw Error(`Invalid form output: ${flow.output}`);
+    const output = outputKey(flow.output);
+    if (outputs.has(output)) throw Error(`Repeated form output: ${flow.output}`);
+    outputs.add(output);
     const answerKeys = new Set();
     for (const section of flow.form.questionnaire.sections ?? []) {
       for (const node of section.questions ?? []) {
@@ -93,10 +100,18 @@ function importCollection(collection, checkOnly) {
       const flow = readJson(path.join(stageBank, relative));
       return [flow.form.questionnaire.questionnaire_id, {relative, flow}];
     }));
+    const localFlowIds = new Map([...localFlows.keys()].map(id => [id.toLowerCase(), id]));
+    const localOutputs = new Map([...localFlows].map(([id, item]) => [outputKey(item.flow.output), id]));
     const localQuestions = new Map(stageIndex.questions.map(relative => {
       const entry = readJson(path.join(stageBank, relative));
       return [entry.question_id, entry];
     }));
+    const localQuestionPaths = new Map([...localQuestions.keys()]
+      .map(id => [`questions/${id}.json`.toLowerCase(), id]));
+    if (localFlowIds.size !== localFlows.size || localOutputs.size !== localFlows.size
+      || localQuestionPaths.size !== localQuestions.size) {
+      throw Error('The local bank contains case-insensitive ID or output collisions');
+    }
     for (const {flow} of localFlows.values()) {
       const target = path.resolve(stageRoot, flow.output);
       fs.mkdirSync(path.dirname(target), {recursive: true});
@@ -111,7 +126,10 @@ function importCollection(collection, checkOnly) {
         }
         if (entry.version === current.version) continue;
       } else {
+        const alias = localQuestionPaths.get(`questions/${entry.question_id}.json`.toLowerCase());
+        if (alias) throw Error(`Question filename collides with ${alias}: ${entry.question_id}`);
         stageIndex.questions.push(`questions/${entry.question_id}.json`);
+        localQuestionPaths.set(`questions/${entry.question_id}.json`.toLowerCase(), entry.question_id);
       }
       localQuestions.set(entry.question_id, structuredClone(entry));
     }
@@ -127,9 +145,14 @@ function importCollection(collection, checkOnly) {
         if (flow.output !== current.flow.output) throw Error(`Questionnaire output path changed: ${id}`);
         localFlows.set(id, {relative: current.relative, flow: structuredClone(flow)});
       } else {
-        if ([...localFlows.values()].some(item => item.flow.output === flow.output)) throw Error(`Output path collision: ${flow.output}`);
+        const aliasId = localFlowIds.get(id.toLowerCase());
+        if (aliasId) throw Error(`Questionnaire ID collides with ${aliasId}: ${id}`);
+        const aliasOutput = localOutputs.get(outputKey(flow.output));
+        if (aliasOutput) throw Error(`Output path collides with ${aliasOutput}: ${flow.output}`);
         const relative = `flows/${path.dirname(flow.output).replace(/^forms[\\/]/, '').replaceAll('\\', '/')}/${id}.json`;
         localFlows.set(id, {relative, flow: structuredClone(flow)});
+        localFlowIds.set(id.toLowerCase(), id);
+        localOutputs.set(outputKey(flow.output), id);
         stageIndex.flows.push(relative);
       }
     }
@@ -197,9 +220,11 @@ function readJson(file) { return JSON.parse(fs.readFileSync(file, 'utf8')); }
 function differs(left, right) { return !fs.existsSync(right) || !fs.readFileSync(left).equals(fs.readFileSync(right)); }
 function copyInto(source, target) { fs.mkdirSync(path.dirname(target), {recursive: true}); fs.copyFileSync(source, target); }
 function safeOutput(relative) {
-  return typeof relative === 'string' && /^forms\/[A-Za-z0-9_/-]+\.json$/.test(relative)
-    && !relative.split('/').includes('..');
+  return typeof relative === 'string'
+    && /^forms\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_-]+\.json$/.test(relative)
+    && path.resolve(repositoryRoot, relative).startsWith(path.join(repositoryRoot, 'forms') + path.sep);
 }
+function outputKey(relative) { return path.resolve(repositoryRoot, relative).toLowerCase(); }
 function questionPayload(entry) {
   return {project: entry.project, key: entry.key, origin_questionnaire: entry.origin_questionnaire,
     origin_basis: entry.origin_basis, variants: Object.fromEntries(Object.entries(entry.variants)

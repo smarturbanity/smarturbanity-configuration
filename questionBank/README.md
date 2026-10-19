@@ -49,6 +49,7 @@ node questionBank/collection.mjs import ../smarturbanity-collection.json
 
 Import checks the entire collection in a temporary copy before writing. It
 rejects missing definitions, invalid references, answer-key collisions,
+case-insensitive filename/output collisions on Windows, noncanonical paths,
 regressive versions and changed content under the same question or questionnaire
 version. A changed definition needs a higher question version, and every flow
 that uses it must pin that version. A changed flow needs a higher questionnaire
