@@ -20,7 +20,8 @@ visibility (`show_if`), requirement (`required`) and element prefill
 (`prefill_from`). Together, order and visibility conditions describe the current
 conditional path through the questionnaire. Flow-wide copy and translations stay
 in the flow; question wording, help, option labels and their translations live
-in the question files.
+in the question files. This includes the generated “Other”, “I don't know” and
+“Prefer not to say” labels when the current form supplies their translations.
 
 The existing `forms/` JSON remains the format consumed by the current
 application. It can be reproduced from this bank:
