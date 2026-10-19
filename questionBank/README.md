@@ -35,16 +35,15 @@ The **primary exchange format** is one self-contained question-bank collection:
 }
 ```
 
-It can contain one questionnaire, several goal-based flows, or the whole bank.
+The file exchanged with colleagues contains **one flow for one questionnaire**.
 Every referenced question is included with its translations and provenance.
 The framework resolves the references and creates the real questionnaire JSON
 for a repository. Export and import from this repository with:
 
 ```sh
-node questionBank/collection.mjs export ../smarturbanity-collection.json
-node questionBank/collection.mjs export ../walking-collection.json smarturbanity_walking
-node questionBank/collection.mjs import ../smarturbanity-collection.json --check
-node questionBank/collection.mjs import ../smarturbanity-collection.json
+node questionBank/collection.mjs export ../walking-questionnaire.json smarturbanity_walking
+node questionBank/collection.mjs import ../walking-questionnaire.json --check
+node questionBank/collection.mjs import ../walking-questionnaire.json
 ```
 
 Import checks the entire collection in a temporary copy before writing. It
@@ -55,6 +54,8 @@ version. A changed definition needs a higher question version, and every flow
 that uses it must pin that version. A changed flow needs a higher questionnaire
 version. `--check` shows how many bank and generated form files would change.
 Questions not yet placed in a flow may be included as `available_for_future`.
+The packer and importer also accept multiple flows for internal migration and
+verification snapshots; that is not the per-questionnaire exchange deliverable.
 
 The existing `forms/` JSON remains the compiled questionnaire and response
 format consumed by the current application. It can be reproduced from this bank:
