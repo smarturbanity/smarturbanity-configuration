@@ -4,6 +4,53 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Street crossing control (2026-10-21)
+
+`street_connection_assessment` 0.7.0 removes the repeated regulation choice from
+the minimum. `crossing_kind` still records whether the street-level crossing has a
+traffic light, markings without a light, or neither. The following required
+`traffic_control` question appears only for `crossing_kind=signal` and asks what
+happens at that light. Its active options are `protected_signal`,
+`permissive_signal_with_turning_conflict`, `unclear_signal_priority`, and
+`signal_broken`, plus an explicit unknown answer. The eight language translations
+and question-bank version are updated. The Access Together manifest selects 0.7.0.
+
+For an unmarked or marked crossing without a signal, the answer to `crossing_kind`
+is sufficient to classify the infrastructure; `traffic_control` is **not asked or
+stored**. Analysts may derive the equivalent historical categories
+`no_control` / `priority_no_signal` from `crossing_kind` when comparing versions,
+but must not treat a missing `traffic_control` answer as a respondent's answer.
+The optional `driver_yielding` question now follows the two crossings without a
+signal. It no longer appears for a broken signal because the current `show_if`
+format cannot express the union of that case with crossings without signals.
+Historical answers and the meaning of existing option values are unchanged.
+
+## Cycle crossing protection (2026-10-19)
+
+`street_connection_assessment` 0.6.0 adds `bike_path_unprotected` to the existing
+optional `cyclist_crossing_problems` detail question, behind
+`continue_audit=yes_audit` for the cyclist perspective. It records lack of physical
+separation from motor traffic, independently of continuity, parked vehicles and
+right of way. All eight form languages include the option. Existing keys, option
+values, required minimum and consent remain unchanged. Earlier responses lack
+this option; absence is not a negative answer. The Access Together bundled manifest
+selects 0.6.0.
+
+## Access Together retest (2026-10-19)
+
+`street_connection_assessment` 0.5.0 extends the minimum approved for the next
+research round. The existing `traffic_control` question moves before
+`continue_audit`, becomes required, and keeps its street-level condition, keys,
+options and explicit unknown answer. Its detail dependants remain optional behind
+the audit gate. A required street-level `refuge_island` question records yes, no
+or unknown independently of signal control and crossing users. All eight form
+languages include the new question. Earlier versions have no island answer;
+absence must never be analysed as no.
+
+The minimum has a variable total: walking, cycling, both, street-level, bridge
+and underpass routes ask different applicable questions. Assessment still precedes
+an office dossier. This revision adds no health question or consent.
+
 ## Round 4 crossings and cycle paths (2026-10-17)
 
 Proposals P1–P12 of the Round 4 resident study, approved by the owner on

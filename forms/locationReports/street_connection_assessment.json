@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "0.4.0",
+    "questionnaire_version": "0.7.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -390,6 +390,59 @@
             "required": true
           },
           {
+            "text": "What happens at the traffic light when you cross?",
+            "help": "Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.",
+            "answer_key": "traffic_control",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Traffic light: when it is green for me, the cars are stopped",
+                "value": "protected_signal"
+              },
+              {
+                "text": "Traffic light, but turning cars still pass",
+                "value": "permissive_signal_with_turning_conflict"
+              },
+              {
+                "text": "There is a traffic light, but it is unclear who should go",
+                "value": "unclear_signal_priority"
+              },
+              {
+                "text": "The traffic light is broken or switched off",
+                "value": "signal_broken"
+              }
+            ],
+            "show_if": {
+              "crossing_kind": [
+                "signal"
+              ]
+            },
+            "add_i_dont_know": true,
+            "required": true
+          },
+          {
+            "text": "Is there a refuge island where people can stop between traffic lanes?",
+            "answer_key": "refuge_island",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "add_i_dont_know": true,
+            "show_if": {
+              "connection_form": "street_level"
+            },
+            "required": true
+          },
+          {
             "text": "Would you like to add more details? There are about 10 to 22 optional questions, depending on the place and on how you move (about 3–7 minutes).",
             "answer_key": "continue_audit",
             "question_type": "single_option",
@@ -521,6 +574,10 @@
                 "value": "tram_tracks"
               },
               {
+                "text": "The cycle path is not physically separated from motor traffic",
+                "value": "bike_path_unprotected"
+              },
+              {
                 "text": "No clear problem",
                 "value": "none"
               }
@@ -625,45 +682,6 @@
               "connection_elements": [
                 "escalator"
               ]
-            },
-            "add_i_dont_know": true,
-            "required": false
-          },
-          {
-            "text": "How does this crossing work?",
-            "help": "Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.",
-            "answer_key": "traffic_control",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "There is no zebra crossing and no traffic light",
-                "value": "no_control"
-              },
-              {
-                "text": "Zebra crossing without a traffic light",
-                "value": "priority_no_signal"
-              },
-              {
-                "text": "Traffic light: when it is green for me, the cars are stopped",
-                "value": "protected_signal"
-              },
-              {
-                "text": "Traffic light, but turning cars still pass",
-                "value": "permissive_signal_with_turning_conflict"
-              },
-              {
-                "text": "There is a traffic light, but it is unclear who should go",
-                "value": "unclear_signal_priority"
-              },
-              {
-                "text": "The traffic light is broken or switched off",
-                "value": "signal_broken"
-              }
-            ],
-            "show_if": {
-              "continue_audit": "yes_audit",
-              "connection_form": "street_level"
             },
             "add_i_dont_know": true,
             "required": false
@@ -1435,10 +1453,9 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit",
-              "traffic_control": [
-                "no_control",
-                "priority_no_signal",
-                "signal_broken"
+              "crossing_kind": [
+                "marked_no_signal",
+                "unmarked"
               ]
             },
             "required": false
@@ -1813,9 +1830,8 @@
       "#Today, is the escalator working?": "Today, is the escalator working?",
       "#No, the escalator is broken or stopped": "No, the escalator is broken or stopped",
       "#No, the escalator is closed (by a gate or at certain hours)": "No, the escalator is closed (by a gate or at certain hours)",
-      "#How does this crossing work?": "How does this crossing work?",
+      "#What happens at the traffic light when you cross?": "What happens at the traffic light when you cross?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.",
-      "#There is no zebra crossing and no traffic light": "There is no zebra crossing and no traffic light",
       "#Zebra crossing without a traffic light": "Zebra crossing without a traffic light",
       "#Traffic light: when it is green for me, the cars are stopped": "Traffic light: when it is green for me, the cars are stopped",
       "#Traffic light, but turning cars still pass": "Traffic light, but turning cars still pass",
@@ -2016,7 +2032,9 @@
       "#Traffic light for bicycles": "Traffic light for bicycles",
       "#Sound signal at the traffic light for people who cannot see": "Sound signal at the traffic light for people who cannot see",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protect the crossing and curb ramp from parking (for example with bollards)",
-      "#Connect the cycle path from one side of the crossing to the other": "Connect the cycle path from one side of the crossing to the other"
+      "#Connect the cycle path from one side of the crossing to the other": "Connect the cycle path from one side of the crossing to the other",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Is there a refuge island where people can stop between traffic lanes?",
+      "#The cycle path is not physically separated from motor traffic": "The cycle path is not physically separated from motor traffic"
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -2104,9 +2122,8 @@
       "#Today, is the escalator working?": "Oggi la scala mobile funziona?",
       "#No, the escalator is broken or stopped": "No, la scala mobile è guasta o ferma",
       "#No, the escalator is closed (by a gate or at certain hours)": "No, la scala mobile è chiusa (da un cancello o in certi orari)",
-      "#How does this crossing work?": "Come funziona questo attraversamento?",
+      "#What happens at the traffic light when you cross?": "Quando attraversi, che cosa succede al semaforo?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "Le auto che girano sono i veicoli che svoltano all’incrocio e passano sull’attraversamento mentre per chi attraversa è verde. Chi deve passare si riferisce alla precedenza, cioè a chi ha diritto di passare per primo.",
-      "#There is no zebra crossing and no traffic light": "Non ci sono né strisce pedonali né semaforo",
       "#Zebra crossing without a traffic light": "Strisce pedonali senza semaforo",
       "#Traffic light: when it is green for me, the cars are stopped": "Semaforo: quando è verde per me, le auto sono ferme",
       "#Traffic light, but turning cars still pass": "Semaforo, ma le auto che girano passano lo stesso",
@@ -2307,7 +2324,9 @@
       "#Traffic light for bicycles": "Semaforo per le bici",
       "#Sound signal at the traffic light for people who cannot see": "Segnale sonoro al semaforo per chi non vede",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Proteggere strisce e scivolo dalla sosta (per esempio con dissuasori)",
-      "#Connect the cycle path from one side of the crossing to the other": "Collegare la ciclabile da una parte all'altra dell'attraversamento"
+      "#Connect the cycle path from one side of the crossing to the other": "Collegare la ciclabile da una parte all'altra dell'attraversamento",
+      "#Is there a refuge island where people can stop between traffic lanes?": "È presente un’isola salvagente dove fermarsi tra le corsie?",
+      "#The cycle path is not physically separated from motor traffic": "La ciclabile non è separata fisicamente dal traffico motorizzato"
     },
     "fr": {
       "#Crossroads with zebra crossings and a check mark": "Carrefour avec passages piétons et une coche",
@@ -2395,9 +2414,8 @@
       "#Today, is the escalator working?": "Aujourd’hui, l’escalator fonctionne-t-il ?",
       "#No, the escalator is broken or stopped": "Non, l’escalator est en panne ou arrêté",
       "#No, the escalator is closed (by a gate or at certain hours)": "Non, l’escalator est fermé (par une grille ou à certaines heures)",
-      "#How does this crossing work?": "Comment fonctionne cette traversée ?",
+      "#What happens at the traffic light when you cross?": "Que se passe-t-il au feu quand vous traversez ?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "Les voitures qui tournent sont les véhicules qui tournent au carrefour et passent sur la traversée pendant que le feu des personnes qui traversent est vert. Qui doit passer renvoie à la priorité, c’est-à-dire à qui a le droit de passer en premier.",
-      "#There is no zebra crossing and no traffic light": "Il n'y a ni passage piéton ni feu",
       "#Zebra crossing without a traffic light": "Passage piéton sans feu",
       "#Traffic light: when it is green for me, the cars are stopped": "Feu : quand il est vert pour moi, les voitures sont arrêtées",
       "#Traffic light, but turning cars still pass": "Feu, mais les voitures qui tournent passent quand même",
@@ -2597,7 +2615,9 @@
       "#Traffic light for bicycles": "Feu pour les vélos",
       "#Sound signal at the traffic light for people who cannot see": "Signal sonore au feu pour les personnes qui ne voient pas",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Protéger le passage et le bateau de trottoir du stationnement (par exemple avec des potelets)",
-      "#Connect the cycle path from one side of the crossing to the other": "Relier la piste cyclable d'un côté à l'autre du passage"
+      "#Connect the cycle path from one side of the crossing to the other": "Relier la piste cyclable d'un côté à l'autre du passage",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Y a-t-il un îlot refuge où s’arrêter entre les voies de circulation ?",
+      "#The cycle path is not physically separated from motor traffic": "La piste cyclable n’est pas physiquement séparée de la circulation motorisée"
     },
     "de": {
       "#Crossroads with zebra crossings and a check mark": "Kreuzung mit Zebrastreifen und einem Häkchen",
@@ -2685,9 +2705,8 @@
       "#Today, is the escalator working?": "Funktioniert die Rolltreppe heute?",
       "#No, the escalator is broken or stopped": "Nein, die Rolltreppe ist kaputt oder steht still",
       "#No, the escalator is closed (by a gate or at certain hours)": "Nein, die Rolltreppe ist geschlossen (durch ein Tor oder zu bestimmten Zeiten)",
-      "#How does this crossing work?": "Wie funktioniert dieser Übergang?",
+      "#What happens at the traffic light when you cross?": "Was passiert an der Ampel, wenn Sie queren?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "Abbiegende Autos sind Fahrzeuge, die an der Kreuzung abbiegen und über den Übergang fahren, während die Ampel für Querende grün ist. Wer gehen oder fahren darf bezieht sich auf den Vorrang, also darauf, wer zuerst gehen oder fahren darf.",
-      "#There is no zebra crossing and no traffic light": "Es gibt weder Zebrastreifen noch Ampel",
       "#Zebra crossing without a traffic light": "Zebrastreifen ohne Ampel",
       "#Traffic light: when it is green for me, the cars are stopped": "Ampel: Wenn ich Grün habe, stehen die Autos",
       "#Traffic light, but turning cars still pass": "Ampel, aber abbiegende Autos fahren trotzdem",
@@ -2887,7 +2906,9 @@
       "#Traffic light for bicycles": "Ampel für Fahrräder",
       "#Sound signal at the traffic light for people who cannot see": "Tonsignal an der Ampel für Menschen, die nicht sehen können",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Übergang und abgesenkten Bordstein vor Falschparkern schützen (zum Beispiel mit Pollern)",
-      "#Connect the cycle path from one side of the crossing to the other": "Den Radweg von einer Seite des Übergangs zur anderen verbinden"
+      "#Connect the cycle path from one side of the crossing to the other": "Den Radweg von einer Seite des Übergangs zur anderen verbinden",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Gibt es eine Schutzinsel, auf der man zwischen den Fahrspuren warten kann?",
+      "#The cycle path is not physically separated from motor traffic": "Der Radweg ist nicht baulich vom Kraftfahrzeugverkehr getrennt"
     },
     "tr": {
       "#Crossroads with zebra crossings and a check mark": "Yaya geçitleri ve onay işareti olan kavşak",
@@ -2975,9 +2996,8 @@
       "#Today, is the escalator working?": "Bugün yürüyen merdiven çalışıyor mu?",
       "#No, the escalator is broken or stopped": "Hayır, yürüyen merdiven arızalı veya durmuş",
       "#No, the escalator is closed (by a gate or at certain hours)": "Hayır, yürüyen merdiven kapalı (bir kapıyla veya belirli saatlerde)",
-      "#How does this crossing work?": "Bu geçit nasıl işliyor?",
+      "#What happens at the traffic light when you cross?": "Karşıya geçerken trafik ışığında ne oluyor?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "Dönen araçlar, kavşakta dönüp karşıya geçenlerin ışığı yeşilken geçidin üzerinden geçen araçlardır. Kimin geçmesi gerektiği, geçiş üstünlüğünü, yani önce kimin geçme hakkı olduğunu ifade eder.",
-      "#There is no zebra crossing and no traffic light": "Ne yaya geçidi çizgisi ne de trafik ışığı var",
       "#Zebra crossing without a traffic light": "Trafik ışığı olmayan yaya geçidi",
       "#Traffic light: when it is green for me, the cars are stopped": "Trafik ışığı: benim için yeşil yandığında arabalar duruyor",
       "#Traffic light, but turning cars still pass": "Trafik ışığı var, ama dönen arabalar yine de geçiyor",
@@ -3177,7 +3197,9 @@
       "#Traffic light for bicycles": "Bisikletler için trafik ışığı",
       "#Sound signal at the traffic light for people who cannot see": "Göremeyen kişiler için trafik ışığında sesli sinyal",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Geçidi ve bordür rampasını park etmeye karşı korumak (örneğin babalarla)",
-      "#Connect the cycle path from one side of the crossing to the other": "Bisiklet yolunu geçidin bir yanından diğerine bağlamak"
+      "#Connect the cycle path from one side of the crossing to the other": "Bisiklet yolunu geçidin bir yanından diğerine bağlamak",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Trafik şeritleri arasında beklenebilecek bir refüj adası var mı?",
+      "#The cycle path is not physically separated from motor traffic": "Bisiklet yolu motorlu araç trafiğinden fiziksel olarak ayrılmamış"
     },
     "fa": {
       "#Crossroads with zebra crossings and a check mark": "چهارراه با خط‌کشی عابر پیاده و علامت تیک",
@@ -3265,9 +3287,8 @@
       "#Today, is the escalator working?": "آیا امروز پله برقی کار می‌کند؟",
       "#No, the escalator is broken or stopped": "خیر، پله برقی خراب یا متوقف است",
       "#No, the escalator is closed (by a gate or at certain hours)": "خیر، پله برقی بسته است (با دروازه یا در ساعات مشخص)",
-      "#How does this crossing work?": "این گذرگاه چگونه کار می‌کند؟",
+      "#What happens at the traffic light when you cross?": "هنگام عبور، وضعیت چراغ راهنمایی چگونه است؟",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "خودروهای در حال گردش وسایلی هستند که در تقاطع می‌پیچند و در حالی که چراغ عابران سبز است از محل عبور می‌گذرند. «چه کسی باید برود» به حق تقدم اشاره دارد، یعنی چه کسی اجازه دارد اول برود.",
-      "#There is no zebra crossing and no traffic light": "نه خط عابر پیاده هست و نه چراغ راهنمایی",
       "#Zebra crossing without a traffic light": "خط عابر پیاده بدون چراغ راهنمایی",
       "#Traffic light: when it is green for me, the cars are stopped": "چراغ راهنمایی: وقتی برای من سبز است، خودروها متوقف‌اند",
       "#Traffic light, but turning cars still pass": "چراغ راهنمایی هست، اما خودروهای در حال گردش باز هم عبور می‌کنند",
@@ -3467,7 +3488,9 @@
       "#Traffic light for bicycles": "چراغ راهنمایی برای دوچرخه",
       "#Sound signal at the traffic light for people who cannot see": "علامت صوتی در چراغ راهنمایی برای کسانی که نمی‌بینند",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "محافظت از خط عابر و رمپ در برابر پارک (برای مثال با میله‌های مانع)",
-      "#Connect the cycle path from one side of the crossing to the other": "وصل مسیر دوچرخه از یک سوی گذرگاه به سوی دیگر"
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسیر دوچرخه از یک سوی گذرگاه به سوی دیگر",
+      "#Is there a refuge island where people can stop between traffic lanes?": "آیا جزیرهٔ میانی برای توقف بین خط‌های عبور خودروها وجود دارد؟",
+      "#The cycle path is not physically separated from motor traffic": "مسیر دوچرخه از ترافیک وسایل نقلیه موتوری به‌طور فیزیکی جدا نشده است"
     },
     "hu": {
       "#Crossroads with zebra crossings and a check mark": "Kereszteződés zebrákkal és egy pipával",
@@ -3555,9 +3578,8 @@
       "#Today, is the escalator working?": "Működik ma a mozgólépcső?",
       "#No, the escalator is broken or stopped": "Nem, a mozgólépcső elromlott vagy áll",
       "#No, the escalator is closed (by a gate or at certain hours)": "Nem, a mozgólépcső zárva van (kapuval vagy bizonyos órákban)",
-      "#How does this crossing work?": "Hogyan működik ez az átkelő?",
+      "#What happens at the traffic light when you cross?": "Mi történik a jelzőlámpánál, amikor átkel?",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "A kanyarodó autók azok a járművek, amelyek a kereszteződésben befordulnak, és áthaladnak az átkelőn, miközben az átkelőknek zöld a lámpa. A ki mehet kérdés az elsőbbségre vonatkozik, vagyis arra, kinek szabad előbb mennie.",
-      "#There is no zebra crossing and no traffic light": "Nincs se zebra, se jelzőlámpa",
       "#Zebra crossing without a traffic light": "Zebra jelzőlámpa nélkül",
       "#Traffic light: when it is green for me, the cars are stopped": "Jelzőlámpa: amikor nekem zöld, az autók állnak",
       "#Traffic light, but turning cars still pass": "Jelzőlámpa, de a kanyarodó autók így is áthaladnak",
@@ -3757,7 +3779,9 @@
       "#Traffic light for bicycles": "Kerékpáros jelzőlámpa",
       "#Sound signal at the traffic light for people who cannot see": "Hangjelzés a jelzőlámpán azoknak, akik nem látnak",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "Az átkelő és a szegélyrámpa védelme a parkolástól (például oszlopokkal)",
-      "#Connect the cycle path from one side of the crossing to the other": "A kerékpárút összekötése az átkelő egyik oldalától a másikig"
+      "#Connect the cycle path from one side of the crossing to the other": "A kerékpárút összekötése az átkelő egyik oldalától a másikig",
+      "#Is there a refuge island where people can stop between traffic lanes?": "Van menedéksziget, ahol meg lehet állni a forgalmi sávok között?",
+      "#The cycle path is not physically separated from motor traffic": "A kerékpárút nincs fizikailag elválasztva a gépjárműforgalomtól"
     },
     "ar": {
       "#Crossroads with zebra crossings and a check mark": "تقاطع مع ممرات مشاة وعلامة صح",
@@ -3845,9 +3869,8 @@
       "#Today, is the escalator working?": "هل يعمل السلم المتحرك اليوم؟",
       "#No, the escalator is broken or stopped": "لا، السلم المتحرك معطل أو متوقف",
       "#No, the escalator is closed (by a gate or at certain hours)": "لا، السلم المتحرك مغلق (ببوابة أو في ساعات معينة)",
-      "#How does this crossing work?": "كيف يعمل هذا المعبر؟",
+      "#What happens at the traffic light when you cross?": "ماذا يحدث عند إشارة المرور عندما تعبر؟",
       "#Turning cars are vehicles that turn at the junction and drive across the crossing while the light for people crossing is green. Who should go refers to the right of way, that is who is allowed to go first.": "السيارات المنعطفة هي المركبات التي تنعطف عند التقاطع وتمر فوق ممر العبور بينما تكون إشارة العابرين خضراء. عبارة من يجب أن يمر تشير إلى حق الأولوية، أي من يحق له المرور أولًا.",
-      "#There is no zebra crossing and no traffic light": "لا يوجد ممر مشاة ولا إشارة ضوئية",
       "#Zebra crossing without a traffic light": "ممر مشاة بدون إشارة ضوئية",
       "#Traffic light: when it is green for me, the cars are stopped": "إشارة ضوئية: عندما تكون خضراء لي، تكون السيارات متوقفة",
       "#Traffic light, but turning cars still pass": "إشارة ضوئية، لكن السيارات التي تنعطف تمر رغم ذلك",
@@ -4047,7 +4070,9 @@
       "#Traffic light for bicycles": "إشارة ضوئية للدراجات",
       "#Sound signal at the traffic light for people who cannot see": "إشارة صوتية عند الإشارة الضوئية لمن لا يرون",
       "#Protect the crossing and curb ramp from parking (for example with bollards)": "حماية المعبر والمنحدر من الوقوف (مثلًا بأعمدة حاجزة)",
-      "#Connect the cycle path from one side of the crossing to the other": "وصل مسار الدراجات من جانب المعبر إلى الجانب الآخر"
+      "#Connect the cycle path from one side of the crossing to the other": "وصل مسار الدراجات من جانب المعبر إلى الجانب الآخر",
+      "#Is there a refuge island where people can stop between traffic lanes?": "هل توجد جزيرة أمان يمكن الوقوف عليها بين مسارات المركبات؟",
+      "#The cycle path is not physically separated from motor traffic": "مسار الدراجات غير مفصول ماديًا عن حركة المركبات الآلية"
     }
   },
   "id": "Street Connection",
