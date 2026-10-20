@@ -5,7 +5,7 @@
     "questionnaire": {
       "name": "Street Connection Assessment – User Friendly",
       "questionnaire_id": "street_connection_assessment",
-      "questionnaire_version": "0.6.0",
+      "questionnaire_version": "0.7.0",
       "project": "SmartUrbanity",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
       "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -153,12 +153,14 @@
               "question_ref": "smarturbanity.traffic_control",
               "overrides": {
                 "show_if": {
-                  "connection_form": "street_level"
+                  "crossing_kind": [
+                    "signal"
+                  ]
                 },
                 "required": true
               },
               "variant": "default",
-              "question_version": 1
+              "question_version": 2
             },
             {
               "question_ref": "smarturbanity.refuge_island",
@@ -549,10 +551,9 @@
               "overrides": {
                 "show_if": {
                   "continue_audit": "yes_audit",
-                  "traffic_control": [
-                    "no_control",
-                    "priority_no_signal",
-                    "signal_broken"
+                  "crossing_kind": [
+                    "marked_no_signal",
+                    "unmarked"
                   ]
                 },
                 "required": false
