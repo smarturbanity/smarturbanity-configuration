@@ -1,6 +1,14 @@
 {
   "version": "0.1.0",
-  "questionnaire_catalog": {"source": "question_bank", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank", "categories": ["surveys", "tripSurveys", "locationReports"]},
+  "questionnaire_catalog": {
+    "source": "question_bank",
+    "questionBank": "../questionBank",
+    "categories": [
+      "surveys",
+      "tripSurveys",
+      "locationReports"
+    ]
+  },
   "questionnaires": {
     "consent": {
       "privacy_link": "https://smarturbanity.github.io/smarturbanity-configuration/privacy-smarturbanity.html",
@@ -9,18 +17,29 @@
   },
   "configuration_sources": {
     "defaults": {
-      "url": "Projects/SmartUrbanity/Configuration/release/base.json"
+      "url": "../base.json"
     },
     "pilot": {
-      "url": "Projects/SmartUrbanity/Configuration/release/pilots/{pilot}/{pilot}.json"
+      "url": "../pilots/{pilot}/{pilot}.json"
     },
     "merge": "deep"
   },
   "content": {
     "datasets": [
       {
-        "url": "Projects/SmartUrbanity/Configuration/release/pilots/{pilot}"
+        "url": "../pilots/{pilot}"
       }
     ]
+  },
+  "questionnaire_review": {
+    "collection": {
+      "url": "../questionBank/feed.json"
+    },
+    "reference": {
+      "url": "../questionBank/review/reference.json"
+    },
+    "provenance": {
+      "url": "../questionBank/review/source.json"
+    }
   }
 }
