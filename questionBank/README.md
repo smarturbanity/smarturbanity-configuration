@@ -61,6 +61,9 @@ regressive versions and changed content under the same question or questionnaire
 version. A changed definition needs a higher question version, and every flow
 that uses it must pin that version. A changed flow needs a higher questionnaire
 version. `--check` shows how many bank and generated form files would change.
+A definition's editorial `status` (`draft`, `approved`, `test` or `production`) is
+metadata of that version: a status-only change is imported without a new version,
+and an incoming definition without `status` keeps the stored one.
 Questions not yet placed in a flow may be included as `available_for_future`.
 The packer and importer also accept multiple flows for migration and verification
 snapshots. `feed.json` is the complete read snapshot; the per-questionnaire files

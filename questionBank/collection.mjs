@@ -7,6 +7,7 @@ import {questionId} from './identity.mjs';
 
 const bankRoot = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.dirname(bankRoot);
+const questionStatuses = ['draft', 'approved', 'test', 'production'];
 const [command, argument, ...options] = process.argv.slice(2);
 if (!['export', 'import'].includes(command) || !argument) {
   throw Error('Usage: collection.mjs export <file.json> [questionnaire_id ...] | import <file.json> [--check]');
@@ -58,6 +59,9 @@ function validateCollection(collection) {
     questionPaths.add(questionPath);
     if (!entry.origin_questionnaire || !entry.variants || !Object.keys(entry.variants).length) {
       throw Error(`Incomplete question: ${entry.question_id}`);
+    }
+    if (Object.hasOwn(entry, 'status') && !questionStatuses.includes(entry.status)) {
+      throw Error(`Invalid question status: ${entry.question_id}`);
     }
     questions.set(entry.question_id, entry);
   }
@@ -124,7 +128,13 @@ function importCollection(collection, checkOnly) {
         if (entry.version === current.version && !equal(questionPayload(entry), questionPayload(current))) {
           throw Error(`Question ID/version collision: ${entry.question_id} v${entry.version}`);
         }
-        if (entry.version === current.version) continue;
+        if (entry.version === current.version) {
+          // The editorial status is metadata of the same version: a status-only change keeps the version.
+          if (Object.hasOwn(entry, 'status') && entry.status !== current.status) {
+            localQuestions.set(entry.question_id, {...current, status: entry.status});
+          }
+          continue;
+        }
       } else {
         const alias = localQuestionPaths.get(`questions/${entry.question_id}.json`.toLowerCase());
         if (alias) throw Error(`Question filename collides with ${alias}: ${entry.question_id}`);
