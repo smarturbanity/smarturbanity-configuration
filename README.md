@@ -47,6 +47,11 @@ consent, restrict access or redact exports. The legal treatment and application
 controls need separate review.
 See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
 
+`legacy_answer_keys` lists previously stored answer keys when a question's
+`answer_key` changes. Keep these aliases for historical analysis; do not rewrite
+saved responses. The form's `questionnaire_version` still identifies which key
+set was used when a response was collected.
+
 ## Repository structure
 
 The intended structure is:
