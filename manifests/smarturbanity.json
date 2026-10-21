@@ -1,10 +1,6 @@
 {
   "version": "0.1.0",
-  "questionnaire_catalog": {
-    "source": "github",
-    "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26",
-    "quest_path": "forms"
-  },
+  "questionnaire_catalog": {"source": "question_bank", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank", "categories": ["surveys", "tripSurveys", "locationReports"]},
   "questionnaires": {
     "consent": {
       "version": "1.2.0-draft",
@@ -14,12 +10,10 @@
   },
   "configuration_sources": {
     "defaults": {
-      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/base.json",
-      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/base.json"
+      "url": "Projects/SmartUrbanity/Configuration/release/base.json"
     },
     "pilot": {
-      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}/{pilot}.json",
-      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}/{pilot}.json"
+      "url": "Projects/SmartUrbanity/Configuration/release/pilots/{pilot}/{pilot}.json"
     },
     "merge": "deep"
   },
@@ -35,8 +29,8 @@
         "target_entity_group": "segments",
         "questionnaire": {
           "id": "street_segment_assessment",
-          "version": "0.2.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/street_segment_assessment.json"
+          "version": "0.4.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/street_segment_assessment.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -50,8 +44,8 @@
         "target_entity_group": "connections",
         "questionnaire": {
           "id": "street_connection_assessment",
-          "version": "0.2.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/street_connection_assessment.json"
+          "version": "0.7.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/street_connection_assessment.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -64,8 +58,8 @@
         "target_entity_types": ["missing_link"],
         "questionnaire": {
           "id": "smarturbanity_missing_path_report",
-          "version": "1.0.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/missing_path_report.json"
+          "version": "1.1.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/missing_path_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -78,8 +72,8 @@
         "target_entity_types": ["geolocated_observation"],
         "questionnaire": {
           "id": "smarturbanity_geolocated_perception_report",
-          "version": "0.2.3",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/geolocated_perception_report.json"
+          "version": "0.3.1",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/geolocated_perception_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -92,8 +86,8 @@
         "target_entity_types": ["missing_connection"],
         "questionnaire": {
           "id": "smarturbanity_missing_connection_report",
-          "version": "1.0.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/missing_connection_report.json"
+          "version": "1.1.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/missing_connection_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -108,7 +102,7 @@
         "questionnaire": {
           "id": "smarturbanity_missing_network_element_report",
           "version": "1.0.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/missing_network_element_report.json"
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/missing_network_element_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -123,7 +117,7 @@
         "questionnaire": {
           "id": "smarturbanity_missing_network_element_report",
           "version": "1.0.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/missing_network_element_report.json"
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/missing_network_element_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -137,8 +131,8 @@
         "target_entity_group": "access_points",
         "questionnaire": {
           "id": "smarturbanity_service_correction_report",
-          "version": "1.1.1",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/service_correction_report.json"
+          "version": "1.2.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/service_correction_report.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       },
@@ -152,8 +146,8 @@
         "target_entity_group": "access_points",
         "questionnaire": {
           "id": "smarturbanity_service_opportunities",
-          "version": "1.0.0",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/service_opportunities.json"
+          "version": "1.1.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/service_opportunities.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/services", "map_response": "entity_group_record", "collection": "services", "envelope": "array"}
       },
@@ -166,8 +160,8 @@
         "target_entity_types": ["improvement_proposal"],
         "questionnaire": {
           "id": "smarturbanity_improvement_proposal",
-          "version": "1.0.0",
-          "path": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/forms/locationReports/improvement_proposal.json"
+          "version": "1.1.0",
+          "path": {"url": "Projects/SmartUrbanity/Configuration/release/questionBank/flows/locationReports/improvement_proposal.json", "questionBank": "Projects/SmartUrbanity/Configuration/release/questionBank"}
         },
         "response_destination": {"type": "database", "server": "smarturbanity_spatial_address", "path": "/api/v1/entity-groups/feedback_contributions", "map_response": "entity_group_record", "collection": "feedback_contributions", "envelope": "array"}
       }
@@ -227,9 +221,9 @@
       ]
     },
     "datasets": [
-      {"url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/definitions/types", "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/definitions/types"},
-      {"url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/definitions/mappings", "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/definitions/mappings"},
-      {"url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}", "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}"}
+      {"url": "Projects/SmartUrbanity/Configuration/release/definitions/types"},
+      {"url": "Projects/SmartUrbanity/Configuration/release/definitions/mappings"},
+      {"url": "Projects/SmartUrbanity/Configuration/release/pilots/{pilot}"}
     ]
   }
 }
