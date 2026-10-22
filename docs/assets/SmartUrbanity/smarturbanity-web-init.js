@@ -1,4 +1,6 @@
 /* SmartUrbanity - FULL INIT LOADER */
+"use strict";
+
 (async function () {
   const currentScript = document.currentScript;
   const scriptURL = currentScript && currentScript.src
@@ -134,8 +136,9 @@
     const header = tpl.querySelector("header");
     const footer = tpl.querySelector("footer");
 
-    if (header) document.getElementById("smarturbanity-header").innerHTML = header.outerHTML;
-    if (footer) document.getElementById("smarturbanity-footer").innerHTML = footer.outerHTML;
+    // The template's own header and footer nodes are copied, never reparsed as an HTML string.
+    if (header) document.getElementById("smarturbanity-header").replaceChildren(document.importNode(header, true));
+    if (footer) document.getElementById("smarturbanity-footer").replaceChildren(document.importNode(footer, true));
 
     window.initLangToggle();
   }
