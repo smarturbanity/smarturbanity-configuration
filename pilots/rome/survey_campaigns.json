@@ -1,6 +1,6 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.1.1",
+  "config_version": "0.1.2",
   "pilot_id": "rome",
   "pilot_period": {"start_date": "2026-11-14", "end_date": null, "timezone": "Europe/Rome"},
   "rules": {
@@ -125,6 +125,40 @@
         "smarturbanity_missing_path_report"
       ]
     },
+    "rome_missing_elements": {
+      "name": "Missing elements",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": null, "until_week": null, "valid_from": "2026-11-14", "valid_until": null, "extended_until": null},
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 2000
+      },
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_missing_network_element_report"
+      ]
+    },
+    "rome_services": {
+      "name": "Services",
+      "enabled": true,
+      "priority": 0,
+      "window": {"from_week": null, "until_week": null, "valid_from": "2026-12-01", "valid_until": null, "extended_until": null},
+      "area": {
+        "type": "circle",
+        "label": "Largo Alessandrina Ravizza",
+        "center": {"lat": 41.871874, "lon": 12.4509774},
+        "radius_m": 2000
+      },
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_service_correction_report",
+        "smarturbanity_service_opportunities",
+        "smarturbanity_improvement_proposal"
+      ]
+    },
     "rome_test_event_surveys": {
       "name": "Beta kickoff 14 November: questionnaires",
       "enabled": true,
@@ -164,7 +198,8 @@
         "street_segment_assessment",
         "smarturbanity_missing_connection_report",
         "smarturbanity_missing_path_report",
-        "smarturbanity_geolocated_perception_report"
+        "smarturbanity_geolocated_perception_report",
+        "smarturbanity_missing_network_element_report"
       ],
       "group": "rome_beta_kickoff_2026_11_14"
     }
@@ -184,7 +219,9 @@
       "#Trips": "I tuoi spostamenti",
       "#Reports": "Segnalazioni",
       "#Beta kickoff 14 November: questionnaires": "Avvio della beta, 14 novembre: questionari",
-      "#Beta kickoff 14 November: walks near Largo Ravizza": "Avvio della beta, 14 novembre: passeggiate vicino a Largo Ravizza"
+      "#Beta kickoff 14 November: walks near Largo Ravizza": "Avvio della beta, 14 novembre: passeggiate vicino a Largo Ravizza",
+      "#Missing elements": "Elementi che non esistono",
+      "#Services": "Servizi"
     },
     "en": {
       "code": "en",
@@ -200,7 +237,9 @@
       "#Trips": "Your trips",
       "#Reports": "Reports",
       "#Beta kickoff 14 November: questionnaires": "Beta launch, 14 November: questionnaires",
-      "#Beta kickoff 14 November: walks near Largo Ravizza": "Beta launch, 14 November: walks near Largo Ravizza"
+      "#Beta kickoff 14 November: walks near Largo Ravizza": "Beta launch, 14 November: walks near Largo Ravizza",
+      "#Missing elements": "Elements that do not exist",
+      "#Services": "Services"
     }
   }
 }
