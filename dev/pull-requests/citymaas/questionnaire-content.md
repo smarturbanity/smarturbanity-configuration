@@ -1,6 +1,6 @@
 # Review questionnaire wording, answers and composition separately
 
-Target while reviewing: `citymaas/questionnaire-infrastructure`; eventual integration target: `main` after infrastructure is accepted.
+Target: `main`. Infrastructure is now accepted on main; the squash ancestry is reconciled by a merge into this content branch, preserving its reviewed questionnaire data.
 
 Preserve the existing proposed question-bank content, question variants, translations, flow composition and generated standalone forms. This includes the About You and post-trip revisions and new service-creation questionnaire.
 
