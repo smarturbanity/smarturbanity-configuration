@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Missing Path Report",
     "questionnaire_id": "smarturbanity_missing_path_report",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
     "image_alt": "#Street with a missing section and a plus sign",
@@ -61,7 +61,10 @@
                 "text": "I don't know, I just need to be able to get through safely",
                 "value": "dont_know"
               }
-            ]
+            ],
+            "question_id": "needed_path_type",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "What other kind of path is needed?",
@@ -72,7 +75,10 @@
                 "other"
               ]
             },
-            "required": true
+            "required": true,
+            "question_id": "needed_path_type_other",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How urgent is it to add this path?",
@@ -101,7 +107,10 @@
                 "text": "Very urgent",
                 "value": "5_very_urgent"
               }
-            ]
+            ],
+            "question_id": "missing_element_urgency_formulation_2",
+            "question_version": "2.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Who would it help most? (Select all that apply)",
@@ -147,7 +156,10 @@
                 "value": "everyone",
                 "exclusive": true
               }
-            ]
+            ],
+            "question_id": "proposal_beneficiaries_formulation_2",
+            "question_version": "2.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Where would it help you get to? (Select all that apply)",
@@ -184,19 +196,24 @@
                 "text": "Somewhere else",
                 "value": "other"
               }
-            ]
+            ],
+            "question_id": "missing_element_destination",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "What should the research team know about this place?",
             "answer_key": "observation_details",
             "question_type": "textarea",
             "required": false,
+            "question_id": "observation_details",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           }
         ]
       }
     ],
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Missing Path Report",
       "description": "<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
@@ -204,8 +221,7 @@
     "final_page": {
       "title": "Thank you!",
       "description": "<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>"
-    },
-    "privacy_classification": "heightened_personal"
+    }
   },
   "languages": {
     "en": {

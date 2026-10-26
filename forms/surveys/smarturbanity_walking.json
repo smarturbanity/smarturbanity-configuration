@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Walking",
     "questionnaire_id": "smarturbanity_walking",
-    "questionnaire_version": "0.1.3",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 7,
     "options": {
@@ -11,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Welcome to Walking",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_walking_routes.svg",
@@ -43,7 +43,10 @@
                 "value": "no"
               }
             ],
-            "required": true
+            "required": true,
+            "question_id": "walk_days",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which of the following physical barriers do you face on your walking route? (Select all that apply)",
@@ -86,7 +89,10 @@
             "add_other": true,
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_physical_barriers",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) affect your journey?",
@@ -116,7 +122,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_sidewalk_condition_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do temporary obstacles (e.g., roadworks, bins, or parked scooters) typically affect your walking route?",
@@ -146,7 +155,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "avoid_obstacles",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "To what extent does the steepness of your route affect your walking?",
@@ -176,7 +188,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_slope_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?",
@@ -206,7 +221,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "avoid_dangerous_crossing",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the availability of benches and rest areas affect your ability to complete your journey?",
@@ -234,10 +252,12 @@
                 "value": "i_rely_on_rest_areas_to_make_my_journey"
               }
             ],
-            "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "benches_importance",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "How does the quality of street lighting affect your choice of route or your decision to walk after dark?",
@@ -267,7 +287,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_lighting_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the presence (or lack) of trees, parks, or green spaces affect your route choice?",
@@ -297,7 +320,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "prefer_pleasant",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does shade and heat (e.g., from sun exposure or hot pavement) affect your walking journeys during warmer months?",
@@ -327,7 +353,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_heat_shade_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the quality of signs and wayfinding on your route affect your confidence as a pedestrian?",
@@ -357,7 +386,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "wayfinding",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do traffic levels and congestion on your route typically affect your walking experience?",
@@ -387,7 +419,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "avoid_fast_traffic",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while walking?",
@@ -435,7 +470,10 @@
             "add_other": true,
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "risky_road_users",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do cyclists and e-scooter riders affect your sense of safety while walking?",
@@ -465,7 +503,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "riding_on_pavement",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does walking alongside or crossing high-speed roads (e.g., main roads or highways) affect your sense of safety?",
@@ -495,7 +536,10 @@
             ],
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "fast_vehicles",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Does walking as part of your daily travel contribute positively to your physical or mental health?",
@@ -523,11 +567,12 @@
                 "value": "very_much_walking_is_a_key_part_of_my_ph"
               }
             ],
-            "privacy_classification": "heightened_personal",
-            "special_category": "health",
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_health_benefit",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "What improvements would most encourage you to walk more often or for longer distances?",
@@ -575,12 +620,14 @@
             "add_other": true,
             "show_if": {
               "walk_days": "yes"
-            }
+            },
+            "question_id": "walk_improvements",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           }
         ]
       }
-    ],
-    "privacy_classification": "personal_data"
+    ]
   },
   "languages": {
     "en": {

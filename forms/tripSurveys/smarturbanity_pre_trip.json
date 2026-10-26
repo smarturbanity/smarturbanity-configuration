@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "0.2.2",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -11,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Before the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_pre_trip.svg",
@@ -43,9 +43,7 @@
               },
               {
                 "text": "Wheelchair or mobility scooter",
-                "value": "wheelchair",
-                "special_category": "health",
-                "privacy_classification": "special_category_health"
+                "value": "wheelchair"
               },
               {
                 "text": "Bicycle (own)",
@@ -91,7 +89,10 @@
                 "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
                 "value": "taxi"
               }
-            ]
+            ],
+            "question_id": "trip_mode",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "What is this trip for?",
@@ -123,8 +124,7 @@
               },
               {
                 "text": "Doctor or health appointment",
-                "value": "health",
-                "privacy_classification": "special_category_health"
+                "value": "health"
               },
               {
                 "text": "Leisure or visiting people",
@@ -135,7 +135,9 @@
                 "value": "walk_exercise"
               }
             ],
-            "privacy_classification": "heightened_personal"
+            "question_id": "trip_purpose",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "Who or what are you travelling with? (Select all that apply)",
@@ -167,12 +169,14 @@
                 "text": "With a dog",
                 "value": "dog"
               }
-            ]
+            ],
+            "question_id": "trip_company",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
-    ],
-    "privacy_classification": "heightened_personal"
+    ]
   },
   "languages": {
     "en": {

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Cycling",
     "questionnaire_id": "smarturbanity_cycling",
-    "questionnaire_version": "0.1.3",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -11,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Welcome to Your Experience With Cycling",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_cycling_routes.svg",
@@ -43,7 +43,10 @@
                 "value": "no"
               }
             ],
-            "required": true
+            "required": true,
+            "question_id": "bike_weekly",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which type of bicycle do you most often use?",
@@ -73,7 +76,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_type",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How confident are you cycling in urban traffic in your city?",
@@ -107,7 +113,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_confidence",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How adequate is the cycling infrastructure (cycle lanes, paths, and signage) on your typical route?",
@@ -137,7 +146,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_infra_adequacy",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which of the following physical barriers do you face on your cycling route? (Select all that apply)",
@@ -180,7 +192,10 @@
             "add_other": true,
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_barriers",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "If you encounter poor road or path surfaces (potholes, cobblestones, or uneven ground), how does it affect your cycling?",
@@ -210,7 +225,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_poor_surface_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "To what extent does the steepness of your route affect your cycling?",
@@ -240,7 +258,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_avoid_slopes",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the quality of signs and wayfinding on your cycling route affect your journey?",
@@ -270,7 +291,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_wayfinding",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do traffic levels and vehicle speeds on your cycling route typically affect your journey?",
@@ -300,7 +324,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_avoid_traffic",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while cycling?",
@@ -348,7 +375,10 @@
             "add_other": true,
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_risky_users",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How confident are you in your ability to anticipate and react to dangerous situations while cycling (e.g., car doors opening suddenly, vehicles cutting across, or blind junctions)?",
@@ -378,7 +408,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_hazard_confidence",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does street lighting affect your decision to cycle after dark?",
@@ -408,7 +441,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_skip_dark",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How would you describe the availability of bicycle parking at your most frequent destination?",
@@ -438,7 +474,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_parking_destination",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Has the lack of secure bicycle parking ever caused you to change your travel plans or leave your bike at home?",
@@ -468,7 +507,10 @@
             ],
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_parking_changed_plans",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "What improvements would most encourage you to cycle more often or for longer distances?",
@@ -524,12 +566,14 @@
             "add_other": true,
             "show_if": {
               "bike_weekly": "yes"
-            }
+            },
+            "question_id": "bike_improvements",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           }
         ]
       }
-    ],
-    "privacy_classification": "personal_data"
+    ]
   },
   "languages": {
     "en": {

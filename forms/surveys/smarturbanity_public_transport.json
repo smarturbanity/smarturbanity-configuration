@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Experience With Public Transport",
     "questionnaire_id": "smarturbanity_public_transport",
-    "questionnaire_version": "0.1.3",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -11,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Welcome to Your Experience With Public Transport",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_pt_service.svg",
@@ -43,7 +43,10 @@
                 "value": "no"
               }
             ],
-            "required": true
+            "required": true,
+            "question_id": "pt_weekly",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How accessible and easy to use are the public transport stops (bus, tram, or train) on your route? Think about steps, ramps and available space.",
@@ -74,7 +77,10 @@
             "add_i_dont_know": true,
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_stop_ease",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "Which specific barriers did you face while using public transport stops?",
@@ -118,7 +124,10 @@
             "add_other": true,
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_barriers",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the presence of other people make you feel during your trip?",
@@ -148,7 +157,10 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_crowding_comfort",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the availability of working lifts, ramps, and step-free routes affect your ability to reach the transport stop?",
@@ -176,10 +188,12 @@
                 "value": "i_can_reach_the_stop_easily_and_independ"
               }
             ],
-            "privacy_classification": "special_category_health",
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_step_free_need",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "How does the quality of crossings (e.g. signals, bridges, or tunnels) near the stop influence your sense of safety?",
@@ -209,7 +223,10 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "v1_how_does_the_quality_of_crossings_e",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How does the schedule and frequency of public transport on your route affect your ability to rely on it?",
@@ -239,7 +256,10 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_reliability_v1",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "To what extent does using public transport affect your sense of social comfort or personal image?",
@@ -269,7 +289,10 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_image_v1",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How stressful do you find unexpected delays or service disruptions during your trips?",
@@ -299,7 +322,10 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_delay_stress",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "text": "How do delays or unreliable service typically affect your travel behavior?",
@@ -329,12 +355,14 @@
             ],
             "show_if": {
               "pt_weekly": "yes"
-            }
+            },
+            "question_id": "pt_delay_effect",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           }
         ]
       }
-    ],
-    "privacy_classification": "personal_data"
+    ]
   },
   "languages": {
     "en": {

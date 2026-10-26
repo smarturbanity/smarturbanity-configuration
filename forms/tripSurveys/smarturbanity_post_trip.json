@@ -2,8 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "0.2.1",
-    "privacy_classification": "heightened_personal",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -12,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "After the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_post_trip.svg",
@@ -31,10 +30,9 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Is the way you travelled shown correctly on the map?",
+            "text": "Did the app record correctly how you travelled?",
             "answer_key": "stages_correct",
             "question_type": "single_option",
-            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -42,16 +40,19 @@
                 "value": "yes"
               },
               {
-                "text": "No, I'll correct it on the map",
+                "text": "No, something is wrong",
                 "value": "no_fix"
               }
-            ]
+            ],
+            "required": true,
+            "question_id": "stages_correct",
+            "question_version": "3.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Compared to what you expected, how long did this trip feel?",
             "answer_key": "trip_time_vs_expected",
             "question_type": "single_option",
-            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -74,7 +75,11 @@
                 "text": "Much longer than expected",
                 "value": "much_longer"
               }
-            ]
+            ],
+            "required": true,
+            "question_id": "trip_time_vs_expected",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How tiring was this trip?",
@@ -102,13 +107,15 @@
                 "text": "Extremely",
                 "value": "extremely"
               }
-            ]
+            ],
+            "question_id": "trip_effort",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How safe from traffic did you feel on this trip?",
             "answer_key": "trip_traffic_safety",
             "question_type": "single_option",
-            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -131,7 +138,11 @@
                 "text": "Completely safe",
                 "value": "completely_safe"
               }
-            ]
+            ],
+            "required": true,
+            "question_id": "trip_traffic_safety",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How safe did you feel from other people (e.g. theft, harassment)?",
@@ -159,7 +170,10 @@
                 "text": "Completely safe",
                 "value": "completely_safe"
               }
-            ]
+            ],
+            "question_id": "trip_personal_security",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Which route did you take?",
@@ -179,7 +193,10 @@
                 "text": "A route that was new to me",
                 "value": "new"
               }
-            ]
+            ],
+            "question_id": "route_familiarity",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Why did you choose this route? (Up to 2)",
@@ -233,7 +250,10 @@
                 "text": "Out of habit",
                 "value": "habit"
               }
-            ]
+            ],
+            "question_id": "route_reasons",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Did you deliberately avoid a street, crossing or place on this trip?",
@@ -249,17 +269,15 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "question_id": "avoided_place",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Why did you avoid it? (Select all that apply. You can then mark it on the map.)",
             "answer_key": "avoided_reasons",
             "question_type": "multiple_options",
-            "show_if": {
-              "avoided_place": [
-                "yes"
-              ]
-            },
             "add_other": true,
             "checks_inline": false,
             "options": [
@@ -295,13 +313,20 @@
                 "text": "Slopes or stairs",
                 "value": "slope"
               }
-            ]
+            ],
+            "show_if": {
+              "avoided_place": [
+                "yes"
+              ]
+            },
+            "question_id": "avoided_reasons",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Did any of these happen on this trip? (Select all that apply)",
             "answer_key": "trip_incidents",
             "question_type": "multiple_options",
-            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -325,12 +350,15 @@
                 "text": "I was harassed or felt threatened",
                 "value": "harassment"
               }
-            ]
+            ],
+            "required": true,
+            "question_id": "trip_incidents",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
-    ],
-    "privacy_classification": "heightened_personal"
+    ]
   },
   "languages": {
     "en": {
@@ -342,9 +370,9 @@
       "#Thank you!": "Thank you!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>A few quick questions about the trip you just made.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Is the way you travelled shown correctly on the map?",
       "#Yes": "Yes",
-      "#No, I'll correct it on the map": "No, I'll correct it on the map",
+      "#Did the app record correctly how you travelled?": "Did the app record correctly how you travelled?",
+      "#No, something is wrong": "No, something is wrong",
       "#Compared to what you expected, how long did this trip feel?": "Compared to what you expected, how long did this trip feel?",
       "#Much shorter than expected": "Much shorter than expected",
       "#A little shorter than expected": "A little shorter than expected",
@@ -407,9 +435,9 @@
       "#Thank you!": "Grazie!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Alcune domande veloci sullo spostamento appena fatto.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Il modo in cui ti sei spostato/a è indicato correttamente sulla mappa?",
       "#Yes": "Sì",
-      "#No, I'll correct it on the map": "No, lo correggo sulla mappa",
+      "#Did the app record correctly how you travelled?": "L'app ha registrato correttamente come ti sei spostato/a?",
+      "#No, something is wrong": "No, qualcosa non va",
       "#Compared to what you expected, how long did this trip feel?": "Rispetto a quanto ti aspettavi, quanto ti è sembrato lungo questo spostamento?",
       "#Much shorter than expected": "Molto più breve del previsto",
       "#A little shorter than expected": "Un po' più breve del previsto",
@@ -472,9 +500,9 @@
       "#Thank you!": "Merci !",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Quelques questions rapides sur le trajet que vous venez de faire.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Le mode de déplacement que vous avez utilisé est-il indiqué correctement sur la carte ?",
       "#Yes": "Oui",
-      "#No, I'll correct it on the map": "Non, je vais le corriger sur la carte",
+      "#Did the app record correctly how you travelled?": "L'application a-t-elle enregistré correctement votre façon de vous déplacer ?",
+      "#No, something is wrong": "Non, quelque chose ne va pas",
       "#Compared to what you expected, how long did this trip feel?": "Par rapport à ce que vous attendiez, ce trajet vous a-t-il semblé long ?",
       "#Much shorter than expected": "Beaucoup moins longtemps que prévu",
       "#A little shorter than expected": "Un peu moins longtemps que prévu",
@@ -537,9 +565,9 @@
       "#Thank you!": "Vielen Dank!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Ein paar kurze Fragen zu dem Weg, den Sie gerade zurückgelegt haben.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Ist die Art, wie Sie unterwegs waren, auf der Karte richtig dargestellt?",
       "#Yes": "Ja",
-      "#No, I'll correct it on the map": "Nein, ich korrigiere es auf der Karte",
+      "#Did the app record correctly how you travelled?": "Hat die App richtig aufgezeichnet, wie Sie unterwegs waren?",
+      "#No, something is wrong": "Nein, etwas stimmt nicht",
       "#Compared to what you expected, how long did this trip feel?": "Wie lang hat sich dieser Weg im Vergleich zu Ihrer Erwartung angefühlt?",
       "#Much shorter than expected": "Viel kürzer als erwartet",
       "#A little shorter than expected": "Etwas kürzer als erwartet",
@@ -602,9 +630,9 @@
       "#Thank you!": "Teşekkürler!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Az önce yaptığınız yolculukla ilgili birkaç kısa soru.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Yolculuk şekliniz haritada doğru gösteriliyor mu?",
       "#Yes": "Evet",
-      "#No, I'll correct it on the map": "Hayır, haritada düzelteceğim",
+      "#Did the app record correctly how you travelled?": "Uygulama yolculuğunuzu doğru kaydetti mi?",
+      "#No, something is wrong": "Hayır, bir şey yanlış",
       "#Compared to what you expected, how long did this trip feel?": "Beklediğinize kıyasla bu yolculuk size ne kadar uzun geldi?",
       "#Much shorter than expected": "Beklenenden çok daha kısa",
       "#A little shorter than expected": "Beklenenden biraz daha kısa",
@@ -667,9 +695,9 @@
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>چند پرسش کوتاه درباره سفری که همین حالا انجام دادید.</p>",
-      "#Is the way you travelled shown correctly on the map?": "آیا شیوه سفر شما روی نقشه درست نشان داده شده است؟",
       "#Yes": "بله",
-      "#No, I'll correct it on the map": "خیر، آن را روی نقشه اصلاح می‌کنم",
+      "#Did the app record correctly how you travelled?": "آیا برنامه شیوه سفر شما را درست ثبت کرد؟",
+      "#No, something is wrong": "خیر، چیزی درست نیست",
       "#Compared to what you expected, how long did this trip feel?": "در مقایسه با انتظارتان، این سفر چقدر طولانی به نظر رسید؟",
       "#Much shorter than expected": "بسیار کوتاه‌تر از انتظار",
       "#A little shorter than expected": "کمی کوتاه‌تر از انتظار",
@@ -732,9 +760,9 @@
       "#Thank you!": "Köszönjük!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Néhány gyors kérdés az imént megtett útról.</p>",
-      "#Is the way you travelled shown correctly on the map?": "Helyesen mutatja a térkép, hogyan közlekedett?",
       "#Yes": "Igen",
-      "#No, I'll correct it on the map": "Nem, kijavítom a térképen",
+      "#Did the app record correctly how you travelled?": "Helyesen rögzítette az alkalmazás, hogyan közlekedett?",
+      "#No, something is wrong": "Nem, valami nem stimmel",
       "#Compared to what you expected, how long did this trip feel?": "Ahhoz képest, amire számított, mennyire tűnt hosszúnak ez az út?",
       "#Much shorter than expected": "Sokkal rövidebb a vártnál",
       "#A little shorter than expected": "Kicsit rövidebb a vártnál",
@@ -797,9 +825,9 @@
       "#Thank you!": "شكرًا لك!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>بضعة أسئلة سريعة عن الرحلة التي قمت بها للتو.</p>",
-      "#Is the way you travelled shown correctly on the map?": "هل طريقة تنقلك معروضة بشكل صحيح على الخريطة؟",
       "#Yes": "نعم",
-      "#No, I'll correct it on the map": "لا، سأصححها على الخريطة",
+      "#Did the app record correctly how you travelled?": "هل سجّل التطبيق طريقة تنقلك بشكل صحيح؟",
+      "#No, something is wrong": "لا، هناك خطأ ما",
       "#Compared to what you expected, how long did this trip feel?": "مقارنةً بما توقعته، كم بدت لك هذه الرحلة طويلة؟",
       "#Much shorter than expected": "أقصر بكثير من المتوقع",
       "#A little shorter than expected": "أقصر قليلًا من المتوقع",

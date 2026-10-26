@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Near miss",
     "questionnaire_id": "smarturbanity_near_miss_report",
-    "questionnaire_version": "0.3.0",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -11,7 +11,7 @@
       "ask_consent": true,
       "ask_adult": true
     },
-    "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
       "title": "Near miss",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_near_miss_report.svg",
@@ -42,9 +42,7 @@
               },
               {
                 "text": "In a wheelchair or mobility scooter",
-                "value": "wheelchair",
-                "special_category": "health",
-                "privacy_classification": "special_category_health"
+                "value": "wheelchair"
               },
               {
                 "text": "By bike",
@@ -62,7 +60,10 @@
                 "text": "By car",
                 "value": "car"
               }
-            ]
+            ],
+            "question_id": "nm_your_mode",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "When did it happen?",
@@ -87,7 +88,10 @@
                 "text": "Longer ago",
                 "value": "earlier"
               }
-            ]
+            ],
+            "question_id": "nm_when",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "What was the light like?",
@@ -112,7 +116,10 @@
                 "text": "Dark, on an unlit street",
                 "value": "dark_unlit"
               }
-            ]
+            ],
+            "question_id": "nm_light",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Who was involved?",
@@ -150,7 +157,10 @@
                 "text": "A pedestrian",
                 "value": "pedestrian"
               }
-            ]
+            ],
+            "question_id": "nm_other_party",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Where exactly were you?",
@@ -191,7 +201,10 @@
                 "text": "At a driveway or garage exit",
                 "value": "driveway"
               }
-            ]
+            ],
+            "question_id": "nm_location_type",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "What did the other vehicle or person do? (Up to 3)",
@@ -238,7 +251,10 @@
                 "text": "We couldn't see each other (e.g. parked cars)",
                 "value": "not_seen"
               }
-            ]
+            ],
+            "question_id": "nm_what",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "What happened to you?",
@@ -269,6 +285,8 @@
                 "value": "injured"
               }
             ],
+            "question_id": "nm_outcome",
+            "question_version": "1.0.0",
             "privacy_classification": "special_category_health"
           },
           {
@@ -276,12 +294,13 @@
             "answer_key": "nm_comment",
             "question_type": "text",
             "checks_inline": false,
+            "question_id": "nm_comment",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           }
         ]
       }
-    ],
-    "privacy_classification": "heightened_personal"
+    ]
   },
   "languages": {
     "en": {
