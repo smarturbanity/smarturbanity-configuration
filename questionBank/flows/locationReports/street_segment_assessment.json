@@ -1,0 +1,909 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/locationReports/street_segment_assessment.json",
+  "form": {
+    "questionnaire": {
+      "name": "Street Segment Assessment",
+      "questionnaire_id": "street_segment_assessment",
+      "questionnaire_version": "0.4.0",
+      "project": "SmartUrbanity",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
+      "image_alt": "#Street section with a magnifying glass",
+      "estimated_minutes": 2,
+      "options": {
+        "review_mode": true,
+        "save_user_id": true,
+        "ask_consent": true,
+        "ask_adult": true
+      },
+      "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+      "sections": [
+        {
+          "title": "Your point of view",
+          "description": "Select walking, cycling, or both. Questions will adapt to your selection.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.assessment_perspective",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.journey_context",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.segment_use_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "title": "Quick assessment",
+          "description": "Answer these first. Then you can finish or add optional details.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.walk_facility",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_facility",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_use_difficulty",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_perceived_risk",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_use_difficulty",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_perceived_risk",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.personal_safety",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.continue_audit",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "title": "Walking space",
+          "description": "Look at the place. Answer only what you can see.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.walking_width_passability",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walk_facility": [
+                    "shoulder",
+                    "interrupted_or_one_side_sidewalk",
+                    "raised_sidewalk",
+                    "level_walking_area",
+                    "shared_ped_bike_path",
+                    "dedicated_pedestrian_area",
+                    "stairway"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.raised_sidewalk_protection",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walk_facility": [
+                    "raised_sidewalk",
+                    "interrupted_or_one_side_sidewalk"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.level_walking_separation",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ],
+                  "walk_facility": "level_walking_area"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.walking_accessibility_features",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walk_facility": [
+                    "shoulder",
+                    "interrupted_or_one_side_sidewalk",
+                    "raised_sidewalk",
+                    "level_walking_area",
+                    "shared_ped_bike_path",
+                    "dedicated_pedestrian_area",
+                    "stairway"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.walking_stairs_present",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walk_facility": [
+                    "shoulder",
+                    "interrupted_or_one_side_sidewalk",
+                    "raised_sidewalk",
+                    "level_walking_area",
+                    "shared_ped_bike_path",
+                    "dedicated_pedestrian_area",
+                    "stairway"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.walking_stairs_extent",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ],
+                  "walking_stairs_present": "yes"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.stairs_features",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walking_stairs_present": "yes",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.stairs_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walking_stairs_present": "yes",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Cycling space",
+          "description": "Look at the place. Answer only what you can see.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.bike_separation",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "interrupted_bike_facility",
+                    "dedicated_bike_facility"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_direction",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "interrupted_bike_facility",
+                    "dedicated_bike_facility"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_surface_type",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "interrupted_bike_facility",
+                    "dedicated_bike_facility",
+                    "shared_ped_bike_path"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_vehicle_conflict_points",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "interrupted_bike_facility",
+                    "dedicated_bike_facility"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_intrusion_users",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "interrupted_bike_facility",
+                    "dedicated_bike_facility"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_intrusion_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_intrusion_users": [
+                    "cars",
+                    "motorcycles",
+                    "public_transport_vehicles",
+                    "pedestrians",
+                    "Other"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Traffic and slope",
+          "description": "Answer based on your experience.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.traffic_speed_feeling",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.traffic_interaction_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.segment_slope",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Walking along this segment",
+          "description": "Answer based on your experience.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.walking_surface_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_surface_problem_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walking_surface_problems": [
+                    "uneven_surface",
+                    "cracks",
+                    "potholes",
+                    "raised_edges_bumps",
+                    "tree_roots",
+                    "side_slope",
+                    "level_changes",
+                    "missing_curb_ramp",
+                    "slippery_wet",
+                    "water_collects",
+                    "Other"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.walking_obstacles",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_obstacle_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walking_obstacles": [
+                    "parked_cars",
+                    "micromobility_parked",
+                    "fixed_objects",
+                    "vegetation",
+                    "outdoor_seating",
+                    "shop_displays_vendors",
+                    "waste_bins_bags",
+                    "dog_waste",
+                    "construction",
+                    "queues",
+                    "flooding",
+                    "Other"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.crowding_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_close_passing_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Cycling along this segment",
+          "description": "Answer based on your experience.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.bike_surface_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_surface_problem_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_surface_problems": [
+                    "uneven_surface",
+                    "cracks",
+                    "potholes",
+                    "raised_edges_bumps",
+                    "tree_roots",
+                    "slippery_wet",
+                    "loose_gravel_debris",
+                    "level_changes",
+                    "surface_vibration",
+                    "Other"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bike_obstacles",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_obstacle_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_obstacles": [
+                    "narrow_sections",
+                    "parked_cars",
+                    "vehicles_stopping",
+                    "micromobility_parked",
+                    "fixed_objects",
+                    "outdoor_seating",
+                    "shop_displays_vendors",
+                    "waste_bins_bags",
+                    "construction",
+                    "flooding",
+                    "pt_stop_waiting",
+                    "Other"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_close_passing_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Improve this street segment",
+          "description": "Tell us whether improving this segment should be a priority.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.desired_walking_path",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "walk_facility": [
+                    "no_walk_space",
+                    "shoulder",
+                    "interrupted_or_one_side_sidewalk"
+                  ],
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.desired_bike_facility",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "bike_facility": [
+                    "no_bike_facility",
+                    "interrupted_bike_facility"
+                  ],
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.segment_improvement_importance",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.main_segment_improvements_needed",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.additional_comments",
+              "question_version": 1,
+              "variant": "street_segment_assessment",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            }
+          ]
+        }
+      ],
+      "privacy_classification": "heightened_personal"
+    },
+    "languages": {
+      "en": {
+        "#Street Segment Assessment": "Assess a street section",
+        "#Street section with a magnifying glass": "Street section with a magnifying glass",
+        "#Your point of view": "Your point of view",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Select walking, cycling, or both. Questions will adapt to your selection.",
+        "#Quick assessment": "Quick assessment",
+        "#Answer these first. Then you can finish or add optional details.": "Answer these first. Then you can finish or add optional details.",
+        "#Walking space": "Walking space",
+        "#Look at the place. Answer only what you can see.": "Look at the place. Answer only what you can see.",
+        "#Cycling space": "Cycling space",
+        "#Traffic and slope": "Traffic and slope",
+        "#Answer based on your experience.": "Answer based on your experience.",
+        "#Walking along this segment": "Walking along this segment",
+        "#Cycling along this segment": "Cycling along this segment",
+        "#Improve this street segment": "Improve this street segment",
+        "#Tell us whether improving this segment should be a priority.": "Tell us whether improving this segment should be a priority."
+      },
+      "it": {
+        "#Street Segment Assessment": "Valutazione di un tratto di strada",
+        "#Street section with a magnifying glass": "Tratto di strada con una lente d'ingrandimento",
+        "#Your point of view": "Il tuo punto di vista",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Scegli se ti sposti a piedi, in bici o in entrambi i modi. Le domande si adattano alla tua scelta.",
+        "#Quick assessment": "Valutazione rapida",
+        "#Answer these first. Then you can finish or add optional details.": "Rispondi prima a queste. Poi puoi terminare o aggiungere dettagli facoltativi.",
+        "#Walking space": "Spazio per camminare",
+        "#Look at the place. Answer only what you can see.": "Osserva il luogo e rispondi solo in base a ciò che puoi vedere.",
+        "#Cycling space": "Spazio per le bici",
+        "#Traffic and slope": "Traffico e pendenza",
+        "#Answer based on your experience.": "Rispondi in base alla tua esperienza.",
+        "#Walking along this segment": "A piedi su questo tratto",
+        "#Cycling along this segment": "In bici o in monopattino su questo tratto",
+        "#Improve this street segment": "Migliora questo tratto di strada",
+        "#Tell us whether improving this segment should be a priority.": "Indicaci quanto dovrebbe essere prioritario migliorare questo tratto."
+      },
+      "fr": {
+        "#Street section with a magnifying glass": "Tronçon de rue avec une loupe",
+        "#Your point of view": "Votre point de vue",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Sélectionnez la marche, le vélo ou les deux. Les questions s’adapteront à votre sélection.",
+        "#Quick assessment": "Évaluation rapide",
+        "#Answer these first. Then you can finish or add optional details.": "Répondez d’abord à ces questions. Ensuite, vous pouvez terminer ou ajouter des détails facultatifs.",
+        "#Walking space": "Espace pour marcher",
+        "#Look at the place. Answer only what you can see.": "Observez le lieu. Répondez uniquement à ce que vous pouvez voir.",
+        "#Cycling space": "Espace pour les vélos",
+        "#Traffic and slope": "Circulation et pente",
+        "#Answer based on your experience.": "Répondez selon votre expérience.",
+        "#Walking along this segment": "À pied sur ce tronçon",
+        "#Cycling along this segment": "À vélo ou en trottinette sur ce tronçon",
+        "#Improve this street segment": "Améliorer ce tronçon de rue",
+        "#Tell us whether improving this segment should be a priority.": "Indiquez-nous si l’amélioration de ce tronçon devrait être prioritaire."
+      },
+      "de": {
+        "#Street section with a magnifying glass": "Straßenabschnitt mit einer Lupe",
+        "#Your point of view": "Ihre Perspektive",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Wählen Sie zu Fuß, mit dem Fahrrad oder beides. Die Fragen passen sich Ihrer Auswahl an.",
+        "#Quick assessment": "Schnelle Bewertung",
+        "#Answer these first. Then you can finish or add optional details.": "Beantworten Sie zuerst diese Fragen. Danach können Sie abschließen oder optionale Details hinzufügen.",
+        "#Walking space": "Platz zum Gehen",
+        "#Look at the place. Answer only what you can see.": "Sehen Sie sich den Ort an. Beantworten Sie nur, was Sie sehen können.",
+        "#Cycling space": "Platz zum Radfahren",
+        "#Traffic and slope": "Verkehr und Steigung",
+        "#Answer based on your experience.": "Antworten Sie aus Ihrer Erfahrung.",
+        "#Walking along this segment": "Zu Fuß auf diesem Abschnitt",
+        "#Cycling along this segment": "Mit Fahrrad oder E-Scooter auf diesem Abschnitt",
+        "#Improve this street segment": "Diesen Straßenabschnitt verbessern",
+        "#Tell us whether improving this segment should be a priority.": "Sagen Sie uns, ob die Verbesserung dieses Abschnitts Vorrang haben sollte."
+      },
+      "tr": {
+        "#Street section with a magnifying glass": "Büyüteçli sokak bölümü",
+        "#Your point of view": "Bakış açınız",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Yürümeyi, bisiklete binmeyi veya her ikisini seçin. Sorular seçiminize göre uyarlanacaktır.",
+        "#Quick assessment": "Hızlı değerlendirme",
+        "#Answer these first. Then you can finish or add optional details.": "Önce bunları yanıtlayın. Ardından bitirebilir veya isteğe bağlı ayrıntılar ekleyebilirsiniz.",
+        "#Walking space": "Yürüme alanı",
+        "#Look at the place. Answer only what you can see.": "Yere bakın. Yalnızca görebildiğiniz şeyleri yanıtlayın.",
+        "#Cycling space": "Bisiklet alanı",
+        "#Traffic and slope": "Trafik ve eğim",
+        "#Answer based on your experience.": "Kendi deneyiminize göre yanıtlayın.",
+        "#Walking along this segment": "Bu kesimde yürürken",
+        "#Cycling along this segment": "Bu kesimde bisiklet veya scooterla",
+        "#Improve this street segment": "Bu sokak kesimini iyileştirin",
+        "#Tell us whether improving this segment should be a priority.": "Bu kesimin iyileştirilmesinin öncelikli olup olmadığını belirtin."
+      },
+      "fa": {
+        "#Street section with a magnifying glass": "بخشی از خیابان با ذره‌بین",
+        "#Your point of view": "دیدگاه شما",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "پیاده‌روی، دوچرخه‌سواری یا هر دو را انتخاب کنید. پرسش‌ها با انتخاب شما سازگار می‌شوند.",
+        "#Quick assessment": "ارزیابی سریع",
+        "#Answer these first. Then you can finish or add optional details.": "ابتدا به این پرسش‌ها پاسخ دهید. سپس می‌توانید پایان دهید یا جزئیات اختیاری اضافه کنید.",
+        "#Walking space": "فضای پیاده‌روی",
+        "#Look at the place. Answer only what you can see.": "به مکان نگاه کنید. فقط درباره چیزهایی پاسخ دهید که می‌بینید.",
+        "#Cycling space": "فضای دوچرخه",
+        "#Traffic and slope": "ترافیک و شیب",
+        "#Answer based on your experience.": "بر اساس تجربه خود پاسخ دهید.",
+        "#Walking along this segment": "پیاده در این بخش",
+        "#Cycling along this segment": "با دوچرخه یا اسکوتر در این بخش",
+        "#Improve this street segment": "بهبود این بخش خیابان",
+        "#Tell us whether improving this segment should be a priority.": "به ما بگویید آیا بهبود این بخش باید در اولویت باشد."
+      },
+      "hu": {
+        "#Street section with a magnifying glass": "Utcaszakasz nagyítóval",
+        "#Your point of view": "Az Ön nézőpontja",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Válassza a gyaloglást, a kerékpározást vagy mindkettőt. A kérdések a választásához igazodnak.",
+        "#Quick assessment": "Gyors értékelés",
+        "#Answer these first. Then you can finish or add optional details.": "Először ezekre válaszoljon. Utána befejezheti, vagy hozzáadhat választható részleteket.",
+        "#Walking space": "Gyalogos tér",
+        "#Look at the place. Answer only what you can see.": "Nézze meg a helyet. Csak arra válaszoljon, amit lát.",
+        "#Cycling space": "Kerékpáros tér",
+        "#Traffic and slope": "Forgalom és emelkedő",
+        "#Answer based on your experience.": "A saját tapasztalata alapján válaszoljon.",
+        "#Walking along this segment": "Gyalog ezen a szakaszon",
+        "#Cycling along this segment": "Kerékpárral vagy rollerrel ezen a szakaszon",
+        "#Improve this street segment": "Az utcaszakasz javítása",
+        "#Tell us whether improving this segment should be a priority.": "Mondja el, hogy e szakasz javítása elsőbbséget élvezzen-e."
+      },
+      "ar": {
+        "#Street section with a magnifying glass": "جزء من شارع مع عدسة مكبرة",
+        "#Your point of view": "وجهة نظرك",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "اختر المشي أو ركوب الدراجة أو كليهما. ستتكيّف الأسئلة مع اختيارك.",
+        "#Quick assessment": "تقييم سريع",
+        "#Answer these first. Then you can finish or add optional details.": "أجب عن هذه الأسئلة أولًا. بعد ذلك يمكنك الإنهاء أو إضافة تفاصيل اختيارية.",
+        "#Walking space": "مساحة المشي",
+        "#Look at the place. Answer only what you can see.": "انظر إلى المكان. أجب فقط عما يمكنك رؤيته.",
+        "#Cycling space": "مساحة الدراجات",
+        "#Traffic and slope": "حركة المرور والانحدار",
+        "#Answer based on your experience.": "أجب بناءً على تجربتك.",
+        "#Walking along this segment": "المشي على هذا المقطع",
+        "#Cycling along this segment": "بالدراجة أو السكوتر على هذا المقطع",
+        "#Improve this street segment": "تحسين هذا المقطع من الشارع",
+        "#Tell us whether improving this segment should be a priority.": "أخبرنا ما إذا كان تحسين هذا المقطع ينبغي أن يكون أولوية."
+      }
+    },
+    "id": "street_segment_assessment",
+    "db_set": "questionnaires",
+    "response_format": "planeasy.response",
+    "response_schema_version": "2.0",
+    "response_kind": "spatial_contribution",
+    "default_language": "en"
+  }
+}
