@@ -17,11 +17,11 @@ Applications should consume these configuration files rather than maintain indep
 
 ## Questionnaires and shared question pool
 
-Applications load complete standalone JSON questionnaires from `forms/`. The PlanEasy crowdsourcing framework owns the pool of all question definitions, including project-specific questions, and their immutable version history. No question bank, compilation flow or generated bank snapshot belongs in this repository.
+Applications load complete standalone JSON questionnaires from `forms/`. The shared question pool and its immutable version history are maintained separately from this configuration repository. No question bank, compilation flow or generated bank snapshot belongs in this repository.
 
 CityMaaS owns the shared editor and executable tools. Questionnaires retain their own version, stable question IDs and versions, and portable editorial history. Review annotations and previous wording travel with the exported questionnaire JSON; a browser cache is not the archive.
 
-Only `forms/surveys/` is the survey review scope for Marzieh. Pre Trip and Post Trip belong to `forms/tripSurveys/`, alongside the separate location-report and service-creation review scope. Research wording changes remain on their review branches until accepted.
+Only `forms/surveys/` is the survey review scope for Marzieh. Pre Trip and Post Trip belong to `forms/tripSurveys/`, alongside the location-report review scope, which includes service creation. Research wording changes remain on their review branches until accepted.
 
 ## Questionnaire privacy labels
 
