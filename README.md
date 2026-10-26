@@ -17,9 +17,11 @@ Applications should consume these configuration files rather than maintain indep
 
 ## Questionnaires and shared question pool
 
-Applications load complete standalone JSON questionnaires from forms/. Reusable question definitions are canonical in the PlanEasy crowdsourcing framework questionBank. SmartUrbanity owns its specific definitions and questionnaire flows, and generated feed/review snapshots are portable preparation artifacts.
+Applications load complete standalone JSON questionnaires from `forms/`. The PlanEasy crowdsourcing framework owns the pool of all question definitions, including project-specific questions, and their immutable version history. No question bank, compilation flow or generated bank snapshot belongs in this repository.
 
-CityMaaS owns the editor and executable tools; see [questionBank/README.md](questionBank/README.md) for preparation and validation.
+CityMaaS owns the shared editor and executable tools. Questionnaires retain their own version, stable question IDs and versions, and portable editorial history. Review annotations and previous wording travel with the exported questionnaire JSON; a browser cache is not the archive.
+
+Only `forms/surveys/` is the survey review scope for Marzieh. Pre Trip and Post Trip belong to `forms/tripSurveys/`, alongside the separate location-report and service-creation review scope. Research wording changes remain on their review branches until accepted.
 
 ## Questionnaire privacy labels
 
@@ -38,10 +40,9 @@ consent, restrict access or redact exports. The legal treatment and application
 controls need separate review.
 See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
 
-`legacy_answer_keys` lists previously stored answer keys when a question's
-`answer_key` changes. Keep these aliases for historical analysis; do not rewrite
-saved responses. The form's `questionnaire_version` still identifies which key
-set was used when a response was collected.
+This new collection uses canonical answer keys without historical answer aliases.
+The form's `questionnaire_version` and each question's `question_id` and
+`question_version` identify the content reviewed and used for collection.
 
 ## Repository structure
 
