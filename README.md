@@ -392,6 +392,17 @@ The resulting effective configuration represents the SmartUrbanity environment a
 
 ## Versioning
 
+Published questionnaires contain only the selected question definitions. Each question
+pins a neutral `question_id` and a semantic `question_version`; revision history and
+review notes belong to the authoring pool, while questionnaire composition history is
+retained in Git. Sections do not require an `id`. Service sections declare their
+existing `hub_feature` role for application behavior.
+
+Privacy metadata belongs only to each question, using `privacy_classification` with
+one of `personal_data`, `heightened_personal`, or `special_category_health`.
+These values describe handling needs for review; they do not establish a legal basis
+or constitute approval. Options and questionnaire-level objects do not repeat them.
+
 Configuration files should be version controlled through Git.
 
 Individual configuration objects may additionally expose explicit schema or configuration versions where required, particularly for reusable definitions and forms.
