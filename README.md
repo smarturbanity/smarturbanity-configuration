@@ -19,7 +19,7 @@ Applications should consume these configuration files rather than maintain indep
 
 Applications load complete standalone JSON questionnaires from `forms/`. The shared question pool and its immutable version history are maintained separately from this configuration repository. No question bank, compilation flow or generated bank snapshot belongs in this repository.
 
-CityMaaS owns the shared editor and executable tools. Questionnaires retain their own version, stable question IDs and versions, and portable editorial history. Review annotations and previous wording travel with the exported questionnaire JSON; a browser cache is not the archive.
+The shared editor and executable tools are maintained separately. Each runtime questionnaire contains only its selected question definitions, stable question IDs and exact semantic versions. Question revision history and authoring annotations belong to the shared question pool, not these runtime JSON files. The builder can inspect past pool revisions and select the version to include. Git retains the history of questionnaire compositions.
 
 Only `forms/surveys/` is the survey review scope for Marzieh. Pre Trip and Post Trip belong to `forms/tripSurveys/`, alongside the location-report review scope, which includes service creation. Research wording changes remain on their review branches until accepted.
 
