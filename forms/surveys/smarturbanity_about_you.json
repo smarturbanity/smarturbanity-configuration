@@ -507,13 +507,6 @@
             "text": "In which Municipio of Rome do you currently live?",
             "answer_key": "home_municipio",
             "question_type": "single_option",
-            "show_if": {
-              "residence": [
-                "travel",
-                "visit",
-                "reason"
-              ]
-            },
             "options": [
               {
                 "text": "1",
@@ -576,15 +569,19 @@
                 "value": "i_live_outside_rome"
               }
             ],
-            "add_i_dont_know": true
+            "add_i_dont_know": true,
+            "show_if": {
+              "residence": [
+                "travel",
+                "visit",
+                "reason"
+              ]
+            }
           },
           {
             "text": "In which neighbourhood of Municipio XII do you currently live?",
             "answer_key": "home_neighbourhood",
             "question_type": "single_option",
-            "show_if": {
-              "residence": "live"
-            },
             "options": [
               {
                 "text": "BRAVETTA",
@@ -638,7 +635,10 @@
                 "text": "VILLINI",
                 "value": "villini"
               }
-            ]
+            ],
+            "show_if": {
+              "residence": "live"
+            }
           },
           {
             "text": "Apart from your main Municipio, which other Municipio in Rome do you travel to most frequently?",
@@ -716,6 +716,69 @@
             "text": "Which is the second Municipio you travel to most frequently?",
             "answer_key": "second",
             "question_type": "single_option",
+            "options": [
+              {
+                "text": "1",
+                "value": "1"
+              },
+              {
+                "text": "2",
+                "value": "2"
+              },
+              {
+                "text": "3",
+                "value": "3"
+              },
+              {
+                "text": "4",
+                "value": "4"
+              },
+              {
+                "text": "5",
+                "value": "5"
+              },
+              {
+                "text": "6",
+                "value": "6"
+              },
+              {
+                "text": "7",
+                "value": "7"
+              },
+              {
+                "text": "8",
+                "value": "8"
+              },
+              {
+                "text": "9",
+                "value": "9"
+              },
+              {
+                "text": "10",
+                "value": "10"
+              },
+              {
+                "text": "11",
+                "value": "11"
+              },
+              {
+                "text": "12",
+                "value": "12"
+              },
+              {
+                "text": "13",
+                "value": "13"
+              },
+              {
+                "text": "14",
+                "value": "14"
+              },
+              {
+                "text": "15",
+                "value": "15"
+              }
+            ],
+            "add_i_dont_know": true,
             "show_if": {
               "travel": [
                 "1",
@@ -734,7 +797,12 @@
                 "14",
                 "15"
               ]
-            },
+            }
+          },
+          {
+            "text": "Which is the third Municipio you travel to most frequently?",
+            "answer_key": "frequent_areas_v1",
+            "question_type": "single_option",
             "options": [
               {
                 "text": "1",
@@ -797,12 +865,7 @@
                 "value": "15"
               }
             ],
-            "add_i_dont_know": true
-          },
-          {
-            "text": "Which is the third Municipio you travel to most frequently?",
-            "answer_key": "frequent_areas_v1",
-            "question_type": "single_option",
+            "add_i_dont_know": true,
             "show_if": {
               "second": [
                 "1",
@@ -821,70 +884,7 @@
                 "14",
                 "15"
               ]
-            },
-            "options": [
-              {
-                "text": "1",
-                "value": "1"
-              },
-              {
-                "text": "2",
-                "value": "2"
-              },
-              {
-                "text": "3",
-                "value": "3"
-              },
-              {
-                "text": "4",
-                "value": "4"
-              },
-              {
-                "text": "5",
-                "value": "5"
-              },
-              {
-                "text": "6",
-                "value": "6"
-              },
-              {
-                "text": "7",
-                "value": "7"
-              },
-              {
-                "text": "8",
-                "value": "8"
-              },
-              {
-                "text": "9",
-                "value": "9"
-              },
-              {
-                "text": "10",
-                "value": "10"
-              },
-              {
-                "text": "11",
-                "value": "11"
-              },
-              {
-                "text": "12",
-                "value": "12"
-              },
-              {
-                "text": "13",
-                "value": "13"
-              },
-              {
-                "text": "14",
-                "value": "14"
-              },
-              {
-                "text": "15",
-                "value": "15"
-              }
-            ],
-            "add_i_dont_know": true
+            }
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
@@ -988,6 +988,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Personal & Household": "Personal & Household",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>A few background questions to help us understand who our participants are.</p>",
+      "#None": "None",
+      "#Physical Capability": "Physical Capability",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Questions about your physical capacity for active travel.</p>",
+      "#Living context": "Living context",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Questions about where you live and how you move around Rome.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "What is your age group? (Participation is limited to adults aged 18 or older)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1007,6 +1013,7 @@
       "#No": "No",
       "#How many adults, including yourself, live together in your household?": "How many adults, including yourself, live together in your household?",
       "#1 (only myself)": "1 (only myself)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1024,6 +1031,7 @@
       "#We can cover basic needs comfortably and have little money left over": "We can cover basic needs comfortably and have little money left over",
       "#We can afford most things we want with occasional extra expenses": "We can afford most things we want with occasional extra expenses",
       "#We are financially very comfortable and can easily afford extra expenses": "We are financially very comfortable and can easily afford extra expenses",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.",
       "#Which best describes your employment status?": "Which best describes your employment status?",
       "#Employed full-time": "Employed full-time",
       "#Employed part-time": "Employed part-time",
@@ -1047,10 +1055,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Yes, I have a permanent mobility condition/limitation",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Do you hold a valid driving license? (Car, motorcycle or both)",
-      "#None": "None",
-      "#Physical Capability": "Physical Capability",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Questions about your physical capacity for active travel.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?",
       "#I rarely or never walk": "I rarely or never walk",
+      "#Less than 500 meters": "Less than 500 meters",
+      "#From 500 meters to 1 km": "From 500 meters to 1 km",
+      "#1 to 2 km": "1 to 2 km",
       "#More than 2 km": "More than 2 km",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.",
       "#Inactive (0 days)": "Inactive (0 days)",
@@ -1070,15 +1079,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm or more",
-      "#Living context": "Living context",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Questions about where you live and how you move around Rome.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Which of the following best describes your relationship to Municipio XII?",
       "#I live here (Resident)": "I live here (Resident)",
       "#I travel here regularly for work or study (Commuter)": "I travel here regularly for work or study (Commuter)",
       "#I’m visiting for leisure (Tourist)": "I’m visiting for leisure (Tourist)",
       "#I’m here temporarily for another reason (Visitor)": "I’m here temporarily for another reason (Visitor)",
       "#In which Municipio of Rome do you currently live?": "In which Municipio of Rome do you currently live?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1128,13 +1134,7 @@
       "#Somewhat disconnected": "Somewhat disconnected",
       "#Neither connected nor disconnected": "Neither connected nor disconnected",
       "#Somewhat connected": "Somewhat connected",
-      "#Very connected": "Very connected",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.",
-      "#Less than 500 meters": "Less than 500 meters",
-      "#From 500 meters to 1 km": "From 500 meters to 1 km",
-      "#1 to 2 km": "1 to 2 km"
+      "#Very connected": "Very connected"
     },
     "it": {
       "#Person with a speech bubble": "Persona con un fumetto",
@@ -1146,6 +1146,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Personal & Household": "Informazioni personali e nucleo familiare",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>Alcune domande generali per aiutarci a comprendere meglio chi partecipa allo studio.</p>",
+      "#None": "Nessuno",
+      "#Physical Capability": "Capacità fisica",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Domande sulla tua capacità fisica negli spostamenti attivi.</p>",
+      "#Living context": "Contesto abitativo",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Domande sul luogo in cui vivi e su come ti sposti a Roma.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity raccoglie informazioni di base sulla persona, sul nucleo familiare e sul contesto abitativo. Le tue risposte ci aiutano a descrivere chi partecipa allo studio e in che modo le diverse condizioni urbane possono influenzare la mobilità quotidiana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Qual è la tua fascia d’età? (La partecipazione è riservata alle persone di almeno 18 anni)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1165,6 +1171,7 @@
       "#No": "No",
       "#How many adults, including yourself, live together in your household?": "Quanti adulti, te compreso/a, vivono nel tuo nucleo familiare?",
       "#1 (only myself)": "1 (solo io)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1182,6 +1189,7 @@
       "#We can cover basic needs comfortably and have little money left over": "Riusciamo a coprire comodamente le necessità di base e ci rimane una piccola somma",
       "#We can afford most things we want with occasional extra expenses": "Possiamo permetterci la maggior parte delle cose che desideriamo e occasionalmente alcune spese extra",
       "#We are financially very comfortable and can easily afford extra expenses": "Siamo in una situazione economica molto agiata e possiamo permetterci facilmente spese extra",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Questa risposta ci aiuta a confrontare come le condizioni economiche del nucleo possono influire sugli spostamenti quotidiani e sull’accesso ai servizi. Presentiamo i risultati in forma aggregata, non come risposte individuali.",
       "#Which best describes your employment status?": "Quale delle seguenti opzioni descrive meglio la tua condizione lavorativa?",
       "#Employed full-time": "Lavoratore/lavoratrice a tempo pieno",
       "#Employed part-time": "Lavoratore/lavoratrice a tempo parziale",
@@ -1205,10 +1213,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Sì, ho una condizione o limitazione permanente della mobilità",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Hai un animale domestico che può comportare ulteriori spostamenti a piedi (ad es. un cane)?",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Possiedi una patente di guida valida? (Auto, moto o entrambe)",
-      "#None": "Nessuno",
-      "#Physical Capability": "Capacità fisica",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Domande sulla tua capacità fisica negli spostamenti attivi.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Al tuo passo abituale, quanta strada riesci a percorrere prima di aver bisogno di una pausa di oltre 5 minuti?",
       "#I rarely or never walk": "Cammino raramente o mai",
+      "#Less than 500 meters": "Meno di 500 metri",
+      "#From 500 meters to 1 km": "Da 500 metri a 1 km",
+      "#1 to 2 km": "Da 1 a 2 km",
       "#More than 2 km": "Più di 2 km",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "Quanto sei fisicamente attivo/a durante una settimana tipica? Considera gli spostamenti a piedi, in bicicletta o l’attività fisica dedicata. Se hai una condizione che influisce sulla mobilità, seleziona il livello che descrive meglio la tua situazione.",
       "#Inactive (0 days)": "Inattivo/a (0 giorni)",
@@ -1228,15 +1237,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm o più",
-      "#Living context": "Contesto abitativo",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Domande sul luogo in cui vivi e su come ti sposti a Roma.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Quale delle seguenti opzioni descrive meglio il tuo rapporto con il Municipio XII?",
       "#I live here (Resident)": "Vivo qui (residente)",
       "#I travel here regularly for work or study (Commuter)": "Vengo qui regolarmente per lavoro o studio (pendolare)",
       "#I’m visiting for leisure (Tourist)": "Sono qui per turismo o svago (turista)",
       "#I’m here temporarily for another reason (Visitor)": "Sono qui temporaneamente per un altro motivo (visitatore/visitatrice)",
       "#In which Municipio of Rome do you currently live?": "In quale Municipio di Roma vivi attualmente?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1286,13 +1292,7 @@
       "#Somewhat disconnected": "Poco legato/a",
       "#Neither connected nor disconnected": "Né legato/a né distaccato/a",
       "#Somewhat connected": "Abbastanza legato/a",
-      "#Very connected": "Molto legato/a",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity raccoglie informazioni di base sulla persona, sul nucleo familiare e sul contesto abitativo. Le tue risposte ci aiutano a descrivere chi partecipa allo studio e in che modo le diverse condizioni urbane possono influenzare la mobilità quotidiana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Al tuo passo abituale, quanta strada riesci a percorrere prima di aver bisogno di una pausa di oltre 5 minuti?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Questa risposta ci aiuta a confrontare come le condizioni economiche del nucleo possono influire sugli spostamenti quotidiani e sull’accesso ai servizi. Presentiamo i risultati in forma aggregata, non come risposte individuali.",
-      "#Less than 500 meters": "Meno di 500 metri",
-      "#From 500 meters to 1 km": "Da 500 metri a 1 km",
-      "#1 to 2 km": "Da 1 a 2 km"
+      "#Very connected": "Molto legato/a"
     },
     "fr": {
       "#Person with a speech bubble": "Personne avec une bulle de dialogue",
@@ -1304,6 +1304,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Personal & Household": "Vous et votre foyer",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>Quelques questions générales pour mieux connaître les personnes qui participent à l’étude.</p>",
+      "#None": "Aucun",
+      "#Physical Capability": "Capacités physiques",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Questions sur vos capacités physiques pour les déplacements actifs.</p>",
+      "#Living context": "Cadre de vie",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Questions sur votre lieu de vie et vos déplacements à Rome.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity recueille des informations générales sur vous, votre foyer et votre cadre de vie. Vos réponses nous aident à mieux comprendre qui participe à l’étude et comment différentes conditions urbaines peuvent influencer les déplacements quotidiens. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Dans quelle tranche d’âge êtes-vous ? (La participation est réservée aux personnes de 18 ans ou plus)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1323,6 +1329,7 @@
       "#No": "Non",
       "#How many adults, including yourself, live together in your household?": "Combien d’adultes, vous compris, vivent dans votre foyer ?",
       "#1 (only myself)": "1 (moi uniquement)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1340,6 +1347,7 @@
       "#We can cover basic needs comfortably and have little money left over": "Nous couvrons facilement nos besoins essentiels, mais il nous reste peu d’argent",
       "#We can afford most things we want with occasional extra expenses": "Nous pouvons nous permettre la plupart des choses que nous souhaitons, avec quelques dépenses supplémentaires occasionnelles",
       "#We are financially very comfortable and can easily afford extra expenses": "Nous sommes très à l’aise financièrement et pouvons facilement faire face à des dépenses supplémentaires",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Cette réponse nous aide à comparer la façon dont la situation du foyer peut influer sur les déplacements quotidiens et l’accès aux services. Les résultats sont présentés sous forme agrégée, pas comme des réponses individuelles.",
       "#Which best describes your employment status?": "Quelle situation décrit le mieux votre activité professionnelle ?",
       "#Employed full-time": "Salarié(e) à temps plein",
       "#Employed part-time": "Salarié(e) à temps partiel",
@@ -1363,10 +1371,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Oui, j’ai une condition ou une limitation permanente de mobilité",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Avez-vous un animal domestique qui peut entraîner des déplacements supplémentaires à pied, par exemple un chien ?",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Avez-vous un permis de conduire valide ? (Voiture, moto ou les deux)",
-      "#None": "Aucun",
-      "#Physical Capability": "Capacités physiques",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Questions sur vos capacités physiques pour les déplacements actifs.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "À votre rythme de marche habituel, quelle distance pouvez-vous parcourir avant d’avoir besoin d’une pause de plus de 5 minutes ?",
       "#I rarely or never walk": "Je marche rarement ou jamais",
+      "#Less than 500 meters": "Moins de 500 mètres",
+      "#From 500 meters to 1 km": "De 500 mètres à 1 km",
+      "#1 to 2 km": "De 1 à 2 km",
       "#More than 2 km": "Plus de 2 km",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "Pendant une semaine habituelle, quel est votre niveau d’activité physique ? Pensez à la marche pour vos déplacements, au vélo ou à une activité physique dédiée. Si vous avez une condition qui limite votre mobilité, choisissez le niveau qui vous correspond le mieux.",
       "#Inactive (0 days)": "Inactif / inactive (0 jour)",
@@ -1386,15 +1395,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm ou plus",
-      "#Living context": "Cadre de vie",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Questions sur votre lieu de vie et vos déplacements à Rome.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Laquelle de ces situations décrit le mieux votre lien avec le Municipio XII ?",
       "#I live here (Resident)": "J’habite ici (résident)",
       "#I travel here regularly for work or study (Commuter)": "Je viens ici régulièrement pour travailler ou étudier",
       "#I’m visiting for leisure (Tourist)": "Je suis ici pour les loisirs (touriste)",
       "#I’m here temporarily for another reason (Visitor)": "Je suis ici temporairement pour une autre raison (visiteur)",
       "#In which Municipio of Rome do you currently live?": "Dans quel Municipio de Rome habitez-vous actuellement ?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1444,13 +1450,7 @@
       "#Somewhat disconnected": "Plutôt peu attaché(e)",
       "#Neither connected nor disconnected": "Ni attaché(e) ni détaché(e)",
       "#Somewhat connected": "Plutôt attaché(e)",
-      "#Very connected": "Très attaché(e)",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity recueille des informations générales sur vous, votre foyer et votre cadre de vie. Vos réponses nous aident à mieux comprendre qui participe à l’étude et comment différentes conditions urbaines peuvent influencer les déplacements quotidiens. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "À votre rythme de marche habituel, quelle distance pouvez-vous parcourir avant d’avoir besoin d’une pause de plus de 5 minutes ?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Cette réponse nous aide à comparer la façon dont la situation du foyer peut influer sur les déplacements quotidiens et l’accès aux services. Les résultats sont présentés sous forme agrégée, pas comme des réponses individuelles.",
-      "#Less than 500 meters": "Moins de 500 mètres",
-      "#From 500 meters to 1 km": "De 500 mètres à 1 km",
-      "#1 to 2 km": "De 1 à 2 km"
+      "#Very connected": "Très attaché(e)"
     },
     "de": {
       "#Person with a speech bubble": "Person mit einer Sprechblase",
@@ -1462,6 +1462,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Personal & Household": "Persönliche Angaben und Haushalt",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>Einige allgemeine Fragen, damit wir die Teilnehmenden besser kennenlernen.</p>",
+      "#None": "Keine",
+      "#Physical Capability": "Körperliche Fähigkeiten",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Fragen zu Ihren körperlichen Möglichkeiten für aktive Fortbewegung.</p>",
+      "#Living context": "Wohnumfeld",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Fragen dazu, wo Sie wohnen und wie Sie sich in Rom fortbewegen.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen erfasst grundlegende Informationen zu Ihrer Person, Ihrem Haushalt und Ihrem Wohnumfeld. Ihre Antworten helfen uns zu verstehen, wer an der Studie teilnimmt und wie unterschiedliche Bedingungen in der Stadt die tägliche Mobilität beeinflussen können. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Zu welcher Altersgruppe gehören Sie? (Teilnehmen können nur Personen ab 18 Jahren)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1481,6 +1487,7 @@
       "#No": "Nein",
       "#How many adults, including yourself, live together in your household?": "Wie viele Erwachsene leben einschließlich Ihnen in Ihrem Haushalt?",
       "#1 (only myself)": "1 (nur ich)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1498,6 +1505,7 @@
       "#We can cover basic needs comfortably and have little money left over": "Wir können unsere grundlegenden Bedürfnisse gut bezahlen, aber es bleibt nur wenig Geld übrig",
       "#We can afford most things we want with occasional extra expenses": "Wir können uns die meisten Dinge leisten, die wir möchten, und gelegentliche zusätzliche Ausgaben tragen",
       "#We are financially very comfortable and can easily afford extra expenses": "Wir sind finanziell sehr gut aufgestellt und können zusätzliche Ausgaben problemlos tragen",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Diese Antwort hilft uns zu vergleichen, wie die Situation eines Haushalts alltägliche Wege und den Zugang zu Dienstleistungen beeinflussen kann. Ergebnisse werden zusammengefasst und nicht als einzelne Antworten dargestellt.",
       "#Which best describes your employment status?": "Welche Beschreibung passt am besten zu Ihrer beruflichen Situation?",
       "#Employed full-time": "Vollzeit beschäftigt",
       "#Employed part-time": "Teilzeit beschäftigt",
@@ -1521,10 +1529,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Ja, ich habe eine dauerhafte Mobilitätseinschränkung",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Haben Sie ein Haustier, das zusätzliche Wege zu Fuß verursachen kann, zum Beispiel einen Hund?",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Haben Sie einen gültigen Führerschein? (Auto, Motorrad oder beides)",
-      "#None": "Keine",
-      "#Physical Capability": "Körperliche Fähigkeiten",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Fragen zu Ihren körperlichen Möglichkeiten für aktive Fortbewegung.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Wie weit können Sie in Ihrem üblichen Gehtempo gehen, bevor Sie eine Pause von mehr als 5 Minuten brauchen?",
       "#I rarely or never walk": "Ich gehe selten oder nie zu Fuß",
+      "#Less than 500 meters": "Weniger als 500 Meter",
+      "#From 500 meters to 1 km": "500 Meter bis 1 km",
+      "#1 to 2 km": "1 bis 2 km",
       "#More than 2 km": "Mehr als 2 km",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "Wie körperlich aktiv sind Sie in einer typischen Woche? Denken Sie an Wege zu Fuß, Radfahren oder gezielte Bewegung. Wenn Sie eine Einschränkung Ihrer Mobilität haben, wählen Sie bitte die Stufe, die am besten zu Ihnen passt.",
       "#Inactive (0 days)": "Inaktiv (0 Tage)",
@@ -1544,15 +1553,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm oder größer",
-      "#Living context": "Wohnumfeld",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Fragen dazu, wo Sie wohnen und wie Sie sich in Rom fortbewegen.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Welche der folgenden Aussagen beschreibt Ihre Beziehung zum Municipio XII am besten?",
       "#I live here (Resident)": "Ich wohne hier",
       "#I travel here regularly for work or study (Commuter)": "Ich komme regelmäßig zum Arbeiten oder Studieren hierher",
       "#I’m visiting for leisure (Tourist)": "Ich bin hier in meiner Freizeit zu Besuch",
       "#I’m here temporarily for another reason (Visitor)": "Ich bin aus einem anderen Grund vorübergehend hier",
       "#In which Municipio of Rome do you currently live?": "In welchem Municipio von Rom wohnen Sie derzeit?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1602,13 +1608,7 @@
       "#Somewhat disconnected": "Eher wenig verbunden",
       "#Neither connected nor disconnected": "Weder verbunden noch unverbunden",
       "#Somewhat connected": "Eher verbunden",
-      "#Very connected": "Sehr verbunden",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen erfasst grundlegende Informationen zu Ihrer Person, Ihrem Haushalt und Ihrem Wohnumfeld. Ihre Antworten helfen uns zu verstehen, wer an der Studie teilnimmt und wie unterschiedliche Bedingungen in der Stadt die tägliche Mobilität beeinflussen können. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Wie weit können Sie in Ihrem üblichen Gehtempo gehen, bevor Sie eine Pause von mehr als 5 Minuten brauchen?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Diese Antwort hilft uns zu vergleichen, wie die Situation eines Haushalts alltägliche Wege und den Zugang zu Dienstleistungen beeinflussen kann. Ergebnisse werden zusammengefasst und nicht als einzelne Antworten dargestellt.",
-      "#Less than 500 meters": "Weniger als 500 Meter",
-      "#From 500 meters to 1 km": "500 Meter bis 1 km",
-      "#1 to 2 km": "1 bis 2 km"
+      "#Very connected": "Sehr verbunden"
     },
     "tr": {
       "#Person with a speech bubble": "Konuşma balonu olan bir kişi",
@@ -1620,6 +1620,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Personal & Household": "Kişisel Bilgiler ve Hane",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>Katılımcılarımızı daha iyi tanımamıza yardımcı olacak birkaç genel soru.</p>",
+      "#None": "Hiçbiri",
+      "#Physical Capability": "Fiziksel Kapasite",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Aktif ulaşım için fiziksel kapasiteniz hakkında sorular.</p>",
+      "#Living context": "Yaşam Çevresi",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Nerede yaşadığınız ve Roma içinde nasıl hareket ettiğiniz hakkında sorular.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi sizin, hanenizin ve yaşadığınız çevrenin temel özellikleri hakkında bilgi toplar. Yanıtlarınız, çalışmaya kimlerin katıldığını ve farklı kentsel koşulların günlük hareketliliği nasıl etkileyebileceğini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Hangi yaş grubundasınız? (Katılım 18 yaş ve üzerindeki yetişkinlerle sınırlıdır)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1639,6 +1645,7 @@
       "#No": "Hayır",
       "#How many adults, including yourself, live together in your household?": "Siz dahil hanenizde kaç yetişkin yaşıyor?",
       "#1 (only myself)": "1 (yalnızca ben)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1656,6 +1663,7 @@
       "#We can cover basic needs comfortably and have little money left over": "Temel ihtiyaçlarımızı rahatça karşılayabiliyoruz, ancak geriye çok az para kalıyor",
       "#We can afford most things we want with occasional extra expenses": "İstediğimiz çoğu şeyi karşılayabiliyoruz ve ara sıra ek harcamalar yapabiliyoruz",
       "#We are financially very comfortable and can easily afford extra expenses": "Maddi açıdan çok rahatız ve ek harcamaları kolayca karşılayabiliyoruz",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Bu yanıt, hane koşullarının günlük ulaşımı ve hizmetlere erişimi nasıl etkileyebileceğini karşılaştırmamıza yardımcı olur. Sonuçlar bireysel yanıtlar olarak değil, toplu olarak sunulur.",
       "#Which best describes your employment status?": "Çalışma durumunuzu aşağıdakilerden hangisi en iyi tanımlar?",
       "#Employed full-time": "Tam zamanlı çalışıyorum",
       "#Employed part-time": "Yarı zamanlı çalışıyorum",
@@ -1679,10 +1687,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Evet, kalıcı bir hareket kısıtlılığım var",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Evde ek yürüme ihtiyacı doğurabilecek bir evcil hayvanınız var mı? Örneğin bir köpek.",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Geçerli bir sürücü belgeniz var mı? (Otomobil, motosiklet veya her ikisi)",
-      "#None": "Hiçbiri",
-      "#Physical Capability": "Fiziksel Kapasite",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Aktif ulaşım için fiziksel kapasiteniz hakkında sorular.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Normal yürüme hızınızda, 5 dakikadan uzun bir mola vermeniz gerekmeden önce ne kadar yürüyebilirsiniz?",
       "#I rarely or never walk": "Nadiren yürürüm veya hiç yürümem",
+      "#Less than 500 meters": "500 metreden az",
+      "#From 500 meters to 1 km": "500 metre ile 1 km arası",
+      "#1 to 2 km": "1 ile 2 km arası",
       "#More than 2 km": "2 km’den fazla",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "Tipik bir haftada ne kadar fiziksel olarak aktifsiniz? Ulaşım için yürümeyi, bisiklete binmeyi veya düzenli egzersizi düşünün. Hareketliliğinizi etkileyen bir durumunuz varsa, size en uygun düzeyi seçin.",
       "#Inactive (0 days)": "Hareketsiz (0 gün)",
@@ -1702,15 +1711,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm veya daha uzun",
-      "#Living context": "Yaşam Çevresi",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Nerede yaşadığınız ve Roma içinde nasıl hareket ettiğiniz hakkında sorular.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Aşağıdakilerden hangisi Municipio XII ile ilişkinizi en iyi tanımlar?",
       "#I live here (Resident)": "Burada yaşıyorum",
       "#I travel here regularly for work or study (Commuter)": "İş veya eğitim için buraya düzenli olarak geliyorum",
       "#I’m visiting for leisure (Tourist)": "Gezi veya boş zaman için buradayım",
       "#I’m here temporarily for another reason (Visitor)": "Başka bir nedenle geçici olarak buradayım",
       "#In which Municipio of Rome do you currently live?": "Şu anda Roma’nın hangi Municipio’sunda yaşıyorsunuz?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1760,13 +1766,7 @@
       "#Somewhat disconnected": "Pek bağlı hissetmiyorum",
       "#Neither connected nor disconnected": "Ne bağlı ne de kopuk hissediyorum",
       "#Somewhat connected": "Oldukça bağlı hissediyorum",
-      "#Very connected": "Çok bağlı hissediyorum",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi sizin, hanenizin ve yaşadığınız çevrenin temel özellikleri hakkında bilgi toplar. Yanıtlarınız, çalışmaya kimlerin katıldığını ve farklı kentsel koşulların günlük hareketliliği nasıl etkileyebileceğini anlamamıza yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "Normal yürüme hızınızda, 5 dakikadan uzun bir mola vermeniz gerekmeden önce ne kadar yürüyebilirsiniz?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Bu yanıt, hane koşullarının günlük ulaşımı ve hizmetlere erişimi nasıl etkileyebileceğini karşılaştırmamıza yardımcı olur. Sonuçlar bireysel yanıtlar olarak değil, toplu olarak sunulur.",
-      "#Less than 500 meters": "500 metreden az",
-      "#From 500 meters to 1 km": "500 metre ile 1 km arası",
-      "#1 to 2 km": "1 ile 2 km arası"
+      "#Very connected": "Çok bağlı hissediyorum"
     },
     "fa": {
       "#Person with a speech bubble": "فردی با حباب گفتگو",
@@ -1778,6 +1778,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Personal & Household": "اطلاعات شخصی و خانوار",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>چند سؤال عمومی برای اینکه شرکت‌کنندگان را بهتر بشناسیم.</p>",
+      "#None": "هیچ‌کدام",
+      "#Physical Capability": "توانایی جسمی",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>سؤال‌هایی درباره توانایی جسمی شما برای جابه‌جایی فعال.</p>",
+      "#Living context": "محیط زندگی",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>سؤال‌هایی درباره محل زندگی شما و نحوه رفت‌وآمدتان در رم.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity اطلاعات پایه درباره شما، خانوار شما و محیط زندگی‌تان جمع‌آوری می‌کند. پاسخ‌های شما به ما کمک می‌کند بفهمیم چه کسانی در مطالعه شرکت می‌کنند و شرایط مختلف شهری چگونه می‌تواند بر رفت‌وآمد روزانه اثر بگذارد. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "در کدام گروه سنی هستید؟ (شرکت در این مطالعه فقط برای افراد ۱۸ ساله و بالاتر است)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1797,6 +1803,7 @@
       "#No": "خیر",
       "#How many adults, including yourself, live together in your household?": "چند فرد بزرگسال، با احتساب خود شما، در خانوارتان زندگی می‌کنند؟",
       "#1 (only myself)": "1 (فقط خودم)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1814,6 +1821,7 @@
       "#We can cover basic needs comfortably and have little money left over": "می‌توانیم نیازهای اولیه را به‌راحتی تأمین کنیم، اما پول کمی باقی می‌ماند",
       "#We can afford most things we want with occasional extra expenses": "می‌توانیم بیشتر چیزهایی را که می‌خواهیم تهیه کنیم و گاهی هزینه‌های اضافی هم داشته باشیم",
       "#We are financially very comfortable and can easily afford extra expenses": "از نظر مالی بسیار راحت هستیم و می‌توانیم هزینه‌های اضافی را به‌راحتی پرداخت کنیم",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "این پاسخ به ما کمک می‌کند مقایسه کنیم شرایط خانوار چگونه ممکن است بر رفت‌وآمد روزانه و دسترسی به خدمات اثر بگذارد. نتایج به‌صورت تجمیعی ارائه می‌شوند، نه به‌صورت پاسخ‌های فردی.",
       "#Which best describes your employment status?": "کدام گزینه وضعیت شغلی شما را بهتر توصیف می‌کند؟",
       "#Employed full-time": "شاغل تمام‌وقت",
       "#Employed part-time": "شاغل پاره‌وقت",
@@ -1837,10 +1845,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "بله، یک محدودیت حرکتی دائمی دارم",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "آیا حیوان خانگی دارید که باعث شود بیشتر پیاده‌روی کنید، مثلاً سگ؟",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "آیا گواهینامه رانندگی معتبر دارید؟ (خودرو، موتورسیکلت یا هر دو)",
-      "#None": "هیچ‌کدام",
-      "#Physical Capability": "توانایی جسمی",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>سؤال‌هایی درباره توانایی جسمی شما برای جابه‌جایی فعال.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "با سرعت معمول راه رفتن خود، پیش از آن‌که به استراحتی بیش از ۵ دقیقه نیاز داشته باشید، چه مسافتی می‌توانید طی کنید؟",
       "#I rarely or never walk": "به ندرت پیاده‌روی می‌کنم یا اصلاً پیاده نمی‌روم",
+      "#Less than 500 meters": "کمتر از ۵۰۰ متر",
+      "#From 500 meters to 1 km": "از ۵۰۰ متر تا ۱ کیلومتر",
+      "#1 to 2 km": "۱ تا ۲ کیلومتر",
       "#More than 2 km": "بیش از ۲ کیلومتر",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "در یک هفته معمولی چقدر فعالیت بدنی دارید؟ پیاده‌روی برای رفت‌وآمد، دوچرخه‌سواری یا ورزش را در نظر بگیرید. اگر شرایطی دارید که حرکت شما را محدود می‌کند، گزینه‌ای را انتخاب کنید که بیشتر با وضعیت شما سازگار است.",
       "#Inactive (0 days)": "بدون فعالیت (۰ روز)",
@@ -1860,15 +1869,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "۱۹۵ سانتی‌متر یا بیشتر",
-      "#Living context": "محیط زندگی",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>سؤال‌هایی درباره محل زندگی شما و نحوه رفت‌وآمدتان در رم.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "کدام گزینه رابطه شما با Municipio XII را بهتر توصیف می‌کند؟",
       "#I live here (Resident)": "اینجا زندگی می‌کنم",
       "#I travel here regularly for work or study (Commuter)": "برای کار یا تحصیل به طور منظم به اینجا می‌آیم",
       "#I’m visiting for leisure (Tourist)": "برای تفریح یا بازدید اینجا هستم",
       "#I’m here temporarily for another reason (Visitor)": "به دلیل دیگری به طور موقت اینجا هستم",
       "#In which Municipio of Rome do you currently live?": "در حال حاضر در کدام Municipio شهر رم زندگی می‌کنید؟",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -1918,13 +1924,7 @@
       "#Somewhat disconnected": "کمی احساس بی‌تعلقی می‌کنم",
       "#Neither connected nor disconnected": "نه احساس تعلق دارم نه بی‌تعلقی",
       "#Somewhat connected": "تا حدی احساس تعلق دارم",
-      "#Very connected": "احساس تعلق زیادی دارم",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity اطلاعات پایه درباره شما، خانوار شما و محیط زندگی‌تان جمع‌آوری می‌کند. پاسخ‌های شما به ما کمک می‌کند بفهمیم چه کسانی در مطالعه شرکت می‌کنند و شرایط مختلف شهری چگونه می‌تواند بر رفت‌وآمد روزانه اثر بگذارد. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "با سرعت معمول راه رفتن خود، پیش از آن‌که به استراحتی بیش از ۵ دقیقه نیاز داشته باشید، چه مسافتی می‌توانید طی کنید؟",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "این پاسخ به ما کمک می‌کند مقایسه کنیم شرایط خانوار چگونه ممکن است بر رفت‌وآمد روزانه و دسترسی به خدمات اثر بگذارد. نتایج به‌صورت تجمیعی ارائه می‌شوند، نه به‌صورت پاسخ‌های فردی.",
-      "#Less than 500 meters": "کمتر از ۵۰۰ متر",
-      "#From 500 meters to 1 km": "از ۵۰۰ متر تا ۱ کیلومتر",
-      "#1 to 2 km": "۱ تا ۲ کیلومتر"
+      "#Very connected": "احساس تعلق زیادی دارم"
     },
     "hu": {
       "#Person with a speech bubble": "Személy szóbuborékkal",
@@ -1936,6 +1936,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Personal & Household": "Személyes és háztartási adatok",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>Néhány általános kérdés, hogy jobban megismerjük a résztvevőket.</p>",
+      "#None": "Egyik sem",
+      "#Physical Capability": "Fizikai képességek",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Kérdések az aktív közlekedéshez szükséges fizikai képességeiről.</p>",
+      "#Living context": "Lakókörnyezet",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Kérdések arról, hol él és hogyan közlekedik Rómában.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív alapvető információkat gyűjt Önről, a háztartásáról és a lakókörnyezetéről. Válaszai segítenek megérteni, kik vesznek részt a kutatásban, és hogyan befolyásolhatják a különböző városi körülmények a mindennapi közlekedést. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Melyik korcsoportba tartozik? (A részvétel 18 éves vagy idősebb felnőttek számára lehetséges)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -1955,6 +1961,7 @@
       "#No": "Nem",
       "#How many adults, including yourself, live together in your household?": "Önnel együtt hány felnőtt él a háztartásában?",
       "#1 (only myself)": "1 (csak én)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -1972,6 +1979,7 @@
       "#We can cover basic needs comfortably and have little money left over": "Az alapvető szükségleteket kényelmesen fedezzük, de kevés pénz marad",
       "#We can afford most things we want with occasional extra expenses": "A legtöbb dolgot megengedhetjük magunknak, és időnként extra kiadásokat is vállalhatunk",
       "#We are financially very comfortable and can easily afford extra expenses": "Anyagilag nagyon kényelmes helyzetben vagyunk, és az extra kiadásokat is könnyen fedezzük",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Ez a válasz segít összehasonlítani, hogyan befolyásolhatják a háztartás körülményei a mindennapi közlekedést és a szolgáltatások elérését. Az eredményeket összesítve, nem egyéni válaszként mutatjuk be.",
       "#Which best describes your employment status?": "Melyik írja le legjobban az Ön foglalkoztatási helyzetét?",
       "#Employed full-time": "Teljes munkaidőben dolgozom",
       "#Employed part-time": "Részmunkaidőben dolgozom",
@@ -1995,10 +2003,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "Igen, tartós mozgáskorlátozottságom van",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Van olyan háziállata, amely miatt többet kell gyalogolnia, például kutya?",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "Van érvényes vezetői engedélye? (Autóra, motorkerékpárra vagy mindkettőre)",
-      "#None": "Egyik sem",
-      "#Physical Capability": "Fizikai képességek",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>Kérdések az aktív közlekedéshez szükséges fizikai képességeiről.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "A szokásos gyaloglási tempójában mekkora távolságot tud megtenni, mielőtt 5 percnél hosszabb pihenőre lenne szüksége?",
       "#I rarely or never walk": "Ritkán vagy soha nem gyalogolok",
+      "#Less than 500 meters": "Kevesebb mint 500 méter",
+      "#From 500 meters to 1 km": "500 métertől 1 km-ig",
+      "#1 to 2 km": "1-2 km",
       "#More than 2 km": "Több mint 2 km",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "Mennyire fizikailag aktív egy átlagos héten? Gondoljon a közlekedési célú gyaloglásra, kerékpározásra vagy célzott testmozgásra. Ha mozgását valamilyen állapot befolyásolja, válassza az Önre leginkább jellemző szintet.",
       "#Inactive (0 days)": "Inaktív (0 nap)",
@@ -2018,15 +2027,12 @@
       "#165-179 cm": "165-179 cm",
       "#180-194 cm": "180-194 cm",
       "#195 cm or more": "195 cm vagy magasabb",
-      "#Living context": "Lakókörnyezet",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>Kérdések arról, hol él és hogyan közlekedik Rómában.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "Melyik állítás írja le legjobban a kapcsolatát a Municipio XII területével?",
       "#I live here (Resident)": "Itt élek",
       "#I travel here regularly for work or study (Commuter)": "Rendszeresen ide járok dolgozni vagy tanulni",
       "#I’m visiting for leisure (Tourist)": "Szabadidős céllal látogatok ide",
       "#I’m here temporarily for another reason (Visitor)": "Más okból ideiglenesen tartózkodom itt",
       "#In which Municipio of Rome do you currently live?": "Róma melyik Municipio területén él jelenleg?",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -2076,13 +2082,7 @@
       "#Somewhat disconnected": "Inkább nem kötődöm",
       "#Neither connected nor disconnected": "Sem kötődőnek, sem távolságtartónak nem érzem magam",
       "#Somewhat connected": "Inkább kötődöm",
-      "#Very connected": "Nagyon kötődöm",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív alapvető információkat gyűjt Önről, a háztartásáról és a lakókörnyezetéről. Válaszai segítenek megérteni, kik vesznek részt a kutatásban, és hogyan befolyásolhatják a különböző városi körülmények a mindennapi közlekedést. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "A szokásos gyaloglási tempójában mekkora távolságot tud megtenni, mielőtt 5 percnél hosszabb pihenőre lenne szüksége?",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "Ez a válasz segít összehasonlítani, hogyan befolyásolhatják a háztartás körülményei a mindennapi közlekedést és a szolgáltatások elérését. Az eredményeket összesítve, nem egyéni válaszként mutatjuk be.",
-      "#Less than 500 meters": "Kevesebb mint 500 méter",
-      "#From 500 meters to 1 km": "500 métertől 1 km-ig",
-      "#1 to 2 km": "1-2 km"
+      "#Very connected": "Nagyon kötődöm"
     },
     "ar": {
       "#Person with a speech bubble": "شخص مع فقاعة كلام",
@@ -2094,6 +2094,12 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Personal & Household": "معلومات شخصية وعن الأسرة",
       "#<p>A few background questions to help us understand who our participants are.</p>": "<p>بعض الأسئلة العامة لمساعدتنا على التعرف بشكل أفضل على المشاركين.</p>",
+      "#None": "لا شيء مما سبق",
+      "#Physical Capability": "القدرة البدنية",
+      "#<p>Questions about your physical capacity for active travel.</p>": "<p>أسئلة عن قدرتك البدنية على التنقل النشط.</p>",
+      "#Living context": "بيئة السكن",
+      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>أسئلة عن مكان سكنك وكيفية تنقلك في روما.</p>",
+      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يجمع هذا الاستبيان من SmartUrbanity معلومات أساسية عنك وعن أسرتك والبيئة التي تعيش فيها. تساعدنا إجاباتك على فهم من يشارك في الدراسة وكيف يمكن للظروف الحضرية المختلفة أن تؤثر في التنقل اليومي. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "ما فئتك العمرية؟ (المشاركة متاحة فقط للبالغين من عمر 18 سنة فأكثر)",
       "#18-24": "18-24",
       "#25-34": "25-34",
@@ -2113,6 +2119,7 @@
       "#No": "لا",
       "#How many adults, including yourself, live together in your household?": "كم عدد البالغين الذين يعيشون في أسرتك، بما في ذلك أنت؟",
       "#1 (only myself)": "1 (أنا فقط)",
+      "#1": "1",
       "#2": "2",
       "#3": "3",
       "#4": "4",
@@ -2130,6 +2137,7 @@
       "#We can cover basic needs comfortably and have little money left over": "يمكننا تغطية الاحتياجات الأساسية بسهولة، لكن لا يتبقى لدينا إلا القليل من المال",
       "#We can afford most things we want with occasional extra expenses": "يمكننا تحمل تكلفة معظم الأشياء التي نريدها وبعض المصروفات الإضافية أحيانًا",
       "#We are financially very comfortable and can easily afford extra expenses": "وضعنا المالي مريح جدًا ويمكننا تحمل المصروفات الإضافية بسهولة",
+      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "تساعدنا هذه الإجابة على مقارنة كيف يمكن لظروف الأسرة أن تؤثر في التنقل اليومي والوصول إلى الخدمات. نعرض النتائج بشكل مجمّع، وليس كإجابات فردية.",
       "#Which best describes your employment status?": "أي وصف يعبر بشكل أفضل عن وضعك المهني؟",
       "#Employed full-time": "أعمل بدوام كامل",
       "#Employed part-time": "أعمل بدوام جزئي",
@@ -2153,10 +2161,11 @@
       "#Yes, I have a permanent mobility condition/limitation": "نعم، لدي قيد دائم على الحركة",
       "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "هل لديك حيوان أليف قد يجعلك تقوم بمزيد من المشي، مثل الكلب؟",
       "#Do you hold a valid driving license? (Car, motorcycle or both)": "هل لديك رخصة قيادة سارية؟ (للسيارة أو الدراجة النارية أو كليهما)",
-      "#None": "لا شيء مما سبق",
-      "#Physical Capability": "القدرة البدنية",
-      "#<p>Questions about your physical capacity for active travel.</p>": "<p>أسئلة عن قدرتك البدنية على التنقل النشط.</p>",
+      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "بوتيرة مشيك المعتادة، ما المسافة التي يمكنك قطعها قبل أن تحتاج إلى استراحة تزيد عن 5 دقائق؟",
       "#I rarely or never walk": "نادراً ما أمشي أو لا أمشي إطلاقًا",
+      "#Less than 500 meters": "أقل من 500 متر",
+      "#From 500 meters to 1 km": "من 500 متر إلى 1 كم",
+      "#1 to 2 km": "من 1 إلى 2 كم",
       "#More than 2 km": "أكثر من 2 كم",
       "#How physically active are you in a typical week? Consider walking for transport, cycling, or dedicated exercise. If you have a condition affecting your mobility, select the level that best applies to you.": "ما مدى نشاطك البدني في أسبوع عادي؟ فكر في المشي للتنقل، وركوب الدراجة، أو التمارين الرياضية. إذا كانت لديك حالة تؤثر في حركتك، اختر المستوى الذي يناسب حالتك أكثر.",
       "#Inactive (0 days)": "غير نشط (0 يوم)",
@@ -2176,15 +2185,12 @@
       "#165-179 cm": "165-179 سم",
       "#180-194 cm": "180-194 سم",
       "#195 cm or more": "195 سم أو أكثر",
-      "#Living context": "بيئة السكن",
-      "#<p>Questions about where you live and how you move around Rome.</p>": "<p>أسئلة عن مكان سكنك وكيفية تنقلك في روما.</p>",
       "#Which of the following best describes your relationship to Municipio XII?": "أي من العبارات التالية تصف علاقتك بـ Municipio XII بشكل أفضل؟",
       "#I live here (Resident)": "أعيش هنا",
       "#I travel here regularly for work or study (Commuter)": "آتي إلى هنا بانتظام للعمل أو الدراسة",
       "#I’m visiting for leisure (Tourist)": "أزور المنطقة للترفيه",
       "#I’m here temporarily for another reason (Visitor)": "أقيم هنا مؤقتًا لسبب آخر",
       "#In which Municipio of Rome do you currently live?": "في أي Municipio من روما تعيش حاليًا؟",
-      "#1": "1",
       "#5": "5",
       "#6": "6",
       "#7": "7",
@@ -2234,13 +2240,7 @@
       "#Somewhat disconnected": "أشعر بارتباط ضعيف",
       "#Neither connected nor disconnected": "لا أشعر بالارتباط ولا بالانفصال",
       "#Somewhat connected": "أشعر بقدر من الارتباط",
-      "#Very connected": "أشعر بارتباط قوي",
-      "#<p>This SmartUrbanity questionnaire collects basic personal, household and living-context information. Your answers help describe who participates in the study and how different urban conditions may affect daily mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يجمع هذا الاستبيان من SmartUrbanity معلومات أساسية عنك وعن أسرتك والبيئة التي تعيش فيها. تساعدنا إجاباتك على فهم من يشارك في الدراسة وكيف يمكن للظروف الحضرية المختلفة أن تؤثر في التنقل اليومي. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
-      "#At your usual walking pace, how far can you walk before needing a break longer than 5 minutes?": "بوتيرة مشيك المعتادة، ما المسافة التي يمكنك قطعها قبل أن تحتاج إلى استراحة تزيد عن 5 دقائق؟",
-      "#We ask this to compare how household circumstances may affect everyday mobility and access to services. Results are reported as grouped totals, not individual answers.": "تساعدنا هذه الإجابة على مقارنة كيف يمكن لظروف الأسرة أن تؤثر في التنقل اليومي والوصول إلى الخدمات. نعرض النتائج بشكل مجمّع، وليس كإجابات فردية.",
-      "#Less than 500 meters": "أقل من 500 متر",
-      "#From 500 meters to 1 km": "من 500 متر إلى 1 كم",
-      "#1 to 2 km": "من 1 إلى 2 كم"
+      "#Very connected": "أشعر بارتباط قوي"
     }
   },
   "id": "smarturbanity_about_you",

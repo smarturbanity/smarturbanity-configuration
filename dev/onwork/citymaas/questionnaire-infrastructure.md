@@ -1,13 +1,11 @@
 # Questionnaire infrastructure and schema
 
-Source: local main `f5c9e03`, combining technical work from `citymaas/survey-question-review` (`a12bebd`), `citymaas/access-quarter-questionnaires` (`f743d75`) and `lory/hub-report-campaigns` (`ff02358`). The latter two contain no additional semantic changes beyond the survey review candidate (patch-equivalence checked).
+Target: main. The technical branch citymaas/questionnaire-infrastructure owns runtime configuration, schema and campaign changes while preserving the21 main questionnaire contents. Its editorial child citymaas/questionnaire-content holds proposed wording/answers/composition and22 complete forms. Required flags were preserved; their review-mode defaults require a separate research decision.
 
-The baseline contains 21 questionnaires and 265 question definitions. Prompts, answer options, translations, order, conditional branches and explicit required flags match main; legacy answer-key aliases were removed at the user request for a fresh collection. The question bank, generated feed, manifests, consent destination and campaign scheduling are technical changes. Proposed question content and the new service form belong to the child branch `citymaas/questionnaire-content`.
+Reusable definitions are canonical in PlanEasy:245 on lory/question-pool-infrastructure and lory/question-pool-content. SmartUrbanity retains20 baseline-specific or26 proposed definitions plus its flows. Runtime reads autonomous forms/*.json; it does not require the pool. Executable tools and audit belong to CityMaaS. Portable feed and reference snapshots are generated/review artifacts.
 
-Full and simple privacy links inherit from the pilot instead of obsolete manifest overrides. CityMaaS must resolve both repository-relative links against the bundled configuration checkout. Existing legal draft status is preserved.
+Lory explicitly requested fresh collections, so legacy_answer_keys metadata was removed. Pilot configuration supplies distinct full/simple notice links and consent version; obsolete manifest overrides are removed.
 
-Verification: bank build check; deep comparison of every baseline form ignoring only legacy_answer_keys; provenance SHA256; campaign and relative manifest references; independent read-only review. Migration of executable bank tools into CityMaaS is in progress. No base integration or remote deletion is authorized. Lory explicitly authorized deletion of the three named original LOCAL branches only after verification; original remote branches stay available.
+Verified: deep preservation of main form content before metadata removal, bank compilation of21 baseline and22 proposed forms with external245 definitions, exact copy migration/provenance and independent reference review. The245 removal inventory was explicitly authorized after copy verification. Three named original local branches were deleted only after verifying all271 definitions/22 flows preserved and each original tip retained on origin. Remote originals unchanged.
 
-Human review remains pending. No claim of publication or production deployment.
-
-Final architecture:245 reusable canonical definitions in PlanEasy, SmartUrbanity-specific definitions and flows here, complete standalone runtime JSON, tools in CityMaaS. Three named original local branches removed after source/pool/form equivalence checks; remote originals untouched. Consent links and version inherit the pilot.
+Human review remains pending. No base integration or production deployment performed.

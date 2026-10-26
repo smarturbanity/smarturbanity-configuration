@@ -1,11 +1,7 @@
 # Separate questionnaire infrastructure from editorial changes
 
-Target: `main`.
+Target: main. Introduce technical configuration, schema, standalone runtime catalogs and campaign scheduling while preserving main question content. The editorial child citymaas/questionnaire-content contains the proposed wording and composition.
 
-Introduce the question bank and flow schema while keeping the active questionnaire content from main. Preserve runtime manifests and campaign scheduling; omit legacy aliases for the fresh collection. Inherit distinct full-notice and plain-language links from the pilot.
+Canonical reusable questions live in PlanEasy; project-specific definitions and flows remain in SmartUrbanity. CityMaaS owns editor, audit, build and exchange tools. Runtime applications load complete forms/*.json. Fresh collections omit legacy_answer_keys. The pilot supplies full/legal and simple/research notice links independently.
 
-The separate `citymaas/questionnaire-content` branch carries proposed wording, answer changes and new questionnaire composition. Integrate infrastructure first, then review the editorial difference separately.
-
-Validation: all 21 main questionnaires retain prompts, options, translations, order, branching and required flags; generated bank/forms checks and independent reference review pass. Runtime tools and privacy resolution are coordinated with the CityMaaS editor candidate. Human review and publication remain pending.
-
-Final architecture:245 reusable canonical definitions in PlanEasy, SmartUrbanity-specific definitions and flows here, complete standalone runtime JSON, tools in CityMaaS. Three named original local branches removed after source/pool/form equivalence checks; remote originals untouched. Consent links and version inherit the pilot.
+Validation:21 baseline and22 editorial forms compile from local definitions plus245 shared questions; copy/provenance, content preservation and reference checks pass. Human content review and publication remain pending.
