@@ -1,0 +1,165 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/locationReports/missing_path_report.json",
+  "form": {
+    "questionnaire": {
+      "name": "Missing Path Report",
+      "questionnaire_id": "smarturbanity_missing_path_report",
+      "questionnaire_version": "1.1.0",
+      "project": "SmartUrbanity",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
+      "image_alt": "#Street with a missing section and a plus sign",
+      "estimated_minutes": 1,
+      "options": {
+        "review_mode": true,
+        "save_user_id": true,
+        "ask_consent": true,
+        "ask_adult": true
+      },
+      "sections": [
+        {
+          "title": "Missing path",
+          "description": "Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.needed_path_type",
+              "question_version": 1,
+              "variant": "default"
+            },
+            {
+              "question_ref": "smarturbanity.needed_path_type_other",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "needed_path_type": [
+                    "other"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.missing_element_urgency",
+              "question_version": 1,
+              "variant": "smarturbanity_missing_path_report"
+            },
+            {
+              "question_ref": "smarturbanity.proposal_beneficiaries",
+              "question_version": 1,
+              "variant": "smarturbanity_missing_connection_report"
+            },
+            {
+              "question_ref": "smarturbanity.missing_element_destination",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.observation_details",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": false
+              }
+            }
+          ]
+        }
+      ],
+      "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+      "welcome_page": {
+        "title": "Missing Path Report",
+        "description": "<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      },
+      "final_page": {
+        "title": "Thank you!",
+        "description": "<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>"
+      },
+      "privacy_classification": "heightened_personal"
+    },
+    "languages": {
+      "en": {
+        "code": "en",
+        "#Missing Path Report": "Missing Path Report",
+        "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+        "#Thank you!": "Thank you!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>",
+        "#Missing path": "Missing path",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead."
+      },
+      "it": {
+        "code": "it",
+        "#Missing Path Report": "Segnalazione di percorso mancante",
+        "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Segnalaci un marciapiede, un passaggio o una pista ciclabile che manca qui. Richiede circa 1 minuto.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il punto che segni sulla mappa viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity. Poi, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+        "#Thank you!": "Grazie!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Grazie, le tue risposte sono state salvate e restano nella ricerca SmartUrbanity. Ora, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p>",
+        "#Missing path": "Percorso mancante",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Descrivici il marciapiede, il passaggio o la pista ciclabile che manca qui, lungo la strada o attraverso un'area. Se manca un attraversamento, usa invece la segnalazione di collegamento mancante."
+      },
+      "fr": {
+        "code": "fr",
+        "#Missing Path Report": "Signalement de cheminement manquant",
+        "#Street with a missing section and a plus sign": "Rue avec un tronçon manquant et un signe plus",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Signalez-nous un trottoir, un passage ou une piste cyclable qui manque ici. Cela prend environ 1 minute.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le lieu que vous indiquez sur la carte est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity. Ensuite, depuis l’application, vous pouvez préparer un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+        "#Thank you!": "Merci !",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Merci, vos réponses ont été enregistrées et restent dans la recherche SmartUrbanity. Vous pouvez maintenant préparer depuis l’application un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p>",
+        "#Missing path": "Cheminement manquant",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Décrivez le trottoir, le passage ou la piste cyclable qui manque ici, le long de la rue ou à travers une zone. S’il manque une traversée, utilisez plutôt le signalement de liaison manquante."
+      },
+      "de": {
+        "code": "de",
+        "#Missing Path Report": "Meldung eines fehlenden Weges",
+        "#Street with a missing section and a plus sign": "Straße mit einem fehlenden Abschnitt und einem Pluszeichen",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Melden Sie uns einen Gehweg, einen Durchgang oder einen Radweg, der hier fehlt. Es dauert etwa 1 Minute.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Ort, den Sie auf der Karte markieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung. Anschließend können Sie in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+        "#Thank you!": "Vielen Dank!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Vielen Dank, Ihre Antworten wurden gespeichert und bleiben in der SmartUrbanity-Forschung. Sie können jetzt in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p>",
+        "#Missing path": "Fehlender Weg",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Beschreiben Sie den Gehweg, den Durchgang oder den Radweg, der hier fehlt, entlang der Straße oder durch ein Gelände. Wenn ein Übergang fehlt, verwenden Sie stattdessen die Meldung einer fehlenden Verbindung."
+      },
+      "tr": {
+        "code": "tr",
+        "#Missing Path Report": "Eksik Yol Bildirimi",
+        "#Street with a missing section and a plus sign": "Eksik bir bölümü ve artı işareti olan sokak",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Burada eksik olan bir kaldırımı, geçidi veya bisiklet yolunu bize bildirin. Yaklaşık 1 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Haritada işaretlediğiniz yer, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır. Ardından uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+        "#Thank you!": "Teşekkürler!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Teşekkürler, yanıtlarınız kaydedildi ve SmartUrbanity araştırmasında kalır. Şimdi uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p>",
+        "#Missing path": "Eksik yol",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Burada, sokak boyunca veya bir alanın içinden geçen eksik kaldırımı, geçidi veya bisiklet yolunu açıklayın. Eksik olan bir geçitse bunun yerine eksik bağlantı bildirimini kullanın."
+      },
+      "fa": {
+        "code": "fa",
+        "#Missing Path Report": "گزارش مسیر گمشده",
+        "#Street with a missing section and a plus sign": "خیابانی با یک بخش ناقص و علامت به‌علاوه",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>پیاده‌رو، راه عبور یا مسیر دوچرخه‌ای را که اینجا وجود ندارد به ما گزارش دهید. حدود ۱ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. مکانی که روی نقشه مشخص می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند. سپس می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+        "#Thank you!": "سپاسگزاریم!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>سپاس، پاسخ‌های شما ذخیره شد و در پژوهش SmartUrbanity باقی می‌ماند. اکنون می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p>",
+        "#Missing path": "مسیر گمشده",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "پیاده‌رو، راه عبور یا مسیر دوچرخه‌ای را که اینجا، در طول خیابان یا از میان یک محوطه، وجود ندارد توضیح دهید. اگر گذرگاهی وجود ندارد، به‌جای آن از گزارش ارتباط گمشده استفاده کنید."
+      },
+      "hu": {
+        "code": "hu",
+        "#Missing Path Report": "Hiányzó útvonal bejelentése",
+        "#Street with a missing section and a plus sign": "Utca egy hiányzó szakasszal és egy pluszjellel",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Jelezze nekünk, ha itt hiányzik egy járda, átjáró vagy kerékpárút. Körülbelül 1 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A térképen megjelölt helyet a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak. Ezután az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>",
+        "#Thank you!": "Köszönjük!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Köszönjük, válaszait mentettük, és azok a SmartUrbanity kutatásban maradnak. Most az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p>",
+        "#Missing path": "Hiányzó útvonal",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "Írja le az itt hiányzó járdát, átjárót vagy kerékpárutat az utca mentén vagy egy területen át. Ha átkelő hiányzik, használja inkább a hiányzó kapcsolat bejelentését."
+      },
+      "ar": {
+        "code": "ar",
+        "#Missing Path Report": "بلاغ عن مسار مفقود",
+        "#Street with a missing section and a plus sign": "شارع به جزء مفقود وعلامة زائد",
+        "#<p>Tell us about a pavement, a passage or a cycle path that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>أخبرنا عن رصيف أو ممر أو مسار للدراجات مفقود هنا. يستغرق الأمر نحو دقيقة واحدة.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. تُدخل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. يُحفظ المكان الذي تحدده على الخريطة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity. بعد ذلك، يمكنك من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان الذي حددته، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
+        "#Thank you!": "شكرًا لك!",
+        "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>شكرًا لك، تم حفظ إجاباتك وهي تبقى ضمن بحث SmartUrbanity. يمكنك الآن من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان الذي حددته، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p>",
+        "#Missing path": "مسار مفقود",
+        "#Describe the pavement, the passage or the cycle path that is missing here, along the street or through an area. If a crossing is missing, use the missing connection report instead.": "صِف الرصيف أو الممر أو مسار الدراجات المفقود هنا، على طول الشارع أو عبر منطقة ما. إذا كان المعبر هو المفقود، فاستخدم بدلًا من ذلك بلاغ الرابط المفقود."
+      }
+    }
+  }
+}

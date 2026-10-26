@@ -1,0 +1,795 @@
+{
+  "flow_schema_version": 1,
+  "output": "forms/locationReports/street_connection_assessment.json",
+  "form": {
+    "questionnaire": {
+      "name": "Street Connection Assessment – User Friendly",
+      "questionnaire_id": "street_connection_assessment",
+      "questionnaire_version": "0.7.0",
+      "project": "SmartUrbanity",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
+      "image_alt": "#Crossroads with zebra crossings and a check mark",
+      "estimated_minutes": 2,
+      "options": {
+        "review_mode": true,
+        "save_user_id": true,
+        "ask_consent": true,
+        "ask_adult": true
+      },
+      "gdpr_link": "https://planeasy-webgis.github.io/planeasy-crowdsourcing-framework/docs/PRIVACY_GUIDELINES.html",
+      "sections": [
+        {
+          "title": "Your point of view",
+          "description": "Select walking, cycling, or both. Questions will adapt to your selection.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.assessment_perspective",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.journey_context",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.connection_use_frequency",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "title": "Quick assessment",
+          "description": "Answer these first. Then you can finish or add optional details.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.connection_form",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.crossing_kind",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "prefill_from": "element.crossing_kind",
+                "show_if": {
+                  "connection_form": "street_level"
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.crossing_users",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "prefill_from": "element.crossing_users",
+                "show_if": {
+                  "connection_form": "street_level"
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_use_difficulty",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.pedestrian_perceived_risk",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_use_difficulty",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_perceived_risk",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.personal_safety",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {},
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.traffic_control",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "crossing_kind": [
+                    "signal"
+                  ]
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.refuge_island",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "connection_form": "street_level"
+                },
+                "required": true
+              }
+            },
+            {
+              "question_ref": "smarturbanity.continue_audit",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "title": "Access and crossing",
+          "description": "Look at the place. Answer only what you can see.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.pedestrian_access",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "pedestrian"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bicycle_access",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.cyclist_crossing_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "assessment_perspective": [
+                    "cyclist"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.connection_elements",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": [
+                    "under_road",
+                    "over_road",
+                    "level_change",
+                    "other"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.elevator_working",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "elevator"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.escalator_working",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "escalator"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.signal_call",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "crossing_kind": [
+                    "signal"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.audible_signal_status",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "crossing_kind": [
+                    "signal"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.lanes_crossed",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "street_level"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.street_level_visibility",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "street_level"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.visibility_obstacles",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "street_level",
+                  "street_level_visibility": [
+                    "2_partly",
+                    "3_poor"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.spatial_visibility",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": [
+                    "under_road",
+                    "over_road",
+                    "level_change",
+                    "other"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Orientation and space",
+          "description": "Look at the place. Answer only what you can see.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.connection_clarity",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.connection_clarity_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_clarity": [
+                    "4_difficult",
+                    "5_very_difficult"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.waiting_or_stopping_space",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.users_with_difficulty",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Safety features and condition",
+          "description": "Look at the place. Answer only what you can see.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.safety_features",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.street_crossing_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "street_level"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.tunnel_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "under_road"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.bridge_cover",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_form": "over_road"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.stairs_features",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "stairs"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.stairs_problems",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "stairs"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.walking_stairs_extent",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "stairs"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.ramp_features",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "ramp"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.ramp_too_steep",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "connection_elements": [
+                    "ramp"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Your experience here",
+          "description": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.driver_yielding",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "crossing_kind": [
+                    "marked_no_signal",
+                    "unmarked"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.signal_wait_time",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "crossing_kind": [
+                    "signal"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.green_time_sufficient",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "crossing_kind": [
+                    "signal"
+                  ]
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.unsafe_use_observed",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.unsafe_use_type",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit",
+                  "unsafe_use_observed": [
+                    "3_sometimes",
+                    "4_often",
+                    "5_very_often"
+                  ]
+                },
+                "required": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Improve this place",
+          "description": "Tell us whether improving this place should be a priority.",
+          "backgroundColor": "#f0f0f0",
+          "questions": [
+            {
+              "question_ref": "smarturbanity.connection_improvement_importance",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.main_improvements_needed",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            },
+            {
+              "question_ref": "smarturbanity.additional_comments",
+              "question_version": 1,
+              "variant": "default",
+              "overrides": {
+                "show_if": {
+                  "continue_audit": "yes_audit"
+                },
+                "required": false
+              }
+            }
+          ]
+        }
+      ],
+      "privacy_classification": "heightened_personal"
+    },
+    "languages": {
+      "en": {
+        "#Crossroads with zebra crossings and a check mark": "Crossroads with zebra crossings and a check mark",
+        "#Your point of view": "Your point of view",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Select walking, cycling, or both. Questions will adapt to your selection.",
+        "#Quick assessment": "Quick assessment",
+        "#Answer these first. Then you can finish or add optional details.": "Answer these first. Then you can finish or add optional details.",
+        "#Access and crossing": "Access and crossing",
+        "#Look at the place. Answer only what you can see.": "Look at the place. Answer only what you can see.",
+        "#Orientation and space": "Orientation and space",
+        "#Safety features and condition": "Safety features and condition",
+        "#Your experience here": "Your experience here",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Answer based on your experience. Walking and cycling questions appear according to your selection.",
+        "#Improve this place": "Improve this place",
+        "#Tell us whether improving this place should be a priority.": "Tell us whether improving this place should be a priority.",
+        "#Street Connection Assessment – User Friendly": "Assess a crossing"
+      },
+      "it": {
+        "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
+        "#Your point of view": "Il tuo punto di vista",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Scegli se ti sposti a piedi, in bici o in entrambi i modi. Le domande si adattano alla tua scelta.",
+        "#Quick assessment": "Valutazione rapida",
+        "#Answer these first. Then you can finish or add optional details.": "Rispondi prima a queste. Poi puoi terminare o aggiungere dettagli facoltativi.",
+        "#Access and crossing": "Accesso e attraversamento",
+        "#Look at the place. Answer only what you can see.": "Osserva il luogo e rispondi solo in base a ciò che puoi vedere.",
+        "#Orientation and space": "Orientamento e spazio",
+        "#Safety features and condition": "Elementi di sicurezza e stato del luogo",
+        "#Your experience here": "La tua esperienza qui",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Rispondi in base alla tua esperienza. Le domande a piedi e in bicicletta compariranno in base alla tua scelta.",
+        "#Improve this place": "Migliorare questo luogo",
+        "#Tell us whether improving this place should be a priority.": "Aiutaci a capire se migliorare questo punto dovrebbe essere una priorità.",
+        "#Street Connection Assessment – User Friendly": "Valutazione di un attraversamento"
+      },
+      "fr": {
+        "#Crossroads with zebra crossings and a check mark": "Carrefour avec passages piétons et une coche",
+        "#Your point of view": "Votre point de vue",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Sélectionnez la marche, le vélo ou les deux. Les questions s’adapteront à votre sélection.",
+        "#Quick assessment": "Évaluation rapide",
+        "#Answer these first. Then you can finish or add optional details.": "Répondez d’abord à ces questions. Ensuite, vous pouvez terminer ou ajouter des détails facultatifs.",
+        "#Access and crossing": "Accès et traversée",
+        "#Look at the place. Answer only what you can see.": "Observez le lieu. Répondez uniquement à ce que vous pouvez voir.",
+        "#Orientation and space": "Orientation et espace",
+        "#Safety features and condition": "Éléments de sécurité et état du lieu",
+        "#Your experience here": "Votre expérience ici",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Répondez selon votre expérience. Les questions sur la marche et le vélo apparaissent selon votre sélection.",
+        "#Improve this place": "Améliorer ce lieu",
+        "#Tell us whether improving this place should be a priority.": "Indiquez-nous si l’amélioration de ce lieu devrait être prioritaire."
+      },
+      "de": {
+        "#Crossroads with zebra crossings and a check mark": "Kreuzung mit Zebrastreifen und einem Häkchen",
+        "#Your point of view": "Ihre Perspektive",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Wählen Sie zu Fuß, mit dem Fahrrad oder beides. Die Fragen passen sich Ihrer Auswahl an.",
+        "#Quick assessment": "Schnelle Bewertung",
+        "#Answer these first. Then you can finish or add optional details.": "Beantworten Sie zuerst diese Fragen. Danach können Sie abschließen oder optionale Details hinzufügen.",
+        "#Access and crossing": "Zugang und Querung",
+        "#Look at the place. Answer only what you can see.": "Sehen Sie sich den Ort an. Beantworten Sie nur, was Sie sehen können.",
+        "#Orientation and space": "Orientierung und Platz",
+        "#Safety features and condition": "Sicherheitsmerkmale und Zustand",
+        "#Your experience here": "Ihre Erfahrung hier",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Antworten Sie aus eigener Erfahrung. Fragen zum Gehen und Radfahren erscheinen entsprechend Ihrer Auswahl.",
+        "#Improve this place": "Diesen Ort verbessern",
+        "#Tell us whether improving this place should be a priority.": "Sagen Sie uns, ob die Verbesserung dieses Ortes Vorrang haben sollte."
+      },
+      "tr": {
+        "#Crossroads with zebra crossings and a check mark": "Yaya geçitleri ve onay işareti olan kavşak",
+        "#Your point of view": "Bakış açınız",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Yürümeyi, bisiklete binmeyi veya her ikisini seçin. Sorular seçiminize göre uyarlanacaktır.",
+        "#Quick assessment": "Hızlı değerlendirme",
+        "#Answer these first. Then you can finish or add optional details.": "Önce bunları yanıtlayın. Ardından bitirebilir veya isteğe bağlı ayrıntılar ekleyebilirsiniz.",
+        "#Access and crossing": "Erişim ve geçiş",
+        "#Look at the place. Answer only what you can see.": "Yere bakın. Yalnızca görebildiğiniz şeyleri yanıtlayın.",
+        "#Orientation and space": "Yön bulma ve alan",
+        "#Safety features and condition": "Güvenlik unsurları ve durum",
+        "#Your experience here": "Buradaki deneyiminiz",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Deneyiminize göre yanıtlayın. Yürüme ve bisiklet soruları seçiminize göre gösterilir.",
+        "#Improve this place": "Bu yeri iyileştirin",
+        "#Tell us whether improving this place should be a priority.": "Bu yerin iyileştirilmesinin öncelikli olup olmadığını belirtin."
+      },
+      "fa": {
+        "#Crossroads with zebra crossings and a check mark": "چهارراه با خط‌کشی عابر پیاده و علامت تیک",
+        "#Your point of view": "دیدگاه شما",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "پیاده‌روی، دوچرخه‌سواری یا هر دو را انتخاب کنید. پرسش‌ها با انتخاب شما سازگار می‌شوند.",
+        "#Quick assessment": "ارزیابی سریع",
+        "#Answer these first. Then you can finish or add optional details.": "ابتدا به این پرسش‌ها پاسخ دهید. سپس می‌توانید پایان دهید یا جزئیات اختیاری اضافه کنید.",
+        "#Access and crossing": "دسترسی و عبور",
+        "#Look at the place. Answer only what you can see.": "به مکان نگاه کنید. فقط درباره چیزهایی پاسخ دهید که می‌بینید.",
+        "#Orientation and space": "جهت‌یابی و فضا",
+        "#Safety features and condition": "امکانات ایمنی و وضعیت مکان",
+        "#Your experience here": "تجربه شما در اینجا",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "بر پایه تجربه خود پاسخ دهید. پرسش‌های پیاده‌روی و دوچرخه‌سواری مطابق انتخاب شما نمایش داده می‌شوند.",
+        "#Improve this place": "بهبود این مکان",
+        "#Tell us whether improving this place should be a priority.": "به ما بگویید آیا بهبود این مکان باید در اولویت باشد."
+      },
+      "hu": {
+        "#Crossroads with zebra crossings and a check mark": "Kereszteződés zebrákkal és egy pipával",
+        "#Your point of view": "Az Ön nézőpontja",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "Válassza a gyaloglást, a kerékpározást vagy mindkettőt. A kérdések a választásához igazodnak.",
+        "#Quick assessment": "Gyors értékelés",
+        "#Answer these first. Then you can finish or add optional details.": "Először ezekre válaszoljon. Utána befejezheti, vagy hozzáadhat választható részleteket.",
+        "#Access and crossing": "Megközelítés és átkelés",
+        "#Look at the place. Answer only what you can see.": "Nézze meg a helyet. Csak arra válaszoljon, amit lát.",
+        "#Orientation and space": "Tájékozódás és hely",
+        "#Safety features and condition": "Biztonsági elemek és állapot",
+        "#Your experience here": "Az Ön tapasztalata ezen a helyen",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "Saját tapasztalata alapján válaszoljon. A gyalogos és kerékpáros kérdések a választásának megfelelően jelennek meg.",
+        "#Improve this place": "A hely javítása",
+        "#Tell us whether improving this place should be a priority.": "Mondja el, hogy e hely javítása elsőbbséget élvezzen-e."
+      },
+      "ar": {
+        "#Crossroads with zebra crossings and a check mark": "تقاطع مع ممرات مشاة وعلامة صح",
+        "#Your point of view": "وجهة نظرك",
+        "#Select walking, cycling, or both. Questions will adapt to your selection.": "اختر المشي أو ركوب الدراجة أو كليهما. ستتكيّف الأسئلة مع اختيارك.",
+        "#Quick assessment": "تقييم سريع",
+        "#Answer these first. Then you can finish or add optional details.": "أجب عن هذه الأسئلة أولًا. بعد ذلك يمكنك الإنهاء أو إضافة تفاصيل اختيارية.",
+        "#Access and crossing": "الوصول والعبور",
+        "#Look at the place. Answer only what you can see.": "انظر إلى المكان. أجب فقط عما يمكنك رؤيته.",
+        "#Orientation and space": "الاتجاهات والمساحة",
+        "#Safety features and condition": "عناصر السلامة وحالة المكان",
+        "#Your experience here": "تجربتك هنا",
+        "#Answer based on your experience. Walking and cycling questions appear according to your selection.": "أجب بناءً على تجربتك. تظهر أسئلة المشي وركوب الدراجة وفقًا لاختيارك.",
+        "#Improve this place": "تحسين هذا المكان",
+        "#Tell us whether improving this place should be a priority.": "أخبرنا ما إذا كان تحسين هذا المكان ينبغي أن يكون أولوية."
+      }
+    },
+    "id": "Street Connection",
+    "db_set": "questionnaires",
+    "response_format": "planeasy.response",
+    "response_schema_version": "2.0",
+    "response_kind": "spatial_contribution",
+    "default_language": "en"
+  }
+}

@@ -1,4 +1,6 @@
 /* SmartUrbanity - FULL INIT LOADER */
+"use strict";
+
 (async function () {
   const currentScript = document.currentScript;
   const scriptURL = currentScript && currentScript.src
@@ -34,6 +36,23 @@
     document.head.appendChild(link);
   }
 
+  // Said when the page has no text in the chosen language and shows the English one instead.
+  const FALLBACK_NOTES = {
+    en: "This page is not available in your language yet: it is shown in English.",
+    it: "Questa pagina non è ancora disponibile nella tua lingua: è mostrata in inglese.",
+    fr: "Cette page n’est pas encore disponible dans votre langue : elle est affichée en anglais.",
+    de: "Diese Seite ist noch nicht in Ihrer Sprache verfügbar: Sie wird auf Englisch angezeigt.",
+    tr: "Bu sayfa henüz sizin dilinizde mevcut değil: İngilizce gösteriliyor.",
+    fa: "این صفحه هنوز به زبان شما موجود نیست: به انگلیسی نمایش داده می‌شود.",
+    hu: "Ez az oldal még nem érhető el az Ön nyelvén: angolul jelenik meg.",
+    ar: "هذه الصفحة غير متوفرة بلغتك بعد: تُعرض باللغة الإنجليزية.",
+    pl: "Ta strona nie jest jeszcze dostępna w twoim języku: jest wyświetlana po angielsku.",
+    da: "Denne side findes endnu ikke på dit sprog: den vises på engelsk.",
+    lb: "Dës Säit gëtt et nach net an Ärer Sprooch: si gëtt op Englesch gewisen.",
+    nl: "Deze pagina is nog niet beschikbaar in je taal: ze wordt in het Engels getoond."
+  };
+  const RIGHT_TO_LEFT = new Set(["ar", "fa"]);
+
   window.initLangToggle = function initLangToggle() {
     const select = document.getElementById("language-select");
     const main = document.querySelector("main");
@@ -42,7 +61,10 @@
       ...Array.from(document.querySelectorAll("[data-lang]"), (el) => el.getAttribute("data-lang").split(/\s+/)).flat(),
       "en", "it", "fr", "de", "tr", "fa", "hu", "ar", "pl", "da", "lb", "nl"
     ].filter(Boolean)));
-    const initial = supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
+    // A link may ask for the language of the app that opened it (?lang=fa); otherwise the browser's.
+    const requested = (new URLSearchParams(window.location.search).get("lang") || "").toLowerCase();
+    const initial = supported.find((value) => value.toLowerCase() === requested)
+      || supported.find((value) => lang.startsWith(value.toLowerCase())) || "en";
     window.supportedLanguages = supported;
     window.currentLang = initial;
 
@@ -58,6 +80,21 @@
       });
 
       if (main) main.setAttribute("lang", l);
+      let note = document.getElementById("language-fallback-note");
+      if (main && displayLang !== l) {
+        if (!note) {
+          note = document.createElement("p");
+          note.id = "language-fallback-note";
+          note.setAttribute("role", "note");
+          main.prepend(note);
+        }
+        note.textContent = FALLBACK_NOTES[l] || FALLBACK_NOTES.en;
+        note.setAttribute("lang", FALLBACK_NOTES[l] ? l : "en");
+        note.dir = RIGHT_TO_LEFT.has(l) ? "rtl" : "ltr";
+        note.hidden = false;
+      } else if (note) {
+        note.hidden = true;
+      }
       window.currentLang = l;
 
       if (select) {
@@ -80,6 +117,8 @@
         select.appendChild(option);
       });
       select.addEventListener("change", () => showLang(select.value));
+      // The options exist only now: show the language in use, not the first option.
+      select.value = window.currentLang;
     }
   };
 
@@ -97,8 +136,9 @@
     const header = tpl.querySelector("header");
     const footer = tpl.querySelector("footer");
 
-    if (header) document.getElementById("smarturbanity-header").innerHTML = header.outerHTML;
-    if (footer) document.getElementById("smarturbanity-footer").innerHTML = footer.outerHTML;
+    // The template's own header and footer nodes are copied, never reparsed as an HTML string.
+    if (header) document.getElementById("smarturbanity-header").replaceChildren(document.importNode(header, true));
+    if (footer) document.getElementById("smarturbanity-footer").replaceChildren(document.importNode(footer, true));
 
     window.initLangToggle();
   }

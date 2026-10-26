@@ -15,6 +15,21 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
+## Question bank and questionnaire flows
+
+`questionBank/questions/<id>.json` gives each questionnaire question
+one catalog file named exactly by its ID (`<lowercase project>.<answer_key>`). It includes translations,
+source questionnaire provenance and any explicit wording variants. The files in
+`questionBank/flows/` compose questions into ordered, conditional questionnaires.
+For the current applications, `node questionBank/build.mjs` generates the legacy
+`forms/` JSON; `node questionBank/build.mjs --check` verifies that it matches.
+The primary exchange format is one autonomous JSON file **per questionnaire**,
+containing its question definitions and single flow; `questionBank/collection.mjs`
+packs or imports it. The
+legacy per-questionnaire JSON remains a compiled output for current applications.
+See [questionBank/README.md](questionBank/README.md) for the format and editing
+workflow.
+
 ## Questionnaire privacy labels
 
 Every form declares `questionnaire.privacy_classification`. A question or an
@@ -31,6 +46,11 @@ metadata for review and downstream handling; they do not themselves collect
 consent, restrict access or redact exports. The legal treatment and application
 controls need separate review.
 See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
+
+`legacy_answer_keys` lists previously stored answer keys when a question's
+`answer_key` changes. Keep these aliases for historical analysis; do not rewrite
+saved responses. The form's `questionnaire_version` still identifies which key
+set was used when a response was collected.
 
 ## Repository structure
 
@@ -219,6 +239,14 @@ Every form is self-standing: it asks its own context questions (point of view, h
 The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), for a street crossing how it is controlled (`crossing_kind`) and who it is for (`crossing_users`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition. `crossing_kind` and `crossing_users` declare `prefill_from`, so with a known element attribute they cost one confirmation each.
 
 ### Prefill from element attributes
+
+From connection assessment 0.5.0, the minimum also asks the existing detailed
+traffic-control distinction and whether a refuge island is present, for
+street-level connections only. Both are required with an explicit unknown answer.
+The minimum's total varies with the selected modes and connection type; clients
+must derive it from applicable questions rather than promise eight questions.
+Signal-call, audible-signal, waiting-time and green-time details remain behind
+`continue_audit=yes_audit`. See the versioned change record before comparing rounds.
 
 A question of a form that assesses a mapped element may declare `"prefill_from": "element.<attribute>"`. The value comes from that attribute of the assessed element (the response `entity`) as exposed by the spatial database, today the mock and later the server. The database merges several sources, among them OpenStreetMap; a form never names a source tag such as `osm.crossing`, because mapping a source to an attribute belongs to the database import.
 

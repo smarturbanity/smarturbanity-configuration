@@ -1,33 +1,42 @@
 {
   "version": "0.1.0",
   "questionnaire_catalog": {
-    "source": "github",
-    "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26",
-    "quest_path": "forms"
+    "source": "question_bank",
+    "questionBank": "../questionBank",
+    "categories": [
+      "surveys",
+      "tripSurveys",
+      "locationReports"
+    ]
   },
   "questionnaires": {
-    "consent": {
-      "privacy_link": "https://smarturbanity.github.io/smarturbanity-configuration/privacy-smarturbanity.html",
-      "transparency_link": "https://smarturbanity.github.io/smarturbanity-configuration/privacy-smarturbanity.html"
-    }
+    "consent": {}
   },
   "configuration_sources": {
     "defaults": {
-      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/base.json",
-      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/base.json"
+      "url": "../base.json"
     },
     "pilot": {
-      "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}/{pilot}.json",
-      "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}/{pilot}.json"
+      "url": "../pilots/{pilot}/{pilot}.json"
     },
     "merge": "deep"
   },
   "content": {
     "datasets": [
       {
-        "url": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/3e755b876b13e764349210119d1488eb33f9fe26/pilots/{pilot}",
-        "fallbackPath": "Projects/SmartUrbanity/Configuration/source/smarturbanity-configuration/pilots/{pilot}"
+        "url": "../pilots/{pilot}"
       }
     ]
+  },
+  "questionnaire_review": {
+    "collection": {
+      "url": "../questionBank/feed.json"
+    },
+    "reference": {
+      "url": "../questionBank/review/reference.json"
+    },
+    "provenance": {
+      "url": "../questionBank/review/source.json"
+    }
   }
 }
