@@ -33,7 +33,6 @@
             "text": "Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)",
             "answer_key": "walk_days",
             "question_type": "single_option",
-            "required": true,
             "options": [
               {
                 "text": "Yes",
@@ -43,15 +42,13 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "required": true
           },
           {
             "text": "Which of the following physical barriers do you face on your walking route? (Select all that apply)",
             "answer_key": "walk_physical_barriers",
             "question_type": "multiple_options",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Steps or steep curbs without ramps",
@@ -86,15 +83,15 @@
                 "value": "i_don_t_face_any_physical_barrier"
               }
             ],
-            "add_other": true
+            "add_other": true,
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) affect your journey?",
             "answer_key": "walk_sidewalk_condition_effect",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "It does not affect my trip at all",
@@ -116,15 +113,15 @@
                 "text": "I completely avoid streets with bad pavement, even if the trip takes longer",
                 "value": "i_completely_avoid_streets_with_bad_pave"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How do temporary obstacles (e.g., roadworks, bins, or parked scooters) typically affect your walking route?",
             "answer_key": "avoid_obstacles",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "I rarely encounter obstacles that affect my movement",
@@ -146,15 +143,15 @@
                 "text": "Obstacles regularly make the route difficult, stressful, or inaccessible",
                 "value": "obstacles_regularly_make_the_route_diffi"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "To what extent does the steepness of your route affect your walking?",
             "answer_key": "walk_slope_effect",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Not at all",
@@ -176,15 +173,15 @@
                 "text": "Extremely",
                 "value": "extremely"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How do the quality and availability of pedestrian crossings (e.g., zebra crossings, pedestrian signals, or crossing islands) affect your journey?",
             "answer_key": "avoid_dangerous_crossing",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Crossings are well placed and I feel safe using them",
@@ -206,15 +203,15 @@
                 "text": "I avoid certain roads entirely because I cannot cross them safely on foot",
                 "value": "i_avoid_certain_roads_entirely_because_i"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does the availability of benches and rest areas affect your ability to complete your journey?",
             "answer_key": "benches_importance",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Seating has no influence on my travel choices or physical stamina",
@@ -237,15 +234,15 @@
                 "value": "i_rely_on_rest_areas_to_make_my_journey"
               }
             ],
-            "privacy_classification": "special_category_health"
+            "privacy_classification": "special_category_health",
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does the quality of street lighting affect your choice of route or your decision to walk after dark?",
             "answer_key": "walk_lighting_effect",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Lighting levels have no influence on my travel choices or comfort",
@@ -267,15 +264,15 @@
                 "text": "I do not walk after dark because of poor lighting",
                 "value": "i_do_not_walk_after_dark_because_of_poor"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does the presence (or lack) of trees, parks, or green spaces affect your route choice?",
             "answer_key": "prefer_pleasant",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "They do not influence my route choice at all",
@@ -297,15 +294,15 @@
                 "text": "I actively choose routes because they are greener or more pleasant",
                 "value": "i_actively_choose_routes_because_they_ar"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does shade and heat (e.g., from sun exposure or hot pavement) affect your walking journeys during warmer months?",
             "answer_key": "walk_heat_shade_effect",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Heat and sun have no effect on my walking journeys",
@@ -327,15 +324,15 @@
                 "text": "I stop walking outdoors entirely during the hottest periods",
                 "value": "i_stop_walking_outdoors_entirely_during"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does the quality of signs and wayfinding on your route affect your confidence as a pedestrian?",
             "answer_key": "wayfinding",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "I never look at signs; their quality has no effect on my navigation",
@@ -357,15 +354,15 @@
                 "text": "Signs are so poor that I cannot navigate without using a GPS or phone app",
                 "value": "signs_are_so_poor_that_i_cannot_navigate"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How do traffic levels and congestion on your route typically affect your walking experience?",
             "answer_key": "avoid_fast_traffic",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "The route is generally quiet or traffic has no influence on my walking experience",
@@ -387,15 +384,15 @@
                 "text": "I choose much longer routes or change my travel times specifically to avoid heavy traffic",
                 "value": "i_choose_much_longer_routes_or_change_my"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "Which categories of road users most negatively affect your sense of safety while walking?",
             "answer_key": "risky_road_users",
             "question_type": "multiple_options",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "max_answers": 3,
             "options": [
               {
@@ -435,15 +432,15 @@
                 "value": "none_no_category_of_road_user_negatively"
               }
             ],
-            "add_other": true
+            "add_other": true,
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How do cyclists and e-scooter riders affect your sense of safety while walking?",
             "answer_key": "riding_on_pavement",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "They do not affect my sense of safety while walking",
@@ -465,15 +462,15 @@
                 "text": "Encounters with cyclists or e-scooters frequently make walking stressful or feel dangerous",
                 "value": "encounters_with_cyclists_or_e_scooters_f"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "How does walking alongside or crossing high-speed roads (e.g., main roads or highways) affect your sense of safety?",
             "answer_key": "fast_vehicles",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "It does not affect my sense of safety",
@@ -495,15 +492,15 @@
                 "text": "I avoid trips that require me to walk alongside or cross high-speed roads",
                 "value": "i_avoid_trips_that_require_me_to_walk_al"
               }
-            ]
+            ],
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "Does walking as part of your daily travel contribute positively to your physical or mental health?",
             "answer_key": "walk_health_benefit",
             "question_type": "single_option",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "options": [
               {
                 "text": "Not at all, I walk out of necessity, not choice",
@@ -527,15 +524,15 @@
               }
             ],
             "privacy_classification": "heightened_personal",
-            "special_category": "health"
+            "special_category": "health",
+            "show_if": {
+              "walk_days": "yes"
+            }
           },
           {
             "text": "What improvements would most encourage you to walk more often or for longer distances?",
             "answer_key": "walk_improvements",
             "question_type": "multiple_options",
-            "show_if": {
-              "walk_days": "yes"
-            },
             "max_answers": 3,
             "options": [
               {
@@ -575,7 +572,10 @@
                 "value": "nothing_i_am_satisfied_with_current_cond"
               }
             ],
-            "add_other": true
+            "add_other": true,
+            "show_if": {
+              "walk_days": "yes"
+            }
           }
         ]
       }
@@ -593,6 +593,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Walking Habits": "Walking Habits",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Questions about how and when you walk as part of your daily travel.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)",
       "#Yes": "Yes",
       "#No": "No",
@@ -703,8 +704,7 @@
       "#Cleaner and better-maintained public spaces": "Cleaner and better-maintained public spaces",
       "#Better separation from cyclists and e-scooters": "Better separation from cyclists and e-scooters",
       "#Clearer wayfinding signs and maps": "Clearer wayfinding signs and maps",
-      "#Nothing — I am satisfied with current conditions": "Nothing — I am satisfied with current conditions",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Nothing — I am satisfied with current conditions"
     },
     "it": {
       "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
@@ -716,6 +716,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Walking Habits": "Abitudini negli spostamenti a piedi",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Domande su come e quando ti sposti a piedi nell'ambito dei tuoi spostamenti quotidiani.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza come pedone. Le tue risposte ci aiutano a comprendere le condizioni e gli ostacoli che le persone incontrano quando si spostano a piedi in città e a individuare opportunità per rendere gli spostamenti a piedi più sicuri, confortevoli e piacevoli. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Ti sposti a piedi come modalità principale di viaggio almeno una volta alla settimana? (Ciò significa camminare come modalità principale per completare uno spostamento, non solo per brevi trasferimenti tra altri mezzi.)",
       "#Yes": "Sì",
       "#No": "No",
@@ -826,8 +827,7 @@
       "#Cleaner and better-maintained public spaces": "Spazi pubblici più puliti e meglio mantenuti",
       "#Better separation from cyclists and e-scooters": "Migliore separazione da ciclisti e monopattini elettrici",
       "#Clearer wayfinding signs and maps": "Segnaletica e mappe per l'orientamento più chiare",
-      "#Nothing — I am satisfied with current conditions": "Niente: sono soddisfatto/a delle condizioni attuali",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza come pedone. Le tue risposte ci aiutano a comprendere le condizioni e gli ostacoli che le persone incontrano quando si spostano a piedi in città e a individuare opportunità per rendere gli spostamenti a piedi più sicuri, confortevoli e piacevoli. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Niente: sono soddisfatto/a delle condizioni attuali"
     },
     "fr": {
       "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
@@ -839,6 +839,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Walking Habits": "Habitudes de marche",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Questions sur la façon dont vous marchez dans vos déplacements quotidiens.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience en tant que piéton. Vos réponses nous aident à comprendre les conditions et les obstacles rencontrés lorsque l’on marche en ville et à trouver des moyens de rendre la marche plus sûre, plus confortable et plus agréable. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Marchez-vous comme principal mode de déplacement au moins une fois par semaine ? (Cela signifie que la marche est le principal moyen d’effectuer le trajet, et pas seulement un court trajet pour rejoindre un autre mode de transport.)",
       "#Yes": "Oui",
       "#No": "Non",
@@ -949,8 +950,7 @@
       "#Cleaner and better-maintained public spaces": "Des espaces publics plus propres et mieux entretenus",
       "#Better separation from cyclists and e-scooters": "Une meilleure séparation avec les cyclistes et les trottinettes électriques",
       "#Clearer wayfinding signs and maps": "Des panneaux et des cartes d’orientation plus clairs",
-      "#Nothing — I am satisfied with current conditions": "Rien — les conditions actuelles me conviennent",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience en tant que piéton. Vos réponses nous aident à comprendre les conditions et les obstacles rencontrés lorsque l’on marche en ville et à trouver des moyens de rendre la marche plus sûre, plus confortable et plus agréable. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Rien — les conditions actuelles me conviennent"
     },
     "de": {
       "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
@@ -962,6 +962,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Walking Habits": "Gewohnheiten beim Gehen",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Fragen dazu, wie und wann Sie im Alltag zu Fuß unterwegs sind.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung als Fußgängerin oder Fußgänger. Ihre Antworten helfen uns zu verstehen, welche Bedingungen und Hindernisse Menschen beim Gehen in der Stadt erleben und wie Gehen sicherer, angenehmer und komfortabler werden kann. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Gehen Sie mindestens einmal pro Woche zu Fuß als Hauptverkehrsmittel? (Gemeint ist, dass Sie den größten Teil des Weges zu Fuß zurücklegen und nicht nur kurze Wege zum Umsteigen.)",
       "#Yes": "Ja",
       "#No": "Nein",
@@ -1072,8 +1073,7 @@
       "#Cleaner and better-maintained public spaces": "Sauberere und besser gepflegte öffentliche Räume",
       "#Better separation from cyclists and e-scooters": "Bessere Trennung von Radfahrern und E-Scootern",
       "#Clearer wayfinding signs and maps": "Klarere Wegweiser und Karten",
-      "#Nothing — I am satisfied with current conditions": "Nichts — ich bin mit den aktuellen Bedingungen zufrieden",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung als Fußgängerin oder Fußgänger. Ihre Antworten helfen uns zu verstehen, welche Bedingungen und Hindernisse Menschen beim Gehen in der Stadt erleben und wie Gehen sicherer, angenehmer und komfortabler werden kann. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Nichts — ich bin mit den aktuellen Bedingungen zufrieden"
     },
     "tr": {
       "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
@@ -1085,6 +1085,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Walking Habits": "Yürüme Alışkanlıkları",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Günlük yolculuklarınızda nasıl ve ne zaman yürüdüğünüz hakkında sorular.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi yaya olarak yaşadığınız deneyimlerle ilgilidir. Yanıtlarınız, insanların şehirde yürürken karşılaştığı koşulları ve engelleri anlamamıza ve yürümeyi daha güvenli, rahat ve keyifli hale getirecek fırsatları belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Haftada en az bir kez yürümeyi ana ulaşım şekli olarak kullanıyor musunuz? (Yani yolculuğun büyük bölümünü yürüyerek tamamlamak; yalnızca başka bir ulaşım seçeneğine ulaşmak veya aktarma yapmak için kısa yürüyüşler değil.)",
       "#Yes": "Evet",
       "#No": "Hayır",
@@ -1195,8 +1196,7 @@
       "#Cleaner and better-maintained public spaces": "Daha temiz ve daha iyi bakılan kamusal alanlar",
       "#Better separation from cyclists and e-scooters": "Bisikletliler ve e-scooter’lardan daha iyi ayrılmış yaya alanları",
       "#Clearer wayfinding signs and maps": "Daha açık yönlendirme tabelaları ve haritalar",
-      "#Nothing — I am satisfied with current conditions": "Hiçbiri — mevcut koşullardan memnunum",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi yaya olarak yaşadığınız deneyimlerle ilgilidir. Yanıtlarınız, insanların şehirde yürürken karşılaştığı koşulları ve engelleri anlamamıza ve yürümeyi daha güvenli, rahat ve keyifli hale getirecek fırsatları belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Hiçbiri — mevcut koşullardan memnunum"
     },
     "fa": {
       "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
@@ -1208,6 +1208,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Walking Habits": "عادت‌های پیاده‌روی",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>سؤال‌هایی درباره اینکه در رفت‌وآمد روزانه چگونه و چه زمانی پیاده‌روی می‌کنید.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما به عنوان عابر پیاده است. پاسخ‌های شما کمک می‌کند شرایط و موانعی را که مردم هنگام پیاده‌روی در شهر با آن روبه‌رو می‌شوند بهتر بشناسیم و راه‌هایی برای ایمن‌تر، راحت‌تر و لذت‌بخش‌تر شدن پیاده‌روی پیدا کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "آیا حداقل هفته‌ای یک بار پیاده‌روی روش اصلی رفت‌وآمد شماست؟ (یعنی بیشتر سفر را پیاده انجام می‌دهید، نه فقط مسیر کوتاه برای رسیدن به وسیله دیگر یا تعویض وسیله.)",
       "#Yes": "بله",
       "#No": "خیر",
@@ -1318,8 +1319,7 @@
       "#Cleaner and better-maintained public spaces": "فضاهای عمومی تمیزتر و بهتر نگهداری‌شده",
       "#Better separation from cyclists and e-scooters": "جداسازی بهتر عابران از دوچرخه و اسکوتر برقی",
       "#Clearer wayfinding signs and maps": "تابلوها و نقشه‌های راهنمای واضح‌تر",
-      "#Nothing — I am satisfied with current conditions": "هیچ‌کدام — از شرایط فعلی راضی هستم",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما به عنوان عابر پیاده است. پاسخ‌های شما کمک می‌کند شرایط و موانعی را که مردم هنگام پیاده‌روی در شهر با آن روبه‌رو می‌شوند بهتر بشناسیم و راه‌هایی برای ایمن‌تر، راحت‌تر و لذت‌بخش‌تر شدن پیاده‌روی پیدا کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#Nothing — I am satisfied with current conditions": "هیچ‌کدام — از شرایط فعلی راضی هستم"
     },
     "hu": {
       "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
@@ -1331,6 +1331,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Walking Habits": "Gyaloglási szokások",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>Kérdések arról, hogyan és mikor gyalogol a mindennapi közlekedés részeként.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a gyalogosként szerzett tapasztalatairól szól. Válaszai segítenek megérteni, milyen körülményekkel és akadályokkal találkoznak az emberek városi gyaloglás közben, és hogyan lehet a gyaloglást biztonságosabbá, kényelmesebbé és kellemesebbé tenni. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "Gyalogol fő közlekedési módként legalább hetente egyszer? (Ez azt jelenti, hogy az út nagy részét gyalog teszi meg, nem csak rövid szakaszokat más közlekedési módok eléréséhez vagy átszálláshoz.)",
       "#Yes": "Igen",
       "#No": "Nem",
@@ -1441,8 +1442,7 @@
       "#Cleaner and better-maintained public spaces": "Tisztább és jobban karbantartott közterületek",
       "#Better separation from cyclists and e-scooters": "Jobb elkülönítés a kerékpárosoktól és elektromos rollerektől",
       "#Clearer wayfinding signs and maps": "Egyértelműbb útbaigazító táblák és térképek",
-      "#Nothing — I am satisfied with current conditions": "Semmi — elégedett vagyok a jelenlegi körülményekkel",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a gyalogosként szerzett tapasztalatairól szól. Válaszai segítenek megérteni, milyen körülményekkel és akadályokkal találkoznak az emberek városi gyaloglás közben, és hogyan lehet a gyaloglást biztonságosabbá, kényelmesebbé és kellemesebbé tenni. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#Nothing — I am satisfied with current conditions": "Semmi — elégedett vagyok a jelenlegi körülményekkel"
     },
     "ar": {
       "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
@@ -1454,6 +1454,7 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Walking Habits": "عادات المشي",
       "#<p>Questions about how and when you walk as part of your daily travel.</p>": "<p>أسئلة عن كيفية ووقت المشي كجزء من تنقلاتك اليومية.</p>",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك كمشاة. تساعدنا إجاباتك على فهم الظروف والعوائق التي يواجهها الناس عند المشي في المدينة، وعلى تحديد فرص لجعل المشي أكثر أمانًا وراحة ومتعة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you walk as a primary mode of travel at least once a week? (This means walking as the main way to complete a trip, not just short transfers between other modes.)": "هل تستخدم المشي كوسيلة رئيسية للتنقل مرة واحدة على الأقل في الأسبوع؟ (أي أن المشي هو الوسيلة الأساسية لإكمال معظم الرحلة، وليس فقط لمسافات قصيرة للوصول إلى وسيلة أخرى أو للتبديل بينها.)",
       "#Yes": "نعم",
       "#No": "لا",
@@ -1564,8 +1565,7 @@
       "#Cleaner and better-maintained public spaces": "أماكن عامة أنظف وأفضل صيانة",
       "#Better separation from cyclists and e-scooters": "فصل أفضل بين المشاة وراكبي الدراجات والسكوتر الكهربائي",
       "#Clearer wayfinding signs and maps": "لافتات وخرائط أوضح لمعرفة الطريق",
-      "#Nothing — I am satisfied with current conditions": "لا شيء — أنا راضٍ عن الظروف الحالية",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience as a pedestrian. Your answers help us understand the conditions and barriers people face when walking in the city, and identify opportunities to make walking safer, more comfortable, and more enjoyable. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك كمشاة. تساعدنا إجاباتك على فهم الظروف والعوائق التي يواجهها الناس عند المشي في المدينة، وعلى تحديد فرص لجعل المشي أكثر أمانًا وراحة ومتعة. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
+      "#Nothing — I am satisfied with current conditions": "لا شيء — أنا راضٍ عن الظروف الحالية"
     }
   },
   "id": "smarturbanity_walking",
