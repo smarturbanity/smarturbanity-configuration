@@ -33,6 +33,7 @@
             "text": "Do you use a car for your daily travel at least once a week?",
             "answer_key": "car_weekly",
             "question_type": "single_option",
+            "required": true,
             "options": [
               {
                 "text": "Yes",
@@ -42,13 +43,18 @@
                 "text": "No",
                 "value": "no"
               }
-            ],
-            "required": true
+            ]
           },
           {
             "text": "What would motivate you to use sustainable travel modes (walking, cycling, shared mobility) more often?",
             "answer_key": "car_sustainable_motivation",
+            "legacy_answer_keys": [
+              "car_sustainable_motivation_v1"
+            ],
             "question_type": "multiple_options",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "max_answers": 3,
             "options": [
               {
@@ -92,18 +98,15 @@
                 "value": "i_am_not_interested_in_using_these_modes"
               }
             ],
-            "add_other": true,
-            "legacy_answer_keys": [
-              "car_sustainable_motivation_v1"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            "add_other": true
           },
           {
             "text": "If you were given free access to a shared bicycle or e-scooter, would you use it?",
             "answer_key": "car_free_shared_trial",
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Yes",
@@ -117,15 +120,18 @@
                 "text": "Not sure",
                 "value": "not_sure"
               }
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "When delays occur (e.g., congestion, accidents), how do they affect your stress levels?",
             "answer_key": "car_delay_stress",
+            "legacy_answer_keys": [
+              "v1_when_delays_occur_e_g_congestion_acc"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not stressful at all",
@@ -147,18 +153,18 @@
                 "text": "Extremely stressful",
                 "value": "extremely_stressful"
               }
-            ],
-            "legacy_answer_keys": [
-              "v1_when_delays_occur_e_g_congestion_acc"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "When delays occur (e.g. traffic, congestion, accidents), how do they affect your daily schedule?",
             "answer_key": "car_delay_schedule_impact",
+            "legacy_answer_keys": [
+              "v1_when_delays_occur_e_g_traffic_conges"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not at all affected",
@@ -180,18 +186,18 @@
                 "text": "Extremely affected",
                 "value": "extremely_affected"
               }
-            ],
-            "legacy_answer_keys": [
-              "v1_when_delays_occur_e_g_traffic_conges"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How do congestion levels influence your route choice or departure time?",
             "answer_key": "car_congestion_adapt",
+            "legacy_answer_keys": [
+              "car_congestion_adapt_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not at all",
@@ -213,18 +219,18 @@
                 "text": "Always (plan trips specifically to avoid congestion)",
                 "value": "always_plan_trips_specifically_to_avoid"
               }
-            ],
-            "legacy_answer_keys": [
-              "car_congestion_adapt_v1"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How would increased driving-related costs (fuel, tolls, parking) affect your car usage?",
             "answer_key": "car_cost_sensitivity",
+            "legacy_answer_keys": [
+              "car_cost_sensitivity_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "No change in usage",
@@ -246,18 +252,18 @@
                 "text": "Would stop using car for most trips",
                 "value": "would_stop_using_car_for_most_trips"
               }
-            ],
-            "legacy_answer_keys": [
-              "car_cost_sensitivity_v1"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "To what extent do emissions concerns influence your travel behavior?",
             "answer_key": "car_emissions",
+            "legacy_answer_keys": [
+              "car_emissions_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not at all, emissions concerns do not influence my travel choices",
@@ -279,18 +285,15 @@
                 "text": "Very strongly, I actively try to reduce car use because of emissions concerns",
                 "value": "very_strongly_i_actively_try_to_reduce_c"
               }
-            ],
-            "legacy_answer_keys": [
-              "car_emissions_v1"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How comfortable do you find traveling by car compared to other modes?",
             "answer_key": "car_comfort",
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Much less comfortable",
@@ -312,15 +315,18 @@
                 "text": "Much more comfortable",
                 "value": "much_more"
               }
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "To what extent is finding a parking space at your destination an issue for you?",
             "answer_key": "car_parking_issue",
+            "legacy_answer_keys": [
+              "car_parking_issue_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not an Issue",
@@ -342,18 +348,18 @@
                 "text": "Critical Issue",
                 "value": "critical_issue"
               }
-            ],
-            "legacy_answer_keys": [
-              "car_parking_issue_v1"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How do parking difficulties typically affect your travel decisions?",
             "answer_key": "car_parking_decisions",
+            "legacy_answer_keys": [
+              "v1_how_do_parking_difficulties_typicall"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "car_weekly": "yes"
+            },
             "options": [
               {
                 "text": "They do not affect my travel decisions",
@@ -375,13 +381,7 @@
                 "text": "They make me choose another mode of transport instead of driving",
                 "value": "they_make_me_choose_another_mode_of_tran"
               }
-            ],
-            "legacy_answer_keys": [
-              "v1_how_do_parking_difficulties_typicall"
-            ],
-            "show_if": {
-              "car_weekly": "yes"
-            }
+            ]
           }
         ]
       }
@@ -399,7 +399,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Car Travel": "Car Travel",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Questions about your relationship with car travel and alternatives.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Do you use a car for your daily travel at least once a week?",
       "#Yes": "Yes",
       "#No": "No",
@@ -464,7 +463,8 @@
       "#They make my journey less convenient or more stressful": "They make my journey less convenient or more stressful",
       "#They make me change my route or destination": "They make me change my route or destination",
       "#They make me postpone, avoid, or cancel some trips": "They make me postpone, avoid, or cancel some trips",
-      "#They make me choose another mode of transport instead of driving": "They make me choose another mode of transport instead of driving"
+      "#They make me choose another mode of transport instead of driving": "They make me choose another mode of transport instead of driving",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "#Car on a street": "Auto su una strada",
@@ -476,7 +476,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Car Travel": "Spostamenti in auto",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Domande sul tuo rapporto con gli spostamenti in auto e con le modalità alternative.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e le tue esperienze durante gli spostamenti in auto. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Utilizzi l'auto per i tuoi spostamenti quotidiani almeno una volta alla settimana?",
       "#Yes": "Sì",
       "#No": "No",
@@ -541,7 +540,8 @@
       "#They make my journey less convenient or more stressful": "Rendono il mio viaggio meno comodo o più stressante",
       "#They make me change my route or destination": "Mi portano a cambiare percorso o destinazione",
       "#They make me postpone, avoid, or cancel some trips": "Mi portano a rimandare, evitare o annullare alcuni spostamenti",
-      "#They make me choose another mode of transport instead of driving": "Mi portano a scegliere un'altra modalità di trasporto invece dell'auto"
+      "#They make me choose another mode of transport instead of driving": "Mi portano a scegliere un'altra modalità di trasporto invece dell'auto",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity riguarda le tue sensazioni e le tue esperienze durante gli spostamenti in auto. Le tue risposte ci aiutano a individuare ostacoli e opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "#Car on a street": "Voiture dans une rue",
@@ -553,7 +553,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Car Travel": "Déplacements en voiture",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Questions sur vos déplacements en voiture et les autres possibilités de transport.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience lors de vos déplacements en voiture. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Utilisez-vous une voiture pour vos déplacements quotidiens au moins une fois par semaine ?",
       "#Yes": "Oui",
       "#No": "Non",
@@ -618,7 +617,8 @@
       "#They make my journey less convenient or more stressful": "Elles rendent mon trajet moins pratique ou plus stressant",
       "#They make me change my route or destination": "Elles me font changer d’itinéraire ou de destination",
       "#They make me postpone, avoid, or cancel some trips": "Elles me font reporter, éviter ou annuler certains déplacements",
-      "#They make me choose another mode of transport instead of driving": "Elles me font choisir un autre mode de transport au lieu de conduire"
+      "#They make me choose another mode of transport instead of driving": "Elles me font choisir un autre mode de transport au lieu de conduire",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur vos sensations et votre expérience lors de vos déplacements en voiture. Vos réponses nous aident à repérer les obstacles et les possibilités d’amélioration de la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "#Car on a street": "Auto auf einer Straße",
@@ -630,7 +630,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Car Travel": "Autofahrten",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Fragen zu Ihren Autofahrten und zu möglichen Alternativen.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Autofahrten erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Nutzen Sie mindestens einmal pro Woche ein Auto für Ihre täglichen Wege?",
       "#Yes": "Ja",
       "#No": "Nein",
@@ -695,7 +694,8 @@
       "#They make my journey less convenient or more stressful": "Sie machen meine Fahrt weniger bequem oder stressiger",
       "#They make me change my route or destination": "Sie führen dazu, dass ich Route oder Ziel ändere",
       "#They make me postpone, avoid, or cancel some trips": "Sie führen dazu, dass ich manche Wege verschiebe, vermeide oder absage",
-      "#They make me choose another mode of transport instead of driving": "Sie führen dazu, dass ich statt des Autos ein anderes Verkehrsmittel wähle"
+      "#They make me choose another mode of transport instead of driving": "Sie führen dazu, dass ich statt des Autos ein anderes Verkehrsmittel wähle",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich damit, wie Sie Autofahrten erleben und wie Sie sich dabei fühlen. Ihre Antworten helfen uns, Hindernisse und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "#Car on a street": "Sokakta bir araba",
@@ -707,7 +707,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Car Travel": "Otomobille Yolculuk",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Otomobil kullanımı ve alternatif ulaşım seçenekleriyle ilişkiniz hakkında sorular.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi otomobille yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Günlük yolculuklarınızda haftada en az bir kez otomobil kullanıyor musunuz?",
       "#Yes": "Evet",
       "#No": "Hayır",
@@ -772,7 +771,8 @@
       "#They make my journey less convenient or more stressful": "Yolculuğumu daha zahmetli veya daha stresli hale getirir",
       "#They make me change my route or destination": "Güzergâhımı veya gideceğim yeri değiştirmeme neden olur",
       "#They make me postpone, avoid, or cancel some trips": "Bazı yolculukları ertelememe, yapmamama veya iptal etmeme neden olur",
-      "#They make me choose another mode of transport instead of driving": "Otomobil yerine başka bir ulaşım seçeneği kullanmama neden olur"
+      "#They make me choose another mode of transport instead of driving": "Otomobil yerine başka bir ulaşım seçeneği kullanmama neden olur",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi otomobille yolculuk ederken neler yaşadığınız ve nasıl hissettiğinizle ilgilidir. Yanıtlarınız, daha iyi kentsel hareketlilik için engelleri ve iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "#Car on a street": "خودرو در خیابان",
@@ -784,7 +784,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Car Travel": "سفر با خودرو",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>سؤال‌هایی درباره استفاده شما از خودرو و گزینه‌های جایگزین.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام سفر با خودرو است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد روزانه از خودرو استفاده می‌کنید؟",
       "#Yes": "بله",
       "#No": "خیر",
@@ -849,7 +848,8 @@
       "#They make my journey less convenient or more stressful": "سفر را سخت‌تر یا پراسترس‌تر می‌کند",
       "#They make me change my route or destination": "باعث می‌شود مسیر یا مقصد را تغییر دهم",
       "#They make me postpone, avoid, or cancel some trips": "باعث می‌شود بعضی سفرها را عقب بیندازم، انجام ندهم یا لغو کنم",
-      "#They make me choose another mode of transport instead of driving": "باعث می‌شود به جای رانندگی از روش دیگری استفاده کنم"
+      "#They make me choose another mode of transport instead of driving": "باعث می‌شود به جای رانندگی از روش دیگری استفاده کنم",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره احساس و تجربه شما هنگام سفر با خودرو است. پاسخ‌های شما به ما کمک می‌کند موانع و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "#Car on a street": "Autó az utcán",
@@ -861,7 +861,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Car Travel": "Autós közlekedés",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>Kérdések az autóhasználatról és az alternatív közlekedési lehetőségekről.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal autózás közben. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "Használ autót a mindennapi közlekedéshez legalább hetente egyszer?",
       "#Yes": "Igen",
       "#No": "Nem",
@@ -926,7 +925,8 @@
       "#They make my journey less convenient or more stressful": "Kényelmetlenebbé vagy stresszesebbé teszik az utat",
       "#They make me change my route or destination": "Arra késztetnek, hogy módosítsam az útvonalat vagy az úti célt",
       "#They make me postpone, avoid, or cancel some trips": "Arra késztetnek, hogy egyes utakat elhalasszak, elkerüljek vagy lemondjak",
-      "#They make me choose another mode of transport instead of driving": "Arra késztetnek, hogy autózás helyett más közlekedési módot válasszak"
+      "#They make me choose another mode of transport instead of driving": "Arra késztetnek, hogy autózás helyett más közlekedési módot válasszak",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív arról szól, hogyan érzi magát és mit tapasztal autózás közben. Válaszai segítenek feltárni a városi közlekedés akadályait és fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "#Car on a street": "سيارة في شارع",
@@ -938,7 +938,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Car Travel": "التنقل بالسيارة",
       "#<p>Questions about your relationship with car travel and alternatives.</p>": "<p>أسئلة عن استخدامك للسيارة والبدائل المتاحة.</p>",
-      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالسيارة. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you use a car for your daily travel at least once a week?": "هل تستخدم السيارة في تنقلاتك اليومية مرة واحدة على الأقل في الأسبوع؟",
       "#Yes": "نعم",
       "#No": "لا",
@@ -1003,7 +1002,8 @@
       "#They make my journey less convenient or more stressful": "تجعل الرحلة أقل راحة أو أكثر توترًا",
       "#They make me change my route or destination": "تدفعني إلى تغيير الطريق أو الوجهة",
       "#They make me postpone, avoid, or cancel some trips": "تدفعني إلى تأجيل بعض الرحلات أو تجنبها أو إلغائها",
-      "#They make me choose another mode of transport instead of driving": "تدفعني إلى اختيار وسيلة أخرى بدلًا من القيادة"
+      "#They make me choose another mode of transport instead of driving": "تدفعني إلى اختيار وسيلة أخرى بدلًا من القيادة",
+      "#<p>This SmartUrbanity questionnaire asks about how you feel and what you experience while travelling by car. Your answers help identify barriers and opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity شعورك وتجربتك أثناء التنقل بالسيارة. تساعدنا إجاباتك على تحديد العوائق وفرص تحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_car",

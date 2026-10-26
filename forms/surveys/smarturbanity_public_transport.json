@@ -48,7 +48,13 @@
           {
             "text": "How accessible and easy to use are the public transport stops (bus, tram, or train) on your route? Think about steps, ramps and available space.",
             "answer_key": "pt_stop_ease",
+            "legacy_answer_keys": [
+              "pt_stop_ease_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Inaccessible",
@@ -71,18 +77,18 @@
                 "value": "completely_accessible"
               }
             ],
-            "add_i_dont_know": true,
-            "legacy_answer_keys": [
-              "pt_stop_ease_v1"
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            "add_i_dont_know": true
           },
           {
             "text": "Which specific barriers did you face while using public transport stops?",
             "answer_key": "pt_barriers",
+            "legacy_answer_keys": [
+              "pt_barriers_v1"
+            ],
             "question_type": "multiple_options",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "max_answers": 3,
             "options": [
               {
@@ -118,18 +124,18 @@
                 "value": "i_don_t_face_any_specific_barrier"
               }
             ],
-            "add_other": true,
-            "legacy_answer_keys": [
-              "pt_barriers_v1"
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            "add_other": true
           },
           {
             "text": "How does the presence of other people make you feel during your trip?",
             "answer_key": "pt_crowding_comfort",
+            "legacy_answer_keys": [
+              "pt_crowding_comfort_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Very uncomfortable",
@@ -151,18 +157,18 @@
                 "text": "Very comfortable",
                 "value": "very_comfortable"
               }
-            ],
-            "legacy_answer_keys": [
-              "pt_crowding_comfort_v1"
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How does the availability of working lifts, ramps, and step-free routes affect your ability to reach the transport stop?",
             "answer_key": "pt_step_free_need",
+            "legacy_answer_keys": [
+              "pt_step_free_need_v1"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "I cannot reach the stop if no accessible route exists",
@@ -185,18 +191,15 @@
                 "value": "i_can_reach_the_stop_easily_and_independ"
               }
             ],
-            "privacy_classification": "special_category_health",
-            "legacy_answer_keys": [
-              "pt_step_free_need_v1"
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            "privacy_classification": "special_category_health"
           },
           {
             "text": "How does the quality of crossings (e.g. signals, bridges, or tunnels) near the stop influence your sense of safety?",
             "answer_key": "v1_how_does_the_quality_of_crossings_e",
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "I avoid using this stop because the crossings feel unsafe",
@@ -218,15 +221,15 @@
                 "text": "I feel safe and well protected by the crossing design and traffic controls",
                 "value": "i_feel_safe_and_well_protected_by_the_cr"
               }
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How does the schedule and frequency of public transport on your route affect your ability to rely on it?",
             "answer_key": "pt_reliability_v1",
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "The service is so infrequent or unreliable that it does not meet my basic travel needs",
@@ -248,15 +251,15 @@
                 "text": "The service is frequent enough that I can use it without planning",
                 "value": "the_service_is_frequent_enough_that_i_ca"
               }
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "To what extent does using public transport affect your sense of social comfort or personal image?",
             "answer_key": "pt_image_v1",
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "I would rather not be seen using public transport",
@@ -278,15 +281,15 @@
                 "text": "I feel comfortable and confident using this mode of transport in social settings",
                 "value": "i_feel_comfortable_and_confident_using_t"
               }
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How stressful do you find unexpected delays or service disruptions during your trips?",
             "answer_key": "pt_delay_stress",
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "Not stressful at all",
@@ -308,15 +311,18 @@
                 "text": "Extremely stressful",
                 "value": "extremely_stressful"
               }
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           },
           {
             "text": "How do delays or unreliable service typically affect your travel behavior?",
             "answer_key": "pt_delay_effect",
+            "legacy_answer_keys": [
+              "v1_how_do_delays_or_unreliable_service"
+            ],
             "question_type": "single_option",
+            "show_if": {
+              "pt_weekly": "yes"
+            },
             "options": [
               {
                 "text": "They do not affect my behavior",
@@ -338,13 +344,7 @@
                 "text": "I sometimes choose another transport mode instead",
                 "value": "i_sometimes_choose_another_transport_mod"
               }
-            ],
-            "legacy_answer_keys": [
-              "v1_how_do_delays_or_unreliable_service"
-            ],
-            "show_if": {
-              "pt_weekly": "yes"
-            }
+            ]
           }
         ]
       }
@@ -362,7 +362,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Public transport": "Public transport",
       "#<p>Questions about your experience using public transport.</p>": "<p>Questions about your experience using public transport.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Do you use public transport for your daily travels at least once a week?",
       "#Yes": "Yes",
       "#No": "No",
@@ -424,7 +423,8 @@
       "#I leave earlier than necessary to avoid delays": "I leave earlier than necessary to avoid delays",
       "#I avoid relying on public transport for important trips": "I avoid relying on public transport for important trips",
       "#I sometimes change routes or travel times": "I sometimes change routes or travel times",
-      "#I sometimes choose another transport mode instead": "I sometimes choose another transport mode instead"
+      "#I sometimes choose another transport mode instead": "I sometimes choose another transport mode instead",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "#Bus with a clock": "Autobus con un orologio",
@@ -436,7 +436,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Public transport": "Trasporto pubblico",
       "#<p>Questions about your experience using public transport.</p>": "<p>Domande sulla tua esperienza nell'utilizzo del trasporto pubblico.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza con il trasporto pubblico. Le tue risposte ci aiutano a comprendere gli ostacoli legati ad accessibilità, comfort, sicurezza, affidabilità e qualità del servizio e a individuare opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Utilizzi il trasporto pubblico per i tuoi spostamenti quotidiani almeno una volta alla settimana?",
       "#Yes": "Sì",
       "#No": "No",
@@ -498,7 +497,8 @@
       "#I leave earlier than necessary to avoid delays": "Parto prima del necessario per evitare ritardi",
       "#I avoid relying on public transport for important trips": "Evito di fare affidamento sul trasporto pubblico per gli spostamenti importanti",
       "#I sometimes change routes or travel times": "A volte cambio percorso o orario di viaggio",
-      "#I sometimes choose another transport mode instead": "A volte scelgo un'altra modalità di trasporto"
+      "#I sometimes choose another transport mode instead": "A volte scelgo un'altra modalità di trasporto",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Questo questionario SmartUrbanity si concentra sulla tua esperienza con il trasporto pubblico. Le tue risposte ci aiutano a comprendere gli ostacoli legati ad accessibilità, comfort, sicurezza, affidabilità e qualità del servizio e a individuare opportunità per migliorare la mobilità urbana. La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome: vengono salvate con un codice pseudonimo ricavato dal tuo indirizzo email, così che le risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "#Bus with a clock": "Bus avec une horloge",
@@ -510,7 +510,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Public transport": "Transports publics",
       "#<p>Questions about your experience using public transport.</p>": "<p>Questions sur votre expérience des transports publics.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience des transports publics. Vos réponses nous aident à comprendre les difficultés liées à l’accès, au confort, à la sécurité, à la fiabilité et à la qualité du service, et à trouver des pistes pour améliorer la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Utilisez-vous les transports publics pour vos déplacements quotidiens au moins une fois par semaine ?",
       "#Yes": "Oui",
       "#No": "Non",
@@ -572,7 +571,8 @@
       "#I leave earlier than necessary to avoid delays": "Je pars plus tôt que nécessaire pour éviter les retards",
       "#I avoid relying on public transport for important trips": "J’évite de compter sur les transports publics pour les trajets importants",
       "#I sometimes change routes or travel times": "Je change parfois d’itinéraire ou d’heure de déplacement",
-      "#I sometimes choose another transport mode instead": "Je choisis parfois un autre mode de transport"
+      "#I sometimes choose another transport mode instead": "Je choisis parfois un autre mode de transport",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce questionnaire SmartUrbanity porte sur votre expérience des transports publics. Vos réponses nous aident à comprendre les difficultés liées à l’accès, au confort, à la sécurité, à la fiabilité et à la qualité du service, et à trouver des pistes pour améliorer la mobilité urbaine. La participation est volontaire. Vos réponses ne sont pas associées à votre nom : elles sont enregistrées sous un code pseudonyme dérivé de votre adresse e-mail, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "#Bus with a clock": "Bus mit einer Uhr",
@@ -584,7 +584,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Public transport": "Öffentliche Verkehrsmittel",
       "#<p>Questions about your experience using public transport.</p>": "<p>Fragen zu Ihren Erfahrungen mit öffentlichen Verkehrsmitteln.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung bei der Nutzung öffentlicher Verkehrsmittel. Ihre Antworten helfen uns, Hindernisse bei Zugang, Komfort, Sicherheit, Zuverlässigkeit und Servicequalität zu verstehen und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Nutzen Sie mindestens einmal pro Woche öffentliche Verkehrsmittel für Ihre täglichen Wege?",
       "#Yes": "Ja",
       "#No": "Nein",
@@ -646,7 +645,8 @@
       "#I leave earlier than necessary to avoid delays": "Ich fahre früher los als nötig, um Verspätungen abzufangen",
       "#I avoid relying on public transport for important trips": "Bei wichtigen Wegen verlasse ich mich lieber nicht auf öffentliche Verkehrsmittel",
       "#I sometimes change routes or travel times": "Ich ändere manchmal Route oder Fahrzeit",
-      "#I sometimes choose another transport mode instead": "Ich wähle manchmal ein anderes Verkehrsmittel"
+      "#I sometimes choose another transport mode instead": "Ich wähle manchmal ein anderes Verkehrsmittel",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dieser SmartUrbanity-Fragebogen befasst sich mit Ihrer Erfahrung bei der Nutzung öffentlicher Verkehrsmittel. Ihre Antworten helfen uns, Hindernisse bei Zugang, Komfort, Sicherheit, Zuverlässigkeit und Servicequalität zu verstehen und Möglichkeiten für eine bessere städtische Mobilität zu erkennen. Die Teilnahme ist freiwillig. Ihre Antworten werden nicht mit Ihrem Namen verknüpft: Sie werden unter einem pseudonymen Code gespeichert, der aus Ihrer E-Mail-Adresse abgeleitet wird, damit Ihre Antworten auf die verschiedenen SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "#Bus with a clock": "Saatli otobüs",
@@ -658,7 +658,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Public transport": "Toplu Taşıma",
       "#<p>Questions about your experience using public transport.</p>": "<p>Toplu taşıma kullanma deneyiminiz hakkında sorular.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi toplu taşıma kullanma deneyiminizle ilgilidir. Yanıtlarınız erişim, konfor, güvenlik, güvenilirlik ve hizmet kalitesiyle ilgili güçlükleri anlamamıza ve daha iyi kentsel hareketlilik için iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Günlük yolculuklarınızda haftada en az bir kez toplu taşıma kullanıyor musunuz?",
       "#Yes": "Evet",
       "#No": "Hayır",
@@ -720,7 +719,8 @@
       "#I leave earlier than necessary to avoid delays": "Gecikmelerden kaçınmak için gerekenden daha erken çıkarım",
       "#I avoid relying on public transport for important trips": "Önemli yolculuklarda toplu taşımaya güvenmekten kaçınırım",
       "#I sometimes change routes or travel times": "Bazen güzergâhımı veya yolculuk saatimi değiştiririm",
-      "#I sometimes choose another transport mode instead": "Bazen bunun yerine başka bir ulaşım seçeneği kullanırım"
+      "#I sometimes choose another transport mode instead": "Bazen bunun yerine başka bir ulaşım seçeneği kullanırım",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bu SmartUrbanity anketi toplu taşıma kullanma deneyiminizle ilgilidir. Yanıtlarınız erişim, konfor, güvenlik, güvenilirlik ve hizmet kalitesiyle ilgili güçlükleri anlamamıza ve daha iyi kentsel hareketlilik için iyileştirme fırsatlarını belirlememize yardımcı olur. Katılım gönüllüdür. Yanıtlarınız adınızla ilişkilendirilmez: farklı SmartUrbanity anketlerine verdiğiniz yanıtların birlikte analiz edilebilmesi için e-posta adresinizden türetilen takma adlı bir kodla saklanır.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "#Bus with a clock": "اتوبوس با ساعت",
@@ -732,7 +732,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Public transport": "حمل‌ونقل عمومی",
       "#<p>Questions about your experience using public transport.</p>": "<p>سؤال‌هایی درباره تجربه شما از استفاده از حمل‌ونقل عمومی.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما از استفاده از حمل‌ونقل عمومی است. پاسخ‌های شما به ما کمک می‌کند مشکلات مربوط به دسترسی، راحتی، ایمنی، قابل اعتماد بودن و کیفیت خدمات را بهتر بفهمیم و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد روزانه از حمل‌ونقل عمومی استفاده می‌کنید؟",
       "#Yes": "بله",
       "#No": "خیر",
@@ -794,7 +793,8 @@
       "#I leave earlier than necessary to avoid delays": "برای جلوگیری از دیر رسیدن، زودتر از زمان لازم حرکت می‌کنم",
       "#I avoid relying on public transport for important trips": "برای سفرهای مهم ترجیح می‌دهم به حمل‌ونقل عمومی تکیه نکنم",
       "#I sometimes change routes or travel times": "گاهی مسیر یا زمان سفر را تغییر می‌دهم",
-      "#I sometimes choose another transport mode instead": "گاهی به جای آن روش دیگری را انتخاب می‌کنم"
+      "#I sometimes choose another transport mode instead": "گاهی به جای آن روش دیگری را انتخاب می‌کنم",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>این پرسشنامه SmartUrbanity درباره تجربه شما از استفاده از حمل‌ونقل عمومی است. پاسخ‌های شما به ما کمک می‌کند مشکلات مربوط به دسترسی، راحتی، ایمنی، قابل اعتماد بودن و کیفیت خدمات را بهتر بفهمیم و فرصت‌های بهبود جابه‌جایی شهری را شناسایی کنیم. شرکت در این پرسشنامه داوطلبانه است. پاسخ‌های شما به نام شما مرتبط نمی‌شود: پاسخ‌ها با یک کد مستعار که از نشانی ایمیل شما ساخته می‌شود ذخیره می‌شوند تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "#Bus with a clock": "Busz órával",
@@ -806,7 +806,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Public transport": "Tömegközlekedés",
       "#<p>Questions about your experience using public transport.</p>": "<p>Kérdések a tömegközlekedés használatával kapcsolatos tapasztalatairól.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a tömegközlekedés használatával kapcsolatos tapasztalatairól szól. Válaszai segítenek megérteni a hozzáféréssel, kényelemmel, biztonsággal, megbízhatósággal és szolgáltatásminőséggel kapcsolatos nehézségeket, és feltárni a városi közlekedés fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "Használ tömegközlekedést a mindennapi közlekedéshez legalább hetente egyszer?",
       "#Yes": "Igen",
       "#No": "Nem",
@@ -868,7 +867,8 @@
       "#I leave earlier than necessary to avoid delays": "A szükségesnél korábban indulok, hogy elkerüljem a késést",
       "#I avoid relying on public transport for important trips": "Fontos utaknál inkább nem támaszkodom a tömegközlekedésre",
       "#I sometimes change routes or travel times": "Néha módosítom az útvonalat vagy az utazás időpontját",
-      "#I sometimes choose another transport mode instead": "Néha inkább más közlekedési módot választok"
+      "#I sometimes choose another transport mode instead": "Néha inkább más közlekedési módot választok",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ez a SmartUrbanity kérdőív a tömegközlekedés használatával kapcsolatos tapasztalatairól szól. Válaszai segítenek megérteni a hozzáféréssel, kényelemmel, biztonsággal, megbízhatósággal és szolgáltatásminőséggel kapcsolatos nehézségeket, és feltárni a városi közlekedés fejlesztési lehetőségeit. A részvétel önkéntes. Válaszai nem kapcsolódnak a nevéhez: egy, az e-mail-címéből képzett álnevesített kóddal tároljuk őket, hogy a különböző SmartUrbanity-kérdőívekre adott válaszait együtt lehessen elemezni.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "#Bus with a clock": "حافلة مع ساعة",
@@ -880,7 +880,6 @@
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Public transport": "النقل العام",
       "#<p>Questions about your experience using public transport.</p>": "<p>أسئلة عن تجربتك في استخدام النقل العام.</p>",
-      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك في استخدام النقل العام. تساعدنا إجاباتك على فهم الصعوبات المتعلقة بالوصول والراحة والسلامة والموثوقية وجودة الخدمة، وعلى تحديد فرص لتحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>",
       "#Do you use public transport for your daily travels at least once a week?": "هل تستخدم النقل العام في تنقلاتك اليومية مرة واحدة على الأقل في الأسبوع؟",
       "#Yes": "نعم",
       "#No": "لا",
@@ -942,7 +941,8 @@
       "#I leave earlier than necessary to avoid delays": "أغادر أبكر من اللازم لتجنب التأخير",
       "#I avoid relying on public transport for important trips": "أتجنب الاعتماد على النقل العام في الرحلات المهمة",
       "#I sometimes change routes or travel times": "أغيّر الطريق أو وقت الرحلة أحيانًا",
-      "#I sometimes choose another transport mode instead": "أختار وسيلة نقل أخرى أحيانًا"
+      "#I sometimes choose another transport mode instead": "أختار وسيلة نقل أخرى أحيانًا",
+      "#<p>This SmartUrbanity questionnaire focuses on your experience using public transport. Your answers help us understand barriers related to access, comfort, safety, reliability and service quality, and identify opportunities for better urban mobility. Participation is voluntary. Your answers are not linked to your name. They are stored under a pseudonymous code derived from your email address, so that your answers to different SmartUrbanity questionnaires can be analysed together.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يتناول هذا الاستبيان من SmartUrbanity تجربتك في استخدام النقل العام. تساعدنا إجاباتك على فهم الصعوبات المتعلقة بالوصول والراحة والسلامة والموثوقية وجودة الخدمة، وعلى تحديد فرص لتحسين التنقل الحضري. المشاركة طوعية. لا ترتبط إجاباتك باسمك: تُحفَظ برمز مستعار مشتق من عنوان بريدك الإلكتروني، حتى يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا.</p><p><a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">اعرف المزيد عن SmartUrbanity</a></p>"
     }
   },
   "id": "smarturbanity_public_transport",
