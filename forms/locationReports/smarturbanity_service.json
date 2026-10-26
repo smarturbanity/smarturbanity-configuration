@@ -5,7 +5,6 @@
     "name": "#Service",
     "sections": [
       {
-        "id": "access_points",
         "hub_feature": "location_feature",
         "title": "#Access points",
         "required": true,
@@ -19,12 +18,12 @@
             "question_type": "address",
             "required": true,
             "question_id": "access_point",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           }
         ]
       },
       {
-        "id": "service",
         "hub_feature": "service_feature",
         "title": "#Service details",
         "required": true,
@@ -39,7 +38,8 @@
               "placeholder": "e.g. Parco Gallo"
             },
             "question_id": "providedName",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "answer_key": "description",
@@ -52,7 +52,8 @@
               "placeholder": "Optional context, such as opening hours or the provider's name"
             },
             "question_id": "description",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "answer_key": "categoryId",
@@ -66,7 +67,8 @@
               "max_height": "min(360px, 50vh)"
             },
             "question_id": "categoryId",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "answer_key": "serviceTypeId",
@@ -79,7 +81,8 @@
               "placeholder": "Type or select a service type"
             },
             "question_id": "serviceTypeId",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           },
           {
             "answer_key": "serviceSubtype",
@@ -92,12 +95,12 @@
               "placeholder": "Select an optional pilot-defined subtype"
             },
             "question_id": "serviceSubtype",
-            "question_version": "1.0.0"
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
           }
         ]
       },
       {
-        "id": "opportunities",
         "hub_feature": "opportunity_feature",
         "title": "#Opportunities",
         "required": true,
@@ -144,298 +147,14 @@
             ],
             "required": true,
             "question_id": "service_opportunities",
-            "question_version": "2.0.0"
+            "question_version": "2.0.0",
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
     ],
     "row_sources": {},
-    "project": "SmartUrbanity",
-    "editorial": {
-      "schema_version": 1,
-      "records": [],
-      "history": [
-        {
-          "version": "0.1.0",
-          "saved_at": "2026-10-26T21:33:22+01:00",
-          "fingerprint": "{\"languages\":{\"ar\":{\"#Can it be done here?\":\"هل يمكن القيام به هنا؟\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"لكل نشاط، أخبرنا ما إذا كان يمكن القيام به في هذه الخدمة. هذه الإجابة مجهولة الهوية وغير مرتبطة بملفك الشخصي.\",\"#I don't know\":\"لا أعرف\",\"#No\":\"لا\",\"#No, and I would like it to be possible here\":\"لا، وأودّ أن يكون ذلك ممكنًا هنا\",\"#Other\":\"أخرى\",\"#Please specify\":\"يرجى التحديد\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - ما الذي يمكن فعله في هذه الخدمة\",\"#What can be done at this service\":\"ما الذي يمكن فعله في هذه الخدمة\",\"#What can people do at this service?\":\"ما الذي يمكن للناس فعله في هذه الخدمة؟\",\"#Yes, it can be done here\":\"نعم، يمكن القيام به هنا\",\"code\":\"ar\"},\"de\":{\"#Can it be done here?\":\"Kann man das hier tun?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"Sagen Sie uns für jede Tätigkeit, ob man sie bei diesem Dienst erledigen kann. Diese Antwort ist anonym und nicht mit Ihrem Profil verknüpft.\",\"#I don't know\":\"Ich weiß nicht\",\"#No\":\"Nein\",\"#No, and I would like it to be possible here\":\"Nein, und ich würde mir wünschen, dass es hier möglich ist\",\"#Other\":\"Sonstiges\",\"#Please specify\":\"Bitte angeben\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - Was man bei diesem Dienst tun kann\",\"#What can be done at this service\":\"Was man bei diesem Dienst tun kann\",\"#What can people do at this service?\":\"Was kann man bei diesem Dienst tun?\",\"#Yes, it can be done here\":\"Ja, das kann man hier tun\",\"code\":\"de\"},\"en\":{\"#Can it be done here?\":\"Can it be done here?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\",\"#I don't know\":\"I don't know\",\"#No\":\"No\",\"#No, and I would like it to be possible here\":\"No, and I would like it to be possible here\",\"#Other\":\"Other\",\"#Please specify\":\"Please specify\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - What can be done at this service\",\"#What can be done at this service\":\"What can be done at this service\",\"#What can people do at this service?\":\"What can people do at this service?\",\"#Yes, it can be done here\":\"Yes, it can be done here\",\"code\":\"en\"},\"fa\":{\"#Can it be done here?\":\"آیا اینجا می‌توان انجامش داد؟\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"برای هر فعالیت به ما بگویید آیا می‌توان آن را در این خدمت انجام داد. این پاسخ ناشناس است و به نمایه‌ی شما مرتبط نمی‌شود.\",\"#I don't know\":\"نمی‌دانم\",\"#No\":\"نه\",\"#No, and I would like it to be possible here\":\"نه، و دوست دارم اینجا امکان‌پذیر باشد\",\"#Other\":\"سایر\",\"#Please specify\":\"لطفاً مشخص کنید\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - در این خدمت چه کارهایی می‌توان انجام داد\",\"#What can be done at this service\":\"در این خدمت چه کارهایی می‌توان انجام داد\",\"#What can people do at this service?\":\"مردم در این خدمت چه کارهایی می‌توانند انجام دهند؟\",\"#Yes, it can be done here\":\"بله، اینجا می‌توان انجامش داد\",\"code\":\"fa\"},\"fr\":{\"#Can it be done here?\":\"Peut-on le faire ici ?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"Pour chaque activité, dites-nous si on peut la faire dans ce service. Cette réponse est anonyme et n’est pas liée à votre profil.\",\"#I don't know\":\"Je ne sais pas\",\"#No\":\"Non\",\"#No, and I would like it to be possible here\":\"Non, et j’aimerais que ce soit possible ici\",\"#Other\":\"Autre\",\"#Please specify\":\"Veuillez préciser\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - Ce que l’on peut faire dans ce service\",\"#What can be done at this service\":\"Ce que l’on peut faire dans ce service\",\"#What can people do at this service?\":\"Que peut-on faire dans ce service ?\",\"#Yes, it can be done here\":\"Oui, on peut le faire ici\",\"code\":\"fr\"},\"hu\":{\"#Can it be done here?\":\"Elvégezhető itt?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"Minden tevékenységnél mondja el, hogy elvégezhető-e ennél a szolgáltatásnál. Ez a válasz névtelen, és nincs összekapcsolva a profiljával.\",\"#I don't know\":\"Nem tudom\",\"#No\":\"Nem\",\"#No, and I would like it to be possible here\":\"Nem, de szeretném, ha itt lehetséges lenne\",\"#Other\":\"Egyéb\",\"#Please specify\":\"Kérjük, pontosítsa\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - Mit lehet intézni ennél a szolgáltatásnál\",\"#What can be done at this service\":\"Mit lehet intézni ennél a szolgáltatásnál\",\"#What can people do at this service?\":\"Mit lehet intézni ennél a szolgáltatásnál?\",\"#Yes, it can be done here\":\"Igen, itt elvégezhető\",\"code\":\"hu\"},\"it\":{\"#Can it be done here?\":\"Si può fare qui?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"Per ogni attività, dicci se si può fare in questo servizio. Questa risposta è anonima e non è collegata al tuo profilo.\",\"#I don't know\":\"Non lo so\",\"#No\":\"No\",\"#No, and I would like it to be possible here\":\"No, e vorrei che si potesse fare qui\",\"#Other\":\"Altro\",\"#Please specify\":\"Specifica\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - Cosa si può fare in questo servizio\",\"#What can be done at this service\":\"Cosa si può fare in questo servizio\",\"#What can people do at this service?\":\"Cosa si può fare in questo servizio?\",\"#Yes, it can be done here\":\"Sì, si può fare qui\",\"code\":\"it\"},\"tr\":{\"#Can it be done here?\":\"Burada yapılabilir mi?\",\"#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.\":\"Her etkinlik için bu hizmette yapılıp yapılamayacağını bize söyleyin. Bu yanıt anonimdir ve profilinizle ilişkilendirilmez.\",\"#I don't know\":\"Bilmiyorum\",\"#No\":\"Hayır\",\"#No, and I would like it to be possible here\":\"Hayır ama burada yapılabilmesini isterim\",\"#Other\":\"Diğer\",\"#Please specify\":\"Lütfen belirtin\",\"#SmartUrbanity - What can be done at this service\":\"SmartUrbanity - Bu hizmette neler yapılabilir\",\"#What can be done at this service\":\"Bu hizmette neler yapılabilir\",\"#What can people do at this service?\":\"Bu hizmette insanlar neler yapabilir?\",\"#Yes, it can be done here\":\"Evet, burada yapılabilir\",\"code\":\"tr\"}},\"questionnaire\":{\"name\":\"#Service\",\"project\":\"SmartUrbanity\",\"questionnaire_id\":\"smarturbanity_service\",\"row_sources\":{},\"sections\":[{\"hub_feature\":\"location_feature\",\"id\":\"access_points\",\"questions\":[{\"answer_key\":\"access_point\",\"question_type\":\"address\",\"required\":true,\"text\":\"#Select the access point for the service\"}],\"repeat\":{\"min_items\":1},\"required\":true,\"title\":\"#Access points\"},{\"hub_feature\":\"service_feature\",\"id\":\"service\",\"questions\":[{\"answer_key\":\"providedName\",\"control\":{\"id\":\"serviceName\",\"placeholder\":\"e.g. Parco Gallo\"},\"question_type\":\"text\",\"required\":false,\"text\":\"Service name\"},{\"answer_key\":\"description\",\"control\":{\"id\":\"serviceDescription\",\"placeholder\":\"Optional context, such as opening hours or the provider's name\",\"rows\":2},\"question_type\":\"textarea\",\"required\":false,\"text\":\"Service description\"},{\"answer_key\":\"categoryId\",\"control\":{\"id\":\"category\",\"input_type\":\"search_select\",\"max_height\":\"min(360px, 50vh)\",\"placeholder\":\"Type or select a service category\"},\"question_type\":\"select\",\"required\":true,\"text\":\"Service category\"},{\"answer_key\":\"serviceTypeId\",\"control\":{\"id\":\"serviceType\",\"input_type\":\"search_select\",\"placeholder\":\"Type or select a service type\"},\"question_type\":\"select\",\"required\":true,\"text\":\"Service type\"},{\"answer_key\":\"serviceSubtype\",\"control\":{\"id\":\"serviceSubtype\",\"input_type\":\"search_select\",\"placeholder\":\"Select an optional pilot-defined subtype\"},\"question_type\":\"select\",\"required\":false,\"text\":\"Service subtype\"}],\"required\":true,\"title\":\"#Service details\"},{\"hub_feature\":\"opportunity_feature\",\"id\":\"opportunities\",\"min_available\":1,\"question_reference\":{\"answer_key\":\"service_opportunities\",\"workflow_id\":\"service_opportunities\"},\"questions\":[{\"add_other\":true,\"answer_key\":\"service_opportunities\",\"columns\":[{\"key\":\"availability\",\"label\":\"Can it be done here?\",\"options\":[{\"label\":\"Yes, it can be done here\",\"value\":\"available\"},{\"label\":\"No, and I would like it to be possible here\",\"value\":\"not_available_wanted\"},{\"label\":\"No\",\"value\":\"not_available\"},{\"label\":\"I don't know\",\"value\":\"dont_know\"}],\"type\":\"select\"}],\"question_type\":\"matrix\",\"required\":true,\"row_filter\":{\"mapping_source\":\"service_opportunity_mapping\",\"relation\":\"provides_opportunity\"},\"row_source\":\"opportunities\",\"text\":\"What can people do at this service?\"}],\"required\":true,\"title\":\"#Opportunities\"}]}}",
-          "snapshot": {
-            "questionnaire": {
-              "questionnaire_id": "smarturbanity_service",
-              "questionnaire_version": "0.1.0",
-              "name": "#Service",
-              "sections": [
-                {
-                  "id": "access_points",
-                  "hub_feature": "location_feature",
-                  "title": "#Access points",
-                  "required": true,
-                  "repeat": {
-                    "min_items": 1
-                  },
-                  "questions": [
-                    {
-                      "answer_key": "access_point",
-                      "text": "#Select the access point for the service",
-                      "question_type": "address",
-                      "required": true,
-                      "question_id": "access_point",
-                      "question_version": "1.0.0"
-                    }
-                  ]
-                },
-                {
-                  "id": "service",
-                  "hub_feature": "service_feature",
-                  "title": "#Service details",
-                  "required": true,
-                  "questions": [
-                    {
-                      "answer_key": "providedName",
-                      "text": "Service name",
-                      "question_type": "text",
-                      "required": false,
-                      "control": {
-                        "id": "serviceName",
-                        "placeholder": "e.g. Parco Gallo"
-                      },
-                      "question_id": "providedName",
-                      "question_version": "1.0.0"
-                    },
-                    {
-                      "answer_key": "description",
-                      "text": "Service description",
-                      "question_type": "textarea",
-                      "required": false,
-                      "control": {
-                        "id": "serviceDescription",
-                        "rows": 2,
-                        "placeholder": "Optional context, such as opening hours or the provider's name"
-                      },
-                      "question_id": "description",
-                      "question_version": "1.0.0"
-                    },
-                    {
-                      "answer_key": "categoryId",
-                      "text": "Service category",
-                      "question_type": "select",
-                      "required": true,
-                      "control": {
-                        "id": "category",
-                        "input_type": "search_select",
-                        "placeholder": "Type or select a service category",
-                        "max_height": "min(360px, 50vh)"
-                      },
-                      "question_id": "categoryId",
-                      "question_version": "1.0.0"
-                    },
-                    {
-                      "answer_key": "serviceTypeId",
-                      "text": "Service type",
-                      "question_type": "select",
-                      "required": true,
-                      "control": {
-                        "id": "serviceType",
-                        "input_type": "search_select",
-                        "placeholder": "Type or select a service type"
-                      },
-                      "question_id": "serviceTypeId",
-                      "question_version": "1.0.0"
-                    },
-                    {
-                      "answer_key": "serviceSubtype",
-                      "text": "Service subtype",
-                      "question_type": "select",
-                      "required": false,
-                      "control": {
-                        "id": "serviceSubtype",
-                        "input_type": "search_select",
-                        "placeholder": "Select an optional pilot-defined subtype"
-                      },
-                      "question_id": "serviceSubtype",
-                      "question_version": "1.0.0"
-                    }
-                  ]
-                },
-                {
-                  "id": "opportunities",
-                  "hub_feature": "opportunity_feature",
-                  "title": "#Opportunities",
-                  "required": true,
-                  "min_available": 1,
-                  "question_reference": {
-                    "workflow_id": "service_opportunities",
-                    "answer_key": "service_opportunities"
-                  },
-                  "questions": [
-                    {
-                      "text": "What can people do at this service?",
-                      "answer_key": "service_opportunities",
-                      "question_type": "matrix",
-                      "row_source": "opportunities",
-                      "row_filter": {
-                        "mapping_source": "service_opportunity_mapping",
-                        "relation": "provides_opportunity"
-                      },
-                      "add_other": true,
-                      "columns": [
-                        {
-                          "key": "availability",
-                          "label": "Can it be done here?",
-                          "type": "select",
-                          "options": [
-                            {
-                              "value": "available",
-                              "label": "Yes, it can be done here"
-                            },
-                            {
-                              "value": "not_available_wanted",
-                              "label": "No, and I would like it to be possible here"
-                            },
-                            {
-                              "value": "not_available",
-                              "label": "No"
-                            },
-                            {
-                              "value": "dont_know",
-                              "label": "I don't know"
-                            }
-                          ]
-                        }
-                      ],
-                      "required": true,
-                      "question_id": "service_opportunities",
-                      "question_version": "2.0.0"
-                    }
-                  ]
-                }
-              ],
-              "row_sources": {},
-              "project": "SmartUrbanity"
-            },
-            "languages": {
-              "en": {
-                "code": "en",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - What can be done at this service",
-                "#What can be done at this service": "What can be done at this service",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.",
-                "#What can people do at this service?": "What can people do at this service?",
-                "#Can it be done here?": "Can it be done here?",
-                "#Yes, it can be done here": "Yes, it can be done here",
-                "#No, and I would like it to be possible here": "No, and I would like it to be possible here",
-                "#No": "No",
-                "#I don't know": "I don't know",
-                "#Other": "Other",
-                "#Please specify": "Please specify"
-              },
-              "it": {
-                "code": "it",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Cosa si può fare in questo servizio",
-                "#What can be done at this service": "Cosa si può fare in questo servizio",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Per ogni attività, dicci se si può fare in questo servizio. Questa risposta è anonima e non è collegata al tuo profilo.",
-                "#What can people do at this service?": "Cosa si può fare in questo servizio?",
-                "#Can it be done here?": "Si può fare qui?",
-                "#Yes, it can be done here": "Sì, si può fare qui",
-                "#No, and I would like it to be possible here": "No, e vorrei che si potesse fare qui",
-                "#No": "No",
-                "#I don't know": "Non lo so",
-                "#Other": "Altro",
-                "#Please specify": "Specifica"
-              },
-              "fr": {
-                "code": "fr",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Ce que l’on peut faire dans ce service",
-                "#What can be done at this service": "Ce que l’on peut faire dans ce service",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Pour chaque activité, dites-nous si on peut la faire dans ce service. Cette réponse est anonyme et n’est pas liée à votre profil.",
-                "#What can people do at this service?": "Que peut-on faire dans ce service ?",
-                "#Can it be done here?": "Peut-on le faire ici ?",
-                "#Yes, it can be done here": "Oui, on peut le faire ici",
-                "#No, and I would like it to be possible here": "Non, et j’aimerais que ce soit possible ici",
-                "#No": "Non",
-                "#I don't know": "Je ne sais pas",
-                "#Other": "Autre",
-                "#Please specify": "Veuillez préciser"
-              },
-              "de": {
-                "code": "de",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Was man bei diesem Dienst tun kann",
-                "#What can be done at this service": "Was man bei diesem Dienst tun kann",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Sagen Sie uns für jede Tätigkeit, ob man sie bei diesem Dienst erledigen kann. Diese Antwort ist anonym und nicht mit Ihrem Profil verknüpft.",
-                "#What can people do at this service?": "Was kann man bei diesem Dienst tun?",
-                "#Can it be done here?": "Kann man das hier tun?",
-                "#Yes, it can be done here": "Ja, das kann man hier tun",
-                "#No, and I would like it to be possible here": "Nein, und ich würde mir wünschen, dass es hier möglich ist",
-                "#No": "Nein",
-                "#I don't know": "Ich weiß nicht",
-                "#Other": "Sonstiges",
-                "#Please specify": "Bitte angeben"
-              },
-              "tr": {
-                "code": "tr",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Bu hizmette neler yapılabilir",
-                "#What can be done at this service": "Bu hizmette neler yapılabilir",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Her etkinlik için bu hizmette yapılıp yapılamayacağını bize söyleyin. Bu yanıt anonimdir ve profilinizle ilişkilendirilmez.",
-                "#What can people do at this service?": "Bu hizmette insanlar neler yapabilir?",
-                "#Can it be done here?": "Burada yapılabilir mi?",
-                "#Yes, it can be done here": "Evet, burada yapılabilir",
-                "#No, and I would like it to be possible here": "Hayır ama burada yapılabilmesini isterim",
-                "#No": "Hayır",
-                "#I don't know": "Bilmiyorum",
-                "#Other": "Diğer",
-                "#Please specify": "Lütfen belirtin"
-              },
-              "fa": {
-                "code": "fa",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - در این خدمت چه کارهایی می‌توان انجام داد",
-                "#What can be done at this service": "در این خدمت چه کارهایی می‌توان انجام داد",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "برای هر فعالیت به ما بگویید آیا می‌توان آن را در این خدمت انجام داد. این پاسخ ناشناس است و به نمایه‌ی شما مرتبط نمی‌شود.",
-                "#What can people do at this service?": "مردم در این خدمت چه کارهایی می‌توانند انجام دهند؟",
-                "#Can it be done here?": "آیا اینجا می‌توان انجامش داد؟",
-                "#Yes, it can be done here": "بله، اینجا می‌توان انجامش داد",
-                "#No, and I would like it to be possible here": "نه، و دوست دارم اینجا امکان‌پذیر باشد",
-                "#No": "نه",
-                "#I don't know": "نمی‌دانم",
-                "#Other": "سایر",
-                "#Please specify": "لطفاً مشخص کنید"
-              },
-              "hu": {
-                "code": "hu",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - Mit lehet intézni ennél a szolgáltatásnál",
-                "#What can be done at this service": "Mit lehet intézni ennél a szolgáltatásnál",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "Minden tevékenységnél mondja el, hogy elvégezhető-e ennél a szolgáltatásnál. Ez a válasz névtelen, és nincs összekapcsolva a profiljával.",
-                "#What can people do at this service?": "Mit lehet intézni ennél a szolgáltatásnál?",
-                "#Can it be done here?": "Elvégezhető itt?",
-                "#Yes, it can be done here": "Igen, itt elvégezhető",
-                "#No, and I would like it to be possible here": "Nem, de szeretném, ha itt lehetséges lenne",
-                "#No": "Nem",
-                "#I don't know": "Nem tudom",
-                "#Other": "Egyéb",
-                "#Please specify": "Kérjük, pontosítsa"
-              },
-              "ar": {
-                "code": "ar",
-                "#SmartUrbanity - What can be done at this service": "SmartUrbanity - ما الذي يمكن فعله في هذه الخدمة",
-                "#What can be done at this service": "ما الذي يمكن فعله في هذه الخدمة",
-                "#For each activity, tell us whether people can do it at this service. This answer is anonymous and is not linked to your profile.": "لكل نشاط، أخبرنا ما إذا كان يمكن القيام به في هذه الخدمة. هذه الإجابة مجهولة الهوية وغير مرتبطة بملفك الشخصي.",
-                "#What can people do at this service?": "ما الذي يمكن للناس فعله في هذه الخدمة؟",
-                "#Can it be done here?": "هل يمكن القيام به هنا؟",
-                "#Yes, it can be done here": "نعم، يمكن القيام به هنا",
-                "#No, and I would like it to be possible here": "لا، وأودّ أن يكون ذلك ممكنًا هنا",
-                "#No": "لا",
-                "#I don't know": "لا أعرف",
-                "#Other": "أخرى",
-                "#Please specify": "يرجى التحديد"
-              }
-            }
-          },
-          "source": {
-            "repository": "smarturbanity/smarturbanity-configuration",
-            "revision": "23a3fe155a8849dc6980fe4223c442a9b38fb79a",
-            "path": "forms/locationReports/smarturbanity_service.json"
-          }
-        }
-      ]
-    }
+    "project": "SmartUrbanity"
   },
   "row_sources": {},
   "languages": {
