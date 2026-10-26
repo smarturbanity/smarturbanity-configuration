@@ -7,3 +7,5 @@ Research content is preserved from d96895ed91c1e7adcc6ec41b284ea18717df047b for 
 Surveys match the common/main baseline exactly, including wording, answer keys, required flags and versions. The service-creation form is explicitly catalogued. Human content review remains pending; no main mutation or publication.
 
 Validation: no forms/surveys differences against common migration; standalone schema and pool-reference checks plus independent final review are required before handoff.
+
+Independent acceptance: all 13 non-survey documents match the preserved source content, surveys are byte-identical to the common migration, and all question references resolve in immutable PlanEasy history. The historical post-trip snapshot records its source commit and actual source timestamp. JSON, schema, branch-boundary and source-equivalence checks passed; human content acceptance remains pending.
