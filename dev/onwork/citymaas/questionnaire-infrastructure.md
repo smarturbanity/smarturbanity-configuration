@@ -9,3 +9,5 @@ Full and simple privacy links inherit from the pilot instead of obsolete manifes
 Verification: bank build check; deep comparison of every baseline form ignoring only legacy_answer_keys; provenance SHA256; campaign and relative manifest references; independent read-only review. Migration of executable bank tools into CityMaaS is in progress. No base integration or remote deletion is authorized. Lory explicitly authorized deletion of the three named original LOCAL branches only after verification; original remote branches stay available.
 
 Human review remains pending. No claim of publication or production deployment.
+
+Final delivery:245 reusable definitions are canonical in PlanEasy;20 baseline-specific definitions and21 flows here. Runtime loads complete forms/*.json, not the pool; tools live in CityMaaS. legacy_answer_keys removed for the fresh collection; pilot supplies consent version and distinct full/simple notice links. Source local branches removed after replacement equivalence checks; remote originals unchanged.
