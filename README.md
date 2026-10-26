@@ -15,20 +15,11 @@ The repository follows three main principles:
 
 Applications should consume these configuration files rather than maintain independent copies of SmartUrbanity definitions.
 
-## Question bank and questionnaire flows
+## Questionnaires and shared question pool
 
-`questionBank/questions/<id>.json` gives each questionnaire question
-one catalog file named exactly by its ID (`<lowercase project>.<answer_key>`). It includes translations,
-source questionnaire provenance and any explicit wording variants. The files in
-`questionBank/flows/` compose questions into ordered, conditional questionnaires.
-For the current applications, `node questionBank/build.mjs` generates the legacy
-`forms/` JSON; `node questionBank/build.mjs --check` verifies that it matches.
-The primary exchange format is one autonomous JSON file **per questionnaire**,
-containing its question definitions and single flow; `questionBank/collection.mjs`
-packs or imports it. The
-legacy per-questionnaire JSON remains a compiled output for current applications.
-See [questionBank/README.md](questionBank/README.md) for the format and editing
-workflow.
+Applications load complete standalone JSON questionnaires from forms/. Reusable question definitions are canonical in the PlanEasy crowdsourcing framework questionBank. SmartUrbanity owns its specific definitions and questionnaire flows, and generated feed/review snapshots are portable preparation artifacts.
+
+CityMaaS owns the editor and executable tools; see [questionBank/README.md](questionBank/README.md) for preparation and validation.
 
 ## Questionnaire privacy labels
 
