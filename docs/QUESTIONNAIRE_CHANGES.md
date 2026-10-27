@@ -4,6 +4,18 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Version 3.0.0 alignment (2026-10-26)
+
+Every SmartUrbanity survey, trip survey and location report now declares
+`questionnaire_version` 3.0.0, and the application manifests select 3.0.0. The
+version marks the move of question ownership to the shared PlanEasy question pool:
+questions carry neutral `question_id`s pinned to exact semantic question versions,
+privacy classification is declared on the question (option-level
+`special_category` is removed) and `gdpr_link` points to the SmartUrbanity privacy
+notice. Stored answer keys, question types and option values are unchanged from
+the previous versions, so responses remain comparable across this boundary; the
+new `smarturbanity_service` form has no earlier version.
+
 ## Street crossing control (2026-10-21)
 
 `street_connection_assessment` 0.7.0 removes the repeated regulation choice from
