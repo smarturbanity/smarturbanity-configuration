@@ -79,7 +79,10 @@
         el.style.display = languages.includes(displayLang) ? visibleDisplay : "none";
       });
 
-      if (main) main.setAttribute("lang", l);
+      if (main) {
+        main.setAttribute("lang", displayLang);
+        main.dir = RIGHT_TO_LEFT.has(displayLang) ? "rtl" : "ltr";
+      }
       let note = document.getElementById("language-fallback-note");
       if (main && displayLang !== l) {
         if (!note) {
@@ -124,7 +127,8 @@
 
   async function loadTemplate() {
     const html = await fetchLocal(FILES.template);
-    if (!html) return;
+    // Without the template the page still needs one visible language.
+    if (!html) return window.initLangToggle();
 
     const parser = new DOMParser();
     const tpl = parser.parseFromString(html, "text/html");
@@ -137,8 +141,10 @@
     const footer = tpl.querySelector("footer");
 
     // The template's own header and footer nodes are copied, never reparsed as an HTML string.
-    if (header) document.getElementById("smarturbanity-header").replaceChildren(document.importNode(header, true));
-    if (footer) document.getElementById("smarturbanity-footer").replaceChildren(document.importNode(footer, true));
+    const headerMount = document.getElementById("smarturbanity-header");
+    const footerMount = document.getElementById("smarturbanity-footer");
+    if (header && headerMount) headerMount.replaceChildren(document.importNode(header, true));
+    if (footer && footerMount) footerMount.replaceChildren(document.importNode(footer, true));
 
     window.initLangToggle();
   }
