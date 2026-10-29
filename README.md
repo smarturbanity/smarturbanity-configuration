@@ -40,9 +40,9 @@ consent, restrict access or redact exports. The legal treatment and application
 controls need separate review.
 See [GDPR Article 9](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679).
 
-This new collection uses canonical answer keys without historical answer aliases.
-The form's `questionnaire_version` and each question's `question_id` and
-`question_version` identify the content reviewed and used for collection.
+Forms use canonical answer keys. The form's `questionnaire_version` and each
+question's `question_id` and `question_version` identify the content reviewed and
+used for collection.
 
 ## Repository structure
 
@@ -87,13 +87,9 @@ The structure may evolve as additional SmartUrbanity configuration domains are i
 
 `manifests/smarturbanity.json` configures the Access Lab and citizen installations;
 `manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
-CityMaaS loads these manifests from this repository. Their nested source URLs are
-temporarily pinned to commit `bede6a3b769f1ee1ac92bf6340bd9fc2747c3b9d`, the
-configuration revision compatible with the currently deployed CityMaaS form
-versions. The `fallbackPath` values refer to the local debug checkout, when present;
-they do not cause that checkout to be included in a deployment. Advance the pinned
-source URLs with the CityMaaS form and participant-code support in one coordinated
-release.
+CityMaaS loads these manifests from this repository; their nested source URLs are
+relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
+when present; they do not cause that checkout to be included in a deployment.
 Each manifest also declares the compatible `forms/` catalog and the privacy notice
 links used by its installations. The Access Lab manifest overrides only the notice
 version and links; consent text and participant settings remain in `base.json` and
@@ -234,15 +230,14 @@ Every form is self-standing: it asks its own context questions (point of view, h
 
 The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), for a street crossing how it is controlled (`crossing_kind`) and who it is for (`crossing_users`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition. `crossing_kind` and `crossing_users` declare `prefill_from`, so with a known element attribute they cost one confirmation each.
 
-### Prefill from element attributes
+For street-level connections the minimum also asks what happens at a traffic light
+(`traffic_control`, for `crossing_kind=signal`) and whether a refuge island is present
+(`refuge_island`), both required with an explicit unknown answer. The minimum's total
+varies with the selected modes and connection type; clients derive it from the
+applicable questions. Signal-call, audible-signal, waiting-time and green-time details
+are behind `continue_audit=yes_audit`.
 
-From connection assessment 0.5.0, the minimum also asks the existing detailed
-traffic-control distinction and whether a refuge island is present, for
-street-level connections only. Both are required with an explicit unknown answer.
-The minimum's total varies with the selected modes and connection type; clients
-must derive it from applicable questions rather than promise eight questions.
-Signal-call, audible-signal, waiting-time and green-time details remain behind
-`continue_audit=yes_audit`. See the versioned change record before comparing rounds.
+### Prefill from element attributes
 
 A question of a form that assesses a mapped element may declare `"prefill_from": "element.<attribute>"`. The value comes from that attribute of the assessed element (the response `entity`) as exposed by the spatial database, today the mock and later the server. The database merges several sources, among them OpenStreetMap; a form never names a source tag such as `osm.crossing`, because mapping a source to an attribute belongs to the database import.
 
@@ -413,7 +408,7 @@ Individual configuration objects may additionally expose explicit schema or conf
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
 
-Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. [docs/QUESTIONNAIRE_CHANGES.md](docs/QUESTIONNAIRE_CHANGES.md) lists the keys, options and conditions each form version changes. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
+Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
 
 ## Scope
 
