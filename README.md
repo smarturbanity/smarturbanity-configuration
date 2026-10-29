@@ -305,11 +305,9 @@ This repository holds only their address and version:
 CityMaaS composes the paths from `citymaas/smarturbanity-privacy-website` on; pin a
 commit with this layout only together with that CityMaaS version.
 
-`docs/privacy-smarturbanity.html`, `docs/privacy-access-lab.html` and
-`docs/privacy-simple-smarturbanity.html` are redirect stubs without content: GitHub
-Pages still serves them to installations pinned to an older commit, and
-`docs/assets/notice-redirect.js` sends them to the website address read from
-`base.json` on `main`. Remove them once no installation pins an older commit.
+Installations pinned to a commit before this layout open the notices at
+`smarturbanity.github.io/smarturbanity-configuration/`, which this repository no longer
+publishes: move their pin together with this change.
 
 `participant_code_destination` describes the service that returns the pseudonymous
 participant code. The client sends the participant identifier or an account token
