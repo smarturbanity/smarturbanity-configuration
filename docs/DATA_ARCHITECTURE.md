@@ -25,7 +25,7 @@ Responses can be stored, synchronized, or exported using the same schema
 across **Local**, **Firestore**, and **MongoDB** databases.
 
 > For details on privacy, consent, and GDPR compliance, see  
-> [Privacy and Consent Guidelines](PRIVACY_GUIDELINES.md).
+> the Privacy and Consent Guidelines on the SmartUrbanity website (`privacy/PRIVACY_GUIDELINES.md`).
 
 
 ---
