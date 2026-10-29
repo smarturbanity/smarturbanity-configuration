@@ -90,10 +90,9 @@ The structure may evolve as additional SmartUrbanity configuration domains are i
 CityMaaS loads these manifests from this repository; their nested source URLs are
 relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
 when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog and the privacy notice
-links used by its installations. The Access Lab manifest overrides only the notice
-version and links; consent text and participant settings remain in `base.json` and
-the selected pilot. A deployed installation requires the online sources because it
+Each manifest also declares the compatible `forms/` catalog. Manifests declare no
+privacy notice: their `questionnaires.consent` is the installation layer, which
+would override the notice of the loaded pilot. A deployed installation requires the online sources because it
 does not bundle this repository as a fallback.
 
 ## Shared definitions
@@ -294,11 +293,14 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
-Each pilot may provide its own privacy notice and consent version. Rome declares
-`pilots/rome/privacy/privacy.html` under `questionnaires.consent.privacy_link` and
-its shorter summary at `pilots/rome/privacy/privacy-short.html`. A relative link is
-resolved from the repository root, including when the configuration is served
-offline. The Rome notice and consent version are drafts pending controller review.
+#### Privacy notices
+
+This repository holds no privacy documents or notice links. The notices, their
+versions and the privacy guidelines live on the SmartUrbanity website, which lists
+each pilot's notices in `pilot/<pilot>/privacy.json` and the common ones in
+`privacy/privacy.json`. `base.json` names the website once, as the top-level
+`website_url` (temporarily `experimental-website.wemolab.eu`); the applications read
+the lists from there for the loaded `pilot_id`.
 
 `participant_code_destination` describes the service that returns the pseudonymous
 participant code. The client sends the participant identifier or an account token
