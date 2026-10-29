@@ -38,6 +38,10 @@ Differences from the Google Form:
   matching sections: each `task_*` question comes first, and its ease question
   (`history_detailed` for the history task) is asked only after a completed task
   (`show_if` task = `yes`), so the task questions are required;
+- the Google Form's points-per-distance question cannot be answered without knowing
+  what points are worth, so it is replaced by `points_calculation_clear` (is it clear
+  how the app calculates the points for a trip) and `points_collection_pace` (how
+  quickly points are collected, measured against the rewards on offer);
 - every other question is optional, as in the Google Form.
 
 ## Version 3.0.0 alignment (2026-10-26)
