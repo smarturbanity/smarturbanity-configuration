@@ -29,7 +29,11 @@ Differences from the Google Form:
   40–64, 65 and over), its «Femme»/«Homme» wording and its education options (primary
   school, upper secondary school, bachelor, master or doctorate); gender gains About
   You's «Other» answer and education loses «Prefer not to say», as in About You;
-- as in the Google Form, every question is optional.
+- the Google Form's final page of task results is distributed to the start of the
+  matching sections: each `task_*` question comes first, and its ease question
+  (`history_detailed` for the history task) is asked only after a completed task
+  (`show_if` task = `yes`), so the task questions are required;
+- every other question is optional, as in the Google Form.
 
 ## Version 3.0.0 alignment (2026-10-26)
 

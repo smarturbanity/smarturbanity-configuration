@@ -139,6 +139,36 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
+            "text": "Did you manage to create your account?",
+            "answer_key": "task_create_account",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_create_account_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_create_account": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to create an account?",
             "answer_key": "account_creation_ease",
             "question_type": "single_option",
@@ -164,6 +194,11 @@
                 "value": "very_easy"
               }
             ],
+            "show_if": {
+              "task_create_account": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -213,6 +248,36 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "text": "Did you manage to update your profile?",
+            "answer_key": "task_update_profile",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_update_profile_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_update_profile": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to update your profile?",
             "answer_key": "profile_update_ease",
             "question_type": "single_option",
@@ -238,6 +303,11 @@
                 "value": "very_easy"
               }
             ],
+            "show_if": {
+              "task_update_profile": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -250,6 +320,36 @@
               "profile_update_ease": [
                 "very_difficult",
                 "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Did you manage to reset your password?",
+            "answer_key": "task_reset_password",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_reset_password_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_reset_password": [
+                "no"
               ]
             },
             "required": false,
@@ -281,6 +381,11 @@
                 "value": "very_easy"
               }
             ],
+            "show_if": {
+              "task_reset_password": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -427,6 +532,36 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
+            "text": "Did you manage to complete the questionnaires before and after the activity?",
+            "answer_key": "task_trip_surveys",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_trip_surveys_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_trip_surveys": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Does the app support the travel modes or activities you usually use?",
             "answer_key": "modes_supported",
             "question_type": "single_option",
@@ -501,6 +636,36 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "text": "Did you manage to record a trip using at least two different travel modes?",
+            "answer_key": "task_multimodal_trip",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_multimodal_trip_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_multimodal_trip": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to switch from one travel mode to another during an activity?",
             "answer_key": "mode_switch_ease",
             "question_type": "single_option",
@@ -526,6 +691,11 @@
                 "value": "very_easy"
               }
             ],
+            "show_if": {
+              "task_multimodal_trip": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -579,6 +749,36 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "text": "Did you manage to understand all the information in your trip history?",
+            "answer_key": "task_understand_history",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_understand_history_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_understand_history": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Is the activity history detailed enough for your needs?",
             "answer_key": "history_detailed",
             "question_type": "single_option",
@@ -596,6 +796,11 @@
                 "value": "partly"
               }
             ],
+            "show_if": {
+              "task_understand_history": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -651,6 +856,36 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "text": "Did you manage to convert the points you collected?",
+            "answer_key": "task_convert_points",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": true,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_convert_points_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_convert_points": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to convert your points into rewards?",
             "answer_key": "points_conversion_ease",
             "question_type": "single_option",
@@ -676,6 +911,11 @@
                 "value": "very_easy"
               }
             ],
+            "show_if": {
+              "task_convert_points": [
+                "yes"
+              ]
+            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -811,223 +1051,6 @@
             "privacy_classification": "heightened_personal"
           }
         ]
-      },
-      {
-        "title": "Test tasks",
-        "description": "<p>For each task of the test, tell us whether you managed to complete it.</p>",
-        "backgroundColor": "#f0f0f0",
-        "questions": [
-          {
-            "text": "Did you manage to create your account?",
-            "answer_key": "task_create_account",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_create_account_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_create_account": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to update your profile?",
-            "answer_key": "task_update_profile",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_update_profile_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_update_profile": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to reset your password?",
-            "answer_key": "task_reset_password",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_reset_password_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_reset_password": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to complete the questionnaires before and after the activity?",
-            "answer_key": "task_trip_surveys",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_trip_surveys_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_trip_surveys": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to record a trip using at least two different travel modes?",
-            "answer_key": "task_multimodal_trip",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_multimodal_trip_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_multimodal_trip": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to convert the points you collected?",
-            "answer_key": "task_convert_points",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_convert_points_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_convert_points": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Did you manage to understand all the information in your trip history?",
-            "answer_key": "task_understand_history",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "What stopped you from completing it?",
-            "answer_key": "task_understand_history_issue",
-            "question_type": "textarea",
-            "show_if": {
-              "task_understand_history": [
-                "no"
-              ]
-            },
-            "required": false,
-            "privacy_classification": "heightened_personal"
-          }
-        ]
       }
     ]
   },
@@ -1141,8 +1164,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "Did you manage to record a trip using at least two different travel modes?",
       "#Did you manage to convert the points you collected?": "Did you manage to convert the points you collected?",
       "#Did you manage to understand all the information in your trip history?": "Did you manage to understand all the information in your trip history?",
-      "#Test tasks": "Test tasks",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>For each task of the test, tell us whether you managed to complete it.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together usability test",
       "#Access Together usability test": "Access Together usability test",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>",
@@ -1258,8 +1279,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "Avez-vous réussi à enregistrer un trajet en utilisant au moins deux modes de transport différents ?",
       "#Did you manage to convert the points you collected?": "Avez-vous réussi à convertir les points que vous avez collectés ?",
       "#Did you manage to understand all the information in your trip history?": "Avez-vous réussi à comprendre toutes les informations présentées dans l’historique de vos trajets ?",
-      "#Test tasks": "Tâches du test",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Pour chaque tâche du test, indiquez-nous si vous avez réussi à l’accomplir.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test d’utilisabilité d’Access Together",
       "#Access Together usability test": "Test d’utilisabilité d’Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Merci d’avoir testé Access Together. Répondez après avoir terminé les tâches du test : cela prend environ 8 minutes. Toutes les questions sont facultatives.</p>",
@@ -1375,8 +1394,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "Sei riuscito a registrare un viaggio usando almeno due modi di spostamento diversi?",
       "#Did you manage to convert the points you collected?": "Sei riuscito a convertire i punti che hai raccolto?",
       "#Did you manage to understand all the information in your trip history?": "Sei riuscito a capire tutte le informazioni nella cronologia dei tuoi viaggi?",
-      "#Test tasks": "Compiti del test",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Per ogni compito del test, dicci se sei riuscito a completarlo.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test di usabilità di Access Together",
       "#Access Together usability test": "Test di usabilità di Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Grazie per aver provato Access Together. Rispondi dopo aver completato i compiti del test: ci vogliono circa 8 minuti. Tutte le domande sono facoltative.</p>",
@@ -1492,8 +1509,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "Konnten Sie einen Weg mit mindestens zwei verschiedenen Verkehrsmitteln aufzeichnen?",
       "#Did you manage to convert the points you collected?": "Konnten Sie die gesammelten Punkte umwandeln?",
       "#Did you manage to understand all the information in your trip history?": "Konnten Sie alle Informationen in Ihrem Wegeverlauf verstehen?",
-      "#Test tasks": "Testaufgaben",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Sagen Sie uns für jede Testaufgabe, ob Sie sie erledigen konnten.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test der Benutzerfreundlichkeit von Access Together",
       "#Access Together usability test": "Test der Benutzerfreundlichkeit von Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Vielen Dank, dass Sie Access Together testen. Antworten Sie, nachdem Sie die Testaufgaben erledigt haben: Das dauert etwa 8 Minuten. Alle Fragen sind freiwillig.</p>",
@@ -1609,8 +1624,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "En az iki farklı ulaşım türü kullanarak bir yolculuk kaydedebildiniz mi?",
       "#Did you manage to convert the points you collected?": "Topladığınız puanları dönüştürebildiniz mi?",
       "#Did you manage to understand all the information in your trip history?": "Yolculuk geçmişinizdeki tüm bilgileri anlayabildiniz mi?",
-      "#Test tasks": "Test görevleri",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Testin her görevi için onu tamamlayıp tamamlayamadığınızı bize bildirin.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together kullanılabilirlik testi",
       "#Access Together usability test": "Access Together kullanılabilirlik testi",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Access Together'ı test ettiğiniz için teşekkür ederiz. Test görevlerini tamamladıktan sonra yanıtlayın: yaklaşık 8 dakika sürer. Tüm sorular isteğe bağlıdır.</p>",
@@ -1726,8 +1739,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "توانستید سفری را با دست‌کم دو شیوه سفر متفاوت ثبت کنید؟",
       "#Did you manage to convert the points you collected?": "توانستید امتیازهایی را که جمع کرده بودید تبدیل کنید؟",
       "#Did you manage to understand all the information in your trip history?": "توانستید همه اطلاعات سابقه سفرهایتان را بفهمید؟",
-      "#Test tasks": "وظایف آزمون",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>برای هر یک از وظایف آزمون، به ما بگویید آیا توانستید آن را انجام دهید.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - آزمون کاربردپذیری Access Together",
       "#Access Together usability test": "آزمون کاربردپذیری Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>از اینکه Access Together را آزمایش می‌کنید سپاسگزاریم. پس از انجام وظایف آزمون پاسخ دهید: حدود ۸ دقیقه طول می‌کشد. پاسخ به همه سؤال‌ها اختیاری است.</p>",
@@ -1843,8 +1854,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "Sikerült rögzítenie egy utat legalább két különböző közlekedési móddal?",
       "#Did you manage to convert the points you collected?": "Sikerült beváltania az összegyűjtött pontjait?",
       "#Did you manage to understand all the information in your trip history?": "Sikerült megértenie az utazási előzményeiben szereplő összes információt?",
-      "#Test tasks": "Tesztfeladatok",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>A teszt minden feladatánál mondja el, sikerült-e elvégeznie.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Az Access Together használhatósági tesztje",
       "#Access Together usability test": "Az Access Together használhatósági tesztje",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Köszönjük, hogy kipróbálja az Access Together alkalmazást. A tesztfeladatok elvégzése után válaszoljon: ez körülbelül 8 percet vesz igénybe. Minden kérdés megválaszolása önkéntes.</p>",
@@ -1960,8 +1969,6 @@
       "#Did you manage to record a trip using at least two different travel modes?": "هل تمكنت من تسجيل رحلة باستخدام وسيلتي تنقل مختلفتين على الأقل؟",
       "#Did you manage to convert the points you collected?": "هل تمكنت من تحويل النقاط التي جمعتها؟",
       "#Did you manage to understand all the information in your trip history?": "هل تمكنت من فهم جميع المعلومات في سجل رحلاتك؟",
-      "#Test tasks": "مهام الاختبار",
-      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>لكل مهمة من مهام الاختبار، أخبرنا هل تمكنت من إكمالها.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - اختبار سهولة استخدام Access Together",
       "#Access Together usability test": "اختبار سهولة استخدام Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>شكرًا لك على تجربة Access Together. أجب بعد إكمال مهام الاختبار: يستغرق ذلك حوالي 8 دقائق. جميع الأسئلة اختيارية.</p>",
