@@ -295,10 +295,10 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 
 #### Privacy notices
 
-This repository holds no privacy documents or notice links. The notices, their
-versions and the privacy guidelines live on the SmartUrbanity website, which lists
-each pilot's notices in `pilot/<pilot>/privacy.json` and the common ones in
-`privacy/privacy.json`. `base.json` names the website once, as the top-level
+This repository holds no privacy documents or notice links. Each pilot's notices, in
+the pilot's languages, their versions and the privacy guidelines live on the
+SmartUrbanity website, which lists each pilot's notices in `pilot/<pilot>/privacy.json`;
+there is no common notice. `base.json` names the website once, as the top-level
 `website_url` (temporarily `experimental-website.wemolab.eu`); the applications read
 the lists from there for the loaded `pilot_id`.
 
