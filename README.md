@@ -288,39 +288,28 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 
 #### Privacy notices
 
-The privacy notices are published on the SmartUrbanity website, one stable page per
-version; this repository holds only their address and version. Each consent records
-the link and version it accepted, so a published version never changes.
+Every privacy document lives on the SmartUrbanity website: the notices, one stable
+page per version, and the privacy and consent guidelines (`privacy/` and
+`pilot/<pilot>/privacy/` in `smarturbanity_website`, see its `privacy/README.md`).
+This repository holds only their address and version:
 
-`base.json` sets `questionnaires.consent.notice_base_url`, the website address, once.
-Every `privacy_link` (full notice) and `transparency_link` (notice in brief) is a path
-relative to it; `privacy_version` names the version the path points to:
+- `base.json` sets `questionnaires.consent.notice_base_url`, the website address, once.
+  It is temporary (`experimental-website.wemolab.eu`) and changes here only.
+- `privacy_link` (full notice), `transparency_link` (notice in brief) and
+  `privacy_version` name the common notice in `base.json` and each pilot's own notice
+  in `pilots/<pilot>/<pilot>.json`, as paths relative to `notice_base_url`. A pilot may
+  set its own `notice_base_url`.
+- A new notice version gets a new path and `privacy_version`; when it needs a new
+  consent, raise the consent `version` too. Forms carry no notice link.
 
-| File | `privacy_link` | `transparency_link` | `privacy_version` |
-|---|---|---|---|
-| `base.json` (common framework) | `privacy/smarturbanity/2.0.0-draft/privacy.html` | the same page, until a common notice in brief exists | `2.0.0-draft` |
-| `pilots/rome/rome.json` | `pilot/rome/privacy/2.0.0-draft/privacy.html` | `pilot/rome/privacy/2.0.0-draft/privacy-short.html` | `2.0.0-draft` |
+CityMaaS composes the paths from `citymaas/smarturbanity-privacy-website` on; pin a
+commit with this layout only together with that CityMaaS version.
 
-A pilot inherits `notice_base_url` and may set its own when its notices are hosted
-elsewhere. Other pilots add the same three keys to `pilots/<pilot>/<pilot>.json`,
-with their notices under `pilot/<pilot>/privacy/<version>/` on the website. A new
-notice version gets a new path and `privacy_version`; when it needs a new consent,
-raise the consent `version` too. Forms carry no notice link. The website address is
-temporary (`experimental-website.wemolab.eu`) and changes in `base.json` only.
-
-The application composes each path with `notice_base_url`; CityMaaS versions pinned
-before this layout read relative links differently, so move a pin to this layout
-together with the CityMaaS version that reads it. The Rome notice and consent
-version are drafts pending controller review.
-
-The pages formerly published here (`docs/privacy-smarturbanity.html`,
-`docs/privacy-access-lab.html`, `docs/privacy-simple-smarturbanity.html`, and the
-unpublished `pilots/rome/privacy/`) now redirect to the website through
-`docs/assets/notice-redirect.js`, which reads the address from `base.json` and the
-pilot file on `main`. Installations pinned to an earlier commit still open them;
-remove them once no installation pins such a commit. The texts shown there until
-16 October 2026 are archived on the website under `privacy/smarturbanity/1.0.0-draft/`
-and `privacy/access-lab/1.2.0-draft/`.
+`docs/privacy-smarturbanity.html`, `docs/privacy-access-lab.html` and
+`docs/privacy-simple-smarturbanity.html` are redirect stubs without content: GitHub
+Pages still serves them to installations pinned to an older commit, and
+`docs/assets/notice-redirect.js` sends them to the website address read from
+`base.json` on `main`. Remove them once no installation pins an older commit.
 
 `participant_code_destination` describes the service that returns the pseudonymous
 participant code. The client sends the participant identifier or an account token
