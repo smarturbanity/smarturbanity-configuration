@@ -90,10 +90,9 @@ The structure may evolve as additional SmartUrbanity configuration domains are i
 CityMaaS loads these manifests from this repository; their nested source URLs are
 relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
 when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog and the privacy notice
-links used by its installations. The Access Lab manifest overrides only the notice
-version and links; consent text and participant settings remain in `base.json` and
-the selected pilot. A deployed installation requires the online sources because it
+Each manifest also declares the compatible `forms/` catalog. Manifests declare no
+privacy notice: their `questionnaires.consent` is the installation layer, which
+would override the notice of the loaded pilot. A deployed installation requires the online sources because it
 does not bundle this repository as a fallback.
 
 ## Shared definitions
@@ -287,11 +286,41 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
-Each pilot may provide its own privacy notice and consent version. Rome declares
-`pilots/rome/privacy/privacy.html` under `questionnaires.consent.privacy_link` and
-its shorter summary at `pilots/rome/privacy/privacy-short.html`. A relative link is
-resolved from the repository root, including when the configuration is served
-offline. The Rome notice and consent version are drafts pending controller review.
+#### Privacy notices
+
+The privacy notices are published on the SmartUrbanity website, one stable page per
+version; this repository holds only their address and version. Each consent records
+the link and version it accepted, so a published version never changes.
+
+`base.json` sets `questionnaires.consent.notice_base_url`, the website address, once.
+Every `privacy_link` (full notice) and `transparency_link` (notice in brief) is a path
+relative to it; `privacy_version` names the version the path points to:
+
+| File | `privacy_link` | `transparency_link` | `privacy_version` |
+|---|---|---|---|
+| `base.json` (common framework) | `privacy/smarturbanity/2.0.0-draft/privacy.html` | the same page, until a common notice in brief exists | `2.0.0-draft` |
+| `pilots/rome/rome.json` | `pilot/rome/privacy/2.0.0-draft/privacy.html` | `pilot/rome/privacy/2.0.0-draft/privacy-short.html` | `2.0.0-draft` |
+
+A pilot inherits `notice_base_url` and may set its own when its notices are hosted
+elsewhere. Other pilots add the same three keys to `pilots/<pilot>/<pilot>.json`,
+with their notices under `pilot/<pilot>/privacy/<version>/` on the website. A new
+notice version gets a new path and `privacy_version`; when it needs a new consent,
+raise the consent `version` too. Forms carry no notice link. The website address is
+temporary (`experimental-website.wemolab.eu`) and changes in `base.json` only.
+
+The application composes each path with `notice_base_url`; CityMaaS versions pinned
+before this layout read relative links differently, so move a pin to this layout
+together with the CityMaaS version that reads it. The Rome notice and consent
+version are drafts pending controller review.
+
+The pages formerly published here (`docs/privacy-smarturbanity.html`,
+`docs/privacy-access-lab.html`, `docs/privacy-simple-smarturbanity.html`, and the
+unpublished `pilots/rome/privacy/`) now redirect to the website through
+`docs/assets/notice-redirect.js`, which reads the address from `base.json` and the
+pilot file on `main`. Installations pinned to an earlier commit still open them;
+remove them once no installation pins such a commit. The texts shown there until
+16 October 2026 are archived on the website under `privacy/smarturbanity/1.0.0-draft/`
+and `privacy/access-lab/1.2.0-draft/`.
 
 `participant_code_destination` describes the service that returns the pseudonymous
 participant code. The client sends the participant identifier or an account token
