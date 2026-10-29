@@ -4,6 +4,28 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Access Together usability test (2026-10-29)
+
+New form `smarturbanity_access_together_usability` 1.0.0 in `forms/usabilityTests/`,
+from the French Google Form «Questionnaire test d'utilisabilité Access Together». It has
+no earlier version. Its questions are not in the shared question pool yet. English,
+French and Italian are provided; the other languages fall back to English.
+
+Differences from the Google Form:
+
+- the consent and email questions are removed, because the application's common
+  eligibility screen already asks them;
+- every rating scale runs from negative to positive (the clarity scale was reversed);
+- «Moyenement» is corrected to «Moyennement» (`partly`);
+- «Autre» on a rating scale becomes one optional comment per section, because a free
+  answer cannot replace a rating; the reward category keeps «Other» with free text;
+- «Je ne sais pas» and «Je ne souhaite pas le préciser» use the application's
+  `add_i_dont_know` and `add_prefer_not_to_say` answers;
+- as in the Google Form, every question is optional.
+
+The age bands keep the Google Form's 15–24 band, while `ask_adult` limits respondents
+to adults: this is open.
+
 ## Version 3.0.0 alignment (2026-10-26)
 
 Every SmartUrbanity survey, trip survey and location report now declares

@@ -59,7 +59,8 @@ smarturbanity-configuration/
 ├── forms/
 │   ├── surveys/
 │   ├── tripSurveys/
-│   └── locationReports/
+│   ├── locationReports/
+│   └── usabilityTests/
 │
 ├── manifests/
 │   ├── smarturbanity.json
@@ -215,10 +216,13 @@ Current form families include:
 forms/
 ├── surveys/
 ├── tripSurveys/
-└── locationReports/
+├── locationReports/
+└── usabilityTests/
 ```
 
 Forms can include questionnaires concerning user characteristics, daily mobility, travel experience and individual transport modes, as well as trip-related and geolocated reporting workflows.
+
+`usabilityTests/` holds questionnaires completed after a moderated usability test of an application. Their questions are not yet in the shared question pool, so they carry no `question_id` or `question_version`, and they are offered only through a campaign.
 
 A form definition should describe the form itself, while its availability can depend on the runtime context.
 
