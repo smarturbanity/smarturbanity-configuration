@@ -113,6 +113,13 @@ Shared definitions provide stable identifiers and common semantics across applic
 
 Pilot-specific variations should normally extend, restrict or override these definitions rather than duplicate the complete shared catalogue.
 
+`definitions/question_review_tags.json` holds the tags reviewers give each question in the CityMaaS Admin Portal Question review, besides status and priority:
+
+- `purposes`: why SmartUrbanity asks the question, for example the calibration of perceived costs or a monitoring indicator;
+- `pilots`: the pilots that need the question; no pilot means every pilot.
+
+A question can carry several tags in each group. Labels are `#` tags translated in the file's `languages`, in the eight form languages. A purpose added from the Admin Portal stays in the review working copies and exports, marked as not yet in configuration, until it is added here. The tags are SmartUrbanity review metadata and never enter the shared PlanEasy question pool. Budapest replicates the apps but is not a pilot, so it is not listed.
+
 ## Pilot configuration
 
 `pilots/` contains the configuration specific to each SmartUrbanity pilot.
