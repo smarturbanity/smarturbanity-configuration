@@ -24,7 +24,7 @@
     "sections": [
       {
         "title": "About you",
-        "description": "<p>A few questions to describe who took part in the test.</p>",
+        "description": "<p>Some general information about you, used only to describe the group of people who tested the app.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -135,7 +135,7 @@
       },
       {
         "title": "Account and profile",
-        "description": "<p>How easy it was to create and manage your account.</p>",
+        "description": "<p>Creating your account, updating your profile and resetting your password.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -169,6 +169,19 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What made creating an account difficult?",
+            "answer_key": "account_creation_ease_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "account_creation_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Are any fields of the sign-up form unclear or confusing?",
             "answer_key": "signup_fields_unclear",
             "question_type": "single_option",
@@ -186,6 +199,18 @@
             "add_i_dont_know": true,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Which fields were unclear, and why?",
+            "answer_key": "signup_fields_unclear_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "signup_fields_unclear": [
+                "yes"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How easy is it to update your profile?",
@@ -218,6 +243,19 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What made updating your profile difficult?",
+            "answer_key": "profile_update_ease_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "profile_update_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to reset your password?",
             "answer_key": "password_reset_ease",
             "question_type": "single_option",
@@ -248,9 +286,15 @@
             "privacy_classification": "personal_data"
           },
           {
-            "text": "Any other remarks on these features?",
-            "answer_key": "account_comments",
+            "text": "What made resetting your password difficult?",
+            "answer_key": "password_reset_ease_issue",
             "question_type": "textarea",
+            "show_if": {
+              "password_reset_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
             "required": false,
             "privacy_classification": "heightened_personal"
           }
@@ -258,7 +302,7 @@
       },
       {
         "title": "Interface",
-        "description": "<p>How the app looks and what it asks to access.</p>",
+        "description": "<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -292,6 +336,19 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "Which texts or icons were hard to understand?",
+            "answer_key": "texts_icons_clarity_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "texts_icons_clarity": [
+                "very_hard",
+                "rather_hard"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How would you describe the overall layout of the interface?",
             "answer_key": "layout",
             "question_type": "single_option",
@@ -318,6 +375,20 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What would you change in the layout?",
+            "answer_key": "layout_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "layout": [
+                "very_cluttered",
+                "rather_cluttered",
+                "too_simple"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?",
             "answer_key": "permissions_reasonable",
             "question_type": "single_option",
@@ -337,9 +408,14 @@
             "privacy_classification": "personal_data"
           },
           {
-            "text": "Any other remarks on these features?",
-            "answer_key": "interface_comments",
+            "text": "Which permissions seem unnecessary, and why?",
+            "answer_key": "permissions_reasonable_issue",
             "question_type": "textarea",
+            "show_if": {
+              "permissions_reasonable": [
+                "no"
+              ]
+            },
             "required": false,
             "privacy_classification": "heightened_personal"
           }
@@ -347,7 +423,7 @@
       },
       {
         "title": "Recording trips",
-        "description": "<p>Recording your trips and reading the results.</p>",
+        "description": "<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -368,6 +444,18 @@
             "add_i_dont_know": true,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Which travel modes or activities are missing?",
+            "answer_key": "modes_supported_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "modes_supported": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How easy is it to record activities with the app?",
@@ -400,6 +488,19 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What made recording activities difficult?",
+            "answer_key": "tracking_ease_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "tracking_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "How easy is it to switch from one travel mode to another during an activity?",
             "answer_key": "mode_switch_ease",
             "question_type": "single_option",
@@ -430,6 +531,19 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What made switching travel mode difficult?",
+            "answer_key": "mode_switch_ease_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "mode_switch_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Are the results and impact summaries (emissions) useful and easy to understand?",
             "answer_key": "impact_results_useful",
             "question_type": "single_option",
@@ -450,6 +564,19 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What would make the results more useful or easier to understand?",
+            "answer_key": "impact_results_useful_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "impact_results_useful": [
+                "no",
+                "partly"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Is the activity history detailed enough for your needs?",
@@ -474,9 +601,15 @@
             "privacy_classification": "personal_data"
           },
           {
-            "text": "Any other remarks on these features?",
-            "answer_key": "tracking_comments",
+            "text": "What is missing from the activity history?",
+            "answer_key": "history_detailed_issue",
             "question_type": "textarea",
+            "show_if": {
+              "history_detailed": [
+                "no",
+                "partly"
+              ]
+            },
             "required": false,
             "privacy_classification": "heightened_personal"
           }
@@ -484,7 +617,7 @@
       },
       {
         "title": "Points and rewards",
-        "description": "<p>Collecting points and converting them into rewards.</p>",
+        "description": "<p>How you earn points while travelling and turn them into rewards.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -504,6 +637,18 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "How should points be given instead?",
+            "answer_key": "points_per_distance_reasonable_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "points_per_distance_reasonable": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "How easy is it to convert your points into rewards?",
@@ -534,6 +679,19 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What made converting points difficult?",
+            "answer_key": "points_conversion_ease_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "points_conversion_ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Which category of rewards interests you most?",
@@ -577,19 +735,12 @@
             },
             "required": false,
             "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Any other remarks on these features?",
-            "answer_key": "rewards_comments",
-            "question_type": "textarea",
-            "required": false,
-            "privacy_classification": "heightened_personal"
           }
         ]
       },
       {
         "title": "Overall",
-        "description": "<p>Your overall opinion of the app.</p>",
+        "description": "<p>What you think of the app as a whole.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -663,7 +814,7 @@
       },
       {
         "title": "Test tasks",
-        "description": "<p>Tell us which test tasks you managed to complete.</p>",
+        "description": "<p>For each task of the test, tell us whether you managed to complete it.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
@@ -685,6 +836,18 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_create_account_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_create_account": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Did you manage to update your profile?",
             "answer_key": "task_update_profile",
             "question_type": "single_option",
@@ -701,6 +864,18 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_update_profile_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_update_profile": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Did you manage to reset your password?",
@@ -721,6 +896,18 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_reset_password_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_reset_password": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Did you manage to complete the questionnaires before and after the activity?",
             "answer_key": "task_trip_surveys",
             "question_type": "single_option",
@@ -737,6 +924,18 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_trip_surveys_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_trip_surveys": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           },
           {
             "text": "Did you manage to record a trip using at least two different travel modes?",
@@ -757,6 +956,18 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_multimodal_trip_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_multimodal_trip": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Did you manage to convert the points you collected?",
             "answer_key": "task_convert_points",
             "question_type": "single_option",
@@ -775,6 +986,18 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_convert_points_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_convert_points": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Did you manage to understand all the information in your trip history?",
             "answer_key": "task_understand_history",
             "question_type": "single_option",
@@ -791,6 +1014,18 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_understand_history_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "task_understand_history": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
           }
         ]
       }
@@ -825,40 +1060,53 @@
       "#Doctorate degree": "Doctorate degree",
       "#What is your highest completed level of education?": "What is your highest completed level of education?",
       "#About you": "About you",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>A few questions to describe who took part in the test.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Some general information about you, used only to describe the group of people who tested the app.</p>",
       "#How easy is it to create an account?": "How easy is it to create an account?",
+      "#What made creating an account difficult?": "What made creating an account difficult?",
       "#Yes": "Yes",
       "#No": "No",
       "#Are any fields of the sign-up form unclear or confusing?": "Are any fields of the sign-up form unclear or confusing?",
+      "#Which fields were unclear, and why?": "Which fields were unclear, and why?",
       "#How easy is it to update your profile?": "How easy is it to update your profile?",
+      "#What made updating your profile difficult?": "What made updating your profile difficult?",
       "#How easy is it to reset your password?": "How easy is it to reset your password?",
-      "#Any other remarks on these features?": "Any other remarks on these features?",
+      "#What made resetting your password difficult?": "What made resetting your password difficult?",
       "#Account and profile": "Account and profile",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>How easy it was to create and manage your account.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>Creating your account, updating your profile and resetting your password.</p>",
       "#Very difficult to understand": "Very difficult to understand",
       "#Rather difficult to understand": "Rather difficult to understand",
       "#Neither clear nor unclear": "Neither clear nor unclear",
       "#Rather clear": "Rather clear",
       "#Very clear": "Very clear",
       "#How clear and easy to understand are the texts and icons of the app?": "How clear and easy to understand are the texts and icons of the app?",
+      "#Which texts or icons were hard to understand?": "Which texts or icons were hard to understand?",
       "#Very cluttered": "Very cluttered",
       "#Rather cluttered": "Rather cluttered",
       "#Well structured and clear": "Well structured and clear",
       "#Too simple": "Too simple",
       "#How would you describe the overall layout of the interface?": "How would you describe the overall layout of the interface?",
+      "#What would you change in the layout?": "What would you change in the layout?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?",
+      "#Which permissions seem unnecessary, and why?": "Which permissions seem unnecessary, and why?",
       "#Interface": "Interface",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>How the app looks and what it asks to access.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>",
       "#Does the app support the travel modes or activities you usually use?": "Does the app support the travel modes or activities you usually use?",
+      "#Which travel modes or activities are missing?": "Which travel modes or activities are missing?",
       "#How easy is it to record activities with the app?": "How easy is it to record activities with the app?",
+      "#What made recording activities difficult?": "What made recording activities difficult?",
       "#How easy is it to switch from one travel mode to another during an activity?": "How easy is it to switch from one travel mode to another during an activity?",
+      "#What made switching travel mode difficult?": "What made switching travel mode difficult?",
       "#Partly": "Partly",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "Are the results and impact summaries (emissions) useful and easy to understand?",
+      "#What would make the results more useful or easier to understand?": "What would make the results more useful or easier to understand?",
       "#Is the activity history detailed enough for your needs?": "Is the activity history detailed enough for your needs?",
+      "#What is missing from the activity history?": "What is missing from the activity history?",
       "#Recording trips": "Recording trips",
-      "#<p>Recording your trips and reading the results.</p>": "<p>Recording your trips and reading the results.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Is the number of points given for the distance travelled reasonable?",
+      "#How should points be given instead?": "How should points be given instead?",
       "#How easy is it to convert your points into rewards?": "How easy is it to convert your points into rewards?",
+      "#What made converting points difficult?": "What made converting points difficult?",
       "#Transport and mobility": "Transport and mobility",
       "#Food and drinks": "Food and drinks",
       "#Shopping": "Shopping",
@@ -869,7 +1117,7 @@
       "#Which other category?": "Which other category?",
       "#Which category of rewards interests you most?": "Which category of rewards interests you most?",
       "#Points and rewards": "Points and rewards",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>Collecting points and converting them into rewards.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>How you earn points while travelling and turn them into rewards.</p>",
       "#Not at all useful": "Not at all useful",
       "#Slightly useful": "Slightly useful",
       "#Moderately useful": "Moderately useful",
@@ -884,8 +1132,9 @@
       "#Would you consider using this app if it were available?": "Would you consider using this app if it were available?",
       "#Do you have any recommendations to improve this tool?": "Do you have any recommendations to improve this tool?",
       "#Overall": "Overall",
-      "#<p>Your overall opinion of the app.</p>": "<p>Your overall opinion of the app.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>What you think of the app as a whole.</p>",
       "#Did you manage to create your account?": "Did you manage to create your account?",
+      "#What stopped you from completing it?": "What stopped you from completing it?",
       "#Did you manage to update your profile?": "Did you manage to update your profile?",
       "#Did you manage to reset your password?": "Did you manage to reset your password?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Did you manage to complete the questionnaires before and after the activity?",
@@ -893,7 +1142,7 @@
       "#Did you manage to convert the points you collected?": "Did you manage to convert the points you collected?",
       "#Did you manage to understand all the information in your trip history?": "Did you manage to understand all the information in your trip history?",
       "#Test tasks": "Test tasks",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Tell us which test tasks you managed to complete.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>For each task of the test, tell us whether you managed to complete it.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together usability test",
       "#Access Together usability test": "Access Together usability test",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>",
@@ -928,40 +1177,53 @@
       "#Doctorate degree": "Doctorat",
       "#What is your highest completed level of education?": "Quel est le niveau d’études le plus élevé que vous avez terminé ?",
       "#About you": "À propos de vous",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>Quelques questions pour décrire les personnes qui ont participé au test.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Quelques informations générales sur vous, utilisées uniquement pour décrire le groupe de personnes qui ont testé l’application.</p>",
       "#How easy is it to create an account?": "Dans quelle mesure le processus de création de compte vous semble-t-il facile ?",
+      "#What made creating an account difficult?": "Qu’est-ce qui a rendu la création du compte difficile ?",
       "#Yes": "Oui",
       "#No": "Non",
       "#Are any fields of the sign-up form unclear or confusing?": "Y a-t-il des champs dans le formulaire d’inscription qui semblent peu clairs ou prêtant à confusion ?",
+      "#Which fields were unclear, and why?": "Quels champs étaient peu clairs, et pourquoi ?",
       "#How easy is it to update your profile?": "Dans quelle mesure est-il facile de mettre à jour votre profil ?",
+      "#What made updating your profile difficult?": "Qu’est-ce qui a rendu la mise à jour de votre profil difficile ?",
       "#How easy is it to reset your password?": "Dans quelle mesure le processus de réinitialisation du mot de passe vous semble-t-il facile ?",
-      "#Any other remarks on these features?": "Avez-vous d’autres remarques sur ces fonctionnalités ?",
+      "#What made resetting your password difficult?": "Qu’est-ce qui a rendu la réinitialisation du mot de passe difficile ?",
       "#Account and profile": "Compte et profil",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>Dans quelle mesure il a été facile de créer et de gérer votre compte.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>Créer votre compte, mettre à jour votre profil et réinitialiser votre mot de passe.</p>",
       "#Very difficult to understand": "Très difficiles à comprendre",
       "#Rather difficult to understand": "Plutôt difficiles à comprendre",
       "#Neither clear nor unclear": "Ni clairs ni peu clairs",
       "#Rather clear": "Plutôt clairs",
       "#Very clear": "Très clairs",
       "#How clear and easy to understand are the texts and icons of the app?": "Dans quelle mesure les textes et les icônes de l’application vous semblent-ils clairs et faciles à comprendre ?",
+      "#Which texts or icons were hard to understand?": "Quels textes ou icônes étaient difficiles à comprendre ?",
       "#Very cluttered": "Très encombrée",
       "#Rather cluttered": "Assez encombrée",
       "#Well structured and clear": "Bien structurée et claire",
       "#Too simple": "Trop simple",
       "#How would you describe the overall layout of the interface?": "Comment décririez-vous la disposition générale de l’interface ?",
+      "#What would you change in the layout?": "Que changeriez-vous dans la disposition ?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Les autorisations ou accès demandés par l’application (par exemple, localisation, données d’activité, appareil photo) vous semblent-ils raisonnables et appropriés ?",
+      "#Which permissions seem unnecessary, and why?": "Quelles autorisations vous semblent inutiles, et pourquoi ?",
       "#Interface": "Interface",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>L’apparence de l’application et les accès qu’elle demande.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>La clarté des écrans, des textes et des icônes, et si l’application ne demande que les accès dont elle a besoin.</p>",
       "#Does the app support the travel modes or activities you usually use?": "L’application semble-t-elle prendre en charge les modes de mobilité ou d’activité que vous utilisez couramment ?",
+      "#Which travel modes or activities are missing?": "Quels modes de mobilité ou activités manquent ?",
       "#How easy is it to record activities with the app?": "Dans quelle mesure semble-t-il facile de suivre les activités à l’aide de l’application ?",
+      "#What made recording activities difficult?": "Qu’est-ce qui a rendu l’enregistrement des activités difficile ?",
       "#How easy is it to switch from one travel mode to another during an activity?": "Dans quelle mesure semble-t-il facile de passer d’un mode de mobilité à un autre pendant l’activité ?",
+      "#What made switching travel mode difficult?": "Qu’est-ce qui a rendu le changement de mode de mobilité difficile ?",
       "#Partly": "Moyennement",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "Les résultats présentés et les résumés d’impact (émissions) vous semblent-ils utiles et faciles à comprendre ?",
+      "#What would make the results more useful or easier to understand?": "Qu’est-ce qui rendrait les résultats plus utiles ou plus faciles à comprendre ?",
       "#Is the activity history detailed enough for your needs?": "L’historique des activités vous semble-t-il suffisamment détaillé pour répondre à vos besoins ?",
+      "#What is missing from the activity history?": "Que manque-t-il dans l’historique des activités ?",
       "#Recording trips": "Enregistrement des trajets",
-      "#<p>Recording your trips and reading the results.</p>": "<p>L’enregistrement de vos trajets et la lecture des résultats.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Enregistrer un trajet, changer de mode de transport en cours de route, et consulter vos résultats et votre historique.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Trouvez-vous que le nombre de points attribués en fonction de la distance parcourue est raisonnable ?",
+      "#How should points be given instead?": "Comment les points devraient-ils plutôt être attribués ?",
       "#How easy is it to convert your points into rewards?": "Dans quelle mesure trouvez-vous facile de convertir vos points en cadeaux ?",
+      "#What made converting points difficult?": "Qu’est-ce qui a rendu la conversion des points difficile ?",
       "#Transport and mobility": "Transport et mobilité",
       "#Food and drinks": "Alimentation et boissons",
       "#Shopping": "Shopping",
@@ -972,7 +1234,7 @@
       "#Which other category?": "Quelle autre catégorie ?",
       "#Which category of rewards interests you most?": "Quelle catégorie de cadeaux vous intéresse le plus ?",
       "#Points and rewards": "Points et cadeaux",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>La collecte de points et leur conversion en cadeaux.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>Comment vous gagnez des points en vous déplaçant et les convertissez en cadeaux.</p>",
       "#Not at all useful": "Pas du tout utile",
       "#Slightly useful": "Légèrement utile",
       "#Moderately useful": "Modérément utile",
@@ -987,8 +1249,9 @@
       "#Would you consider using this app if it were available?": "Envisageriez-vous d’utiliser cette application si elle était disponible ?",
       "#Do you have any recommendations to improve this tool?": "Avez-vous des recommandations pour améliorer cet outil ?",
       "#Overall": "Dans l’ensemble",
-      "#<p>Your overall opinion of the app.</p>": "<p>Votre avis général sur l’application.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>Ce que vous pensez de l’application dans son ensemble.</p>",
       "#Did you manage to create your account?": "Avez-vous réussi à créer votre compte ?",
+      "#What stopped you from completing it?": "Qu’est-ce qui vous a empêché de l’accomplir ?",
       "#Did you manage to update your profile?": "Avez-vous réussi à mettre à jour votre profil ?",
       "#Did you manage to reset your password?": "Avez-vous réussi à réinitialiser votre mot de passe ?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Avez-vous réussi à compléter les questionnaires avant et après l’activité ?",
@@ -996,7 +1259,7 @@
       "#Did you manage to convert the points you collected?": "Avez-vous réussi à convertir les points que vous avez collectés ?",
       "#Did you manage to understand all the information in your trip history?": "Avez-vous réussi à comprendre toutes les informations présentées dans l’historique de vos trajets ?",
       "#Test tasks": "Tâches du test",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Indiquez quelles tâches du test vous avez réussi à accomplir.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Pour chaque tâche du test, indiquez-nous si vous avez réussi à l’accomplir.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test d’utilisabilité d’Access Together",
       "#Access Together usability test": "Test d’utilisabilité d’Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Merci d’avoir testé Access Together. Répondez après avoir terminé les tâches du test : cela prend environ 8 minutes. Toutes les questions sont facultatives.</p>",
@@ -1031,40 +1294,53 @@
       "#Doctorate degree": "Dottorato di ricerca",
       "#What is your highest completed level of education?": "Qual è il livello di istruzione più alto che hai completato?",
       "#About you": "Su di te",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>Alcune domande per descrivere chi ha partecipato al test.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Alcune informazioni generali su di te, usate solo per descrivere il gruppo di persone che ha provato l’app.</p>",
       "#How easy is it to create an account?": "Quanto è facile creare un account?",
+      "#What made creating an account difficult?": "Cosa ha reso difficile creare l’account?",
       "#Yes": "Sì",
       "#No": "No",
       "#Are any fields of the sign-up form unclear or confusing?": "Ci sono campi del modulo di registrazione poco chiari o che confondono?",
+      "#Which fields were unclear, and why?": "Quali campi erano poco chiari, e perché?",
       "#How easy is it to update your profile?": "Quanto è facile aggiornare il tuo profilo?",
+      "#What made updating your profile difficult?": "Cosa ha reso difficile aggiornare il tuo profilo?",
       "#How easy is it to reset your password?": "Quanto è facile reimpostare la password?",
-      "#Any other remarks on these features?": "Hai altre osservazioni su queste funzioni?",
+      "#What made resetting your password difficult?": "Cosa ha reso difficile reimpostare la password?",
       "#Account and profile": "Account e profilo",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>Quanto è stato facile creare e gestire il tuo account.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>Creare il tuo account, aggiornare il tuo profilo e reimpostare la password.</p>",
       "#Very difficult to understand": "Molto difficili da capire",
       "#Rather difficult to understand": "Piuttosto difficili da capire",
       "#Neither clear nor unclear": "Né chiari né poco chiari",
       "#Rather clear": "Piuttosto chiari",
       "#Very clear": "Molto chiari",
       "#How clear and easy to understand are the texts and icons of the app?": "Quanto sono chiari e facili da capire i testi e le icone dell’app?",
+      "#Which texts or icons were hard to understand?": "Quali testi o icone erano difficili da capire?",
       "#Very cluttered": "Molto affollata",
       "#Rather cluttered": "Piuttosto affollata",
       "#Well structured and clear": "Ben strutturata e chiara",
       "#Too simple": "Troppo semplice",
       "#How would you describe the overall layout of the interface?": "Come descriveresti l’impostazione generale dell’interfaccia?",
+      "#What would you change in the layout?": "Cosa cambieresti nell’impostazione?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Le autorizzazioni che l’app chiede (per esempio posizione, dati di attività, fotocamera) ti sembrano ragionevoli e appropriate?",
+      "#Which permissions seem unnecessary, and why?": "Quali autorizzazioni ti sembrano non necessarie, e perché?",
       "#Interface": "Interfaccia",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>Come appare l’app e a cosa chiede di accedere.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Quanto sono chiari schermate, testi e icone, e se l’app chiede solo gli accessi di cui ha bisogno.</p>",
       "#Does the app support the travel modes or activities you usually use?": "L’app supporta i modi di spostamento o le attività che usi di solito?",
+      "#Which travel modes or activities are missing?": "Quali modi di spostamento o attività mancano?",
       "#How easy is it to record activities with the app?": "Quanto è facile registrare le attività con l’app?",
+      "#What made recording activities difficult?": "Cosa ha reso difficile registrare le attività?",
       "#How easy is it to switch from one travel mode to another during an activity?": "Quanto è facile passare da un modo di spostamento a un altro durante un’attività?",
+      "#What made switching travel mode difficult?": "Cosa ha reso difficile cambiare modo di spostamento?",
       "#Partly": "In parte",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "I risultati e i riepiloghi d’impatto (emissioni) sono utili e facili da capire?",
+      "#What would make the results more useful or easier to understand?": "Cosa renderebbe i risultati più utili o più facili da capire?",
       "#Is the activity history detailed enough for your needs?": "La cronologia delle attività è abbastanza dettagliata per le tue esigenze?",
+      "#What is missing from the activity history?": "Cosa manca nella cronologia delle attività?",
       "#Recording trips": "Registrazione dei viaggi",
-      "#<p>Recording your trips and reading the results.</p>": "<p>La registrazione dei tuoi viaggi e la lettura dei risultati.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Registrare un viaggio, cambiare modo di spostamento durante il viaggio e leggere i tuoi risultati e la cronologia.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Il numero di punti dati in base alla distanza percorsa è ragionevole?",
+      "#How should points be given instead?": "Come dovrebbero essere assegnati i punti, invece?",
       "#How easy is it to convert your points into rewards?": "Quanto è facile convertire i tuoi punti in premi?",
+      "#What made converting points difficult?": "Cosa ha reso difficile convertire i punti?",
       "#Transport and mobility": "Trasporti e mobilità",
       "#Food and drinks": "Cibo e bevande",
       "#Shopping": "Shopping",
@@ -1075,7 +1351,7 @@
       "#Which other category?": "Quale altra categoria?",
       "#Which category of rewards interests you most?": "Quale categoria di premi ti interessa di più?",
       "#Points and rewards": "Punti e premi",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>La raccolta dei punti e la loro conversione in premi.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>Come guadagni punti mentre ti sposti e li converti in premi.</p>",
       "#Not at all useful": "Per niente utile",
       "#Slightly useful": "Poco utile",
       "#Moderately useful": "Abbastanza utile",
@@ -1090,8 +1366,9 @@
       "#Would you consider using this app if it were available?": "Useresti questa app se fosse disponibile?",
       "#Do you have any recommendations to improve this tool?": "Hai suggerimenti per migliorare questo strumento?",
       "#Overall": "Nel complesso",
-      "#<p>Your overall opinion of the app.</p>": "<p>La tua opinione generale sull’app.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>Cosa pensi dell’app nel suo insieme.</p>",
       "#Did you manage to create your account?": "Sei riuscito a creare il tuo account?",
+      "#What stopped you from completing it?": "Cosa ti ha impedito di completarlo?",
       "#Did you manage to update your profile?": "Sei riuscito ad aggiornare il tuo profilo?",
       "#Did you manage to reset your password?": "Sei riuscito a reimpostare la password?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Sei riuscito a compilare i questionari prima e dopo l’attività?",
@@ -1099,7 +1376,7 @@
       "#Did you manage to convert the points you collected?": "Sei riuscito a convertire i punti che hai raccolto?",
       "#Did you manage to understand all the information in your trip history?": "Sei riuscito a capire tutte le informazioni nella cronologia dei tuoi viaggi?",
       "#Test tasks": "Compiti del test",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Indica quali compiti del test sei riuscito a completare.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Per ogni compito del test, dicci se sei riuscito a completarlo.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test di usabilità di Access Together",
       "#Access Together usability test": "Test di usabilità di Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Grazie per aver provato Access Together. Rispondi dopo aver completato i compiti del test: ci vogliono circa 8 minuti. Tutte le domande sono facoltative.</p>",
@@ -1134,40 +1411,53 @@
       "#Doctorate degree": "Promotion",
       "#What is your highest completed level of education?": "Was ist Ihr höchster abgeschlossener Bildungsabschluss?",
       "#About you": "Über Sie",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>Einige Fragen, um zu beschreiben, wer am Test teilgenommen hat.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Einige allgemeine Angaben zu Ihnen, die nur dazu dienen, die Gruppe der Personen zu beschreiben, die die App getestet haben.</p>",
       "#How easy is it to create an account?": "Wie einfach ist es, ein Konto zu erstellen?",
+      "#What made creating an account difficult?": "Was hat das Erstellen des Kontos schwierig gemacht?",
       "#Yes": "Ja",
       "#No": "Nein",
       "#Are any fields of the sign-up form unclear or confusing?": "Sind Felder im Registrierungsformular unklar oder verwirrend?",
+      "#Which fields were unclear, and why?": "Welche Felder waren unklar, und warum?",
       "#How easy is it to update your profile?": "Wie einfach ist es, Ihr Profil zu aktualisieren?",
+      "#What made updating your profile difficult?": "Was hat das Aktualisieren Ihres Profils schwierig gemacht?",
       "#How easy is it to reset your password?": "Wie einfach ist es, Ihr Passwort zurückzusetzen?",
-      "#Any other remarks on these features?": "Haben Sie weitere Anmerkungen zu diesen Funktionen?",
+      "#What made resetting your password difficult?": "Was hat das Zurücksetzen Ihres Passworts schwierig gemacht?",
       "#Account and profile": "Konto und Profil",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>Wie einfach es war, Ihr Konto zu erstellen und zu verwalten.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>Ihr Konto erstellen, Ihr Profil aktualisieren und Ihr Passwort zurücksetzen.</p>",
       "#Very difficult to understand": "Sehr schwer verständlich",
       "#Rather difficult to understand": "Eher schwer verständlich",
       "#Neither clear nor unclear": "Weder klar noch unklar",
       "#Rather clear": "Eher klar",
       "#Very clear": "Sehr klar",
       "#How clear and easy to understand are the texts and icons of the app?": "Wie klar und verständlich sind die Texte und Symbole der App?",
+      "#Which texts or icons were hard to understand?": "Welche Texte oder Symbole waren schwer verständlich?",
       "#Very cluttered": "Sehr überladen",
       "#Rather cluttered": "Eher überladen",
       "#Well structured and clear": "Gut strukturiert und übersichtlich",
       "#Too simple": "Zu einfach",
       "#How would you describe the overall layout of the interface?": "Wie würden Sie den Gesamtaufbau der Oberfläche beschreiben?",
+      "#What would you change in the layout?": "Was würden Sie am Aufbau ändern?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Erscheinen Ihnen die Berechtigungen, die die App anfordert (zum Beispiel Standort, Aktivitätsdaten, Kamera), nachvollziehbar und angemessen?",
+      "#Which permissions seem unnecessary, and why?": "Welche Berechtigungen erscheinen Ihnen unnötig, und warum?",
       "#Interface": "Oberfläche",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>Wie die App aussieht und worauf sie zugreifen möchte.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Wie klar Bildschirme, Texte und Symbole sind und ob die App nur die Zugriffe anfordert, die sie braucht.</p>",
       "#Does the app support the travel modes or activities you usually use?": "Unterstützt die App die Verkehrsmittel oder Aktivitäten, die Sie normalerweise nutzen?",
+      "#Which travel modes or activities are missing?": "Welche Verkehrsmittel oder Aktivitäten fehlen?",
       "#How easy is it to record activities with the app?": "Wie einfach ist es, Aktivitäten mit der App aufzuzeichnen?",
+      "#What made recording activities difficult?": "Was hat das Aufzeichnen von Aktivitäten schwierig gemacht?",
       "#How easy is it to switch from one travel mode to another during an activity?": "Wie einfach ist es, während einer Aktivität von einem Verkehrsmittel zu einem anderen zu wechseln?",
+      "#What made switching travel mode difficult?": "Was hat den Wechsel des Verkehrsmittels schwierig gemacht?",
       "#Partly": "Teilweise",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "Sind die Ergebnisse und die Zusammenfassungen der Auswirkungen (Emissionen) nützlich und leicht verständlich?",
+      "#What would make the results more useful or easier to understand?": "Was würde die Ergebnisse nützlicher oder verständlicher machen?",
       "#Is the activity history detailed enough for your needs?": "Ist der Aktivitätsverlauf für Ihre Bedürfnisse detailliert genug?",
+      "#What is missing from the activity history?": "Was fehlt im Aktivitätsverlauf?",
       "#Recording trips": "Wege aufzeichnen",
-      "#<p>Recording your trips and reading the results.</p>": "<p>Ihre Wege aufzeichnen und die Ergebnisse lesen.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Einen Weg aufzeichnen, unterwegs das Verkehrsmittel wechseln und Ihre Ergebnisse und Ihren Verlauf lesen.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Ist die Anzahl der Punkte für die zurückgelegte Strecke angemessen?",
+      "#How should points be given instead?": "Wie sollten die Punkte stattdessen vergeben werden?",
       "#How easy is it to convert your points into rewards?": "Wie einfach ist es, Ihre Punkte in Prämien umzuwandeln?",
+      "#What made converting points difficult?": "Was hat das Umwandeln der Punkte schwierig gemacht?",
       "#Transport and mobility": "Verkehr und Mobilität",
       "#Food and drinks": "Essen und Getränke",
       "#Shopping": "Einkaufen",
@@ -1178,7 +1468,7 @@
       "#Which other category?": "Welche andere Kategorie?",
       "#Which category of rewards interests you most?": "Welche Prämienkategorie interessiert Sie am meisten?",
       "#Points and rewards": "Punkte und Prämien",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>Punkte sammeln und in Prämien umwandeln.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>Wie Sie unterwegs Punkte sammeln und in Prämien umwandeln.</p>",
       "#Not at all useful": "Überhaupt nicht nützlich",
       "#Slightly useful": "Wenig nützlich",
       "#Moderately useful": "Mäßig nützlich",
@@ -1193,8 +1483,9 @@
       "#Would you consider using this app if it were available?": "Würden Sie in Betracht ziehen, diese App zu nutzen, wenn sie verfügbar wäre?",
       "#Do you have any recommendations to improve this tool?": "Haben Sie Vorschläge, wie dieses Tool verbessert werden kann?",
       "#Overall": "Gesamteindruck",
-      "#<p>Your overall opinion of the app.</p>": "<p>Ihre Gesamtmeinung zur App.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>Was Sie von der App insgesamt halten.</p>",
       "#Did you manage to create your account?": "Konnten Sie Ihr Konto erstellen?",
+      "#What stopped you from completing it?": "Was hat Sie daran gehindert, sie zu erledigen?",
       "#Did you manage to update your profile?": "Konnten Sie Ihr Profil aktualisieren?",
       "#Did you manage to reset your password?": "Konnten Sie Ihr Passwort zurücksetzen?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Konnten Sie die Fragebögen vor und nach der Aktivität ausfüllen?",
@@ -1202,7 +1493,7 @@
       "#Did you manage to convert the points you collected?": "Konnten Sie die gesammelten Punkte umwandeln?",
       "#Did you manage to understand all the information in your trip history?": "Konnten Sie alle Informationen in Ihrem Wegeverlauf verstehen?",
       "#Test tasks": "Testaufgaben",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Sagen Sie uns, welche Testaufgaben Sie erledigen konnten.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Sagen Sie uns für jede Testaufgabe, ob Sie sie erledigen konnten.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test der Benutzerfreundlichkeit von Access Together",
       "#Access Together usability test": "Test der Benutzerfreundlichkeit von Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Vielen Dank, dass Sie Access Together testen. Antworten Sie, nachdem Sie die Testaufgaben erledigt haben: Das dauert etwa 8 Minuten. Alle Fragen sind freiwillig.</p>",
@@ -1237,40 +1528,53 @@
       "#Doctorate degree": "Doktora",
       "#What is your highest completed level of education?": "Tamamladığınız en yüksek eğitim düzeyi nedir?",
       "#About you": "Sizin hakkınızda",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>Teste kimlerin katıldığını tanımlamak için birkaç soru.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Sizinle ilgili, yalnızca uygulamayı test eden kişi grubunu tanımlamak için kullanılan bazı genel bilgiler.</p>",
       "#How easy is it to create an account?": "Hesap oluşturmak ne kadar kolay?",
+      "#What made creating an account difficult?": "Hesap oluşturmayı ne zorlaştırdı?",
       "#Yes": "Evet",
       "#No": "Hayır",
       "#Are any fields of the sign-up form unclear or confusing?": "Kayıt formundaki alanlardan herhangi biri belirsiz veya kafa karıştırıcı mı?",
+      "#Which fields were unclear, and why?": "Hangi alanlar belirsizdi ve neden?",
       "#How easy is it to update your profile?": "Profilinizi güncellemek ne kadar kolay?",
+      "#What made updating your profile difficult?": "Profilinizi güncellemeyi ne zorlaştırdı?",
       "#How easy is it to reset your password?": "Şifrenizi sıfırlamak ne kadar kolay?",
-      "#Any other remarks on these features?": "Bu özelliklerle ilgili başka görüşünüz var mı?",
+      "#What made resetting your password difficult?": "Şifrenizi sıfırlamayı ne zorlaştırdı?",
       "#Account and profile": "Hesap ve profil",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>Hesabınızı oluşturmanın ve yönetmenin ne kadar kolay olduğu.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>Hesabınızı oluşturma, profilinizi güncelleme ve şifrenizi sıfırlama.</p>",
       "#Very difficult to understand": "Anlaşılması çok zor",
       "#Rather difficult to understand": "Anlaşılması oldukça zor",
       "#Neither clear nor unclear": "Ne açık ne belirsiz",
       "#Rather clear": "Oldukça açık",
       "#Very clear": "Çok açık",
       "#How clear and easy to understand are the texts and icons of the app?": "Uygulamadaki metinler ve simgeler ne kadar açık ve anlaşılır?",
+      "#Which texts or icons were hard to understand?": "Hangi metinleri veya simgeleri anlamak zordu?",
       "#Very cluttered": "Çok kalabalık",
       "#Rather cluttered": "Oldukça kalabalık",
       "#Well structured and clear": "İyi düzenlenmiş ve anlaşılır",
       "#Too simple": "Fazla basit",
       "#How would you describe the overall layout of the interface?": "Arayüzün genel düzenini nasıl tanımlarsınız?",
+      "#What would you change in the layout?": "Düzende neyi değiştirirdiniz?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Uygulamanın istediği izinler (örneğin konum, etkinlik verileri, kamera) size makul ve uygun görünüyor mu?",
+      "#Which permissions seem unnecessary, and why?": "Hangi izinler gereksiz görünüyor ve neden?",
       "#Interface": "Arayüz",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>Uygulamanın görünümü ve neye erişim istediği.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Ekranların, metinlerin ve simgelerin ne kadar anlaşılır olduğu ve uygulamanın yalnızca ihtiyaç duyduğu erişimleri isteyip istemediği.</p>",
       "#Does the app support the travel modes or activities you usually use?": "Uygulama genellikle kullandığınız ulaşım türlerini veya etkinlikleri destekliyor mu?",
+      "#Which travel modes or activities are missing?": "Hangi ulaşım türleri veya etkinlikler eksik?",
       "#How easy is it to record activities with the app?": "Uygulamayla etkinlik kaydetmek ne kadar kolay?",
+      "#What made recording activities difficult?": "Etkinlikleri kaydetmeyi ne zorlaştırdı?",
       "#How easy is it to switch from one travel mode to another during an activity?": "Bir etkinlik sırasında bir ulaşım türünden diğerine geçmek ne kadar kolay?",
+      "#What made switching travel mode difficult?": "Ulaşım türünü değiştirmeyi ne zorlaştırdı?",
       "#Partly": "Kısmen",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "Sonuçlar ve etki özetleri (emisyonlar) faydalı ve kolay anlaşılır mı?",
+      "#What would make the results more useful or easier to understand?": "Sonuçları daha faydalı veya daha kolay anlaşılır kılmak için ne değişmeli?",
       "#Is the activity history detailed enough for your needs?": "Etkinlik geçmişi ihtiyaçlarınız için yeterince ayrıntılı mı?",
+      "#What is missing from the activity history?": "Etkinlik geçmişinde ne eksik?",
       "#Recording trips": "Yolculukları kaydetme",
-      "#<p>Recording your trips and reading the results.</p>": "<p>Yolculuklarınızı kaydetme ve sonuçları okuma.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Bir yolculuğu kaydetme, yolculuk sırasında ulaşım türünü değiştirme ve sonuçlarınızı ve geçmişinizi okuma.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Kat edilen mesafe için verilen puan sayısı makul mü?",
+      "#How should points be given instead?": "Puanlar bunun yerine nasıl verilmeli?",
       "#How easy is it to convert your points into rewards?": "Puanlarınızı ödüllere dönüştürmek ne kadar kolay?",
+      "#What made converting points difficult?": "Puanları dönüştürmeyi ne zorlaştırdı?",
       "#Transport and mobility": "Ulaşım ve mobilite",
       "#Food and drinks": "Yiyecek ve içecek",
       "#Shopping": "Alışveriş",
@@ -1281,7 +1585,7 @@
       "#Which other category?": "Başka hangi kategori?",
       "#Which category of rewards interests you most?": "En çok hangi ödül kategorisi ilginizi çekiyor?",
       "#Points and rewards": "Puanlar ve ödüller",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>Puan toplama ve bunları ödüllere dönüştürme.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>Seyahat ederken nasıl puan kazandığınız ve bunları nasıl ödüllere dönüştürdüğünüz.</p>",
       "#Not at all useful": "Hiç faydalı değil",
       "#Slightly useful": "Biraz faydalı",
       "#Moderately useful": "Orta derecede faydalı",
@@ -1296,8 +1600,9 @@
       "#Would you consider using this app if it were available?": "Bu uygulama kullanıma sunulsaydı kullanmayı düşünür müydünüz?",
       "#Do you have any recommendations to improve this tool?": "Bu aracı geliştirmek için önerileriniz var mı?",
       "#Overall": "Genel değerlendirme",
-      "#<p>Your overall opinion of the app.</p>": "<p>Uygulama hakkındaki genel görüşünüz.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>Uygulama hakkında genel olarak ne düşündüğünüz.</p>",
       "#Did you manage to create your account?": "Hesabınızı oluşturabildiniz mi?",
+      "#What stopped you from completing it?": "Onu tamamlamanızı ne engelledi?",
       "#Did you manage to update your profile?": "Profilinizi güncelleyebildiniz mi?",
       "#Did you manage to reset your password?": "Şifrenizi sıfırlayabildiniz mi?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Etkinlikten önce ve sonra anketleri doldurabildiniz mi?",
@@ -1305,7 +1610,7 @@
       "#Did you manage to convert the points you collected?": "Topladığınız puanları dönüştürebildiniz mi?",
       "#Did you manage to understand all the information in your trip history?": "Yolculuk geçmişinizdeki tüm bilgileri anlayabildiniz mi?",
       "#Test tasks": "Test görevleri",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Hangi test görevlerini tamamlayabildiğinizi bize bildirin.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>Testin her görevi için onu tamamlayıp tamamlayamadığınızı bize bildirin.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together kullanılabilirlik testi",
       "#Access Together usability test": "Access Together kullanılabilirlik testi",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Access Together'ı test ettiğiniz için teşekkür ederiz. Test görevlerini tamamladıktan sonra yanıtlayın: yaklaşık 8 dakika sürer. Tüm sorular isteğe bağlıdır.</p>",
@@ -1340,40 +1645,53 @@
       "#Doctorate degree": "دکتری",
       "#What is your highest completed level of education?": "بالاترین سطح تحصیلی که به پایان رسانده‌اید چیست؟",
       "#About you": "درباره شما",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>چند سؤال برای اینکه بدانیم چه کسانی در این آزمون شرکت کردند.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>برخی اطلاعات کلی درباره شما که تنها برای توصیف گروه افرادی که برنامه را آزمایش کردند به کار می‌رود.</p>",
       "#How easy is it to create an account?": "ساختن حساب کاربری چقدر آسان است؟",
+      "#What made creating an account difficult?": "چه چیزی ساختن حساب کاربری را دشوار کرد؟",
       "#Yes": "بله",
       "#No": "خیر",
       "#Are any fields of the sign-up form unclear or confusing?": "آیا فیلدی در فرم ثبت‌نام نامشخص یا گیج‌کننده است؟",
+      "#Which fields were unclear, and why?": "کدام فیلدها نامشخص بودند و چرا؟",
       "#How easy is it to update your profile?": "به‌روزرسانی پروفایل شما چقدر آسان است؟",
+      "#What made updating your profile difficult?": "چه چیزی به‌روزرسانی پروفایل را دشوار کرد؟",
       "#How easy is it to reset your password?": "بازنشانی رمز عبور چقدر آسان است؟",
-      "#Any other remarks on these features?": "نظر دیگری درباره این قابلیت‌ها دارید؟",
+      "#What made resetting your password difficult?": "چه چیزی بازنشانی رمز عبور را دشوار کرد؟",
       "#Account and profile": "حساب کاربری و پروفایل",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>ساختن و مدیریت حساب کاربری‌تان چقدر آسان بود.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>ساختن حساب کاربری، به‌روزرسانی پروفایل و بازنشانی رمز عبور.</p>",
       "#Very difficult to understand": "بسیار دشوار برای فهم",
       "#Rather difficult to understand": "نسبتاً دشوار برای فهم",
       "#Neither clear nor unclear": "نه روشن و نه نامشخص",
       "#Rather clear": "نسبتاً روشن",
       "#Very clear": "بسیار روشن",
       "#How clear and easy to understand are the texts and icons of the app?": "متن‌ها و نمادهای برنامه چقدر روشن و قابل فهم هستند؟",
+      "#Which texts or icons were hard to understand?": "فهم کدام متن‌ها یا نمادها دشوار بود؟",
       "#Very cluttered": "بسیار شلوغ",
       "#Rather cluttered": "نسبتاً شلوغ",
       "#Well structured and clear": "منظم و روشن",
       "#Too simple": "بیش از حد ساده",
       "#How would you describe the overall layout of the interface?": "چیدمان کلی رابط کاربری را چگونه توصیف می‌کنید؟",
+      "#What would you change in the layout?": "در چیدمان چه چیزی را تغییر می‌دادید؟",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "آیا مجوزهایی که برنامه درخواست می‌کند (برای مثال موقعیت مکانی، داده‌های فعالیت، دوربین) به نظرتان معقول و مناسب است؟",
+      "#Which permissions seem unnecessary, and why?": "کدام مجوزها به نظرتان غیرضروری است و چرا؟",
       "#Interface": "رابط کاربری",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>ظاهر برنامه و آنچه برای دسترسی درخواست می‌کند.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>صفحه‌ها، متن‌ها و نمادها چقدر روشن هستند، و آیا برنامه فقط دسترسی‌هایی را که نیاز دارد درخواست می‌کند.</p>",
       "#Does the app support the travel modes or activities you usually use?": "آیا برنامه از شیوه‌های سفر یا فعالیت‌هایی که معمولاً استفاده می‌کنید پشتیبانی می‌کند؟",
+      "#Which travel modes or activities are missing?": "کدام شیوه‌های سفر یا فعالیت‌ها وجود ندارد؟",
       "#How easy is it to record activities with the app?": "ثبت فعالیت‌ها با برنامه چقدر آسان است؟",
+      "#What made recording activities difficult?": "چه چیزی ثبت فعالیت‌ها را دشوار کرد؟",
       "#How easy is it to switch from one travel mode to another during an activity?": "تغییر از یک شیوه سفر به شیوه‌ای دیگر در طول یک فعالیت چقدر آسان است؟",
+      "#What made switching travel mode difficult?": "چه چیزی تغییر شیوه سفر را دشوار کرد؟",
       "#Partly": "تا حدی",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "آیا نتایج و خلاصه‌های اثرات (انتشار آلاینده‌ها) مفید و آسان‌فهم هستند؟",
+      "#What would make the results more useful or easier to understand?": "چه چیزی نتایج را مفیدتر یا آسان‌فهم‌تر می‌کند؟",
       "#Is the activity history detailed enough for your needs?": "آیا سابقه فعالیت‌ها برای نیازهای شما به اندازه کافی جزئیات دارد؟",
+      "#What is missing from the activity history?": "چه چیزی در سابقه فعالیت‌ها کم است؟",
       "#Recording trips": "ثبت سفرها",
-      "#<p>Recording your trips and reading the results.</p>": "<p>ثبت سفرهایتان و خواندن نتایج.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>ثبت یک سفر، تغییر شیوه سفر در طول آن، و خواندن نتایج و سابقه سفرهایتان.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "آیا تعداد امتیازهایی که برای مسافت طی‌شده داده می‌شود معقول است؟",
+      "#How should points be given instead?": "به نظر شما امتیازها به چه شکلی باید داده شوند؟",
       "#How easy is it to convert your points into rewards?": "تبدیل امتیازهایتان به جایزه چقدر آسان است؟",
+      "#What made converting points difficult?": "چه چیزی تبدیل امتیازها را دشوار کرد؟",
       "#Transport and mobility": "حمل‌ونقل و جابه‌جایی",
       "#Food and drinks": "غذا و نوشیدنی",
       "#Shopping": "خرید",
@@ -1384,7 +1702,7 @@
       "#Which other category?": "کدام دسته دیگر؟",
       "#Which category of rewards interests you most?": "کدام دسته از جوایز بیشتر برایتان جالب است؟",
       "#Points and rewards": "امتیازها و جوایز",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>جمع‌آوری امتیاز و تبدیل آن به جایزه.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>اینکه چگونه هنگام سفر امتیاز کسب می‌کنید و آن را به جایزه تبدیل می‌کنید.</p>",
       "#Not at all useful": "اصلاً مفید نیست",
       "#Slightly useful": "کمی مفید",
       "#Moderately useful": "تا حدودی مفید",
@@ -1399,8 +1717,9 @@
       "#Would you consider using this app if it were available?": "اگر این برنامه در دسترس بود، استفاده از آن را در نظر می‌گرفتید؟",
       "#Do you have any recommendations to improve this tool?": "پیشنهادی برای بهبود این ابزار دارید؟",
       "#Overall": "ارزیابی کلی",
-      "#<p>Your overall opinion of the app.</p>": "<p>نظر کلی شما درباره برنامه.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>نظر شما درباره برنامه به‌طور کلی.</p>",
       "#Did you manage to create your account?": "توانستید حساب کاربری‌تان را بسازید؟",
+      "#What stopped you from completing it?": "چه چیزی مانع شد که آن را انجام دهید؟",
       "#Did you manage to update your profile?": "توانستید پروفایل خود را به‌روز کنید؟",
       "#Did you manage to reset your password?": "توانستید رمز عبور خود را بازنشانی کنید؟",
       "#Did you manage to complete the questionnaires before and after the activity?": "توانستید پرسشنامه‌های قبل و بعد از فعالیت را تکمیل کنید؟",
@@ -1408,7 +1727,7 @@
       "#Did you manage to convert the points you collected?": "توانستید امتیازهایی را که جمع کرده بودید تبدیل کنید؟",
       "#Did you manage to understand all the information in your trip history?": "توانستید همه اطلاعات سابقه سفرهایتان را بفهمید؟",
       "#Test tasks": "وظایف آزمون",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>به ما بگویید کدام وظایف آزمون را توانستید انجام دهید.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>برای هر یک از وظایف آزمون، به ما بگویید آیا توانستید آن را انجام دهید.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - آزمون کاربردپذیری Access Together",
       "#Access Together usability test": "آزمون کاربردپذیری Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>از اینکه Access Together را آزمایش می‌کنید سپاسگزاریم. پس از انجام وظایف آزمون پاسخ دهید: حدود ۸ دقیقه طول می‌کشد. پاسخ به همه سؤال‌ها اختیاری است.</p>",
@@ -1443,40 +1762,53 @@
       "#Doctorate degree": "Doktori fokozat",
       "#What is your highest completed level of education?": "Mi a legmagasabb befejezett iskolai végzettsége?",
       "#About you": "Önről",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>Néhány kérdés arról, kik vettek részt a teszten.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Néhány általános adat Önről, amelyet csak az alkalmazást tesztelő személyek csoportjának leírására használunk.</p>",
       "#How easy is it to create an account?": "Mennyire könnyű fiókot létrehozni?",
+      "#What made creating an account difficult?": "Mi tette nehézzé a fiók létrehozását?",
       "#Yes": "Igen",
       "#No": "Nem",
       "#Are any fields of the sign-up form unclear or confusing?": "Van olyan mező a regisztrációs űrlapon, amely nem egyértelmű vagy zavaró?",
+      "#Which fields were unclear, and why?": "Mely mezők voltak nem egyértelműek, és miért?",
       "#How easy is it to update your profile?": "Mennyire könnyű frissíteni a profilját?",
+      "#What made updating your profile difficult?": "Mi tette nehézzé a profil frissítését?",
       "#How easy is it to reset your password?": "Mennyire könnyű visszaállítani a jelszavát?",
-      "#Any other remarks on these features?": "Van egyéb megjegyzése ezekkel a funkciókkal kapcsolatban?",
+      "#What made resetting your password difficult?": "Mi tette nehézzé a jelszó visszaállítását?",
       "#Account and profile": "Fiók és profil",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>Mennyire volt könnyű létrehozni és kezelni a fiókját.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>A fiók létrehozása, a profil frissítése és a jelszó visszaállítása.</p>",
       "#Very difficult to understand": "Nagyon nehezen érthető",
       "#Rather difficult to understand": "Inkább nehezen érthető",
       "#Neither clear nor unclear": "Se nem világos, se nem homályos",
       "#Rather clear": "Inkább világos",
       "#Very clear": "Nagyon világos",
       "#How clear and easy to understand are the texts and icons of the app?": "Mennyire világosak és érthetők az alkalmazás szövegei és ikonjai?",
+      "#Which texts or icons were hard to understand?": "Mely szövegek vagy ikonok voltak nehezen érthetők?",
       "#Very cluttered": "Nagyon zsúfolt",
       "#Rather cluttered": "Inkább zsúfolt",
       "#Well structured and clear": "Jól felépített és átlátható",
       "#Too simple": "Túl egyszerű",
       "#How would you describe the overall layout of the interface?": "Hogyan jellemezné a felület általános elrendezését?",
+      "#What would you change in the layout?": "Mit változtatna az elrendezésen?",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "Észszerűnek és megfelelőnek tűnnek az alkalmazás által kért engedélyek (például helymeghatározás, tevékenységi adatok, kamera)?",
+      "#Which permissions seem unnecessary, and why?": "Mely engedélyek tűnnek szükségtelennek, és miért?",
       "#Interface": "Felület",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>Hogyan néz ki az alkalmazás, és mihez kér hozzáférést.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Mennyire világosak a képernyők, a szövegek és az ikonok, és csak azokhoz a hozzáférésekhez kér-e engedélyt az alkalmazás, amelyekre szüksége van.</p>",
       "#Does the app support the travel modes or activities you usually use?": "Támogatja az alkalmazás azokat a közlekedési módokat vagy tevékenységeket, amelyeket általában használ?",
+      "#Which travel modes or activities are missing?": "Mely közlekedési módok vagy tevékenységek hiányoznak?",
       "#How easy is it to record activities with the app?": "Mennyire könnyű tevékenységeket rögzíteni az alkalmazással?",
+      "#What made recording activities difficult?": "Mi tette nehézzé a tevékenységek rögzítését?",
       "#How easy is it to switch from one travel mode to another during an activity?": "Mennyire könnyű egy tevékenység közben egyik közlekedési módról a másikra váltani?",
+      "#What made switching travel mode difficult?": "Mi tette nehézzé a közlekedési mód váltását?",
       "#Partly": "Részben",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "Hasznosak és könnyen érthetők az eredmények és a hatásösszesítők (kibocsátások)?",
+      "#What would make the results more useful or easier to understand?": "Mitől lennének hasznosabbak vagy könnyebben érthetők az eredmények?",
       "#Is the activity history detailed enough for your needs?": "Elég részletesek a tevékenységi előzmények az Ön igényeihez?",
+      "#What is missing from the activity history?": "Mi hiányzik a tevékenységi előzményekből?",
       "#Recording trips": "Utak rögzítése",
-      "#<p>Recording your trips and reading the results.</p>": "<p>Útjai rögzítése és az eredmények megtekintése.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Egy út rögzítése, a közlekedési mód váltása útközben, valamint az eredmények és az előzmények megtekintése.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "Észszerű a megtett távolságért kapott pontok száma?",
+      "#How should points be given instead?": "Hogyan kellene inkább a pontokat adni?",
       "#How easy is it to convert your points into rewards?": "Mennyire könnyű a pontjait jutalmakra váltani?",
+      "#What made converting points difficult?": "Mi tette nehézzé a pontok beváltását?",
       "#Transport and mobility": "Közlekedés és mobilitás",
       "#Food and drinks": "Étel és ital",
       "#Shopping": "Vásárlás",
@@ -1487,7 +1819,7 @@
       "#Which other category?": "Melyik másik kategória?",
       "#Which category of rewards interests you most?": "Melyik jutalomkategória érdekli leginkább?",
       "#Points and rewards": "Pontok és jutalmak",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>Pontok gyűjtése és jutalmakra váltása.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>Hogyan gyűjt pontokat utazás közben, és hogyan váltja be őket jutalmakra.</p>",
       "#Not at all useful": "Egyáltalán nem hasznos",
       "#Slightly useful": "Kissé hasznos",
       "#Moderately useful": "Közepesen hasznos",
@@ -1502,8 +1834,9 @@
       "#Would you consider using this app if it were available?": "Fontolóra venné az alkalmazás használatát, ha elérhető lenne?",
       "#Do you have any recommendations to improve this tool?": "Van javaslata az eszköz fejlesztésére?",
       "#Overall": "Összbenyomás",
-      "#<p>Your overall opinion of the app.</p>": "<p>Általános véleménye az alkalmazásról.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>Mit gondol az alkalmazásról összességében.</p>",
       "#Did you manage to create your account?": "Sikerült létrehoznia a fiókját?",
+      "#What stopped you from completing it?": "Mi akadályozta meg abban, hogy elvégezze?",
       "#Did you manage to update your profile?": "Sikerült frissítenie a profilját?",
       "#Did you manage to reset your password?": "Sikerült visszaállítania a jelszavát?",
       "#Did you manage to complete the questionnaires before and after the activity?": "Sikerült kitöltenie a tevékenység előtti és utáni kérdőíveket?",
@@ -1511,7 +1844,7 @@
       "#Did you manage to convert the points you collected?": "Sikerült beváltania az összegyűjtött pontjait?",
       "#Did you manage to understand all the information in your trip history?": "Sikerült megértenie az utazási előzményeiben szereplő összes információt?",
       "#Test tasks": "Tesztfeladatok",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>Mondja el, mely tesztfeladatokat sikerült elvégeznie.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>A teszt minden feladatánál mondja el, sikerült-e elvégeznie.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Az Access Together használhatósági tesztje",
       "#Access Together usability test": "Az Access Together használhatósági tesztje",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>Köszönjük, hogy kipróbálja az Access Together alkalmazást. A tesztfeladatok elvégzése után válaszoljon: ez körülbelül 8 percet vesz igénybe. Minden kérdés megválaszolása önkéntes.</p>",
@@ -1546,40 +1879,53 @@
       "#Doctorate degree": "الدكتوراه",
       "#What is your highest completed level of education?": "ما أعلى مستوى تعليمي أكملته؟",
       "#About you": "معلومات عنك",
-      "#<p>A few questions to describe who took part in the test.</p>": "<p>بعض الأسئلة لوصف من شارك في الاختبار.</p>",
+      "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>بعض المعلومات العامة عنك، تُستخدم فقط لوصف مجموعة الأشخاص الذين جرّبوا التطبيق.</p>",
       "#How easy is it to create an account?": "ما مدى سهولة إنشاء حساب؟",
+      "#What made creating an account difficult?": "ما الذي جعل إنشاء الحساب صعبًا؟",
       "#Yes": "نعم",
       "#No": "لا",
       "#Are any fields of the sign-up form unclear or confusing?": "هل توجد حقول في نموذج التسجيل غير واضحة أو مربكة؟",
+      "#Which fields were unclear, and why?": "ما الحقول التي لم تكن واضحة، ولماذا؟",
       "#How easy is it to update your profile?": "ما مدى سهولة تحديث ملفك الشخصي؟",
+      "#What made updating your profile difficult?": "ما الذي جعل تحديث ملفك الشخصي صعبًا؟",
       "#How easy is it to reset your password?": "ما مدى سهولة إعادة تعيين كلمة المرور؟",
-      "#Any other remarks on these features?": "هل لديك ملاحظات أخرى حول هذه الميزات؟",
+      "#What made resetting your password difficult?": "ما الذي جعل إعادة تعيين كلمة المرور صعبة؟",
       "#Account and profile": "الحساب والملف الشخصي",
-      "#<p>How easy it was to create and manage your account.</p>": "<p>مدى سهولة إنشاء حسابك وإدارته.</p>",
+      "#<p>Creating your account, updating your profile and resetting your password.</p>": "<p>إنشاء حسابك وتحديث ملفك الشخصي وإعادة تعيين كلمة المرور.</p>",
       "#Very difficult to understand": "صعبة الفهم جدًا",
       "#Rather difficult to understand": "صعبة الفهم إلى حد ما",
       "#Neither clear nor unclear": "ليست واضحة ولا غامضة",
       "#Rather clear": "واضحة إلى حد ما",
       "#Very clear": "واضحة جدًا",
       "#How clear and easy to understand are the texts and icons of the app?": "ما مدى وضوح نصوص التطبيق وأيقوناته وسهولة فهمها؟",
+      "#Which texts or icons were hard to understand?": "ما النصوص أو الأيقونات التي كان فهمها صعبًا؟",
       "#Very cluttered": "مزدحم جدًا",
       "#Rather cluttered": "مزدحم إلى حد ما",
       "#Well structured and clear": "منظم جيدًا وواضح",
       "#Too simple": "بسيط أكثر من اللازم",
       "#How would you describe the overall layout of the interface?": "كيف تصف التصميم العام للواجهة؟",
+      "#What would you change in the layout?": "ما الذي ستغيّره في التصميم؟",
       "#Do the permissions the app asks for (for example location, activity data, camera) seem reasonable and appropriate?": "هل تبدو لك الأذونات التي يطلبها التطبيق (مثل الموقع وبيانات النشاط والكاميرا) معقولة ومناسبة؟",
+      "#Which permissions seem unnecessary, and why?": "ما الأذونات التي تبدو لك غير ضرورية، ولماذا؟",
       "#Interface": "الواجهة",
-      "#<p>How the app looks and what it asks to access.</p>": "<p>مظهر التطبيق وما يطلب الوصول إليه.</p>",
+      "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>مدى وضوح الشاشات والنصوص والأيقونات، وهل يطلب التطبيق فقط الأذونات التي يحتاجها.</p>",
       "#Does the app support the travel modes or activities you usually use?": "هل يدعم التطبيق وسائل التنقل أو الأنشطة التي تستخدمها عادةً؟",
+      "#Which travel modes or activities are missing?": "ما وسائل التنقل أو الأنشطة غير المتوفرة؟",
       "#How easy is it to record activities with the app?": "ما مدى سهولة تسجيل الأنشطة باستخدام التطبيق؟",
+      "#What made recording activities difficult?": "ما الذي جعل تسجيل الأنشطة صعبًا؟",
       "#How easy is it to switch from one travel mode to another during an activity?": "ما مدى سهولة الانتقال من وسيلة تنقل إلى أخرى أثناء النشاط؟",
+      "#What made switching travel mode difficult?": "ما الذي جعل تغيير وسيلة التنقل صعبًا؟",
       "#Partly": "جزئيًا",
       "#Are the results and impact summaries (emissions) useful and easy to understand?": "هل النتائج وملخصات الأثر (الانبعاثات) مفيدة وسهلة الفهم؟",
+      "#What would make the results more useful or easier to understand?": "ما الذي يجعل النتائج أكثر فائدة أو أسهل فهمًا؟",
       "#Is the activity history detailed enough for your needs?": "هل سجل الأنشطة مفصّل بما يكفي لاحتياجاتك؟",
+      "#What is missing from the activity history?": "ما الذي ينقص سجل الأنشطة؟",
       "#Recording trips": "تسجيل الرحلات",
-      "#<p>Recording your trips and reading the results.</p>": "<p>تسجيل رحلاتك وقراءة النتائج.</p>",
+      "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>تسجيل رحلة، وتغيير وسيلة التنقل خلالها، وقراءة نتائجك وسجلك.</p>",
       "#Is the number of points given for the distance travelled reasonable?": "هل عدد النقاط الممنوحة مقابل المسافة المقطوعة معقول؟",
+      "#How should points be given instead?": "كيف ينبغي منح النقاط بدلًا من ذلك؟",
       "#How easy is it to convert your points into rewards?": "ما مدى سهولة تحويل نقاطك إلى مكافآت؟",
+      "#What made converting points difficult?": "ما الذي جعل تحويل النقاط صعبًا؟",
       "#Transport and mobility": "النقل والتنقل",
       "#Food and drinks": "الطعام والمشروبات",
       "#Shopping": "التسوق",
@@ -1590,7 +1936,7 @@
       "#Which other category?": "ما الفئة الأخرى؟",
       "#Which category of rewards interests you most?": "ما فئة المكافآت التي تهمك أكثر؟",
       "#Points and rewards": "النقاط والمكافآت",
-      "#<p>Collecting points and converting them into rewards.</p>": "<p>جمع النقاط وتحويلها إلى مكافآت.</p>",
+      "#<p>How you earn points while travelling and turn them into rewards.</p>": "<p>كيف تكسب النقاط أثناء تنقلك وتحوّلها إلى مكافآت.</p>",
       "#Not at all useful": "غير مفيد إطلاقًا",
       "#Slightly useful": "مفيد قليلًا",
       "#Moderately useful": "مفيد إلى حد ما",
@@ -1605,8 +1951,9 @@
       "#Would you consider using this app if it were available?": "هل ستفكر في استخدام هذا التطبيق إذا أصبح متاحًا؟",
       "#Do you have any recommendations to improve this tool?": "هل لديك توصيات لتحسين هذه الأداة؟",
       "#Overall": "التقييم العام",
-      "#<p>Your overall opinion of the app.</p>": "<p>رأيك العام في التطبيق.</p>",
+      "#<p>What you think of the app as a whole.</p>": "<p>رأيك في التطبيق ككل.</p>",
       "#Did you manage to create your account?": "هل تمكنت من إنشاء حسابك؟",
+      "#What stopped you from completing it?": "ما الذي منعك من إكمالها؟",
       "#Did you manage to update your profile?": "هل تمكنت من تحديث ملفك الشخصي؟",
       "#Did you manage to reset your password?": "هل تمكنت من إعادة تعيين كلمة المرور؟",
       "#Did you manage to complete the questionnaires before and after the activity?": "هل تمكنت من إكمال الاستبيانات قبل النشاط وبعده؟",
@@ -1614,7 +1961,7 @@
       "#Did you manage to convert the points you collected?": "هل تمكنت من تحويل النقاط التي جمعتها؟",
       "#Did you manage to understand all the information in your trip history?": "هل تمكنت من فهم جميع المعلومات في سجل رحلاتك؟",
       "#Test tasks": "مهام الاختبار",
-      "#<p>Tell us which test tasks you managed to complete.</p>": "<p>أخبرنا بمهام الاختبار التي تمكنت من إكمالها.</p>",
+      "#<p>For each task of the test, tell us whether you managed to complete it.</p>": "<p>لكل مهمة من مهام الاختبار، أخبرنا هل تمكنت من إكمالها.</p>",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - اختبار سهولة استخدام Access Together",
       "#Access Together usability test": "اختبار سهولة استخدام Access Together",
       "#<p>Thank you for testing Access Together. Answer after completing the test tasks: it takes about 8 minutes. Every question is optional.</p>": "<p>شكرًا لك على تجربة Access Together. أجب بعد إكمال مهام الاختبار: يستغرق ذلك حوالي 8 دقائق. جميع الأسئلة اختيارية.</p>",

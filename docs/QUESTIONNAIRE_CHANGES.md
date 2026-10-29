@@ -18,8 +18,9 @@ Differences from the Google Form:
   eligibility screen already asks them;
 - every rating scale runs from negative to positive (the clarity scale was reversed);
 - «Moyenement» is corrected to «Moyennement» (`partly`);
-- «Autre» on a rating scale becomes one optional comment per section, because a free
-  answer cannot replace a rating; the reward category keeps «Other» with free text;
+- each rating question keeps the Google Form's per-question «Autre» remark as an
+  optional follow-up (`<answer key>_issue`), shown only after an answer that signals a
+  problem; the reward category keeps «Other» with free text;
 - «Je ne sais pas» and «Je ne souhaite pas le préciser» use the application's
   `add_i_dont_know` and `add_prefer_not_to_say` answers;
 - age, gender and education follow About You (`age_group`, `gender`, `education`
