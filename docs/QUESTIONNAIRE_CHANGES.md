@@ -4,6 +4,22 @@ Changes to stored answer keys, options and conditions, per form version. Analyse
 must separate responses by `questionnaire_version`: an option added in a version is
 missing, not "no", in earlier responses.
 
+## Access Together usability test 1.1.0 (2026-10-29)
+
+`smarturbanity_access_together_usability` 1.1.0 asks the profile questions of About
+You, so test participants can be compared with the other SmartUrbanity
+questionnaires. These answers are not comparable with 1.0.0 or with the French
+Google Form responses:
+
+| 1.0.0 key | 1.1.0 key | Change |
+| --- | --- | --- |
+| `age_band` (15_24, 25_39, 40_64, 65_plus) | `age_group` | About You bands 18_24, 25_34, 35_44, 45_54, 55_64, 65_74, 75_84, 85_or_older |
+| `gender` (female, male) | `gender` | About You text and options (male, female) plus «Other» |
+| `education` (primary, upper_secondary, bachelor, master_doctorate) | `education` | About You options none, lower_secondary, upper_secondary, bachelor, master, doctorate; no «Prefer not to say» |
+
+`postcode` stays, because About You's location questions are Rome-specific. Every other
+question is unchanged from 1.0.0.
+
 ## Access Together usability test (2026-10-29)
 
 New form `smarturbanity_access_together_usability` 1.0.0 in `forms/usabilityTests/`,
