@@ -8,8 +8,9 @@ missing, not "no", in earlier responses.
 
 New form `smarturbanity_access_together_usability` 1.0.0 in `forms/usabilityTests/`,
 from the French Google Form «Questionnaire test d'utilisabilité Access Together». It has
-no earlier version. Its questions are not in the shared question pool yet. English,
-French and Italian are provided; the other languages fall back to English.
+no earlier version. Its questions are not in the shared question pool yet. All eight
+SmartUrbanity form languages are provided (English, French, Italian, German, Turkish,
+Persian, Hungarian and Arabic).
 
 Differences from the Google Form:
 
