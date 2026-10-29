@@ -22,10 +22,13 @@ Differences from the Google Form:
   answer cannot replace a rating; the reward category keeps «Other» with free text;
 - «Je ne sais pas» and «Je ne souhaite pas le préciser» use the application's
   `add_i_dont_know` and `add_prefer_not_to_say` answers;
+- age, gender and education follow About You (`age_group`, `gender`, `education`
+  answer keys, options, question texts and translations), so answers can be compared;
+  the age bands start at 18. This drops the Google Form's age bands (15–24, 25–39,
+  40–64, 65 and over), its «Femme»/«Homme» wording and its education options (primary
+  school, upper secondary school, bachelor, master or doctorate); gender gains About
+  You's «Other» answer and education loses «Prefer not to say», as in About You;
 - as in the Google Form, every question is optional.
-
-The age bands keep the Google Form's 15–24 band, while `ask_adult` limits respondents
-to adults: this is open.
 
 ## Version 3.0.0 alignment (2026-10-26)
 
