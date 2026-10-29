@@ -288,26 +288,12 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 
 #### Privacy notices
 
-Every privacy document lives on the SmartUrbanity website: the notices, one stable
-page per version, and the privacy and consent guidelines (`privacy/` and
-`pilot/<pilot>/privacy/` in `smarturbanity_website`, see its `privacy/README.md`).
-This repository holds only their address and version:
-
-- `base.json` sets `questionnaires.consent.notice_base_url`, the website address, once.
-  It is temporary (`experimental-website.wemolab.eu`) and changes here only.
-- `privacy_link` (full notice), `transparency_link` (notice in brief) and
-  `privacy_version` name the common notice in `base.json` and each pilot's own notice
-  in `pilots/<pilot>/<pilot>.json`, as paths relative to `notice_base_url`. A pilot may
-  set its own `notice_base_url`.
-- A new notice version gets a new path and `privacy_version`; when it needs a new
-  consent, raise the consent `version` too. Forms carry no notice link.
-
-CityMaaS composes the paths from `citymaas/smarturbanity-privacy-website` on; pin a
-commit with this layout only together with that CityMaaS version.
-
-Installations pinned to a commit before this layout open the notices at
-`smarturbanity.github.io/smarturbanity-configuration/`, which this repository no longer
-publishes: move their pin together with this change.
+This repository holds no privacy documents or notice links. The notices, their
+versions and the privacy guidelines live on the SmartUrbanity website, which lists
+each pilot's notices in `pilot/<pilot>/privacy.json` and the common ones in
+`privacy/privacy.json`. `base.json` names the website once, as the top-level
+`website_url` (temporarily `experimental-website.wemolab.eu`); the applications read
+the lists from there for the loaded `pilot_id`.
 
 `participant_code_destination` describes the service that returns the pseudonymous
 participant code. The client sends the participant identifier or an account token
