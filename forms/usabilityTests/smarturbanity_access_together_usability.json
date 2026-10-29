@@ -28,41 +28,25 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "What is your age group? (Participation is limited to adults aged 18 or older)",
-            "answer_key": "age_group",
+            "text": "Select your age group",
+            "answer_key": "age_band",
             "question_type": "single_option",
             "options": [
               {
-                "text": "18-24",
-                "value": "18_24"
+                "text": "Young people / students (15–24)",
+                "value": "15_24"
               },
               {
-                "text": "25-34",
-                "value": "25_34"
+                "text": "Young adults (25–39)",
+                "value": "25_39"
               },
               {
-                "text": "35-44",
-                "value": "35_44"
+                "text": "Middle-aged adults (40–64)",
+                "value": "40_64"
               },
               {
-                "text": "45-54",
-                "value": "45_54"
-              },
-              {
-                "text": "55-64",
-                "value": "55_64"
-              },
-              {
-                "text": "65-74",
-                "value": "65_74"
-              },
-              {
-                "text": "75-84",
-                "value": "75_84"
-              },
-              {
-                "text": "85 or older",
-                "value": "85_or_older"
+                "text": "Seniors (65 and over)",
+                "value": "65_plus"
               }
             ],
             "checks_inline": false,
@@ -71,21 +55,54 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "What is your gender?",
+            "text": "Select your gender",
             "answer_key": "gender",
             "question_type": "single_option",
             "options": [
               {
-                "text": "Male",
-                "value": "male"
+                "text": "Woman",
+                "value": "female"
               },
               {
-                "text": "Female",
-                "value": "female"
+                "text": "Man",
+                "value": "male"
               }
             ],
             "checks_inline": false,
-            "add_other": true,
+            "add_prefer_not_to_say": true,
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Postcode of your municipality",
+            "answer_key": "postcode",
+            "question_type": "text",
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Select your highest level of education",
+            "answer_key": "education",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Primary school",
+                "value": "primary"
+              },
+              {
+                "text": "Upper secondary school or equivalent",
+                "value": "upper_secondary"
+              },
+              {
+                "text": "University degree (bachelor)",
+                "value": "bachelor"
+              },
+              {
+                "text": "Postgraduate degree (master or doctorate)",
+                "value": "master_doctorate"
+              }
+            ],
+            "checks_inline": false,
             "add_prefer_not_to_say": true,
             "required": false,
             "privacy_classification": "heightened_personal"
@@ -255,40 +272,6 @@
             },
             "required": false,
             "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "What is your highest completed level of education?",
-            "answer_key": "education",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "No qualification",
-                "value": "none"
-              },
-              {
-                "text": "Lower secondary school",
-                "value": "lower_secondary"
-              },
-              {
-                "text": "High school",
-                "value": "upper_secondary"
-              },
-              {
-                "text": "Bachelor degree or equivalent",
-                "value": "bachelor"
-              },
-              {
-                "text": "Master degree or equivalent",
-                "value": "master"
-              },
-              {
-                "text": "Doctorate degree",
-                "value": "doctorate"
-              }
-            ],
-            "checks_inline": false,
-            "required": false,
-            "privacy_classification": "heightened_personal"
           }
         ]
       },
@@ -312,7 +295,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -353,11 +336,6 @@
                 "value": "very_easy"
               }
             ],
-            "show_if": {
-              "task_create_account": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -421,7 +399,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -462,11 +440,6 @@
                 "value": "very_easy"
               }
             ],
-            "show_if": {
-              "task_update_profile": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -499,7 +472,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -540,11 +513,6 @@
                 "value": "very_easy"
               }
             ],
-            "show_if": {
-              "task_reset_password": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -705,7 +673,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -809,7 +777,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -850,11 +818,6 @@
                 "value": "very_easy"
               }
             ],
-            "show_if": {
-              "task_multimodal_trip": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -922,7 +885,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -955,11 +918,6 @@
                 "value": "partly"
               }
             ],
-            "show_if": {
-              "task_understand_history": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -1020,6 +978,36 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "text": "Is the number of points given for the distance travelled reasonable?",
+            "answer_key": "points_per_distance_reasonable",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "How should points be given instead?",
+            "answer_key": "points_per_distance_reasonable_issue",
+            "question_type": "textarea",
+            "show_if": {
+              "points_per_distance_reasonable": [
+                "no"
+              ]
+            },
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "text": "Did you manage to convert the points you collected?",
             "answer_key": "task_convert_points",
             "question_type": "single_option",
@@ -1034,7 +1022,7 @@
               }
             ],
             "checks_inline": false,
-            "required": true,
+            "required": false,
             "privacy_classification": "personal_data"
           },
           {
@@ -1075,11 +1063,6 @@
                 "value": "very_easy"
               }
             ],
-            "show_if": {
-              "task_convert_points": [
-                "yes"
-              ]
-            },
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data"
@@ -1249,18 +1232,20 @@
       "#Neither easy nor difficult": "Neither easy nor difficult",
       "#Easy": "Easy",
       "#Very easy": "Very easy",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 or older",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "What is your age group? (Participation is limited to adults aged 18 or older)",
-      "#Male": "Male",
-      "#Female": "Female",
-      "#What is your gender?": "What is your gender?",
+      "#Young people / students (15–24)": "Young people / students (15–24)",
+      "#Young adults (25–39)": "Young adults (25–39)",
+      "#Middle-aged adults (40–64)": "Middle-aged adults (40–64)",
+      "#Seniors (65 and over)": "Seniors (65 and over)",
+      "#Select your age group": "Select your age group",
+      "#Woman": "Woman",
+      "#Man": "Man",
+      "#Select your gender": "Select your gender",
+      "#Postcode of your municipality": "Postcode of your municipality",
+      "#Primary school": "Primary school",
+      "#Upper secondary school or equivalent": "Upper secondary school or equivalent",
+      "#University degree (bachelor)": "University degree (bachelor)",
+      "#Postgraduate degree (master or doctorate)": "Postgraduate degree (master or doctorate)",
+      "#Select your highest level of education": "Select your highest level of education",
       "#I live here (Resident)": "I live here (Resident)",
       "#I travel here regularly for work or study (Commuter)": "I travel here regularly for work or study (Commuter)",
       "#I’m visiting for leisure (Tourist)": "I’m visiting for leisure (Tourist)",
@@ -1296,13 +1281,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "In which neighbourhood of Municipio XII do you currently live?",
-      "#No qualification": "No qualification",
-      "#Lower secondary school": "Lower secondary school",
-      "#High school": "High school",
-      "#Bachelor degree or equivalent": "Bachelor degree or equivalent",
-      "#Master degree or equivalent": "Master degree or equivalent",
-      "#Doctorate degree": "Doctorate degree",
-      "#What is your highest completed level of education?": "What is your highest completed level of education?",
       "#About you": "About you",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Some general information about you, used only to describe the group of people who tested the app.</p>",
       "#How easy is it to create an account?": "How easy is it to create an account?",
@@ -1349,6 +1327,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "Is it clear how the app calculates the points you earn for a trip?",
       "#What is unclear?": "What is unclear?",
+      "#Is the number of points given for the distance travelled reasonable?": "Is the number of points given for the distance travelled reasonable?",
+      "#How should points be given instead?": "How should points be given instead?",
       "#How easy is it to convert your points into rewards?": "How easy is it to convert your points into rewards?",
       "#What made converting points difficult?": "What made converting points difficult?",
       "#Too slowly": "Too slowly",
@@ -1403,18 +1383,20 @@
       "#Neither easy nor difficult": "Ni facile ni difficile",
       "#Easy": "Facile",
       "#Very easy": "Très facile",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 ans ou plus",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "Dans quelle tranche d’âge êtes-vous ? (La participation est réservée aux personnes de 18 ans ou plus)",
-      "#Male": "Homme",
-      "#Female": "Femme",
-      "#What is your gender?": "Quel est votre genre ?",
+      "#Young people / students (15–24)": "Jeunes / étudiants (15–24 ans)",
+      "#Young adults (25–39)": "Jeunes adultes (25–39 ans)",
+      "#Middle-aged adults (40–64)": "Adultes d’âge moyen (40–64 ans)",
+      "#Seniors (65 and over)": "Seniors (65 ans et plus)",
+      "#Select your age group": "Sélectionnez votre tranche d’âge",
+      "#Woman": "Femme",
+      "#Man": "Homme",
+      "#Select your gender": "Sélectionnez votre genre",
+      "#Postcode of your municipality": "Code postal de la commune",
+      "#Primary school": "École primaire",
+      "#Upper secondary school or equivalent": "Lycée ou équivalent",
+      "#University degree (bachelor)": "Diplôme universitaire (Licence)",
+      "#Postgraduate degree (master or doctorate)": "Diplôme de deuxième ou troisième cycle (Master ou Doctorat)",
+      "#Select your highest level of education": "Sélectionnez votre niveau d’études le plus élevé",
       "#I live here (Resident)": "J’habite ici (résident)",
       "#I travel here regularly for work or study (Commuter)": "Je viens ici régulièrement pour travailler ou étudier",
       "#I’m visiting for leisure (Tourist)": "Je suis ici pour les loisirs (touriste)",
@@ -1450,13 +1432,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "Dans quel quartier du Municipio XII habitez-vous actuellement ?",
-      "#No qualification": "Aucun diplôme",
-      "#Lower secondary school": "Enseignement secondaire inférieur / collège",
-      "#High school": "Enseignement secondaire supérieur / lycée",
-      "#Bachelor degree or equivalent": "Licence ou équivalent",
-      "#Master degree or equivalent": "Master ou équivalent",
-      "#Doctorate degree": "Doctorat",
-      "#What is your highest completed level of education?": "Quel est le niveau d’études le plus élevé que vous avez terminé ?",
       "#About you": "À propos de vous",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Quelques informations générales sur vous, utilisées uniquement pour décrire le groupe de personnes qui ont testé l’application.</p>",
       "#How easy is it to create an account?": "Dans quelle mesure le processus de création de compte vous semble-t-il facile ?",
@@ -1503,6 +1478,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Enregistrer un trajet, changer de mode de transport en cours de route, et consulter vos résultats et votre historique.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "Est-il clair pour vous comment l’application calcule les points que vous gagnez pour un trajet ?",
       "#What is unclear?": "Qu’est-ce qui n’est pas clair ?",
+      "#Is the number of points given for the distance travelled reasonable?": "Trouvez-vous que le nombre de points attribués en fonction de la distance parcourue est raisonnable ?",
+      "#How should points be given instead?": "Comment les points devraient-ils plutôt être attribués ?",
       "#How easy is it to convert your points into rewards?": "Dans quelle mesure trouvez-vous facile de convertir vos points en cadeaux ?",
       "#What made converting points difficult?": "Qu’est-ce qui a rendu la conversion des points difficile ?",
       "#Too slowly": "Trop lentement",
@@ -1557,18 +1534,20 @@
       "#Neither easy nor difficult": "Né facile né difficile",
       "#Easy": "Facile",
       "#Very easy": "Molto facile",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 anni o più",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "Qual è la tua fascia d’età? (La partecipazione è riservata alle persone di almeno 18 anni)",
-      "#Male": "Uomo",
-      "#Female": "Donna",
-      "#What is your gender?": "Qual è il tuo genere?",
+      "#Young people / students (15–24)": "Giovani / studenti (15–24 anni)",
+      "#Young adults (25–39)": "Giovani adulti (25–39 anni)",
+      "#Middle-aged adults (40–64)": "Adulti (40–64 anni)",
+      "#Seniors (65 and over)": "Anziani (65 anni e oltre)",
+      "#Select your age group": "Seleziona la tua fascia d’età",
+      "#Woman": "Donna",
+      "#Man": "Uomo",
+      "#Select your gender": "Seleziona il tuo genere",
+      "#Postcode of your municipality": "CAP del tuo comune",
+      "#Primary school": "Scuola primaria",
+      "#Upper secondary school or equivalent": "Scuola secondaria superiore o equivalente",
+      "#University degree (bachelor)": "Laurea triennale",
+      "#Postgraduate degree (master or doctorate)": "Laurea magistrale o dottorato",
+      "#Select your highest level of education": "Seleziona il tuo titolo di studio più alto",
       "#I live here (Resident)": "Vivo qui (residente)",
       "#I travel here regularly for work or study (Commuter)": "Vengo qui regolarmente per lavoro o studio (pendolare)",
       "#I’m visiting for leisure (Tourist)": "Sono qui per turismo o svago (turista)",
@@ -1604,13 +1583,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "In quale quartiere del Municipio XII vivi attualmente?",
-      "#No qualification": "Nessun titolo di studio",
-      "#Lower secondary school": "Scuola secondaria di primo grado",
-      "#High school": "Scuola secondaria di secondo grado",
-      "#Bachelor degree or equivalent": "Laurea triennale o titolo equivalente",
-      "#Master degree or equivalent": "Laurea magistrale o titolo equivalente",
-      "#Doctorate degree": "Dottorato di ricerca",
-      "#What is your highest completed level of education?": "Qual è il livello di istruzione più alto che hai completato?",
       "#About you": "Su di te",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Alcune informazioni generali su di te, usate solo per descrivere il gruppo di persone che ha provato l’app.</p>",
       "#How easy is it to create an account?": "Quanto è facile creare un account?",
@@ -1657,6 +1629,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Registrare un viaggio, cambiare modo di spostamento durante il viaggio e leggere i tuoi risultati e la cronologia.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "È chiaro come l’app calcola i punti che guadagni per un viaggio?",
       "#What is unclear?": "Cosa non è chiaro?",
+      "#Is the number of points given for the distance travelled reasonable?": "Il numero di punti dati in base alla distanza percorsa è ragionevole?",
+      "#How should points be given instead?": "Come dovrebbero essere assegnati i punti, invece?",
       "#How easy is it to convert your points into rewards?": "Quanto è facile convertire i tuoi punti in premi?",
       "#What made converting points difficult?": "Cosa ha reso difficile convertire i punti?",
       "#Too slowly": "Troppo lentamente",
@@ -1711,18 +1685,20 @@
       "#Neither easy nor difficult": "Weder leicht noch schwierig",
       "#Easy": "Leicht",
       "#Very easy": "Sehr leicht",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 Jahre oder älter",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "Zu welcher Altersgruppe gehören Sie? (Teilnehmen können nur Personen ab 18 Jahren)",
-      "#Male": "Männlich",
-      "#Female": "Weiblich",
-      "#What is your gender?": "Welches Geschlecht haben Sie?",
+      "#Young people / students (15–24)": "Jugendliche / Studierende (15–24 Jahre)",
+      "#Young adults (25–39)": "Junge Erwachsene (25–39 Jahre)",
+      "#Middle-aged adults (40–64)": "Erwachsene mittleren Alters (40–64 Jahre)",
+      "#Seniors (65 and over)": "Seniorinnen und Senioren (ab 65 Jahren)",
+      "#Select your age group": "Wählen Sie Ihre Altersgruppe",
+      "#Woman": "Frau",
+      "#Man": "Mann",
+      "#Select your gender": "Wählen Sie Ihr Geschlecht",
+      "#Postcode of your municipality": "Postleitzahl Ihrer Gemeinde",
+      "#Primary school": "Grundschule",
+      "#Upper secondary school or equivalent": "Abitur oder vergleichbarer Schulabschluss",
+      "#University degree (bachelor)": "Hochschulabschluss (Bachelor)",
+      "#Postgraduate degree (master or doctorate)": "Weiterführender Hochschulabschluss (Master oder Promotion)",
+      "#Select your highest level of education": "Wählen Sie Ihren höchsten Bildungsabschluss",
       "#I live here (Resident)": "Ich wohne hier",
       "#I travel here regularly for work or study (Commuter)": "Ich komme regelmäßig zum Arbeiten oder Studieren hierher",
       "#I’m visiting for leisure (Tourist)": "Ich bin hier in meiner Freizeit zu Besuch",
@@ -1758,13 +1734,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "In welchem Viertel des Municipio XII wohnen Sie derzeit?",
-      "#No qualification": "Kein Abschluss",
-      "#Lower secondary school": "Mittlerer Schulabschluss",
-      "#High school": "Abitur oder vergleichbarer Schulabschluss",
-      "#Bachelor degree or equivalent": "Bachelorabschluss oder vergleichbar",
-      "#Master degree or equivalent": "Masterabschluss oder vergleichbar",
-      "#Doctorate degree": "Promotion",
-      "#What is your highest completed level of education?": "Was ist Ihr höchster abgeschlossener Bildungsabschluss?",
       "#About you": "Über Sie",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Einige allgemeine Angaben zu Ihnen, die nur dazu dienen, die Gruppe der Personen zu beschreiben, die die App getestet haben.</p>",
       "#How easy is it to create an account?": "Wie einfach ist es, ein Konto zu erstellen?",
@@ -1811,6 +1780,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Einen Weg aufzeichnen, unterwegs das Verkehrsmittel wechseln und Ihre Ergebnisse und Ihren Verlauf lesen.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "Ist Ihnen klar, wie die App die Punkte berechnet, die Sie für einen Weg erhalten?",
       "#What is unclear?": "Was ist unklar?",
+      "#Is the number of points given for the distance travelled reasonable?": "Ist die Anzahl der Punkte für die zurückgelegte Strecke angemessen?",
+      "#How should points be given instead?": "Wie sollten die Punkte stattdessen vergeben werden?",
       "#How easy is it to convert your points into rewards?": "Wie einfach ist es, Ihre Punkte in Prämien umzuwandeln?",
       "#What made converting points difficult?": "Was hat das Umwandeln der Punkte schwierig gemacht?",
       "#Too slowly": "Zu langsam",
@@ -1865,18 +1836,20 @@
       "#Neither easy nor difficult": "Ne kolay ne zor",
       "#Easy": "Kolay",
       "#Very easy": "Çok kolay",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 yaş veya üzeri",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "Hangi yaş grubundasınız? (Katılım 18 yaş ve üzerindeki yetişkinlerle sınırlıdır)",
-      "#Male": "Erkek",
-      "#Female": "Kadın",
-      "#What is your gender?": "Cinsiyetiniz nedir?",
+      "#Young people / students (15–24)": "Gençler / öğrenciler (15–24 yaş)",
+      "#Young adults (25–39)": "Genç yetişkinler (25–39 yaş)",
+      "#Middle-aged adults (40–64)": "Orta yaşlı yetişkinler (40–64 yaş)",
+      "#Seniors (65 and over)": "Yaşlılar (65 yaş ve üzeri)",
+      "#Select your age group": "Yaş grubunuzu seçin",
+      "#Woman": "Kadın",
+      "#Man": "Erkek",
+      "#Select your gender": "Cinsiyetinizi seçin",
+      "#Postcode of your municipality": "Belediyenizin posta kodu",
+      "#Primary school": "İlkokul",
+      "#Upper secondary school or equivalent": "Lise veya dengi",
+      "#University degree (bachelor)": "Üniversite diploması (lisans)",
+      "#Postgraduate degree (master or doctorate)": "Lisansüstü derece (yüksek lisans veya doktora)",
+      "#Select your highest level of education": "En yüksek eğitim düzeyinizi seçin",
       "#I live here (Resident)": "Burada yaşıyorum",
       "#I travel here regularly for work or study (Commuter)": "İş veya eğitim için buraya düzenli olarak geliyorum",
       "#I’m visiting for leisure (Tourist)": "Gezi veya boş zaman için buradayım",
@@ -1912,13 +1885,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "Şu anda Municipio XII’nin hangi mahallesinde yaşıyorsunuz?",
-      "#No qualification": "Diplomam yok",
-      "#Lower secondary school": "Ortaokul",
-      "#High school": "Lise",
-      "#Bachelor degree or equivalent": "Lisans veya dengi",
-      "#Master degree or equivalent": "Yüksek lisans veya dengi",
-      "#Doctorate degree": "Doktora",
-      "#What is your highest completed level of education?": "Tamamladığınız en yüksek eğitim düzeyi nedir?",
       "#About you": "Sizin hakkınızda",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Sizinle ilgili, yalnızca uygulamayı test eden kişi grubunu tanımlamak için kullanılan bazı genel bilgiler.</p>",
       "#How easy is it to create an account?": "Hesap oluşturmak ne kadar kolay?",
@@ -1965,6 +1931,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Bir yolculuğu kaydetme, yolculuk sırasında ulaşım türünü değiştirme ve sonuçlarınızı ve geçmişinizi okuma.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "Uygulamanın bir yolculuk için kazandığınız puanları nasıl hesapladığı açık mı?",
       "#What is unclear?": "Belirsiz olan nedir?",
+      "#Is the number of points given for the distance travelled reasonable?": "Kat edilen mesafe için verilen puan sayısı makul mü?",
+      "#How should points be given instead?": "Puanlar bunun yerine nasıl verilmeli?",
       "#How easy is it to convert your points into rewards?": "Puanlarınızı ödüllere dönüştürmek ne kadar kolay?",
       "#What made converting points difficult?": "Puanları dönüştürmeyi ne zorlaştırdı?",
       "#Too slowly": "Fazla yavaş",
@@ -2019,18 +1987,20 @@
       "#Neither easy nor difficult": "نه آسان و نه دشوار",
       "#Easy": "آسان",
       "#Very easy": "بسیار آسان",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "۸۵ سال یا بیشتر",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "در کدام گروه سنی هستید؟ (شرکت در این مطالعه فقط برای افراد ۱۸ ساله و بالاتر است)",
-      "#Male": "مرد",
-      "#Female": "زن",
-      "#What is your gender?": "جنسیت شما چیست؟",
+      "#Young people / students (15–24)": "جوانان / دانشجویان (۱۵–۲۴ سال)",
+      "#Young adults (25–39)": "بزرگسالان جوان (۲۵–۳۹ سال)",
+      "#Middle-aged adults (40–64)": "بزرگسالان میانسال (۴۰–۶۴ سال)",
+      "#Seniors (65 and over)": "سالمندان (۶۵ سال و بالاتر)",
+      "#Select your age group": "گروه سنی خود را انتخاب کنید",
+      "#Woman": "زن",
+      "#Man": "مرد",
+      "#Select your gender": "جنسیت خود را انتخاب کنید",
+      "#Postcode of your municipality": "کد پستی شهر محل سکونت شما",
+      "#Primary school": "دبستان",
+      "#Upper secondary school or equivalent": "دبیرستان یا معادل آن",
+      "#University degree (bachelor)": "مدرک دانشگاهی (کارشناسی)",
+      "#Postgraduate degree (master or doctorate)": "مدرک تحصیلات تکمیلی (کارشناسی ارشد یا دکتری)",
+      "#Select your highest level of education": "بالاترین سطح تحصیلات خود را انتخاب کنید",
       "#I live here (Resident)": "اینجا زندگی می‌کنم",
       "#I travel here regularly for work or study (Commuter)": "برای کار یا تحصیل به طور منظم به اینجا می‌آیم",
       "#I’m visiting for leisure (Tourist)": "برای تفریح یا بازدید اینجا هستم",
@@ -2066,13 +2036,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "در حال حاضر در کدام محله Municipio XII زندگی می‌کنید؟",
-      "#No qualification": "بدون مدرک تحصیلی",
-      "#Lower secondary school": "دوره متوسطه اول",
-      "#High school": "دبیرستان",
-      "#Bachelor degree or equivalent": "کارشناسی یا معادل آن",
-      "#Master degree or equivalent": "کارشناسی ارشد یا معادل آن",
-      "#Doctorate degree": "دکتری",
-      "#What is your highest completed level of education?": "بالاترین سطح تحصیلی که به پایان رسانده‌اید چیست؟",
       "#About you": "درباره شما",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>برخی اطلاعات کلی درباره شما که تنها برای توصیف گروه افرادی که برنامه را آزمایش کردند به کار می‌رود.</p>",
       "#How easy is it to create an account?": "ساختن حساب کاربری چقدر آسان است؟",
@@ -2119,6 +2082,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>ثبت یک سفر، تغییر شیوه سفر در طول آن، و خواندن نتایج و سابقه سفرهایتان.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "آیا برایتان روشن است که برنامه امتیازهایی را که برای یک سفر کسب می‌کنید چگونه محاسبه می‌کند؟",
       "#What is unclear?": "چه چیزی روشن نیست؟",
+      "#Is the number of points given for the distance travelled reasonable?": "آیا تعداد امتیازهایی که برای مسافت طی‌شده داده می‌شود معقول است؟",
+      "#How should points be given instead?": "به نظر شما امتیازها به چه شکلی باید داده شوند؟",
       "#How easy is it to convert your points into rewards?": "تبدیل امتیازهایتان به جایزه چقدر آسان است؟",
       "#What made converting points difficult?": "چه چیزی تبدیل امتیازها را دشوار کرد؟",
       "#Too slowly": "بیش از حد کند",
@@ -2173,18 +2138,20 @@
       "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
       "#Easy": "Könnyű",
       "#Very easy": "Nagyon könnyű",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 éves vagy idősebb",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "Melyik korcsoportba tartozik? (A részvétel 18 éves vagy idősebb felnőttek számára lehetséges)",
-      "#Male": "Férfi",
-      "#Female": "Nő",
-      "#What is your gender?": "Mi az Ön neme?",
+      "#Young people / students (15–24)": "Fiatalok / diákok (15–24 év)",
+      "#Young adults (25–39)": "Fiatal felnőttek (25–39 év)",
+      "#Middle-aged adults (40–64)": "Középkorú felnőttek (40–64 év)",
+      "#Seniors (65 and over)": "Idősek (65 éves és idősebb)",
+      "#Select your age group": "Válassza ki korcsoportját",
+      "#Woman": "Nő",
+      "#Man": "Férfi",
+      "#Select your gender": "Válassza ki nemét",
+      "#Postcode of your municipality": "Települése irányítószáma",
+      "#Primary school": "Általános iskola",
+      "#Upper secondary school or equivalent": "Középiskolai végzettség vagy azzal egyenértékű",
+      "#University degree (bachelor)": "Egyetemi diploma (alapképzés)",
+      "#Postgraduate degree (master or doctorate)": "Posztgraduális végzettség (mesterképzés vagy doktori fokozat)",
+      "#Select your highest level of education": "Válassza ki legmagasabb iskolai végzettségét",
       "#I live here (Resident)": "Itt élek",
       "#I travel here regularly for work or study (Commuter)": "Rendszeresen ide járok dolgozni vagy tanulni",
       "#I’m visiting for leisure (Tourist)": "Szabadidős céllal látogatok ide",
@@ -2220,13 +2187,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "A Municipio XII melyik városrészében él jelenleg?",
-      "#No qualification": "Nincs végzettségem",
-      "#Lower secondary school": "Alsó középfokú végzettség",
-      "#High school": "Középiskolai végzettség",
-      "#Bachelor degree or equivalent": "Alapképzés vagy annak megfelelő végzettség",
-      "#Master degree or equivalent": "Mesterképzés vagy annak megfelelő végzettség",
-      "#Doctorate degree": "Doktori fokozat",
-      "#What is your highest completed level of education?": "Mi a legmagasabb befejezett iskolai végzettsége?",
       "#About you": "Önről",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Néhány általános adat Önről, amelyet csak az alkalmazást tesztelő személyek csoportjának leírására használunk.</p>",
       "#How easy is it to create an account?": "Mennyire könnyű fiókot létrehozni?",
@@ -2273,6 +2233,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Egy út rögzítése, a közlekedési mód váltása útközben, valamint az eredmények és az előzmények megtekintése.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "Világos az Ön számára, hogyan számítja ki az alkalmazás az egy útért kapott pontokat?",
       "#What is unclear?": "Mi nem világos?",
+      "#Is the number of points given for the distance travelled reasonable?": "Észszerű a megtett távolságért kapott pontok száma?",
+      "#How should points be given instead?": "Hogyan kellene inkább a pontokat adni?",
       "#How easy is it to convert your points into rewards?": "Mennyire könnyű a pontjait jutalmakra váltani?",
       "#What made converting points difficult?": "Mi tette nehézzé a pontok beváltását?",
       "#Too slowly": "Túl lassan",
@@ -2327,18 +2289,20 @@
       "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
       "#Easy": "سهل",
       "#Very easy": "سهل جدًا",
-      "#18-24": "18-24",
-      "#25-34": "25-34",
-      "#35-44": "35-44",
-      "#45-54": "45-54",
-      "#55-64": "55-64",
-      "#65-74": "65-74",
-      "#75-84": "75-84",
-      "#85 or older": "85 سنة أو أكثر",
-      "#What is your age group? (Participation is limited to adults aged 18 or older)": "ما فئتك العمرية؟ (المشاركة متاحة فقط للبالغين من عمر 18 سنة فأكثر)",
-      "#Male": "ذكر",
-      "#Female": "أنثى",
-      "#What is your gender?": "ما جنسك؟",
+      "#Young people / students (15–24)": "الشباب / الطلاب (15–24 سنة)",
+      "#Young adults (25–39)": "البالغون الشباب (25–39 سنة)",
+      "#Middle-aged adults (40–64)": "البالغون في منتصف العمر (40–64 سنة)",
+      "#Seniors (65 and over)": "كبار السن (65 سنة فأكثر)",
+      "#Select your age group": "اختر فئتك العمرية",
+      "#Woman": "امرأة",
+      "#Man": "رجل",
+      "#Select your gender": "اختر جنسك",
+      "#Postcode of your municipality": "الرمز البريدي لبلديتك",
+      "#Primary school": "المدرسة الابتدائية",
+      "#Upper secondary school or equivalent": "المدرسة الثانوية أو ما يعادلها",
+      "#University degree (bachelor)": "شهادة جامعية (بكالوريوس)",
+      "#Postgraduate degree (master or doctorate)": "شهادة دراسات عليا (ماجستير أو دكتوراه)",
+      "#Select your highest level of education": "اختر أعلى مستوى تعليمي لديك",
       "#I live here (Resident)": "أعيش هنا",
       "#I travel here regularly for work or study (Commuter)": "آتي إلى هنا بانتظام للعمل أو الدراسة",
       "#I’m visiting for leisure (Tourist)": "أزور المنطقة للترفيه",
@@ -2374,13 +2338,6 @@
       "#VILLA TROILI": "VILLA TROILI",
       "#VILLINI": "VILLINI",
       "#In which neighbourhood of Municipio XII do you currently live?": "في أي حي من Municipio XII تعيش حاليًا؟",
-      "#No qualification": "لا توجد مؤهلات دراسية",
-      "#Lower secondary school": "التعليم الثانوي الأدنى",
-      "#High school": "الثانوية العامة",
-      "#Bachelor degree or equivalent": "درجة البكالوريوس أو ما يعادلها",
-      "#Master degree or equivalent": "درجة الماجستير أو ما يعادلها",
-      "#Doctorate degree": "الدكتوراه",
-      "#What is your highest completed level of education?": "ما أعلى مستوى تعليمي أكملته؟",
       "#About you": "معلومات عنك",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>بعض المعلومات العامة عنك، تُستخدم فقط لوصف مجموعة الأشخاص الذين جرّبوا التطبيق.</p>",
       "#How easy is it to create an account?": "ما مدى سهولة إنشاء حساب؟",
@@ -2427,6 +2384,8 @@
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>تسجيل رحلة، وتغيير وسيلة التنقل خلالها، وقراءة نتائجك وسجلك.</p>",
       "#Is it clear how the app calculates the points you earn for a trip?": "هل من الواضح لك كيف يحسب التطبيق النقاط التي تكسبها مقابل الرحلة؟",
       "#What is unclear?": "ما الذي ليس واضحًا؟",
+      "#Is the number of points given for the distance travelled reasonable?": "هل عدد النقاط الممنوحة مقابل المسافة المقطوعة معقول؟",
+      "#How should points be given instead?": "كيف ينبغي منح النقاط بدلًا من ذلك؟",
       "#How easy is it to convert your points into rewards?": "ما مدى سهولة تحويل نقاطك إلى مكافآت؟",
       "#What made converting points difficult?": "ما الذي جعل تحويل النقاط صعبًا؟",
       "#Too slowly": "ببطء زائد",

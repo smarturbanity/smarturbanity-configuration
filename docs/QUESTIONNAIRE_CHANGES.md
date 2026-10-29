@@ -12,37 +12,32 @@ no earlier version. Its questions are not in the shared question pool yet. All e
 SmartUrbanity form languages are provided (English, French, Italian, German, Turkish,
 Persian, Hungarian and Arabic).
 
-Differences from the Google Form:
+Every Google Form question keeps its text, answer values and audience, so responses
+can be compared with those already collected in France.
 
-- the consent and email questions are removed, because the application's common
-  eligibility screen already asks them;
-- every rating scale runs from negative to positive (the clarity scale was reversed);
+Additions:
+
+- `residence`, `home_municipio` and `home_neighbourhood`, copied from About You after
+  the education question. They are Rome-specific: another pilot needs its own location
+  questions;
+- `points_calculation_clear` (is it clear how the app calculates the points for a
+  trip) and `points_collection_pace` (how quickly points are collected, measured
+  against the rewards on offer);
+- the `<answer key>_issue` follow-ups, which replace the Google Form's «Autre» remarks
+  and are only shown after an answer that signals a problem; the reward category keeps
+  «Other» with free text.
+
+Presentation-only changes:
+
+- the consent and email questions are asked by the application's common eligibility
+  screen instead;
 - «Moyenement» is corrected to «Moyennement» (`partly`);
-- each rating question keeps the Google Form's per-question «Autre» remark as an
-  optional follow-up (`<answer key>_issue`), shown only after an answer that signals a
-  problem; the reward category keeps «Other» with free text;
+- every rating scale runs from negative to positive (the clarity scale was reversed);
 - «Je ne sais pas» and «Je ne souhaite pas le préciser» use the application's
   `add_i_dont_know` and `add_prefer_not_to_say` answers;
-- age, gender and education follow About You (`age_group`, `gender`, `education`
-  answer keys, options, question texts and translations), so answers can be compared;
-  the age bands start at 18. This drops the Google Form's age bands (15–24, 25–39,
-  40–64, 65 and over), its «Femme»/«Homme» wording and its education options (primary
-  school, upper secondary school, bachelor, master or doctorate); gender gains About
-  You's «Other» answer and education loses «Prefer not to say», as in About You;
-- the Google Form's postcode is replaced by About You's Rome questions `residence`,
-  `home_municipio` and `home_neighbourhood` (same keys, options, conditions and
-  translations, but optional), because a postcode does not identify a Municipio XII
-  neighbourhood: 00163, for example, covers at least five. These location questions
-  are Rome-specific: another pilot needs its own location questions;
-- the Google Form's final page of task results is distributed to the start of the
-  matching sections: each `task_*` question comes first, and its ease question
-  (`history_detailed` for the history task) is asked only after a completed task
-  (`show_if` task = `yes`), so the task questions are required;
-- the Google Form's points-per-distance question cannot be answered without knowing
-  what points are worth, so it is replaced by `points_calculation_clear` (is it clear
-  how the app calculates the points for a trip) and `points_collection_pace` (how
-  quickly points are collected, measured against the rewards on offer);
-- every other question is optional, as in the Google Form.
+- the Google Form's final page of task results is distributed: each `task_*` question
+  is placed at the start of its matching section;
+- every question is optional, as in the Google Form.
 
 ## Version 3.0.0 alignment (2026-10-26)
 
