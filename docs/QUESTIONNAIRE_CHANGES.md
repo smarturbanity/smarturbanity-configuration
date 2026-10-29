@@ -29,8 +29,9 @@ Additions:
 
 Presentation-only changes:
 
-- the consent and email questions are asked by the application's common eligibility
-  screen instead;
+- the consent question is asked by the application's common eligibility screen; the
+  email is not asked (`ask_email: false`) and no participant code is saved
+  (`save_user_id: false`), because the test does not link responses to a person;
 - «Moyenement» is corrected to «Moyennement» (`partly`);
 - every rating scale runs from negative to positive (the clarity scale was reversed);
 - «Je ne sais pas» and «Je ne souhaite pas le préciser» use the application's
