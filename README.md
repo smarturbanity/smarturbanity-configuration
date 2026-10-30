@@ -162,6 +162,13 @@ Pilot configuration may progressively include other domains such as:
 user chooses another one; Rome opens in Italian. Without it, each application keeps its
 own default.
 
+`movesion_pilot_codes` names the pilot's Movesion client in each runtime environment.
+Each Movesion environment has its own client: Rome uses `smartrome` in production and
+`smartromedev` on Movesion dev, which the dev and test installations use. The
+applications select the entry of their environment for sign-in and for the handoff
+landing page `/auth/handoff/<pilot code>`; each Movesion user belongs to exactly one
+of these clients.
+
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete
 geometry of the matching polygons, not their rectangular extent. For example,
