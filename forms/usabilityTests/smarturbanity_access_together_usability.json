@@ -2,9 +2,9 @@
   "questionnaire": {
     "name": "SmartUrbanity - Access Together usability test",
     "questionnaire_id": "smarturbanity_access_together_usability",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "1.2.0",
     "project": "SmartUrbanity",
-    "estimated_minutes": 8,
+    "estimated_minutes": 12,
     "options": {
       "review_mode": false,
       "save_user_id": false,
@@ -14,7 +14,7 @@
     },
     "welcome_page": {
       "title": "Help us improve Access Together",
-      "description": "<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -91,7 +91,7 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Postcode of your municipality",
+            "text": "Postcode of the place where you live",
             "answer_key": "postcode",
             "question_type": "text",
             "required": false,
@@ -148,8 +148,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -252,8 +260,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -325,8 +341,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -526,8 +550,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -630,8 +662,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -713,7 +753,8 @@
             ],
             "checks_inline": false,
             "required": false,
-            "privacy_classification": "personal_data"
+            "privacy_classification": "personal_data",
+            "add_i_dont_know": true
           },
           {
             "text": "What would make the results more useful or easier to understand?",
@@ -738,8 +779,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -778,7 +827,8 @@
             ],
             "checks_inline": false,
             "required": false,
-            "privacy_classification": "personal_data"
+            "privacy_classification": "personal_data",
+            "add_i_dont_know": true
           },
           {
             "text": "What is missing from the activity history?",
@@ -820,7 +870,8 @@
             ],
             "checks_inline": false,
             "required": false,
-            "privacy_classification": "personal_data"
+            "privacy_classification": "personal_data",
+            "add_i_dont_know": true
           },
           {
             "text": "What is unclear?",
@@ -851,7 +902,8 @@
             ],
             "checks_inline": false,
             "required": false,
-            "privacy_classification": "personal_data"
+            "privacy_classification": "personal_data",
+            "add_i_dont_know": true
           },
           {
             "text": "How should points be given instead?",
@@ -875,8 +927,16 @@
                 "value": "yes"
               },
               {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
                 "text": "No",
                 "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
               }
             ],
             "checks_inline": false,
@@ -993,6 +1053,10 @@
               {
                 "text": "Gift cards",
                 "value": "gift_cards"
+              },
+              {
+                "text": "None of these",
+                "value": "none"
               }
             ],
             "checks_inline": false,
@@ -1090,7 +1154,6 @@
       "#Neither easy nor difficult": "Neither easy nor difficult",
       "#Easy": "Easy",
       "#Very easy": "Very easy",
-      "#Postcode of your municipality": "Postcode of your municipality",
       "#About you": "About you",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Some general information about you, used only to describe the group of people who tested the app.</p>",
       "#How easy is it to create an account?": "How easy is it to create an account?",
@@ -1182,7 +1245,6 @@
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together usability test",
       "#Access Together usability test": "Access Together usability test",
       "#Help us improve Access Together": "Help us improve Access Together",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "What is your age group? (Participation is limited to adults aged 18 or older)",
@@ -1203,7 +1265,12 @@
       "#High school": "High school",
       "#Bachelor degree or equivalent": "Bachelor degree or equivalent",
       "#Master degree or equivalent": "Master degree or equivalent",
-      "#Doctorate degree": "Doctorate degree"
+      "#Doctorate degree": "Doctorate degree",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Yes, with help": "Yes, with help",
+      "#I didn’t try it": "I didn’t try it",
+      "#None of these": "None of these",
+      "#Postcode of the place where you live": "Postcode of the place where you live"
     },
     "fr": {
       "code": "fr",
@@ -1212,7 +1279,6 @@
       "#Neither easy nor difficult": "Ni facile ni difficile",
       "#Easy": "Facile",
       "#Very easy": "Très facile",
-      "#Postcode of your municipality": "Code postal de la commune",
       "#About you": "À propos de vous",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Quelques informations générales sur vous, utilisées uniquement pour décrire le groupe de personnes qui ont testé l’application.</p>",
       "#How easy is it to create an account?": "Dans quelle mesure le processus de création de compte vous semble-t-il facile ?",
@@ -1304,7 +1370,6 @@
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test d’utilisabilité d’Access Together",
       "#Access Together usability test": "Test d’utilisabilité d’Access Together",
       "#Help us improve Access Together": "Aidez-nous à améliorer Access Together",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Merci d’avoir testé Access Together, l’application SmartUrbanity qui permet d’enregistrer vos trajets, de gagner des points et de répondre à de courts questionnaires sur vos déplacements.</p><p>Remplissez ce questionnaire après avoir essayé les tâches du test. Pour chaque tâche, indiquez-nous si vous avez réussi à l’accomplir et si cela a été facile. Lorsque quelque chose n’a pas fonctionné, un court commentaire nous aide à le corriger. Cela prend environ 8 minutes.</p><p>Vos réponses servent uniquement à améliorer l’application et ne sont pas associées à votre nom. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Dans quelle tranche d’âge êtes-vous ? (La participation est réservée aux personnes de 18 ans ou plus)",
@@ -1325,7 +1390,12 @@
       "#High school": "Enseignement secondaire supérieur / lycée",
       "#Bachelor degree or equivalent": "Licence ou équivalent",
       "#Master degree or equivalent": "Master ou équivalent",
-      "#Doctorate degree": "Doctorat"
+      "#Doctorate degree": "Doctorat",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Merci d’avoir testé Access Together, l’application SmartUrbanity qui permet d’enregistrer vos trajets, de gagner des points et de répondre à de courts questionnaires sur vos déplacements.</p><p>Remplissez ce questionnaire après avoir essayé les tâches du test. Pour chaque tâche, indiquez-nous si vous avez réussi à l’accomplir et si cela a été facile. Lorsque quelque chose n’a pas fonctionné, un court commentaire nous aide à le corriger. Cela prend environ 10 à 15 minutes, et vous pouvez passer n’importe quelle question.</p><p>Vos réponses servent uniquement à améliorer l’application et ne sont pas associées à votre nom. Seule l’équipe de recherche SmartUrbanity les lit, et elles ne sont transmises à aucune administration. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Yes, with help": "Oui, avec de l’aide",
+      "#I didn’t try it": "Je ne l’ai pas essayé",
+      "#None of these": "Aucune de ces catégories",
+      "#Postcode of the place where you live": "Code postal de votre lieu de résidence"
     },
     "it": {
       "code": "it",
@@ -1334,7 +1404,6 @@
       "#Neither easy nor difficult": "Né facile né difficile",
       "#Easy": "Facile",
       "#Very easy": "Molto facile",
-      "#Postcode of your municipality": "CAP del tuo comune",
       "#About you": "Su di te",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Alcune informazioni generali su di te, usate solo per descrivere il gruppo di persone che ha provato l’app.</p>",
       "#How easy is it to create an account?": "Quanto è facile creare un account?",
@@ -1415,18 +1484,17 @@
       "#Do you have any recommendations to improve this tool?": "Hai suggerimenti per migliorare questo strumento?",
       "#Overall": "Nel complesso",
       "#<p>What you think of the app as a whole.</p>": "<p>Cosa pensi dell’app nel suo insieme.</p>",
-      "#Did you manage to create your account?": "Sei riuscito a creare il tuo account?",
+      "#Did you manage to create your account?": "Sei riuscito/a a creare il tuo account?",
       "#What stopped you from completing it?": "Cosa ti ha impedito di completarlo?",
-      "#Did you manage to update your profile?": "Sei riuscito ad aggiornare il tuo profilo?",
-      "#Did you manage to reset your password?": "Sei riuscito a reimpostare la password?",
-      "#Did you manage to complete the questionnaires before and after the activity?": "Sei riuscito a compilare i questionari prima e dopo l’attività?",
-      "#Did you manage to record a trip using at least two different travel modes?": "Sei riuscito a registrare un viaggio usando almeno due modi di spostamento diversi?",
-      "#Did you manage to convert the points you collected?": "Sei riuscito a convertire i punti che hai raccolto?",
-      "#Did you manage to understand all the information in your trip history?": "Sei riuscito a capire tutte le informazioni nella cronologia dei tuoi viaggi?",
+      "#Did you manage to update your profile?": "Sei riuscito/a ad aggiornare il tuo profilo?",
+      "#Did you manage to reset your password?": "Sei riuscito/a a reimpostare la password?",
+      "#Did you manage to complete the questionnaires before and after the activity?": "Sei riuscito/a a compilare i questionari prima e dopo l’attività?",
+      "#Did you manage to record a trip using at least two different travel modes?": "Sei riuscito/a a registrare un viaggio usando almeno due modi di spostamento diversi?",
+      "#Did you manage to convert the points you collected?": "Sei riuscito/a a convertire i punti che hai raccolto?",
+      "#Did you manage to understand all the information in your trip history?": "Sei riuscito/a a capire tutte le informazioni nella cronologia dei tuoi viaggi?",
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test di usabilità di Access Together",
       "#Access Together usability test": "Test di usabilità di Access Together",
       "#Help us improve Access Together": "Aiutaci a migliorare Access Together",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Grazie per aver provato Access Together, l’app SmartUrbanity per registrare i tuoi viaggi, guadagnare punti e rispondere a brevi questionari su come ti sposti.</p><p>Compila questo questionario dopo aver provato i compiti del test. Per ogni compito, dicci se sei riuscito a completarlo e quanto è stato facile. Quando qualcosa non ha funzionato, un breve commento ci aiuta a correggerlo. Ci vogliono circa 8 minuti.</p><p>Le tue risposte servono solo a migliorare l’app e non sono collegate al tuo nome. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Qual è la tua fascia d’età? (La partecipazione è riservata alle persone di almeno 18 anni)",
@@ -1447,7 +1515,12 @@
       "#High school": "Scuola secondaria di secondo grado",
       "#Bachelor degree or equivalent": "Laurea triennale o titolo equivalente",
       "#Master degree or equivalent": "Laurea magistrale o titolo equivalente",
-      "#Doctorate degree": "Dottorato di ricerca"
+      "#Doctorate degree": "Dottorato di ricerca",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Grazie per aver provato Access Together, l’app SmartUrbanity per registrare i tuoi viaggi, guadagnare punti e rispondere a brevi questionari su come ti sposti.</p><p>Compila questo questionario dopo aver provato i compiti del test. Per ogni compito, dicci se sei riuscito/a a completarlo e quanto è stato facile. Quando qualcosa non ha funzionato, un breve commento ci aiuta a correggerlo. Ci vogliono circa 10-15 minuti, e puoi saltare qualsiasi domanda.</p><p>Le tue risposte servono solo a migliorare l’app e non sono collegate al tuo nome. Le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Yes, with help": "Sì, con un aiuto",
+      "#I didn’t try it": "Non l’ho provato",
+      "#None of these": "Nessuna di queste",
+      "#Postcode of the place where you live": "CAP del luogo in cui vivi"
     },
     "de": {
       "code": "de",
@@ -1456,7 +1529,6 @@
       "#Neither easy nor difficult": "Weder leicht noch schwierig",
       "#Easy": "Leicht",
       "#Very easy": "Sehr leicht",
-      "#Postcode of your municipality": "Postleitzahl Ihrer Gemeinde",
       "#About you": "Über Sie",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Einige allgemeine Angaben zu Ihnen, die nur dazu dienen, die Gruppe der Personen zu beschreiben, die die App getestet haben.</p>",
       "#How easy is it to create an account?": "Wie einfach ist es, ein Konto zu erstellen?",
@@ -1548,7 +1620,6 @@
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Test der Benutzerfreundlichkeit von Access Together",
       "#Access Together usability test": "Test der Benutzerfreundlichkeit von Access Together",
       "#Help us improve Access Together": "Helfen Sie uns, Access Together zu verbessern",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Vielen Dank, dass Sie Access Together testen, die SmartUrbanity-App, mit der Sie Ihre Wege aufzeichnen, Punkte sammeln und kurze Fragebögen zu Ihrer Mobilität beantworten können.</p><p>Füllen Sie diesen Fragebogen aus, nachdem Sie die Testaufgaben ausprobiert haben. Sagen Sie uns zu jeder Aufgabe, ob Sie sie erledigen konnten und wie einfach es war. Wenn etwas nicht funktioniert hat, hilft uns ein kurzer Kommentar, es zu beheben. Das dauert etwa 8 Minuten.</p><p>Ihre Antworten dienen nur dazu, die App zu verbessern, und werden nicht mit Ihrem Namen verknüpft. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Zu welcher Altersgruppe gehören Sie? (Teilnehmen können nur Personen ab 18 Jahren)",
@@ -1569,7 +1640,12 @@
       "#High school": "Abitur oder vergleichbarer Schulabschluss",
       "#Bachelor degree or equivalent": "Bachelorabschluss oder vergleichbar",
       "#Master degree or equivalent": "Masterabschluss oder vergleichbar",
-      "#Doctorate degree": "Promotion"
+      "#Doctorate degree": "Promotion",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Vielen Dank, dass Sie Access Together testen, die SmartUrbanity-App, mit der Sie Ihre Wege aufzeichnen, Punkte sammeln und kurze Fragebögen zu Ihrer Mobilität beantworten können.</p><p>Füllen Sie diesen Fragebogen aus, nachdem Sie die Testaufgaben ausprobiert haben. Sagen Sie uns zu jeder Aufgabe, ob Sie sie erledigen konnten und wie einfach es war. Wenn etwas nicht funktioniert hat, hilft uns ein kurzer Kommentar, es zu beheben. Das dauert etwa 10–15 Minuten, und Sie können jede Frage überspringen.</p><p>Ihre Antworten dienen nur dazu, die App zu verbessern, und werden nicht mit Ihrem Namen verknüpft. Nur das SmartUrbanity-Forschungsteam liest sie, und sie werden an keine Behörde weitergegeben. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Yes, with help": "Ja, mit Hilfe",
+      "#I didn’t try it": "Ich habe es nicht ausprobiert",
+      "#None of these": "Keine davon",
+      "#Postcode of the place where you live": "Postleitzahl Ihres Wohnorts"
     },
     "tr": {
       "code": "tr",
@@ -1578,7 +1654,6 @@
       "#Neither easy nor difficult": "Ne kolay ne zor",
       "#Easy": "Kolay",
       "#Very easy": "Çok kolay",
-      "#Postcode of your municipality": "Belediyenizin posta kodu",
       "#About you": "Sizin hakkınızda",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Sizinle ilgili, yalnızca uygulamayı test eden kişi grubunu tanımlamak için kullanılan bazı genel bilgiler.</p>",
       "#How easy is it to create an account?": "Hesap oluşturmak ne kadar kolay?",
@@ -1670,7 +1745,6 @@
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Access Together kullanılabilirlik testi",
       "#Access Together usability test": "Access Together kullanılabilirlik testi",
       "#Help us improve Access Together": "Access Together'ı geliştirmemize yardımcı olun",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>SmartUrbanity'nin yolculuklarınızı kaydetmenizi, puan kazanmanızı ve nasıl seyahat ettiğinize dair kısa anketleri yanıtlamanızı sağlayan uygulaması Access Together'ı test ettiğiniz için teşekkür ederiz.</p><p>Bu anketi test görevlerini denedikten sonra doldurun. Her görev için onu tamamlayıp tamamlayamadığınızı ve ne kadar kolay olduğunu bize bildirin. Bir şey çalışmadığında kısa bir yorum, sorunu düzeltmemize yardımcı olur. Yaklaşık 8 dakika sürer.</p><p>Yanıtlarınız yalnızca uygulamayı geliştirmek için kullanılır ve adınızla ilişkilendirilmez. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Hangi yaş grubundasınız? (Katılım 18 yaş ve üzerindeki yetişkinlerle sınırlıdır)",
@@ -1691,7 +1765,12 @@
       "#High school": "Lise",
       "#Bachelor degree or equivalent": "Lisans veya dengi",
       "#Master degree or equivalent": "Yüksek lisans veya dengi",
-      "#Doctorate degree": "Doktora"
+      "#Doctorate degree": "Doktora",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>SmartUrbanity'nin yolculuklarınızı kaydetmenizi, puan kazanmanızı ve nasıl seyahat ettiğinize dair kısa anketleri yanıtlamanızı sağlayan uygulaması Access Together'ı test ettiğiniz için teşekkür ederiz.</p><p>Bu anketi test görevlerini denedikten sonra doldurun. Her görev için onu tamamlayıp tamamlayamadığınızı ve ne kadar kolay olduğunu bize bildirin. Bir şey çalışmadığında kısa bir yorum, sorunu düzeltmemize yardımcı olur. Yaklaşık 10–15 dakika sürer ve istediğiniz soruyu atlayabilirsiniz.</p><p>Yanıtlarınız yalnızca uygulamayı geliştirmek için kullanılır ve adınızla ilişkilendirilmez. Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Yes, with help": "Evet, yardımla",
+      "#I didn’t try it": "Denemedim",
+      "#None of these": "Hiçbiri",
+      "#Postcode of the place where you live": "Yaşadığınız yerin posta kodu"
     },
     "hu": {
       "code": "hu",
@@ -1700,7 +1779,6 @@
       "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
       "#Easy": "Könnyű",
       "#Very easy": "Nagyon könnyű",
-      "#Postcode of your municipality": "Települése irányítószáma",
       "#About you": "Önről",
       "#<p>Some general information about you, used only to describe the group of people who tested the app.</p>": "<p>Néhány általános adat Önről, amelyet csak az alkalmazást tesztelő személyek csoportjának leírására használunk.</p>",
       "#How easy is it to create an account?": "Mennyire könnyű fiókot létrehozni?",
@@ -1792,7 +1870,6 @@
       "#SmartUrbanity - Access Together usability test": "SmartUrbanity - Az Access Together használhatósági tesztje",
       "#Access Together usability test": "Az Access Together használhatósági tesztje",
       "#Help us improve Access Together": "Segítsen nekünk jobbá tenni az Access Together alkalmazást",
-      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 8 minutes.</p><p>Your answers are used only to improve the app and are not linked to your name. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Köszönjük, hogy kipróbálja az Access Together alkalmazást, a SmartUrbanity alkalmazását, amellyel rögzítheti útjait, pontokat gyűjthet, és rövid kérdőíveket tölthet ki a közlekedési szokásairól.</p><p>Ezt a kérdőívet a tesztfeladatok kipróbálása után töltse ki. Minden feladatnál mondja el, sikerült-e elvégeznie, és mennyire volt könnyű. Ha valami nem működött, egy rövid megjegyzés segít nekünk kijavítani. Körülbelül 8 percet vesz igénybe.</p><p>Válaszait kizárólag az alkalmazás fejlesztésére használjuk, és nem kapcsolódnak a nevéhez. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
       "#What is your age group? (Participation is limited to adults aged 18 or older)": "Melyik korcsoportba tartozik? (A részvétel 18 éves vagy idősebb felnőttek számára lehetséges)",
@@ -1813,7 +1890,12 @@
       "#High school": "Középiskolai végzettség",
       "#Bachelor degree or equivalent": "Alapképzés vagy annak megfelelő végzettség",
       "#Master degree or equivalent": "Mesterképzés vagy annak megfelelő végzettség",
-      "#Doctorate degree": "Doktori fokozat"
+      "#Doctorate degree": "Doktori fokozat",
+      "#<p>Thank you for testing Access Together, the SmartUrbanity app for recording your trips, earning points and answering short questionnaires about how you travel.</p><p>Fill in this questionnaire after you have tried the test tasks. For each task, tell us whether you managed to complete it and how easy it was. When something did not work, a short comment helps us fix it. It takes about 10–15 minutes, and you can skip any question.</p><p>Your answers are used only to improve the app and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Köszönjük, hogy kipróbálja az Access Together alkalmazást, a SmartUrbanity alkalmazását, amellyel rögzítheti útjait, pontokat gyűjthet, és rövid kérdőíveket tölthet ki a közlekedési szokásairól.</p><p>Ezt a kérdőívet a tesztfeladatok kipróbálása után töltse ki. Minden feladatnál mondja el, sikerült-e elvégeznie, és mennyire volt könnyű. Ha valami nem működött, egy rövid megjegyzés segít nekünk kijavítani. Körülbelül 10–15 percet vesz igénybe, és bármelyik kérdést kihagyhatja.</p><p>Válaszait kizárólag az alkalmazás fejlesztésére használjuk, és nem kapcsolódnak a nevéhez. Csak a SmartUrbanity kutatócsoportja olvassa őket, és semmilyen hatósághoz nem kerülnek. <a href=\"https://www.smarturbanity.com/about\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Yes, with help": "Igen, segítséggel",
+      "#I didn’t try it": "Nem próbáltam ki",
+      "#None of these": "Egyik sem",
+      "#Postcode of the place where you live": "Lakóhelye irányítószáma"
     }
   },
   "id": "smarturbanity_access_together_usability",
