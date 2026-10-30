@@ -162,6 +162,22 @@ Pilot configuration may progressively include other domains such as:
 user chooses another one; Rome opens in Italian. Without it, each application keeps its
 own default.
 
+`movesion` holds the pilot's Movesion client for each runtime environment (`prod`,
+`test`, `dev`): `pilot_codes` names the client and `base_urls` the Movesion API that
+serves it. Rome uses `smartrome` on `https://api.mobilitycompany.it` in production and
+`smartromedev` on `https://api.dev.mobilitycompany.it`, Movesion dev, which the dev and
+test installations use. The applications select the entry of their environment for
+sign-in and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion
+user belongs to exactly one of these clients.
+
+`answers_firestore` is the Firebase web configuration of the database that receives the
+pilot's participant answers, per runtime environment. In production it is the pilot's
+named database in Movesion's `smart-urbanity` project (Rome: `rome-db`), which only
+receives answers: the team never reads them from there, Movesion exports them on request.
+An environment without an entry keeps the installation's own database, the team's
+`smarturbanity-admin` project in dev and test. The values are public client settings,
+as in any web application; the database rules protect the data.
+
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete
 geometry of the matching polygons, not their rectangular extent. For example,
