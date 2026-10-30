@@ -158,6 +158,10 @@ Pilot configuration may progressively include other domains such as:
 - application features;
 - map and interface configuration.
 
+`default_language` is the language the applications open in for that pilot, until the
+user chooses another one; Rome opens in Italian. Without it, each application keeps its
+own default.
+
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete
 geometry of the matching polygons, not their rectangular extent. For example,
