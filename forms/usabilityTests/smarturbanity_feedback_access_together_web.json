@@ -1,0 +1,703 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - How did it go? Access Together Web",
+    "questionnaire_id": "smarturbanity_feedback_access_together_web",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 4,
+    "options": {
+      "review_mode": false,
+      "save_user_id": false,
+      "ask_consent": true,
+      "ask_adult": true,
+      "ask_email": false
+    },
+    "welcome_page": {
+      "title": "Help us improve Access Together Web",
+      "description": "<p>Thank you for trying Access Together Web, the guided pages that ask one question at a time about the places around you.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved. Thank you for your time.</p>"
+    },
+    "title": "How did it go? Access Together Web",
+    "sections": [
+      {
+        "title": "How you tried it",
+        "description": "<p>Where and with what you used it.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Where did you try Access Together Web?",
+            "answer_key": "where_tried",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "At the event, with the team",
+                "value": "event_with_team"
+              },
+              {
+                "text": "On my own",
+                "value": "on_my_own"
+              },
+              {
+                "text": "Both",
+                "value": "both"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Which device did you use?",
+            "answer_key": "device",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Smartphone",
+                "value": "phone"
+              },
+              {
+                "text": "Tablet",
+                "value": "tablet"
+              },
+              {
+                "text": "Computer",
+                "value": "computer"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          }
+        ]
+      },
+      {
+        "title": "What you tried",
+        "description": "<p>One question for each step; skip the ones you did not try.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Did you manage to say where you are (your position, an address or a point on the map)?",
+            "answer_key": "task_place",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_place_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "task_place": [
+                "no"
+              ]
+            }
+          },
+          {
+            "text": "Did you manage to check a service near you, saying whether it still exists?",
+            "answer_key": "task_check_service",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_check_service_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "task_check_service": [
+                "no"
+              ]
+            }
+          },
+          {
+            "text": "Did you manage to report something about a place (a crossing, a pavement, a fault to repair)?",
+            "answer_key": "task_report",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_report_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "task_report": [
+                "no"
+              ]
+            }
+          },
+          {
+            "text": "Did you manage to sign in or create an account when it was asked?",
+            "answer_key": "task_account",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What stopped you from completing it?",
+            "answer_key": "task_account_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "task_account": [
+                "no"
+              ]
+            }
+          },
+          {
+            "text": "Did you add Access Together Web to your phone’s home screen?",
+            "answer_key": "task_install",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No, I did not manage to",
+                "value": "no"
+              },
+              {
+                "text": "No, I did not want to",
+                "value": "not_wanted"
+              },
+              {
+                "text": "I did not see the option",
+                "value": "not_seen"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "How easy was it to use Access Together Web?",
+            "answer_key": "ease",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Very difficult",
+                "value": "very_difficult"
+              },
+              {
+                "text": "Difficult",
+                "value": "difficult"
+              },
+              {
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy",
+                "value": "very_easy"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What was difficult?",
+            "answer_key": "ease_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "ease": [
+                "very_difficult",
+                "difficult"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "title": "Screens and texts",
+        "description": "<p>How clear the screens, texts and icons are.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How easy to understand are the questions and the texts?",
+            "answer_key": "texts_clarity",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Very difficult to understand",
+                "value": "very_hard"
+              },
+              {
+                "text": "Rather difficult to understand",
+                "value": "rather_hard"
+              },
+              {
+                "text": "Neither easy nor difficult to understand",
+                "value": "neutral"
+              },
+              {
+                "text": "Rather easy to understand",
+                "value": "rather_easy"
+              },
+              {
+                "text": "Very easy to understand",
+                "value": "very_easy"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Which texts were hard to understand?",
+            "answer_key": "texts_clarity_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "texts_clarity": [
+                "very_hard",
+                "rather_hard"
+              ]
+            }
+          },
+          {
+            "text": "How easy to understand are the icons?",
+            "answer_key": "icons_clarity",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Very difficult to understand",
+                "value": "very_hard"
+              },
+              {
+                "text": "Rather difficult to understand",
+                "value": "rather_hard"
+              },
+              {
+                "text": "Neither easy nor difficult to understand",
+                "value": "neutral"
+              },
+              {
+                "text": "Rather easy to understand",
+                "value": "rather_easy"
+              },
+              {
+                "text": "Very easy to understand",
+                "value": "very_easy"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Which icons were hard to understand?",
+            "answer_key": "icons_clarity_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "icons_clarity": [
+                "very_hard",
+                "rather_hard"
+              ]
+            }
+          },
+          {
+            "text": "How clear is the layout of the screens?",
+            "answer_key": "layout_clarity",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Very confusing",
+                "value": "very_confusing"
+              },
+              {
+                "text": "Rather confusing",
+                "value": "rather_confusing"
+              },
+              {
+                "text": "Neither clear nor confusing",
+                "value": "neutral"
+              },
+              {
+                "text": "Rather clear",
+                "value": "rather_clear"
+              },
+              {
+                "text": "Very clear",
+                "value": "very_clear"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "What would you change in the layout?",
+            "answer_key": "layout_clarity_issue",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal",
+            "show_if": {
+              "layout_clarity": [
+                "very_confusing",
+                "rather_confusing"
+              ]
+            }
+          },
+          {
+            "text": "Is the text size comfortable to read?",
+            "answer_key": "text_size",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Too small",
+                "value": "too_small"
+              },
+              {
+                "text": "Just right",
+                "value": "just_right"
+              },
+              {
+                "text": "Too large",
+                "value": "too_large"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          }
+        ]
+      },
+      {
+        "title": "Overall",
+        "description": "<p>What you think of Access Together Web as a whole.</p>",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How useful would Access Together Web be for you?",
+            "answer_key": "tool_usefulness",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Not at all useful",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly useful",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately useful",
+                "value": "moderately"
+              },
+              {
+                "text": "Very useful",
+                "value": "very"
+              },
+              {
+                "text": "Extremely useful",
+                "value": "extremely"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data",
+            "add_i_dont_know": true
+          },
+          {
+            "text": "Would you use Access Together Web again, for example from home?",
+            "answer_key": "intention_to_use",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "I would definitely not use it",
+                "value": "definitely_not"
+              },
+              {
+                "text": "I would probably not use it",
+                "value": "probably_not"
+              },
+              {
+                "text": "I am not sure",
+                "value": "not_sure"
+              },
+              {
+                "text": "I would probably use it",
+                "value": "probably"
+              },
+              {
+                "text": "I would definitely use it",
+                "value": "definitely"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you have any recommendations to improve this tool?",
+            "answer_key": "recommendations",
+            "question_type": "textarea",
+            "required": false,
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en",
+      "#<p>How clear the screens, texts and icons are.</p>": "<p>How clear the screens, texts and icons are.</p>",
+      "#<p>One question for each step; skip the ones you did not try.</p>": "<p>One question for each step; skip the ones you did not try.</p>",
+      "#<p>Thank you for trying Access Together Web, the guided pages that ask one question at a time about the places around you.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p>": "<p>Thank you for trying Access Together Web, the guided pages that ask one question at a time about the places around you.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p>",
+      "#<p>What you think of Access Together Web as a whole.</p>": "<p>What you think of Access Together Web as a whole.</p>",
+      "#<p>Where and with what you used it.</p>": "<p>Where and with what you used it.</p>",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
+      "#At the event, with the team": "At the event, with the team",
+      "#Both": "Both",
+      "#Computer": "Computer",
+      "#Did you add Access Together Web to your phone’s home screen?": "Did you add Access Together Web to your phone’s home screen?",
+      "#Did you manage to check a service near you, saying whether it still exists?": "Did you manage to check a service near you, saying whether it still exists?",
+      "#Did you manage to report something about a place (a crossing, a pavement, a fault to repair)?": "Did you manage to report something about a place (a crossing, a pavement, a fault to repair)?",
+      "#Did you manage to say where you are (your position, an address or a point on the map)?": "Did you manage to say where you are (your position, an address or a point on the map)?",
+      "#Did you manage to sign in or create an account when it was asked?": "Did you manage to sign in or create an account when it was asked?",
+      "#Difficult": "Difficult",
+      "#Do you have any recommendations to improve this tool?": "Do you have any recommendations to improve this tool?",
+      "#Easy": "Easy",
+      "#Extremely useful": "Extremely useful",
+      "#Help us improve Access Together Web": "Help us improve Access Together Web",
+      "#How clear is the layout of the screens?": "How clear is the layout of the screens?",
+      "#How did it go? Access Together Web": "How did it go? Access Together Web",
+      "#How easy to understand are the icons?": "How easy to understand are the icons?",
+      "#How easy to understand are the questions and the texts?": "How easy to understand are the questions and the texts?",
+      "#How easy was it to use Access Together Web?": "How easy was it to use Access Together Web?",
+      "#How useful would Access Together Web be for you?": "How useful would Access Together Web be for you?",
+      "#How you tried it": "How you tried it",
+      "#I am not sure": "I am not sure",
+      "#I did not see the option": "I did not see the option",
+      "#I didn’t try it": "I didn’t try it",
+      "#I would definitely not use it": "I would definitely not use it",
+      "#I would definitely use it": "I would definitely use it",
+      "#I would probably not use it": "I would probably not use it",
+      "#I would probably use it": "I would probably use it",
+      "#Is the text size comfortable to read?": "Is the text size comfortable to read?",
+      "#Just right": "Just right",
+      "#Moderately useful": "Moderately useful",
+      "#Neither clear nor confusing": "Neither clear nor confusing",
+      "#Neither easy nor difficult": "Neither easy nor difficult",
+      "#Neither easy nor difficult to understand": "Neither easy nor difficult to understand",
+      "#No": "No",
+      "#No, I did not manage to": "No, I did not manage to",
+      "#No, I did not want to": "No, I did not want to",
+      "#Not at all useful": "Not at all useful",
+      "#On my own": "On my own",
+      "#Overall": "Overall",
+      "#Rather clear": "Rather clear",
+      "#Rather confusing": "Rather confusing",
+      "#Rather difficult to understand": "Rather difficult to understand",
+      "#Rather easy to understand": "Rather easy to understand",
+      "#Screens and texts": "Screens and texts",
+      "#Slightly useful": "Slightly useful",
+      "#SmartUrbanity - How did it go? Access Together Web": "SmartUrbanity - How did it go? Access Together Web",
+      "#Smartphone": "Smartphone",
+      "#Tablet": "Tablet",
+      "#Thank you!": "Thank you!",
+      "#Too large": "Too large",
+      "#Too small": "Too small",
+      "#Very clear": "Very clear",
+      "#Very confusing": "Very confusing",
+      "#Very difficult": "Very difficult",
+      "#Very difficult to understand": "Very difficult to understand",
+      "#Very easy": "Very easy",
+      "#Very easy to understand": "Very easy to understand",
+      "#Very useful": "Very useful",
+      "#What stopped you from completing it?": "What stopped you from completing it?",
+      "#What was difficult?": "What was difficult?",
+      "#What would you change in the layout?": "What would you change in the layout?",
+      "#What you tried": "What you tried",
+      "#Where did you try Access Together Web?": "Where did you try Access Together Web?",
+      "#Which device did you use?": "Which device did you use?",
+      "#Which icons were hard to understand?": "Which icons were hard to understand?",
+      "#Which texts were hard to understand?": "Which texts were hard to understand?",
+      "#Would you use Access Together Web again, for example from home?": "Would you use Access Together Web again, for example from home?",
+      "#Yes": "Yes",
+      "#Yes, with help": "Yes, with help"
+    },
+    "it": {
+      "code": "it",
+      "#<p>How clear the screens, texts and icons are.</p>": "<p>Quanto sono chiari schermate, testi e icone.</p>",
+      "#<p>One question for each step; skip the ones you did not try.</p>": "<p>Una domanda per ogni passaggio; salta quelli che non hai provato.</p>",
+      "#<p>Thank you for trying Access Together Web, the guided pages that ask one question at a time about the places around you.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p>": "<p>Grazie per aver provato Access Together Web, le pagine guidate che fanno una domanda alla volta sui luoghi intorno a te.</p><p>Dicci se sei riuscito a fare ogni cosa e quanto è stato facile: quando qualcosa non ha funzionato, un breve commento ci aiuta a sistemarla. Servono circa 3 minuti e puoi saltare qualsiasi domanda.</p><p>Le tue risposte servono solo a validare e migliorare gli strumenti e non sono collegate al tuo nome. Le legge solo il gruppo di ricerca SmartUrbanity e non vengono inviate a nessuna autorità pubblica.</p>",
+      "#<p>What you think of Access Together Web as a whole.</p>": "<p>Cosa pensi di Access Together Web nel suo insieme.</p>",
+      "#<p>Where and with what you used it.</p>": "<p>Dove e con cosa l’hai usato.</p>",
+      "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
+      "#At the event, with the team": "All’evento, con il team",
+      "#Both": "In entrambi i modi",
+      "#Computer": "Computer",
+      "#Did you add Access Together Web to your phone’s home screen?": "Hai aggiunto Access Together Web alla schermata iniziale del telefono?",
+      "#Did you manage to check a service near you, saying whether it still exists?": "Sei riuscito a verificare un servizio vicino a te, dicendo se esiste ancora?",
+      "#Did you manage to report something about a place (a crossing, a pavement, a fault to repair)?": "Sei riuscito a segnalare qualcosa su un luogo (un attraversamento, un marciapiede, un guasto da riparare)?",
+      "#Did you manage to say where you are (your position, an address or a point on the map)?": "Sei riuscito a dire dove sei (la tua posizione, un indirizzo o un punto sulla mappa)?",
+      "#Did you manage to sign in or create an account when it was asked?": "Sei riuscito ad accedere o a creare un account quando ti è stato chiesto?",
+      "#Difficult": "Difficile",
+      "#Do you have any recommendations to improve this tool?": "Hai suggerimenti per migliorare questo strumento?",
+      "#Easy": "Facile",
+      "#Extremely useful": "Estremamente utile",
+      "#Help us improve Access Together Web": "Aiutaci a migliorare Access Together Web",
+      "#How clear is the layout of the screens?": "Quanto è chiara l’impostazione delle schermate?",
+      "#How did it go? Access Together Web": "Com’è andata? Access Together Web",
+      "#How easy to understand are the icons?": "Quanto sono facili da capire le icone?",
+      "#How easy to understand are the questions and the texts?": "Quanto sono facili da capire le domande e i testi?",
+      "#How easy was it to use Access Together Web?": "Quanto è stato facile usare Access Together Web?",
+      "#How useful would Access Together Web be for you?": "Quanto ti sarebbe utile Access Together Web?",
+      "#How you tried it": "Come l’hai provato",
+      "#I am not sure": "Non so",
+      "#I did not see the option": "Non ho visto la possibilità",
+      "#I didn’t try it": "Non l’ho provato",
+      "#I would definitely not use it": "Sicuramente non lo userei",
+      "#I would definitely use it": "Sicuramente lo userei",
+      "#I would probably not use it": "Probabilmente non lo userei",
+      "#I would probably use it": "Probabilmente lo userei",
+      "#Is the text size comfortable to read?": "La dimensione del testo è comoda da leggere?",
+      "#Just right": "Giusta",
+      "#Moderately useful": "Abbastanza utile",
+      "#Neither clear nor confusing": "Né chiara né confusa",
+      "#Neither easy nor difficult": "Né facile né difficile",
+      "#Neither easy nor difficult to understand": "Né facili né difficili da capire",
+      "#No": "No",
+      "#No, I did not manage to": "No, non ci sono riuscito",
+      "#No, I did not want to": "No, non volevo",
+      "#Not at all useful": "Per niente utile",
+      "#On my own": "Per conto mio",
+      "#Overall": "Nel complesso",
+      "#Rather clear": "Piuttosto chiara",
+      "#Rather confusing": "Piuttosto confusa",
+      "#Rather difficult to understand": "Piuttosto difficili da capire",
+      "#Rather easy to understand": "Piuttosto facili da capire",
+      "#Screens and texts": "Schermate e testi",
+      "#Slightly useful": "Poco utile",
+      "#SmartUrbanity - How did it go? Access Together Web": "SmartUrbanity - Com’è andata? Access Together Web",
+      "#Smartphone": "Smartphone",
+      "#Tablet": "Tablet",
+      "#Thank you!": "Grazie!",
+      "#Too large": "Troppo grande",
+      "#Too small": "Troppo piccola",
+      "#Very clear": "Molto chiara",
+      "#Very confusing": "Molto confusa",
+      "#Very difficult": "Molto difficile",
+      "#Very difficult to understand": "Molto difficili da capire",
+      "#Very easy": "Molto facile",
+      "#Very easy to understand": "Molto facili da capire",
+      "#Very useful": "Molto utile",
+      "#What stopped you from completing it?": "Cosa ti ha impedito di completarlo?",
+      "#What was difficult?": "Cosa è stato difficile?",
+      "#What would you change in the layout?": "Cosa cambieresti nell’impostazione?",
+      "#What you tried": "Cosa hai provato",
+      "#Where did you try Access Together Web?": "Dove hai provato Access Together Web?",
+      "#Which device did you use?": "Con quale dispositivo l’hai usato?",
+      "#Which icons were hard to understand?": "Quali icone erano difficili da capire?",
+      "#Which texts were hard to understand?": "Quali testi erano difficili da capire?",
+      "#Would you use Access Together Web again, for example from home?": "Useresti di nuovo Access Together Web, per esempio da casa?",
+      "#Yes": "Sì",
+      "#Yes, with help": "Sì, con un aiuto"
+    }
+  },
+  "id": "smarturbanity_feedback_access_together_web",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en"
+}
