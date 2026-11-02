@@ -81,6 +81,11 @@ the root `base.json`, then applies the selected pilot JSON with a deep merge;
 pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
 is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
 
+The root `index.json` lists each pilot as `{id, name, language}`. Applications read it before
+any pilot file: they offer the pilots by `name` when several are available and open in the
+pilot's `language` from their first screen. Keep `language` equal to the pilot's
+`default_language`.
+
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
 ## CityMaaS manifests
