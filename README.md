@@ -249,6 +249,8 @@ forms/
 
 Forms can include questionnaires concerning user characteristics, daily mobility, travel experience and individual transport modes, as well as trip-related and geolocated reporting workflows.
 
+Each `tripSurveys/` form declares when it is answered in `questionnaire.trip_phase`, `"pre"` or `"post"`; the questionnaire editor groups the trip forms by it. It is metadata and does not change the form version.
+
 `usabilityTests/` holds questionnaires completed after a moderated usability test of an application. Their questions are not yet in the shared question pool, so they carry no `question_id` or `question_version`, and they are offered only through a campaign.
 
 A form definition should describe the form itself, while its availability can depend on the runtime context.
