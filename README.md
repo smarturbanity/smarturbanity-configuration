@@ -319,7 +319,8 @@ This repository holds no privacy documents or notice links. Each pilot's notices
 the pilot's languages, their versions and the privacy guidelines live on the
 SmartUrbanity website, which lists each pilot's notices in `pilot/<pilot>/privacy.json`;
 there is no common notice. `base.json` names the website once, as the top-level
-`website_url` (temporarily `experimental-website.wemolab.eu`); the applications read
+`website_url`, one address per runtime environment (`dev` and `test` on the preview site
+`experimental-website.wemolab.eu`, `prod` on `www.smarturbanity.com`); the applications read
 the lists from there for the loaded `pilot_id`.
 
 `participant_code_destination` describes the service that returns the pseudonymous
