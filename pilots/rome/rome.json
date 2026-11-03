@@ -30,7 +30,6 @@
     "bike",
     "transit"
   ],
-  "default_mode": "walk",
   "questionnaires": {
     "consent": {
       "version": "2.0.0-draft",
@@ -42,13 +41,9 @@
     }
   },
   "data_model": {
-    "runtime": {
-      "source": "server"
-    },
     "study_area": {
       "name": "Municipio XII",
       "area_group_id": "study_areas",
-      "minimum_area_overlap_ratio": 0.5,
       "selector": {
         "property": "municipio",
         "values": [
@@ -181,26 +176,12 @@
         ]
       }
     },
-    "default_area_group_id": "neighbourhoods",
     "area_groups": {
       "neighbourhoods": {
-        "name": "Quartieri",
-        "order": 10,
-        "view": "access_inspector",
-        "icon": "bi-map",
-        "source_layers": [
-          "su_areas"
-        ]
+        "name": "Quartieri"
       },
       "study_areas": {
-        "name": "Municipio XII",
-        "order": 20,
-        "view": "access_inspector",
-        "icon": "bi-bounding-box",
-        "selectable": false,
-        "source_layers": [
-          "su_study_areas"
-        ]
+        "name": "Municipio XII"
       },
       "census": {
         "name": "Sezioni censuarie",
@@ -213,15 +194,761 @@
         ]
       },
       "h3": {
-        "name": "Celle H3",
-        "order": 40,
-        "view": "access_inspector",
-        "icon": "bi-hexagon",
-        "source": "server",
-        "resolution": 9,
-        "source_layers": [
-          "su_hexagons"
+        "name": "Celle H3"
+      }
+    }
+  },
+  "datasets": {
+    "service_subtypes": {
+      "default_subtypes": {
+        "ST_01": [
+          "Medico di medicina generale",
+          "Studio medico di base",
+          "Medicina di gruppo"
+        ],
+        "ST_02": [
+          "Poliambulatorio",
+          "Ambulatorio medico",
+          "Centro medico"
+        ],
+        "ST_03": [
+          "Cardiologia",
+          "Dermatologia",
+          "Ginecologia",
+          "Pediatria",
+          "Ortopedia",
+          "Altra visita specialistica"
+        ],
+        "ST_04": [
+          "Ospedale generale",
+          "Policlinico",
+          "Ospedale con pronto soccorso"
+        ],
+        "ST_05": [
+          "Studio dentistico",
+          "Clinica odontoiatrica",
+          "Studio ortodontico"
+        ],
+        "ST_06": [
+          "Farmacia",
+          "Farmacia h24",
+          "Farmacia di turno"
+        ],
+        "ST_07": [
+          "Ambulatorio veterinario",
+          "Clinica veterinaria",
+          "Ospedale veterinario"
+        ],
+        "ST_08": [
+          "Asilo nido",
+          "Micronido",
+          "Centro per l'infanzia"
+        ],
+        "ST_09": [
+          "Scuola primaria",
+          "Scuola secondaria di primo grado",
+          "Liceo",
+          "Istituto tecnico",
+          "Istituto professionale"
+        ],
+        "ST_10": [
+          "Università",
+          "Facoltà o dipartimento",
+          "Campus universitario"
+        ],
+        "ST_11": [
+          "Centro di formazione professionale",
+          "Scuola professionale",
+          "Centro di formazione per adulti"
+        ],
+        "ST_12": [
+          "Biblioteca comunale",
+          "Biblioteca pubblica",
+          "Biblioteca universitaria",
+          "Sala studio"
+        ],
+        "ST_13": [
+          "Supermercato",
+          "Ipermercato",
+          "Discount"
+        ],
+        "ST_14": [
+          "Alimentari",
+          "Minimarket",
+          "Negozio di prossimità"
+        ],
+        "ST_15": [
+          "Forno",
+          "Panificio",
+          "Forno con gastronomia"
+        ],
+        "ST_16": [
+          "Banco frutta e verdura",
+          "Banco pesce",
+          "Banco carne",
+          "Banco formaggi e salumi",
+          "Banco abbigliamento",
+          "Banco casalinghi"
+        ],
+        "ST_17": [
+          "Ristorante",
+          "Trattoria",
+          "Pizzeria",
+          "Osteria"
+        ],
+        "ST_18": [
+          "Bar",
+          "Caffetteria",
+          "Pasticceria con caffetteria",
+          "Sala da tè"
+        ],
+        "ST_19": [
+          "Ufficio",
+          "Sede aziendale",
+          "Laboratorio",
+          "Attività produttiva"
+        ],
+        "ST_20": [
+          "Coworking",
+          "Ufficio condiviso",
+          "Spazio di lavoro flessibile"
+        ],
+        "ST_21": [
+          "Filiale bancaria",
+          "Sportello bancario",
+          "Servizio finanziario"
+        ],
+        "ST_22": [
+          "Ufficio postale",
+          "Punto Poste",
+          "Punto ritiro o spedizione pacchi"
+        ],
+        "ST_23": [
+          "Sede municipale",
+          "Ufficio anagrafe",
+          "URP",
+          "Ufficio comunale"
+        ],
+        "ST_24": [
+          "Centro di comunità",
+          "Centro di aggregazione",
+          "Spazio associativo",
+          "Casa di quartiere"
+        ],
+        "ST_25": [
+          "Centro giovani",
+          "Centro di aggregazione giovanile",
+          "Spazio per adolescenti"
+        ],
+        "ST_26": [
+          "Centro anziani",
+          "Centro sociale per anziani",
+          "Centro per l'invecchiamento attivo"
+        ],
+        "ST_27": [
+          "Centro culturale",
+          "Spazio culturale",
+          "Centro artistico",
+          "Spazio espositivo"
+        ],
+        "ST_28": [
+          "Cinema",
+          "Multisala",
+          "Cinema di quartiere"
+        ],
+        "ST_29": [
+          "Teatro",
+          "Auditorium",
+          "Sala per spettacoli"
+        ],
+        "ST_30": [
+          "Museo",
+          "Galleria",
+          "Spazio espositivo permanente"
+        ],
+        "ST_31": [
+          "Parco urbano",
+          "Villa pubblica",
+          "Giardino pubblico",
+          "Area verde di quartiere"
+        ],
+        "ST_32": [
+          "Parco giochi",
+          "Area giochi",
+          "Area attrezzata per bambini"
+        ],
+        "ST_33": [
+          "Palestra",
+          "Centro sportivo",
+          "Piscina",
+          "Campo sportivo",
+          "Palazzetto dello sport"
+        ],
+        "ST_34": [
+          "Parrucchiere",
+          "Barbiere",
+          "Centro estetico",
+          "Centro manicure"
+        ],
+        "ST_35": [
+          "Calzolaio",
+          "Sarto",
+          "Duplicazione chiavi",
+          "Riparazione telefoni",
+          "Officina biciclette"
+        ],
+        "ST_36": [
+          "Chiesa",
+          "Moschea",
+          "Sinagoga",
+          "Tempio",
+          "Cappella"
+        ],
+        "ST_37": [
+          "Negozio di telefonia",
+          "Centro servizi telefonici",
+          "Negozio internet e telecomunicazioni"
+        ],
+        "ST_38": [
+          "Copisteria",
+          "Centro stampa",
+          "Servizi di stampa e scansione"
+        ],
+        "ST_39": [
+          "Lavanderia self-service",
+          "Lavanderia",
+          "Lavasecco"
+        ],
+        "ST_40": [
+          "Ferramenta",
+          "Negozio fai-da-te",
+          "Negozio di casalinghi",
+          "Negozio per la casa"
+        ],
+        "ST_41": [
+          "Servizio di pulizie",
+          "Assistenza domestica",
+          "Assistenza domiciliare",
+          "Manutenzione domestica"
+        ],
+        "ST_42": [
+          "Centro diagnostico",
+          "Laboratorio analisi",
+          "Centro radiologico"
+        ],
+        "ST_43": [
+          "Mercato rionale",
+          "Mercato coperto",
+          "Mercato alimentare"
+        ],
+        "ST_44": [
+          "Linea autobus",
+          "Linea tram",
+          "Linea metro",
+          "Servizio ferroviario urbano o regionale"
+        ],
+        "ST_45": [
+          "Taxi",
+          "Servizio NCC",
+          "Taxi accessibile"
+        ],
+        "ST_46": [
+          "Trasporto a chiamata",
+          "Navetta di quartiere",
+          "Servizio DRT"
+        ],
+        "ST_47": [
+          "Bike sharing",
+          "E-bike sharing",
+          "Scooter sharing",
+          "Car sharing"
+        ],
+        "ST_48": [
+          "Noleggio biciclette",
+          "Noleggio auto",
+          "Noleggio e-bike",
+          "Noleggio cargo bike"
+        ],
+        "ST_49": [
+          "Parcheggio pubblico",
+          "Autorimessa pubblica",
+          "Parcheggio comunale"
+        ],
+        "ST_50": [
+          "Parcheggio di scambio",
+          "Park and ride",
+          "Bike and ride"
+        ],
+        "ST_51": [
+          "Stazione ferroviaria",
+          "Stazione metro",
+          "Autostazione",
+          "Terminal autobus"
+        ],
+        "ST_52": [
+          "Nodo di interscambio",
+          "Hub multimodale",
+          "Centro della mobilità"
+        ],
+        "ST_53": [
+          "Parcheggio biciclette custodito",
+          "Ciclostazione",
+          "Bike hub"
+        ],
+        "ST_54": [
+          "Piazza",
+          "Piazzale",
+          "Largo",
+          "Belvedere",
+          "Spazio civico aperto"
+        ],
+        "ST_55": [
+          "Edicola convenzionata",
+          "Punto anagrafico delegato",
+          "Punto di servizio civico"
+        ],
+        "ST_56": [
+          "Commissariato di Polizia",
+          "Stazione dei Carabinieri",
+          "Comando di Polizia Locale",
+          "Guardia di Finanza"
+        ],
+        "ST_57": [
+          "Caserma dei Vigili del Fuoco",
+          "Distaccamento dei Vigili del Fuoco",
+          "Centro di soccorso"
+        ],
+        "ST_58": [
+          "Centro per le famiglie",
+          "Centro di sostegno alla genitorialità",
+          "Servizio di supporto familiare"
+        ],
+        "ST_59": [
+          "Centro commerciale",
+          "Galleria commerciale",
+          "Parco commerciale"
+        ],
+        "ST_60": [
+          "Sito storico",
+          "Luogo della memoria",
+          "Sito di interesse civico",
+          "Forte"
         ]
+      }
+    },
+    "smarturbanity_survey_campaigns": {
+      "config_version": "0.1.4",
+      "pilot_period": {
+        "start_date": "2026-11-14",
+        "end_date": null,
+        "timezone": "Europe/Rome"
+      },
+      "rules": {
+        "show_all_in_debug": true,
+        "offer_tool_feedback": true
+      },
+      "campaigns": {
+        "rome_profile": {
+          "name": "About you",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-10-29",
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_about_you"
+          ]
+        },
+        "rome_walking": {
+          "name": "Walking",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 1,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_walking"
+          ]
+        },
+        "rome_safety_environment": {
+          "name": "Safety and environment",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 2,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_safety_environment"
+          ]
+        },
+        "rome_daily_mobility": {
+          "name": "Daily mobility",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 3,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_daily_travel",
+            "smarturbanity_experience_on_the_move"
+          ]
+        },
+        "rome_public_transport": {
+          "name": "Public transport",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 4,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_public_transport"
+          ]
+        },
+        "rome_cycling": {
+          "name": "Cycling",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 6,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_cycling"
+          ]
+        },
+        "rome_car_motorcycle": {
+          "name": "Car and motorcycle",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 7,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_car",
+            "smarturbanity_motorcycle"
+          ]
+        },
+        "rome_crossings": {
+          "name": "Crossings",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 2,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": false,
+          "questionnaires": [
+            "street_connection_assessment"
+          ]
+        },
+        "rome_pavements": {
+          "name": "Pavements",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 3,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": false,
+          "questionnaires": [
+            "street_segment_assessment"
+          ]
+        },
+        "rome_trips": {
+          "name": "Trips",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 1,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_pre_trip",
+            "smarturbanity_post_trip"
+          ]
+        },
+        "rome_reports": {
+          "name": "Reports",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": 2,
+            "until_week": null,
+            "valid_from": null,
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_geolocated_perception_report",
+            "smarturbanity_missing_connection_report",
+            "smarturbanity_missing_path_report"
+          ]
+        },
+        "rome_missing_elements": {
+          "name": "Missing elements",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-11-14",
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_missing_network_element_report"
+          ]
+        },
+        "rome_services": {
+          "name": "Services",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-12-01",
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_service_correction_report",
+            "smarturbanity_service_opportunities",
+            "smarturbanity_improvement_proposal"
+          ]
+        },
+        "rome_test_event_surveys": {
+          "name": "Beta kickoff 14 November: questionnaires",
+          "enabled": true,
+          "priority": 10,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-11-14",
+            "valid_until": "2026-11-14",
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": true,
+          "questionnaires": [
+            "smarturbanity_about_you",
+            "smarturbanity_walking",
+            "smarturbanity_pre_trip",
+            "smarturbanity_post_trip"
+          ],
+          "group": "rome_beta_kickoff_2026_11_14"
+        },
+        "rome_test_event_reports": {
+          "name": "Beta kickoff 14 November: walks near Largo Ravizza",
+          "enabled": true,
+          "priority": 10,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-11-14",
+            "valid_until": "2026-11-14",
+            "extended_until": null
+          },
+          "area": {
+            "type": "circle",
+            "label": "Largo Alessandrina Ravizza",
+            "center": {
+              "lat": 41.871874,
+              "lon": 12.4509774
+            },
+            "radius_m": 2000
+          },
+          "exclusive": true,
+          "questionnaires": [
+            "street_connection_assessment",
+            "street_segment_assessment",
+            "smarturbanity_missing_connection_report",
+            "smarturbanity_missing_path_report",
+            "smarturbanity_geolocated_perception_report",
+            "smarturbanity_missing_network_element_report"
+          ],
+          "group": "rome_beta_kickoff_2026_11_14"
+        },
+        "rome_test_event_feedback": {
+          "name": "Beta kickoff 14 November: how did it go?",
+          "enabled": true,
+          "priority": 10,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-11-14",
+            "valid_until": "2026-11-14",
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": true,
+          "questionnaires": [
+            "smarturbanity_feedback_surveys",
+            "smarturbanity_feedback_access_together_web",
+            "smarturbanity_feedback_access_together_app",
+            "smarturbanity_feedback_access_hub"
+          ],
+          "group": "rome_beta_kickoff_2026_11_14"
+        },
+        "rome_tool_feedback": {
+          "name": "How did it go?",
+          "enabled": true,
+          "priority": 0,
+          "window": {
+            "from_week": null,
+            "until_week": null,
+            "valid_from": "2026-11-15",
+            "valid_until": null,
+            "extended_until": null
+          },
+          "area": null,
+          "exclusive": false,
+          "questionnaires": [
+            "smarturbanity_feedback_surveys",
+            "smarturbanity_feedback_access_together_web",
+            "smarturbanity_feedback_access_together_app",
+            "smarturbanity_feedback_access_hub"
+          ]
+        }
+      },
+      "languages": {
+        "it": {
+          "code": "it",
+          "#About you": "Su di te",
+          "#Walking": "A piedi",
+          "#Safety and environment": "Sicurezza e ambiente",
+          "#Daily mobility": "Spostamenti di tutti i giorni",
+          "#Public transport": "Mezzi pubblici",
+          "#Cycling": "In bicicletta",
+          "#Car and motorcycle": "Auto e moto",
+          "#Crossings": "Attraversamenti",
+          "#Pavements": "Marciapiedi",
+          "#Trips": "I tuoi spostamenti",
+          "#Reports": "Segnalazioni",
+          "#Beta kickoff 14 November: questionnaires": "Avvio della beta, 14 novembre: questionari",
+          "#Beta kickoff 14 November: walks near Largo Ravizza": "Avvio della beta, 14 novembre: passeggiate vicino a Largo Ravizza",
+          "#Missing elements": "Elementi che non esistono",
+          "#Services": "Servizi",
+          "#Beta kickoff 14 November: how did it go?": "Avvio della beta, 14 novembre: com’è andata?",
+          "#How did it go?": "Com’è andata?"
+        },
+        "en": {
+          "code": "en",
+          "#About you": "About you",
+          "#Walking": "Walking",
+          "#Safety and environment": "Safety and surroundings",
+          "#Daily mobility": "Everyday trips",
+          "#Public transport": "Public transport",
+          "#Cycling": "Cycling",
+          "#Car and motorcycle": "Car and motorcycle",
+          "#Crossings": "Crossings",
+          "#Pavements": "Pavements",
+          "#Trips": "Your trips",
+          "#Reports": "Reports",
+          "#Beta kickoff 14 November: questionnaires": "Beta launch, 14 November: questionnaires",
+          "#Beta kickoff 14 November: walks near Largo Ravizza": "Beta launch, 14 November: walks near Largo Ravizza",
+          "#Missing elements": "Elements that do not exist",
+          "#Services": "Services"
+        }
       }
     }
   }

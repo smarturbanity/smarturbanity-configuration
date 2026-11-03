@@ -62,10 +62,6 @@ smarturbanity-configuration/
 │   ├── locationReports/
 │   └── usabilityTests/
 │
-├── manifests/
-│   ├── smarturbanity.json
-│   └── smarturbanity_surveys.json
-│
 ├── pilots/
 │   ├── rome/
 │   ├── karlsruhe/
@@ -76,10 +72,16 @@ smarturbanity-configuration/
 └── README.md
 ```
 
-Directory `index.json` files enumerate their direct children. A consumer loads
-the root `base.json`, then applies the selected pilot JSON with a deep merge;
-pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
-is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
+Shared-content directory `index.json` files enumerate their direct children.
+CityMaaS owns the single base at
+`CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json`. Each pilot owns
+exactly one document, `pilots/<pilot>/<pilot>.json`, containing only its overrides.
+Objects merge recursively; arrays replace, and null, false, zero and empty arrays
+remain explicit. No external base, application manifests or per-pilot indexes are
+needed. Pilot-specific datasets live inside that document under `datasets`, keyed
+by their dataset identifier. Runtime readers supply their `config_type` and
+`pilot_id`; the saved document does not repeat them. Shared definitions and
+standalone questionnaires remain independent content.
 
 The root `index.json` lists each pilot as `{id, name, language}`. Applications read it before
 any pilot file: they offer the pilots by `name` when several are available and open in the
@@ -88,17 +90,22 @@ pilot's `language` from their first screen. Keep `language` equal to the pilot's
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
-## CityMaaS manifests
+## Application and server configuration
 
-`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
-`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
-CityMaaS loads these manifests from this repository; their nested source URLs are
-relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
-when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog. Manifests declare no
-privacy notice: their `questionnaires.consent` is the installation layer, which
-would override the notice of the loaded pilot. A deployed installation requires the online sources because it
-does not bundle this repository as a fallback.
+All SmartUrbanity applications and Pilot Configuration read the same code-owned
+defaults and selected pilot override. The spatial server receives that canonical
+JSON through `SMARTURBANITY_DEFAULTS_PATH`, separately from this repository
+(`SMARTURBANITY_CONFIGURATION_PATH`). Its image packages the CityMaaS source file;
+this repository does not maintain another copy. Missing defaults or a mismatched
+pilot identity fail loading rather than substituting another configuration.
+The defaults own common questionnaire catalogue and workflow references. Relative
+content paths resolve against this repository root. Environment policy and
+application capabilities remain code-owned.
+
+Adopt the CityMaaS loader, server reader and this repository revision together.
+Older readers expecting the code-owned defaults JSON or `manifests/` cannot consume this layout.
+A pilot JSON can still be imported, edited, revised and downloaded in Pilot
+Configuration. Forms and their authoring history are unchanged by this migration.
 
 ## Shared definitions
 
@@ -312,7 +319,7 @@ A missing crossing or connection uses `missing_connection_report`; a missing wal
 
 Every form starts with one common eligibility screen: data-processing consent, an
 optional age declaration and an optional email. Forms do not repeat it. The
-application ships the default consent; `base.json` overrides it for SmartUrbanity
+application ships the default consent; the code-owned defaults JSON overrides it for SmartUrbanity
 under `questionnaires.consent` and a pilot may override single values, for example
 the age declaration and its minimum age. The age declaration is enabled per pilot:
 
@@ -325,7 +332,7 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 This repository holds no privacy documents or notice links. Each pilot's notices, in
 the pilot's languages, their versions and the privacy guidelines live on the
 SmartUrbanity website, which lists each pilot's notices in `pilot/<pilot>/privacy.json`;
-there is no common notice. `base.json` names the website once, as the top-level
+there is no common notice. the code-owned defaults JSON names the website once, as the top-level
 `website_url`, one address per runtime environment (`dev` and `test` on the preview site
 `experimental-website.wemolab.eu`, `prod` on `www.smarturbanity.com`); the applications read
 the lists from there for the loaded `pilot_id`.
@@ -337,11 +344,11 @@ The configured destination currently points to the spatial server mock at
 `/api/v1/participant-codes`. Application and service support is required before
 using this configuration in a running pilot.
 
-The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
+The consent text in the code-owned defaults JSON is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
 ## Survey schedule and campaigns
 
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
+When a form is offered is pilot configuration, not part of the form. Each pilot declares it under `datasets.smarturbanity_survey_campaigns` in its single pilot JSON. The following example shows that nested dataset; the reader supplies its type and pilot identity.
 
 ```json
 {
