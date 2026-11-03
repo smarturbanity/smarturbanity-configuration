@@ -75,10 +75,11 @@ smarturbanity-configuration/
 Shared-content directory `index.json` files enumerate their direct children.
 CityMaaS owns the single base at
 `CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json`. Each pilot owns
-exactly one document, `pilots/<pilot>/<pilot>.json`, containing only its overrides.
+one settings document, `pilots/<pilot>/<pilot>.json`, containing only its overrides.
+Its questionnaire schedule is separate in `pilots/<pilot>/survey_campaigns.json`.
 Objects merge recursively; arrays replace, and null, false, zero and empty arrays
 remain explicit. No external base, application manifests or per-pilot indexes are
-needed. Pilot-specific datasets live inside that document under `datasets`, keyed
+needed. Other pilot-specific datasets live inside the settings document under `datasets`, keyed
 by their dataset identifier. Runtime readers supply their `config_type` and
 `pilot_id`; the saved document does not repeat them. Shared definitions and
 standalone questionnaires remain independent content.
@@ -348,7 +349,7 @@ The consent text in the code-owned defaults JSON is a draft (`version: "1.0.0-dr
 
 ## Survey schedule and campaigns
 
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it under `datasets.smarturbanity_survey_campaigns` in its single pilot JSON. The following example shows that nested dataset; the reader supplies its type and pilot identity.
+When a form is offered is pilot configuration, not part of the form. Each pilot declares its schedule in `pilots/<pilot>/survey_campaigns.json`, separately from its settings. This document owns campaign dates, questionnaire choices, order and visibility, and declares its `config_type` and `pilot_id`. It is loaded independently and is not copied into the settings JSON.
 
 ```json
 {
