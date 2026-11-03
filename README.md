@@ -6,9 +6,9 @@ The repository provides version-controlled, machine-readable configuration share
 
 ## Configuration principles
 
-The repository follows three main principles:
+The repository follows four main principles:
 
-1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
+1. **Code defaults** provide the common runtime baseline; application constants own their interface and fixed landing content.
 2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
 3. **Pilot configurations** contain only pilot-specific additions or overrides.
 4. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
@@ -103,7 +103,7 @@ content paths resolve against this repository root. Environment policy and
 application capabilities remain code-owned.
 
 Adopt the CityMaaS loader, server reader and this repository revision together.
-Older readers expecting the code-owned defaults JSON or `manifests/` cannot consume this layout.
+Older readers expecting this repository’s former `base.json` or `manifests/` cannot consume this layout.
 A pilot JSON can still be imported, edited, revised and downloaded in Pilot
 Configuration. Forms and their authoring history are unchanged by this migration.
 
