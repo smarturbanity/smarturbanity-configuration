@@ -47,7 +47,7 @@
           },
           {
             "question_id": "fast_vehicles",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data",
             "text": "How does walking alongside or crossing high-speed roads (e.g., fast-moving or wide multi-lane roads) affect your sense of safety?",
             "answer_key": "fast_vehicles",
@@ -55,11 +55,11 @@
             "required": false,
             "checks_inline": false,
             "options": [
-              { "text": "It does not affect my sense of safety", "value": "it_does_not_affect_my_sense_of_safety" },
-              { "text": "I feel slightly uncomfortable but manage", "value": "i_feel_slightly_uncomfortable_but_manage" },
-              { "text": "I feel unsafe and try to minimise time spent near high-speed roads", "value": "i_feel_unsafe_and_try_to_minimise_time_s" },
-              { "text": "I take significantly longer routes to avoid walking alongside high-speed roads", "value": "i_take_significantly_longer_routes_to_av" },
-              { "text": "I avoid trips that require me to walk alongside or cross high-speed roads", "value": "i_avoid_trips_that_require_me_to_walk_al" }
+              { "text": "It does not affect my sense of safety", "value": "no_effect" },
+              { "text": "I feel slightly uncomfortable but manage", "value": "slightly_uncomfortable" },
+              { "text": "I feel unsafe and try to minimise time spent near high-speed roads", "value": "minimise_time" },
+              { "text": "I take significantly longer routes to avoid walking alongside high-speed roads", "value": "longer_routes" },
+              { "text": "I avoid trips that require me to walk alongside or cross high-speed roads", "value": "avoid_trips" }
             ]
           },
           {
@@ -74,19 +74,19 @@
             "privacy_classification": "personal_data",
             "options": [
               { "text": "Car drivers", "value": "car_drivers" },
-              { "text": "Motorcyclists or riders of scooters and mopeds", "value": "motorcycle_or_scooter_riders" },
+              { "text": "Motorcyclists or riders of scooters and mopeds", "value": "motorcyclists" },
               { "text": "Bus drivers", "value": "bus_drivers" },
-              { "text": "Delivery vehicles (vans, cargo bikes, mopeds)", "value": "delivery_vehicles_vans_cargo_bikes_scoot" },
-              { "text": "Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)", "value": "taxi_or_ride_hailing_drivers" },
-              { "text": "Other cyclists or e-scooter riders", "value": "other_cyclists_or_e_scooter_riders" },
+              { "text": "Delivery vehicles (vans, cargo bikes, mopeds)", "value": "delivery_vehicles" },
+              { "text": "Taxi drivers or drivers of hire cars with a driver (NCC, app-based services)", "value": "taxi_ride_hailing" },
+              { "text": "Other cyclists or e-scooter riders", "value": "other_cyclists" },
               { "text": "Pedestrians", "value": "pedestrians" },
-              { "text": "None — no category negatively affects my feeling of safety", "value": "none_no_category_negatively_affects_my_f", "exclusive": true },
+              { "text": "None — no category negatively affects my feeling of safety", "value": "none", "exclusive": true },
               { "text": "I don't cycle", "value": "i_dont_cycle", "exclusive": true }
             ]
           },
           {
             "question_id": "road_unsafe_situations",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "text": "Which of the following situations on a trip do you consider unsafe?",
             "answer_key": "road_unsafe_situations",
             "question_type": "multiple_options",
@@ -95,14 +95,14 @@
             "max_answers": 3,
             "privacy_classification": "personal_data",
             "options": [
-              { "text": "Heavy or fast-moving traffic", "value": "heavy_or_fast_moving_traffic" },
-              { "text": "Lack of safe or adequate infrastructure (e.g. sidewalks, crossings, cycle paths, lighting)", "value": "lack_of_safe_or_adequate_infrastructure" },
-              { "text": "Poor road or pathway conditions (e.g. potholes, debris, uneven surfaces)", "value": "poor_road_or_pathway_conditions_e_g_poth" },
-              { "text": "Poor visibility or limited sightlines", "value": "poor_visibility_or_limited_sightlines" },
-              { "text": "Unsafe behavior from drivers, riders, or pedestrians", "value": "unsafe_behavior_from_drivers_riders_or_p" },
-              { "text": "Crowding or conflicts with other road users", "value": "crowding_or_conflicts_with_other_road_us" },
-              { "text": "Absence of emergency services", "value": "absence_of_emergency_services" },
-              { "text": "I don't feel unsafe at all", "value": "i_don_t_feel_unsafe_at_all" }
+              { "text": "Heavy or fast-moving traffic", "value": "heavy_traffic" },
+              { "text": "Lack of safe or adequate infrastructure (e.g. sidewalks, crossings, cycle paths, lighting)", "value": "poor_infrastructure" },
+              { "text": "Poor road or pathway conditions (e.g. potholes, debris, uneven surfaces)", "value": "poor_surfaces" },
+              { "text": "Poor visibility or limited sightlines", "value": "poor_visibility" },
+              { "text": "Unsafe behavior from drivers, riders, or pedestrians", "value": "unsafe_behaviour" },
+              { "text": "Crowding or conflicts with other road users", "value": "conflicts" },
+              { "text": "Absence of emergency services", "value": "no_emergency_services" },
+              { "text": "I don't feel unsafe at all", "value": "never_unsafe" }
             ]
           },
           {
@@ -125,7 +125,7 @@
           },
           {
             "question_id": "personal_security_evening",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data",
             "text": "In the evening or after dark, how secure do you feel from crime or harassment on your usual trip?",
             "answer_key": "personal_security_evening",
@@ -139,13 +139,13 @@
               { "text": "I feel moderately secure", "value": "moderately_secure" },
               { "text": "I feel very secure", "value": "very_secure" },
               { "text": "I feel completely secure", "value": "completely_secure" },
-              { "text": "I avoid travelling in the evening because I don't feel secure", "value": "avoids_evening_because_unsafe" },
+              { "text": "I avoid travelling in the evening because I don't feel secure", "value": "avoids_evening" },
               { "text": "I don't travel in the evening or after dark", "value": "no_evening_travel" }
             ]
           },
           {
             "question_id": "insecurity_factors_detailed",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data",
             "text": "Which factors most reduce your feeling of security from crime or harassment?",
             "answer_key": "insecurity_factors_detailed",
@@ -155,22 +155,22 @@
             "add_other": true,
             "max_answers": 3,
             "options": [
-              { "text": "Poor lighting (e.g., dark streets, underpasses)", "value": "poor_lighting_e_g_dark_streets_underpass" },
-              { "text": "Lack of people around (isolated or deserted areas)", "value": "lack_of_people_around_isolated_or_desert" },
-              { "text": "People behaving aggressively or harassing others", "value": "aggressive_or_harassing_behaviour" },
-              { "text": "Harassment experienced or feared because of my gender", "value": "gender_based_harassment" },
+              { "text": "Poor lighting (e.g., dark streets, underpasses)", "value": "poor_lighting" },
+              { "text": "Lack of people around (isolated or deserted areas)", "value": "isolated_areas" },
+              { "text": "People behaving aggressively or harassing others", "value": "aggressive_behaviour" },
+              { "text": "Harassment experienced or feared because of my gender", "value": "gender_harassment" },
               { "text": "Long waits at stops in the evening", "value": "long_evening_waits" },
-              { "text": "Overcrowding or chaotic environments", "value": "overcrowding_or_chaotic_environments" },
-              { "text": "Poor visibility (e.g., blind corners, obstructed views)", "value": "poor_visibility_e_g_blind_corners_obstru" },
-              { "text": "Poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure)", "value": "poor_maintenance_e_g_abandoned_buildings" },
-              { "text": "Lack of surveillance or security measures (e.g., no cameras, no staff)", "value": "lack_of_surveillance_or_security_measure" },
-              { "text": "Previous personal or reported incidents in the area", "value": "previous_personal_or_reported_incidents" },
-              { "text": "I don't feel insecure at all", "value": "i_don_t_feel_insecure_at_all", "exclusive": true }
+              { "text": "Overcrowding or chaotic environments", "value": "overcrowding" },
+              { "text": "Poor visibility (e.g., blind corners, obstructed views)", "value": "poor_visibility" },
+              { "text": "Poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure)", "value": "poor_maintenance" },
+              { "text": "Lack of surveillance or security measures (e.g., no cameras, no staff)", "value": "no_surveillance" },
+              { "text": "Previous personal or reported incidents in the area", "value": "past_incidents" },
+              { "text": "I don't feel insecure at all", "value": "never_insecure", "exclusive": true }
             ]
           },
           {
             "question_id": "walk_lighting_effect",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data",
             "text": "How does the quality of street lighting affect your choice of route or your decision to walk after dark?",
             "answer_key": "walk_lighting_effect",
@@ -178,12 +178,12 @@
             "required": false,
             "checks_inline": false,
             "options": [
-              { "text": "Lighting levels have no influence on my travel choices or comfort", "value": "lighting_levels_have_no_influence_on_my" },
-              { "text": "I notice poor lighting but it does not significantly change how or when I travel", "value": "i_notice_poor_lighting_but_it_does_not_s" },
-              { "text": "I still use the route but I move faster, avoid certain spots, or stay on high alert", "value": "i_still_use_the_route_but_i_move_faster" },
-              { "text": "I take a much longer alternative route specifically to stay in better-lit areas", "value": "i_take_a_much_longer_alternative_route_s" },
-              { "text": "I do not walk after dark because of poor lighting", "value": "i_do_not_walk_after_dark_because_of_poor" },
-              { "text": "I do not walk after dark for other reasons", "value": "i_do_not_walk_after_dark_for_other_reasons" }
+              { "text": "Lighting levels have no influence on my travel choices or comfort", "value": "no_influence" },
+              { "text": "I notice poor lighting but it does not significantly change how or when I travel", "value": "notice_no_change" },
+              { "text": "I still use the route but I move faster, avoid certain spots, or stay on high alert", "value": "faster_or_avoid_spots" },
+              { "text": "I take a much longer alternative route specifically to stay in better-lit areas", "value": "longer_route" },
+              { "text": "I do not walk after dark because of poor lighting", "value": "no_walk_poor_lighting" },
+              { "text": "I do not walk after dark for other reasons", "value": "no_walk_other_reasons" }
             ]
           }
         ],
@@ -275,13 +275,7 @@
       "#I do not walk after dark because of poor lighting": "I do not walk after dark because of poor lighting",
       "#I do not walk after dark for other reasons": "I do not walk after dark for other reasons",
       "#Other": "Other",
-      "#Prefer not to say": "Prefer not to say",
-      "#Not at all secure": "Not at all secure",
-      "#Slightly secure": "Slightly secure",
-      "#Moderately secure": "Moderately secure",
-      "#Very secure": "Very secure",
-      "#Completely secure": "Completely secure",
-      "#Presence of suspicious or aggressive individuals": "Presence of suspicious or aggressive individuals"
+      "#Prefer not to say": "Prefer not to say"
     },
     "it": {
       "code": "it",
@@ -354,13 +348,7 @@
       "#I do not walk after dark because of poor lighting": "Non cammino dopo il tramonto per la scarsa illuminazione",
       "#I do not walk after dark for other reasons": "Non cammino dopo il tramonto per altri motivi",
       "#Other": "Altro",
-      "#Prefer not to say": "Preferisco non rispondere",
-      "#Not at all secure": "Per niente al sicuro",
-      "#Slightly secure": "Poco al sicuro",
-      "#Moderately secure": "Abbastanza al sicuro",
-      "#Very secure": "Molto al sicuro",
-      "#Completely secure": "Completamente al sicuro",
-      "#Presence of suspicious or aggressive individuals": "Presenza di persone sospette o aggressive"
+      "#Prefer not to say": "Preferisco non rispondere"
     }
   }
 }

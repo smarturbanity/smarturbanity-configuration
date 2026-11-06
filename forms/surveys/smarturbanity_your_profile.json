@@ -1,9 +1,10 @@
 {
   "questionnaire": {
-    "name": "SmartUrbanity — W1·1 — Your Profile",
+    "name": "SmartUrbanity - Your Profile",
     "questionnaire_id": "smarturbanity_your_profile",
-    "questionnaire_version": "1.5.0",
+    "questionnaire_version": "1.6.0",
     "project": "SmartUrbanity",
+    "estimated_minutes": 5,
     "wave": "Wave 1 — Core Survey",
     "module": "W1·1 — Your Profile",
     "options": {
@@ -14,14 +15,16 @@
     },
     "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
     "welcome_page": {
-      "title": "W1·1 — Your Profile",
-      "description": "<p>Wave 1 — Core Survey — W1·1 — Your Profile</p>"
+      "title": "Welcome to Your Profile",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_about_you.svg",
+      "image_alt": "#Person with a speech bubble",
+      "description": "<p>Some <b>basic information</b> about you, your household and where you live.</p><p>Your answers help describe who participates in the study and how different urban conditions may affect daily mobility.</p><p>Participation is voluntary. Your answers are not linked to your name. If you give your email, we encrypt it straight away and do not save it: it becomes a participation code, so that your answers to different SmartUrbanity questionnaires can be analysed together. You can also answer without an email.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
-      "description": "<p>Your answers have been saved.</p>"
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
     },
-    "title": "W1·1 — Your Profile",
+    "title": "Your Profile",
     "sections": [
       {
         "title": "About You",
@@ -101,6 +104,59 @@
 
           {
             "privacy_classification": "heightened_personal",
+            "text": "In which Municipio of Rome do you currently live?",
+            "answer_key": "home_municipio",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "add_i_dont_know": true,
+            "show_if": { "residence": ["travel", "services", "visit", "reason"] },
+            "options": [
+              { "text": "1", "value": "1" },
+              { "text": "2", "value": "2" },
+              { "text": "3", "value": "3" },
+              { "text": "4", "value": "4" },
+              { "text": "5", "value": "5" },
+              { "text": "6", "value": "6" },
+              { "text": "7", "value": "7" },
+              { "text": "8", "value": "8" },
+              { "text": "9", "value": "9" },
+              { "text": "10", "value": "10" },
+              { "text": "11", "value": "11" },
+              { "text": "13", "value": "13" },
+              { "text": "14", "value": "14" },
+              { "text": "15", "value": "15" },
+              { "text": "I live outside Rome", "value": "i_live_outside_rome" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "In which neighbourhood of Municipio XII do you currently live?",
+            "answer_key": "home_neighbourhood",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": { "residence": "live" },
+            "options": [
+              { "text": "BRAVETTA", "value": "bravetta" },
+              { "text": "CASAL LUMBROSO", "value": "casal_lumbroso" },
+              { "text": "COLLE AURELIO", "value": "colle_aurelio" },
+              { "text": "COLLI PORTUENSI", "value": "colli_portuensi" },
+              { "text": "LA PISANA", "value": "la_pisana" },
+              { "text": "MASSIMINA", "value": "massimina" },
+              { "text": "MONTEVERDE NUOVO", "value": "monteverde_nuovo" },
+              { "text": "MONTEVERDE VECCHIO", "value": "monteverde_vecchio" },
+              { "text": "PORTA PORTESE", "value": "porta_portese" },
+              { "text": "SANTA CECILIA", "value": "santa_cecilia" },
+              { "text": "VIGNACCIA", "value": "vignaccia" },
+              { "text": "VILLA TROILI", "value": "villa_troili" },
+              { "text": "VILLINI", "value": "villini" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
             "text": "How strongly do you feel connected to the people in your neighbourhood?",
             "answer_key": "community_attachment",
             "question_type": "single_option",
@@ -109,7 +165,7 @@
             "options": [
               { "text": "Not connected", "value": "not_connected" },
               { "text": "Somewhat disconnected", "value": "somewhat_disconnected" },
-              { "text": "Neither connected nor disconnected", "value": "neither_connected_nor_disconnected" },
+              { "text": "Neither connected nor disconnected", "value": "neutral" },
               { "text": "Somewhat connected", "value": "somewhat_connected" },
               { "text": "Very connected", "value": "very_connected" }
             ]
@@ -130,7 +186,7 @@
             "options": [
               { "text": "Not connected", "value": "not_connected" },
               { "text": "Somewhat disconnected", "value": "somewhat_disconnected" },
-              { "text": "Neither connected nor disconnected", "value": "neither_connected_nor_disconnected" },
+              { "text": "Neither connected nor disconnected", "value": "neutral" },
               { "text": "Somewhat connected", "value": "somewhat_connected" },
               { "text": "Very connected", "value": "very_connected" }
             ]
@@ -193,7 +249,6 @@
             "checks_inline": false,
             "options": [
               { "text": "Car", "value": "car" },
-              { "text": "Car adapted for a person with disability", "value": "adapted_car" },
               { "text": "Motorcycle, scooter or moped", "value": "motorcycle" },
               { "text": "Bicycle/e-bike", "value": "bicycle_e_bike" },
               { "text": "E-scooter", "value": "e_scooter" },
@@ -218,6 +273,23 @@
 
           {
             "privacy_classification": "heightened_personal",
+            "text": "If there is a car in your household, how easy is it for you to use it when you need it?",
+            "answer_key": "vehicle_ease",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": { "household_vehicles": "car", "driving_licence": "yes" },
+            "options": [
+              { "text": "Very difficult (rarely available)", "value": "very_difficult" },
+              { "text": "Difficult (often unavailable or shared)", "value": "difficult" },
+              { "text": "Neither easy nor difficult", "value": "neutral" },
+              { "text": "Easy (usually available)", "value": "easy" },
+              { "text": "Very easy (almost always available)", "value": "very_easy" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
             "text": "Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.",
             "answer_key": "employment",
             "question_type": "multiple_options",
@@ -228,13 +300,13 @@
               { "text": "Employed full-time", "value": "employed_full_time" },
               { "text": "Employed part-time", "value": "employed_part_time" },
               { "text": "Occasional or on-call work", "value": "occasionally_employed" },
-              { "text": "Self-employed or freelance (full-time)", "value": "self_employed_freelance_full_time" },
-              { "text": "Self-employed or freelance (part-time)", "value": "self_employed_freelance_part_time" },
+              { "text": "Self-employed or freelance (full-time)", "value": "self_employed_full_time" },
+              { "text": "Self-employed or freelance (part-time)", "value": "self_employed_part_time" },
               { "text": "Student (school, university or training)", "value": "student" },
               { "text": "Homemaker", "value": "homemaker" },
               { "text": "Retired", "value": "retired" },
-              { "text": "Unemployed looking for work", "value": "unemployed_looking_for_work" },
-              { "text": "Unemployed not looking for work", "value": "unemployed_not_looking_for_work" },
+              { "text": "Unemployed looking for work", "value": "unemployed_looking" },
+              { "text": "Unemployed not looking for work", "value": "unemployed_not_looking" },
               { "text": "Not working because of health problems or disability", "value": "unable_to_work_health" }
             ]
           },
@@ -246,11 +318,28 @@
             "question_type": "single_option",
             "required": false,
             "checks_inline": false,
+            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time"] },
             "options": [
               { "text": "Yes", "value": "yes" },
-              { "text": "Somewhat (within a 1-2 hour window)", "value": "somewhat_within_a_1_2_hour_window" },
+              { "text": "Somewhat (within a 1-2 hour window)", "value": "somewhat" },
               { "text": "No", "value": "no" },
-              { "text": "I am not currently employed", "value": "i_am_not_currently_employed" }
+              { "text": "I am not currently employed", "value": "not_employed" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you currently work remotely (partly or fully)?",
+            "answer_key": "remote_work",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time"] },
+            "options": [
+              { "text": "Yes (3 days or more in a week)", "value": "yes_3_plus_days" },
+              { "text": "Yes, occasionally (1-2 days in a week)", "value": "yes_1_2_days" },
+              { "text": "No", "value": "no" },
+              { "text": "I am not currently employed", "value": "not_employed" }
             ]
           },
 
@@ -278,9 +367,9 @@
             "required": false,
             "checks_inline": false,
             "options": [
-              { "text": "No, I can move independently", "value": "no_i_can_move_independently" },
-              { "text": "Yes, I have a temporary condition/limitation", "value": "yes_i_have_a_temporary_condition_limitat" },
-              { "text": "Yes, I have a permanent mobility condition/limitation", "value": "yes_i_have_a_permanent_mobility_conditio" }
+              { "text": "No, I can move independently", "value": "no" },
+              { "text": "Yes, I have a temporary condition/limitation", "value": "temporary" },
+              { "text": "Yes, I have a permanent mobility condition/limitation", "value": "permanent" }
             ]
           }
 
@@ -294,10 +383,14 @@
     },
     "it": {
       "code": "it",
-      "#W1·1 — Your Profile": "W1·1 — Il tuo profilo",
-      "#Wave 1 — Core Survey — W1·1 — Your Profile": "Onda 1 — Indagine principale — W1·1 — Il tuo profilo",
       "#Thank you!": "Grazie!",
-      "#Your answers have been saved.": "Le tue risposte sono state salvate.",
+      "#SmartUrbanity - Your Profile": "SmartUrbanity - Il tuo profilo",
+      "#Your Profile": "Il tuo profilo",
+      "#Welcome to Your Profile": "Benvenuto/a al questionario sul tuo profilo",
+      "#Person with a speech bubble": "Persona con un fumetto",
+      "#<p>Some <b>basic information</b> about you, your household and where you live.</p><p>Your answers help describe who participates in the study and how different urban conditions may affect daily mobility.</p><p>Participation is voluntary. Your answers are not linked to your name. If you give your email, we encrypt it straight away and do not save it: it becomes a participation code, so that your answers to different SmartUrbanity questionnaires can be analysed together. You can also answer without an email.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune <b>informazioni di base</b> su di te, sul tuo nucleo familiare e sul luogo in cui vivi.</p><p>Le tue risposte ci aiutano a descrivere chi partecipa allo studio e in che modo le diverse condizioni urbane possono influenzare la mobilità quotidiana.</p><p>La partecipazione è volontaria. Le tue risposte non sono collegate al tuo nome. Se lasci la tua email, la cifriamo subito e non la salviamo: diventa un codice di partecipazione, così le risposte ai diversi questionari SmartUrbanity possono essere analizzate insieme. Puoi rispondere anche senza email.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "Se nel tuo nucleo familiare c'è un'automobile, quanto è facile per te usarla quando ne hai bisogno?",
       "#About You": "Su di te",
       "#What is your age group?": "Qual è la tua fascia d'età?",
       "#18-24": "18-24",
@@ -347,14 +440,13 @@
       "#Yes, I help an adult who lives with me (e.g. an older relative or a person with disabilities)": "Sì, aiuto un adulto che vive con me (es. un parente anziano o una persona con disabilità)",
       "#Yes, I help an adult who does not live with me": "Sì, aiuto un adulto che non vive con me",
       "#Which of the following vehicles are available in your household? ": "Quali dei seguenti veicoli sono disponibili nel tuo nucleo familiare?",
-      "#Car": "Auto",
-      "#Car adapted for a person with disability": "Auto adattata per una persona con disabilità",
+      "#Car": "Automobile",
       "#Motorcycle, scooter or moped": "Moto, scooter o ciclomotore",
       "#Bicycle/e-bike": "Bicicletta/e-bike",
       "#E-scooter": "Monopattino elettrico",
       "#Powered wheelchair or mobility scooter": "Sedia a rotelle motorizzata o scooter per la mobilità",
       "#No vehicle available": "Nessun veicolo disponibile",
-      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Sei in possesso di una patente di guida valida? (Auto, moto o entrambe)",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Sei in possesso di una patente di guida valida? (Automobile, moto o entrambe)",
       "#Yes, but I do not drive": "Sì, ma non guido",
       "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Quale di queste descrive meglio la tua attuale situazione lavorativa o di studio? Se studi e lavori, puoi scegliere due risposte.",
       "#Employed full-time": "Lavoratore/lavoratrice a tempo pieno",
@@ -382,7 +474,42 @@
       "#Do you have a health condition or limitation, even a mild one, that makes getting around more difficult for you, even if you move independently?": "Hai una condizione di salute o una limitazione, anche lieve, che rende più difficile i tuoi spostamenti, anche se ti muovi in modo indipendente?",
       "#No, I can move independently": "No, mi muovo in modo indipendente",
       "#Yes, I have a temporary condition/limitation": "Sì, ho una condizione/limitazione temporanea",
-      "#Yes, I have a permanent mobility condition/limitation": "Sì, ho una condizione/limitazione motoria permanente"
+      "#Yes, I have a permanent mobility condition/limitation": "Sì, ho una condizione/limitazione motoria permanente",
+      "#In which Municipio of Rome do you currently live?": "In quale Municipio di Roma vivi attualmente?",
+      "#1": "1",
+      "#5": "5",
+      "#6": "6",
+      "#7": "7",
+      "#8": "8",
+      "#9": "9",
+      "#10": "10",
+      "#11": "11",
+      "#13": "13",
+      "#14": "14",
+      "#15": "15",
+      "#I live outside Rome": "Vivo fuori Roma",
+      "#In which neighbourhood of Municipio XII do you currently live?": "In quale quartiere del Municipio XII vivi attualmente?",
+      "#BRAVETTA": "BRAVETTA",
+      "#CASAL LUMBROSO": "CASAL LUMBROSO",
+      "#COLLE AURELIO": "COLLE AURELIO",
+      "#COLLI PORTUENSI": "COLLI PORTUENSI",
+      "#LA PISANA": "LA PISANA",
+      "#MASSIMINA": "MASSIMINA",
+      "#MONTEVERDE NUOVO": "MONTEVERDE NUOVO",
+      "#MONTEVERDE VECCHIO": "MONTEVERDE VECCHIO",
+      "#PORTA PORTESE": "PORTA PORTESE",
+      "#SANTA CECILIA": "SANTA CECILIA",
+      "#VIGNACCIA": "VIGNACCIA",
+      "#VILLA TROILI": "VILLA TROILI",
+      "#VILLINI": "VILLINI",
+      "#Very difficult (rarely available)": "Molto difficile (raramente disponibile)",
+      "#Difficult (often unavailable or shared)": "Difficile (spesso non disponibile o condiviso)",
+      "#Neither easy nor difficult": "Né facile né difficile",
+      "#Easy (usually available)": "Facile (solitamente disponibile)",
+      "#Very easy (almost always available)": "Molto facile (quasi sempre disponibile)",
+      "#Do you currently work remotely (partly or fully)?": "Attualmente lavori da remoto, parzialmente o completamente?",
+      "#Yes (3 days or more in a week)": "Sì (3 o più giorni alla settimana)",
+      "#Yes, occasionally (1-2 days in a week)": "Sì, occasionalmente (1-2 giorni alla settimana)"
     }
   },
   "id": "smarturbanity_your_profile",
