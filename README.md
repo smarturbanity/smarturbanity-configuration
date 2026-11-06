@@ -6,9 +6,9 @@ The repository provides version-controlled, machine-readable configuration share
 
 ## Configuration principles
 
-The repository follows three main principles:
+The repository follows four main principles:
 
-1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
+1. **Code defaults** provide the common runtime baseline; application constants own their interface and fixed landing content.
 2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
 3. **Pilot configurations** contain only pilot-specific additions or overrides.
 4. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
@@ -62,10 +62,6 @@ smarturbanity-configuration/
 │   ├── locationReports/
 │   └── usabilityTests/
 │
-├── manifests/
-│   ├── smarturbanity.json
-│   └── smarturbanity_surveys.json
-│
 ├── pilots/
 │   ├── rome/
 │   ├── karlsruhe/
@@ -76,29 +72,50 @@ smarturbanity-configuration/
 └── README.md
 ```
 
-Directory `index.json` files enumerate their direct children. A consumer loads
-the root `base.json`, then applies the selected pilot JSON with a deep merge;
-pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
-is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
+Shared-content directory `index.json` files enumerate their direct children.
+CityMaaS owns the single base at
+`CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json`. Each pilot owns
+one modeler document, `pilots/<pilot>/<pilot>.json`, containing data and presentation
+overrides. It references `pilots/<pilot>/application.json` through `application_config`
+and `pilots/<pilot>/survey_campaigns.json` through `content.dataset_files`.
+The application document owns technical integration, consent and application settings;
+modeler documents cannot override those keys. Its shape is
+`{"config_type":"smarturbanity_application","pilot_id":"rome","settings":{...}}`.
+The schedule owns campaign dates, forms and container associations. These documents
+are loaded separately; no technical settings or campaigns are copied into modeler exports.
+Objects merge recursively; arrays replace, and null, false, zero and empty arrays
+remain explicit. No external base, application manifests or per-pilot indexes are
+needed. Other pilot-specific datasets live inside the settings document under `datasets`, keyed
+by their dataset identifier. Runtime readers supply their `config_type` and
+`pilot_id`; the saved document does not repeat them. Shared definitions and
+standalone questionnaires remain independent content.
 
 The root `index.json` lists each pilot as `{id, name, language}`. Applications read it before
 any pilot file: they offer the pilots by `name` when several are available and open in the
 pilot's `language` from their first screen. Keep `language` equal to the pilot's
-`default_language`.
+`application.json`'s `settings.default_language`.
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
-## CityMaaS manifests
+## Application and server configuration
 
-`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
-`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
-CityMaaS loads these manifests from this repository; their nested source URLs are
-relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
-when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog. Manifests declare no
-privacy notice: their `questionnaires.consent` is the installation layer, which
-would override the notice of the loaded pilot. A deployed installation requires the online sources because it
-does not bundle this repository as a fallback.
+All SmartUrbanity applications and Pilot Configuration read the same code-owned
+defaults, selected technical document and pilot override, in that order. The spatial server receives that canonical
+JSON through `SMARTURBANITY_DEFAULTS_PATH`, separately from this repository
+(`SMARTURBANITY_CONFIGURATION_PATH`). Its image packages the CityMaaS source file;
+this repository does not maintain another copy. Missing defaults or a mismatched
+pilot identity fail loading rather than substituting another configuration.
+The defaults own common questionnaire catalogue and workflow references, including
+one `content.response_destination` inherited by workflows without an explicit
+destination. A workflow with its own destination overrides it; explicit null remains
+invalid. This keeps database routes in code, outside modeler documents. Relative
+content paths resolve against this repository root. Environment policy and
+application capabilities remain code-owned.
+
+Adopt the CityMaaS loader, server reader and this repository revision together.
+Older readers expecting this repository’s former `base.json` or `manifests/` cannot consume this layout.
+A pilot JSON can still be imported, edited, revised and downloaded in Pilot
+Configuration. Forms and their authoring history are unchanged by this migration.
 
 ## Shared definitions
 
@@ -167,7 +184,7 @@ Pilot configuration may progressively include other domains such as:
 user chooses another one; Rome opens in Italian. Without it, each application keeps its
 own default.
 
-`movesion` holds the pilot's Movesion client for each runtime environment (`prod`,
+`application.json`'s `settings.movesion` holds the pilot's Movesion client for each runtime environment (`prod`,
 `test`, `dev`): `pilot_codes` names the client and `base_urls` the Movesion API that
 serves it. Rome uses `smartrome` on `https://api.mobilitycompany.it` in production and
 `smartromedev` on `https://api.dev.mobilitycompany.it`, Movesion dev, which the dev and
@@ -175,7 +192,7 @@ test installations use. The applications select the entry of their environment f
 sign-in and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion
 user belongs to exactly one of these clients.
 
-`answers_firestore` is the Firebase web configuration of the database that receives the
+`application.json`'s `settings.answers_firestore` is the Firebase web configuration of the database that receives the
 pilot's participant answers, per runtime environment. In production it is the pilot's
 named database in Movesion's `smart-urbanity` project (Rome: `rome-db`), which only
 receives answers: the team never reads them from there, Movesion exports them on request.
@@ -312,7 +329,7 @@ A missing crossing or connection uses `missing_connection_report`; a missing wal
 
 Every form starts with one common eligibility screen: data-processing consent, an
 optional age declaration and an optional email. Forms do not repeat it. The
-application ships the default consent; `base.json` overrides it for SmartUrbanity
+application ships the default consent; the code-owned defaults JSON overrides it for SmartUrbanity
 under `questionnaires.consent` and a pilot may override single values, for example
 the age declaration and its minimum age. The age declaration is enabled per pilot:
 
@@ -325,7 +342,7 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 This repository holds no privacy documents or notice links. Each pilot's notices, in
 the pilot's languages, their versions and the privacy guidelines live on the
 SmartUrbanity website, which lists each pilot's notices in `pilot/<pilot>/privacy.json`;
-there is no common notice. `base.json` names the website once, as the top-level
+there is no common notice. the code-owned defaults JSON names the website once, as the top-level
 `website_url`, one address per runtime environment (`dev` and `test` on the preview site
 `experimental-website.wemolab.eu`, `prod` on `www.smarturbanity.com`); the applications read
 the lists from there for the loaded `pilot_id`.
@@ -337,11 +354,23 @@ The configured destination currently points to the spatial server mock at
 `/api/v1/participant-codes`. Application and service support is required before
 using this configuration in a running pilot.
 
-The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
+The consent text in the code-owned defaults JSON is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
 ## Survey schedule and campaigns
 
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
+When a form is offered is pilot configuration, not part of the form. Each pilot declares its schedule in `pilots/<pilot>/survey_campaigns.json`, separately from its settings. This document owns campaign dates, questionnaire choices, order and visibility, and declares its `config_type` and `pilot_id`. It is loaded independently and is not copied into the settings JSON.
+
+It also owns `containers`, for example `{"access-together":{"campaignIds":["rome_test_event_reports","rome_test_event_surveys"]}}`.
+Access Together reads that association from the loaded schedule, never from application
+settings. While an associated campaign is active, that container offers its forms;
+otherwise its ordinary campaigns remain available. An empty association keeps the
+ordinary offer. Each referenced campaign ID must exist in this document.
+
+Technical consent settings, including `withdrawal_contact` and `dpo_contact`, live in
+`application.json` under `settings.questionnaires.consent`. The first is used for
+withdrawal contact and the second is shown as the privacy/DPO contact in Access Together.
+Existing contacts are preserved from earlier settings; this migration does not establish
+that the named contact or draft notice has been approved by the privacy owner.
 
 ```json
 {
