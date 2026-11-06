@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "3.0.0",
+    "questionnaire_version": "3.1.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "trip_phase": "pre",
@@ -30,71 +30,35 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "How are you starting this trip?",
+            "question_id": "trip_mode",
+            "question_version": "1.0.0",
+            "text": "What is your plan mode in this trip?",
             "answer_key": "trip_mode",
             "question_type": "single_option",
             "required": true,
             "add_other": true,
             "checks_inline": false,
             "options": [
-              {
-                "text": "On foot",
-                "value": "walk"
-              },
-              {
-                "text": "Wheelchair or mobility scooter",
-                "value": "wheelchair"
-              },
-              {
-                "text": "Bicycle (own)",
-                "value": "bike"
-              },
-              {
-                "text": "E-bike (own)",
-                "value": "ebike"
-              },
-              {
-                "text": "Shared bike or e-bike",
-                "value": "bike_shared"
-              },
-              {
-                "text": "E-scooter (own)",
-                "value": "escooter"
-              },
-              {
-                "text": "Shared e-scooter",
-                "value": "escooter_shared"
-              },
-              {
-                "text": "Public transport (bus, tram, metro, train)",
-                "value": "transit"
-              },
-              {
-                "text": "Car, as driver",
-                "value": "car_driver"
-              },
-              {
-                "text": "Car, as passenger",
-                "value": "car_passenger"
-              },
-              {
-                "text": "Car sharing",
-                "value": "car_sharing"
-              },
-              {
-                "text": "Motorcycle or moped",
-                "value": "motorcycle"
-              },
-              {
-                "text": "Taxi or app-based car service (e.g. Uber, FreeNow)",
-                "value": "taxi"
-              }
+              {"text": "On foot", "value": "walk"},
+              {"text": "Wheelchair or mobility scooter", "value": "wheelchair"},
+              {"text": "Bicycle (own)", "value": "bike"},
+              {"text": "E-bike (own)", "value": "ebike"},
+              {"text": "Shared bike or e-bike", "value": "bike_shared"},
+              {"text": "E-scooter (own)", "value": "escooter"},
+              {"text": "Shared e-scooter", "value": "escooter_shared"},
+              {"text": "Public transport (bus, tram, metro, train)", "value": "transit"},
+              {"text": "Car, as driver", "value": "car_driver"},
+              {"text": "Car, as passenger", "value": "car_passenger"},
+              {"text": "Car sharing", "value": "car_sharing"},
+              {"text": "Motorcycle or moped", "value": "motorcycle"},
+              {"text": "Taxi or app-based car service (e.g. Uber, FreeNow)", "value": "taxi"},
+              {"text": "Multimodal (combination of modes)", "value": "multimodal"}
             ],
-            "question_id": "trip_mode",
-            "question_version": "1.0.0",
-            "privacy_classification": "special_category_health"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_purpose",
+            "question_version": "1.0.0",
             "text": "What is this trip for?",
             "answer_key": "trip_purpose",
             "question_type": "single_option",
@@ -102,86 +66,49 @@
             "add_other": true,
             "checks_inline": false,
             "options": [
-              {
-                "text": "Going home",
-                "value": "home"
-              },
-              {
-                "text": "Work",
-                "value": "work"
-              },
-              {
-                "text": "Study",
-                "value": "study"
-              },
-              {
-                "text": "Shopping or errands",
-                "value": "shopping"
-              },
-              {
-                "text": "Taking or picking someone up",
-                "value": "escort"
-              },
-              {
-                "text": "Doctor or health appointment",
-                "value": "health"
-              },
-              {
-                "text": "Leisure or visiting people",
-                "value": "leisure"
-              },
-              {
-                "text": "A walk or exercise (no fixed destination)",
-                "value": "walk_exercise"
-              }
+              {"text": "Going home", "value": "home"},
+              {"text": "Work", "value": "work"},
+              {"text": "Study", "value": "study"},
+              {"text": "Shopping or errands", "value": "shopping"},
+              {"text": "Taking or picking someone up", "value": "escort"},
+              {"text": "Doctor or health appointment", "value": "health"},
+              {"text": "Leisure or visiting people", "value": "leisure"},
+              {"text": "A walk or exercise (no fixed destination)", "value": "walk_exercise"}
             ],
-            "question_id": "trip_purpose",
-            "question_version": "1.0.0",
-            "privacy_classification": "special_category_health"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_company",
+            "question_version": "1.0.0",
             "text": "Who or what are you travelling with? (Select all that apply)",
             "answer_key": "trip_company",
             "question_type": "multiple_options",
+            "required": true,
             "checks_inline": false,
             "options": [
-              {
-                "text": "Alone",
-                "value": "alone"
-              },
-              {
-                "text": "With other adults",
-                "value": "adults"
-              },
-              {
-                "text": "With children",
-                "value": "children"
-              },
-              {
-                "text": "With a pushchair or pram",
-                "value": "pushchair"
-              },
-              {
-                "text": "With heavy bags or a trolley",
-                "value": "heavy_bags"
-              },
-              {
-                "text": "With a dog",
-                "value": "dog"
-              }
+              {"text": "Alone", "value": "alone"},
+              {"text": "With other adults", "value": "adults"},
+              {"text": "With children", "value": "children"},
+              {"text": "With a pushchair or pram", "value": "pushchair"},
+              {"text": "With heavy bags or a trolley", "value": "heavy_bags"},
+              {"text": "With a pet", "value": "pet"}
             ],
-            "question_id": "trip_company",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           }
-        ]
+        ],
+        "id": "before_you_go"
       }
-    ]
+    ],
+    "editorial": {
+      "schema_version": 1,
+      "records": [],
+      "history": []
+    }
   },
   "languages": {
     "en": {
-      "#Smartphone showing a route, and a clock": "Smartphone showing a route, and a clock",
       "code": "en",
+      "#Smartphone showing a route, and a clock": "Smartphone showing a route, and a clock",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Before the trip",
       "#Before the trip": "Before the trip",
       "#<p>Three quick questions before you start recording.</p>": "<p>Three quick questions before you start recording.</p>",
@@ -189,7 +116,7 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
       "#Before you go": "Before you go",
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>",
-      "#How are you starting this trip?": "How are you starting this trip?",
+      "#What is your plan mode in this trip?": "What is your plan mode in this trip?",
       "#On foot": "On foot",
       "#Wheelchair or mobility scooter": "Wheelchair or mobility scooter",
       "#Bicycle (own)": "Bicycle (own)",
@@ -203,6 +130,7 @@
       "#Car sharing": "Car sharing",
       "#Motorcycle or moped": "Motorcycle or moped",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi or app-based car service (e.g. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Multimodal (combination of modes)",
       "#What is this trip for?": "What is this trip for?",
       "#Going home": "Going home",
       "#Work": "Work",
@@ -218,19 +146,19 @@
       "#With children": "With children",
       "#With a pushchair or pram": "With a pushchair or pram",
       "#With heavy bags or a trolley": "With heavy bags or a trolley",
-      "#With a dog": "With a dog"
+      "#With a pet": "With a pet"
     },
     "it": {
-      "#Smartphone showing a route, and a clock": "Smartphone che mostra un percorso e un orologio",
       "code": "it",
+      "#Smartphone showing a route, and a clock": "Smartphone che mostra un percorso e un orologio",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Prima dello spostamento",
       "#Before the trip": "Prima dello spostamento",
       "#<p>Three quick questions before you start recording.</p>": "<p>Tre domande veloci prima di iniziare la registrazione.</p>",
       "#Thank you!": "Grazie!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
       "#Before you go": "Prima di partire",
-      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Se durante il viaggio cambi modo di spostarti, tocca “Cambia modo” nell'app.</p>",
-      "#How are you starting this trip?": "Come inizi questo spostamento?",
+      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Se durante il viaggio cambi modo di spostarti, tocca “Cambia modo” nell’app.</p>",
+      "#What is your plan mode in this trip?": "Qual è il modo di trasporto previsto per questo spostamento?",
       "#On foot": "A piedi",
       "#Wheelchair or mobility scooter": "Sedia a rotelle o scooter per disabili",
       "#Bicycle (own)": "Bicicletta (tua)",
@@ -244,6 +172,7 @@
       "#Car sharing": "Car sharing",
       "#Motorcycle or moped": "Moto o scooter",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente tramite app (ad es. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Multimodale (combinazione di modi)",
       "#What is this trip for?": "Qual è lo scopo di questo spostamento?",
       "#Going home": "Torno a casa",
       "#Work": "Lavoro",
@@ -259,19 +188,19 @@
       "#With children": "Con bambini",
       "#With a pushchair or pram": "Con un passeggino",
       "#With heavy bags or a trolley": "Con borse pesanti o un carrello",
-      "#With a dog": "Con un cane"
+      "#With a pet": "Con un animale domestico"
     },
     "fr": {
-      "#Smartphone showing a route, and a clock": "Smartphone affichant un itinéraire, et une horloge",
       "code": "fr",
+      "#Smartphone showing a route, and a clock": "Smartphone affichant un itinéraire, et une horloge",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Avant le trajet",
       "#Before the trip": "Avant le trajet",
       "#<p>Three quick questions before you start recording.</p>": "<p>Trois questions rapides avant de commencer l’enregistrement.</p>",
       "#Thank you!": "Merci !",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
       "#Before you go": "Avant de partir",
-      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Si vous changez de mode de déplacement pendant le trajet, appuyez sur « Changer de mode » dans l’application.</p>",
-      "#How are you starting this trip?": "Comment commencez-vous ce trajet ?",
+      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Si vous changez de mode de déplacement pendant le trajet, appuyez sur « Changer de mode » dans l’application.</p>",
+      "#What is your plan mode in this trip?": "Quel est le mode de déplacement prévu pour ce trajet ?",
       "#On foot": "À pied",
       "#Wheelchair or mobility scooter": "Fauteuil roulant ou scooter de mobilité",
       "#Bicycle (own)": "Vélo (personnel)",
@@ -285,6 +214,7 @@
       "#Car sharing": "Autopartage",
       "#Motorcycle or moped": "Moto ou scooter",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi ou service de voiture via application (p. ex. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Multimodal (combinaison de modes)",
       "#What is this trip for?": "Quel est le but de ce trajet ?",
       "#Going home": "Rentrer chez moi",
       "#Work": "Travail",
@@ -300,11 +230,11 @@
       "#With children": "Avec des enfants",
       "#With a pushchair or pram": "Avec une poussette ou un landau",
       "#With heavy bags or a trolley": "Avec des sacs lourds ou un chariot",
-      "#With a dog": "Avec un chien"
+      "#With a pet": "Avec un animal de compagnie"
     },
     "de": {
-      "#Smartphone showing a route, and a clock": "Smartphone mit einer Route und eine Uhr",
       "code": "de",
+      "#Smartphone showing a route, and a clock": "Smartphone mit einer Route und eine Uhr",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Vor dem Weg",
       "#Before the trip": "Vor dem Weg",
       "#<p>Three quick questions before you start recording.</p>": "<p>Drei kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p>",
@@ -312,7 +242,7 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
       "#Before you go": "Bevor Sie losgehen",
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Wenn Sie unterwegs die Art ändern, wie Sie sich fortbewegen, tippen Sie in der App auf „Modus wechseln“.</p>",
-      "#How are you starting this trip?": "Wie beginnen Sie diesen Weg?",
+      "#What is your plan mode in this trip?": "Welches Verkehrsmittel planen Sie für diesen Weg?",
       "#On foot": "Zu Fuß",
       "#Wheelchair or mobility scooter": "Rollstuhl oder Elektromobil",
       "#Bicycle (own)": "Fahrrad (eigenes)",
@@ -326,6 +256,7 @@
       "#Car sharing": "Carsharing",
       "#Motorcycle or moped": "Motorrad oder Moped/Roller",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi oder App-basierter Fahrdienst (z. B. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Multimodal (Kombination von Verkehrsmitteln)",
       "#What is this trip for?": "Wozu dient dieser Weg?",
       "#Going home": "Nach Hause",
       "#Work": "Arbeit",
@@ -341,20 +272,20 @@
       "#With children": "Mit Kindern",
       "#With a pushchair or pram": "Mit einem Kinderwagen oder Buggy",
       "#With heavy bags or a trolley": "Mit schweren Taschen oder einem Einkaufstrolley",
-      "#With a dog": "Mit einem Hund"
+      "#With a pet": "Mit einem Haustier"
     },
     "tr": {
-      "#Smartphone showing a route, and a clock": "Güzergâh gösteren akıllı telefon ve saat",
       "code": "tr",
+      "#Smartphone showing a route, and a clock": "Güzergâh gösteren akıllı telefon ve saat",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Yolculuktan önce",
       "#Before the trip": "Yolculuktan önce",
-      "#<p>Three quick questions before you start recording.</p>": "<p>Kayda başlamadan önce üç kısa soru.</p>",
+      "#<p>Three quick questions before you start recording.</p>": "<p>Kayıda başlamadan önce üç kısa soru.</p>",
       "#Thank you!": "Teşekkürler!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
       "#Before you go": "Yola çıkmadan önce",
-      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Yolculuk sırasında ulaşım şeklinizi değiştirirseniz uygulamada “Mod değiştir”e dokunun.</p>",
-      "#How are you starting this trip?": "Bu yolculuğa nasıl başlıyorsunuz?",
-      "#On foot": "Yürüyerek",
+      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Yolculuk sırasında ulaşım şeklinizi değiştirirseniz uygulamada “Mod değiştir”’e dokunun.</p>",
+      "#What is your plan mode in this trip?": "Bu yolculuk için planladığınız ulaşım şekli nedir?",
+      "#On foot": "Yürüyürek",
       "#Wheelchair or mobility scooter": "Tekerlekli sandalye veya engelli scooterı",
       "#Bicycle (own)": "Bisiklet (kendi)",
       "#E-bike (own)": "Elektrikli bisiklet (kendi)",
@@ -367,6 +298,7 @@
       "#Car sharing": "Araç paylaşımı",
       "#Motorcycle or moped": "Motosiklet veya moped/scooter",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taksi veya uygulama tabanlı araç hizmeti (örn. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Çok modlu (farklı ulaşım biçimlerinin kombinasyonu)",
       "#What is this trip for?": "Bu yolculuğun amacı nedir?",
       "#Going home": "Eve dönüş",
       "#Work": "İş",
@@ -382,11 +314,11 @@
       "#With children": "Çocuklarla",
       "#With a pushchair or pram": "Bebek arabası veya puset ile",
       "#With heavy bags or a trolley": "Ağır çantalar veya pazar arabası ile",
-      "#With a dog": "Köpekle"
+      "#With a pet": "Evcil hayvanla"
     },
     "fa": {
-      "#Smartphone showing a route, and a clock": "گوشی هوشمندی که مسیری را نشان می‌دهد و یک ساعت",
       "code": "fa",
+      "#Smartphone showing a route, and a clock": "گوشی هوشمندی که مسیری را نشان می‌دهد و یک ساعت",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - پیش از سفر",
       "#Before the trip": "پیش از سفر",
       "#<p>Three quick questions before you start recording.</p>": "<p>سه پرسش کوتاه پیش از شروع ضبط.</p>",
@@ -394,9 +326,9 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
       "#Before you go": "پیش از حرکت",
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>اگر در طول سفر شیوه سفر خود را تغییر دادید، در برنامه روی «تغییر شیوه» بزنید.</p>",
-      "#How are you starting this trip?": "این سفر را چگونه شروع می‌کنید؟",
+      "#What is your plan mode in this trip?": "شیوه سفر برنامه‌ریزی‌شده شما برای این سفر چیست؟",
       "#On foot": "پیاده",
-      "#Wheelchair or mobility scooter": "ویلچر یا اسکوتر معلولان",
+      "#Wheelchair or mobility scooter": "ویلچیر یا اسکوتر معلولان",
       "#Bicycle (own)": "دوچرخه (شخصی)",
       "#E-bike (own)": "دوچرخه برقی (شخصی)",
       "#Shared bike or e-bike": "دوچرخه یا دوچرخه برقی اشتراکی",
@@ -408,6 +340,7 @@
       "#Car sharing": "خودروی اشتراکی",
       "#Motorcycle or moped": "موتورسیکلت یا موتور گازی",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "تاکسی یا سرویس خودرو با اپلیکیشن (مثلاً Uber، FreeNow)",
+      "#Multimodal (combination of modes)": "چندوجهی (ترکیبی از شیوه‌های مختلف)",
       "#What is this trip for?": "هدف این سفر چیست؟",
       "#Going home": "بازگشت به خانه",
       "#Work": "کار",
@@ -423,21 +356,21 @@
       "#With children": "با کودکان",
       "#With a pushchair or pram": "با کالسکه کودک",
       "#With heavy bags or a trolley": "با کیف‌های سنگین یا چرخ‌دستی",
-      "#With a dog": "با سگ"
+      "#With a pet": "با حیوان خانگی"
     },
     "hu": {
-      "#Smartphone showing a route, and a clock": "Útvonalat mutató okostelefon és egy óra",
       "code": "hu",
+      "#Smartphone showing a route, and a clock": "Útvonalat mutató okostelefon és egy óra",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - Az út előtt",
       "#Before the trip": "Az út előtt",
-      "#<p>Three quick questions before you start recording.</p>": "<p>Három gyors kérdés, mielőtt elindítja a rögzítést.</p>",
+      "#<p>Three quick questions before you start recording.</p>": "<p>Három gyors kérdés, mielőtt elíndítja a rögzítést.</p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
       "#Before you go": "Indulás előtt",
-      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Ha az út során megváltoztatja a közlekedés módját, koppintson a „Mód váltása” gombra az alkalmazásban.</p>",
-      "#How are you starting this trip?": "Hogyan kezdi ezt az utat?",
+      "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Ha az út során megváltoztatja a közlekdés módját, koppintson a „Mód váltása” gombra az alkalmazásban.</p>",
+      "#What is your plan mode in this trip?": "Milyen közlekedési módot tervez erre az útra?",
       "#On foot": "Gyalog",
-      "#Wheelchair or mobility scooter": "Kerekesszék vagy mozgássegítő robogó",
+      "#Wheelchair or mobility scooter": "Kerekesszék vagy mozgássegítő roboɣó",
       "#Bicycle (own)": "Kerékpár (saját)",
       "#E-bike (own)": "Elektromos kerékpár (saját)",
       "#Shared bike or e-bike": "Megosztott kerékpár vagy elektromos kerékpár",
@@ -447,13 +380,14 @@
       "#Car, as driver": "Autó, vezetőként",
       "#Car, as passenger": "Autó, utasként",
       "#Car sharing": "Autómegosztás",
-      "#Motorcycle or moped": "Motorkerékpár vagy robogó",
+      "#Motorcycle or moped": "Motorkerékpár vagy roboɣó",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "Taxi vagy applikációs autós szolgáltatás (pl. Uber, FreeNow)",
+      "#Multimodal (combination of modes)": "Multimodális (különböző közlekedési módok kombinációja)",
       "#What is this trip for?": "Mi a célja ennek az útnak?",
       "#Going home": "Hazamegyek",
       "#Work": "Munka",
       "#Study": "Tanulás",
-      "#Shopping or errands": "Vásárlás vagy ügyintézés",
+      "#Shopping or errands": "Vásárlás vagy ügyinézés",
       "#Taking or picking someone up": "Valakit elkísérni vagy érte menni",
       "#Doctor or health appointment": "Orvosi vagy egészségügyi időpont",
       "#Leisure or visiting people": "Szabadidő vagy látogatás",
@@ -462,13 +396,13 @@
       "#Alone": "Egyedül",
       "#With other adults": "Más felnőttekkel",
       "#With children": "Gyerekekkel",
-      "#With a pushchair or pram": "Babakocsival",
+      "#With a pushchair or pram": "Babakocsi val",
       "#With heavy bags or a trolley": "Nehéz táskákkal vagy bevásárlókocsival",
-      "#With a dog": "Kutyával"
+      "#With a pet": "Háziállattal"
     },
     "ar": {
-      "#Smartphone showing a route, and a clock": "هاتف ذكي يعرض مسارًا وساعة",
       "code": "ar",
+      "#Smartphone showing a route, and a clock": "هاتف ذکي يعرض مسارًا وساعة",
       "#SmartUrbanity - Before the trip": "SmartUrbanity - قبل الرحلة",
       "#Before the trip": "قبل الرحلة",
       "#<p>Three quick questions before you start recording.</p>": "<p>ثلاثة أسئلة سريعة قبل أن تبدأ التسجيل.</p>",
@@ -476,20 +410,21 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
       "#Before you go": "قبل أن تنطلق",
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>إذا غيّرت طريقة تنقلك أثناء الرحلة، فاضغط على «تغيير الوسيلة» في التطبيق.</p>",
-      "#How are you starting this trip?": "كيف تبدأ هذه الرحلة؟",
+      "#What is your plan mode in this trip?": "ما هي وسيلة التنقل المخططة لهذه الرحلة؟",
       "#On foot": "سيرًا على الأقدام",
-      "#Wheelchair or mobility scooter": "كرسي متحرك أو سكوتر للتنقل",
+      "#Wheelchair or mobility scooter": "کرسي متحرك أو سکوتر للتنقل",
       "#Bicycle (own)": "دراجة (خاصة)",
       "#E-bike (own)": "دراجة كهربائية (خاصة)",
       "#Shared bike or e-bike": "دراجة أو دراجة كهربائية مشتركة",
-      "#E-scooter (own)": "سكوتر كهربائي (خاص)",
-      "#Shared e-scooter": "سكوتر كهربائي مشترك",
+      "#E-scooter (own)": "سکوتر كهربائي (خاص)",
+      "#Shared e-scooter": "سکوتر كهربائي مشترك",
       "#Public transport (bus, tram, metro, train)": "النقل العام (حافلة، ترام، مترو، قطار)",
       "#Car, as driver": "سيارة، بصفتي سائقًا/سائقة",
       "#Car, as passenger": "سيارة، بصفتي راكبًا/راكبة",
       "#Car sharing": "مشاركة السيارات",
-      "#Motorcycle or moped": "دراجة نارية أو سكوتر",
+      "#Motorcycle or moped": "دراجة نارية أو سکوتر",
       "#Taxi or app-based car service (e.g. Uber, FreeNow)": "تاكسي أو خدمة سيارات عبر تطبيق (مثل Uber وFreeNow)",
+      "#Multimodal (combination of modes)": "متعدد الوسائل (مزيج من وسائل النقل)",
       "#What is this trip for?": "ما الغرض من هذه الرحلة؟",
       "#Going home": "العودة إلى المنزل",
       "#Work": "العمل",
@@ -505,13 +440,14 @@
       "#With children": "مع أطفال",
       "#With a pushchair or pram": "بعربة أطفال",
       "#With heavy bags or a trolley": "بحقائب ثقيلة أو عربة تسوق",
-      "#With a dog": "مع كلب"
+      "#With a pet": "مع حيوان أليف"
     }
   },
   "id": "smarturbanity_pre_trip",
-  "db_set": "trips",
+  "db_set": "questionnaires",
   "response_format": "planeasy.response",
   "response_schema_version": "2.0",
   "response_kind": "trip_survey",
-  "default_language": "en"
+  "default_language": "en",
+  "category": "tripSurveys"
 }

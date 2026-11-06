@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "3.0.0",
+    "questionnaire_version": "3.1.4",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "trip_phase": "post",
@@ -30,29 +30,12 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Did the app record correctly how you travelled?",
-            "answer_key": "stages_correct",
-            "question_type": "single_option",
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No, something is wrong",
-                "value": "no_fix"
-              }
-            ],
-            "required": true,
-            "question_id": "stages_correct",
-            "question_version": "3.0.0",
-            "privacy_classification": "heightened_personal"
-          },
-          {
+            "question_id": "trip_time_vs_expected",
+            "question_version": "1.0.0",
             "text": "Compared to what you expected, how long did this trip feel?",
             "answer_key": "trip_time_vs_expected",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -76,15 +59,15 @@
                 "value": "much_longer"
               }
             ],
-            "required": true,
-            "question_id": "trip_time_vs_expected",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_effort",
+            "question_version": "1.0.0",
             "text": "How tiring was this trip?",
             "answer_key": "trip_effort",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -108,14 +91,15 @@
                 "value": "extremely"
               }
             ],
-            "question_id": "trip_effort",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_traffic_safety",
+            "question_version": "1.0.0",
             "text": "How safe from traffic did you feel on this trip?",
             "answer_key": "trip_traffic_safety",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -139,15 +123,15 @@
                 "value": "completely_safe"
               }
             ],
-            "required": true,
-            "question_id": "trip_traffic_safety",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_personal_security",
+            "question_version": "1.0.0",
             "text": "How safe did you feel from other people (e.g. theft, harassment)?",
             "answer_key": "trip_personal_security",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -171,14 +155,15 @@
                 "value": "completely_safe"
               }
             ],
-            "question_id": "trip_personal_security",
-            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
+            "question_id": "route_familiarity",
+            "question_version": "1.0.0",
             "text": "Which route did you take?",
             "answer_key": "route_familiarity",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -194,17 +179,18 @@
                 "value": "new"
               }
             ],
-            "question_id": "route_familiarity",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "route_reasons",
+            "question_version": "1.0.0",
             "text": "Why did you choose this route? (Up to 2)",
             "answer_key": "route_reasons",
             "question_type": "multiple_options",
-            "max_answers": 2,
+            "required": true,
             "add_other": true,
             "checks_inline": false,
+            "max_answers": 2,
             "options": [
               {
                 "text": "It's the quickest or shortest",
@@ -251,14 +237,15 @@
                 "value": "habit"
               }
             ],
-            "question_id": "route_reasons",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "avoided_place",
+            "question_version": "1.0.0",
             "text": "Did you deliberately avoid a street, crossing or place on this trip?",
             "answer_key": "avoided_place",
             "question_type": "single_option",
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -270,14 +257,20 @@
                 "value": "no"
               }
             ],
-            "question_id": "avoided_place",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "privacy_classification": "personal_data"
           },
           {
+            "question_id": "avoided_reasons",
+            "question_version": "1.0.0",
             "text": "Why did you avoid it? (Select all that apply. You can then mark it on the map.)",
             "answer_key": "avoided_reasons",
             "question_type": "multiple_options",
+            "required": true,
+            "show_if": {
+              "avoided_place": [
+                "yes"
+              ]
+            },
             "add_other": true,
             "checks_inline": false,
             "options": [
@@ -314,19 +307,15 @@
                 "value": "slope"
               }
             ],
-            "show_if": {
-              "avoided_place": [
-                "yes"
-              ]
-            },
-            "question_id": "avoided_reasons",
-            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
+            "question_id": "trip_incidents",
+            "question_version": "1.0.0",
             "text": "Did any of these happen on this trip? (Select all that apply)",
             "answer_key": "trip_incidents",
             "question_type": "multiple_options",
+            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -351,19 +340,74 @@
                 "value": "harassment"
               }
             ],
-            "required": true,
-            "question_id": "trip_incidents",
-            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
+          },
+          {
+            "question_id": "trip_feeling",
+            "question_version": "1.0.0",
+            "text": "How did you feel emotionally after this trip?",
+            "answer_key": "trip_feeling",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Happy",
+                "value": "happy"
+              },
+              {
+                "text": "Calm",
+                "value": "calm"
+              },
+              {
+                "text": "Satisfied",
+                "value": "satisfied"
+              },
+              {
+                "text": "Neutral",
+                "value": "neutral"
+              },
+              {
+                "text": "Stressed",
+                "value": "stressed"
+              },
+              {
+                "text": "Frustrated",
+                "value": "frustrated"
+              },
+              {
+                "text": "Anxious",
+                "value": "anxious"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
+          {
+            "question_id": "trip_rating",
+            "question_version": "1.0.0",
+            "text": "How would you rate this trip overall?",
+            "answer_key": "trip_rating",
+            "question_type": "star_rating",
+            "required": true,
+            "checks_inline": false,
+            "min_value": 1,
+            "max_value": 5,
+            "privacy_classification": "personal_data"
           }
-        ]
+        ],
+        "id": "after_the_trip"
       }
-    ]
+    ],
+    "editorial": {
+      "schema_version": 1,
+      "records": [],
+      "history": []
+    }
   },
   "languages": {
     "en": {
-      "#Route ending at a flag with a check mark": "Route ending at a flag with a check mark",
       "code": "en",
+      "#Route ending at a flag with a check mark": "Route ending at a flag with a check mark",
       "#SmartUrbanity - After the trip": "SmartUrbanity - After the trip",
       "#After the trip": "After the trip",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Less than a minute: your answers help us understand how the trip really went.</p>",
@@ -371,8 +415,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Your answers have been saved. Thank you for your time.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>A few quick questions about the trip you just made.</p>",
       "#Yes": "Yes",
-      "#Did the app record correctly how you travelled?": "Did the app record correctly how you travelled?",
-      "#No, something is wrong": "No, something is wrong",
       "#Compared to what you expected, how long did this trip feel?": "Compared to what you expected, how long did this trip feel?",
       "#Much shorter than expected": "Much shorter than expected",
       "#A little shorter than expected": "A little shorter than expected",
@@ -424,11 +466,20 @@
       "#I was nearly hit by a vehicle": "I was nearly hit by a vehicle",
       "#A close call with a bike or e-scooter": "A close call with a bike or e-scooter",
       "#I tripped or fell": "I tripped or fell",
-      "#I was harassed or felt threatened": "I was harassed or felt threatened"
+      "#I was harassed or felt threatened": "I was harassed or felt threatened",
+      "#How did you feel emotionally after this trip?": "How did you feel emotionally after this trip?",
+      "#Happy": "Happy",
+      "#Calm": "Calm",
+      "#Satisfied": "Satisfied",
+      "#Neutral": "Neutral",
+      "#Stressed": "Stressed",
+      "#Frustrated": "Frustrated",
+      "#Anxious": "Anxious",
+      "#How would you rate this trip overall?": "How would you rate this trip overall?"
     },
     "it": {
-      "#Route ending at a flag with a check mark": "Percorso che termina a una bandierina con un segno di spunta",
       "code": "it",
+      "#Route ending at a flag with a check mark": "Percorso che termina a una bandierina con un segno di spunta",
       "#SmartUrbanity - After the trip": "SmartUrbanity - Dopo lo spostamento",
       "#After the trip": "Dopo lo spostamento",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Meno di un minuto: le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p>",
@@ -436,8 +487,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Le tue risposte sono state salvate. Grazie per il tuo tempo.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Alcune domande veloci sullo spostamento appena fatto.</p>",
       "#Yes": "Sì",
-      "#Did the app record correctly how you travelled?": "L'app ha registrato correttamente come ti sei spostato/a?",
-      "#No, something is wrong": "No, qualcosa non va",
       "#Compared to what you expected, how long did this trip feel?": "Rispetto a quanto ti aspettavi, quanto ti è sembrato lungo questo spostamento?",
       "#Much shorter than expected": "Molto più breve del previsto",
       "#A little shorter than expected": "Un po' più breve del previsto",
@@ -489,20 +538,27 @@
       "#I was nearly hit by a vehicle": "Ho rischiato di essere investito/a",
       "#A close call with a bike or e-scooter": "Ho rischiato uno scontro con una bici o un monopattino",
       "#I tripped or fell": "Sono inciampato/a o caduto/a",
-      "#I was harassed or felt threatened": "Ho subito molestie o mi sono sentito/a minacciato/a"
+      "#I was harassed or felt threatened": "Ho subito molestie o mi sono sentito/a minacciato/a",
+      "#How did you feel emotionally after this trip?": "Come ti sei sentito/a emotivamente dopo questo spostamento?",
+      "#Happy": "Felice",
+      "#Calm": "Calmo/a",
+      "#Satisfied": "Soddisfatto/a",
+      "#Neutral": "Neutro/a",
+      "#Stressed": "Stressato/a",
+      "#Frustrated": "Frustrato/a",
+      "#Anxious": "Ansioso/a",
+      "#How would you rate this trip overall?": "Come valuteresti questo spostamento nel complesso?"
     },
     "fr": {
-      "#Route ending at a flag with a check mark": "Itinéraire se terminant à un drapeau avec une coche",
       "code": "fr",
+      "#Route ending at a flag with a check mark": "Itinéraire se terminant à un drapeau avec une coche",
       "#SmartUrbanity - After the trip": "SmartUrbanity - Après le trajet",
       "#After the trip": "Après le trajet",
-      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Moins d’une minute : vos réponses nous aident à comprendre comment le trajet s’est vraiment passé.</p>",
+      "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Moins d'une minute : vos réponses nous aident à comprendre comment le trajet s'est vraiment passé.</p>",
       "#Thank you!": "Merci !",
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Vos réponses ont été enregistrées. Merci pour votre temps.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Quelques questions rapides sur le trajet que vous venez de faire.</p>",
       "#Yes": "Oui",
-      "#Did the app record correctly how you travelled?": "L'application a-t-elle enregistré correctement votre façon de vous déplacer ?",
-      "#No, something is wrong": "Non, quelque chose ne va pas",
       "#Compared to what you expected, how long did this trip feel?": "Par rapport à ce que vous attendiez, ce trajet vous a-t-il semblé long ?",
       "#Much shorter than expected": "Beaucoup moins longtemps que prévu",
       "#A little shorter than expected": "Un peu moins longtemps que prévu",
@@ -527,20 +583,20 @@
       "#A route I know, but not my usual one": "Un itinéraire que je connais, mais pas mon itinéraire habituel",
       "#A route that was new to me": "Un itinéraire nouveau pour moi",
       "#Why did you choose this route? (Up to 2)": "Pourquoi avez-vous choisi cet itinéraire ? (2 au maximum)",
-      "#It's the quickest or shortest": "C’est le plus rapide ou le plus court",
+      "#It's the quickest or shortest": "C'est le plus rapide ou le plus court",
       "#It's safer from traffic": "Il est plus sûr par rapport à la circulation",
       "#It's better lit": "Il est mieux éclairé",
       "#There are more people around": "Il y a plus de monde",
       "#It's nicer or greener": "Il est plus agréable ou plus vert",
-      "#It has more shade": "Il y a plus d’ombre",
-      "#It has fewer slopes or stairs": "Il y a moins de pentes ou d’escaliers",
+      "#It has more shade": "Il y a plus d'ombre",
+      "#It has fewer slopes or stairs": "Il y a moins de pentes ou d'escaliers",
       "#Better pavements or cycle lanes": "De meilleurs trottoirs ou pistes cyclables",
-      "#To stop somewhere on the way": "Pour m’arrêter quelque part en chemin",
-      "#A navigation app suggested it": "Une application de navigation me l’a suggéré",
+      "#To stop somewhere on the way": "Pour m'arrêter quelque part en chemin",
+      "#A navigation app suggested it": "Une application de navigation me l'a suggéré",
       "#Out of habit": "Par habitude",
       "#Did you deliberately avoid a street, crossing or place on this trip?": "Avez-vous délibérément évité une rue, un passage ou un lieu pendant ce trajet ?",
       "#No": "Non",
-      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Pourquoi l’avez-vous évité ? (Sélectionnez toutes les réponses qui s’appliquent. Vous pourrez ensuite le marquer sur la carte.)",
+      "#Why did you avoid it? (Select all that apply. You can then mark it on the map.)": "Pourquoi l'avez-vous évité ? (Sélectionnez toutes les réponses qui s'appliquent. Vous pourrez ensuite le marquer sur la carte.)",
       "#Heavy or fast traffic": "Circulation dense ou rapide",
       "#A dangerous crossing": "Un passage dangereux",
       "#Bad pavement or road surface": "Mauvais trottoir ou chaussée en mauvais état",
@@ -549,16 +605,25 @@
       "#Empty or isolated": "Vide ou isolé",
       "#Too crowded": "Trop de monde",
       "#Slopes or stairs": "Pentes ou escaliers",
-      "#Did any of these happen on this trip? (Select all that apply)": "L’une de ces situations s’est-elle produite pendant ce trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Did any of these happen on this trip? (Select all that apply)": "L'une de ces situations s'est-elle produite pendant ce trajet ? (Sélectionnez toutes les réponses qui s'appliquent)",
       "#Nothing in particular": "Rien de particulier",
-      "#I was nearly hit by a vehicle": "J’ai failli être renversé/renversée par un véhicule",
-      "#A close call with a bike or e-scooter": "J’ai failli entrer en collision avec un vélo ou une trottinette électrique",
-      "#I tripped or fell": "J’ai trébuché ou je suis tombé/tombée",
-      "#I was harassed or felt threatened": "J’ai été harcelé/harcelée ou je me suis senti/sentie menacé/menacée"
+      "#I was nearly hit by a vehicle": "J'ai failli être renversé/renversée par un véhicule",
+      "#A close call with a bike or e-scooter": "J'ai failli entrer en collision avec un vélo ou une trottinette électrique",
+      "#I tripped or fell": "J'ai trébuché ou je suis tombé/tombée",
+      "#I was harassed or felt threatened": "J'ai été harcelé/harcelée ou je me suis senti/sentie menacé/menacée",
+      "#How did you feel emotionally after this trip?": "Comment vous êtes-vous senti/sentie émotionnellement après ce trajet ?",
+      "#Happy": "Heureux/Heureuse",
+      "#Calm": "Calme",
+      "#Satisfied": "Satisfait/e",
+      "#Neutral": "Neutre",
+      "#Stressed": "Stressé/e",
+      "#Frustrated": "Frustré/e",
+      "#Anxious": "Anxieux/Anxieuse",
+      "#How would you rate this trip overall?": "Comment évalueriez-vous ce trajet dans l'ensemble ?"
     },
     "de": {
-      "#Route ending at a flag with a check mark": "Route, die an einer Flagge endet, mit einem Häkchen",
       "code": "de",
+      "#Route ending at a flag with a check mark": "Route, die an einer Flagge endet, mit einem Häkchen",
       "#SmartUrbanity - After the trip": "SmartUrbanity - Nach dem Weg",
       "#After the trip": "Nach dem Weg",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Weniger als eine Minute: Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p>",
@@ -566,8 +631,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Ihre Antworten wurden gespeichert. Vielen Dank für Ihre Zeit.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Ein paar kurze Fragen zu dem Weg, den Sie gerade zurückgelegt haben.</p>",
       "#Yes": "Ja",
-      "#Did the app record correctly how you travelled?": "Hat die App richtig aufgezeichnet, wie Sie unterwegs waren?",
-      "#No, something is wrong": "Nein, etwas stimmt nicht",
       "#Compared to what you expected, how long did this trip feel?": "Wie lang hat sich dieser Weg im Vergleich zu Ihrer Erwartung angefühlt?",
       "#Much shorter than expected": "Viel kürzer als erwartet",
       "#A little shorter than expected": "Etwas kürzer als erwartet",
@@ -619,11 +682,20 @@
       "#I was nearly hit by a vehicle": "Ich wäre fast von einem Fahrzeug angefahren worden",
       "#A close call with a bike or e-scooter": "Beinahe-Zusammenstoß mit einem Fahrrad oder E-Scooter",
       "#I tripped or fell": "Ich bin gestolpert oder gestürzt",
-      "#I was harassed or felt threatened": "Ich wurde belästigt oder habe mich bedroht gefühlt"
+      "#I was harassed or felt threatened": "Ich wurde belästigt oder habe mich bedroht gefühlt",
+      "#How did you feel emotionally after this trip?": "Wie haben Sie sich nach diesem Weg emotional gefühlt?",
+      "#Happy": "Glücklich",
+      "#Calm": "Ruhig",
+      "#Satisfied": "Zufrieden",
+      "#Neutral": "Neutral",
+      "#Stressed": "Gestresst",
+      "#Frustrated": "Frustriert",
+      "#Anxious": "Ängstlich",
+      "#How would you rate this trip overall?": "Wie würden Sie diesen Weg insgesamt bewerten?"
     },
     "tr": {
-      "#Route ending at a flag with a check mark": "Bayrakta biten güzergâh ve onay işareti",
       "code": "tr",
+      "#Route ending at a flag with a check mark": "Bayrakta biten güzergâh ve onay işareti",
       "#SmartUrbanity - After the trip": "SmartUrbanity - Yolculuktan sonra",
       "#After the trip": "Yolculuktan sonra",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Bir dakikadan az: yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p>",
@@ -631,8 +703,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Yanıtlarınız kaydedildi. Zaman ayırdığınız için teşekkürler.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Az önce yaptığınız yolculukla ilgili birkaç kısa soru.</p>",
       "#Yes": "Evet",
-      "#Did the app record correctly how you travelled?": "Uygulama yolculuğunuzu doğru kaydetti mi?",
-      "#No, something is wrong": "Hayır, bir şey yanlış",
       "#Compared to what you expected, how long did this trip feel?": "Beklediğinize kıyasla bu yolculuk size ne kadar uzun geldi?",
       "#Much shorter than expected": "Beklenenden çok daha kısa",
       "#A little shorter than expected": "Beklenenden biraz daha kısa",
@@ -684,11 +754,20 @@
       "#I was nearly hit by a vehicle": "Az kalsın bir araç bana çarpıyordu",
       "#A close call with a bike or e-scooter": "Bir bisiklet veya elektrikli scooter ile çarpışmaktan kıl payı kurtuldum",
       "#I tripped or fell": "Tökezledim veya düştüm",
-      "#I was harassed or felt threatened": "Tacize uğradım veya kendimi tehdit altında hissettim"
+      "#I was harassed or felt threatened": "Tacize uğradım veya kendimi tehdit altında hissettim",
+      "#How did you feel emotionally after this trip?": "Bu yolculuktan sonra duygusal olarak kendinizi nasıl hissettiniz?",
+      "#Happy": "Mutlu",
+      "#Calm": "Sakin",
+      "#Satisfied": "Memnun",
+      "#Neutral": "Nötr",
+      "#Stressed": "Stresli",
+      "#Frustrated": "Sinirli",
+      "#Anxious": "Endişeli",
+      "#How would you rate this trip overall?": "Bu yolculuğu genel olarak nasıl değerlendirirsiniz?"
     },
     "fa": {
-      "#Route ending at a flag with a check mark": "مسیری که به پرچم می‌رسد با علامت تیک",
       "code": "fa",
+      "#Route ending at a flag with a check mark": "مسیری که به پرچم می‌رسد با علامت تیک",
       "#SmartUrbanity - After the trip": "SmartUrbanity - پس از سفر",
       "#After the trip": "پس از سفر",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>کمتر از یک دقیقه: پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p>",
@@ -696,8 +775,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>پاسخ‌های شما ذخیره شد. از وقتی که گذاشتید سپاسگزاریم.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>چند پرسش کوتاه درباره سفری که همین حالا انجام دادید.</p>",
       "#Yes": "بله",
-      "#Did the app record correctly how you travelled?": "آیا برنامه شیوه سفر شما را درست ثبت کرد؟",
-      "#No, something is wrong": "خیر، چیزی درست نیست",
       "#Compared to what you expected, how long did this trip feel?": "در مقایسه با انتظارتان، این سفر چقدر طولانی به نظر رسید؟",
       "#Much shorter than expected": "بسیار کوتاه‌تر از انتظار",
       "#A little shorter than expected": "کمی کوتاه‌تر از انتظار",
@@ -749,11 +826,20 @@
       "#I was nearly hit by a vehicle": "نزدیک بود یک خودرو با من برخورد کند",
       "#A close call with a bike or e-scooter": "نزدیک بود با یک دوچرخه یا اسکوتر برقی برخورد کنم",
       "#I tripped or fell": "سکندری خوردم یا زمین خوردم",
-      "#I was harassed or felt threatened": "مورد مزاحمت قرار گرفتم یا احساس تهدید کردم"
+      "#I was harassed or felt threatened": "مورد مزاحمت قرار گرفتم یا احساس تهدید کردم",
+      "#How did you feel emotionally after this trip?": "بعد از این سفر چه احساس عاطفی داشتید؟",
+      "#Happy": "شاد",
+      "#Calm": "آرام",
+      "#Satisfied": "راضی",
+      "#Neutral": "بی‌تفاوت",
+      "#Stressed": "استرس‌زده",
+      "#Frustrated": "ناامید",
+      "#Anxious": "نگران",
+      "#How would you rate this trip overall?": "در مجموع، این سفر را چگونه ارزیابی می‌کنید؟"
     },
     "hu": {
-      "#Route ending at a flag with a check mark": "Zászlónál végződő útvonal pipával",
       "code": "hu",
+      "#Route ending at a flag with a check mark": "Zászlónál végződő útvonal pipával",
       "#SmartUrbanity - After the trip": "SmartUrbanity - Az út után",
       "#After the trip": "Az út után",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>Kevesebb mint egy perc: válaszai segítenek megérteni, hogyan zajlott valójában az út.</p>",
@@ -761,8 +847,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>Válaszait elmentettük. Köszönjük, hogy időt szánt ránk.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>Néhány gyors kérdés az imént megtett útról.</p>",
       "#Yes": "Igen",
-      "#Did the app record correctly how you travelled?": "Helyesen rögzítette az alkalmazás, hogyan közlekedett?",
-      "#No, something is wrong": "Nem, valami nem stimmel",
       "#Compared to what you expected, how long did this trip feel?": "Ahhoz képest, amire számított, mennyire tűnt hosszúnak ez az út?",
       "#Much shorter than expected": "Sokkal rövidebb a vártnál",
       "#A little shorter than expected": "Kicsit rövidebb a vártnál",
@@ -814,11 +898,20 @@
       "#I was nearly hit by a vehicle": "Majdnem elütött egy jármű",
       "#A close call with a bike or e-scooter": "Majdnem összeütköztem egy kerékpárral vagy e-rollerrel",
       "#I tripped or fell": "Megbotlottam vagy elestem",
-      "#I was harassed or felt threatened": "Zaklattak vagy fenyegetve éreztem magam"
+      "#I was harassed or felt threatened": "Zaklattak vagy fenyegetve éreztem magam",
+      "#How did you feel emotionally after this trip?": "Hogyan érezte magát érzelmileg az út után?",
+      "#Happy": "Boldognak",
+      "#Calm": "Nyugodt",
+      "#Satisfied": "Elégedett",
+      "#Neutral": "Közömbösnek",
+      "#Stressed": "Stresszesnek",
+      "#Frustrated": "Frusztrált",
+      "#Anxious": "Szorongó",
+      "#How would you rate this trip overall?": "Összességében hogyan értékelné ezt az utat?"
     },
     "ar": {
-      "#Route ending at a flag with a check mark": "مسار ينتهي عند علم مع علامة صح",
       "code": "ar",
+      "#Route ending at a flag with a check mark": "مسار ينتهي عند علم مع علامة صح",
       "#SmartUrbanity - After the trip": "SmartUrbanity - بعد الرحلة",
       "#After the trip": "بعد الرحلة",
       "#<p>Less than a minute: your answers help us understand how the trip really went.</p>": "<p>أقل من دقيقة: تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p>",
@@ -826,8 +919,6 @@
       "#<p>Your answers have been saved. Thank you for your time.</p>": "<p>تم حفظ إجاباتك. شكرًا لك على وقتك.</p>",
       "#<p>A few quick questions about the trip you just made.</p>": "<p>بضعة أسئلة سريعة عن الرحلة التي قمت بها للتو.</p>",
       "#Yes": "نعم",
-      "#Did the app record correctly how you travelled?": "هل سجّل التطبيق طريقة تنقلك بشكل صحيح؟",
-      "#No, something is wrong": "لا، هناك خطأ ما",
       "#Compared to what you expected, how long did this trip feel?": "مقارنةً بما توقعته، كم بدت لك هذه الرحلة طويلة؟",
       "#Much shorter than expected": "أقصر بكثير من المتوقع",
       "#A little shorter than expected": "أقصر قليلًا من المتوقع",
@@ -879,13 +970,23 @@
       "#I was nearly hit by a vehicle": "كدت أن تصدمني مركبة",
       "#A close call with a bike or e-scooter": "كدت أن أصطدم بدراجة أو سكوتر كهربائي",
       "#I tripped or fell": "تعثرت أو سقطت",
-      "#I was harassed or felt threatened": "تعرضت للتحرش أو شعرت بالتهديد"
+      "#I was harassed or felt threatened": "تعرضت للتحرش أو شعرت بالتهديد",
+      "#How did you feel emotionally after this trip?": "كيف شعرت عاطفيًا بعد هذه الرحلة؟",
+      "#Happy": "سعيدًا/سعيدةً",
+      "#Calm": "هادئًا/هادئةً",
+      "#Satisfied": "راضيًا/راضيةً",
+      "#Neutral": "محايدًا/محايدةً",
+      "#Stressed": "متوترًا/متوترةً",
+      "#Frustrated": "محبطًا/محبطةً",
+      "#Anxious": "قلقًا/قلقةً",
+      "#How would you rate this trip overall?": "كيف تقيّم هذه الرحلة بشكل عام؟"
     }
   },
   "id": "smarturbanity_post_trip",
-  "db_set": "trips",
+  "db_set": "questionnaires",
   "response_format": "planeasy.response",
   "response_schema_version": "2.0",
   "response_kind": "trip_survey",
-  "default_language": "en"
+  "default_language": "en",
+  "category": "tripSurveys"
 }
