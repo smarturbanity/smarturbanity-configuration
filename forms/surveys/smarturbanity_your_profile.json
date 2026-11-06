@@ -62,14 +62,15 @@
             "add_other": true,
             "checks_inline": false,
             "options": [
-              { "text": "Male", "value": "male" },
-              { "text": "Female", "value": "female" }
+              { "text": "Man", "value": "male" },
+              { "text": "Woman", "value": "female" },
+              { "text": "Non-binary", "value": "non_binary" }
             ]
           },
 
           {
             "privacy_classification": "heightened_personal",
-            "text": "What is your highest completed level of education?",
+            "text": "What is your highest completed level of education? If you are still studying, choose the last level you completed; if you studied abroad, choose the closest equivalent.",
             "answer_key": "education",
             "question_type": "single_option",
             "required": false,
@@ -102,33 +103,6 @@
             ]
           },
 
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "In which Municipio of Rome do you currently live?",
-            "answer_key": "home_municipio",
-            "question_type": "single_option",
-            "required": false,
-            "checks_inline": false,
-            "add_i_dont_know": true,
-            "show_if": { "residence": ["travel", "services", "visit", "reason"] },
-            "options": [
-              { "text": "1", "value": "1" },
-              { "text": "2", "value": "2" },
-              { "text": "3", "value": "3" },
-              { "text": "4", "value": "4" },
-              { "text": "5", "value": "5" },
-              { "text": "6", "value": "6" },
-              { "text": "7", "value": "7" },
-              { "text": "8", "value": "8" },
-              { "text": "9", "value": "9" },
-              { "text": "10", "value": "10" },
-              { "text": "11", "value": "11" },
-              { "text": "13", "value": "13" },
-              { "text": "14", "value": "14" },
-              { "text": "15", "value": "15" },
-              { "text": "I live outside Rome", "value": "i_live_outside_rome" }
-            ]
-          },
 
           {
             "privacy_classification": "heightened_personal",
@@ -161,6 +135,7 @@
             "answer_key": "community_attachment",
             "question_type": "single_option",
             "required": false,
+            "show_if": { "residence": "live" },
             "checks_inline": false,
             "options": [
               { "text": "Not connected", "value": "not_connected" },
@@ -177,11 +152,7 @@
             "answer_key": "place_attachment",
             "question_type": "single_option",
             "required": false,
-            "show_if": {
-              "residence": {
-                "not": "live"
-              }
-            },
+            "show_if": { "residence": "live" },
             "checks_inline": false,
             "options": [
               { "text": "Not connected", "value": "not_connected" },
@@ -216,7 +187,7 @@
             "required": false,
             "checks_inline": false,
             "options": [
-              { "text": "0", "value": "0" },
+              { "text": "None", "value": "0" },
               { "text": "1", "value": "1" },
               { "text": "2", "value": "2" },
               { "text": "3 or more", "value": "3_plus" }
@@ -302,8 +273,11 @@
               { "text": "Occasional or on-call work", "value": "occasionally_employed" },
               { "text": "Self-employed or freelance (full-time)", "value": "self_employed_full_time" },
               { "text": "Self-employed or freelance (part-time)", "value": "self_employed_part_time" },
+              { "text": "Business owner or entrepreneur", "value": "business_owner" },
+              { "text": "Work through an app or platform (e.g. delivery rider, ride-hailing driver)", "value": "platform_work" },
               { "text": "Student (school, university or training)", "value": "student" },
               { "text": "Homemaker", "value": "homemaker" },
+              { "text": "Caring full-time for a family member", "value": "family_carer" },
               { "text": "Retired", "value": "retired" },
               { "text": "Unemployed looking for work", "value": "unemployed_looking" },
               { "text": "Unemployed not looking for work", "value": "unemployed_not_looking" },
@@ -318,7 +292,7 @@
             "question_type": "single_option",
             "required": false,
             "checks_inline": false,
-            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time"] },
+            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time", "business_owner", "platform_work"] },
             "options": [
               { "text": "Yes", "value": "yes" },
               { "text": "Somewhat (within a 1-2 hour window)", "value": "somewhat" },
@@ -334,7 +308,7 @@
             "question_type": "single_option",
             "required": false,
             "checks_inline": false,
-            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time"] },
+            "show_if": { "employment": ["employed_full_time", "employed_part_time", "occasionally_employed", "self_employed_full_time", "self_employed_part_time", "business_owner", "platform_work"] },
             "options": [
               { "text": "Yes (3 days or more in a week)", "value": "yes_3_plus_days" },
               { "text": "Yes, occasionally (1-2 days in a week)", "value": "yes_1_2_days" },
@@ -349,6 +323,7 @@
             "answer_key": "economic_status",
             "question_type": "single_option",
             "required": false,
+            "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
               { "text": "We struggle to cover basic needs", "value": "struggle" },
@@ -365,6 +340,7 @@
             "answer_key": "mobility_limitation",
             "question_type": "single_option",
             "required": false,
+            "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
               { "text": "No, I can move independently", "value": "no" },
@@ -402,9 +378,10 @@
       "#75-84": "75-84",
       "#85 or older": "85 anni o più",
       "#What is your gender?": "Qual è il tuo genere?",
-      "#Male": "Maschio",
-      "#Female": "Femmina",
-      "#What is your highest completed level of education?": "Qual è il tuo titolo di studio più elevato?",
+      "#Man": "Uomo",
+      "#Woman": "Donna",
+      "#Non-binary": "Non binario/a",
+      "#What is your highest completed level of education? If you are still studying, choose the last level you completed; if you studied abroad, choose the closest equivalent.": "Qual è il tuo titolo di studio più elevato tra quelli conseguiti? Se stai ancora studiando, indica l'ultimo titolo conseguito; se hai studiato all'estero, scegli il titolo equivalente più vicino.",
       "#No qualification": "Nessun titolo di studio",
       "#Primary school certificate": "Licenza elementare",
       "#Lower secondary school (middle school)": "Scuola media inferiore",
@@ -456,6 +433,11 @@
       "#Self-employed or freelance (part-time)": "Lavoro autonomo o libero professionista (part-time)",
       "#Student (school, university or training)": "Studente/studentessa (scuola, università o formazione)",
       "#Homemaker": "Casalingo/casalinga",
+      "#Caring full-time for a family member": "Mi occupo a tempo pieno di un familiare",
+      "#Business owner or entrepreneur": "Titolare d'impresa o imprenditore/imprenditrice",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Lavoro tramite app o piattaforma (es. rider per consegne, autista NCC tramite app)",
+      "#None": "Nessuno",
+      "#Prefer not to say": "Preferisco non rispondere",
       "#Retired": "Pensionato/pensionata",
       "#Unemployed looking for work": "Disoccupato/a in cerca di lavoro",
       "#Unemployed not looking for work": "Disoccupato/a non in cerca di lavoro",
@@ -475,19 +457,7 @@
       "#No, I can move independently": "No, mi muovo in modo indipendente",
       "#Yes, I have a temporary condition/limitation": "Sì, ho una condizione/limitazione temporanea",
       "#Yes, I have a permanent mobility condition/limitation": "Sì, ho una condizione/limitazione motoria permanente",
-      "#In which Municipio of Rome do you currently live?": "In quale Municipio di Roma vivi attualmente?",
       "#1": "1",
-      "#5": "5",
-      "#6": "6",
-      "#7": "7",
-      "#8": "8",
-      "#9": "9",
-      "#10": "10",
-      "#11": "11",
-      "#13": "13",
-      "#14": "14",
-      "#15": "15",
-      "#I live outside Rome": "Vivo fuori Roma",
       "#In which neighbourhood of Municipio XII do you currently live?": "In quale quartiere del Municipio XII vivi attualmente?",
       "#BRAVETTA": "BRAVETTA",
       "#CASAL LUMBROSO": "CASAL LUMBROSO",
