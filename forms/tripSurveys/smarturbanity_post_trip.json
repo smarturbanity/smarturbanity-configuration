@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "4.3.0",
+    "questionnaire_version": "4.4.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "trip_phase": "post",
@@ -280,8 +280,8 @@
           },
           {
             "question_id": "avoided_place",
-            "question_version": "2.1.0",
-            "text": "On this trip, did you avoid or go around a place, or use one even though it felt dangerous?",
+            "question_version": "3.0.0",
+            "text": "On this trip, was there a place that felt dangerous to you?",
             "answer_key": "avoided_place",
             "question_type": "single_option",
             "required": false,
@@ -294,6 +294,31 @@
               {
                 "text": "No",
                 "value": "no"
+              }
+            ],
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "question_id": "avoided_place_action",
+            "question_version": "1.0.0",
+            "text": "What did you do?",
+            "answer_key": "avoided_place_action",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": {
+              "avoided_place": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "I avoided it or went around it",
+                "value": "avoided"
+              },
+              {
+                "text": "I went through it anyway",
+                "value": "used_anyway"
               }
             ],
             "privacy_classification": "heightened_personal"
@@ -523,7 +548,10 @@
       "#To stop somewhere on the way": "To stop somewhere on the way",
       "#A navigation app suggested it": "A navigation app suggested it",
       "#Out of habit": "Out of habit",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "On this trip, did you avoid or go around a place, or use one even though it felt dangerous?",
+      "#On this trip, was there a place that felt dangerous to you?": "On this trip, was there a place that felt dangerous to you?",
+      "#What did you do?": "What did you do?",
+      "#I avoided it or went around it": "I avoided it or went around it",
+      "#I went through it anyway": "I went through it anyway",
       "#No": "No",
       "#What was the problem there? (Select all that apply)": "What was the problem there? (Select all that apply)",
       "#Heavy or fast traffic": "Heavy or fast traffic",
@@ -612,7 +640,10 @@
       "#To stop somewhere on the way": "Per fermarmi da qualche parte lungo la strada",
       "#A navigation app suggested it": "Me l'ha suggerito un'app di navigazione",
       "#Out of habit": "Per abitudine",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "Durante questo spostamento hai evitato o aggirato un luogo, oppure ne hai usato uno anche se ti sembrava pericoloso?",
+      "#On this trip, was there a place that felt dangerous to you?": "Durante questo spostamento c'è stato un luogo che ti è sembrato pericoloso?",
+      "#What did you do?": "Cosa hai fatto?",
+      "#I avoided it or went around it": "L'ho evitato o aggirato",
+      "#I went through it anyway": "L'ho attraversato comunque",
       "#No": "No",
       "#What was the problem there? (Select all that apply)": "Qual era il problema? (Puoi sceglierne più di uno)",
       "#Heavy or fast traffic": "Traffico intenso o veloce",
@@ -701,7 +732,10 @@
       "#To stop somewhere on the way": "Pour m'arrêter quelque part en chemin",
       "#A navigation app suggested it": "Une application de navigation me l'a suggéré",
       "#Out of habit": "Par habitude",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "Pendant ce trajet, avez-vous évité ou contourné un endroit, ou en avez-vous utilisé un même s'il vous semblait dangereux ?",
+      "#On this trip, was there a place that felt dangerous to you?": "Pendant ce trajet, y a-t-il eu un endroit qui vous a paru dangereux ?",
+      "#What did you do?": "Qu'avez-vous fait ?",
+      "#I avoided it or went around it": "Je l'ai évité ou contourné",
+      "#I went through it anyway": "Je l'ai traversé quand même",
       "#No": "Non",
       "#What was the problem there? (Select all that apply)": "Quel était le problème à cet endroit ? (Sélectionnez toutes les réponses qui s'appliquent)",
       "#Heavy or fast traffic": "Circulation dense ou rapide",
@@ -790,7 +824,10 @@
       "#To stop somewhere on the way": "Um unterwegs irgendwo anzuhalten",
       "#A navigation app suggested it": "Eine Navigations-App hat sie vorgeschlagen",
       "#Out of habit": "Aus Gewohnheit",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "Haben Sie auf diesem Weg einen Ort gemieden oder umgangen, oder einen benutzt, obwohl er sich gefährlich anfühlte?",
+      "#On this trip, was there a place that felt dangerous to you?": "Gab es auf diesem Weg einen Ort, der Ihnen gefährlich vorkam?",
+      "#What did you do?": "Was haben Sie getan?",
+      "#I avoided it or went around it": "Ich habe ihn gemieden oder umgangen",
+      "#I went through it anyway": "Ich bin trotzdem dort durchgegangen",
       "#No": "Nein",
       "#What was the problem there? (Select all that apply)": "Was war dort das Problem? (Alle zutreffenden auswählen)",
       "#Heavy or fast traffic": "Dichter oder schneller Verkehr",
@@ -879,7 +916,10 @@
       "#To stop somewhere on the way": "Yolda bir yere uğramak için",
       "#A navigation app suggested it": "Bir navigasyon uygulaması önerdi",
       "#Out of habit": "Alışkanlıktan",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "Bu yolculukta bir yerden kaçındınız veya o yerin çevresinden dolaştınız mı, ya da tehlikeli gelmesine rağmen orayı kullandınız mı?",
+      "#On this trip, was there a place that felt dangerous to you?": "Bu yolculukta size tehlikeli gelen bir yer var mıydı?",
+      "#What did you do?": "Ne yaptınız?",
+      "#I avoided it or went around it": "Oradan kaçındım ya da çevresinden dolaştım",
+      "#I went through it anyway": "Yine de oradan geçtim",
       "#No": "Hayır",
       "#What was the problem there? (Select all that apply)": "Orada sorun neydi? (Uygun olanların tümünü seçin)",
       "#Heavy or fast traffic": "Yoğun veya hızlı trafik",
@@ -968,7 +1008,10 @@
       "#To stop somewhere on the way": "برای توقف در جایی در طول مسیر",
       "#A navigation app suggested it": "یک برنامه مسیریاب پیشنهاد داد",
       "#Out of habit": "از روی عادت",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "در این سفر، از مکانی دوری کردید یا آن را دور زدید، یا با وجود احساس خطر از آن استفاده کردید؟",
+      "#On this trip, was there a place that felt dangerous to you?": "در این سفر، جایی بود که به نظرتان خطرناک بیاید؟",
+      "#What did you do?": "چه کار کردید؟",
+      "#I avoided it or went around it": "از آن دوری کردم یا آن را دور زدم",
+      "#I went through it anyway": "با این حال از آن عبور کردم",
       "#No": "خیر",
       "#What was the problem there? (Select all that apply)": "مشکل آنجا چه بود؟ (همه موارد مربوط را انتخاب کنید)",
       "#Heavy or fast traffic": "ترافیک سنگین یا پرسرعت",
@@ -1057,7 +1100,10 @@
       "#To stop somewhere on the way": "Hogy útközben megálljak valahol",
       "#A navigation app suggested it": "Egy navigációs alkalmazás javasolta",
       "#Out of habit": "Megszokásból",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "Ezen az úton elkerült vagy megkerült egy helyet, vagy használt olyat, bár veszélyesnek érezte?",
+      "#On this trip, was there a place that felt dangerous to you?": "Ezen az úton volt olyan hely, amely veszélyesnek tűnt Önnek?",
+      "#What did you do?": "Mit tett?",
+      "#I avoided it or went around it": "Elkerültem vagy megkerültem",
+      "#I went through it anyway": "Mégis áthaladtam rajta",
       "#No": "Nem",
       "#What was the problem there? (Select all that apply)": "Mi volt ott a gond? (Jelölje meg az összes megfelelőt)",
       "#Heavy or fast traffic": "Sűrű vagy gyors forgalom",
@@ -1146,7 +1192,10 @@
       "#To stop somewhere on the way": "للتوقف في مكان ما في الطريق",
       "#A navigation app suggested it": "اقترحه تطبيق ملاحة",
       "#Out of habit": "بحكم العادة",
-      "#On this trip, did you avoid or go around a place, or use one even though it felt dangerous?": "في هذه الرحلة، هل تم تجنب مكان أو الالتفاف حوله، أو استخدام مكان رغم الشعور بالخطر؟",
+      "#On this trip, was there a place that felt dangerous to you?": "في هذه الرحلة، هل بدا لك مكان ما خطيرًا؟",
+      "#What did you do?": "ماذا فعلت؟",
+      "#I avoided it or went around it": "تجنبته أو التففت حوله",
+      "#I went through it anyway": "مررت منه رغم ذلك",
       "#No": "لا",
       "#What was the problem there? (Select all that apply)": "ما المشكلة هناك؟ (يمكن اختيار كل ما ينطبق)",
       "#Heavy or fast traffic": "حركة مرور كثيفة أو سريعة",
