@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "4.0.1",
+    "questionnaire_version": "4.0.2",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "trip_phase": "post",
@@ -30,6 +30,167 @@
         "description": "<p>A few quick questions about the trip you just made.</p>",
         "backgroundColor": "#f0f0f0",
         "questions": [
+          {
+            "question_id": "trip_time_vs_expected",
+            "question_version": "1.0.1",
+            "text": "Compared to what you expected, how long did this trip feel?",
+            "answer_key": "trip_time_vs_expected",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Much shorter than expected",
+                "value": "much_shorter"
+              },
+              {
+                "text": "A little shorter than expected",
+                "value": "shorter"
+              },
+              {
+                "text": "As expected",
+                "value": "as_expected"
+              },
+              {
+                "text": "A little longer than expected",
+                "value": "longer"
+              },
+              {
+                "text": "Much longer than expected",
+                "value": "much_longer"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
+          {
+            "question_id": "trip_effort",
+            "question_version": "1.0.3",
+            "text": "How tiring was this trip?",
+            "answer_key": "trip_effort",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "A lot",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
+          {
+            "question_id": "trip_traffic_safety",
+            "question_version": "1.0.3",
+            "text": "How safe from traffic did you feel on this trip?",
+            "answer_key": "trip_traffic_safety",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all safe",
+                "value": "not_safe"
+              },
+              {
+                "text": "Slightly safe",
+                "value": "slightly_safe"
+              },
+              {
+                "text": "Moderately safe",
+                "value": "moderately_safe"
+              },
+              {
+                "text": "Very safe",
+                "value": "very_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "completely_safe"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
+          {
+            "question_id": "trip_personal_security",
+            "question_version": "1.0.4",
+            "text": "How safe did you feel from other people (e.g. theft, harassment)?",
+            "answer_key": "trip_personal_security",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "add_prefer_not_to_say": true,
+            "options": [
+              {
+                "text": "Not at all safe",
+                "value": "not_safe"
+              },
+              {
+                "text": "Slightly safe",
+                "value": "slightly_safe"
+              },
+              {
+                "text": "Moderately safe",
+                "value": "moderately_safe"
+              },
+              {
+                "text": "Very safe",
+                "value": "very_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "completely_safe"
+              }
+            ],
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "question_id": "trip_rating",
+            "question_version": "1.0.1",
+            "text": "How would you rate this trip overall?",
+            "answer_key": "trip_rating",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": true,
+            "options": [
+              {
+                "text": "1 – Very poor",
+                "value": "1"
+              },
+              {
+                "text": "2",
+                "value": "2"
+              },
+              {
+                "text": "3",
+                "value": "3"
+              },
+              {
+                "text": "4",
+                "value": "4"
+              },
+              {
+                "text": "5 – Excellent",
+                "value": "5"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
           {
             "question_id": "route_familiarity",
             "question_version": "1.0.2",
@@ -196,135 +357,6 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "question_id": "trip_time_vs_expected",
-            "question_version": "1.0.1",
-            "text": "Compared to what you expected, how long did this trip feel?",
-            "answer_key": "trip_time_vs_expected",
-            "question_type": "single_option",
-            "required": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Much shorter than expected",
-                "value": "much_shorter"
-              },
-              {
-                "text": "A little shorter than expected",
-                "value": "shorter"
-              },
-              {
-                "text": "As expected",
-                "value": "as_expected"
-              },
-              {
-                "text": "A little longer than expected",
-                "value": "longer"
-              },
-              {
-                "text": "Much longer than expected",
-                "value": "much_longer"
-              }
-            ],
-            "privacy_classification": "personal_data"
-          },
-          {
-            "question_id": "trip_effort",
-            "question_version": "1.0.3",
-            "text": "How tiring was this trip?",
-            "answer_key": "trip_effort",
-            "question_type": "single_option",
-            "required": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Not at all",
-                "value": "not_at_all"
-              },
-              {
-                "text": "Slightly",
-                "value": "slightly"
-              },
-              {
-                "text": "Moderately",
-                "value": "moderately"
-              },
-              {
-                "text": "A lot",
-                "value": "very"
-              },
-              {
-                "text": "Extremely",
-                "value": "extremely"
-              }
-            ],
-            "privacy_classification": "personal_data"
-          },
-          {
-            "question_id": "trip_traffic_safety",
-            "question_version": "1.0.3",
-            "text": "How safe from traffic did you feel on this trip?",
-            "answer_key": "trip_traffic_safety",
-            "question_type": "single_option",
-            "required": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Not at all safe",
-                "value": "not_safe"
-              },
-              {
-                "text": "Slightly safe",
-                "value": "slightly_safe"
-              },
-              {
-                "text": "Moderately safe",
-                "value": "moderately_safe"
-              },
-              {
-                "text": "Very safe",
-                "value": "very_safe"
-              },
-              {
-                "text": "Completely safe",
-                "value": "completely_safe"
-              }
-            ],
-            "privacy_classification": "personal_data"
-          },
-          {
-            "question_id": "trip_personal_security",
-            "question_version": "1.0.4",
-            "text": "How safe did you feel from other people (e.g. theft, harassment)?",
-            "answer_key": "trip_personal_security",
-            "question_type": "single_option",
-            "required": true,
-            "checks_inline": false,
-            "add_prefer_not_to_say": true,
-            "options": [
-              {
-                "text": "Not at all safe",
-                "value": "not_safe"
-              },
-              {
-                "text": "Slightly safe",
-                "value": "slightly_safe"
-              },
-              {
-                "text": "Moderately safe",
-                "value": "moderately_safe"
-              },
-              {
-                "text": "Very safe",
-                "value": "very_safe"
-              },
-              {
-                "text": "Completely safe",
-                "value": "completely_safe"
-              }
-            ],
-            "privacy_classification": "heightened_personal"
-          },
-          {
             "question_id": "trip_incidents",
             "question_version": "1.0.4",
             "text": "Did any of these happen on this trip? (Select all that apply)",
@@ -407,38 +439,6 @@
             ],
             "privacy_classification": "personal_data",
             "max_answers": 2
-          },
-          {
-            "question_id": "trip_rating",
-            "question_version": "1.0.1",
-            "text": "How would you rate this trip overall?",
-            "answer_key": "trip_rating",
-            "question_type": "single_option",
-            "required": true,
-            "checks_inline": true,
-            "options": [
-              {
-                "text": "1 – Very poor",
-                "value": "1"
-              },
-              {
-                "text": "2",
-                "value": "2"
-              },
-              {
-                "text": "3",
-                "value": "3"
-              },
-              {
-                "text": "4",
-                "value": "4"
-              },
-              {
-                "text": "5 – Excellent",
-                "value": "5"
-              }
-            ],
-            "privacy_classification": "personal_data"
           },
           {
             "question_id": "trip_comment",
