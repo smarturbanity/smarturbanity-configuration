@@ -56,7 +56,7 @@
           },
           {
             "question_id": "route_reasons",
-            "question_version": "1.0.2",
+            "question_version": "1.0.3",
             "text": "Why did you choose this route? (Up to 2)",
             "answer_key": "route_reasons",
             "question_type": "multiple_options",
@@ -102,6 +102,10 @@
                 "value": "stop_on_way"
               },
               {
+                "text": "My usual route was closed or diverted (e.g. roadworks)",
+                "value": "detour"
+              },
+              {
                 "text": "A navigation app suggested it",
                 "value": "app"
               },
@@ -134,7 +138,7 @@
           },
           {
             "question_id": "avoided_reasons",
-            "question_version": "1.0.3",
+            "question_version": "1.0.4",
             "text": "Why did you avoid it? (Select all that apply. You can then mark it on the map.)",
             "answer_key": "avoided_reasons",
             "question_type": "multiple_options",
@@ -157,12 +161,20 @@
                 "value": "dangerous_crossing"
               },
               {
+                "text": "The pedestrian light was too short",
+                "value": "short_light"
+              },
+              {
                 "text": "Bad pavement or road surface",
                 "value": "bad_surface"
               },
               {
                 "text": "Obstacles or roadworks",
                 "value": "obstacles"
+              },
+              {
+                "text": "Cars parked on the pavement",
+                "value": "parked_cars"
               },
               {
                 "text": "Too dark",
@@ -314,7 +326,7 @@
           },
           {
             "question_id": "trip_incidents",
-            "question_version": "1.0.3",
+            "question_version": "1.0.4",
             "text": "Did any of these happen on this trip? (Select all that apply)",
             "answer_key": "trip_incidents",
             "question_type": "multiple_options",
@@ -329,6 +341,10 @@
               {
                 "text": "I was nearly hit by a car, van, bus or motorbike",
                 "value": "near_miss_vehicle"
+              },
+              {
+                "text": "A vehicle passed too close to me",
+                "value": "close_pass"
               },
               {
                 "text": "A close call with a bike or e-scooter",
@@ -347,7 +363,7 @@
           },
           {
             "question_id": "trip_feeling",
-            "question_version": "1.0.3",
+            "question_version": "1.0.4",
             "text": "How did you feel emotionally after this trip? (Up to 2)",
             "answer_key": "trip_feeling",
             "question_type": "multiple_options",
@@ -371,6 +387,10 @@
               {
                 "text": "Neutral",
                 "value": "neutral"
+              },
+              {
+                "text": "Tired",
+                "value": "tired"
               },
               {
                 "text": "Stressed",
@@ -516,7 +536,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Excellent",
       "#Anything else you want to tell us about this trip? (Optional)": "Anything else you want to tell us about this trip? (Optional)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>",
+      "#The pedestrian light was too short": "The pedestrian light was too short",
+      "#Cars parked on the pavement": "Cars parked on the pavement",
+      "#My usual route was closed or diverted (e.g. roadworks)": "My usual route was closed or diverted (e.g. roadworks)",
+      "#A vehicle passed too close to me": "A vehicle passed too close to me",
+      "#Tired": "Tired"
     },
     "it": {
       "code": "it",
@@ -594,7 +619,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Ottimo",
       "#Anything else you want to tell us about this trip? (Optional)": "Vuoi dirci altro su questo spostamento? (Facoltativo)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Uno o due minuti, e solo due risposte sono obbligatorie: le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Uno o due minuti, e solo due risposte sono obbligatorie: le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p>",
+      "#The pedestrian light was too short": "Il semaforo pedonale era troppo breve",
+      "#Cars parked on the pavement": "Auto parcheggiate sul marciapiede",
+      "#My usual route was closed or diverted (e.g. roadworks)": "Il mio solito percorso era chiuso o deviato (ad es. lavori)",
+      "#A vehicle passed too close to me": "Un veicolo mi è passato troppo vicino",
+      "#Tired": "Stanco/a"
     },
     "fr": {
       "code": "fr",
@@ -672,7 +702,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Excellent",
       "#Anything else you want to tell us about this trip? (Optional)": "Voulez-vous nous dire autre chose sur ce trajet ? (Facultatif)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Une ou deux minutes, et seules deux réponses sont obligatoires : vos réponses nous aident à comprendre comment le trajet s'est vraiment passé.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Une ou deux minutes, et seules deux réponses sont obligatoires : vos réponses nous aident à comprendre comment le trajet s'est vraiment passé.</p>",
+      "#The pedestrian light was too short": "Le feu piéton était trop court",
+      "#Cars parked on the pavement": "Voitures garées sur le trottoir",
+      "#My usual route was closed or diverted (e.g. roadworks)": "Mon trajet habituel était fermé ou dévié (par ex. travaux)",
+      "#A vehicle passed too close to me": "Un véhicule est passé trop près de moi",
+      "#Tired": "Fatigué/e"
     },
     "de": {
       "code": "de",
@@ -750,7 +785,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Ausgezeichnet",
       "#Anything else you want to tell us about this trip? (Optional)": "Möchten Sie uns noch etwas zu diesem Weg mitteilen? (Optional)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Ein bis zwei Minuten, nur zwei Antworten sind Pflicht: Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Ein bis zwei Minuten, nur zwei Antworten sind Pflicht: Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p>",
+      "#The pedestrian light was too short": "Die Fußgängerampel war zu kurz grün",
+      "#Cars parked on the pavement": "Auf dem Gehweg parkende Autos",
+      "#My usual route was closed or diverted (e.g. roadworks)": "Mein üblicher Weg war gesperrt oder umgeleitet (z. B. Baustelle)",
+      "#A vehicle passed too close to me": "Ein Fahrzeug ist zu nah an mir vorbeigefahren",
+      "#Tired": "Müde"
     },
     "tr": {
       "code": "tr",
@@ -828,7 +868,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Mükemmel",
       "#Anything else you want to tell us about this trip? (Optional)": "Bu yolculukla ilgili bize söylemek istediğiniz başka bir şey var mı? (İsteğe bağlı)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Bir iki dakika, yalnızca iki yanıt zorunlu: yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Bir iki dakika, yalnızca iki yanıt zorunlu: yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p>",
+      "#The pedestrian light was too short": "Yaya ışığı çok kısaydı",
+      "#Cars parked on the pavement": "Kaldırıma park edilmiş arabalar",
+      "#My usual route was closed or diverted (e.g. roadworks)": "Her zamanki yolum kapalıydı veya yönlendirilmişti (ör. yol çalışması)",
+      "#A vehicle passed too close to me": "Bir araç çok yakınımdan geçti",
+      "#Tired": "Yorgun"
     },
     "fa": {
       "code": "fa",
@@ -906,7 +951,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – عالی",
       "#Anything else you want to tell us about this trip? (Optional)": "چیز دیگری درباره این سفر می‌خواهید به ما بگویید؟ (اختیاری)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>یک یا دو دقیقه، و فقط دو پاسخ الزامی است: پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>یک یا دو دقیقه، و فقط دو پاسخ الزامی است: پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p>",
+      "#The pedestrian light was too short": "چراغ عابر پیاده خیلی کوتاه بود",
+      "#Cars parked on the pavement": "خودروهای پارک‌شده روی پیاده‌رو",
+      "#My usual route was closed or diverted (e.g. roadworks)": "مسیر همیشگی‌ام بسته بود یا تغییر کرده بود (مثلاً به‌خاطر کارهای عمرانی)",
+      "#A vehicle passed too close to me": "یک وسیلهٔ نقلیه خیلی نزدیک از کنارم رد شد",
+      "#Tired": "خسته"
     },
     "hu": {
       "code": "hu",
@@ -984,7 +1034,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – Kiváló",
       "#Anything else you want to tell us about this trip? (Optional)": "Szeretne még valamit elmondani erről az útról? (Nem kötelező)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Egy-két perc, és csak két válasz kötelező: válaszai segítenek megérteni, hogyan zajlott valójában az út.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>Egy-két perc, és csak két válasz kötelező: válaszai segítenek megérteni, hogyan zajlott valójában az út.</p>",
+      "#The pedestrian light was too short": "A gyalogos lámpa túl rövid ideig volt zöld",
+      "#Cars parked on the pavement": "Járdán parkoló autók",
+      "#My usual route was closed or diverted (e.g. roadworks)": "A szokásos útvonalam le volt zárva vagy el volt terelve (pl. útépítés)",
+      "#A vehicle passed too close to me": "Egy jármű túl közel haladt el mellettem",
+      "#Tired": "Fáradt"
     },
     "ar": {
       "code": "ar",
@@ -1062,7 +1117,12 @@
       "#4": "4",
       "#5 – Excellent": "5 – ممتاز",
       "#Anything else you want to tell us about this trip? (Optional)": "هل تريد أن تخبرنا بأي شيء آخر عن هذه الرحلة؟ (اختياري)",
-      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>دقيقة أو دقيقتان، وإجابتان فقط إلزاميتان: تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p>"
+      "#<p>One or two minutes, and only two answers are required: your answers help us understand how the trip really went.</p>": "<p>دقيقة أو دقيقتان، وإجابتان فقط إلزاميتان: تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p>",
+      "#The pedestrian light was too short": "كانت إشارة المشاة قصيرة جدًا",
+      "#Cars parked on the pavement": "سيارات متوقفة على الرصيف",
+      "#My usual route was closed or diverted (e.g. roadworks)": "كان طريقي المعتاد مغلقًا أو محوّلًا (مثل أشغال الطرق)",
+      "#A vehicle passed too close to me": "مرّت مركبة قريبة جدًا مني",
+      "#Tired": "متعبًا/متعبةً"
     }
   },
   "id": "smarturbanity_post_trip",
