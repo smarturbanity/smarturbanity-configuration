@@ -1,0 +1,391 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity — W1·1 — Your Profile",
+    "questionnaire_id": "smarturbanity_your_profile",
+    "questionnaire_version": "1.5.0",
+    "project": "SmartUrbanity",
+    "wave": "Wave 1 — Core Survey",
+    "module": "W1·1 — Your Profile",
+    "options": {
+      "review_mode": false,
+      "save_user_id": true,
+      "ask_consent": false,
+      "ask_adult": false
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "W1·1 — Your Profile",
+      "description": "<p>Wave 1 — Core Survey — W1·1 — Your Profile</p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your answers have been saved.</p>"
+    },
+    "title": "W1·1 — Your Profile",
+    "sections": [
+      {
+        "title": "About You",
+        "backgroundColor": "#f0f0f0",
+        "description": "",
+        "questions": [
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "What is your age group?",
+            "answer_key": "age_group",
+            "question_type": "single_option",
+            "required": false,
+            "add_prefer_not_to_say": true,
+            "checks_inline": false,
+            "options": [
+              { "text": "18-24", "value": "18_24" },
+              { "text": "25-34", "value": "25_34" },
+              { "text": "35-44", "value": "35_44" },
+              { "text": "45-54", "value": "45_54" },
+              { "text": "55-64", "value": "55_64" },
+              { "text": "65-74", "value": "65_74" },
+              { "text": "75-84", "value": "75_84" },
+              { "text": "85 or older", "value": "85_or_older" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "What is your gender?",
+            "answer_key": "gender",
+            "question_type": "single_option",
+            "required": false,
+            "add_prefer_not_to_say": true,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              { "text": "Male", "value": "male" },
+              { "text": "Female", "value": "female" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "What is your highest completed level of education?",
+            "answer_key": "education",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "No qualification", "value": "none" },
+              { "text": "Primary school certificate", "value": "primary" },
+              { "text": "Lower secondary school (middle school)", "value": "lower_secondary" },
+              { "text": "Vocational qualification (2-3 year course)", "value": "vocational" },
+              { "text": "Upper secondary school (high school diploma)", "value": "upper_secondary" },
+              { "text": "Bachelor degree or equivalent", "value": "bachelor" },
+              { "text": "Master degree or equivalent", "value": "master" },
+              { "text": "Doctorate degree", "value": "doctorate" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Which of the following best describes your relationship to Municipio XII?",
+            "answer_key": "residence",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "I live here (even without official registered residence)", "value": "live" },
+              { "text": "I travel here regularly for work or study (Commuter)", "value": "travel" },
+              { "text": "I come here regularly for services, healthcare or to accompany someone", "value": "services" },
+              { "text": "I'm visiting for leisure (Tourist)", "value": "visit" },
+              { "text": "I'm here temporarily for another reason (Visitor)", "value": "reason" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How strongly do you feel connected to the people in your neighbourhood?",
+            "answer_key": "community_attachment_v1",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "Not connected", "value": "not_connected" },
+              { "text": "Somewhat disconnected", "value": "somewhat_disconnected" },
+              { "text": "Neither connected nor disconnected", "value": "neither_connected_nor_disconnected" },
+              { "text": "Somewhat connected", "value": "somewhat_connected" },
+              { "text": "Very connected", "value": "very_connected" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How strongly do you feel connected to the neighbourhood where you live?",
+            "answer_key": "place_attachment",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "residence": {
+                "not": "live"
+              }
+            },
+            "checks_inline": false,
+            "options": [
+              { "text": "Not connected", "value": "not_connected" },
+              { "text": "Somewhat disconnected", "value": "somewhat_disconnected" },
+              { "text": "Neither connected nor disconnected", "value": "neither_connected_nor_disconnected" },
+              { "text": "Somewhat connected", "value": "somewhat_connected" },
+              { "text": "Very connected", "value": "very_connected" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How many adults (aged 18 or older), including yourself, live in your home?",
+            "answer_key": "household_adults",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "1 (only myself)", "value": "1" },
+              { "text": "2", "value": "2" },
+              { "text": "3", "value": "3" },
+              { "text": "4", "value": "4" },
+              { "text": "5 or more", "value": "5_plus" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How many children (aged under 18) live in your home?",
+            "answer_key": "household_children_under_18",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "0", "value": "0" },
+              { "text": "1", "value": "1" },
+              { "text": "2", "value": "2" },
+              { "text": "3 or more", "value": "3_plus" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.",
+            "answer_key": "carer",
+            "question_type": "multiple_options",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)", "value": "escorts_minors_daily" },
+              { "text": "Yes, I accompany children or teenagers at least once a week", "value": "escorts_minors_weekly" },
+              { "text": "Yes, I help an adult who lives with me (e.g. an older relative or a person with disabilities)", "value": "yes_lives_with_me" },
+              { "text": "Yes, I help an adult who does not live with me", "value": "yes_lives_elsewhere" },
+              { "text": "No", "value": "no", "exclusive": true }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Which of the following vehicles are available in your household? ",
+            "answer_key": "hh_vehicles",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              { "text": "Car", "value": "car" },
+              { "text": "Car adapted for a person with disability", "value": "adapted_car" },
+              { "text": "Motorcycle, scooter or moped", "value": "motorcycle" },
+              { "text": "Bicycle/e-bike", "value": "bicycle_e_bike" },
+              { "text": "E-scooter", "value": "e_scooter" },
+              { "text": "Powered wheelchair or mobility scooter", "value": "powered_wheelchair" },
+              { "text": "No vehicle available", "value": "no_vehicle_available", "exclusive": true }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you hold a valid driving license? (Car, motorcycle or both)",
+            "answer_key": "driving_licence",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "Yes", "value": "yes" },
+              { "text": "Yes, but I do not drive", "value": "yes_no_longer_drives" },
+              { "text": "No", "value": "no" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.",
+            "answer_key": "employment",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              { "text": "Employed full-time", "value": "employed_full_time" },
+              { "text": "Employed part-time", "value": "employed_part_time" },
+              { "text": "Occasional or on-call work", "value": "occasionally_employed" },
+              { "text": "Self-employed or freelance (full-time)", "value": "self_employed_freelance_full_time" },
+              { "text": "Self-employed or freelance (part-time)", "value": "self_employed_freelance_part_time" },
+              { "text": "Student (school, university or training)", "value": "student" },
+              { "text": "Homemaker", "value": "homemaker" },
+              { "text": "Retired", "value": "retired" },
+              { "text": "Unemployed looking for work", "value": "unemployed_looking_for_work" },
+              { "text": "Unemployed not looking for work", "value": "unemployed_not_looking_for_work" },
+              { "text": "Not working because of health problems or disability", "value": "unable_to_work_health" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
+            "answer_key": "flexible_hours",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "Yes", "value": "yes" },
+              { "text": "Somewhat (within a 1-2 hour window)", "value": "somewhat_within_a_1_2_hour_window" },
+              { "text": "No", "value": "no" },
+              { "text": "I am not currently employed", "value": "i_am_not_currently_employed" }
+            ]
+          },
+
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Thinking about the income of everyone who lives with you, which of these best describes your household's economic situation?",
+            "answer_key": "economic_status",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "We struggle to cover basic needs", "value": "struggle" },
+              { "text": "We can cover basic needs", "value": "basic" },
+              { "text": "We can cover basic needs comfortably and have little money left over", "value": "comfortable_basic" },
+              { "text": "We can afford most things we want with occasional extra expenses", "value": "most_things" },
+              { "text": "We are financially very comfortable and can easily afford extra expenses", "value": "very_comfortable" }
+            ]
+          },
+
+          {
+            "privacy_classification": "special_category_health",
+            "text": "Do you have a health condition or limitation, even a mild one, that makes getting around more difficult for you, even if you move independently?",
+            "answer_key": "mobility_limitation",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              { "text": "No, I can move independently", "value": "no_i_can_move_independently" },
+              { "text": "Yes, I have a temporary condition/limitation", "value": "yes_i_have_a_temporary_condition_limitat" },
+              { "text": "Yes, I have a permanent mobility condition/limitation", "value": "yes_i_have_a_permanent_mobility_conditio" }
+            ]
+          }
+
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "code": "en"
+    },
+    "it": {
+      "code": "it",
+      "#W1·1 — Your Profile": "W1·1 — Il tuo profilo",
+      "#Wave 1 — Core Survey — W1·1 — Your Profile": "Onda 1 — Indagine principale — W1·1 — Il tuo profilo",
+      "#Thank you!": "Grazie!",
+      "#Your answers have been saved.": "Le tue risposte sono state salvate.",
+      "#About You": "Su di te",
+      "#What is your age group?": "Qual è la tua fascia d'età?",
+      "#18-24": "18-24",
+      "#25-34": "25-34",
+      "#35-44": "35-44",
+      "#45-54": "45-54",
+      "#55-64": "55-64",
+      "#65-74": "65-74",
+      "#75-84": "75-84",
+      "#85 or older": "85 anni o più",
+      "#What is your gender?": "Qual è il tuo genere?",
+      "#Male": "Maschio",
+      "#Female": "Femmina",
+      "#What is your highest completed level of education?": "Qual è il tuo titolo di studio più elevato?",
+      "#No qualification": "Nessun titolo di studio",
+      "#Primary school certificate": "Licenza elementare",
+      "#Lower secondary school (middle school)": "Scuola media inferiore",
+      "#Vocational qualification (2-3 year course)": "Qualifica professionale (corso di 2-3 anni)",
+      "#Upper secondary school (high school diploma)": "Scuola media superiore (diploma)",
+      "#Bachelor degree or equivalent": "Laurea triennale o equivalente",
+      "#Master degree or equivalent": "Laurea magistrale o equivalente",
+      "#Doctorate degree": "Dottorato di ricerca",
+      "#Which of the following best describes your relationship to Municipio XII?": "Quale delle seguenti descrive meglio il tuo rapporto con il Municipio XII?",
+      "#I live here (even without official registered residence)": "Ci vivo (anche senza residenza ufficialmente registrata)",
+      "#I travel here regularly for work or study (Commuter)": "Ci vengo regolarmente per lavoro o studio (pendolare)",
+      "#I come here regularly for services, healthcare or to accompany someone": "Ci vengo regolarmente per servizi, assistenza sanitaria o per accompagnare qualcuno",
+      "#I'm visiting for leisure (Tourist)": "Sono qui per turismo (turista)",
+      "#I'm here temporarily for another reason (Visitor)": "Sono qui temporaneamente per un altro motivo (visitatore)",
+      "#How strongly do you feel connected to the people in your neighbourhood?": "Quanto ti senti legato/a alle persone del tuo quartiere?",
+      "#Not connected": "Non connesso/a",
+      "#Somewhat disconnected": "Abbastanza disconnesso/a",
+      "#Neither connected nor disconnected": "Né connesso/a né disconnesso/a",
+      "#Somewhat connected": "Abbastanza connesso/a",
+      "#Very connected": "Molto connesso/a",
+      "#How strongly do you feel connected to the neighbourhood where you live?": "Quanto ti senti legato/a al quartiere in cui vivi?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Quanti adulti (di 18 anni o più), incluso/a te, vivono nella tua casa?",
+      "#1 (only myself)": "1 (solo io)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 o più",
+      "#How many children (aged under 18) live in your home?": "Quanti bambini (di età inferiore ai 18 anni) vivono nella tua casa?",
+      "#3 or more": "3 o più",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Accompagni o assisti regolarmente qualcuno che ha bisogno del tuo aiuto per spostarsi o nella vita quotidiana? Puoi scegliere più di una risposta.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Sì, accompagno bambini o adolescenti quasi ogni giorno (es. a scuola, sport o altre attività)",
+      "#Yes, I accompany children or teenagers at least once a week": "Sì, accompagno bambini o adolescenti almeno una volta alla settimana",
+      "#Yes, I help an adult who lives with me (e.g. an older relative or a person with disabilities)": "Sì, aiuto un adulto che vive con me (es. un parente anziano o una persona con disabilità)",
+      "#Yes, I help an adult who does not live with me": "Sì, aiuto un adulto che non vive con me",
+      "#Which of the following vehicles are available in your household? ": "Quali dei seguenti veicoli sono disponibili nel tuo nucleo familiare?",
+      "#Car": "Auto",
+      "#Car adapted for a person with disability": "Auto adattata per una persona con disabilità",
+      "#Motorcycle, scooter or moped": "Moto, scooter o ciclomotore",
+      "#Bicycle/e-bike": "Bicicletta/e-bike",
+      "#E-scooter": "Monopattino elettrico",
+      "#Powered wheelchair or mobility scooter": "Sedia a rotelle motorizzata o scooter per la mobilità",
+      "#No vehicle available": "Nessun veicolo disponibile",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Sei in possesso di una patente di guida valida? (Auto, moto o entrambe)",
+      "#Yes, but I do not drive": "Sì, ma non guido",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Quale di queste descrive meglio la tua attuale situazione lavorativa o di studio? Se studi e lavori, puoi scegliere due risposte.",
+      "#Employed full-time": "Lavoratore/lavoratrice a tempo pieno",
+      "#Employed part-time": "Lavoratore/lavoratrice a tempo parziale",
+      "#Occasional or on-call work": "Lavoro occasionale o a chiamata",
+      "#Self-employed or freelance (full-time)": "Lavoro autonomo o libero professionista (tempo pieno)",
+      "#Self-employed or freelance (part-time)": "Lavoro autonomo o libero professionista (part-time)",
+      "#Student (school, university or training)": "Studente/studentessa (scuola, università o formazione)",
+      "#Homemaker": "Casalingo/casalinga",
+      "#Retired": "Pensionato/pensionata",
+      "#Unemployed looking for work": "Disoccupato/a in cerca di lavoro",
+      "#Unemployed not looking for work": "Disoccupato/a non in cerca di lavoro",
+      "#Not working because of health problems or disability": "Non lavora a causa di problemi di salute o disabilità",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Hai orari di lavoro flessibili (la possibilità di scegliere o modificare l'orario di inizio e fine)?",
+      "#Yes": "Sì",
+      "#Somewhat (within a 1-2 hour window)": "In parte (entro una finestra di 1-2 ore)",
+      "#No": "No",
+      "#I am not currently employed": "Al momento non sono occupato/a",
+      "#Thinking about the income of everyone who lives with you, which of these best describes your household's economic situation?": "Pensando al reddito di tutte le persone che vivono con te, quale di queste descrive meglio la situazione economica del tuo nucleo familiare?",
+      "#We struggle to cover basic needs": "Facciamo fatica a coprire i bisogni di base",
+      "#We can cover basic needs": "Riusciamo a coprire i bisogni di base",
+      "#We can cover basic needs comfortably and have little money left over": "Riusciamo a coprire i bisogni di base comodamente e abbiamo poco denaro in più",
+      "#We can afford most things we want with occasional extra expenses": "Possiamo permetterci la maggior parte delle cose che vogliamo con spese extra occasionali",
+      "#We are financially very comfortable and can easily afford extra expenses": "Siamo finanziariamente molto agiati e possiamo facilmente permetterci spese extra",
+      "#Do you have a health condition or limitation, even a mild one, that makes getting around more difficult for you, even if you move independently?": "Hai una condizione di salute o una limitazione, anche lieve, che rende più difficile i tuoi spostamenti, anche se ti muovi in modo indipendente?",
+      "#No, I can move independently": "No, mi muovo in modo indipendente",
+      "#Yes, I have a temporary condition/limitation": "Sì, ho una condizione/limitazione temporanea",
+      "#Yes, I have a permanent mobility condition/limitation": "Sì, ho una condizione/limitazione motoria permanente"
+    }
+  },
+  "id": "smarturbanity_your_profile",
+  "db_set": "questionnaires",
+  "default_language": "en"
+}
