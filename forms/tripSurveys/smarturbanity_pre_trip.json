@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "4.0.0",
+    "questionnaire_version": "4.0.1",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "trip_phase": "pre",
@@ -144,6 +144,30 @@
             "privacy_classification": "personal_data"
           },
           {
+            "question_id": "trip_planned_stops",
+            "question_version": "1.0.0",
+            "text": "Do you plan to stop somewhere on the way? (e.g. a shop or a café)",
+            "answer_key": "trip_planned_stops",
+            "question_type": "single_option",
+            "required": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No, I'm going straight there",
+                "value": "no"
+              },
+              {
+                "text": "Yes, one stop",
+                "value": "one"
+              },
+              {
+                "text": "Yes, more than one stop",
+                "value": "several"
+              }
+            ],
+            "privacy_classification": "personal_data"
+          },
+          {
             "question_id": "trip_company",
             "question_version": "1.0.1",
             "text": "Who or what are you travelling with? (Select all that apply)",
@@ -235,7 +259,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, private hire or app-based car service (e.g. Uber, FreeNow)",
       "#With children on foot": "With children on foot",
       "#With children in a pushchair or pram": "With children in a pushchair or pram",
-      "#With someone I need to care for": "With someone I need to care for"
+      "#With someone I need to care for": "With someone I need to care for",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Do you plan to stop somewhere on the way? (e.g. a shop or a café)",
+      "#No, I'm going straight there": "No, I'm going straight there",
+      "#Yes, one stop": "Yes, one stop",
+      "#Yes, more than one stop": "Yes, more than one stop"
     },
     "it": {
       "code": "it",
@@ -278,7 +306,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi o NCC (ad es. Uber, FreeNow)",
       "#With children on foot": "Con bambini e bambine che camminano",
       "#With children in a pushchair or pram": "Con bambini e bambine nel passeggino",
-      "#With someone I need to care for": "Con una persona di cui mi devo prendere cura"
+      "#With someone I need to care for": "Con una persona di cui mi devo prendere cura",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Pensi di fare delle soste lungo il tragitto? (ad es. un negozio o un bar)",
+      "#No, I'm going straight there": "No, vado direttamente",
+      "#Yes, one stop": "Sì, una sosta",
+      "#Yes, more than one stop": "Sì, più di una sosta"
     },
     "fr": {
       "code": "fr",
@@ -321,7 +353,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi ou VTC (p. ex. Uber, FreeNow)",
       "#With children on foot": "Avec des enfants qui marchent",
       "#With children in a pushchair or pram": "Avec des enfants en poussette",
-      "#With someone I need to care for": "Avec une personne dont je dois m'occuper"
+      "#With someone I need to care for": "Avec une personne dont je dois m'occuper",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Prévoyez-vous de vous arrêter quelque part en chemin ? (par ex. un magasin ou un café)",
+      "#No, I'm going straight there": "Non, j'y vais directement",
+      "#Yes, one stop": "Oui, un arrêt",
+      "#Yes, more than one stop": "Oui, plusieurs arrêts"
     },
     "de": {
       "code": "de",
@@ -364,7 +400,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, Mietwagen mit Fahrer oder Fahrdienst per App (z. B. Uber, FreeNow)",
       "#With children on foot": "Mit Kindern, die zu Fuß gehen",
       "#With children in a pushchair or pram": "Mit Kindern im Kinderwagen",
-      "#With someone I need to care for": "Mit einer Person, die ich betreuen muss"
+      "#With someone I need to care for": "Mit einer Person, die ich betreuen muss",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Planen Sie unterwegs einen Zwischenstopp? (z. B. ein Geschäft oder ein Café)",
+      "#No, I'm going straight there": "Nein, direkt zum Ziel",
+      "#Yes, one stop": "Ja, einen Zwischenstopp",
+      "#Yes, more than one stop": "Ja, mehrere Zwischenstopps"
     },
     "tr": {
       "code": "tr",
@@ -407,7 +447,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taksi, şoförlü araç veya uygulama üzerinden araç (örn. Uber, FreeNow)",
       "#With children on foot": "Yürüyen çocuklarla",
       "#With children in a pushchair or pram": "Bebek arabasındaki çocuklarla",
-      "#With someone I need to care for": "Bakmam gereken biriyle"
+      "#With someone I need to care for": "Bakmam gereken biriyle",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Yolda bir yerde durmayı planlıyor musunuz? (ör. bir dükkân veya kafe)",
+      "#No, I'm going straight there": "Hayır, doğrudan gideceğim",
+      "#Yes, one stop": "Evet, bir mola",
+      "#Yes, more than one stop": "Evet, birden fazla mola"
     },
     "fa": {
       "code": "fa",
@@ -450,7 +494,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "تاکسی، تاکسی اینترنتی یا خودروی دربستی با راننده (مثلاً Uber، FreeNow)",
       "#With children on foot": "با کودکانی که پیاده راه می‌روند",
       "#With children in a pushchair or pram": "با کودک در کالسکه",
-      "#With someone I need to care for": "با فردی که باید از او مراقبت کنم"
+      "#With someone I need to care for": "با فردی که باید از او مراقبت کنم",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "آیا قصد دارید در مسیر جایی توقف کنید؟ (مثلاً یک مغازه یا کافه)",
+      "#No, I'm going straight there": "نه، مستقیم می‌روم",
+      "#Yes, one stop": "بله، یک توقف",
+      "#Yes, more than one stop": "بله، بیش از یک توقف"
     },
     "hu": {
       "code": "hu",
@@ -493,7 +541,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, sofőrös bérautó vagy alkalmazáson rendelt fuvar (pl. Uber, FreeNow)",
       "#With children on foot": "Gyalogló gyerekekkel",
       "#With children in a pushchair or pram": "Babakocsiban ülő gyerekkel",
-      "#With someone I need to care for": "Egy személlyel, akiről gondoskodnom kell"
+      "#With someone I need to care for": "Egy személlyel, akiről gondoskodnom kell",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Tervez útközben megállni valahol? (pl. egy boltban vagy kávézóban)",
+      "#No, I'm going straight there": "Nem, egyenesen odamegyek",
+      "#Yes, one stop": "Igen, egyszer megállok",
+      "#Yes, more than one stop": "Igen, többször megállok"
     },
     "ar": {
       "code": "ar",
@@ -536,7 +588,11 @@
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "تاكسي أو سيارة خاصة بسائق أو خدمة نقل عبر التطبيقات (مثل Uber وFreeNow)",
       "#With children on foot": "مع أطفال يمشون",
       "#With children in a pushchair or pram": "مع أطفال في عربة الأطفال",
-      "#With someone I need to care for": "مع شخص عليّ رعايته"
+      "#With someone I need to care for": "مع شخص عليّ رعايته",
+      "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "هل تخطط للتوقف في مكان ما في الطريق؟ (مثل متجر أو مقهى)",
+      "#No, I'm going straight there": "لا، سأذهب مباشرة",
+      "#Yes, one stop": "نعم، توقف واحد",
+      "#Yes, more than one stop": "نعم، أكثر من توقف"
     }
   },
   "id": "smarturbanity_pre_trip",
