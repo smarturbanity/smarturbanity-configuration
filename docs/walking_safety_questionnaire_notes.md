@@ -539,3 +539,20 @@ The car-need form 3.1.0 replaces `car_need_uses` and the generic
 - Each selected row stores `frequency` and `alternative` under the new answer key.
   Already collected answers keep their original keys and are not migrated or rewritten.
   The generic Yes/No is no longer asked.
+
+## Walking improvements and retention clarification — 9 November 2026
+
+Lory approved explicitly including wheelchair travel and easier journeys in the
+walking-improvements question and introduction. Three additive options cover
+benches/rest places, ramps/dropped kerbs and paths clear of vehicles and other
+obstacles; all eleven existing options and response keys are preserved. The
+multiple-answer instruction moves into a separate help line. The question is
+1.2.0 and its questionnaire is 3.2.0, following the additive-option rule above.
+
+Lory confirmed the 36-month research retention period. All 54 survey introductions
+and the questionnaire-feedback introduction state the period, then deletion or
+anonymisation, in the eight languages. They identify the research team as readers,
+as the questionnaire-feedback form already did. Other questionnaire versions move
+by a patch. This addresses the retention concerns reported against welcome pages;
+the feedback recommendations question is unchanged. No existing answers are
+migrated and no browser retest or deployment is implied by this wording change.
