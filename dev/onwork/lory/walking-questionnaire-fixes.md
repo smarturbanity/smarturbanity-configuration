@@ -47,6 +47,17 @@ abituali, viaggi soprattutto per conto tuo o con altre persone?" and answer
 unchanged; a structural comparison verifies exactly those two translations and
 the patch versions.
 
+Lory approved adding inaccessible announcements/travel information to post-trip
+incidents, covering information the participant could not hear or read. The new
+option `inaccessible_travel_information` is translated in all eight languages;
+trip_incidents is 2.7.0 and post-trip 4.9.0. All prior option values, exclusive
+none, optionality and other questions remain unchanged.
+
+Both trip introductions now include the confirmed 36-month research retention
+period followed by deletion or anonymisation, reusing the approved feedback-form
+translations. Pre-trip is 4.6.1. Structural comparison passed for both forms and
+all eight languages; no browser or new persona execution is claimed.
+
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.

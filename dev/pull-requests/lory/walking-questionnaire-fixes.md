@@ -28,3 +28,9 @@ labels of the other bands. This translation-only patch preserves its answer valu
 The approved Italian travel-company question uses "per conto tuo" and its answer
 "Soprattutto per conto mio" instead of "senza compagnia". Response values, other
 answers and other languages are preserved.
+
+Post-trip incidents now offers an answer for announcements/travel information the
+participant could not hear or read. Both pre- and post-trip introductions include
+the confirmed 36-month retention period and subsequent deletion or anonymisation.
+Eight-language structural checks verify that all other content and settings are
+preserved; no new browser or persona test is claimed.

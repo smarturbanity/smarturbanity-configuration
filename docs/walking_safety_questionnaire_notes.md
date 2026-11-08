@@ -439,8 +439,9 @@ match.
 
 The duration is metadata only, with no data impact; `post_trip` moves to 4.8.1, the others already move up on this branch.
 
-The privacy notice and how long answers are kept belong to the website notice (`pilot/rome/privacy.json`), which the
-applications read before the form's `gdpr_link`; the forms add no retention text.
+At this stage, the privacy notice and retention period were provided by the website notice
+(`pilot/rome/privacy.json`), which applications read before the form's `gdpr_link`, without retention text
+inside the forms. The approved 9 November clarification below later adds a short retention statement to the forms.
 
 Each changed form moves up one version against `main`: minor when questions or options are added or removed,
 patch for wording only.
@@ -573,3 +574,12 @@ Lory approved the Italian travel-company question "Nei tuoi spostamenti abituali
 viaggi soprattutto per conto tuo o con altre persone?" and answer "Soprattutto
 per conto mio". Translation-only patches: frequent_trip_company 2.0.3, your_travel
 1.0.2. Response values, other answers and other languages are preserved.
+
+Lory approved adding "Annunci o informazioni sul viaggio che non potevo sentire
+o leggere" to post-trip incidents, translated in all eight languages. The new
+response value is `inaccessible_travel_information`; trip_incidents 2.7.0,
+post-trip 4.9.0. Existing answers and exclusive none remain unchanged.
+Both trip welcome pages now state the confirmed 36-month research retention
+period followed by deletion or anonymisation, reusing the approved feedback-form
+translations; pre-trip 4.6.1. Structural comparison verifies only these additions,
+their translations and version changes; no browser/persona retest is implied.
