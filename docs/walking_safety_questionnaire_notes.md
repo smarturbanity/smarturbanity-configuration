@@ -1,13 +1,15 @@
 # Questionnaires per way of travelling — change notes
 
 Every survey except `your_profile` becomes a chain of short questionnaires per way of travelling
-(walking, cycling, public transport, car, motorcycle and scooter), decided by Lory on 2026-11-08.
+(walking, cycling, e-scooter, public transport, car, motorcycle and scooter), decided by Lory on 2026-11-08.
+The e-scooter chain (stand-up electric scooters, own or shared) was added the same day (Lory, decision 1).
 The pieces of a chain are linked by the "Continue" button on the thank-you page (CityMaaS `followUpQuestionnaires`),
 which skips the pieces already answered on the same device. `smarturbanity_daily_travel` is deleted: its questions moved to
 `your_profile` and to the pieces (see "Daily travel").
 
-All 33 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`, and sit in the
-disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval.
+All 39 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`, and sit in the
+disabled `rome_travel_habits` campaign ("Travel habits", one campaign per topic; visible in debug mode) until the
+persona test and approval. It was called `rome_future_surveys` ("Future questionnaires") until 2026-11-08.
 
 Rules applied:
 
@@ -15,9 +17,11 @@ Rules applied:
    travelling. The only new questions are the ones Lory asked for on 2026-11-08 (see "New questions").
 2. In Yes/No questions, "Yes" always means the problem is present (or, for improvements, that the change would help).
 3. New Yes/No ids end in `_yn`, so answers never mix with the old 5-point or multiple-choice data. Questions asked about
-   another way of travelling get that mode's prefix (`walk_`, `bike_`, `put_` for public transport, `car_`, `motorcycle_`).
+   another way of travelling get that mode's prefix (`walk_`, `bike_`, `escooter_`, `put_` for public transport, `car_`,
+   `motorcycle_`).
 4. Only the weekly question of each chain is required; all others are optional, because some touch health or harassment.
-5. The weekly question opens each chain (`walk_days`, `bike_weekly`, `put_weekly`, `car_weekly`, `motorcycle_weekly`).
+5. The weekly question opens each chain (`walk_days`, `bike_weekly`, `escooter_weekly`, `put_weekly`, `car_weekly`,
+   `motorcycle_weekly`).
    Who answers No is asked only why, and the chain stops there: CityMaaS `followUpStopWhen` hides "Continue".
    This replaces the earlier rule that everyone answers the walking safety questions (Lory, 2026-11-08, decision 2A).
 6. Wheelchairs, pushchairs, canes and other aids are covered by the walking welcome text, so questions stay short.
@@ -30,6 +34,7 @@ Rules applied:
 |---|---|
 | Walking | `walking_habits` (13), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (10), `walking_improvements` (6) |
 | Cycling | `cycling_habits` (13), `cycling_road_safety` (17), `cycling_security` (11), `cycling_comfort` (9), `cycling_experience` (10), `cycling_improvements` (1) |
+| E-scooter | `e_scooter_habits` (12), `e_scooter_road_safety` (17), `e_scooter_security` (11), `e_scooter_comfort` (9), `e_scooter_experience` (10), `e_scooter_improvements` (1) |
 | Public transport | `public_transport_habits` (13), `public_transport_road_safety` (7), `public_transport_security` (12), `public_transport_comfort` (13), `public_transport_experience` (10), `public_transport_without_car` (18), `public_transport_improvements` (7) |
 | Car | `car_habits` (11), `car_road_safety` (14), `car_security` (10), `car_comfort` (12), `car_experience` (10), `car_need` (19), `car_alternatives` (4) |
 | Motorcycle and scooter | `motorcycle_habits` (9), `motorcycle_road_safety` (18), `motorcycle_security` (11), `motorcycle_comfort` (8), `motorcycle_experience` (10), `motorcycle_need` (5), `motorcycle_improvements` (9) |
@@ -40,7 +45,7 @@ its own texts in en, it, fr, de, tr, fa, hu and ar.
 ## Replaced forms
 
 Every question of these forms is in the chains, so their entries were removed from `forms/surveys/index.json`
-(3.1.0 → 3.2.0), `forms/index.json` and the `rome_future_surveys` campaign:
+(3.1.0 → 3.2.0), `forms/index.json` and the `rome_travel_habits` campaign:
 
 - `smarturbanity_walking_safety` and `smarturbanity_walking_safety_details` (the earlier Yes/No walking forms, never published;
   the details file is removed);
@@ -51,7 +56,7 @@ Every question of these forms is in the chains, so their entries were removed fr
 With the questions used by the chains removed none of the seven `future/` forms keeps a question, so they are deleted
 (Lory, 2026-11-08: remove the moved questions from the old forms) here and on the local `lory/future-questionnaires` and
 `questionnaire-14` branches, together with their entries in `forms/index.json`, `forms/surveys/index.json` and the
-`rome_future_surveys` campaign. `future/smarturbanity_about_you` and `future/smarturbanity_daily_travel` are emptied and deleted too (see "About you"
+`rome_travel_habits` campaign. `future/smarturbanity_about_you` and `future/smarturbanity_daily_travel` are emptied and deleted too (see "About you"
 and "Daily travel").
 
 Not carried over: walking `walk_days` from the walking form (the copy from the Yes/No walking form is used, same text
@@ -94,7 +99,7 @@ question; the habits pieces now take about 2 minutes.
 
 Lory (2026-11-08): the remaining "About you" questions move to `your_profile` and to the walking habits piece, and the
 form is deleted on all three branches with its entries in `forms/index.json`, `forms/surveys/index.json` and the
-`rome_future_surveys` campaign. Each branch moves its own wording and translations; where the profile already
+`rome_travel_habits` campaign. Each branch moves its own wording and translations; where the profile already
 translated "None" or "Other", its own translation is kept.
 
 | Question | Goes to | Change |
@@ -116,7 +121,7 @@ other two have no walking habits piece; there they are deleted with the form. Th
 
 Lory (2026-11-08, decisions 1A 2A 3A 4A): the remaining 13 questions of `future/smarturbanity_daily_travel` move to
 `your_profile` and to the pieces, and the form is deleted on all three branches with its entries in `forms/index.json`,
-`forms/surveys/index.json` and the `rome_future_surveys` campaign. In `your_profile` each branch moves its own wording
+`forms/surveys/index.json` and the `rome_travel_habits` campaign. In `your_profile` each branch moves its own wording
 and translations; the two new section titles and the trip description come from `lory/future-questionnaires`.
 
 | Question | Goes to | Change |
@@ -155,6 +160,7 @@ through the mapping.
 |---|---|---|
 | `not_walk_distance_yn`, `not_walk_effort_yn`, `not_walk_unsafe_yn`, `not_walk_streets_yn` | walking habits | reasons for walking rarely; reasons from daily travel `choice_factors` and walking `walk_improvements` |
 | `not_bike_no_bike_yn`, `not_bike_distance_yn`, `not_bike_effort_yn`, `not_bike_unsafe_yn`, `not_bike_streets_yn` | cycling habits | reasons for cycling rarely, as for walking |
+| `not_escooter_no_scooter_yn`, `not_escooter_distance_yn`, `not_escooter_effort_yn`, `not_escooter_unsafe_yn`, `not_escooter_streets_yn` | e-scooter habits | reasons for riding an e-scooter rarely, as for cycling |
 | `not_put_slow_yn`, `not_put_unreliable_yn`, `not_put_effort_yn`, `not_put_unsafe_yn`, `not_put_cost_yn` | public transport habits | reasons for rarely using public transport |
 | `not_car_no_car_yn`, `not_car_cost_yn`, `not_car_time_yn`, `not_car_stress_yn`, `not_car_unsafe_yn`, `not_car_other_ways_yn` | car habits | reasons for rarely travelling by car |
 | `not_motorcycle_no_vehicle_yn`, `not_motorcycle_unsafe_yn`, `not_motorcycle_uncomfortable_yn`, `not_motorcycle_cost_yn` | motorcycle habits | reasons for rarely riding |
@@ -176,6 +182,7 @@ These come from one mode's form and are asked in another chain too. They can be 
 | `put_dark_lighting_change_yn`, `motorcycle_dark_lighting_change_yn` | safety `walk_lighting_effect` |
 | `put_heat_waiting_yn`, `put_no_seats_yn`, `put_wayfinding_yn` | walking `walk_heat_shade_effect`, `benches_importance`, `wayfinding`, as Yes/No |
 | `put_want_<change>_yn` (7) | walking `walk_improvements` and public transport options, as Yes/No |
+| all `escooter_` questions | cycling, same question with `bike_` | "cycle" becomes "ride an e-scooter"; `escooter_type` asks own or shared; no health-benefit question; `escooter_barriers` asks about pedestrians in cycle lanes instead of pedestrians or e-scooters; `escooter_tiredness_cause` without carrying children or shopping, with physical effort described as standing and keeping balance; `escooter_improvements` replaces bike parking, training, junctions and money help with e-scooter versions and adds cheaper shared e-scooters and sharing in more areas |
 | `car_hazard_confidence`, `car_charging` | motorcycle `motorcycle_hazard_confidence`, `motorcycle_charging` |
 | `motorcycle_delay_stress` | car `car_delay_stress` |
 | `motorcycle_poor_surface_unsafe_yn` | cycling `bike_poor_surface_effect`, as Yes/No |
@@ -213,8 +220,8 @@ One Yes/No question per former option:
 | Barriers on your route | `steps_without_ramps_yn`, `missing_dropped_kerbs_yn`, `narrow_paths_yn`, `missing_tactile_paving_yn`, `low_branches_yn`, `stairs_only_way_yn`, `no_sidewalk_yn`, `pedestrian_lights_out_of_order_yn` | walking `walk_physical_barriers` |
 | What would make walking safer | `want_safer_crossings_yn`, `want_better_lighting_yn`, `want_separation_yn`, `want_better_sidewalks_yn`, `want_audible_signals_yn`, `want_cleaner_streets_yn`, `want_sidewalks_where_missing_yn`, `want_longer_green_time_yn` | walking `walk_improvements` |
 
-The other chains ask the "Situations on the road" and "Personal security" groups with their prefix (`bike_`, `put_`,
-`car_`, `motorcycle_`); cycling leaves out `poor_infrastructure_unsafe_yn`, covered by its infrastructure questions.
+The other chains ask the "Situations on the road" and "Personal security" groups with their prefix (`bike_`, `escooter_`,
+`put_`, `car_`, `motorcycle_`); cycling and e-scooter leave out `poor_infrastructure_unsafe_yn`, covered by its infrastructure questions.
 Public transport adds `put_long_evening_waits_yn` from the safety option `long_evening_waits`.
 
 Dropped options: "none" / "never unsafe" / "never insecure" / "nothing" (implied by all No) and "other".
@@ -227,6 +234,8 @@ A multiple choice with `max_answers` becomes independent Yes/No answers, so coun
 
 - CityMaaS `QuestionnaireResponseFirestoreRules` test uses `smarturbanity_daily_travel` as a sample id; check it still holds
   when the pin moves to a configuration without that form.
-- CityMaaS needs the chain and stop rules in `surveys-gallery.json` (branch `lory/questionnaire-follow-up`).
+- CityMaaS needs the chain and stop rules in `surveys-gallery.json` (branch `lory/questionnaire-follow-up`), including the
+  new e-scooter chain (stop when `escooter_weekly` is No).
+- The e-scooter pieces reuse the cycling picture; a dedicated e-scooter image is still to be made.
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
   it must be updated when the pin moves to a configuration that includes these forms.
