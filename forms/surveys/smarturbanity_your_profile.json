@@ -2,9 +2,9 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Profile",
     "questionnaire_id": "smarturbanity_your_profile",
-    "questionnaire_version": "1.11.0",
+    "questionnaire_version": "1.12.0",
     "project": "SmartUrbanity",
-    "estimated_minutes": 5,
+    "estimated_minutes": 6,
     "options": {
       "review_mode": false,
       "save_user_id": true,
@@ -151,6 +151,67 @@
               { "text": "Very connected", "value": "very_connected" }
             ]
           },
+          {
+            "text": "If you travel outside your neighborhood, what are the main reasons?",
+            "answer_key": "reasons_outside",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "options": [
+              {
+                "text": "Work or university",
+                "value": "work_or_university"
+              },
+              {
+                "text": "Grocery shopping / supermarkets",
+                "value": "grocery_shopping_supermarkets"
+              },
+              {
+                "text": "Healthcare (doctor, pharmacy, hospital)",
+                "value": "healthcare_doctor_pharmacy_hospital"
+              },
+              {
+                "text": "Schools or childcare",
+                "value": "schools_or_childcare"
+              },
+              {
+                "text": "Leisure activities (restaurants, cafes, cinema, gym)",
+                "value": "leisure_activities_restaurants_cafes_cin"
+              },
+              {
+                "text": "Visiting friends or family",
+                "value": "visiting_friends_or_family"
+              },
+              {
+                "text": "Administrative services (banks, offices, etc.)",
+                "value": "administrative_services_banks_offices_et"
+              },
+              {
+                "text": "Better prices or more choice of services elsewhere",
+                "value": "better_prices_or_more_choice_of_services"
+              },
+              {
+                "text": "Lack of services in my neighborhood",
+                "value": "lack_of_services_in_my_neighborhood"
+              },
+              {
+                "text": "Poor quality of services in my neighborhood",
+                "value": "poor_quality_of_services_in_my_neighborh"
+              },
+              {
+                "text": "I prefer other neighborhoods or areas",
+                "value": "i_prefer_other_neighborhoods_or_areas"
+              },
+              {
+                "text": "I rarely or never travel outside my neighborhood",
+                "value": "i_rarely_or_never_travel_outside_my_neig"
+              }
+            ],
+            "add_other": true,
+            "required": true,
+            "question_id": "reasons_outside",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          },
 
           {
             "privacy_classification": "heightened_personal",
@@ -197,6 +258,24 @@
               { "text": "Yes, I help an adult who does not live with me", "value": "yes_lives_elsewhere" },
               { "text": "No", "value": "no", "exclusive": true }
             ]
+          },
+          {
+            "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
+            "answer_key": "dog_walks",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "pet_walks",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
 
           {
@@ -304,6 +383,36 @@
               { "text": "No", "value": "no" },
               { "text": "I am not currently employed", "value": "not_employed" }
             ]
+          },
+          {
+            "text": "Do you belong to any of these groups?",
+            "answer_key": "professional_role",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Urban planner",
+                "value": "urban_planner"
+              },
+              {
+                "text": "Policymaker",
+                "value": "policymaker"
+              },
+              {
+                "text": "Environmental/sustainable mobility activist",
+                "value": "environmental_sustainable_mobility_activ"
+              },
+              {
+                "text": "Content creator / communicator (social media, journalism, blogging)",
+                "value": "content_creator_communicator_social_medi"
+              },
+              {
+                "text": "None",
+                "value": "none"
+              }
+            ],
+            "question_id": "professional_role",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
           },
 
           {
@@ -477,7 +586,26 @@
       "#Yes, occasionally (1-2 days in a week)": "Sì, occasionalmente (1-2 giorni alla settimana)",
       "#Other": "Altro",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - Il tuo profilo",
-      "#Person with a speech bubble": "Persona con un fumetto"
+      "#Person with a speech bubble": "Persona con un fumetto",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Hai un animale domestico che può comportare ulteriori spostamenti a piedi (ad es. un cane)?",
+      "#If you travel outside your neighborhood, what are the main reasons?": "Se ti sposti fuori dal tuo quartiere, quali sono i motivi principali?",
+      "#Work or university": "Lavoro o università",
+      "#Grocery shopping / supermarkets": "Spesa alimentare o supermercati",
+      "#Healthcare (doctor, pharmacy, hospital)": "Assistenza sanitaria (medico, farmacia, ospedale)",
+      "#Schools or childcare": "Scuola o servizi per l’infanzia",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "Attività nel tempo libero (ristoranti, bar, cinema, palestra)",
+      "#Visiting friends or family": "Visite ad amici o familiari",
+      "#Administrative services (banks, offices, etc.)": "Servizi amministrativi (banche, uffici ecc.)",
+      "#Better prices or more choice of services elsewhere": "Prezzi migliori o una maggiore scelta di servizi altrove",
+      "#Lack of services in my neighborhood": "Mancanza di servizi nel mio quartiere",
+      "#Poor quality of services in my neighborhood": "Scarsa qualità dei servizi nel mio quartiere",
+      "#I prefer other neighborhoods or areas": "Preferisco altri quartieri o altre zone",
+      "#I rarely or never travel outside my neighborhood": "Mi sposto raramente o mai fuori dal mio quartiere",
+      "#Do you belong to any of these groups?": "Appartieni a uno dei seguenti gruppi?",
+      "#Urban planner": "Urbanista",
+      "#Policymaker": "Chi prende decisioni pubbliche",
+      "#Environmental/sustainable mobility activist": "Attivista ambientale o per la mobilità sostenibile",
+      "#Content creator / communicator (social media, journalism, blogging)": "Content creator o chi si occupa di comunicazione (social media, giornalismo, blog)"
     },
     "fr": {
       "code": "fr",
@@ -609,7 +737,26 @@
       "#Yes, occasionally (1-2 days in a week)": "Oui, occasionnellement (1 à 2 jours par semaine)",
       "#Other": "Autre",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - Votre profil",
-      "#Person with a speech bubble": "Personne avec une bulle de dialogue"
+      "#Person with a speech bubble": "Personne avec une bulle de dialogue",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Avez-vous un animal domestique qui peut entraîner des déplacements supplémentaires à pied, par exemple un chien ?",
+      "#If you travel outside your neighborhood, what are the main reasons?": "Si vous vous déplacez en dehors de votre quartier, quelles en sont les principales raisons ?",
+      "#Work or university": "Travail ou université",
+      "#Grocery shopping / supermarkets": "Courses alimentaires / supermarchés",
+      "#Healthcare (doctor, pharmacy, hospital)": "Soins de santé (médecin, pharmacie, hôpital)",
+      "#Schools or childcare": "École ou garde d’enfants",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "Loisirs (restaurants, cafés, cinéma, salle de sport)",
+      "#Visiting friends or family": "Visite à la famille ou à des proches",
+      "#Administrative services (banks, offices, etc.)": "Services administratifs (banques, bureaux, etc.)",
+      "#Better prices or more choice of services elsewhere": "De meilleurs prix ou un plus grand choix de services ailleurs",
+      "#Lack of services in my neighborhood": "Manque de services dans mon quartier",
+      "#Poor quality of services in my neighborhood": "Mauvaise qualité des services dans mon quartier",
+      "#I prefer other neighborhoods or areas": "Je préfère d’autres quartiers ou secteurs",
+      "#I rarely or never travel outside my neighborhood": "Je vais rarement ou jamais en dehors de mon quartier",
+      "#Do you belong to any of these groups?": "Faites-vous partie de l’un de ces groupes ?",
+      "#Urban planner": "Urbaniste",
+      "#Policymaker": "Responsable politique ou personne en charge de décisions publiques",
+      "#Environmental/sustainable mobility activist": "Engagement militant pour l’environnement ou la mobilité durable",
+      "#Content creator / communicator (social media, journalism, blogging)": "Création de contenu ou communication (réseaux sociaux, journalisme, blog)"
     },
     "de": {
       "code": "de",
@@ -741,7 +888,26 @@
       "#Yes, occasionally (1-2 days in a week)": "Ja, gelegentlich (1-2 Tage pro Woche)",
       "#Other": "Sonstiges",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - Ihr Profil",
-      "#Person with a speech bubble": "Person mit einer Sprechblase"
+      "#Person with a speech bubble": "Person mit einer Sprechblase",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Haben Sie ein Haustier, das zusätzliche Wege zu Fuß verursachen kann, zum Beispiel einen Hund?",
+      "#If you travel outside your neighborhood, what are the main reasons?": "Wenn Sie Ihr Viertel verlassen, was sind die wichtigsten Gründe dafür?",
+      "#Work or university": "Arbeit oder Universität",
+      "#Grocery shopping / supermarkets": "Lebensmitteleinkauf / Supermärkte",
+      "#Healthcare (doctor, pharmacy, hospital)": "Gesundheitsversorgung (Arzt, Apotheke, Krankenhaus)",
+      "#Schools or childcare": "Schule oder Kinderbetreuung",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "Freizeit (Restaurants, Cafés, Kino, Fitnessstudio)",
+      "#Visiting friends or family": "Besuche im Freundes- oder Familienkreis",
+      "#Administrative services (banks, offices, etc.)": "Verwaltungsdienste (Banken, Ämter usw.)",
+      "#Better prices or more choice of services elsewhere": "Bessere Preise oder eine größere Auswahl an Dienstleistungen anderswo",
+      "#Lack of services in my neighborhood": "Fehlende Dienstleistungen in meinem Viertel",
+      "#Poor quality of services in my neighborhood": "Schlechte Qualität der Dienstleistungen in meinem Viertel",
+      "#I prefer other neighborhoods or areas": "Ich bevorzuge andere Viertel oder Gebiete",
+      "#I rarely or never travel outside my neighborhood": "Ich verlasse mein Viertel selten oder nie",
+      "#Do you belong to any of these groups?": "Gehören Sie zu einer dieser Gruppen?",
+      "#Urban planner": "Fachleute für Stadtplanung",
+      "#Policymaker": "Personen mit politischer Entscheidungsverantwortung",
+      "#Environmental/sustainable mobility activist": "Engagierte für Umwelt oder nachhaltige Mobilität",
+      "#Content creator / communicator (social media, journalism, blogging)": "Content-Erstellung / Kommunikation (soziale Medien, Journalismus, Blog)"
     },
     "tr": {
       "code": "tr",
@@ -873,7 +1039,26 @@
       "#Yes, occasionally (1-2 days in a week)": "Evet, ara sıra (haftada 1-2 gün)",
       "#Other": "Diğer",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - Profiliniz",
-      "#Person with a speech bubble": "Konuşma balonu olan bir kişi"
+      "#Person with a speech bubble": "Konuşma balonu olan bir kişi",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Evde ek yürüme ihtiyacı doğurabilecek bir evcil hayvanınız var mı? Örneğin bir köpek.",
+      "#If you travel outside your neighborhood, what are the main reasons?": "Mahallenizin dışına çıkıyorsanız bunun başlıca nedenleri nelerdir?",
+      "#Work or university": "İş veya üniversite",
+      "#Grocery shopping / supermarkets": "Market / süpermarket alışverişi",
+      "#Healthcare (doctor, pharmacy, hospital)": "Sağlık hizmetleri (doktor, eczane, hastane)",
+      "#Schools or childcare": "Okul veya çocuk bakımı",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "Boş zaman etkinlikleri (restoran, kafe, sinema, spor salonu)",
+      "#Visiting friends or family": "Arkadaş veya aile ziyareti",
+      "#Administrative services (banks, offices, etc.)": "İdari hizmetler (bankalar, kamu ofisleri vb.)",
+      "#Better prices or more choice of services elsewhere": "Başka yerlerde daha iyi fiyatlar veya daha fazla hizmet seçeneği",
+      "#Lack of services in my neighborhood": "Mahallemde yeterli hizmet olmaması",
+      "#Poor quality of services in my neighborhood": "Mahallemdeki hizmetlerin kalitesinin düşük olması",
+      "#I prefer other neighborhoods or areas": "Başka mahalleleri veya bölgeleri tercih ediyorum",
+      "#I rarely or never travel outside my neighborhood": "Mahallemin dışına nadiren çıkarım veya hiç çıkmam",
+      "#Do you belong to any of these groups?": "Aşağıdaki gruplardan herhangi birine dahil misiniz?",
+      "#Urban planner": "Şehir plancısı",
+      "#Policymaker": "Politika yapıcı / kamu karar vericisi",
+      "#Environmental/sustainable mobility activist": "Çevre veya sürdürülebilir ulaşım aktivisti",
+      "#Content creator / communicator (social media, journalism, blogging)": "İçerik üreticisi / iletişimci (sosyal medya, gazetecilik, blog)"
     },
     "fa": {
       "code": "fa",
@@ -1005,7 +1190,26 @@
       "#Yes, occasionally (1-2 days in a week)": "بله، گاهی (۱ تا ۲ روز در هفته)",
       "#Other": "سایر",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - نمایه شما",
-      "#Person with a speech bubble": "فردی با حباب گفتگو"
+      "#Person with a speech bubble": "فردی با حباب گفتگو",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "آیا حیوان خانگی دارید که باعث شود بیشتر پیاده‌روی کنید، مثلاً سگ؟",
+      "#If you travel outside your neighborhood, what are the main reasons?": "اگر از محله خود خارج می‌شوید، مهم‌ترین دلیل‌های شما چیست؟",
+      "#Work or university": "کار یا دانشگاه",
+      "#Grocery shopping / supermarkets": "خرید مواد غذایی / سوپرمارکت",
+      "#Healthcare (doctor, pharmacy, hospital)": "خدمات درمانی (پزشک، داروخانه، بیمارستان)",
+      "#Schools or childcare": "مدرسه یا مراقبت از کودک",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "تفریح (رستوران، کافه، سینما، باشگاه)",
+      "#Visiting friends or family": "دیدن دوستان یا خانواده",
+      "#Administrative services (banks, offices, etc.)": "خدمات اداری (بانک، اداره و غیره)",
+      "#Better prices or more choice of services elsewhere": "قیمت بهتر یا انتخاب بیشتر خدمات در جاهای دیگر",
+      "#Lack of services in my neighborhood": "کمبود خدمات در محله من",
+      "#Poor quality of services in my neighborhood": "کیفیت پایین خدمات در محله من",
+      "#I prefer other neighborhoods or areas": "محله‌ها یا مناطق دیگر را ترجیح می‌دهم",
+      "#I rarely or never travel outside my neighborhood": "به ندرت از محله‌ام خارج می‌شوم یا اصلاً خارج نمی‌شوم",
+      "#Do you belong to any of these groups?": "آیا عضو یکی از این گروه‌ها هستید؟",
+      "#Urban planner": "برنامه‌ریز شهری",
+      "#Policymaker": "سیاست‌گذار یا تصمیم‌گیر عمومی",
+      "#Environmental/sustainable mobility activist": "فعال محیط‌زیست یا حمل‌ونقل پایدار",
+      "#Content creator / communicator (social media, journalism, blogging)": "تولیدکننده محتوا / فعال ارتباطات (شبکه‌های اجتماعی، روزنامه‌نگاری، وبلاگ)"
     },
     "hu": {
       "code": "hu",
@@ -1137,7 +1341,26 @@
       "#Yes, occasionally (1-2 days in a week)": "Igen, alkalmanként (heti 1-2 nap)",
       "#Other": "Egyéb",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - Az Ön profilja",
-      "#Person with a speech bubble": "Személy egy szövegbuborékkal"
+      "#Person with a speech bubble": "Személy egy szövegbuborékkal",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Van olyan háziállata, amely miatt többet kell gyalogolnia, például kutya?",
+      "#If you travel outside your neighborhood, what are the main reasons?": "Ha a saját városrészén kívülre utazik, mik a fő okai?",
+      "#Work or university": "Munka vagy egyetem",
+      "#Grocery shopping / supermarkets": "Élelmiszer-vásárlás / szupermarket",
+      "#Healthcare (doctor, pharmacy, hospital)": "Egészségügyi ellátás (orvos, gyógyszertár, kórház)",
+      "#Schools or childcare": "Iskola vagy gyermekfelügyelet",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "Szabadidő (étterem, kávézó, mozi, edzőterem)",
+      "#Visiting friends or family": "Barátok vagy család meglátogatása",
+      "#Administrative services (banks, offices, etc.)": "Ügyintézés (bank, hivatal stb.)",
+      "#Better prices or more choice of services elsewhere": "Máshol kedvezőbb árak vagy több szolgáltatási lehetőség",
+      "#Lack of services in my neighborhood": "Szolgáltatások hiánya a lakóhelyemen",
+      "#Poor quality of services in my neighborhood": "A helyi szolgáltatások gyenge minősége",
+      "#I prefer other neighborhoods or areas": "Más városrészeket vagy területeket részesítek előnyben",
+      "#I rarely or never travel outside my neighborhood": "Ritkán vagy soha nem utazom a városrészemen kívülre",
+      "#Do you belong to any of these groups?": "Tartozik az alábbi csoportok valamelyikéhez?",
+      "#Urban planner": "Várostervező",
+      "#Policymaker": "Politikai vagy közpolitikai döntéshozó",
+      "#Environmental/sustainable mobility activist": "Környezetvédelmi vagy fenntartható mobilitási aktivista",
+      "#Content creator / communicator (social media, journalism, blogging)": "Tartalomkészítő / kommunikációs szakember (közösségi média, újságírás, blog)"
     },
     "ar": {
       "code": "ar",
@@ -1269,7 +1492,26 @@
       "#Yes, occasionally (1-2 days in a week)": "نعم، أحيانًا (1-2 يوم في الأسبوع)",
       "#Other": "أخرى",
       "#SmartUrbanity - Your Profile": "SmartUrbanity - ملفك الشخصي",
-      "#Person with a speech bubble": "شخص مع فقاعة كلام"
+      "#Person with a speech bubble": "شخص مع فقاعة كلام",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "هل لديك حيوان أليف قد يدفعك إلى مزيد من المشي، مثل الكلب؟",
+      "#If you travel outside your neighborhood, what are the main reasons?": "عند التنقل خارج الحي، ما أهم الأسباب؟",
+      "#Work or university": "العمل أو الجامعة",
+      "#Grocery shopping / supermarkets": "شراء المواد الغذائية / السوبرماركت",
+      "#Healthcare (doctor, pharmacy, hospital)": "الرعاية الصحية (طبيب، صيدلية، مستشفى)",
+      "#Schools or childcare": "المدرسة أو رعاية الأطفال",
+      "#Leisure activities (restaurants, cafes, cinema, gym)": "الترفيه (مطاعم، مقاهٍ، سينما، صالة رياضية)",
+      "#Visiting friends or family": "زيارة المعارف أو العائلة",
+      "#Administrative services (banks, offices, etc.)": "الخدمات الإدارية (البنوك، المكاتب وغيرها)",
+      "#Better prices or more choice of services elsewhere": "أسعار أفضل أو خيارات أكثر للخدمات في أماكن أخرى",
+      "#Lack of services in my neighborhood": "نقص الخدمات في حيّي",
+      "#Poor quality of services in my neighborhood": "ضعف جودة الخدمات في حيّي",
+      "#I prefer other neighborhoods or areas": "أفضل أحياء أو مناطق أخرى",
+      "#I rarely or never travel outside my neighborhood": "نادراً ما أذهب خارج حيّي أو لا أذهب إطلاقًا",
+      "#Do you belong to any of these groups?": "هل ينطبق عليك أي من هذه الأوصاف؟",
+      "#Urban planner": "العمل في التخطيط الحضري",
+      "#Policymaker": "صنع السياسات أو المسؤولية عن اتخاذ القرار العام",
+      "#Environmental/sustainable mobility activist": "النشاط في مجال البيئة أو التنقل المستدام",
+      "#Content creator / communicator (social media, journalism, blogging)": "صناعة المحتوى / العمل في مجال التواصل (وسائل التواصل الاجتماعي، الصحافة، التدوين)"
     }
   },
   "id": "smarturbanity_your_profile",
