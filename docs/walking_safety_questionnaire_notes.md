@@ -3,8 +3,8 @@
 Every survey except `your_profile` becomes a chain of short questionnaires per way of travelling
 (walking, cycling, public transport, car, motorcycle and scooter), decided by Lory on 2026-11-08.
 The pieces of a chain are linked by the "Continue" button on the thank-you page (CityMaaS `followUpQuestionnaires`),
-which skips the pieces already answered on the same device. `smarturbanity_daily_travel` and `smarturbanity_about_you`
-stay as they are and are offered first.
+which skips the pieces already answered on the same device. `smarturbanity_daily_travel` (without its combined-trip
+questions, now in the habits pieces) and `smarturbanity_about_you` are offered first.
 
 All 33 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`, and sit in the
 disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval.
@@ -28,11 +28,11 @@ Rules applied:
 
 | Way of travelling | Pieces in order (questions) |
 |---|---|
-| Walking | `walking_habits` (5), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (8), `walking_improvements` (6) |
-| Cycling | `cycling_habits` (9), `cycling_road_safety` (17), `cycling_security` (11), `cycling_comfort` (9), `cycling_experience` (8), `cycling_improvements` (1) |
-| Public transport | `public_transport_habits` (8), `public_transport_road_safety` (7), `public_transport_security` (12), `public_transport_comfort` (13), `public_transport_experience` (8), `public_transport_without_car` (18), `public_transport_improvements` (7) |
-| Car | `car_habits` (7), `car_road_safety` (14), `car_security` (10), `car_comfort` (12), `car_experience` (8), `car_need` (19), `car_alternatives` (4) |
-| Motorcycle and scooter | `motorcycle_habits` (5), `motorcycle_road_safety` (18), `motorcycle_security` (11), `motorcycle_comfort` (8), `motorcycle_experience` (8), `motorcycle_need` (5), `motorcycle_improvements` (9) |
+| Walking | `walking_habits` (9), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (8), `walking_improvements` (6) |
+| Cycling | `cycling_habits` (13), `cycling_road_safety` (17), `cycling_security` (11), `cycling_comfort` (9), `cycling_experience` (8), `cycling_improvements` (1) |
+| Public transport | `public_transport_habits` (12), `public_transport_road_safety` (7), `public_transport_security` (12), `public_transport_comfort` (13), `public_transport_experience` (8), `public_transport_without_car` (18), `public_transport_improvements` (7) |
+| Car | `car_habits` (11), `car_road_safety` (14), `car_security` (10), `car_comfort` (12), `car_experience` (8), `car_need` (19), `car_alternatives` (4) |
+| Motorcycle and scooter | `motorcycle_habits` (9), `motorcycle_road_safety` (18), `motorcycle_security` (11), `motorcycle_comfort` (8), `motorcycle_experience` (8), `motorcycle_need` (5), `motorcycle_improvements` (9) |
 
 Each file is `smarturbanity_<piece>.json`, version 1.0.0, one to three minutes. Each piece carries the translations of
 its own texts in en, it, fr, de, tr, fa, hu and ar.
@@ -48,16 +48,40 @@ Every question of these forms is in the chains, so their entries were removed fr
   `future/smarturbanity_car`, `future/smarturbanity_motorcycle`;
 - `future/smarturbanity_experience_on_the_move` and `future/smarturbanity_safety_environment` (now asked per way of travelling).
 
-The `future/` files stay in place (Lory, 2026-11-08). With the questions used by the chains removed none would keep a
-question, so their content is unchanged until Lory decides whether to delete them. `future/smarturbanity_about_you` and
-`future/smarturbanity_daily_travel` share no question with the chains and stay as they are.
+With the questions used by the chains removed none of the seven `future/` forms keeps a question, so they are deleted
+(Lory, 2026-11-08: remove the moved questions from the old forms) here and on the local `lory/future-questionnaires` and
+`questionnaire-14` branches, together with their entries in `forms/index.json`, `forms/surveys/index.json` and the
+`rome_future_surveys` campaign. `future/smarturbanity_about_you` shares no question with the chains or with
+`your_profile` and stays as it is.
 
 Not carried over: walking `walk_days` from the walking form (the copy from the Yes/No walking form is used, same text
 and options) and cycling `bike_risky_users` (replaced by one Yes/No question per road user).
 
-The published `smarturbanity_safety` form keeps its general safety questions until the chains are published; then it is
-retired (decision 4A). Version 1.7.0 on the local `questionnaire-14` branch drops `fast_vehicles` and
-`walk_lighting_effect`, which the walking chain asks as Yes/No.
+Moved questions removed from the forms that stay:
+
+| Form | This branch | `lory/future-questionnaires` | `questionnaire-14` |
+| --- | --- | --- | --- |
+| `future/smarturbanity_daily_travel` | 3.1.0 → 3.2.0: `combined_modes`, `multimodal_difficulties`, `multimodal_response` | 3.2.0 → 3.3.0: same three | 3.1.0 → 3.2.0: same three |
+| `smarturbanity_safety` | 1.1.0 (unpublished): `bike_risky_users` | 1.5.0 → 1.6.0: `fast_vehicles`, `walk_lighting_effect` | 1.7.0 already without them |
+
+The published `smarturbanity_safety` form keeps its general safety questions (road safety, unsafe situations, personal
+security by day and evening, insecurity factors) until the chains are published; then it is retired (decision 4A).
+
+## Combining ways of travelling
+
+Lory (2026-11-08, decisions 1A 2B): every habits piece asks whether the citizen combines that way of travelling with
+others in the same trip, instead of a separate chain; the three daily travel questions move there. One multiple choice
+lists the other ways (Lory: one question with checkboxes, not one Yes/No per way).
+
+| New id (`<p>` = `walk`, `bike`, `put`, `car`, `motorcycle`) | Source | Change |
+| --- | --- | --- |
+| `<p>_combines_yn` | daily travel `combined_modes` "I don't use any combination" | new Yes/No gate after the weekly question; help says a short walk to a stop or a parked vehicle does not count |
+| `<p>_combined_modes` | daily travel `combined_modes` | same options and values without the piece's own way and without "I don't use any combination"; text "Which other ways of travelling do you use in the same trip?" |
+| `<p>_combined_difficulties` | daily travel `multimodal_difficulties` | same text, options, `max_answers` 3 and "Other" |
+| `<p>_combined_response` | daily travel `multimodal_response` | same text and options; asked unless the citizen has no significant difficulties |
+
+The four questions sit in a last section "Combining ways of travelling", optional, shown only after a Yes to the weekly
+question; the habits pieces now take about 2 minutes.
 
 ## New questions (requested by Lory)
 

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Daily Travel",
     "questionnaire_id": "smarturbanity_daily_travel",
-    "questionnaire_version": "3.1.0",
+    "questionnaire_version": "3.2.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 6,
     "options": {
@@ -75,191 +75,6 @@
               }
             ],
             "question_id": "usual_mode",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
-            "answer_key": "combined_modes",
-            "question_type": "multiple_options",
-            "options": [
-              {
-                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
-                "value": "walking_as_the_main_mode_for_most_of_the"
-              },
-              {
-                "text": "Car",
-                "value": "car"
-              },
-              {
-                "text": "Car sharing",
-                "value": "car_sharing"
-              },
-              {
-                "text": "Motorcycle",
-                "value": "motorcycle"
-              },
-              {
-                "text": "Public transport",
-                "value": "public_transport"
-              },
-              {
-                "text": "Bicycle/e-bike (private)",
-                "value": "bicycle_e_bike_private"
-              },
-              {
-                "text": "Bicycle/e-bike (shared)",
-                "value": "bicycle_e_bike_shared"
-              },
-              {
-                "text": "e-scooter (private)",
-                "value": "e_scooter_private"
-              },
-              {
-                "text": "e-scooter (shared)",
-                "value": "e_scooter_shared"
-              },
-              {
-                "text": "Taxi or similar service (e.g. Uber, Bolt)",
-                "value": "taxi_or_similar_service_e_g_uber_bolt"
-              },
-              {
-                "text": "I don't use any combination",
-                "value": "i_don_t_use_any_combination"
-              }
-            ],
-            "required": true,
-            "question_id": "combined_modes",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
-            "answer_key": "multimodal_difficulties",
-            "question_type": "multiple_options",
-            "max_answers": 3,
-            "options": [
-              {
-                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
-                "value": "vehicles_are_too_crowded_e_g_no_space_fo"
-              },
-              {
-                "text": "Poor coordination between modes (long waiting times, missed connections)",
-                "value": "poor_coordination_between_modes_long_wai"
-              },
-              {
-                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
-                "value": "lack_of_infrastructure_e_g_no_bicycle_pa"
-              },
-              {
-                "text": "Complicated transfers (stations far apart, unclear routes)",
-                "value": "complicated_transfers_stations_far_apart"
-              },
-              {
-                "text": "Travel time becomes too long",
-                "value": "travel_time_becomes_too_long"
-              },
-              {
-                "text": "Cost is too high when combining modes",
-                "value": "cost_is_too_high_when_combining_modes"
-              },
-              {
-                "text": "Safety concerns (traffic, theft, unsafe areas)",
-                "value": "safety_concerns_traffic_theft_unsafe_are"
-              },
-              {
-                "text": "Lack of reliable information (schedules, delays)",
-                "value": "lack_of_reliable_information_schedules_d"
-              },
-              {
-                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
-                "value": "physical_effort_is_too_high_e_g_carrying"
-              },
-              {
-                "text": "Accessibility issues (stairs, no elevators, etc.)",
-                "value": "accessibility_issues_stairs_no_elevators"
-              },
-              {
-                "text": "Weather-related difficulties",
-                "value": "weather_related_difficulties"
-              },
-              {
-                "text": "I do not experience significant difficulties",
-                "value": "i_do_not_experience_significant_difficul"
-              }
-            ],
-            "add_other": true,
-            "show_if": {
-              "combined_modes": {
-                "not": [
-                  "i_don_t_use_any_combination"
-                ]
-              }
-            },
-            "question_id": "multimodal_difficulties",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "When you face these difficulties, how do you mostly respond?",
-            "answer_key": "multimodal_response",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
-                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
-              },
-              {
-                "text": "I switch to a single mode (e.g. only car, only public transport)",
-                "value": "i_switch_to_a_single_mode_e_g_only_car_o"
-              },
-              {
-                "text": "I change the time of travel (e.g. avoid peak hours)",
-                "value": "i_change_the_time_of_travel_e_g_avoid_pe"
-              },
-              {
-                "text": "I change the route or transfer point",
-                "value": "i_change_the_route_or_transfer_point"
-              },
-              {
-                "text": "I choose a different combination of modes",
-                "value": "i_choose_a_different_combination_of_mode"
-              },
-              {
-                "text": "I continue using the same combination despite difficulties",
-                "value": "i_continue_using_the_same_combination_de"
-              },
-              {
-                "text": "I reduce how often I make that trip",
-                "value": "i_reduce_how_often_i_make_that_trip"
-              },
-              {
-                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
-                "value": "i_look_for_alternative_solutions_e_g_bik"
-              },
-              {
-                "text": "I avoid that trip entirely if possible",
-                "value": "i_avoid_that_trip_entirely_if_possible"
-              },
-              {
-                "text": "I do not experience significant difficulties",
-                "value": "i_do_not_experience_significant_difficul"
-              }
-            ],
-            "add_other": true,
-            "show_if": {
-              "combined_modes": {
-                "not": [
-                  "i_don_t_use_any_combination"
-                ]
-              },
-              "multimodal_difficulties": {
-                "not": [
-                  "i_do_not_experience_significant_difficul"
-                ]
-              }
-            },
-            "question_id": "multimodal_response",
             "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           },
@@ -737,33 +552,7 @@
       "#e-scooter (private)": "e-scooter (private)",
       "#e-scooter (shared)": "e-scooter (shared)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
-      "#I don't use any combination": "I don't use any combination",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Poor coordination between modes (long waiting times, missed connections)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Complicated transfers (stations far apart, unclear routes)",
-      "#Travel time becomes too long": "Travel time becomes too long",
-      "#Cost is too high when combining modes": "Cost is too high when combining modes",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Safety concerns (traffic, theft, unsafe areas)",
-      "#Lack of reliable information (schedules, delays)": "Lack of reliable information (schedules, delays)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
-      "#Weather-related difficulties": "Weather-related difficulties",
-      "#I do not experience significant difficulties": "I do not experience significant difficulties",
       "#Other": "Other",
-      "#When you face these difficulties, how do you mostly respond?": "When you face these difficulties, how do you mostly respond?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "I stop using one of the modes (e.g. stop bringing my bike)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "I switch to a single mode (e.g. only car, only public transport)",
-      "#I change the time of travel (e.g. avoid peak hours)": "I change the time of travel (e.g. avoid peak hours)",
-      "#I change the route or transfer point": "I change the route or transfer point",
-      "#I choose a different combination of modes": "I choose a different combination of modes",
-      "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
-      "#I reduce how often I make that trip": "I reduce how often I make that trip",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
-      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "How often do you use shared mobility services (bike-share, e-scooter, car-share)?",
       "#I never use shared mobility services.": "I never use shared mobility services.",
       "#Once a month or less": "Once a month or less",
@@ -863,33 +652,7 @@
       "#e-scooter (private)": "Monopattino elettrico (privato)",
       "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o servizio simile (ad es. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Utilizzi una combinazione dei seguenti mezzi nello stesso spostamento almeno una volta alla settimana? (Seleziona tutte le opzioni applicabili)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
-      "#I don't use any combination": "Non utilizzo alcuna combinazione di mezzi",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Cambi complicati (stazioni distanti tra loro, percorsi poco chiari)",
-      "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
-      "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
-      "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Lo sforzo fisico è troppo elevato (ad es. trasportare una bicicletta o camminare per lunghe distanze)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
-      "#Weather-related difficulties": "Difficoltà legate alle condizioni meteorologiche",
-      "#I do not experience significant difficulties": "Non incontro difficoltà significative",
       "#Other": "Altro",
-      "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Smetto di utilizzare uno dei mezzi (ad es. non porto più la mia bicicletta)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Passo a un'unica modalità di trasporto (ad es. solo auto o solo trasporto pubblico)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Cambio l'orario dello spostamento (ad es. evito le ore di punta)",
-      "#I change the route or transfer point": "Cambio il percorso o il punto di interscambio",
-      "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
-      "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
-      "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
-      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "Con quale frequenza utilizzi servizi di mobilità condivisa (bike sharing, monopattini elettrici, car sharing)?",
       "#I never use shared mobility services.": "Non utilizzo mai servizi di mobilità condivisa.",
       "#Once a month or less": "Una volta al mese o meno",
@@ -989,33 +752,7 @@
       "#e-scooter (private)": "Trottinette électrique (personnelle)",
       "#e-scooter (shared)": "Trottinette électrique (partagée)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Utilisez-vous au moins une fois par semaine plusieurs des modes suivants au cours d’un même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
-      "#I don't use any combination": "Je ne combine pas plusieurs modes",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Les véhicules sont trop remplis (par ex. pas de place pour un vélo ou des bagages)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Mauvaise coordination entre les modes (longues attentes, correspondances manquées)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Manque d’infrastructures (par ex. pas de stationnement vélo ou vélo non autorisé dans les transports publics)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Correspondances compliquées (stations éloignées, itinéraires peu clairs)",
-      "#Travel time becomes too long": "Le temps de trajet devient trop long",
-      "#Cost is too high when combining modes": "Le coût est trop élevé quand plusieurs modes sont combinés",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Problèmes de sécurité (trafic, vol, zones peu sûres)",
-      "#Lack of reliable information (schedules, delays)": "Manque d’informations fiables (horaires, retards)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "L’effort physique est trop important (par ex. porter un vélo ou marcher longtemps)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
-      "#Weather-related difficulties": "Difficultés liées à la météo",
-      "#I do not experience significant difficulties": "Je ne rencontre pas de difficulté importante",
       "#Other": "Autre",
-      "#When you face these difficulties, how do you mostly respond?": "Quand vous rencontrez ces difficultés, que faites-vous le plus souvent ?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "J’arrête d’utiliser l’un des modes (par ex. je ne prends plus mon vélo)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Je passe à un seul mode de transport (par ex. uniquement la voiture ou uniquement les transports publics)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Je change mon heure de déplacement (par ex. j’évite les heures de pointe)",
-      "#I change the route or transfer point": "Je change d’itinéraire ou de lieu de correspondance",
-      "#I choose a different combination of modes": "Je choisis une autre combinaison de modes",
-      "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
-      "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
-      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "À quelle fréquence utilisez-vous des services de mobilité partagée, comme le vélo partagé, la trottinette électrique ou l’autopartage ?",
       "#I never use shared mobility services.": "Je n’utilise jamais les services de mobilité partagée.",
       "#Once a month or less": "Une fois par mois ou moins",
@@ -1115,33 +852,7 @@
       "#e-scooter (private)": "E-Scooter (privat)",
       "#e-scooter (shared)": "E-Scooter (Sharing)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Kombinieren Sie mindestens einmal pro Woche mehrere der folgenden Verkehrsmittel innerhalb derselben Fahrt? (Wählen Sie alles Zutreffende aus)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
-      "#I don't use any combination": "Ich kombiniere keine Verkehrsmittel",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad oder Gepäck)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Schlechte Abstimmung zwischen Verkehrsmitteln (lange Wartezeiten, verpasste Anschlüsse)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Fehlende Infrastruktur (z. B. keine Fahrradabstellplätze oder Fahrräder dürfen nicht mitgenommen werden)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Kompliziertes Umsteigen (Haltestellen weit auseinander, unklare Wege)",
-      "#Travel time becomes too long": "Die gesamte Fahrzeit wird zu lang",
-      "#Cost is too high when combining modes": "Die Kosten sind beim Kombinieren mehrerer Verkehrsmittel zu hoch",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Sicherheitsbedenken (Verkehr, Diebstahl, unsichere Bereiche)",
-      "#Lack of reliable information (schedules, delays)": "Fehlende verlässliche Informationen (Fahrpläne, Verspätungen)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Der körperliche Aufwand ist zu hoch (z. B. Fahrrad tragen oder lange Strecken zu Fuß gehen)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
-      "#Weather-related difficulties": "Schwierigkeiten durch das Wetter",
-      "#I do not experience significant difficulties": "Ich habe keine größeren Schwierigkeiten",
       "#Other": "Anderes",
-      "#When you face these difficulties, how do you mostly respond?": "Wie reagieren Sie normalerweise, wenn diese Schwierigkeiten auftreten?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ich nutze eines der Verkehrsmittel nicht mehr (z. B. nehme ich mein Fahrrad nicht mehr mit)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Ich wechsle zu nur einem Verkehrsmittel (z. B. nur Auto oder nur öffentlicher Verkehr)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Ich ändere meine Fahrzeit (z. B. vermeide ich Stoßzeiten)",
-      "#I change the route or transfer point": "Ich ändere Route oder Umsteigepunkt",
-      "#I choose a different combination of modes": "Ich wähle eine andere Kombination von Verkehrsmitteln",
-      "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
-      "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
-      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "Wie oft nutzen Sie Angebote der geteilten Mobilität, zum Beispiel Leihrad, E-Scooter oder Carsharing?",
       "#I never use shared mobility services.": "Ich nutze solche Angebote nie.",
       "#Once a month or less": "Einmal im Monat oder seltener",
@@ -1241,33 +952,7 @@
       "#e-scooter (private)": "E-scooter (kişisel)",
       "#e-scooter (shared)": "E-scooter (paylaşımlı)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Aynı yolculukta aşağıdaki ulaşım seçeneklerinden birkaçını haftada en az bir kez birlikte kullanıyor musunuz? (Uygun olanların tümünü seçin)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
-      "#I don't use any combination": "Herhangi bir ulaşım seçeneği kombinasyonu kullanmıyorum",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Araçlar çok kalabalık (ör. bisiklet veya bagaj için yer yok)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Ulaşım seçenekleri arasında kötü koordinasyon var (uzun bekleme süreleri, kaçırılan bağlantılar)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Altyapı eksik (ör. bisiklet parkı yok veya toplu taşımaya bisikletle binilemiyor)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Aktarmalar karmaşık (istasyonlar birbirinden uzak, güzergâhlar belirsiz)",
-      "#Travel time becomes too long": "Toplam yolculuk süresi çok uzuyor",
-      "#Cost is too high when combining modes": "Farklı ulaşım seçeneklerini birleştirince maliyet çok yüksek oluyor",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Güvenlikle ilgili kaygılar (trafik, hırsızlık, güvensiz bölgeler)",
-      "#Lack of reliable information (schedules, delays)": "Güvenilir bilgi eksikliği (sefer saatleri, gecikmeler)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Fiziksel çaba çok fazla (ör. bisikleti taşımak veya uzun mesafe yürümek)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
-      "#Weather-related difficulties": "Hava koşullarıyla ilgili güçlükler",
-      "#I do not experience significant difficulties": "Önemli bir güçlük yaşamıyorum",
       "#Other": "Diğer",
-      "#When you face these difficulties, how do you mostly respond?": "Bu güçlüklerle karşılaştığınızda genellikle ne yaparsınız?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ulaşım seçeneklerinden birini kullanmayı bırakırım (ör. bisikletimi yanımda götürmem)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Tek bir ulaşım seçeneğine geçerim (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Yolculuk saatimi değiştiririm (ör. yoğun saatlerden kaçınırım)",
-      "#I change the route or transfer point": "Güzergâhı veya aktarma noktasını değiştiririm",
-      "#I choose a different combination of modes": "Farklı bir ulaşım seçeneği kombinasyonu kullanırım",
-      "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
-      "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
-      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "Bisiklet paylaşımı, e-scooter veya araç paylaşımı gibi paylaşımlı ulaşım hizmetlerini ne sıklıkta kullanıyorsunuz?",
       "#I never use shared mobility services.": "Paylaşımlı ulaşım hizmetlerini hiç kullanmıyorum.",
       "#Once a month or less": "Ayda bir veya daha az",
@@ -1367,33 +1052,7 @@
       "#e-scooter (private)": "اسکوتر برقی (شخصی)",
       "#e-scooter (shared)": "اسکوتر برقی (اشتراکی)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "آیا حداقل هفته‌ای یک بار در یک سفر از ترکیبی از روش‌های زیر استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیله دیگر یا تعویض وسیله)",
-      "#I don't use any combination": "از ترکیب چند روش استفاده نمی‌کنم",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "وسیله‌ها خیلی شلوغ هستند (مثلاً جا برای دوچرخه یا بار وجود ندارد)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "هماهنگی بین روش‌ها ضعیف است (انتظار طولانی، از دست دادن وسیله بعدی)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "زیرساخت کافی نیست (مثلاً پارک دوچرخه وجود ندارد یا بردن دوچرخه در حمل‌ونقل عمومی ممکن نیست)",
-      "#Complicated transfers (stations far apart, unclear routes)": "تعویض وسیله پیچیده است (ایستگاه‌ها از هم دورند، مسیرها نامشخص‌اند)",
-      "#Travel time becomes too long": "زمان کل سفر خیلی طولانی می‌شود",
-      "#Cost is too high when combining modes": "هزینه ترکیب چند روش خیلی زیاد است",
-      "#Safety concerns (traffic, theft, unsafe areas)": "نگرانی‌های ایمنی و امنیتی (ترافیک، سرقت، مناطق ناامن)",
-      "#Lack of reliable information (schedules, delays)": "اطلاعات قابل اعتماد کافی نیست (زمان‌بندی، تأخیر)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "تلاش جسمی خیلی زیاد است (مثلاً حمل دوچرخه یا پیاده‌روی طولانی)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
-      "#Weather-related difficulties": "مشکلات مربوط به آب‌وهوا",
-      "#I do not experience significant difficulties": "مشکل قابل توجهی ندارم",
       "#Other": "سایر",
-      "#When you face these difficulties, how do you mostly respond?": "وقتی با این مشکلات روبه‌رو می‌شوید معمولاً چه کار می‌کنید؟",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "استفاده از یکی از روش‌ها را کنار می‌گذارم (مثلاً دیگر دوچرخه‌ام را نمی‌برم)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
-      "#I change the time of travel (e.g. avoid peak hours)": "زمان سفر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم)",
-      "#I change the route or transfer point": "مسیر یا محل تعویض وسیله را تغییر می‌دهم",
-      "#I choose a different combination of modes": "ترکیب دیگری از روش‌های رفت‌وآمد را انتخاب می‌کنم",
-      "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
-      "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
-      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "هر چند وقت یک بار از خدمات جابه‌جایی اشتراکی مانند دوچرخه اشتراکی، اسکوتر برقی یا خودروی اشتراکی استفاده می‌کنید؟",
       "#I never use shared mobility services.": "هرگز از خدمات جابه‌جایی اشتراکی استفاده نمی‌کنم.",
       "#Once a month or less": "ماهی یک بار یا کمتر",
@@ -1493,33 +1152,7 @@
       "#e-scooter (private)": "Elektromos roller (saját)",
       "#e-scooter (shared)": "Elektromos roller (megosztott)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "Használ legalább hetente egyszer több közlekedési módot ugyanazon az utazáson belül? (Jelölje meg az összes megfelelőt)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (az út nagy részének fő közlekedési módjaként, nem csak rövid rá- vagy átszállási gyaloglásként)",
-      "#I don't use any combination": "Nem kombinálok több közlekedési módot",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "A járművek túl zsúfoltak (pl. nincs hely kerékpárnak vagy csomagnak)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "Gyenge az összehangolás a közlekedési módok között (hosszú várakozás, lekésett csatlakozás)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Hiányos az infrastruktúra (pl. nincs kerékpárparkoló vagy nem lehet kerékpárt vinni a tömegközlekedésre)",
-      "#Complicated transfers (stations far apart, unclear routes)": "Bonyolult az átszállás (az állomások messze vannak egymástól, az útvonalak nem egyértelműek)",
-      "#Travel time becomes too long": "Az utazási idő túl hosszú lesz",
-      "#Cost is too high when combining modes": "Túl magas a költség több közlekedési mód kombinálásakor",
-      "#Safety concerns (traffic, theft, unsafe areas)": "Biztonsági problémák (forgalom, lopás, nem biztonságos területek)",
-      "#Lack of reliable information (schedules, delays)": "Nincs elég megbízható információ (menetrend, késés)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Túl nagy a fizikai megterhelés (pl. kerékpár cipelése vagy hosszú gyaloglás)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
-      "#Weather-related difficulties": "Időjárással kapcsolatos nehézségek",
-      "#I do not experience significant difficulties": "Nem tapasztalok jelentős nehézséget",
       "#Other": "Egyéb",
-      "#When you face these difficulties, how do you mostly respond?": "Mit tesz általában, amikor ilyen nehézségekkel találkozik?",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Abbahagyom az egyik közlekedési mód használatát (pl. nem viszem magammal a kerékpárt)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Egyetlen közlekedési módra váltok (pl. csak autó vagy csak tömegközlekedés)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Megváltoztatom az utazás időpontját (pl. kerülöm a csúcsidőt)",
-      "#I change the route or transfer point": "Megváltoztatom az útvonalat vagy az átszállási pontot",
-      "#I choose a different combination of modes": "Más közlekedési módokat kombinálok",
-      "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
-      "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett közösségi kerékpárt használok)",
-      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "Milyen gyakran használ megosztott mobilitási szolgáltatásokat, például közösségi kerékpárt, elektromos rollert vagy autómegosztást?",
       "#I never use shared mobility services.": "Soha nem használok megosztott mobilitási szolgáltatást.",
       "#Once a month or less": "Havonta egyszer vagy ritkábban",
@@ -1619,33 +1252,7 @@
       "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
       "#e-scooter (shared)": "السكوتر الكهربائي (مشترك)",
       "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
-      "#Do you use any combination of the following modes in the same trip at least once a week? (Select all that apply)": "هل تُستخدم في الرحلة نفسها مجموعة من الوسائل التالية مرة واحدة على الأقل في الأسبوع؟ (يمكن اختيار كل ما ينطبق)",
-      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
-      "#I don't use any combination": "لا أستخدم أكثر من وسيلة في الرحلة نفسها",
-      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تظهر عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
-      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "المركبات مزدحمة جدًا (مثل عدم وجود مساحة للدراجة أو الأمتعة)",
-      "#Poor coordination between modes (long waiting times, missed connections)": "ضعف التنسيق بين الوسائل (انتظار طويل، فقدان وسيلة الربط)",
-      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "نقص البنية التحتية (مثل عدم وجود موقف للدراجات أو عدم السماح بالدراجة في النقل العام)",
-      "#Complicated transfers (stations far apart, unclear routes)": "التبديل بين الوسائل معقد (المحطات بعيدة عن بعضها، الطرق غير واضحة)",
-      "#Travel time becomes too long": "وقت الرحلة يصبح طويلًا جدًا",
-      "#Cost is too high when combining modes": "التكلفة مرتفعة جدًا عند الجمع بين عدة وسائل",
-      "#Safety concerns (traffic, theft, unsafe areas)": "مخاوف تتعلق بالأمان والسلامة (حركة المرور، السرقة، مناطق غير آمنة)",
-      "#Lack of reliable information (schedules, delays)": "نقص المعلومات الموثوقة (المواعيد، التأخير)",
-      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "الجهد البدني مرتفع جدًا (مثل حمل الدراجة أو المشي لمسافات طويلة)",
-      "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
-      "#Weather-related difficulties": "صعوبات بسبب الطقس",
-      "#I do not experience significant difficulties": "لا أواجه صعوبات كبيرة",
       "#Other": "أخرى",
-      "#When you face these difficulties, how do you mostly respond?": "ما الإجراء المعتاد عند ظهور هذه الصعوبات؟",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "أتوقف عن استخدام إحدى الوسائل (مثل عدم أخذ الدراجة معي)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "أنتقل إلى وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
-      "#I change the time of travel (e.g. avoid peak hours)": "أغيّر وقت الرحلة (مثل تجنب ساعات الذروة)",
-      "#I change the route or transfer point": "أغيّر الطريق أو نقطة التبديل",
-      "#I choose a different combination of modes": "أختار مزيجًا مختلفًا من وسائل التنقل",
-      "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
-      "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
-      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
       "#How often do you use shared mobility services (bike-share, e-scooter, car-share)?": "ما مدى تكرار استخدام خدمات التنقل المشترك، مثل الدراجات المشتركة أو السكوتر الكهربائي أو مشاركة السيارات؟",
       "#I never use shared mobility services.": "لا أستخدم خدمات التنقل المشترك أبدًا.",
       "#Once a month or less": "مرة في الشهر أو أقل",
