@@ -41,7 +41,9 @@ Rules applied:
    `motorcycle_weekly`).
    Who answers No is asked only why, and the chain stops there: CityMaaS `followUpStopWhen` hides "Continue".
    This replaces the earlier rule that everyone answers the walking safety questions (Lory, 2026-11-08, decision 2A).
-7. Wheelchairs, pushchairs, canes and other aids are covered by the walking welcome text, so questions stay short.
+7. Pushchairs, canes and other aids are covered by the walking welcome text, so questions stay short. Walking
+   questions that open with "When you walk" name the wheelchair too ("When you walk or use a wheelchair"; Italian
+   "sedia a rotelle", never "carrozzina", which means a pram) (Lory, 2026-11-08).
 8. Experience (stress, tiredness, time) and surroundings (noise, air, weather, cleanliness) are asked per way of
    travelling (decision 3B); the general travel questions are in `your_profile`.
 
@@ -344,9 +346,23 @@ chain that replaced it (walking road safety and walking security), and `smarturb
   "quando mi stanco"; French "circulation" and "je me déplace"; Hungarian "Különösebben senki".
 
 Versions follow the rules above; a question whose PlanEasy pool already holds a higher version moves on from that one.
-Still to decide: dropping the health benefit, height and social comfort questions, a shorter profile, several trip
-purposes, merging felt duplicates, grouping the 14 modes, the wheelchair wording in question texts against rule 7, the
-three reasons joined in "not walking because unsafe", the Gianicolense mapping and an evening follow-up question.
+Lory's decisions on these points (2026-11-08):
+
+1. `walk_health_benefit` is dropped from `walking_comfort`.
+2. `height` stays; its help now says it is asked only to estimate walking speed, because height changes step length.
+3. `public_transport_social_comfort` stays.
+4. The `your_profile` welcome is shorter: what it is about, one line on voluntary and skippable answers that are
+   not linked to the name and go to no public authority, then the link.
+5. `trip_purpose` (pre-trip) accepts several answers ("you can choose more than one").
+6. Walking questions that open with "When you walk" name the wheelchair (rule 7), in `walking_comfort`,
+   `walking_experience`, `walking_road_safety` and `walking_security`.
+7. `not_walk_reasons` (`walking_habits`) replaces "unsafe (traffic, crime or harassment)" with three reasons: traffic,
+   crime such as theft, harassment. `walking_safety` is not published and keeps its single question.
+8. The `home_neighbourhood` help no longer names Gianicolense; Portuense remains as the example.
+9. `economic_status` already offers "Prefer not to say" (`add_prefer_not_to_say`); nothing changed.
+
+Still to decide: merging felt duplicates between forms, grouping the 14 modes, an evening follow-up question and which
+profile questions could be dropped to make it shorter.
 
 ## Not yet covered
 
