@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Your trips",
     "questionnaire_id": "smarturbanity_walking_habits",
-    "questionnaire_version": "2.0.1",
+    "questionnaire_version": "2.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -200,6 +200,7 @@
             "answer_key": "height",
             "question_type": "single_option",
             "required": false,
+            "add_prefer_not_to_say": true,
             "options": [
               {
                 "text": "Less than 150 cm",
@@ -223,7 +224,7 @@
               }
             ],
             "question_id": "height",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "privacy_classification": "heightened_personal"
           }
         ]
@@ -320,14 +321,13 @@
               ]
             },
             "question_id": "walk_combined_modes",
-            "question_version": "2.0.1",
+            "question_version": "2.0.2",
             "privacy_classification": "heightened_personal"
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
             "answer_key": "walk_combined_difficulties",
             "question_type": "multiple_options",
-            "max_answers": 3,
             "options": [
               {
                 "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
@@ -392,7 +392,7 @@
               ]
             },
             "question_id": "walk_combined_difficulties",
-            "question_version": "1.1.1",
+            "question_version": "1.2.0",
             "privacy_classification": "heightened_personal"
           },
           {
@@ -456,7 +456,7 @@
               }
             },
             "question_id": "walk_combined_response",
-            "question_version": "1.0.1",
+            "question_version": "1.0.2",
             "privacy_classification": "heightened_personal"
           }
         ]
@@ -585,17 +585,17 @@
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
       "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
       "#Car": "Auto",
-      "#Car sharing": "Car sharing",
+      "#Car sharing": "Auto in condivisione (car sharing)",
       "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
       "#Bus": "Autobus",
       "#Tram": "Tram",
       "#Metro": "Metropolitana",
       "#Regional or suburban train": "Treno regionale o suburbano",
-      "#Bicycle/e-bike (private)": "Bicicletta/e-bike (privata)",
-      "#Bicycle/e-bike (shared)": "Bicicletta/e-bike (condivisa)",
+      "#Bicycle/e-bike (private)": "Bicicletta o bici elettrica (privata)",
+      "#Bicycle/e-bike (shared)": "Bicicletta o bici elettrica (condivisa)",
       "#e-scooter (private)": "Monopattino elettrico (privato)",
       "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
-      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o NCC (ad es. Uber, Bolt)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o auto con conducente (NCC, ad es. Uber, Bolt)",
       "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
@@ -616,7 +616,7 @@
       "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
       "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
       "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bici in condivisione invece della mia bicicletta)",
       "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
       "#Other": "Altro",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Quanto riesci a camminare, o a muoverti in sedia a rotelle, senza fermarti per un lungo riposo?",
@@ -639,7 +639,7 @@
       "#Moderate": "Moderato",
       "#Good": "Buono",
       "#High": "Alto",
-      "#Roughly how tall are you?": "Quanto sei alto o alta, più o meno?",
+      "#Roughly how tall are you?": "Qual è la tua altezza, più o meno?",
       "#Less than 150 cm": "Meno di 150 cm",
       "#150-164 cm": "150-164 cm",
       "#165-179 cm": "165-179 cm",

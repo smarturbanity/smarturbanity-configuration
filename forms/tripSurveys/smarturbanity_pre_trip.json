@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "4.3.1",
+    "questionnaire_version": "4.4.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "trip_phase": "pre",
@@ -18,7 +18,7 @@
       "title": "Before the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_pre_trip.svg",
       "image_alt": "#Smartphone showing a route, and a clock",
-      "description": "<p>Four quick questions before you start recording.</p>"
+      "description": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -33,7 +33,7 @@
         "questions": [
           {
             "question_id": "trip_mode",
-            "question_version": "2.1.1",
+            "question_version": "2.2.0",
             "text": "How do you plan to travel on this trip? (Select all that apply)",
             "answer_key": "trip_mode",
             "question_type": "multiple_options",
@@ -94,6 +94,10 @@
                 "value": "motorcycle"
               },
               {
+                "text": "Van or work vehicle",
+                "value": "van"
+              },
+              {
                 "text": "Taxi, private hire or app-based car service (e.g. Uber, FreeNow)",
                 "value": "taxi"
               }
@@ -102,7 +106,7 @@
           },
           {
             "question_id": "trip_purpose",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "text": "What is this trip for? (Think of where you are going)",
             "answer_key": "trip_purpose",
             "question_type": "single_option",
@@ -133,6 +137,10 @@
               {
                 "text": "Doctor or health appointment",
                 "value": "health"
+              },
+              {
+                "text": "Public office or paperwork (e.g. registry office, post office)",
+                "value": "public_office"
               },
               {
                 "text": "Leisure or visiting people",
@@ -175,7 +183,7 @@
           },
           {
             "question_id": "trip_company",
-            "question_version": "2.0.0",
+            "question_version": "2.0.1",
             "text": "Who or what are you travelling with? (Select all that apply)",
             "answer_key": "trip_company",
             "question_type": "multiple_options",
@@ -264,7 +272,9 @@
       "#Yes, one stop": "Yes, one stop",
       "#Yes, more than one stop": "Yes, more than one stop",
       "#I don't know yet": "I don't know yet",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Four quick questions before you start recording.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>",
+      "#Van or work vehicle": "Van or work vehicle",
+      "#Public office or paperwork (e.g. registry office, post office)": "Public office or paperwork (e.g. registry office, post office)"
     },
     "it": {
       "code": "it",
@@ -279,11 +289,11 @@
       "#Bicycle (own)": "Bicicletta (tua)",
       "#E-bike (own)": "Bici elettrica (tua)",
       "#E-scooter (own)": "Monopattino elettrico (tuo)",
-      "#Shared e-scooter": "Monopattino in sharing",
+      "#Shared e-scooter": "Monopattino elettrico in condivisione",
       "#Public transport (bus, tram, metro, train)": "Mezzi pubblici (bus, tram, metro, treno)",
       "#Car, as driver": "Auto, alla guida",
       "#Car, as passenger": "Auto, senza guidare",
-      "#Car sharing": "Car sharing",
+      "#Car sharing": "Auto in condivisione (car sharing)",
       "#Motorcycle or moped": "Moto o scooter",
       "#Work": "Lavoro",
       "#Study": "Studio",
@@ -298,21 +308,23 @@
       "#With a pet": "Con un animale domestico",
       "#How do you plan to travel on this trip? (Select all that apply)": "Come pensi di fare questo spostamento? (Puoi sceglierne più di uno)",
       "#On foot (also just to reach a stop)": "A piedi (anche solo per raggiungere una fermata)",
-      "#Shared e-bike": "Bici elettrica in sharing",
+      "#Shared e-bike": "Bici elettrica in condivisione",
       "#What is this trip for? (Think of where you are going)": "Qual è lo scopo di questo spostamento? (Pensa a dove stai andando)",
       "#Home": "Casa",
       "#A walk or exercise (no destination)": "Passeggiata o attività fisica (senza una meta)",
-      "#Shared bike": "Bici in sharing",
+      "#Shared bike": "Bici in condivisione",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente (ad es. Uber, FreeNow)",
-      "#With children on foot": "Con bambini e bambine che camminano",
-      "#With children in a pushchair or pram": "Con bambini e bambine nel passeggino",
-      "#With someone I need to care for": "Con una persona di cui mi devo prendere cura",
+      "#With children on foot": "Con minori che camminano",
+      "#With children in a pushchair or pram": "Con un passeggino o una carrozzina",
+      "#With someone I need to care for": "Con una persona che accompagno o assisto",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Pensi di fare delle soste lungo il tragitto? (ad es. un negozio o un bar)",
       "#No, I'm going straight there": "No, vado direttamente",
       "#Yes, one stop": "Sì, una sosta",
       "#Yes, more than one stop": "Sì, più di una sosta",
       "#I don't know yet": "Non lo so ancora",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Quattro domande veloci prima che l'app registri il percorso.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Quattro domande veloci prima che l'app registri il percorso.</p><p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p>",
+      "#Van or work vehicle": "Furgone o mezzo di lavoro",
+      "#Public office or paperwork (e.g. registry office, post office)": "Uffici pubblici o pratiche (ad es. anagrafe, posta)"
     },
     "fr": {
       "code": "fr",
@@ -325,7 +337,7 @@
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Si vous changez de mode de déplacement pendant le trajet, appuyez sur « Changer de mode » dans l’application.</p>",
       "#Wheelchair or mobility scooter": "Fauteuil roulant, manuel ou électrique",
       "#Bicycle (own)": "Vélo (personnel)",
-      "#E-bike (own)": "Vélo électrique (personnel)",
+      "#E-bike (own)": "Vélo à assistance électrique (personnel)",
       "#E-scooter (own)": "Trottinette électrique (personnelle)",
       "#Shared e-scooter": "Trottinette électrique en libre-service",
       "#Public transport (bus, tram, metro, train)": "Transports en commun (bus, tram, métro, train)",
@@ -346,7 +358,7 @@
       "#With a pet": "Avec un animal de compagnie",
       "#How do you plan to travel on this trip? (Select all that apply)": "Comment prévoyez-vous de vous déplacer pour ce trajet ? (Sélectionnez toutes les réponses qui s'appliquent)",
       "#On foot (also just to reach a stop)": "À pied (même seulement pour rejoindre un arrêt)",
-      "#Shared e-bike": "Vélo électrique en libre-service",
+      "#Shared e-bike": "Vélo à assistance électrique en libre-service",
       "#What is this trip for? (Think of where you are going)": "Quel est le but de ce trajet ? (Pensez à l'endroit où vous allez)",
       "#Home": "Domicile",
       "#A walk or exercise (no destination)": "Une promenade ou de l'exercice (sans destination)",
@@ -360,7 +372,9 @@
       "#Yes, one stop": "Oui, un arrêt",
       "#Yes, more than one stop": "Oui, plusieurs arrêts",
       "#I don't know yet": "Je ne sais pas encore",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Quatre questions rapides avant de commencer l’enregistrement.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Quatre questions rapides avant de commencer l’enregistrement.</p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p>",
+      "#Van or work vehicle": "Camionnette ou véhicule de travail",
+      "#Public office or paperwork (e.g. registry office, post office)": "Administration ou démarches (par ex. mairie, poste)"
     },
     "de": {
       "code": "de",
@@ -408,7 +422,9 @@
       "#Yes, one stop": "Ja, einen Zwischenstopp",
       "#Yes, more than one stop": "Ja, mehrere Zwischenstopps",
       "#I don't know yet": "Weiß ich noch nicht",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Vier kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Vier kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p>",
+      "#Van or work vehicle": "Lieferwagen oder Arbeitsfahrzeug",
+      "#Public office or paperwork (e.g. registry office, post office)": "Behörde oder Amtsgang (z. B. Bürgeramt, Post)"
     },
     "tr": {
       "code": "tr",
@@ -456,7 +472,9 @@
       "#Yes, one stop": "Evet, bir mola",
       "#Yes, more than one stop": "Evet, birden fazla mola",
       "#I don't know yet": "Henüz bilmiyorum",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p><p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p>",
+      "#Van or work vehicle": "Kamyonet veya iş aracı",
+      "#Public office or paperwork (e.g. registry office, post office)": "Resmî daire veya işlemler (örn. nüfus müdürlüğü, postane)"
     },
     "fa": {
       "code": "fa",
@@ -504,7 +522,9 @@
       "#Yes, one stop": "بله، یک توقف",
       "#Yes, more than one stop": "بله، بیش از یک توقف",
       "#I don't know yet": "هنوز نمی‌دانم",
-      "#<p>Four quick questions before you start recording.</p>": "<p>چهار پرسش کوتاه پیش از شروع ضبط.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>چهار پرسش کوتاه پیش از شروع ضبط.</p><p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p>",
+      "#Van or work vehicle": "ون یا خودروی کاری",
+      "#Public office or paperwork (e.g. registry office, post office)": "اداره دولتی یا کارهای اداری (مثلاً ثبت احوال، اداره پست)"
     },
     "hu": {
       "code": "hu",
@@ -552,7 +572,9 @@
       "#Yes, one stop": "Igen, egyszer megállok",
       "#Yes, more than one stop": "Igen, többször megállok",
       "#I don't know yet": "Még nem tudom",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Négy gyors kérdés, mielőtt elindítja a rögzítést.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Négy gyors kérdés, mielőtt elindítja a rögzítést.</p><p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p>",
+      "#Van or work vehicle": "Kisteherautó vagy munkajármű",
+      "#Public office or paperwork (e.g. registry office, post office)": "Hivatali ügyintézés (pl. okmányiroda, posta)"
     },
     "ar": {
       "code": "ar",
@@ -600,7 +622,9 @@
       "#Yes, one stop": "نعم، توقف واحد",
       "#Yes, more than one stop": "نعم، أكثر من توقف",
       "#I don't know yet": "لا أعرف بعد",
-      "#<p>Four quick questions before you start recording.</p>": "<p>أربعة أسئلة سريعة قبل بدء التسجيل.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>أربعة أسئلة سريعة قبل بدء التسجيل.</p><p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p>",
+      "#Van or work vehicle": "شاحنة صغيرة أو مركبة عمل",
+      "#Public office or paperwork (e.g. registry office, post office)": "مكتب حكومي أو معاملات إدارية (مثل السجل المدني، مكتب البريد)"
     }
   },
   "id": "smarturbanity_pre_trip",

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "4.6.1",
+    "questionnaire_version": "4.7.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "trip_phase": "post",
@@ -18,7 +18,7 @@
       "title": "After the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_post_trip.svg",
       "image_alt": "#Route ending at a flag with a check mark",
-      "description": "<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>"
+      "description": "<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -65,8 +65,8 @@
           },
           {
             "question_id": "trip_effort",
-            "question_version": "1.1.0",
-            "text": "How tiring was this trip, physically or mentally?",
+            "question_version": "2.0.0",
+            "text": "How physically tiring was this trip?",
             "answer_key": "trip_effort",
             "question_type": "single_option",
             "required": true,
@@ -96,9 +96,42 @@
             "privacy_classification": "heightened_personal"
           },
           {
+            "question_id": "trip_mental_effort",
+            "question_version": "1.0.0",
+            "text": "How mentally tiring was this trip (stress, attention, finding the way)?",
+            "answer_key": "trip_mental_effort",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "A lot",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ],
+            "privacy_classification": "heightened_personal"
+          },
+          {
             "question_id": "trip_traffic_safety",
-            "question_version": "1.0.3",
+            "question_version": "1.1.0",
             "text": "How safe from traffic did you feel on this trip?",
+            "help": "Think only of traffic: vehicles, their speed and the crossings.",
             "answer_key": "trip_traffic_safety",
             "question_type": "single_option",
             "required": true,
@@ -129,8 +162,9 @@
           },
           {
             "question_id": "trip_personal_security",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "text": "How safe did you feel from other people (e.g. theft, harassment)?",
+            "help": "Think only of other people, not of traffic.",
             "answer_key": "trip_personal_security",
             "question_type": "single_option",
             "required": true,
@@ -194,7 +228,7 @@
           },
           {
             "question_id": "route_familiarity",
-            "question_version": "1.0.2",
+            "question_version": "1.1.0",
             "text": "Which route did you take?",
             "answer_key": "route_familiarity",
             "question_type": "single_option",
@@ -204,6 +238,10 @@
               {
                 "text": "My usual route",
                 "value": "usual"
+              },
+              {
+                "text": "My usual route, but I had to change it on the way (e.g. roadworks, a closed street)",
+                "value": "diverted"
               },
               {
                 "text": "A route I know, but not my usual one",
@@ -218,14 +256,13 @@
           },
           {
             "question_id": "route_reasons",
-            "question_version": "2.1.0",
+            "question_version": "2.2.0",
             "text": "Why did you choose this route?",
             "answer_key": "route_reasons",
             "question_type": "multiple_options",
             "required": false,
             "add_other": true,
             "checks_inline": false,
-            "max_answers": 2,
             "options": [
               {
                 "text": "It's the quickest or shortest",
@@ -270,6 +307,10 @@
               {
                 "text": "My usual route was closed or diverted (e.g. roadworks)",
                 "value": "detour"
+              },
+              {
+                "text": "It is the only possible route, or the fixed line of my bus or tram",
+                "value": "only_route"
               },
               {
                 "text": "A navigation app suggested it",
@@ -329,7 +370,7 @@
           },
           {
             "question_id": "avoided_reasons",
-            "question_version": "2.3.0",
+            "question_version": "2.4.0",
             "text": "What was the problem there? (Select all that apply)",
             "answer_key": "avoided_reasons",
             "question_type": "multiple_options",
@@ -372,6 +413,10 @@
                 "value": "obstacles"
               },
               {
+                "text": "Dirt or dog droppings",
+                "value": "dirt"
+              },
+              {
                 "text": "Cars parked on the pavement or double-parked",
                 "value": "parked_cars"
               },
@@ -396,6 +441,10 @@
                 "value": "slope"
               },
               {
+                "text": "A lift or escalator was out of order",
+                "value": "broken_lift"
+              },
+              {
                 "text": "Something unpleasant happened to me there before",
                 "value": "past_bad_experience"
               }
@@ -404,7 +453,7 @@
           },
           {
             "question_id": "trip_incidents",
-            "question_version": "2.3.1",
+            "question_version": "2.4.0",
             "text": "Did any of these happen on this trip? (Select all that apply)",
             "answer_key": "trip_incidents",
             "question_type": "multiple_options",
@@ -434,7 +483,7 @@
                 "value": "close_call_bike_scooter"
               },
               {
-                "text": "A car door was opened in front of me while I was cycling",
+                "text": "A car door was opened in front of me",
                 "value": "car_door"
               },
               {
@@ -454,6 +503,14 @@
                 "value": "broken_bus_ramp"
               },
               {
+                "text": "A lift or escalator I needed was out of order",
+                "value": "broken_lift"
+              },
+              {
+                "text": "I could not find a parking space, or only far from where I was going",
+                "value": "parking"
+              },
+              {
                 "text": "I was harassed, threatened or made to feel uneasy",
                 "value": "harassment"
               }
@@ -462,7 +519,7 @@
           },
           {
             "question_id": "trip_feeling",
-            "question_version": "1.0.6",
+            "question_version": "1.1.0",
             "text": "How did you feel emotionally after this trip?",
             "answer_key": "trip_feeling",
             "question_type": "multiple_options",
@@ -504,8 +561,7 @@
                 "value": "anxious"
               }
             ],
-            "privacy_classification": "heightened_personal",
-            "max_answers": 2
+            "privacy_classification": "heightened_personal"
           },
           {
             "question_id": "trip_comment",
@@ -536,19 +592,22 @@
       "#As expected": "As expected",
       "#A little longer than expected": "A little longer than expected",
       "#Much longer than expected": "Much longer than expected",
-      "#How tiring was this trip, physically or mentally?": "How tiring was this trip, physically or mentally?",
+      "#How physically tiring was this trip?": "How physically tiring was this trip?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "How mentally tiring was this trip (stress, attention, finding the way)?",
       "#Not at all": "Not at all",
       "#Slightly": "Slightly",
       "#Moderately": "Moderately",
       "#A lot": "A lot",
       "#Extremely": "Extremely",
       "#How safe from traffic did you feel on this trip?": "How safe from traffic did you feel on this trip?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Think only of traffic: vehicles, their speed and the crossings.",
       "#Not at all safe": "Not at all safe",
       "#Slightly safe": "Slightly safe",
       "#Moderately safe": "Moderately safe",
       "#Very safe": "Very safe",
       "#Completely safe": "Completely safe",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "How safe did you feel from other people (e.g. theft, harassment)?",
+      "#Think only of other people, not of traffic.": "Think only of other people, not of traffic.",
       "#Which route did you take?": "Which route did you take?",
       "#My usual route": "My usual route",
       "#A route I know, but not my usual one": "A route I know, but not my usual one",
@@ -587,7 +646,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "I was nearly hit by a car, van, bus or motorbike",
       "#A vehicle did not stop for me at a zebra crossing": "A vehicle did not stop for me at a zebra crossing",
       "#A close call with a bike or e-scooter": "A close call with a bike or e-scooter",
-      "#A car door was opened in front of me while I was cycling": "A car door was opened in front of me while I was cycling",
+      "#A car door was opened in front of me": "A car door was opened in front of me",
       "#An obstacle on the pavement got in my way": "An obstacle on the pavement got in my way",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "A kerb without a ramp, or a blocked ramp, got in my way",
       "#I stumbled, tripped or fell": "I stumbled, tripped or fell",
@@ -615,7 +674,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "My usual route was closed or diverted (e.g. roadworks)",
       "#A vehicle passed too close to me": "A vehicle passed too close to me",
       "#Tired": "Tired",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "My usual route, but I had to change it on the way (e.g. roadworks, a closed street)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "It is the only possible route, or the fixed line of my bus or tram",
+      "#A lift or escalator was out of order": "A lift or escalator was out of order",
+      "#Dirt or dog droppings": "Dirt or dog droppings",
+      "#A lift or escalator I needed was out of order": "A lift or escalator I needed was out of order",
+      "#I could not find a parking space, or only far from where I was going": "I could not find a parking space, or only far from where I was going"
     },
     "it": {
       "code": "it",
@@ -632,19 +697,22 @@
       "#As expected": "Come previsto",
       "#A little longer than expected": "Un po' più lungo del previsto",
       "#Much longer than expected": "Molto più lungo del previsto",
-      "#How tiring was this trip, physically or mentally?": "Quanto è stato faticoso questo spostamento, fisicamente o mentalmente?",
+      "#How physically tiring was this trip?": "Quanto è stato faticoso fisicamente questo spostamento?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "Quanto è stato faticoso mentalmente questo spostamento (stress, attenzione, orientarsi)?",
       "#Not at all": "Per niente",
       "#Slightly": "Poco",
       "#Moderately": "Abbastanza",
       "#A lot": "Molto",
       "#Extremely": "Moltissimo",
       "#How safe from traffic did you feel on this trip?": "Quanto ti sentivi al sicuro dal traffico durante questo spostamento?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Pensa solo al traffico: veicoli, velocità e attraversamenti.",
       "#Not at all safe": "Per niente al sicuro",
       "#Slightly safe": "Poco al sicuro",
       "#Moderately safe": "Abbastanza al sicuro",
       "#Very safe": "Molto al sicuro",
       "#Completely safe": "Del tutto al sicuro",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "Quanto ti sentivi al sicuro rispetto ad altre persone (ad es. furti, molestie)?",
+      "#Think only of other people, not of traffic.": "Pensa solo alle altre persone, non al traffico.",
       "#Which route did you take?": "Che percorso hai fatto?",
       "#My usual route": "Il mio percorso abituale",
       "#A route I know, but not my usual one": "Un percorso che conosco, ma non quello abituale",
@@ -683,7 +751,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "Un'auto, un furgone, un autobus o una moto ha rischiato di investirmi o di urtarmi",
       "#A vehicle did not stop for me at a zebra crossing": "Un veicolo non si è fermato per farmi attraversare sulle strisce",
       "#A close call with a bike or e-scooter": "Ho rischiato uno scontro con una bici o un monopattino",
-      "#A car door was opened in front of me while I was cycling": "Mentre andavo in bici, qualcuno ha aperto la portiera di un'auto davanti a me",
+      "#A car door was opened in front of me": "Qualcuno ha aperto la portiera di un'auto davanti a me",
       "#An obstacle on the pavement got in my way": "Un ostacolo sul marciapiede mi ha bloccato il passaggio",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "Un bordo del marciapiede senza scivolo, o uno scivolo bloccato, mi ha ostacolato",
       "#I stumbled, tripped or fell": "Ho inciampato, ho perso l'equilibrio o ho fatto una caduta",
@@ -711,7 +779,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "Il mio solito percorso era chiuso o deviato (ad es. lavori)",
       "#A vehicle passed too close to me": "Un veicolo mi è passato troppo vicino",
       "#Tired": "Stanchezza",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Cinque brevi valutazioni sono obbligatorie, il resto è facoltativo. Le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Cinque brevi valutazioni sono obbligatorie, il resto è facoltativo. Le tue risposte ci aiutano a capire com'è andato davvero lo spostamento.</p><p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "Il mio percorso abituale, ma ho dovuto cambiarlo strada facendo (ad es. lavori, una strada chiusa)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "È l'unico percorso possibile, o la linea fissa del mio bus o tram",
+      "#A lift or escalator was out of order": "Un ascensore o una scala mobile era fuori servizio",
+      "#Dirt or dog droppings": "Sporcizia o escrementi di cane",
+      "#A lift or escalator I needed was out of order": "Un ascensore o una scala mobile che mi serviva era fuori servizio",
+      "#I could not find a parking space, or only far from where I was going": "Non ho trovato parcheggio, o solo lontano dalla mia meta"
     },
     "fr": {
       "code": "fr",
@@ -728,19 +802,22 @@
       "#As expected": "Comme prévu",
       "#A little longer than expected": "Un peu plus longtemps que prévu",
       "#Much longer than expected": "Beaucoup plus longtemps que prévu",
-      "#How tiring was this trip, physically or mentally?": "Ce trajet a-t-il été fatigant, physiquement ou mentalement ?",
+      "#How physically tiring was this trip?": "À quel point ce trajet a-t-il été fatigant physiquement ?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "À quel point ce trajet a-t-il été fatigant mentalement (stress, attention, trouver son chemin) ?",
       "#Not at all": "Pas du tout",
       "#Slightly": "Légèrement",
       "#Moderately": "Modérément",
       "#A lot": "Beaucoup",
       "#Extremely": "Énormément",
       "#How safe from traffic did you feel on this trip?": "À quel point vous sentiez-vous en sécurité face à la circulation pendant ce trajet ?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Pensez seulement à la circulation : les véhicules, leur vitesse et les traversées de rue.",
       "#Not at all safe": "Pas du tout en sécurité",
       "#Slightly safe": "Un peu en sécurité",
       "#Moderately safe": "Modérément en sécurité",
-      "#Very safe": "Tout à fait en sécurité",
-      "#Completely safe": "Complètement en sécurité",
+      "#Very safe": "Très en sécurité",
+      "#Completely safe": "Totalement en sécurité",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "À quel point vous sentiez-vous en sécurité vis-à-vis des autres personnes (par ex. vol, harcèlement) ?",
+      "#Think only of other people, not of traffic.": "Pensez seulement aux autres personnes, pas à la circulation.",
       "#Which route did you take?": "Quel itinéraire avez-vous pris ?",
       "#My usual route": "Mon itinéraire habituel",
       "#A route I know, but not my usual one": "Un itinéraire que je connais, mais pas mon itinéraire habituel",
@@ -779,7 +856,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "Une voiture, une camionnette, un bus ou une moto a failli me renverser",
       "#A vehicle did not stop for me at a zebra crossing": "Un véhicule ne s'est pas arrêté pour me laisser traverser au passage piéton",
       "#A close call with a bike or e-scooter": "J'ai failli entrer en collision avec un vélo ou une trottinette électrique",
-      "#A car door was opened in front of me while I was cycling": "Une portière de voiture a été ouverte devant moi pendant que je faisais du vélo",
+      "#A car door was opened in front of me": "Une portière de voiture a été ouverte juste devant moi",
       "#An obstacle on the pavement got in my way": "Un obstacle sur le trottoir m'a barré le passage",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "Un bord de trottoir sans rampe, ou une rampe bloquée, m'a barré le passage",
       "#I stumbled, tripped or fell": "J'ai trébuché, perdu l'équilibre ou fait une chute",
@@ -807,7 +884,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "Mon trajet habituel était fermé ou dévié (par ex. travaux)",
       "#A vehicle passed too close to me": "Un véhicule est passé trop près de moi",
       "#Tired": "Fatigue",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Cinq courtes évaluations sont obligatoires, le reste est facultatif. Vos réponses nous aident à comprendre comment le trajet s'est vraiment passé.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Cinq courtes évaluations sont obligatoires, le reste est facultatif. Vos réponses nous aident à comprendre comment le trajet s'est vraiment passé.</p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "Mon trajet habituel, mais j’ai dû le modifier en chemin (par ex. travaux, rue fermée)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "C’est le seul trajet possible, ou la ligne fixe de mon bus ou tram",
+      "#A lift or escalator was out of order": "Un ascenseur ou un escalator était en panne",
+      "#Dirt or dog droppings": "Saleté ou déjections canines",
+      "#A lift or escalator I needed was out of order": "Un ascenseur ou un escalator dont j’avais besoin était en panne",
+      "#I could not find a parking space, or only far from where I was going": "Je n’ai pas trouvé de place pour me garer, ou seulement loin de ma destination"
     },
     "de": {
       "code": "de",
@@ -824,19 +907,22 @@
       "#As expected": "Wie erwartet",
       "#A little longer than expected": "Etwas länger als erwartet",
       "#Much longer than expected": "Viel länger als erwartet",
-      "#How tiring was this trip, physically or mentally?": "Wie anstrengend war dieser Weg, körperlich oder geistig?",
+      "#How physically tiring was this trip?": "Wie anstrengend war dieser Weg körperlich?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "Wie anstrengend war dieser Weg geistig (Stress, Aufmerksamkeit, Orientierung)?",
       "#Not at all": "Überhaupt nicht",
       "#Slightly": "Wenig",
       "#Moderately": "Mittel",
       "#A lot": "Stark",
       "#Extremely": "Sehr stark",
       "#How safe from traffic did you feel on this trip?": "Wie sicher vor dem Verkehr haben Sie sich auf diesem Weg gefühlt?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Denken Sie nur an den Verkehr: Fahrzeuge, ihr Tempo und die Überwege.",
       "#Not at all safe": "Überhaupt nicht sicher",
       "#Slightly safe": "Wenig sicher",
       "#Moderately safe": "Einigermaßen sicher",
       "#Very safe": "Sehr sicher",
       "#Completely safe": "Vollkommen sicher",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "Wie sicher haben Sie sich gegenüber anderen Menschen gefühlt (z. B. Diebstahl, Belästigung)?",
+      "#Think only of other people, not of traffic.": "Denken Sie nur an andere Menschen, nicht an den Verkehr.",
       "#Which route did you take?": "Welche Route haben Sie genommen?",
       "#My usual route": "Meine übliche Route",
       "#A route I know, but not my usual one": "Eine Route, die ich kenne, aber nicht meine übliche",
@@ -875,7 +961,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "Ich wäre fast von einem Auto, Lieferwagen, Bus oder Motorrad angefahren worden",
       "#A vehicle did not stop for me at a zebra crossing": "Ein Fahrzeug hat am Zebrastreifen nicht für mich angehalten",
       "#A close call with a bike or e-scooter": "Beinahe-Zusammenstoß mit einem Fahrrad oder E-Scooter",
-      "#A car door was opened in front of me while I was cycling": "Beim Radfahren wurde vor mir eine Autotür geöffnet",
+      "#A car door was opened in front of me": "Vor mir wurde eine Autotür geöffnet",
       "#An obstacle on the pavement got in my way": "Ein Hindernis auf dem Gehweg hat mir den Weg versperrt",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "Ein Bordstein ohne Rampe oder eine zugestellte Rampe hat mir den Weg versperrt",
       "#I stumbled, tripped or fell": "Ich bin gestolpert, gestrauchelt oder gestürzt",
@@ -889,7 +975,7 @@
       "#Frustrated": "Frustriert",
       "#Anxious": "Ängstlich",
       "#How would you rate this trip overall?": "Wie würden Sie diesen Weg insgesamt bewerten?",
-      "#How did you feel emotionally after this trip?": "Wie haben Sie sich nach diesem Weg emotional gefühlt?",
+      "#How did you feel emotionally after this trip?": "Wie haben Sie sich nach diesem Weg gefühlt?",
       "#1 – Very poor": "1 – Sehr schlecht",
       "#2 – Poor": "2 – Schlecht",
       "#3 – Fair": "3 – Mittelmäßig",
@@ -903,7 +989,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "Mein üblicher Weg war gesperrt oder umgeleitet (z. B. Baustelle)",
       "#A vehicle passed too close to me": "Ein Fahrzeug ist zu nah an mir vorbeigefahren",
       "#Tired": "Müde",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Fünf kurze Bewertungen sind Pflicht, der Rest ist freiwillig. Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Fünf kurze Bewertungen sind Pflicht, der Rest ist freiwillig. Ihre Antworten helfen uns zu verstehen, wie der Weg wirklich verlaufen ist.</p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "Mein üblicher Weg, aber ich musste ihn unterwegs ändern (z. B. Baustelle, gesperrte Straße)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "Es ist der einzig mögliche Weg oder die feste Linie meines Busses oder meiner Straßenbahn",
+      "#A lift or escalator was out of order": "Ein Aufzug oder eine Rolltreppe war außer Betrieb",
+      "#Dirt or dog droppings": "Schmutz oder Hundekot",
+      "#A lift or escalator I needed was out of order": "Ein Aufzug oder eine Rolltreppe, die ich brauchte, war außer Betrieb",
+      "#I could not find a parking space, or only far from where I was going": "Ich habe keinen Parkplatz gefunden oder nur weit weg vom Ziel"
     },
     "tr": {
       "code": "tr",
@@ -920,19 +1012,22 @@
       "#As expected": "Beklendiği gibi",
       "#A little longer than expected": "Beklenenden biraz daha uzun",
       "#Much longer than expected": "Beklenenden çok daha uzun",
-      "#How tiring was this trip, physically or mentally?": "Bu yolculuk fiziksel veya zihinsel olarak ne kadar yorucuydu?",
+      "#How physically tiring was this trip?": "Bu yolculuk fiziksel olarak ne kadar yorucuydu?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "Bu yolculuk zihinsel olarak ne kadar yorucuydu (stres, dikkat, yolu bulmak)?",
       "#Not at all": "Hiç",
       "#Slightly": "Biraz",
       "#Moderately": "Orta derecede",
       "#A lot": "Çok",
       "#Extremely": "Son derece",
       "#How safe from traffic did you feel on this trip?": "Bu yolculukta kendinizi trafiğe karşı ne kadar güvende hissettiniz?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Yalnızca trafiği düşünün: araçlar, hızları ve geçitler.",
       "#Not at all safe": "Hiç güvende değil",
       "#Slightly safe": "Biraz güvende",
       "#Moderately safe": "Orta derecede güvende",
       "#Very safe": "Çok güvende",
       "#Completely safe": "Tamamen güvende",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "Diğer insanlara karşı kendinizi ne kadar güvende hissettiniz (örn. hırsızlık, taciz)?",
+      "#Think only of other people, not of traffic.": "Trafiği değil, yalnızca diğer insanları düşünün.",
       "#Which route did you take?": "Hangi güzergâhı kullandınız?",
       "#My usual route": "Her zamanki güzergâhım",
       "#A route I know, but not my usual one": "Bildiğim ama her zamanki olmayan bir güzergâh",
@@ -971,7 +1066,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "Az kalsın bir otomobil, kamyonet, otobüs veya motosiklet bana çarpıyordu",
       "#A vehicle did not stop for me at a zebra crossing": "Bir araç, yaya geçidinde geçmem için durmadı",
       "#A close call with a bike or e-scooter": "Bir bisiklet veya elektrikli scooter ile çarpışmaktan kıl payı kurtuldum",
-      "#A car door was opened in front of me while I was cycling": "Bisiklet sürerken önümde bir araba kapısı açıldı",
+      "#A car door was opened in front of me": "Önümde bir araba kapısı açıldı",
       "#An obstacle on the pavement got in my way": "Kaldırımdaki bir engel yolumu kapattı",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "Rampasız bir kaldırım kenarı veya önü kapalı bir rampa yolumu kapattı",
       "#I stumbled, tripped or fell": "Tökezledim, dengemi kaybettim veya düştüm",
@@ -999,7 +1094,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "Her zamanki yolum kapalıydı veya yönlendirilmişti (ör. yol çalışması)",
       "#A vehicle passed too close to me": "Bir araç çok yakınımdan geçti",
       "#Tired": "Yorgun",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Beş kısa değerlendirme zorunlu, gerisi isteğe bağlı. Yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Beş kısa değerlendirme zorunlu, gerisi isteğe bağlı. Yanıtlarınız yolculuğun gerçekte nasıl geçtiğini anlamamıza yardımcı olur.</p><p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "Her zamanki yolum, ama yolda değiştirmek zorunda kaldım (örn. yol çalışması, kapalı bir sokak)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "Tek olası yol bu ya da otobüsümün veya tramvayımın sabit hattı",
+      "#A lift or escalator was out of order": "Bir asansör veya yürüyen merdiven çalışmıyordu",
+      "#Dirt or dog droppings": "Kir veya köpek dışkısı",
+      "#A lift or escalator I needed was out of order": "İhtiyacım olan bir asansör veya yürüyen merdiven çalışmıyordu",
+      "#I could not find a parking space, or only far from where I was going": "Park yeri bulamadım ya da yalnızca gideceğim yerden uzakta buldum"
     },
     "fa": {
       "code": "fa",
@@ -1016,19 +1117,22 @@
       "#As expected": "مطابق انتظار",
       "#A little longer than expected": "کمی طولانی‌تر از انتظار",
       "#Much longer than expected": "بسیار طولانی‌تر از حد انتظار",
-      "#How tiring was this trip, physically or mentally?": "این سفر از نظر جسمی یا ذهنی چقدر خسته‌کننده بود؟",
+      "#How physically tiring was this trip?": "این سفر از نظر جسمی چقدر خسته‌کننده بود؟",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "این سفر از نظر ذهنی چقدر خسته‌کننده بود (استرس، تمرکز، پیدا کردن مسیر)؟",
       "#Not at all": "اصلاً",
       "#Slightly": "کمی",
       "#Moderately": "تا حدی",
       "#A lot": "زیاد",
       "#Extremely": "به‌شدت",
       "#How safe from traffic did you feel on this trip?": "در این سفر چقدر خود را در برابر ترافیک در امان احساس کردید؟",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "فقط به ترافیک فکر کنید: وسایل نقلیه، سرعتشان و محل‌های عبور.",
       "#Not at all safe": "اصلاً امن نیست",
       "#Slightly safe": "کمی امن",
       "#Moderately safe": "نسبتاً امن",
       "#Very safe": "بسیار امن",
       "#Completely safe": "کاملاً امن",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "چقدر خود را در برابر افراد دیگر (مثلاً سرقت، مزاحمت) در امان احساس کردید؟",
+      "#Think only of other people, not of traffic.": "فقط به افراد دیگر فکر کنید، نه به ترافیک.",
       "#Which route did you take?": "کدام مسیر را رفتید؟",
       "#My usual route": "مسیر همیشگی من",
       "#A route I know, but not my usual one": "مسیری که می‌شناسم، اما مسیر همیشگی‌ام نیست",
@@ -1067,7 +1171,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "نزدیک بود یک ماشین، ون، اتوبوس یا موتورسیکلت با من برخورد کند",
       "#A vehicle did not stop for me at a zebra crossing": "یک وسیله نقلیه در خط عابر پیاده برای من توقف نکرد",
       "#A close call with a bike or e-scooter": "نزدیک بود با یک دوچرخه یا اسکوتر برقی برخورد کنم",
-      "#A car door was opened in front of me while I was cycling": "وقتی دوچرخه‌سواری می‌کردم، درِ یک خودرو جلوی من باز شد",
+      "#A car door was opened in front of me": "درِ یک خودرو جلوی من باز شد",
       "#An obstacle on the pavement got in my way": "مانعی روی پیاده‌رو راه مرا بست",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "لبه پیاده‌رو بدون رمپ، یا رمپ مسدود، راه مرا بست",
       "#I stumbled, tripped or fell": "سکندری خوردم، پایم گیر کرد یا زمین خوردم",
@@ -1081,7 +1185,7 @@
       "#Frustrated": "کلافه",
       "#Anxious": "نگران",
       "#How would you rate this trip overall?": "در مجموع، این سفر را چگونه ارزیابی می‌کنید؟",
-      "#How did you feel emotionally after this trip?": "بعد از این سفر چه احساس عاطفی داشتید؟",
+      "#How did you feel emotionally after this trip?": "بعد از این سفر چه حسی داشتید؟",
       "#1 – Very poor": "۱ – بسیار بد",
       "#2 – Poor": "۲ – بد",
       "#3 – Fair": "۳ – متوسط",
@@ -1095,7 +1199,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "مسیر همیشگی‌ام بسته بود یا تغییر کرده بود (مثلاً به‌خاطر کارهای عمرانی)",
       "#A vehicle passed too close to me": "یک وسیلهٔ نقلیه خیلی نزدیک از کنارم رد شد",
       "#Tired": "خسته",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>پنج ارزیابی کوتاه الزامی است و بقیه اختیاری است. پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>پنج ارزیابی کوتاه الزامی است و بقیه اختیاری است. پاسخ‌های شما به ما کمک می‌کند بفهمیم سفر واقعاً چگونه گذشت.</p><p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "مسیر همیشگی‌ام، اما مجبور شدم در راه آن را تغییر دهم (مثلاً به‌خاطر کارهای عمرانی یا خیابان بسته)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "تنها مسیر ممکن است، یا مسیر ثابت اتوبوس یا تراموای من",
+      "#A lift or escalator was out of order": "یک آسانسور یا پله برقی از کار افتاده بود",
+      "#Dirt or dog droppings": "کثیفی یا مدفوع سگ",
+      "#A lift or escalator I needed was out of order": "آسانسور یا پله برقی‌ای که لازم داشتم از کار افتاده بود",
+      "#I could not find a parking space, or only far from where I was going": "جای پارک پیدا نکردم، یا فقط دور از مقصدم پیدا کردم"
     },
     "hu": {
       "code": "hu",
@@ -1112,19 +1222,22 @@
       "#As expected": "A vártnak megfelelően",
       "#A little longer than expected": "Kicsit hosszabb a vártnál",
       "#Much longer than expected": "Sokkal hosszabb a vártnál",
-      "#How tiring was this trip, physically or mentally?": "Mennyire volt fárasztó ez az út fizikailag vagy lelkileg?",
+      "#How physically tiring was this trip?": "Mennyire volt fizikailag megterhelő ez az út?",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "Mennyire volt mentálisan megterhelő ez az út (stressz, figyelem, tájékozódás)?",
       "#Not at all": "Egyáltalán nem",
       "#Slightly": "Kissé",
       "#Moderately": "Közepesen",
       "#A lot": "Nagyon",
       "#Extremely": "Rendkívül",
       "#How safe from traffic did you feel on this trip?": "Mennyire érezte magát biztonságban a forgalomtól ezen az úton?",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "Csak a forgalomra gondoljon: a járművekre, a sebességükre és az átkelőkre.",
       "#Not at all safe": "Egyáltalán nem biztonságban",
       "#Slightly safe": "Kissé biztonságban",
       "#Moderately safe": "Közepesen biztonságban",
       "#Very safe": "Nagyon biztonságban",
       "#Completely safe": "Teljesen biztonságban",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "Mennyire érezte magát biztonságban más emberektől (pl. lopás, zaklatás)?",
+      "#Think only of other people, not of traffic.": "Csak a többi emberre gondoljon, ne a forgalomra.",
       "#Which route did you take?": "Melyik útvonalat választotta?",
       "#My usual route": "A szokásos útvonalam",
       "#A route I know, but not my usual one": "Egy ismert, de nem a szokásos útvonalam",
@@ -1163,7 +1276,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "Majdnem elütött egy autó, kisteherautó, busz vagy motor",
       "#A vehicle did not stop for me at a zebra crossing": "Egy jármű nem állt meg, hogy átkelhessek a zebrán",
       "#A close call with a bike or e-scooter": "Majdnem összeütköztem egy kerékpárral vagy e-rollerrel",
-      "#A car door was opened in front of me while I was cycling": "Biciklizés közben valaki kinyitotta előttem egy autó ajtaját",
+      "#A car door was opened in front of me": "Valaki kinyitotta előttem egy autó ajtaját",
       "#An obstacle on the pavement got in my way": "A járdán egy akadály elállta az utamat",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "Rámpa nélküli járdaszegély vagy eltorlaszolt rámpa állta az utamat",
       "#I stumbled, tripped or fell": "Megbotlottam, elvesztettem az egyensúlyomat vagy elestem",
@@ -1191,7 +1304,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "A szokásos útvonalam le volt zárva vagy el volt terelve (pl. útépítés)",
       "#A vehicle passed too close to me": "Egy jármű túl közel haladt el mellettem",
       "#Tired": "Fáradtnak",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>Öt rövid értékelés kötelező, a többi nem kötelező. Válaszai segítenek megérteni, hogyan zajlott valójában az út.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Öt rövid értékelés kötelező, a többi nem kötelező. Válaszai segítenek megérteni, hogyan zajlott valójában az út.</p><p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "A szokásos útvonalam, de útközben változtatnom kellett rajta (pl. útépítés, lezárt utca miatt)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "Ez az egyetlen lehetséges útvonal, vagy a buszom, villamosom kötött vonala",
+      "#A lift or escalator was out of order": "Egy lift vagy mozgólépcső nem működött",
+      "#Dirt or dog droppings": "Kosz vagy kutyapiszok",
+      "#A lift or escalator I needed was out of order": "Egy lift vagy mozgólépcső, amelyre szükségem volt, nem működött",
+      "#I could not find a parking space, or only far from where I was going": "Nem találtam parkolóhelyet, vagy csak messze attól, ahová mentem"
     },
     "ar": {
       "code": "ar",
@@ -1208,19 +1327,22 @@
       "#As expected": "كما هو متوقع",
       "#A little longer than expected": "أطول قليلًا من المتوقع",
       "#Much longer than expected": "أطول بكثير مما توقعت",
-      "#How tiring was this trip, physically or mentally?": "كم كانت هذه الرحلة متعبة جسديًا أو ذهنيًا؟",
+      "#How physically tiring was this trip?": "ما مدى الإرهاق الجسدي في هذه الرحلة؟",
+      "#How mentally tiring was this trip (stress, attention, finding the way)?": "ما مدى الإرهاق الذهني في هذه الرحلة (التوتر، الانتباه، إيجاد الطريق)؟",
       "#Not at all": "على الإطلاق",
       "#Slightly": "قليلًا",
       "#Moderately": "بدرجة متوسطة",
       "#A lot": "كثيرًا",
       "#Extremely": "للغاية",
       "#How safe from traffic did you feel on this trip?": "إلى أي مدى شعرت بالأمان من حركة المرور في هذه الرحلة؟",
+      "#Think only of traffic: vehicles, their speed and the crossings.": "فكّر في حركة المرور فقط: المركبات وسرعتها وأماكن العبور.",
       "#Not at all safe": "لم أشعر بالأمان إطلاقًا",
       "#Slightly safe": "شعرت بقليل من الأمان",
       "#Moderately safe": "شعرت بالأمان إلى حد ما",
       "#Very safe": "شعرت بأمان كبير",
       "#Completely safe": "شعرت بأمان تام",
       "#How safe did you feel from other people (e.g. theft, harassment)?": "إلى أي مدى شعرت بالأمان من الأشخاص الآخرين (مثل السرقة أو التحرش)؟",
+      "#Think only of other people, not of traffic.": "فكّر في الأشخاص الآخرين فقط، وليس في حركة المرور.",
       "#Which route did you take?": "أي مسار سلكت؟",
       "#My usual route": "مساري المعتاد",
       "#A route I know, but not my usual one": "مسار أعرفه، لكنه ليس مساري المعتاد",
@@ -1259,7 +1381,7 @@
       "#I was nearly hit by a car, van, bus or motorbike": "كدت أن تصدمني سيارة أو شاحنة صغيرة أو حافلة أو دراجة نارية",
       "#A vehicle did not stop for me at a zebra crossing": "لم تتوقف مركبة لتسمح لي بالعبور عند ممر المشاة",
       "#A close call with a bike or e-scooter": "كدت أن أصطدم بدراجة أو سكوتر كهربائي",
-      "#A car door was opened in front of me while I was cycling": "فُتح باب سيارة أمامي أثناء ركوبي الدراجة",
+      "#A car door was opened in front of me": "فُتح باب سيارة أمامي",
       "#An obstacle on the pavement got in my way": "سدّ عائق على الرصيف طريقي",
       "#A kerb without a ramp, or a blocked ramp, got in my way": "اعترضت طريقي حافة رصيف بلا منحدر، أو منحدر مسدود",
       "#I stumbled, tripped or fell": "تعثرت أو اختل توازني أو سقطت",
@@ -1287,7 +1409,13 @@
       "#My usual route was closed or diverted (e.g. roadworks)": "كان طريقي المعتاد مغلقًا أو محوّلًا (مثل أشغال الطرق)",
       "#A vehicle passed too close to me": "مرّت مركبة قريبة جدًا مني",
       "#Tired": "تعب",
-      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p>": "<p>خمسة تقييمات قصيرة إلزامية، والباقي اختياري. تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p>"
+      "#<p>Five short ratings are required, the rest is optional. Your answers help us understand how the trip really went.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>خمسة تقييمات قصيرة إلزامية، والباقي اختياري. تساعدنا إجاباتك على فهم كيف سارت الرحلة فعلًا.</p><p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p>",
+      "#My usual route, but I had to change it on the way (e.g. roadworks, a closed street)": "طريقي المعتاد، لكن اضطررت إلى تغييره أثناء الطريق (مثل أعمال طرق أو شارع مغلق)",
+      "#It is the only possible route, or the fixed line of my bus or tram": "إنه الطريق الوحيد الممكن، أو الخط الثابت للحافلة أو الترام الذي أستقله",
+      "#A lift or escalator was out of order": "كان مصعد أو سلم متحرك معطلًا",
+      "#Dirt or dog droppings": "أوساخ أو فضلات كلاب",
+      "#A lift or escalator I needed was out of order": "كان مصعد أو سلم متحرك أحتاج إليه معطلًا",
+      "#I could not find a parking space, or only far from where I was going": "لم أجد مكانًا لركن السيارة، أو وجدته بعيدًا عن وجهتي فقط"
     }
   },
   "id": "smarturbanity_post_trip",

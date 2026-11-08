@@ -275,6 +275,46 @@ gender-neutral scale labels (Arabic stress and tiredness), "travel" as everyday 
 (Hungarian), خاستگاه for "origin" in the harassment questions (Persian), and the gender question without an added
 "(male / female)". Every form with corrected texts moved by a patch version, together with the questions that use them.
 
+## Persona test fixes (rounds 18–27)
+
+On 2026-11-08 the open issues of the persona tests that were still present in the forms were fixed. Lory's decisions:
+gender keeps two options plus "Prefer not to say"; no answer limits; Yes/No lists get "Doesn't apply to me"; only true
+duplicates are merged; height and professional role can be skipped with "Prefer not to say".
+
+- **Who reads the answers.** The pre-trip, post-trip and Your profile welcome pages now say that only the SmartUrbanity
+  research team reads individual answers and that they are not sent to any public authority.
+- **No answer limits.** Every "choose up to N" limit was removed from the active forms (the post-trip route reasons and
+  feelings, the anxiety, dissatisfaction and combined-trip questions of every way of travelling, the improvement and
+  motivation lists, the Safety lists and the Your profile reasons and choice factors).
+- **"Doesn't apply to me".** Added as a third answer to the Yes/No questions of the road safety, security and public
+  transport comfort forms that have no gate before them.
+- **Two questions in one, split.** Post-trip effort is now physical effort (required) plus mental effort (optional);
+  "Crowding or conflicts with other road users" is now two options, "Crowding" and "Conflicts with other road users", in
+  every road safety form and in Safety; the walking crossing question became "longer detours or avoid streets" plus a new
+  "feel rushed or unsure when crossing"; the sidewalk obstacles question became "walk closer to traffic" plus a new
+  "change your path or make a detour". The post-trip traffic and personal safety ratings got a one-line hint each.
+- **Missing options.** Post-trip: a diverted usual route, "only possible route or fixed line", a broken lift or
+  escalator (problem place and incidents), dirt or dog droppings, no parking; the car door incident is no longer
+  limited to cycling. Pre-trip: van or work vehicle, public office or paperwork.
+- **Your profile.** Height and professional role offer "Prefer not to say"; the neighbourhood hint names Gianicolense
+  and Portuense as examples of unofficial names.
+- **Wording.** Italian: no "bambini e bambine", "essere visto", "sconvolgono", "mi tiene attivo", "alto o alta" or
+  "nucleo familiare" (except the income question, left as it is); "sharing", "e-bike" and bare "NCC" replaced by Italian
+  words. German: "Mäßig" became "Mittel" ("Einigermaßen stressig"), the feeling and appearance stems were fixed;
+  "Ziemlich" stays, as the usual German scale word. French: "Très / Totalement en sécurité", "Vélo à assistance
+  électrique", and the health option no longer starts like the next one; Turkish health option likewise; Persian
+  feeling stem.
+
+Versions: questions with removed or split options moved by a major version, questions with added options, hints or
+removed limits by a minor version, translation-only changes by a patch; every changed form moved by a minor version
+(post-trip 4.7.0, pre-trip 4.4.0, Your profile 1.17.0) or, for translation-only forms, a patch.
+
+Left open on purpose: the income question (PS20-2), the pre-trip mode grouping and the required company question
+(TQ-9, TQ19-6), the mobility limitation wording (Q23-15), the personal safety items (Q27-7). Felt duplicates between
+forms are different nuances and stay (Q26-3, Q26-4, Q26-6, Q26-7, Q26-9, Q26-10). Also not changed: the Hungarian
+title and the Latin-script brand in Persian (Q27-9), the Turkish "Mod değiştir" that matches the app button, and the
+answer limits of the location reports, whose versions are pinned in the manifests.
+
 ## Not yet covered
 
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
