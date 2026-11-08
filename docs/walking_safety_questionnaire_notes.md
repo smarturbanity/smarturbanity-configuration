@@ -3,16 +3,18 @@
 Two new forms replace the walking material spread across `future/smarturbanity_walking.json`,
 `smarturbanity_safety.json` and `future/smarturbanity_safety_environment.json`:
 
-- `smarturbanity_walking_safety` (Part 1, about 3 minutes, 10 questions);
+- `smarturbanity_walking_safety` (Part 1, about 3 minutes, 10 questions plus 4 for people who rarely walk);
 - `smarturbanity_walking_safety_details` (Part 2, follow-up offered after Part 1, 29 questions).
 
 Rules applied:
 
-1. Every question is taken from an existing form, rephrased as Yes/No or split per option; nothing new is asked.
+1. Every question is taken from an existing form, rephrased as Yes/No or split per option. The only new questions are the
+   four reasons for walking rarely, requested by Lory on 2026-11-08 (see Part 1).
 2. "Yes" always means the problem is present (or, for improvements, that the change would help).
 3. New question ids end in `_yn` (except `walk_days`, reused unchanged), so answers never mix with the old 5-point or multiple-choice data.
 4. Only `walk_days` is required; all others are optional, as in the safety form, because some touch harassment.
-5. Everyone answers all Part 1 questions, including people who walk less than once a week: `walk_days` only describes how often they walk.
+5. Everyone answers all Part 1 safety questions, including people who walk less than once a week. Who answers No to
+   `walk_days` is first asked why, including whether safety is the reason.
 6. Wheelchairs, pushchairs, canes and other aids are covered by the welcome text, so questions stay short.
 
 Both forms sit in the disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval;
@@ -23,6 +25,10 @@ the old forms and questions are removed only after that.
 | New id | Source | Data change |
 |---|---|---|
 | `walk_days` | walking `walk_days` | unchanged |
+| `not_walk_distance_yn` | new; reason "time efficiency" in daily travel `choice_factors` | Yes/No, only if `walk_days` = No |
+| `not_walk_effort_yn` | new; reason "physical comfort and effort" in daily travel `choice_factors` | Yes/No, only if `walk_days` = No; health data |
+| `not_walk_unsafe_yn` | new; reason "personal safety and security" in daily travel `choice_factors` | Yes/No, only if `walk_days` = No |
+| `not_walk_streets_yn` | new; comfort options of walking `walk_improvements` (sidewalks, shade, benches) | Yes/No, only if `walk_days` = No |
 | `fast_traffic_along_unsafe_yn` | safety `fast_vehicles`, walking `avoid_fast_traffic` | 5-point frequency → Yes/No; walking along roads only |
 | `fast_traffic_crossing_unsafe_yn` | safety `fast_vehicles`, walking `avoid_fast_traffic` | 5-point frequency → Yes/No; crossing roads only |
 | `unsafe_crossings_yn` | walking `avoid_dangerous_crossing` | 5-point → Yes/No |
