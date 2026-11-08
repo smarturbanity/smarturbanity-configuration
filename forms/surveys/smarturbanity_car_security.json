@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Car – Personal security",
     "questionnaire_id": "smarturbanity_car_security",
-    "questionnaire_version": "3.0.0",
+    "questionnaire_version": "3.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -16,7 +16,7 @@
       "title": "Car – Personal security",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car.svg",
       "image_alt": "#Car on a street",
-      "description": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -76,6 +76,57 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "When you feel unsafe in the evening, what do you change?",
+            "help": "You can choose more than one answer.",
+            "answer_key": "car_evening_insecure_changes",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "I change my route",
+                "value": "change_route"
+              },
+              {
+                "text": "I change the time",
+                "value": "change_time"
+              },
+              {
+                "text": "I share my location with someone",
+                "value": "share_location"
+              },
+              {
+                "text": "I ask someone to come with me",
+                "value": "accompanied"
+              },
+              {
+                "text": "I use a different means of transport",
+                "value": "other_mode"
+              },
+              {
+                "text": "I give up going out",
+                "value": "stay_home"
+              },
+              {
+                "text": "Nothing",
+                "value": "nothing",
+                "exclusive": true
+              },
+              {
+                "text": "Prefer not to say",
+                "value": "prefer_not_to_say",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "show_if": {
+              "car_evening_insecure": [
+                "yes"
+              ]
+            },
+            "question_id": "car_evening_insecure_changes",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
             "text": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
             "answer_key": "car_insecurity_factors",
             "question_type": "multiple_options",
@@ -109,6 +160,10 @@
                 "value": "overcrowding"
               },
               {
+                "text": "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)",
+                "value": "no_orientation_cues"
+              },
+              {
                 "text": "None of these",
                 "value": "none",
                 "exclusive": true
@@ -116,7 +171,7 @@
             ],
             "required": false,
             "question_id": "car_insecurity_factors",
-            "question_version": "1.0.1",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -168,7 +223,6 @@
       "#Car on a street": "Car on a street",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
       "#Places with few people around (isolated or deserted areas)": "Places with few people around (isolated or deserted areas)",
       "#People behaving aggressively or in an intimidating way": "People behaving aggressively or in an intimidating way",
@@ -177,7 +231,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "No surveillance or security measures (e.g. no cameras, no staff)",
       "#Incidents that happened to me or were reported in the area": "Incidents that happened to me or were reported in the area",
       "#Overcrowded or chaotic places": "Overcrowded or chaotic places",
-      "#None of these": "None of these"
+      "#None of these": "None of these",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)",
+      "#When you feel unsafe in the evening, what do you change?": "When you feel unsafe in the evening, what do you change?",
+      "#You can choose more than one answer.": "You can choose more than one answer.",
+      "#I change my route": "I change my route",
+      "#I change the time": "I change the time",
+      "#I share my location with someone": "I share my location with someone",
+      "#I ask someone to come with me": "I ask someone to come with me",
+      "#I use a different means of transport": "I use a different means of transport",
+      "#I give up going out": "I give up going out",
+      "#Nothing": "Nothing",
+      "#Prefer not to say": "Prefer not to say",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
       "code": "it",
@@ -193,7 +259,6 @@
       "#Car on a street": "Auto su una strada",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando viaggi in auto</b>. Alla maggior parte delle domande si risponde con Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Quando viaggi in auto, cosa ti fa sentire meno al sicuro da reati o molestie? (Seleziona tutte le opzioni applicabili)",
       "#Places with few people around (isolated or deserted areas)": "Luoghi con poca gente (zone isolate o deserte)",
       "#People behaving aggressively or in an intimidating way": "Persone che si comportano in modo aggressivo o intimidatorio",
@@ -202,7 +267,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "Mancanza di sorveglianza o di misure di sicurezza (es. niente telecamere, niente personale)",
       "#Incidents that happened to me or were reported in the area": "Episodi accaduti a me o segnalati nella zona",
       "#Overcrowded or chaotic places": "Luoghi sovraffollati o caotici",
-      "#None of these": "Nessuna di queste"
+      "#None of these": "Nessuna di queste",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Pochi riferimenti per orientarmi senza vista (es. niente percorsi tattili o annunci sonori)",
+      "#When you feel unsafe in the evening, what do you change?": "Quando la sera non ti senti al sicuro, cosa cambi?",
+      "#You can choose more than one answer.": "Puoi scegliere più di una risposta.",
+      "#I change my route": "Cambio strada",
+      "#I change the time": "Cambio orario",
+      "#I share my location with someone": "Condivido la mia posizione con qualcuno",
+      "#I ask someone to come with me": "Mi faccio accompagnare",
+      "#I use a different means of transport": "Prendo un altro mezzo",
+      "#I give up going out": "Rinuncio a uscire",
+      "#Nothing": "Niente",
+      "#Prefer not to say": "Preferisco non rispondere",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando viaggi in auto</b>. Alla maggior parte delle domande si risponde con Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
       "code": "fr",
@@ -218,7 +295,6 @@
       "#Car on a street": "Voiture dans une rue",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous vous déplacez en voiture</b>. On répond à la plupart des questions par Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous fait vous sentir moins à l’abri de la criminalité ou du harcèlement ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Places with few people around (isolated or deserted areas)": "Les lieux où il y a peu de monde (zones isolées ou désertes)",
       "#People behaving aggressively or in an intimidating way": "Des personnes qui se comportent de façon agressive ou intimidante",
@@ -227,7 +303,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "L’absence de surveillance ou de mesures de sécurité (par ex. pas de caméras, pas de personnel)",
       "#Incidents that happened to me or were reported in the area": "Des incidents qui me sont arrivés ou qui ont été signalés dans le quartier",
       "#Overcrowded or chaotic places": "Les lieux bondés ou chaotiques",
-      "#None of these": "Aucun de ces éléments"
+      "#None of these": "Aucun de ces éléments",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Peu de repères pour m’orienter sans la vue (par ex. pas de bandes podotactiles ni d’annonces sonores)",
+      "#When you feel unsafe in the evening, what do you change?": "Quand vous ne vous sentez pas en sécurité le soir, que changez-vous ?",
+      "#You can choose more than one answer.": "Vous pouvez choisir plusieurs réponses.",
+      "#I change my route": "Je change d’itinéraire",
+      "#I change the time": "Je change d’horaire",
+      "#I share my location with someone": "Je partage ma position avec quelqu’un",
+      "#I ask someone to come with me": "Je me fais accompagner",
+      "#I use a different means of transport": "Je prends un autre moyen de transport",
+      "#I give up going out": "Je renonce à sortir",
+      "#Nothing": "Rien",
+      "#Prefer not to say": "Je préfère ne pas répondre",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous vous déplacez en voiture</b>. On répond à la plupart des questions par Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
       "code": "de",
@@ -243,7 +331,6 @@
       "#Car on a street": "Auto auf einer Straße",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie mit dem Auto unterwegs sind</b>. Die meisten Fragen beantworten Sie mit Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Was gibt Ihnen bei Autofahrten ein geringeres Sicherheitsgefühl vor Kriminalität oder Belästigung? (Wählen Sie alles Zutreffende aus)",
       "#Places with few people around (isolated or deserted areas)": "Orte, an denen wenige Menschen sind (abgelegene oder menschenleere Gegenden)",
       "#People behaving aggressively or in an intimidating way": "Menschen, die sich aggressiv oder einschüchternd verhalten",
@@ -252,7 +339,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "Fehlende Überwachung oder Sicherheitsmaßnahmen (z. B. keine Kameras, kein Personal)",
       "#Incidents that happened to me or were reported in the area": "Vorfälle, die mir passiert sind oder in der Gegend gemeldet wurden",
       "#Overcrowded or chaotic places": "Überfüllte oder chaotische Orte",
-      "#None of these": "Keine davon"
+      "#None of these": "Keine davon",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Wenig Orientierungshilfen ohne Sehen (z. B. keine Blindenleitsysteme oder Durchsagen)",
+      "#When you feel unsafe in the evening, what do you change?": "Wenn Sie sich abends nicht sicher fühlen, was ändern Sie?",
+      "#You can choose more than one answer.": "Sie können mehrere Antworten auswählen.",
+      "#I change my route": "Ich ändere meinen Weg",
+      "#I change the time": "Ich ändere die Uhrzeit",
+      "#I share my location with someone": "Ich teile meinen Standort mit jemandem",
+      "#I ask someone to come with me": "Ich lasse mich begleiten",
+      "#I use a different means of transport": "Ich nehme ein anderes Verkehrsmittel",
+      "#I give up going out": "Ich verzichte darauf, hinauszugehen",
+      "#Nothing": "Nichts",
+      "#Prefer not to say": "Ich möchte nicht antworten",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie mit dem Auto unterwegs sind</b>. Die meisten Fragen beantworten Sie mit Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
       "code": "tr",
@@ -268,7 +367,6 @@
       "#Car on a street": "Sokakta bir araba",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Arabayla yolculuk ederken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Soruların çoğu Evet veya Hayır ile yanıtlanır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Arabayla yolculuk ederken neler kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
       "#Places with few people around (isolated or deserted areas)": "Etrafta az insan olan yerler (ıssız veya tenha alanlar)",
       "#People behaving aggressively or in an intimidating way": "Saldırgan veya gözdağı verici davranan insanlar",
@@ -277,7 +375,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "Gözetim veya güvenlik önlemlerinin eksikliği (örn. kamera yok, görevli yok)",
       "#Incidents that happened to me or were reported in the area": "Başıma gelen veya bölgede bildirilen olaylar",
       "#Overcrowded or chaotic places": "Aşırı kalabalık veya karmaşık yerler",
-      "#None of these": "Bunların hiçbiri"
+      "#None of these": "Bunların hiçbiri",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Görmeden yolumu bulmak için az ipucu olması (örn. hissedilebilir yüzey veya sesli anons yok)",
+      "#When you feel unsafe in the evening, what do you change?": "Akşamları kendinizi güvende hissetmediğinizde neyi değiştiriyorsunuz?",
+      "#You can choose more than one answer.": "Birden fazla yanıt seçebilirsiniz.",
+      "#I change my route": "Güzergâhımı değiştiririm",
+      "#I change the time": "Saatimi değiştiririm",
+      "#I share my location with someone": "Konumumu biriyle paylaşırım",
+      "#I ask someone to come with me": "Birinin bana eşlik etmesini isterim",
+      "#I use a different means of transport": "Başka bir ulaşım aracı kullanırım",
+      "#I give up going out": "Dışarı çıkmaktan vazgeçerim",
+      "#Nothing": "Hiçbir şey",
+      "#Prefer not to say": "Yanıtlamak istemiyorum",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Arabayla yolculuk ederken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Soruların çoğu Evet veya Hayır ile yanıtlanır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
       "code": "fa",
@@ -293,7 +403,6 @@
       "#Car on a street": "خودرو در خیابان",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام سفر با خودرو</b>. به بیشتر پرسش‌ها با بله یا خیر پاسخ می‌دهید.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "هنگام سفر با خودرو، چه چیزهایی باعث می‌شوند در برابر جرم یا آزار کمتر احساس امنیت کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Places with few people around (isolated or deserted areas)": "مکان‌هایی با رفت‌وآمد کم (مناطق دورافتاده یا خلوت)",
       "#People behaving aggressively or in an intimidating way": "افرادی که رفتار پرخاشگرانه یا ترساننده دارند",
@@ -302,7 +411,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "نبود نظارت یا اقدامات امنیتی (مثلاً بدون دوربین، بدون کارکنان)",
       "#Incidents that happened to me or were reported in the area": "حوادثی که برای من رخ داده یا در منطقه گزارش شده است",
       "#Overcrowded or chaotic places": "مکان‌های بسیار شلوغ یا پرهرج‌ومرج",
-      "#None of these": "هیچ‌کدام از این‌ها"
+      "#None of these": "هیچ‌کدام از این‌ها",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "نشانه‌های کم برای مسیریابی بدون دیدن (مثلاً نبود مسیر لمسی یا اعلام صوتی)",
+      "#When you feel unsafe in the evening, what do you change?": "وقتی عصر احساس امنیت نمی‌کنید، چه چیزی را تغییر می‌دهید؟",
+      "#You can choose more than one answer.": "می‌توانید بیش از یک پاسخ انتخاب کنید.",
+      "#I change my route": "مسیرم را تغییر می‌دهم",
+      "#I change the time": "ساعت رفت‌وآمدم را تغییر می‌دهم",
+      "#I share my location with someone": "موقعیت مکانی‌ام را با کسی به اشتراک می‌گذارم",
+      "#I ask someone to come with me": "از کسی می‌خواهم همراهم بیاید",
+      "#I use a different means of transport": "از وسیله نقلیه دیگری استفاده می‌کنم",
+      "#I give up going out": "از بیرون رفتن صرف‌نظر می‌کنم",
+      "#Nothing": "هیچ چیز",
+      "#Prefer not to say": "ترجیح می‌دهم پاسخ ندهم",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام سفر با خودرو</b>. به بیشتر پرسش‌ها با بله یا خیر پاسخ می‌دهید.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
       "code": "hu",
@@ -318,7 +439,6 @@
       "#Car on a street": "Autó az utcán",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>autós utazás közben</b>. A legtöbb kérdésre Igen vagy Nem a válasz.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Autós utazás közben mi miatt érzi magát kevésbé biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Jelölje meg az összes megfelelőt)",
       "#Places with few people around (isolated or deserted areas)": "Olyan helyek, ahol kevés ember van (elhagyatott vagy néptelen helyek)",
       "#People behaving aggressively or in an intimidating way": "Agresszíven vagy megfélemlítően viselkedő emberek",
@@ -327,7 +447,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "A felügyelet vagy a biztonsági intézkedések hiánya (pl. nincs kamera, nincs személyzet)",
       "#Incidents that happened to me or were reported in the area": "Velem történt vagy a környéken bejelentett incidensek",
       "#Overcrowded or chaotic places": "Túlzsúfolt vagy kaotikus helyek",
-      "#None of these": "Ezek közül egyik sem"
+      "#None of these": "Ezek közül egyik sem",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Kevés tájékozódási segítség látás nélkül (pl. nincs taktilis vezetősáv vagy hangos bemondás)",
+      "#When you feel unsafe in the evening, what do you change?": "Ha este nem érzi magát biztonságban, min változtat?",
+      "#You can choose more than one answer.": "Több választ is megjelölhet.",
+      "#I change my route": "Más útvonalat választok",
+      "#I change the time": "Más időpontban indulok",
+      "#I share my location with someone": "Megosztom a tartózkodási helyemet valakivel",
+      "#I ask someone to come with me": "Megkérek valakit, hogy kísérjen el",
+      "#I use a different means of transport": "Más közlekedési eszközt választok",
+      "#I give up going out": "Lemondok arról, hogy elinduljak",
+      "#Nothing": "Semmin",
+      "#Prefer not to say": "Nem szeretnék válaszolni",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>autós utazás közben</b>. A legtöbb kérdésre Igen vagy Nem a válasz.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
       "code": "ar",
@@ -343,7 +475,6 @@
       "#Car on a street": "سيارة في شارع",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند التنقل بالسيارة</b>. تتم الإجابة عن معظم الأسئلة بنعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
       "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "عند التنقل بالسيارة، ما الذي يقلل شعورك بالأمان من الجريمة أو التحرش؟ (يمكن اختيار كل ما ينطبق)",
       "#Places with few people around (isolated or deserted areas)": "أماكن يقل فيها المارة (مناطق معزولة أو مهجورة)",
       "#People behaving aggressively or in an intimidating way": "أشخاص يتصرفون بعدوانية أو بطريقة مخيفة",
@@ -352,7 +483,19 @@
       "#No surveillance or security measures (e.g. no cameras, no staff)": "غياب المراقبة أو إجراءات الأمن (مثل عدم وجود كاميرات أو موظفين)",
       "#Incidents that happened to me or were reported in the area": "حوادث وقعت لي أو تم الإبلاغ عنها في المنطقة",
       "#Overcrowded or chaotic places": "أماكن مكتظة أو فوضوية",
-      "#None of these": "لا شيء مما سبق"
+      "#None of these": "لا شيء مما سبق",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "قلة العلامات التي تساعدني على معرفة طريقي من دون بصر (مثل غياب الممرات اللمسية أو الإعلانات الصوتية)",
+      "#When you feel unsafe in the evening, what do you change?": "عندما ينتابك شعور بعدم الأمان في المساء، ما الذي يتغيّر في طريقة تنقلك؟",
+      "#You can choose more than one answer.": "يمكن اختيار أكثر من إجابة.",
+      "#I change my route": "أغيّر طريقي",
+      "#I change the time": "أغيّر موعد تنقلي",
+      "#I share my location with someone": "أشارك موقعي مع شخص ما",
+      "#I ask someone to come with me": "أطلب من شخص أن يرافقني",
+      "#I use a different means of transport": "أستخدم وسيلة نقل أخرى",
+      "#I give up going out": "أمتنع عن الخروج",
+      "#Nothing": "لا شيء",
+      "#Prefer not to say": "أفضل عدم الإجابة",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند التنقل بالسيارة</b>. تتم الإجابة عن معظم الأسئلة بنعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
     }
   }
 }

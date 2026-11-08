@@ -7,7 +7,7 @@ The pieces of a chain are linked by the "Continue" button on the thank-you page 
 which skips the pieces already answered on the same device. `smarturbanity_daily_travel` is deleted: its questions moved to
 `your_profile` and to the pieces (see "Daily travel").
 
-All 39 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`. They are
+All 39 pieces live in `forms/surveys/`, next to `smarturbanity_your_profile`. They are
 grouped by topic in seven disabled campaigns (visible in debug mode) until the persona test and approval
 (Lory, 2026-11-08; `config_version` 0.2.0). Each campaign holds the piece of that topic for every way of travelling:
 
@@ -90,6 +90,7 @@ Moved questions removed from the forms that stay:
 
 The published `smarturbanity_safety` form keeps its general safety questions (road safety, unsafe situations, personal
 security by day and evening, insecurity factors) until the chains are published; then it is retired (decision 4A).
+It was retired on 2026-11-08 (see "Persona test fixes, rounds 28–29").
 
 Lory (2026-11-08, decision 2A): this branch takes the `questionnaire-14` safety form 1.7.0 whole, so that branch keeps
 nothing of its own. Compared with the 1.1.0 here it adds the six missing languages, the round25 wording fixes, the
@@ -397,6 +398,52 @@ On the felt duplicates between forms (2026-11-08):
     (translation only) and `walking_security` to 2.4.1.
 
 Still to decide: grouping the 14 modes (#296/#303, proposal waiting for Lory's choice).
+
+## Persona test fixes, rounds 28–29
+
+Lory's decisions on the round 28–29 findings (2026-11-08). The rounds used only the forms in `forms/surveys/index.json`,
+the trip questionnaires and the feedback form; the orphan `smarturbanity_walking_safety.json` was not used and is now deleted.
+
+| Change | Before | After | Data impact |
+|---|---|---|---|
+| Safety retired | `smarturbanity_safety` in both indexes and in the `rome_safety` campaign | file deleted, campaign removed (`config_version` 0.3.0, index 3.5.0) | its questions are covered by the `*_road_safety` and `*_security` pieces; answers already collected stay in the database |
+| Removed questions | `height` (walking habits), `public_transport_social_comfort` (public transport comfort), `professional_role` (travel choices) | not asked | no answers kept; `economic_status` stays |
+| Overall road-safety rating | — | not added back (old Safety form only) | none |
+| Orientation cue | insecurity factors without a cue for people who cannot see | `no_orientation_cues` "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)" in all six `*_security` pieces | new option |
+| Evening follow-up | only walking asked what people change when they feel unsafe in the evening | `<p>_evening_insecure_changes` in the cycling, e-scooter, public transport, car and motorcycle security pieces, same text, options and condition as walking | new question |
+| `vehicles_used` (your profile 1.20.0) | only private vehicles | adds "On foot or in a wheelchair", "Public transport", "Shared bikes, e-scooters or cars" | new options |
+| `walk_want_changes` | no tactile paving or signage | adds "Tactile paving for blind and partially sighted people" and "Larger, clearer signs" | new options |
+| Options copied from walking or public transport | e.g. car "I avoid some stops or stretches", cycling "Waiting (at stops)", motorcycle "Physical effort (walking, cycling…)" | each mode's own examples (car: closing windows, streets or car parks, traffic and parking; cycling and motorcycle: traffic lights; public transport: walking to stops) | same values, wording only |
+| Neutral wording | generic masculine in some translations | neutral or both forms, as in the rest of the forms | wording only |
+| Welcome texts | 39 chain pieces said answers could be linked through an email address, which chain forms never ask | "Your answers are not linked to your name, and no public authority receives them." in all 8 languages | wording only |
+| Welcome texts | five pieces said "Most questions are answered Yes or No" while most are multiple choice | sentence removed (kept where it is true: security and walking road safety) | wording only |
+| Welcome text, car alternatives | "What could make other ways of getting around a good option…" | "What would help you use other ways of getting around for some of your trips." | wording only |
+| Feedback form (`usabilityTests/smarturbanity_feedback_surveys`, 1.1.0) | English and Italian only; `intention_to_use` answers "I would … use it" to a question about answering | all 8 languages; answers "I would … answer them"; `task_email` ("Did you leave an email to link your answers over time?") removed, because no questionnaire asks for an email | same values for `intention_to_use`; no `task_email` answers from now on |
+
+### Estimated durations
+
+Lory (2026-11-08): `estimated_minutes` follows the durations the personas reported in rounds 28–29 (245 runs). For a
+chain the personas reported only the total, so each piece is scaled by the ratio of the reported total to the listed
+sum, with at least 1 minute. Public transport (12 reported against 14 listed) rounds to the same values; cycling and
+motorcycle have too few or too scattered reports and stay as they are; pre-trip (1) and the feedback form (3) already
+match.
+
+| Form | Before | After |
+|---|---|---|
+| `your_profile` | 7 | 6 |
+| `future/travel_choices` | 3 | 2 |
+| `tripSurveys/post_trip` | 2 | 3 |
+| walking `habits`, `road_safety`, `comfort`, `experience` (chain 14 → 10, reported 10.5) | 3 each | 2 each |
+| car `habits`, `road_safety` (chain 15 → 10, reported 9) | 2 each | 1 each |
+| car `comfort`, `experience`, `need` | 3 each | 2 each |
+
+The duration is metadata only, with no data impact; `post_trip` moves to 4.8.1, the others already move up on this branch.
+
+The privacy notice and how long answers are kept belong to the website notice (`pilot/rome/privacy.json`), which the
+applications read before the form's `gdpr_link`; the forms add no retention text.
+
+Each changed form moves up one version against `main`: minor when questions or options are added or removed,
+patch for wording only.
 
 ## Question IDs
 
