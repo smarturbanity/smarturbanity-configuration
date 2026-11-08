@@ -592,3 +592,8 @@ Lory approved explaining tactile paving in Italian as "Percorsi riconoscibili
 con i piedi o il bastone, per chi non vede o vede poco". Translation-only
 patches: walk_want_changes 1.2.1, walking improvements 3.2.1. Structural comparison
 confirms all response values, settings, other content and languages are preserved.
+
+Lory approved the Italian option "Spazi per chi va a piedi o in sedia a rotelle, separati da biciclette e monopattini elettrici".
+Translation-only patches: walk_want_changes 1.2.2, walking improvements 3.2.2.
+Structural comparison confirms all answer values, settings, other content and
+languages are preserved. No browser or persona retest is claimed.
