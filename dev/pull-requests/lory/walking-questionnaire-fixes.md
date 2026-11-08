@@ -24,3 +24,7 @@ It is shorter in all eight languages; available answers and limits are unchanged
 
 The approved Italian age-band label is "85 o più", consistent with the numeric
 labels of the other bands. This translation-only patch preserves its answer value.
+
+The approved Italian travel-company question uses "per conto tuo" and its answer
+"Soprattutto per conto mio" instead of "senza compagnia". Response values, other
+answers and other languages are preserved.

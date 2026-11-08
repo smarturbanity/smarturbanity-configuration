@@ -40,6 +40,13 @@ Lory approved the Italian age-band label "85 o più", matching the other numeric
 bands. Only that translation changes: age_group 1.1.1, profile 1.21.2. Other
 languages, the age-band value and all question settings are preserved.
 
+Lory approved the shorter Italian travel-company question "Nei tuoi spostamenti
+abituali, viaggi soprattutto per conto tuo o con altre persone?" and answer
+"Soprattutto per conto mio". Translation-only patches: frequent_trip_company
+2.0.3, your_travel 1.0.2. The response values, other answers and languages remain
+unchanged; a structural comparison verifies exactly those two translations and
+the patch versions.
+
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.

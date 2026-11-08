@@ -568,3 +568,8 @@ options and limits are preserved.
 Lory approved the Italian age-band label "85 o più" for consistency with the
 other numeric bands. This translation-only patch is age_group 1.1.1 and profile
 1.21.2; no age-band value or other language changes.
+
+Lory approved the Italian travel-company question "Nei tuoi spostamenti abituali,
+viaggi soprattutto per conto tuo o con altre persone?" and answer "Soprattutto
+per conto mio". Translation-only patches: frequent_trip_company 2.0.3, your_travel
+1.0.2. Response values, other answers and other languages are preserved.
