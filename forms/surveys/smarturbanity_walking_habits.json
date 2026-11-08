@@ -4,7 +4,7 @@
     "questionnaire_id": "smarturbanity_walking_habits",
     "questionnaire_version": "1.0.0",
     "project": "SmartUrbanity",
-    "estimated_minutes": 2,
+    "estimated_minutes": 3,
     "options": {
       "review_mode": true,
       "save_user_id": true,
@@ -136,6 +136,141 @@
             "question_id": "not_walk_streets_yn",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
+          }
+        ]
+      },
+      {
+        "title": "Walking and physical fitness",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "How far can you walk, or go in your wheelchair, without a long rest?",
+            "help": "A long rest means stopping for more than about 5 minutes. A rough idea is enough.",
+            "answer_key": "walk_distance",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "I rarely or never walk",
+                "value": "rarely_walk"
+              },
+              {
+                "text": "Less than 500 metres (about 5-6 minutes)",
+                "value": "lt_500m"
+              },
+              {
+                "text": "500 metres to 1 km (about 10-15 minutes)",
+                "value": "500m_1km"
+              },
+              {
+                "text": "1 to 2 km (about 15-25 minutes)",
+                "value": "1_2km"
+              },
+              {
+                "text": "More than 2 km",
+                "value": "gt_2km"
+              }
+            ],
+            "question_id": "walk_distance",
+            "question_version": "1.1.0",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "text": "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?",
+            "help": "Count every kind of walk: to get somewhere, for leisure or for exercise.",
+            "answer_key": "walk_active_days",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "None",
+                "value": "inactive_0_days"
+              },
+              {
+                "text": "1 day",
+                "value": "occasionally_active_1_day"
+              },
+              {
+                "text": "2-3 days",
+                "value": "moderately_active_23_days"
+              },
+              {
+                "text": "4-5 days",
+                "value": "highly_active_45_days"
+              },
+              {
+                "text": "6-7 days",
+                "value": "daily_near_daily_67_days"
+              }
+            ],
+            "question_id": "walk_active_days",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "text": "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?",
+            "help": "Think of strength, stamina and general health.",
+            "answer_key": "walk_fitness",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very low (I tire easily)",
+                "value": "very_low_sedentary_easily_fatigued"
+              },
+              {
+                "text": "Low",
+                "value": "low"
+              },
+              {
+                "text": "Moderate",
+                "value": "moderate"
+              },
+              {
+                "text": "Good",
+                "value": "good"
+              },
+              {
+                "text": "High",
+                "value": "high"
+              }
+            ],
+            "question_id": "walk_fitness",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "text": "Roughly how tall are you?",
+            "help": "Height affects the length of your step and your walking pace.",
+            "answer_key": "height",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Less than 150 cm",
+                "value": "lt_150"
+              },
+              {
+                "text": "150-164 cm",
+                "value": "150_164"
+              },
+              {
+                "text": "165-179 cm",
+                "value": "165_179"
+              },
+              {
+                "text": "180-194 cm",
+                "value": "180_194"
+              },
+              {
+                "text": "195 cm or more",
+                "value": "195_plus"
+              }
+            ],
+            "question_id": "height",
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal"
           }
         ]
       },
@@ -420,7 +555,36 @@
       "#I reduce how often I make that trip": "I reduce how often I make that trip",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
       "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
-      "#Other": "Other"
+      "#Other": "Other",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "How far can you walk, or go in your wheelchair, without a long rest?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "A long rest means stopping for more than about 5 minutes. A rough idea is enough.",
+      "#I rarely or never walk": "I rarely or never walk",
+      "#Less than 500 metres (about 5-6 minutes)": "Less than 500 metres (about 5-6 minutes)",
+      "#500 metres to 1 km (about 10-15 minutes)": "500 metres to 1 km (about 10-15 minutes)",
+      "#1 to 2 km (about 15-25 minutes)": "1 to 2 km (about 15-25 minutes)",
+      "#More than 2 km": "More than 2 km",
+      "#None": "None",
+      "#1 day": "1 day",
+      "#2-3 days": "2-3 days",
+      "#4-5 days": "4-5 days",
+      "#6-7 days": "6-7 days",
+      "#Think of strength, stamina and general health.": "Think of strength, stamina and general health.",
+      "#Very low (I tire easily)": "Very low (I tire easily)",
+      "#Low": "Low",
+      "#Moderate": "Moderate",
+      "#Good": "Good",
+      "#High": "High",
+      "#Roughly how tall are you?": "Roughly how tall are you?",
+      "#Less than 150 cm": "Less than 150 cm",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm or more",
+      "#Walking and physical fitness": "Walking and physical fitness",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Count every kind of walk: to get somewhere, for leisure or for exercise.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?",
+      "#Height affects the length of your step and your walking pace.": "Height affects the length of your step and your walking pace."
     },
     "it": {
       "code": "it",
@@ -476,7 +640,36 @@
       "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
       "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
-      "#Other": "Altro"
+      "#Other": "Altro",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "Quanto riesci a camminare, o a muoverti in sedia a rotelle, senza fermarti per un lungo riposo?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Un riposo lungo significa fermarsi per più di 5 minuti circa. Basta un'idea approssimativa.",
+      "#I rarely or never walk": "Cammino raramente o mai",
+      "#Less than 500 metres (about 5-6 minutes)": "Meno di 500 metri (circa 5-6 minuti)",
+      "#500 metres to 1 km (about 10-15 minutes)": "Da 500 metri a 1 km (circa 10-15 minuti)",
+      "#1 to 2 km (about 15-25 minutes)": "Da 1 a 2 km (circa 15-25 minuti)",
+      "#More than 2 km": "Più di 2 km",
+      "#None": "Nessuno",
+      "#1 day": "1 giorno",
+      "#2-3 days": "2-3 giorni",
+      "#4-5 days": "4-5 giorni",
+      "#6-7 days": "6-7 giorni",
+      "#Think of strength, stamina and general health.": "Pensa a forza, resistenza e salute in generale.",
+      "#Very low (I tire easily)": "Molto bassa (mi stanco subito)",
+      "#Low": "Basso",
+      "#Moderate": "Moderato",
+      "#Good": "Buono",
+      "#High": "Alto",
+      "#Roughly how tall are you?": "Quanto sei alto o alta, più o meno?",
+      "#Less than 150 cm": "Meno di 150 cm",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm o più",
+      "#Walking and physical fitness": "Camminare e forma fisica",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In una settimana tipo, in quanti giorni cammini, o ti sposti in carrozzina, per almeno 10 minuti di fila?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Conta ogni tipo di camminata: per andare da qualche parte, per svago o per fare esercizio.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Come descriveresti in questo momento la tua forma fisica per camminare (forza, resistenza, equilibrio)?",
+      "#Height affects the length of your step and your walking pace.": "L’altezza influisce sulla lunghezza del passo e sulla velocità con cui cammini."
     },
     "fr": {
       "code": "fr",
@@ -532,7 +725,36 @@
       "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
       "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
-      "#Other": "Autre"
+      "#Other": "Autre",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "Jusqu'où pouvez-vous marcher, ou rouler en fauteuil roulant, sans faire une longue pause ?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Une longue pause, c'est s'arrêter plus de 5 minutes environ. Une idée approximative suffit.",
+      "#I rarely or never walk": "Je marche rarement ou jamais",
+      "#Less than 500 metres (about 5-6 minutes)": "Moins de 500 mètres (environ 5-6 minutes)",
+      "#500 metres to 1 km (about 10-15 minutes)": "De 500 mètres à 1 km (environ 10-15 minutes)",
+      "#1 to 2 km (about 15-25 minutes)": "De 1 à 2 km (environ 15 à 25 minutes)",
+      "#More than 2 km": "Plus de 2 km",
+      "#None": "Aucun",
+      "#1 day": "1 jour",
+      "#2-3 days": "2-3 jours",
+      "#4-5 days": "4-5 jours",
+      "#6-7 days": "6-7 jours",
+      "#Think of strength, stamina and general health.": "Pensez à la force, à l'endurance et à la santé en général.",
+      "#Very low (I tire easily)": "Très faible (je me fatigue vite)",
+      "#Low": "Faible",
+      "#Moderate": "Moyenne",
+      "#Good": "Bonne",
+      "#High": "Élevée",
+      "#Roughly how tall are you?": "Quelle est votre taille, environ ?",
+      "#Less than 150 cm": "Moins de 150 cm",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm ou plus",
+      "#Walking and physical fitness": "Marche et condition physique",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Au cours d’une semaine type, combien de jours marchez-vous, ou vous déplacez-vous en fauteuil roulant, pendant au moins 10 minutes d’affilée ?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Comptez toutes les marches : pour aller quelque part, pour le loisir ou pour faire de l’exercice.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Comment décririez-vous actuellement votre condition physique pour marcher (force, endurance, équilibre) ?",
+      "#Height affects the length of your step and your walking pace.": "La taille influe sur la longueur du pas et sur la vitesse de marche."
     },
     "de": {
       "code": "de",
@@ -588,7 +810,36 @@
       "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
       "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
-      "#Other": "Anderes"
+      "#Other": "Anderes",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "Wie weit können Sie zu Fuß gehen oder mit dem Rollstuhl fahren, ohne lange Pause?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Eine lange Pause heißt: mehr als etwa 5 Minuten anhalten. Eine grobe Schätzung reicht.",
+      "#I rarely or never walk": "Ich gehe selten oder nie zu Fuß",
+      "#Less than 500 metres (about 5-6 minutes)": "Weniger als 500 Meter (etwa 5-6 Minuten)",
+      "#500 metres to 1 km (about 10-15 minutes)": "500 Meter bis 1 km (etwa 10-15 Minuten)",
+      "#1 to 2 km (about 15-25 minutes)": "1 bis 2 km (etwa 15-25 Minuten)",
+      "#More than 2 km": "Mehr als 2 km",
+      "#None": "Keine",
+      "#1 day": "1 Tag",
+      "#2-3 days": "2-3 Tage",
+      "#4-5 days": "4-5 Tage",
+      "#6-7 days": "6-7 Tage",
+      "#Think of strength, stamina and general health.": "Denken Sie an Kraft, Ausdauer und allgemeine Gesundheit.",
+      "#Very low (I tire easily)": "Sehr niedrig (ich werde schnell müde)",
+      "#Low": "Niedrig",
+      "#Moderate": "Mittel",
+      "#Good": "Gut",
+      "#High": "Hoch",
+      "#Roughly how tall are you?": "Wie groß sind Sie ungefähr?",
+      "#Less than 150 cm": "Weniger als 150 cm",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm oder größer",
+      "#Walking and physical fitness": "Gehen und körperliche Fitness",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "An wie vielen Tagen in einer typischen Woche gehen Sie zu Fuß oder fahren mit Ihrem Rollstuhl mindestens 10 Minuten am Stück?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Zählen Sie alle Wege zu Fuß: um irgendwohin zu kommen, in der Freizeit oder zum Training.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Wie würden Sie Ihre derzeitige körperliche Fitness zum Gehen beschreiben (Kraft, Ausdauer, Gleichgewicht)?",
+      "#Height affects the length of your step and your walking pace.": "Die Körpergröße beeinflusst die Schrittlänge und das Gehtempo."
     },
     "tr": {
       "code": "tr",
@@ -644,7 +895,36 @@
       "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
       "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
-      "#Other": "Diğer"
+      "#Other": "Diğer",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "Uzun bir dinlenme olmadan ne kadar yürüyebilir veya tekerlekli sandalyenizle gidebilirsiniz?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Uzun dinlenme, yaklaşık 5 dakikadan uzun durmak demektir. Kabaca bir fikir yeterli.",
+      "#I rarely or never walk": "Nadiren yürürüm veya hiç yürümem",
+      "#Less than 500 metres (about 5-6 minutes)": "500 metreden az (yaklaşık 5-6 dakika)",
+      "#500 metres to 1 km (about 10-15 minutes)": "500 metre ile 1 km arası (yaklaşık 10-15 dakika)",
+      "#1 to 2 km (about 15-25 minutes)": "1 ile 2 km arası (yaklaşık 15-25 dakika)",
+      "#More than 2 km": "2 km’den fazla",
+      "#None": "Hiçbiri",
+      "#1 day": "1 gün",
+      "#2-3 days": "2-3 gün",
+      "#4-5 days": "4-5 gün",
+      "#6-7 days": "6-7 gün",
+      "#Think of strength, stamina and general health.": "Güç, dayanıklılık ve genel sağlığı düşünün.",
+      "#Very low (I tire easily)": "Çok düşük (çabuk yorulurum)",
+      "#Low": "Düşük",
+      "#Moderate": "Orta",
+      "#Good": "İyi",
+      "#High": "Yüksek",
+      "#Roughly how tall are you?": "Boyunuz yaklaşık kaç?",
+      "#Less than 150 cm": "150 cm’den kısa",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm veya daha uzun",
+      "#Walking and physical fitness": "Yürüme ve fiziksel form",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Tipik bir haftada kaç gün en az 10 dakika aralıksız yürüyor ya da tekerlekli sandalyenizle ilerliyorsunuz?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Her türlü yürüyüşü sayın: bir yere gitmek, boş zaman veya egzersiz için.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Yürümek için şu anki fiziksel formunuzu nasıl tanımlarsınız (güç, dayanıklılık, denge)?",
+      "#Height affects the length of your step and your walking pace.": "Boy, adım uzunluğunu ve yürüme hızını etkiler."
     },
     "fa": {
       "code": "fa",
@@ -700,7 +980,36 @@
       "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
       "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
-      "#Other": "سایر"
+      "#Other": "سایر",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "چقدر راه را می‌توانید پیاده یا با ویلچر، بدون استراحت طولانی بروید؟",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "«استراحت طولانی» یعنی بیش از حدود ۵ دقیقه توقف. یک اندازه تقریبی کافی است.",
+      "#I rarely or never walk": "به ندرت پیاده‌روی می‌کنم یا اصلاً پیاده نمی‌روم",
+      "#Less than 500 metres (about 5-6 minutes)": "کمتر از ۵۰۰ متر (حدود ۵-۶ دقیقه)",
+      "#500 metres to 1 km (about 10-15 minutes)": "۵۰۰ متر تا ۱ کیلومتر (حدود ۱۰-۱۵ دقیقه)",
+      "#1 to 2 km (about 15-25 minutes)": "۱ تا ۲ کیلومتر (حدود ۱۵ تا ۲۵ دقیقه)",
+      "#More than 2 km": "بیش از ۲ کیلومتر",
+      "#None": "هیچ‌کدام",
+      "#1 day": "۱ روز",
+      "#2-3 days": "۲-۳ روز",
+      "#4-5 days": "۴-۵ روز",
+      "#6-7 days": "۶-۷ روز",
+      "#Think of strength, stamina and general health.": "به توان، استقامت و سلامت عمومی فکر کنید.",
+      "#Very low (I tire easily)": "بسیار کم (زود خسته می‌شوم)",
+      "#Low": "پایین",
+      "#Moderate": "متوسط",
+      "#Good": "خوب",
+      "#High": "بالا",
+      "#Roughly how tall are you?": "تقریباً قد شما چقدر است؟",
+      "#Less than 150 cm": "کمتر از ۱۵۰ سانتی‌متر",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "۱۹۵ سانتی‌متر یا بیشتر",
+      "#Walking and physical fitness": "پیاده‌روی و آمادگی جسمانی",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "در یک هفتهٔ معمولی، چند روز دست‌کم ۱۰ دقیقه پشت سر هم پیاده‌روی می‌کنید یا با ویلچر حرکت می‌کنید؟",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "هر نوع پیاده‌روی را حساب کنید: برای رفتن به جایی، برای تفریح یا برای ورزش.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "آمادگی جسمانی فعلی خود را برای پیاده‌روی (قدرت، استقامت، تعادل) چگونه توصیف می‌کنید؟",
+      "#Height affects the length of your step and your walking pace.": "قد بر طول گام و سرعت پیاده‌روی اثر می‌گذارد."
     },
     "hu": {
       "code": "hu",
@@ -756,7 +1065,36 @@
       "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett közösségi kerékpárt használok)",
       "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
-      "#Other": "Egyéb"
+      "#Other": "Egyéb",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "Milyen messzire tud eljutni gyalog vagy kerekesszékkel hosszú pihenő nélkül?",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "A hosszú pihenő kb. 5 percnél hosszabb megállást jelent. Elég egy hozzávetőleges válasz.",
+      "#I rarely or never walk": "Ritkán vagy soha nem gyalogolok",
+      "#Less than 500 metres (about 5-6 minutes)": "Kevesebb mint 500 méter (kb. 5-6 perc)",
+      "#500 metres to 1 km (about 10-15 minutes)": "500 métertől 1 kilométerig (kb. 10-15 perc)",
+      "#1 to 2 km (about 15-25 minutes)": "1-2 km (kb. 15-25 perc)",
+      "#More than 2 km": "Több mint 2 km",
+      "#None": "Egyik sem",
+      "#1 day": "1 nap",
+      "#2-3 days": "2-3 nap",
+      "#4-5 days": "4-5 nap",
+      "#6-7 days": "6-7 nap",
+      "#Think of strength, stamina and general health.": "Gondoljon az erejére, a kitartására és az általános egészségi állapotára.",
+      "#Very low (I tire easily)": "Nagyon gyenge (könnyen elfáradok)",
+      "#Low": "Alacsony",
+      "#Moderate": "Közepes",
+      "#Good": "Jó",
+      "#High": "Magas",
+      "#Roughly how tall are you?": "Nagyjából milyen magas?",
+      "#Less than 150 cm": "150 cm-nél alacsonyabb",
+      "#150-164 cm": "150-164 cm",
+      "#165-179 cm": "165-179 cm",
+      "#180-194 cm": "180-194 cm",
+      "#195 cm or more": "195 cm vagy magasabb",
+      "#Walking and physical fitness": "Gyaloglás és fizikai erőnlét",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Egy átlagos héten hány napon gyalogol, vagy közlekedik kerekesszékkel, legalább 10 percig egyhuzamban?",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Számítson bele minden gyaloglást: ha valahová megy, szabadidőben vagy edzésként.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Hogyan írná le jelenlegi fizikai erőnlétét a gyalogláshoz (erő, állóképesség, egyensúly)?",
+      "#Height affects the length of your step and your walking pace.": "A testmagasság befolyásolja a lépéshosszt és a gyaloglási tempót."
     },
     "ar": {
       "code": "ar",
@@ -812,7 +1150,36 @@
       "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
       "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
-      "#Other": "أخرى"
+      "#Other": "أخرى",
+      "#How far can you walk, or go in your wheelchair, without a long rest?": "ما المسافة التي يمكنك قطعها مشيًا أو بكرسي متحرك دون راحة طويلة؟",
+      "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "الراحة الطويلة تعني التوقف أكثر من 5 دقائق تقريبًا. يكفي تقدير تقريبي.",
+      "#I rarely or never walk": "نادراً ما أمشي أو لا أمشي إطلاقًا",
+      "#Less than 500 metres (about 5-6 minutes)": "أقل من 500 متر (حوالي 5-6 دقائق)",
+      "#500 metres to 1 km (about 10-15 minutes)": "من 500 متر إلى 1 كيلومتر (حوالي 10-15 دقيقة)",
+      "#1 to 2 km (about 15-25 minutes)": "من 1 إلى 2 كم (حوالي 15-25 دقيقة)",
+      "#More than 2 km": "أكثر من 2 كم",
+      "#None": "لا شيء مما سبق",
+      "#1 day": "يوم واحد",
+      "#2-3 days": "2-3 أيام",
+      "#4-5 days": "4-5 أيام",
+      "#6-7 days": "6-7 أيام",
+      "#Think of strength, stamina and general health.": "فكّر في القوة والتحمل والصحة العامة.",
+      "#Very low (I tire easily)": "منخفضة جدًا (أتعب بسهولة)",
+      "#Low": "منخفض",
+      "#Moderate": "متوسط",
+      "#Good": "جيد",
+      "#High": "مرتفع",
+      "#Roughly how tall are you?": "ما طولك تقريبًا؟",
+      "#Less than 150 cm": "أقل من 150 سم",
+      "#150-164 cm": "150-164 سم",
+      "#165-179 cm": "165-179 سم",
+      "#180-194 cm": "180-194 سم",
+      "#195 cm or more": "195 سم أو أكثر",
+      "#Walking and physical fitness": "المشي واللياقة البدنية",
+      "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "في أسبوع عادي، كم يومًا تمشي، أو تتنقل بكرسيك المتحرك، لمدة 10 دقائق متواصلة على الأقل؟",
+      "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "احسب كل أنواع المشي: للذهاب إلى مكان ما، أو للترفيه، أو لممارسة الرياضة.",
+      "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "كيف تصف لياقتك البدنية الحالية للمشي (القوة، التحمل، التوازن)؟",
+      "#Height affects the length of your step and your walking pace.": "يؤثر الطول في طول الخطوة وسرعة المشي."
     }
   }
 }

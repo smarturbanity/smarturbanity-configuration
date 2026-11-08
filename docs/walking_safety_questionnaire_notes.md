@@ -4,7 +4,7 @@ Every survey except `your_profile` becomes a chain of short questionnaires per w
 (walking, cycling, public transport, car, motorcycle and scooter), decided by Lory on 2026-11-08.
 The pieces of a chain are linked by the "Continue" button on the thank-you page (CityMaaS `followUpQuestionnaires`),
 which skips the pieces already answered on the same device. `smarturbanity_daily_travel` (without its combined-trip
-questions, now in the habits pieces) and `smarturbanity_about_you` are offered first.
+questions, now in the habits pieces) is offered first.
 
 All 33 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`, and sit in the
 disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval.
@@ -28,7 +28,7 @@ Rules applied:
 
 | Way of travelling | Pieces in order (questions) |
 |---|---|
-| Walking | `walking_habits` (9), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (8), `walking_improvements` (6) |
+| Walking | `walking_habits` (13), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (8), `walking_improvements` (6) |
 | Cycling | `cycling_habits` (13), `cycling_road_safety` (17), `cycling_security` (11), `cycling_comfort` (9), `cycling_experience` (8), `cycling_improvements` (1) |
 | Public transport | `public_transport_habits` (12), `public_transport_road_safety` (7), `public_transport_security` (12), `public_transport_comfort` (13), `public_transport_experience` (8), `public_transport_without_car` (18), `public_transport_improvements` (7) |
 | Car | `car_habits` (11), `car_road_safety` (14), `car_security` (10), `car_comfort` (12), `car_experience` (8), `car_need` (19), `car_alternatives` (4) |
@@ -51,8 +51,7 @@ Every question of these forms is in the chains, so their entries were removed fr
 With the questions used by the chains removed none of the seven `future/` forms keeps a question, so they are deleted
 (Lory, 2026-11-08: remove the moved questions from the old forms) here and on the local `lory/future-questionnaires` and
 `questionnaire-14` branches, together with their entries in `forms/index.json`, `forms/surveys/index.json` and the
-`rome_future_surveys` campaign. `future/smarturbanity_about_you` shares no question with the chains or with
-`your_profile` and stays as it is.
+`rome_future_surveys` campaign. `future/smarturbanity_about_you` is emptied and deleted too (see "About you").
 
 Not carried over: walking `walk_days` from the walking form (the copy from the Yes/No walking form is used, same text
 and options) and cycling `bike_risky_users` (replaced by one Yes/No question per road user).
@@ -82,6 +81,44 @@ lists the other ways (Lory: one question with checkboxes, not one Yes/No per way
 
 The four questions sit in a last section "Combining ways of travelling", optional, shown only after a Yes to the weekly
 question; the habits pieces now take about 2 minutes.
+
+## About you
+
+Lory (2026-11-08): the remaining "About you" questions move to `your_profile` and to the walking habits piece, and the
+form is deleted on all three branches with its entries in `forms/index.json`, `forms/surveys/index.json` and the
+`rome_future_surveys` campaign. Each branch moves its own wording and translations; where the profile already
+translated "None" or "Other", its own translation is kept.
+
+| Question | Goes to | Change |
+| --- | --- | --- |
+| `pet_walks` (`dog_walks` on this branch and `questionnaire-14`) | `your_profile`, after `carer` | same text and options |
+| `reasons_outside` | `your_profile`, after `community_attachment` | same text and options |
+| `professional_role` | `your_profile`, after `remote_work` | same text and options |
+| `walk_distance` | walking habits, new section "Walking and physical fitness" | same text and options |
+| `active_days` | walking habits, as `walk_active_days` | "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?"; same options |
+| `fitness` | walking habits, as `walk_fitness` | "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?"; same options |
+| `height` | walking habits | help: "Height affects the length of your step and your walking pace." |
+
+`your_profile` gains one minute on each branch (this branch 1.12.0 → 1.13.0, `lory/future-questionnaires`
+1.10.0 → 1.11.0, `questionnaire-14` 1.11.0 → 1.12.0). The fitness questions exist only on this branch, because the
+other two have no walking habits piece; there they are deleted with the form. The walking habits piece stays at 1.0.0
+(unpublished) and takes about 3 minutes. The new section follows the weekly question, so who answers No is not asked.
+
+## Dog area
+
+Lory (2026-11-08): a dog area is both a service and an opportunity.
+
+| File | Change |
+| --- | --- |
+| `definitions/types/service_types.json` 5.0.0 → 5.1.0 | `ST_61` "Dog area": "Public area, often fenced, where dogs can run and play off the lead."; subtypes "dog park", "fenced dog area" |
+| `definitions/types/opportunities.json` 5.0.0 → 5.1.0 | `OP_47` "Dog walking & play": "Access to places where dogs can walk, run and play off the lead"; examples "dog area", "park" |
+| `definitions/mappings/service_opportunity_mapping.json` 4.0.0 → 4.1.0 | `ST_61` → `OP_47`; `ST_31` Park → `OP_22`, `OP_47` |
+| `definitions/mappings/opportunity_category_mapping.json` 4.0.0 → 4.1.0 | `OP_47` in `OC_10`, with `OP_22` |
+| `definitions/mappings/social_function_opportunity_mapping.json` 4.0.0 → 4.1.0 | `OP_47` in `SP_06`, with `OP_22` |
+| `pilots/rome/service_subtypes.json` | `ST_61`: "Area cani", "Area di sgambamento cani" |
+
+Texts are translated in all eight languages. Only this branch changes; the service report matrix gains the new row
+through the mapping.
 
 ## New questions (requested by Lory)
 
@@ -155,6 +192,9 @@ Dropped options: "none" / "never unsafe" / "never insecure" / "nothing" (implied
 A multiple choice with `max_answers` becomes independent Yes/No answers, so counts per item are no longer capped.
 
 ## Not yet covered
+
+- CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
+  must point to `smarturbanity_your_profile` before this configuration is used there.
 
 - CityMaaS needs the chain and stop rules in `surveys-gallery.json` (branch `lory/questionnaire-follow-up`).
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
