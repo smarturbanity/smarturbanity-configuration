@@ -17,3 +17,7 @@ persona test are not performed; this is a local configuration change.
 
 The newer main car-matrix fix is preserved, including its exclusive none-of-these
 answer. Its form version is 3.2.1 after combining the retention introduction.
+
+The approved car-alternatives question now asks what would help choose an
+alternative to the car, covering public transport as well as walking and cycling.
+It is shorter in all eight languages; available answers and limits are unchanged.

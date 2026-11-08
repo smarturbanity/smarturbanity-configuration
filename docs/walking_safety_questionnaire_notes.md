@@ -558,3 +558,9 @@ as the questionnaire-feedback form already did. Other questionnaire versions mov
 by a patch. This addresses the retention concerns reported against welcome pages;
 the feedback recommendations question is unchanged. No existing answers are
 migrated and no browser retest or deployment is implied by this wording change.
+
+Lory also approved shortening the car-alternatives motivation question to ask what
+would help choose an alternative to the car for some trips. Unlike the old list of
+walking/cycling/shared modes, this includes the public transport answers already
+offered. Eight languages, question 1.4.0, questionnaire 1.3.0; all answer keys,
+options and limits are preserved.

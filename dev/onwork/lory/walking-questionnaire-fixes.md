@@ -31,6 +31,11 @@ none-of-these answer with the confirmed retention introduction; the car-need for
 is 3.2.1. Checks compare the combined question and row source with the incoming
 main definition and confirm all eight retention translations.
 
+Lory also approved shortening the car-alternatives motivation question to ask what
+would help choose an alternative to the car for some trips, including the public
+transport choices already offered. All eight languages are updated. Its question
+is 1.4.0 and form 1.3.0; answer keys, options, limits and optionality are preserved.
+
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.
