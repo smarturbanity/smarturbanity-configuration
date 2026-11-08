@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "4.3.0",
+    "questionnaire_version": "4.6.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "trip_phase": "pre",
@@ -18,7 +18,7 @@
       "title": "Before the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_pre_trip.svg",
       "image_alt": "#Smartphone showing a route, and a clock",
-      "description": "<p>Four quick questions before you start recording.</p>"
+      "description": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -33,7 +33,7 @@
         "questions": [
           {
             "question_id": "trip_mode",
-            "question_version": "2.1.0",
+            "question_version": "2.3.0",
             "text": "How do you plan to travel on this trip? (Select all that apply)",
             "answer_key": "trip_mode",
             "question_type": "multiple_options",
@@ -94,6 +94,10 @@
                 "value": "motorcycle"
               },
               {
+                "text": "Van or work vehicle",
+                "value": "van"
+              },
+              {
                 "text": "Taxi, private hire or app-based car service (e.g. Uber, FreeNow)",
                 "value": "taxi"
               }
@@ -102,10 +106,10 @@
           },
           {
             "question_id": "trip_purpose",
-            "question_version": "1.1.0",
-            "text": "What is this trip for? (Think of where you are going)",
+            "question_version": "2.0.0",
+            "text": "What is this trip for? (Think of where you are going; you can choose more than one)",
             "answer_key": "trip_purpose",
-            "question_type": "single_option",
+            "question_type": "multiple_options",
             "required": true,
             "add_other": true,
             "checks_inline": false,
@@ -135,6 +139,10 @@
                 "value": "health"
               },
               {
+                "text": "Public office or paperwork (e.g. registry office, post office)",
+                "value": "public_office"
+              },
+              {
                 "text": "Leisure or visiting people",
                 "value": "leisure"
               },
@@ -147,8 +155,9 @@
           },
           {
             "question_id": "trip_planned_stops",
-            "question_version": "1.0.2",
+            "question_version": "1.1.0",
             "text": "Do you plan to stop somewhere on the way? (e.g. a shop or a café)",
+            "help": "Count only stops on the way there, not on the way back.",
             "answer_key": "trip_planned_stops",
             "question_type": "single_option",
             "required": true,
@@ -175,11 +184,11 @@
           },
           {
             "question_id": "trip_company",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "text": "Who or what are you travelling with? (Select all that apply)",
             "answer_key": "trip_company",
             "question_type": "multiple_options",
-            "required": true,
+            "required": false,
             "checks_inline": false,
             "options": [
               {
@@ -191,7 +200,7 @@
                 "value": "adults"
               },
               {
-                "text": "With children on foot",
+                "text": "With children or teenagers (on foot or in the car)",
                 "value": "children"
               },
               {
@@ -199,7 +208,7 @@
                 "value": "pushchair"
               },
               {
-                "text": "With someone I need to care for",
+                "text": "With someone I accompany or care for",
                 "value": "person_in_care"
               },
               {
@@ -251,20 +260,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "How do you plan to travel on this trip? (Select all that apply)",
       "#On foot (also just to reach a stop)": "On foot (also just to reach a stop)",
       "#Shared e-bike": "Shared e-bike",
-      "#What is this trip for? (Think of where you are going)": "What is this trip for? (Think of where you are going)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "What is this trip for? (Think of where you are going; you can choose more than one)",
       "#Home": "Home",
       "#A walk or exercise (no destination)": "A walk or exercise (no destination)",
       "#Shared bike": "Shared bike",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, private hire or app-based car service (e.g. Uber, FreeNow)",
-      "#With children on foot": "With children on foot",
+      "#With children or teenagers (on foot or in the car)": "With children or teenagers (on foot or in the car)",
       "#With children in a pushchair or pram": "With children in a pushchair or pram",
-      "#With someone I need to care for": "With someone I need to care for",
+      "#With someone I accompany or care for": "With someone I accompany or care for",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Do you plan to stop somewhere on the way? (e.g. a shop or a café)",
       "#No, I'm going straight there": "No, I'm going straight there",
       "#Yes, one stop": "Yes, one stop",
       "#Yes, more than one stop": "Yes, more than one stop",
       "#I don't know yet": "I don't know yet",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Four quick questions before you start recording.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>",
+      "#Van or work vehicle": "Van or work vehicle",
+      "#Public office or paperwork (e.g. registry office, post office)": "Public office or paperwork (e.g. registry office, post office)",
+      "#Count only stops on the way there, not on the way back.": "Count only stops on the way there, not on the way back."
     },
     "it": {
       "code": "it",
@@ -279,11 +291,11 @@
       "#Bicycle (own)": "Bicicletta (tua)",
       "#E-bike (own)": "Bici elettrica (tua)",
       "#E-scooter (own)": "Monopattino elettrico (tuo)",
-      "#Shared e-scooter": "Monopattino in sharing",
+      "#Shared e-scooter": "Monopattino elettrico in condivisione",
       "#Public transport (bus, tram, metro, train)": "Mezzi pubblici (bus, tram, metro, treno)",
       "#Car, as driver": "Auto, alla guida",
       "#Car, as passenger": "Auto, senza guidare",
-      "#Car sharing": "Car sharing",
+      "#Car sharing": "Auto in condivisione (car sharing)",
       "#Motorcycle or moped": "Moto o scooter",
       "#Work": "Lavoro",
       "#Study": "Studio",
@@ -298,21 +310,24 @@
       "#With a pet": "Con un animale domestico",
       "#How do you plan to travel on this trip? (Select all that apply)": "Come pensi di fare questo spostamento? (Puoi sceglierne più di uno)",
       "#On foot (also just to reach a stop)": "A piedi (anche solo per raggiungere una fermata)",
-      "#Shared e-bike": "Bici elettrica in sharing",
-      "#What is this trip for? (Think of where you are going)": "Qual è lo scopo di questo spostamento? (Pensa a dove stai andando)",
+      "#Shared e-bike": "Bici elettrica in condivisione",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "Qual è lo scopo di questo spostamento? (Pensa a dove stai andando; puoi sceglierne più di uno)",
       "#Home": "Casa",
       "#A walk or exercise (no destination)": "Passeggiata o attività fisica (senza una meta)",
-      "#Shared bike": "Bici in sharing",
+      "#Shared bike": "Bici in condivisione",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi o auto con conducente (ad es. Uber, FreeNow)",
-      "#With children on foot": "Con bambini e bambine che camminano",
-      "#With children in a pushchair or pram": "Con bambini e bambine nel passeggino",
-      "#With someone I need to care for": "Con una persona di cui mi devo prendere cura",
+      "#With children or teenagers (on foot or in the car)": "Con bambini o ragazzi (a piedi o in auto)",
+      "#With children in a pushchair or pram": "Con un passeggino o una carrozzina",
+      "#With someone I accompany or care for": "Con una persona che accompagno o assisto",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Pensi di fare delle soste lungo il tragitto? (ad es. un negozio o un bar)",
       "#No, I'm going straight there": "No, vado direttamente",
       "#Yes, one stop": "Sì, una sosta",
       "#Yes, more than one stop": "Sì, più di una sosta",
       "#I don't know yet": "Non lo so ancora",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Quattro domande veloci prima che l'app registri il percorso.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Quattro domande veloci prima che l'app registri il percorso.</p><p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p>",
+      "#Van or work vehicle": "Furgone o mezzo di lavoro",
+      "#Public office or paperwork (e.g. registry office, post office)": "Uffici pubblici o pratiche (ad es. anagrafe, posta)",
+      "#Count only stops on the way there, not on the way back.": "Conta solo le soste all'andata, non al ritorno."
     },
     "fr": {
       "code": "fr",
@@ -325,7 +340,7 @@
       "#<p>If you change how you travel during the trip, tap “Change mode” in the app.</p>": "<p>Si vous changez de mode de déplacement pendant le trajet, appuyez sur « Changer de mode » dans l’application.</p>",
       "#Wheelchair or mobility scooter": "Fauteuil roulant, manuel ou électrique",
       "#Bicycle (own)": "Vélo (personnel)",
-      "#E-bike (own)": "Vélo électrique (personnel)",
+      "#E-bike (own)": "Vélo à assistance électrique (personnel)",
       "#E-scooter (own)": "Trottinette électrique (personnelle)",
       "#Shared e-scooter": "Trottinette électrique en libre-service",
       "#Public transport (bus, tram, metro, train)": "Transports en commun (bus, tram, métro, train)",
@@ -346,21 +361,24 @@
       "#With a pet": "Avec un animal de compagnie",
       "#How do you plan to travel on this trip? (Select all that apply)": "Comment prévoyez-vous de vous déplacer pour ce trajet ? (Sélectionnez toutes les réponses qui s'appliquent)",
       "#On foot (also just to reach a stop)": "À pied (même seulement pour rejoindre un arrêt)",
-      "#Shared e-bike": "Vélo électrique en libre-service",
-      "#What is this trip for? (Think of where you are going)": "Quel est le but de ce trajet ? (Pensez à l'endroit où vous allez)",
+      "#Shared e-bike": "Vélo à assistance électrique en libre-service",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "Quel est le but de ce trajet ? (Pensez à l'endroit où vous allez; vous pouvez en choisir plusieurs)",
       "#Home": "Domicile",
       "#A walk or exercise (no destination)": "Une promenade ou de l'exercice (sans destination)",
       "#Shared bike": "Vélo en libre-service",
-      "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi ou VTC (p. ex. Uber, FreeNow)",
-      "#With children on foot": "Avec des enfants qui marchent",
+      "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi ou VTC (par ex. Uber, FreeNow)",
+      "#With children or teenagers (on foot or in the car)": "Avec des enfants ou des adolescents (à pied ou en voiture)",
       "#With children in a pushchair or pram": "Avec des enfants en poussette",
-      "#With someone I need to care for": "Avec une personne dont je dois m'occuper",
+      "#With someone I accompany or care for": "Avec une personne que j’accompagne ou dont je m’occupe",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Prévoyez-vous de vous arrêter quelque part en chemin ? (par ex. un magasin ou un café)",
       "#No, I'm going straight there": "Non, j'y vais directement",
       "#Yes, one stop": "Oui, un arrêt",
       "#Yes, more than one stop": "Oui, plusieurs arrêts",
       "#I don't know yet": "Je ne sais pas encore",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Quatre questions rapides avant de commencer l’enregistrement.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Quatre questions rapides avant de commencer l’enregistrement.</p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p>",
+      "#Van or work vehicle": "Camionnette ou véhicule de travail",
+      "#Public office or paperwork (e.g. registry office, post office)": "Administration ou démarches (par ex. mairie, poste)",
+      "#Count only stops on the way there, not on the way back.": "Comptez seulement les arrêts à l’aller, pas au retour."
     },
     "de": {
       "code": "de",
@@ -395,20 +413,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "Wie planen Sie, diesen Weg zurückzulegen? (Alle zutreffenden auswählen)",
       "#On foot (also just to reach a stop)": "Zu Fuß (auch nur bis zur Haltestelle)",
       "#Shared e-bike": "Leih-E-Bike (Sharing)",
-      "#What is this trip for? (Think of where you are going)": "Wozu dient dieser Weg? (Denken Sie an Ihr Ziel)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "Wozu dient dieser Weg? (Denken Sie an Ihr Ziel; Sie können mehrere auswählen)",
       "#Home": "Zuhause",
       "#A walk or exercise (no destination)": "Spaziergang oder Bewegung (ohne Ziel)",
       "#Shared bike": "Leihfahrrad (Sharing)",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, App-Fahrdienst oder Mietwagen mit Fahrer oder Fahrerin (z. B. Uber, FreeNow)",
-      "#With children on foot": "Mit Kindern, die zu Fuß gehen",
+      "#With children or teenagers (on foot or in the car)": "Mit Kindern oder Jugendlichen (zu Fuß oder im Auto)",
       "#With children in a pushchair or pram": "Mit Kindern im Kinderwagen",
-      "#With someone I need to care for": "Mit einer Person, die ich betreuen muss",
+      "#With someone I accompany or care for": "Mit einer Person, die ich begleite oder betreue",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Planen Sie unterwegs einen Zwischenstopp? (z. B. ein Geschäft oder ein Café)",
       "#No, I'm going straight there": "Nein, direkt zum Ziel",
       "#Yes, one stop": "Ja, einen Zwischenstopp",
       "#Yes, more than one stop": "Ja, mehrere Zwischenstopps",
       "#I don't know yet": "Weiß ich noch nicht",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Vier kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Vier kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p>",
+      "#Van or work vehicle": "Lieferwagen oder Arbeitsfahrzeug",
+      "#Public office or paperwork (e.g. registry office, post office)": "Behörde oder Amtsgang (z. B. Bürgeramt, Post)",
+      "#Count only stops on the way there, not on the way back.": "Zählen Sie nur Stopps auf dem Hinweg, nicht auf dem Rückweg."
     },
     "tr": {
       "code": "tr",
@@ -443,20 +464,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "Bu yolculuğu nasıl yapmayı planlıyorsunuz? (Uygun olanların tümünü seçin)",
       "#On foot (also just to reach a stop)": "Yürüyerek (sadece durağa gitmek için bile olsa)",
       "#Shared e-bike": "Paylaşımlı elektrikli bisiklet",
-      "#What is this trip for? (Think of where you are going)": "Bu yolculuğun amacı nedir? (Nereye gittiğinizi düşünün)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "Bu yolculuğun amacı nedir? (Nereye gittiğinizi düşünün; birden fazla seçebilirsiniz)",
       "#Home": "Ev",
       "#A walk or exercise (no destination)": "Yürüyüş veya egzersiz (varış noktası olmadan)",
       "#Shared bike": "Paylaşımlı bisiklet",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taksi, şoförlü araç veya uygulama üzerinden araç (örn. Uber, FreeNow)",
-      "#With children on foot": "Yürüyen çocuklarla",
+      "#With children or teenagers (on foot or in the car)": "Çocuklar veya gençlerle (yürüyerek ya da arabada)",
       "#With children in a pushchair or pram": "Bebek arabasındaki çocuklarla",
-      "#With someone I need to care for": "Bakmam gereken biriyle",
+      "#With someone I accompany or care for": "Eşlik ettiğim veya baktığım biriyle",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Yolda bir yerde durmayı planlıyor musunuz? (ör. bir dükkân veya kafe)",
       "#No, I'm going straight there": "Hayır, doğrudan gideceğim",
       "#Yes, one stop": "Evet, bir mola",
       "#Yes, more than one stop": "Evet, birden fazla mola",
       "#I don't know yet": "Henüz bilmiyorum",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p><p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p>",
+      "#Van or work vehicle": "Kamyonet veya iş aracı",
+      "#Public office or paperwork (e.g. registry office, post office)": "Resmî daire veya işlemler (örn. nüfus müdürlüğü, postane)",
+      "#Count only stops on the way there, not on the way back.": "Yalnızca gidiş yolundaki duraklamaları sayın, dönüşü değil."
     },
     "fa": {
       "code": "fa",
@@ -491,20 +515,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "قصد دارید این سفر را با چه شیوه‌هایی انجام دهید؟ (همه موارد مربوط را انتخاب کنید)",
       "#On foot (also just to reach a stop)": "پیاده (حتی فقط برای رسیدن به ایستگاه)",
       "#Shared e-bike": "دوچرخه برقی اشتراکی",
-      "#What is this trip for? (Think of where you are going)": "هدف این سفر چیست؟ (به مقصدتان فکر کنید)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "هدف این سفر چیست؟ (به مقصدتان فکر کنید; می‌توانید بیش از یکی را انتخاب کنید)",
       "#Home": "خانه",
       "#A walk or exercise (no destination)": "پیاده‌روی یا ورزش (بدون مقصد)",
       "#Shared bike": "دوچرخه اشتراکی",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "تاکسی، تاکسی اپلیکیشنی یا خودروی کرایه‌ای با راننده (مثلاً Uber، FreeNow)",
-      "#With children on foot": "با کودکانی که پیاده راه می‌روند",
+      "#With children or teenagers (on foot or in the car)": "با کودکان یا نوجوانان (پیاده یا در خودرو)",
       "#With children in a pushchair or pram": "با کودک در کالسکه",
-      "#With someone I need to care for": "با فردی که باید از او مراقبت کنم",
+      "#With someone I accompany or care for": "با کسی که همراهی‌اش می‌کنم یا از او مراقبت می‌کنم",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "آیا قصد دارید در مسیر جایی توقف کنید؟ (مثلاً یک مغازه یا کافه)",
       "#No, I'm going straight there": "نه، مستقیم می‌روم",
       "#Yes, one stop": "بله، یک توقف",
       "#Yes, more than one stop": "بله، بیش از یک توقف",
       "#I don't know yet": "هنوز نمی‌دانم",
-      "#<p>Four quick questions before you start recording.</p>": "<p>چهار پرسش کوتاه پیش از شروع ضبط.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>چهار پرسش کوتاه پیش از شروع ضبط.</p><p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p>",
+      "#Van or work vehicle": "ون یا خودروی کاری",
+      "#Public office or paperwork (e.g. registry office, post office)": "اداره دولتی یا کارهای اداری (مثلاً ثبت احوال، اداره پست)",
+      "#Count only stops on the way there, not on the way back.": "فقط توقف‌های مسیر رفت را حساب کنید، نه برگشت."
     },
     "hu": {
       "code": "hu",
@@ -539,20 +566,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "Hogyan tervez közlekedni ezen az úton? (Jelölje meg az összes megfelelőt)",
       "#On foot (also just to reach a stop)": "Gyalog (akkor is, ha csak a megállóig megyek)",
       "#Shared e-bike": "Megosztott elektromos kerékpár",
-      "#What is this trip for? (Think of where you are going)": "Mi a célja ennek az útnak? (Gondoljon arra, hová megy)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "Mi a célja ennek az útnak? (Gondoljon arra, hová megy; több is választható)",
       "#Home": "Otthon",
       "#A walk or exercise (no destination)": "Séta vagy testmozgás (úti cél nélkül)",
       "#Shared bike": "Megosztott kerékpár",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "Taxi, sofőrös bérautó vagy alkalmazáson rendelt fuvar (pl. Uber, FreeNow)",
-      "#With children on foot": "Gyalogló gyerekekkel",
+      "#With children or teenagers (on foot or in the car)": "Gyerekekkel vagy kamaszokkal (gyalog vagy autóban)",
       "#With children in a pushchair or pram": "Babakocsiban ülő gyerekkel",
-      "#With someone I need to care for": "Egy személlyel, akiről gondoskodnom kell",
+      "#With someone I accompany or care for": "Valakivel, akit kísérek vagy gondozok",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "Tervez útközben megállni valahol? (pl. egy boltban vagy kávézóban)",
       "#No, I'm going straight there": "Nem, egyenesen odamegyek",
       "#Yes, one stop": "Igen, egyszer megállok",
       "#Yes, more than one stop": "Igen, többször megállok",
       "#I don't know yet": "Még nem tudom",
-      "#<p>Four quick questions before you start recording.</p>": "<p>Négy gyors kérdés, mielőtt elindítja a rögzítést.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>Négy gyors kérdés, mielőtt elindítja a rögzítést.</p><p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p>",
+      "#Van or work vehicle": "Kisteherautó vagy munkajármű",
+      "#Public office or paperwork (e.g. registry office, post office)": "Hivatali ügyintézés (pl. okmányiroda, posta)",
+      "#Count only stops on the way there, not on the way back.": "Csak az odaúton tett megállásokat számolja, a visszautat nem."
     },
     "ar": {
       "code": "ar",
@@ -587,20 +617,23 @@
       "#How do you plan to travel on this trip? (Select all that apply)": "ما وسائل التنقل المخطط لها في هذه الرحلة؟ (يمكن اختيار كل ما ينطبق)",
       "#On foot (also just to reach a stop)": "سيرًا على الأقدام (حتى لمجرد الوصول إلى المحطة)",
       "#Shared e-bike": "دراجة كهربائية مشتركة",
-      "#What is this trip for? (Think of where you are going)": "ما الغرض من هذه الرحلة؟ (أي المكان المقصود)",
+      "#What is this trip for? (Think of where you are going; you can choose more than one)": "ما الغرض من هذه الرحلة؟ (أي المكان المقصود; يمكنك اختيار أكثر من إجابة)",
       "#Home": "المنزل",
       "#A walk or exercise (no destination)": "نزهة أو تمرين (دون وجهة)",
       "#Shared bike": "دراجة مشتركة",
       "#Taxi, private hire or app-based car service (e.g. Uber, FreeNow)": "تاكسي أو سيارة أجرة خاصة أو خدمة نقل عبر التطبيقات (مثل Uber وFreeNow)",
-      "#With children on foot": "مع أطفال يمشون",
+      "#With children or teenagers (on foot or in the car)": "مع أطفال أو مراهقين (سيرًا على الأقدام أو في السيارة)",
       "#With children in a pushchair or pram": "مع أطفال في عربة الأطفال",
-      "#With someone I need to care for": "مع شخص عليّ رعايته",
+      "#With someone I accompany or care for": "مع شخص أرافقه أو أعتني به",
       "#Do you plan to stop somewhere on the way? (e.g. a shop or a café)": "هل من المخطط التوقف في مكان ما في الطريق؟ (مثل متجر أو مقهى)",
       "#No, I'm going straight there": "لا، سأذهب مباشرة",
       "#Yes, one stop": "نعم، توقف واحد",
       "#Yes, more than one stop": "نعم، أكثر من توقف",
       "#I don't know yet": "لا أعرف بعد",
-      "#<p>Four quick questions before you start recording.</p>": "<p>أربعة أسئلة سريعة قبل بدء التسجيل.</p>"
+      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p>": "<p>أربعة أسئلة سريعة قبل بدء التسجيل.</p><p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p>",
+      "#Van or work vehicle": "شاحنة صغيرة أو مركبة عمل",
+      "#Public office or paperwork (e.g. registry office, post office)": "مكتب حكومي أو معاملات إدارية (مثل السجل المدني، مكتب البريد)",
+      "#Count only stops on the way there, not on the way back.": "احسب التوقفات في طريق الذهاب فقط، لا في طريق العودة."
     }
   },
   "id": "smarturbanity_pre_trip",

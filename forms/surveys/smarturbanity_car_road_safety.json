@@ -1,0 +1,475 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Car – Road safety",
+    "questionnaire_id": "smarturbanity_car_road_safety",
+    "questionnaire_version": "2.1.1",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Car – Road safety",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car.svg",
+      "image_alt": "#Car on a street",
+      "description": "<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Car – Road safety",
+    "sections": [
+      {
+        "title": "Dangers on the road",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you drive, how confident are you that you can avoid a crash when someone appears suddenly?",
+            "help": "For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.",
+            "answer_key": "car_hazard_confidence",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_confident"
+              },
+              {
+                "text": "A little",
+                "value": "slightly_confident"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately_confident"
+              },
+              {
+                "text": "Quite",
+                "value": "very_confident"
+              },
+              {
+                "text": "Very",
+                "value": "extremely_confident"
+              }
+            ],
+            "question_id": "car_hazard_confidence",
+            "question_version": "1.0.2"
+          }
+        ]
+      },
+      {
+        "title": "Road Users",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "When you travel by car, who on the road makes you feel unsafe? (Select all that apply)",
+            "answer_key": "car_unsafe_road_users",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Other car drivers",
+                "value": "car_drivers"
+              },
+              {
+                "text": "Motorcycle or scooter riders",
+                "value": "motorcycle_riders"
+              },
+              {
+                "text": "Bus drivers",
+                "value": "bus_drivers"
+              },
+              {
+                "text": "Delivery vehicles (vans, cargo bikes, scooters)",
+                "value": "delivery_vehicles"
+              },
+              {
+                "text": "Taxi or ride-hailing drivers",
+                "value": "taxi_drivers"
+              },
+              {
+                "text": "Cyclists",
+                "value": "cyclists"
+              },
+              {
+                "text": "E-scooter riders",
+                "value": "e_scooter_riders"
+              },
+              {
+                "text": "Pedestrians",
+                "value": "pedestrians"
+              },
+              {
+                "text": "Nobody in particular",
+                "value": "nobody",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "car_unsafe_road_users",
+            "question_version": "1.0.2",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      },
+      {
+        "title": "Situations on the Road",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "When you travel by car, which of these situations make you feel unsafe? (Select all that apply)",
+            "answer_key": "car_unsafe_situations",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Poor visibility or limited sightlines",
+                "value": "poor_visibility"
+              },
+              {
+                "text": "Unsafe behaviour from drivers, riders or pedestrians",
+                "value": "unsafe_behaviour"
+              },
+              {
+                "text": "Crowding",
+                "value": "crowding"
+              },
+              {
+                "text": "Conflicts with other road users",
+                "value": "conflicts_road_users"
+              },
+              {
+                "text": "Lack of safe or adequate roads, junctions, signs or lighting",
+                "value": "poor_infrastructure"
+              },
+              {
+                "text": "No emergency services nearby",
+                "value": "no_emergency_services"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "car_unsafe_situations",
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_car_road_safety",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Dangers on the road": "Dangers on the road",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "When you drive, how confident are you that you can avoid a crash when someone appears suddenly?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.",
+      "#Not at all": "Not at all",
+      "#A little": "A little",
+      "#Moderately": "Moderately",
+      "#Quite": "Quite",
+      "#Very": "Very",
+      "#Road Users": "Road Users",
+      "#Situations on the Road": "Situations on the Road",
+      "#Car – Road safety": "Car – Road safety",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - Car – Road safety",
+      "#Car on a street": "Car on a street",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "When you travel by car, who on the road makes you feel unsafe? (Select all that apply)",
+      "#Other car drivers": "Other car drivers",
+      "#Motorcycle or scooter riders": "Motorcycle or scooter riders",
+      "#Bus drivers": "Bus drivers",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Delivery vehicles (vans, cargo bikes, scooters)",
+      "#Taxi or ride-hailing drivers": "Taxi or ride-hailing drivers",
+      "#Cyclists": "Cyclists",
+      "#E-scooter riders": "E-scooter riders",
+      "#Pedestrians": "Pedestrians",
+      "#Nobody in particular": "Nobody in particular",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "When you travel by car, which of these situations make you feel unsafe? (Select all that apply)",
+      "#Poor visibility or limited sightlines": "Poor visibility or limited sightlines",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsafe behaviour from drivers, riders or pedestrians",
+      "#Crowding": "Crowding",
+      "#Conflicts with other road users": "Conflicts with other road users",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Lack of safe or adequate roads, junctions, signs or lighting",
+      "#No emergency services nearby": "No emergency services nearby",
+      "#None of these": "None of these"
+    },
+    "it": {
+      "code": "it",
+      "#Dangers on the road": "Pericoli sulla strada",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Quando guidi, quanto sei sicuro di riuscire a evitare uno scontro se qualcuno compare all’improvviso?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Per esempio una persona che attraversa all’improvviso, una bici o un monopattino che ti taglia la strada, o una portiera che si apre.",
+      "#Not at all": "Per niente",
+      "#A little": "Un po'",
+      "#Moderately": "Abbastanza",
+      "#Quite": "Molto",
+      "#Very": "Moltissimo",
+      "#Road Users": "Utenti della strada",
+      "#Situations on the Road": "Situazioni in strada",
+      "#Car – Road safety": "In auto – Sicurezza stradale",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - In auto – Sicurezza stradale",
+      "#Car on a street": "Auto su una strada",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Pericoli, altri utenti della strada e situazioni in strada <b>quando viaggi in auto</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Quando viaggi in auto, chi ti fa sentire in pericolo sulla strada? (Seleziona tutte le opzioni applicabili)",
+      "#Other car drivers": "Chi guida un’altra auto",
+      "#Motorcycle or scooter riders": "Chi guida moto o scooter",
+      "#Bus drivers": "Chi guida l’autobus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Veicoli per le consegne (furgoni, cargo bike, scooter)",
+      "#Taxi or ride-hailing drivers": "Chi guida taxi o servizi di ride-hailing",
+      "#Cyclists": "Chi va in bicicletta",
+      "#E-scooter riders": "Chi va in monopattino elettrico",
+      "#Pedestrians": "Chi va a piedi",
+      "#Nobody in particular": "Nessuno in particolare",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Quando viaggi in auto, quali di queste situazioni ti fanno sentire in pericolo? (Seleziona tutte le opzioni applicabili)",
+      "#Poor visibility or limited sightlines": "Scarsa visibilità o visuale limitata",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi",
+      "#Crowding": "Affollamento",
+      "#Conflicts with other road users": "Conflitti con altre persone in strada",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Mancanza di strade, incroci, segnaletica o illuminazione sicuri e adeguati",
+      "#No emergency services nearby": "Nessun servizio di emergenza nelle vicinanze",
+      "#None of these": "Nessuna di queste"
+    },
+    "fr": {
+      "code": "fr",
+      "#Dangers on the road": "Dangers sur la route",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Lorsque vous conduisez, dans quelle mesure avez-vous confiance en votre capacité à éviter une collision quand quelqu’un surgit soudainement ?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Par exemple une personne à pied qui s’avance, une personne à vélo ou en scooter qui vous coupe la route, ou une portière qui s’ouvre.",
+      "#Not at all": "Pas du tout",
+      "#A little": "Un peu",
+      "#Moderately": "Modérément",
+      "#Quite": "Assez",
+      "#Very": "Très",
+      "#Road Users": "Personnes sur la route",
+      "#Situations on the Road": "Situations sur la route",
+      "#Car – Road safety": "Voiture – Sécurité routière",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - Voiture – Sécurité routière",
+      "#Car on a street": "Voiture dans une rue",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Les dangers, les autres personnes sur la route et les situations sur la route <b>lorsque vous vous déplacez en voiture</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Lorsque vous vous déplacez en voiture, qui sur la route vous fait vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Other car drivers": "Les autres personnes qui conduisent une voiture",
+      "#Motorcycle or scooter riders": "Les personnes à moto ou en scooter",
+      "#Bus drivers": "Les personnes qui conduisent un bus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Les véhicules de livraison (fourgonnettes, vélos cargo, scooters)",
+      "#Taxi or ride-hailing drivers": "Les personnes qui conduisent un taxi ou un VTC",
+      "#Cyclists": "Les cyclistes",
+      "#E-scooter riders": "Les personnes en trottinette électrique",
+      "#Pedestrians": "Les personnes à pied",
+      "#Nobody in particular": "Personne en particulier",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Lorsque vous vous déplacez en voiture, lesquelles de ces situations vous font vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Poor visibility or limited sightlines": "Mauvaise visibilité ou champ de vision limité",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Les comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent",
+      "#Crowding": "Forte affluence",
+      "#Conflicts with other road users": "Conflits avec d’autres personnes qui circulent",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Le manque de routes, de carrefours, de signalisation ou d’éclairage sûrs et adaptés",
+      "#No emergency services nearby": "Aucun service d’urgence à proximité",
+      "#None of these": "Aucun de ces éléments"
+    },
+    "de": {
+      "code": "de",
+      "#Dangers on the road": "Gefahren auf der Straße",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Wie sicher sind Sie beim Autofahren, einen Zusammenstoß zu vermeiden, wenn plötzlich jemand auftaucht?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Zum Beispiel eine Person, die zu Fuß auf die Fahrbahn tritt, ein Rad oder Roller, der Ihnen den Weg abschneidet, oder eine aufgehende Autotür.",
+      "#Not at all": "Gar nicht",
+      "#A little": "Ein wenig",
+      "#Moderately": "Mittel",
+      "#Quite": "Ziemlich",
+      "#Very": "Sehr",
+      "#Road Users": "Verkehrsteilnehmende",
+      "#Situations on the Road": "Situationen im Straßenverkehr",
+      "#Car – Road safety": "Auto – Verkehrssicherheit",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - Auto – Verkehrssicherheit",
+      "#Car on a street": "Auto auf einer Straße",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Gefahren, andere Verkehrsteilnehmende und Situationen auf der Straße, <b>wenn Sie mit dem Auto unterwegs sind</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Wer im Straßenverkehr gibt Ihnen bei Autofahrten ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Other car drivers": "Andere Autofahrende",
+      "#Motorcycle or scooter riders": "Motorrad- oder Rollerfahrende",
+      "#Bus drivers": "Busfahrende",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Lieferfahrzeuge (Transporter, Lastenräder, Roller)",
+      "#Taxi or ride-hailing drivers": "Taxi- oder Fahrdienstfahrende",
+      "#Cyclists": "Radfahrende",
+      "#E-scooter riders": "E-Scooter-Fahrende",
+      "#Pedestrians": "Zu Fuß Gehende",
+      "#Nobody in particular": "Niemand Bestimmtes",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Welche dieser Situationen geben Ihnen bei Autofahrten ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Poor visibility or limited sightlines": "Schlechte Sicht oder eingeschränkte Sichtweite",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden",
+      "#Crowding": "Überfüllung",
+      "#Conflicts with other road users": "Konflikte mit anderen Verkehrsteilnehmenden",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Fehlende sichere oder geeignete Straßen, Kreuzungen, Beschilderung oder Beleuchtung",
+      "#No emergency services nearby": "Keine Rettungsdienste in der Nähe",
+      "#None of these": "Keine davon"
+    },
+    "tr": {
+      "code": "tr",
+      "#Dangers on the road": "Yoldaki tehlikeler",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Araba kullanırken, biri aniden karşınıza çıktığında kazadan kaçınabileceğinize ne kadar güveniyorsunuz?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Örneğin bir yayanın yola çıkması, bir bisikletlinin veya scooter sürücüsünün önünüzü kesmesi ya da bir araba kapısının açılması.",
+      "#Not at all": "Hiç",
+      "#A little": "Biraz",
+      "#Moderately": "Orta derecede",
+      "#Quite": "Oldukça",
+      "#Very": "Çok",
+      "#Road Users": "Yol kullanıcıları",
+      "#Situations on the Road": "Yoldaki durumlar",
+      "#Car – Road safety": "Araba – Yol güvenliği",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - Araba – Yol güvenliği",
+      "#Car on a street": "Sokakta bir araba",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Arabayla yolculuk ederken</b> tehlikeler, diğer yol kullanıcıları ve yoldaki durumlar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Arabayla yolculuk ederken yolda kimler kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Other car drivers": "Diğer araba sürücüleri",
+      "#Motorcycle or scooter riders": "Motosiklet veya scooter sürücüleri",
+      "#Bus drivers": "Otobüs şoförleri",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Teslimat araçları (kamyonet, kargo bisikleti, scooter)",
+      "#Taxi or ride-hailing drivers": "Taksi veya uygulama üzerinden çağrılan araç sürücüleri",
+      "#Cyclists": "Bisikletliler",
+      "#E-scooter riders": "E-scooter kullanıcıları",
+      "#Pedestrians": "Yayalar",
+      "#Nobody in particular": "Özellikle kimse değil",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Arabayla yolculuk ederken bu durumlardan hangileri kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Poor visibility or limited sightlines": "Kötü görüş veya sınırlı görüş mesafesi",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Sürücülerin veya yayaların güvensiz davranışları",
+      "#Crowding": "Kalabalık",
+      "#Conflicts with other road users": "Diğer yol kullanıcılarıyla tartışma ya da sürtüşme",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Güvenli veya yeterli yol, kavşak, tabela ya da aydınlatma eksikliği",
+      "#No emergency services nearby": "Yakınlarda acil durum hizmetlerinin olmaması",
+      "#None of these": "Bunların hiçbiri"
+    },
+    "fa": {
+      "code": "fa",
+      "#Dangers on the road": "خطرات در جاده",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "هنگام رانندگی، چقدر مطمئنید که وقتی کسی ناگهان ظاهر می‌شود می‌توانید از برخورد جلوگیری کنید؟",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "مثلاً عابری که ناگهان قدم به خیابان می‌گذارد، دوچرخه‌سوار یا اسکوتری که جلوی شما می‌پرد، یا بازشدن در یک خودرو.",
+      "#Not at all": "اصلاً",
+      "#A little": "کمی",
+      "#Moderately": "تا حدی",
+      "#Quite": "تا حد زیادی",
+      "#Very": "بسیار",
+      "#Road Users": "کاربران راه",
+      "#Situations on the Road": "موقعیت‌ها در خیابان",
+      "#Car – Road safety": "خودرو – ایمنی راه",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - خودرو – ایمنی راه",
+      "#Car on a street": "خودرو در خیابان",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>خطرها، دیگر کاربران راه و موقعیت‌های جاده <b>هنگام سفر با خودرو</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "هنگام سفر با خودرو، چه کسانی در خیابان باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Other car drivers": "دیگر رانندگان خودرو",
+      "#Motorcycle or scooter riders": "موتورسواران یا اسکوترسواران",
+      "#Bus drivers": "رانندگان اتوبوس",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "وسایل نقلیهٔ تحویل کالا (ون، دوچرخهٔ باری، موتور)",
+      "#Taxi or ride-hailing drivers": "رانندگان تاکسی یا تاکسی اینترنتی",
+      "#Cyclists": "دوچرخه‌سواران",
+      "#E-scooter riders": "کاربران اسکوتر برقی",
+      "#Pedestrians": "عابران پیاده",
+      "#Nobody in particular": "هیچ‌کس به‌طور خاص",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "هنگام سفر با خودرو، کدام یک از این موقعیت‌ها باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Poor visibility or limited sightlines": "دید ضعیف یا میدان دید محدود",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "رفتار ناایمن رانندگان، موتورسواران و دوچرخه‌سواران یا عابران پیاده",
+      "#Crowding": "شلوغی",
+      "#Conflicts with other road users": "برخورد و تعارض با سایر کاربران راه",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "نبود جاده، تقاطع، تابلو یا روشنایی ایمن و کافی",
+      "#No emergency services nearby": "نبود خدمات اورژانس در نزدیکی",
+      "#None of these": "هیچ‌کدام از این‌ها"
+    },
+    "hu": {
+      "code": "hu",
+      "#Dangers on the road": "Veszélyek az úton",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Vezetés közben mennyire biztos benne, hogy el tudja kerülni az ütközést, ha valaki hirtelen megjelenik?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Például egy lelépő gyalogos, Ön elé vágó kerékpáros vagy robogós, vagy kinyíló autóajtó.",
+      "#Not at all": "Egyáltalán nem",
+      "#A little": "Kissé",
+      "#Moderately": "Közepesen",
+      "#Quite": "Meglehetősen",
+      "#Very": "Nagyon",
+      "#Road Users": "Közlekedők",
+      "#Situations on the Road": "Helyzetek az úton",
+      "#Car – Road safety": "Autó – Közlekedésbiztonság",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - Autó – Közlekedésbiztonság",
+      "#Car on a street": "Autó az utcán",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Veszélyek, más közlekedők és helyzetek az úton <b>autós utazás közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Autós utazás közben kik miatt érzi magát veszélyben az úton? (Jelölje meg az összes megfelelőt)",
+      "#Other car drivers": "Más autósok",
+      "#Motorcycle or scooter riders": "Motorosok vagy robogósok",
+      "#Bus drivers": "Buszvezetők",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Áruszállító járművek (furgonok, teherkerékpárok, robogók)",
+      "#Taxi or ride-hailing drivers": "Taxisofőrök vagy személyszállító alkalmazások sofőrjei",
+      "#Cyclists": "Kerékpárosok",
+      "#E-scooter riders": "Elektromosroller-használók",
+      "#Pedestrians": "Gyalogosok",
+      "#Nobody in particular": "Különösebben senki",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Autós utazás közben mely helyzetek miatt érzi magát veszélyben? (Jelölje meg az összes megfelelőt)",
+      "#Poor visibility or limited sightlines": "Rossz látási viszonyok vagy korlátozott beláthatóság",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "A járművezetők, kerékpárosok, motorosok vagy gyalogosok veszélyes viselkedése",
+      "#Crowding": "Zsúfoltság",
+      "#Conflicts with other road users": "Konfliktus más közlekedőkkel",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "A biztonságos vagy megfelelő utak, kereszteződések, táblák vagy világítás hiánya",
+      "#No emergency services nearby": "Nincs a közelben mentő- vagy sürgősségi szolgálat",
+      "#None of these": "Ezek közül egyik sem"
+    },
+    "ar": {
+      "code": "ar",
+      "#Dangers on the road": "المخاطر على الطريق",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "عند القيادة، ما مدى ثقتك بأنك تستطيع تجنب الاصطدام عندما يظهر شخص فجأة؟",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "مثل شخص يخرج إلى الطريق فجأة، أو راكب دراجة أو سكوتر يقطع طريقك، أو باب سيارة يُفتح.",
+      "#Not at all": "على الإطلاق",
+      "#A little": "قليلًا",
+      "#Moderately": "بدرجة متوسطة",
+      "#Quite": "إلى حد كبير",
+      "#Very": "كثيرًا",
+      "#Road Users": "من يستخدمون الطريق",
+      "#Situations on the Road": "مواقف على الطريق",
+      "#Car – Road safety": "السيارة – السلامة على الطريق",
+      "#SmartUrbanity - Car – Road safety": "SmartUrbanity - السيارة – السلامة على الطريق",
+      "#Car on a street": "سيارة في شارع",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>Dangers, other road users and situations on the road <b>when you travel by car</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>المخاطر ومستخدمو الطريق الآخرون والمواقف على الطريق <b>عند التنقل بالسيارة</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "عند التنقل بالسيارة، من على الطريق يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Other car drivers": "سائقو السيارات الآخرون",
+      "#Motorcycle or scooter riders": "راكبو الدراجات النارية أو السكوترات",
+      "#Bus drivers": "سائقو الحافلات",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "مركبات التوصيل (شاحنات صغيرة، دراجات الشحن، سكوترات)",
+      "#Taxi or ride-hailing drivers": "سائقو سيارات الأجرة أو خدمات النقل عبر التطبيقات",
+      "#Cyclists": "راكبو الدراجات الهوائية",
+      "#E-scooter riders": "مستخدمو السكوتر الكهربائي",
+      "#Pedestrians": "المشاة",
+      "#Nobody in particular": "لا أحد بعينه",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "عند التنقل بالسيارة، أي من هذه المواقف يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Poor visibility or limited sightlines": "ضعف الرؤية أو محدودية مجال النظر",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "سلوك غير آمن من السائقين أو الراكبين أو المشاة",
+      "#Crowding": "الازدحام",
+      "#Conflicts with other road users": "الاحتكاك بمستخدمي الطريق الآخرين",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "غياب طرق أو تقاطعات أو لافتات أو إضاءة آمنة وكافية",
+      "#No emergency services nearby": "عدم وجود خدمات طوارئ قريبة",
+      "#None of these": "لا شيء مما سبق"
+    }
+  }
+}

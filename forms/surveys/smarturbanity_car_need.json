@@ -1,0 +1,422 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Car – When the car is hard to replace",
+    "questionnaire_id": "smarturbanity_car_need",
+    "questionnaire_version": "3.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 3,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Car – When the car is hard to replace",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car.svg",
+      "image_alt": "#Car on a street",
+      "description": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Car – When the car is hard to replace",
+    "sections": [
+      {
+        "title": "When the car is hard to replace",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "What do you use the car for? (Select all that apply)",
+            "answer_key": "car_need_uses",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Taking older relatives or people with walking difficulties out",
+                "value": "accompany_older"
+              },
+              {
+                "text": "Going with someone to medical or official appointments",
+                "value": "care_appointments"
+              },
+              {
+                "text": "Travelling at night or getting to night shifts, when public transport is scarce",
+                "value": "night_hours"
+              },
+              {
+                "text": "Reaching places with no direct public transport, for example work outside the ring road",
+                "value": "no_direct_link"
+              },
+              {
+                "text": "Carrying heavy work tools or equipment",
+                "value": "heavy_equipment"
+              },
+              {
+                "text": "Getting around when public transport is on strike",
+                "value": "strikes"
+              },
+              {
+                "text": "Getting around because my area is poorly served by public transport",
+                "value": "area_not_served"
+              },
+              {
+                "text": "Doing several errands in different places on the same day",
+                "value": "trip_chains"
+              },
+              {
+                "text": "Travelling with small children and their things (pushchair, bags)",
+                "value": "children"
+              },
+              {
+                "text": "Making sure someone does not have to come home alone by public transport at night",
+                "value": "accompany_evening"
+              },
+              {
+                "text": "Carrying animals, for example to the vet",
+                "value": "animals"
+              },
+              {
+                "text": "Doing big grocery shopping",
+                "value": "big_shopping"
+              },
+              {
+                "text": "Carrying bulky or fragile items",
+                "value": "bulky_items"
+              },
+              {
+                "text": "Picking people up with luggage at a station or airport, especially in the evening",
+                "value": "luggage"
+              },
+              {
+                "text": "Taking bulky or hazardous waste to a collection point",
+                "value": "waste_disposal"
+              },
+              {
+                "text": "Being sure of getting back, even after many hours",
+                "value": "certain_return"
+              },
+              {
+                "text": "Making unexpected trips, even out of town",
+                "value": "unplanned_trips"
+              },
+              {
+                "text": "Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)",
+                "value": "sharing_unavailable"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "car_need_uses",
+            "question_version": "1.0.2",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "If there were a reliable alternative for these trips, would you use the car less?",
+            "answer_key": "car_less_with_alternative",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "car_less_with_alternative",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data",
+            "show_if": {
+              "car_need_uses": {
+                "not": [
+                  "none"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_car_need",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#When the car is hard to replace": "When the car is hard to replace",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "If there were a reliable alternative for these trips, would you use the car less?",
+      "#Car – When the car is hard to replace": "Car – When the car is hard to replace",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Car – When the car is hard to replace",
+      "#Car on a street": "Car on a street",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#What do you use the car for? (Select all that apply)": "What do you use the car for? (Select all that apply)",
+      "#Taking older relatives or people with walking difficulties out": "Taking older relatives or people with walking difficulties out",
+      "#Going with someone to medical or official appointments": "Going with someone to medical or official appointments",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Travelling at night or getting to night shifts, when public transport is scarce",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Reaching places with no direct public transport, for example work outside the ring road",
+      "#Carrying heavy work tools or equipment": "Carrying heavy work tools or equipment",
+      "#Getting around when public transport is on strike": "Getting around when public transport is on strike",
+      "#Getting around because my area is poorly served by public transport": "Getting around because my area is poorly served by public transport",
+      "#Doing several errands in different places on the same day": "Doing several errands in different places on the same day",
+      "#Travelling with small children and their things (pushchair, bags)": "Travelling with small children and their things (pushchair, bags)",
+      "#Making sure someone does not have to come home alone by public transport at night": "Making sure someone does not have to come home alone by public transport at night",
+      "#Carrying animals, for example to the vet": "Carrying animals, for example to the vet",
+      "#Doing big grocery shopping": "Doing big grocery shopping",
+      "#Carrying bulky or fragile items": "Carrying bulky or fragile items",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Picking people up with luggage at a station or airport, especially in the evening",
+      "#Taking bulky or hazardous waste to a collection point": "Taking bulky or hazardous waste to a collection point",
+      "#Being sure of getting back, even after many hours": "Being sure of getting back, even after many hours",
+      "#Making unexpected trips, even out of town": "Making unexpected trips, even out of town",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)",
+      "#None of these": "None of these"
+    },
+    "it": {
+      "code": "it",
+      "#When the car is hard to replace": "Quando l’auto è difficile da sostituire",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "Se per questi spostamenti ci fosse un’alternativa affidabile, useresti meno l’auto?",
+      "#Car – When the car is hard to replace": "In auto – Quando l’auto è difficile da sostituire",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - In auto – Quando l’auto è difficile da sostituire",
+      "#Car on a street": "Auto su una strada",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcuni spostamenti sono difficili <b>senza auto</b>. Dicci per quali usi l’auto. Alla maggior parte delle domande si risponde con Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#What do you use the car for? (Select all that apply)": "Per cosa usi l’auto? (Seleziona tutte le opzioni applicabili)",
+      "#Taking older relatives or people with walking difficulties out": "Portare fuori familiari anziani o persone con difficoltà a camminare",
+      "#Going with someone to medical or official appointments": "Accompagnare qualcuno a visite mediche o appuntamenti ufficiali",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Spostarmi di notte o raggiungere i turni di notte, quando i mezzi pubblici sono pochi",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Raggiungere posti senza collegamenti diretti con i mezzi pubblici, per esempio il lavoro fuori dal raccordo anulare",
+      "#Carrying heavy work tools or equipment": "Portare attrezzi o attrezzature da lavoro pesanti",
+      "#Getting around when public transport is on strike": "Spostarmi quando i mezzi pubblici sono in sciopero",
+      "#Getting around because my area is poorly served by public transport": "Spostarmi perché la mia zona è poco servita dai mezzi pubblici",
+      "#Doing several errands in different places on the same day": "Fare più commissioni in posti diversi nella stessa giornata",
+      "#Travelling with small children and their things (pushchair, bags)": "Spostarmi con bambini piccoli e le loro cose (passeggino, borse)",
+      "#Making sure someone does not have to come home alone by public transport at night": "Far sì che nessuno debba tornare a casa da solo o da sola sui mezzi pubblici di notte",
+      "#Carrying animals, for example to the vet": "Portare animali, per esempio dal veterinario",
+      "#Doing big grocery shopping": "Fare la spesa grande",
+      "#Carrying bulky or fragile items": "Trasportare oggetti ingombranti o fragili",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Andare a prendere persone con i bagagli in stazione o in aeroporto, soprattutto la sera",
+      "#Taking bulky or hazardous waste to a collection point": "Portare rifiuti ingombranti o pericolosi a un punto di raccolta",
+      "#Being sure of getting back, even after many hours": "Avere la certezza di tornare, anche dopo molte ore",
+      "#Making unexpected trips, even out of town": "Fare spostamenti imprevisti, anche fuori città",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Spostarmi quando auto in condivisione o taxi sono difficili da trovare (ad es. di notte o in periferia)",
+      "#None of these": "Nessuna di queste"
+    },
+    "fr": {
+      "code": "fr",
+      "#When the car is hard to replace": "Quand la voiture est difficile à remplacer",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "S’il existait une alternative fiable pour ces trajets, utiliseriez-vous moins la voiture ?",
+      "#Car – When the car is hard to replace": "Voiture – Quand la voiture est difficile à remplacer",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Voiture – Quand la voiture est difficile à remplacer",
+      "#Car on a street": "Voiture dans une rue",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Certains trajets sont difficiles à faire <b>sans voiture</b>. Dites-nous pour lesquels vous utilisez la voiture. On répond à la plupart des questions par Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#What do you use the car for? (Select all that apply)": "Pour quoi utilisez-vous la voiture ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Taking older relatives or people with walking difficulties out": "Emmener en sortie des proches âgés ou des personnes qui ont du mal à marcher",
+      "#Going with someone to medical or official appointments": "Accompagner quelqu’un à des rendez-vous médicaux ou administratifs",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Me déplacer la nuit ou me rendre à un travail de nuit, quand les transports en commun sont rares",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Rejoindre des lieux sans transport en commun direct, par exemple un travail en dehors du périphérique",
+      "#Carrying heavy work tools or equipment": "Transporter des outils ou du matériel de travail lourds",
+      "#Getting around when public transport is on strike": "Me déplacer en cas de grève des transports en commun",
+      "#Getting around because my area is poorly served by public transport": "Me déplacer parce que mon quartier est mal desservi par les transports en commun",
+      "#Doing several errands in different places on the same day": "Faire plusieurs courses à des endroits différents dans la même journée",
+      "#Travelling with small children and their things (pushchair, bags)": "Voyager avec de jeunes enfants et leurs affaires (poussette, sacs)",
+      "#Making sure someone does not have to come home alone by public transport at night": "Éviter que quelqu’un doive rentrer seul ou seule dans les transports en commun la nuit",
+      "#Carrying animals, for example to the vet": "Transporter des animaux, par exemple chez le vétérinaire",
+      "#Doing big grocery shopping": "Faire de grosses courses alimentaires",
+      "#Carrying bulky or fragile items": "Transporter des objets encombrants ou fragiles",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Aller chercher des personnes avec des bagages à une gare ou à un aéroport, surtout le soir",
+      "#Taking bulky or hazardous waste to a collection point": "Apporter des déchets encombrants ou dangereux à un point de collecte",
+      "#Being sure of getting back, even after many hours": "Avoir la certitude de pouvoir rentrer, même après de nombreuses heures",
+      "#Making unexpected trips, even out of town": "Faire des trajets imprévus, même hors de la ville",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Me déplacer quand les voitures partagées ou les taxis sont difficiles à trouver (par ex. la nuit ou en périphérie)",
+      "#None of these": "Aucun de ces éléments"
+    },
+    "de": {
+      "code": "de",
+      "#When the car is hard to replace": "Wenn das Auto schwer zu ersetzen ist",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "Würden Sie das Auto weniger nutzen, wenn es für diese Wege eine verlässliche Alternative gäbe?",
+      "#Car – When the car is hard to replace": "Auto – Wenn das Auto schwer zu ersetzen ist",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Auto – Wenn das Auto schwer zu ersetzen ist",
+      "#Car on a street": "Auto auf einer Straße",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Manche Wege sind <b>ohne Auto</b> schwer zu bewältigen. Sagen Sie uns, für welche Sie das Auto nutzen. Die meisten Fragen beantworten Sie mit Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#What do you use the car for? (Select all that apply)": "Wofür nutzen Sie das Auto? (Wählen Sie alles Zutreffende aus)",
+      "#Taking older relatives or people with walking difficulties out": "Ältere Angehörige oder Menschen mit Gehschwierigkeiten begleiten",
+      "#Going with someone to medical or official appointments": "Jemanden zu Arzt- oder Behördenterminen begleiten",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Nachts unterwegs sein oder zur Nachtschicht kommen, wenn kaum öffentliche Verkehrsmittel fahren",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Orte ohne direkte Verbindung mit öffentlichen Verkehrsmitteln erreichen, zum Beispiel einen Arbeitsplatz außerhalb des Autobahnrings",
+      "#Carrying heavy work tools or equipment": "Schweres Arbeitswerkzeug oder schwere Ausrüstung transportieren",
+      "#Getting around when public transport is on strike": "Unterwegs sein, wenn im öffentlichen Verkehr gestreikt wird",
+      "#Getting around because my area is poorly served by public transport": "Unterwegs sein, weil meine Gegend schlecht mit öffentlichen Verkehrsmitteln erschlossen ist",
+      "#Doing several errands in different places on the same day": "Am selben Tag mehrere Erledigungen an verschiedenen Orten machen",
+      "#Travelling with small children and their things (pushchair, bags)": "Mit kleinen Kindern und ihren Sachen (Kinderwagen, Taschen) unterwegs sein",
+      "#Making sure someone does not have to come home alone by public transport at night": "Dafür sorgen, dass jemand nachts nicht allein mit öffentlichen Verkehrsmitteln nach Hause fahren muss",
+      "#Carrying animals, for example to the vet": "Tiere transportieren, zum Beispiel zum Tierarzt",
+      "#Doing big grocery shopping": "Einen großen Lebensmitteleinkauf machen",
+      "#Carrying bulky or fragile items": "Sperrige oder zerbrechliche Gegenstände transportieren",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Menschen mit Gepäck am Bahnhof oder Flughafen abholen, besonders abends",
+      "#Taking bulky or hazardous waste to a collection point": "Sperrmüll oder Sondermüll zu einer Sammelstelle bringen",
+      "#Being sure of getting back, even after many hours": "Sicher sein, wieder zurückzukommen, auch nach vielen Stunden",
+      "#Making unexpected trips, even out of town": "Unvorhergesehene Fahrten machen, auch außerhalb der Stadt",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Unterwegs sein, wenn Carsharing-Autos oder Taxis schwer zu finden sind (z. B. nachts oder in Außenbezirken)",
+      "#None of these": "Keine davon"
+    },
+    "tr": {
+      "code": "tr",
+      "#When the car is hard to replace": "Arabanın yerini tutmanın zor olduğu durumlar",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "Bu yolculuklar için güvenilir bir alternatif olsaydı arabayı daha az kullanır mıydınız?",
+      "#Car – When the car is hard to replace": "Araba – Arabanın yerini tutmanın zor olduğu durumlar",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Araba – Arabanın yerini tutmanın zor olduğu durumlar",
+      "#Car on a street": "Sokakta bir araba",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bazı yolculuklar <b>arabasız</b> yapılması zor yolculuklardır. Arabayı hangileri için kullandığınızı bize söyleyin. Soruların çoğu Evet veya Hayır ile yanıtlanır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#What do you use the car for? (Select all that apply)": "Arabayı ne için kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#Taking older relatives or people with walking difficulties out": "Yaşlı akrabaları veya yürüme güçlüğü olan kişileri dışarı çıkarmak",
+      "#Going with someone to medical or official appointments": "Birine sağlık veya resmî randevularda eşlik etmek",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Toplu taşımanın az olduğu saatlerde geceleri yolculuk etmek veya gece vardiyalarına gitmek",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Doğrudan toplu taşıma olmayan yerlere, örneğin çevre yolunun dışındaki işe ulaşmak",
+      "#Carrying heavy work tools or equipment": "Ağır iş aletlerini veya ekipmanlarını taşımak",
+      "#Getting around when public transport is on strike": "Toplu taşıma grevdeyken ulaşmak",
+      "#Getting around because my area is poorly served by public transport": "Bölgeme toplu taşıma yeterince hizmet vermediği için ulaşmak",
+      "#Doing several errands in different places on the same day": "Aynı gün farklı yerlerde birkaç iş halletmek",
+      "#Travelling with small children and their things (pushchair, bags)": "Küçük çocuklarla ve eşyalarıyla (bebek arabası, çantalar) yolculuk etmek",
+      "#Making sure someone does not have to come home alone by public transport at night": "Birinin geceleri toplu taşımayla eve yalnız dönmek zorunda kalmamasını sağlamak",
+      "#Carrying animals, for example to the vet": "Hayvanları, örneğin veterinere götürmek",
+      "#Doing big grocery shopping": "Büyük market alışverişi yapmak",
+      "#Carrying bulky or fragile items": "Hacimli veya kırılgan eşyaları taşımak",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Özellikle akşamları, bir istasyondan veya havalimanından bagajlı kişileri almak",
+      "#Taking bulky or hazardous waste to a collection point": "Hacimli veya tehlikeli atıkları toplama noktasına götürmek",
+      "#Being sure of getting back, even after many hours": "Saatler sonra bile geri dönebileceğimden emin olmak",
+      "#Making unexpected trips, even out of town": "Şehir dışı da dahil, beklenmedik yolculuklar yapmak",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Paylaşımlı araba veya taksi bulmanın zor olduğu durumlarda (örn. geceleri veya şehrin dış bölgelerinde) ulaşmak",
+      "#None of these": "Bunların hiçbiri"
+    },
+    "fa": {
+      "code": "fa",
+      "#When the car is hard to replace": "وقتی جایگزین کردن خودرو سخت است",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "اگر برای این سفرها جایگزین قابل‌اعتمادی وجود داشت، کمتر از خودرو استفاده می‌کردید؟",
+      "#Car – When the car is hard to replace": "خودرو – وقتی جایگزین کردن خودرو سخت است",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - خودرو – وقتی جایگزین کردن خودرو سخت است",
+      "#Car on a street": "خودرو در خیابان",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>انجام بعضی سفرها <b>بدون خودرو</b> سخت است. بگویید برای کدام‌ها از خودرو استفاده می‌کنید. به بیشتر پرسش‌ها با بله یا خیر پاسخ می‌دهید.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#What do you use the car for? (Select all that apply)": "از خودرو برای چه کارهایی استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Taking older relatives or people with walking difficulties out": "بردن اعضای مسن خانواده یا افراد دارای مشکل در راه رفتن به بیرون",
+      "#Going with someone to medical or official appointments": "همراهی یک نفر در قرارهای پزشکی یا اداری",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "سفر در شب یا رفتن به شیفت شب، وقتی حمل‌ونقل عمومی کم است",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "رسیدن به جاهایی که حمل‌ونقل عمومی مستقیم ندارند، مثلاً محل کار خارج از کمربندی",
+      "#Carrying heavy work tools or equipment": "حمل ابزار یا تجهیزات کاری سنگین",
+      "#Getting around when public transport is on strike": "جابه‌جایی هنگام اعتصاب حمل‌ونقل عمومی",
+      "#Getting around because my area is poorly served by public transport": "جابه‌جایی به‌دلیل ضعف خدمات حمل‌ونقل عمومی در محله من",
+      "#Doing several errands in different places on the same day": "انجام چند کار در جاهای مختلف در یک روز",
+      "#Travelling with small children and their things (pushchair, bags)": "سفر با کودکان خردسال و وسایلشان (کالسکه، کیف)",
+      "#Making sure someone does not have to come home alone by public transport at night": "اطمینان از اینکه کسی شب مجبور نیست تنها با حمل‌ونقل عمومی به خانه برگردد",
+      "#Carrying animals, for example to the vet": "حمل حیوانات، مثلاً به دامپزشک",
+      "#Doing big grocery shopping": "خریدهای بزرگ خواربار",
+      "#Carrying bulky or fragile items": "حمل اجسام حجیم یا شکستنی",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "رفتن به دنبال کسانی که با چمدان به ایستگاه یا فرودگاه می‌رسند، به‌ویژه عصرها و شب‌ها",
+      "#Taking bulky or hazardous waste to a collection point": "بردن زباله‌های حجیم یا خطرناک به محل جمع‌آوری",
+      "#Being sure of getting back, even after many hours": "اطمینان از بازگشت، حتی پس از ساعت‌های طولانی",
+      "#Making unexpected trips, even out of town": "سفرهای پیش‌بینی‌نشده، حتی به خارج از شهر",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "جابه‌جایی وقتی خودروی اشتراکی یا تاکسی به‌سختی پیدا می‌شود (مثلاً شب یا در مناطق دورتر)",
+      "#None of these": "هیچ‌کدام از این‌ها"
+    },
+    "hu": {
+      "code": "hu",
+      "#When the car is hard to replace": "Amikor az autót nehéz kiváltani",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "Ha lenne megbízható alternatíva ezekre az utakra, kevesebbet használná az autót?",
+      "#Car – When the car is hard to replace": "Autó – Amikor az autót nehéz kiváltani",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Autó – Amikor az autót nehéz kiváltani",
+      "#Car on a street": "Autó az utcán",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány utat nehéz megtenni <b>autó nélkül</b>. Mondja el, melyekhez használja az autót. A legtöbb kérdésre Igen vagy Nem a válasz.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#What do you use the car for? (Select all that apply)": "Mire használja az autót? (Jelölje meg az összes megfelelőt)",
+      "#Taking older relatives or people with walking difficulties out": "Idős hozzátartozók vagy nehezen járó emberek elvitele",
+      "#Going with someone to medical or official appointments": "Valaki elkísérése orvosi vagy hivatalos ügyintézésre",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "Éjszakai utazás vagy éjszakai műszakba járás, amikor kevés a tömegközlekedés",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "Olyan helyek elérése, ahová nincs közvetlen tömegközlekedés, például a körgyűrűn kívüli munkahely",
+      "#Carrying heavy work tools or equipment": "Nehéz munkaeszközök vagy felszerelés szállítása",
+      "#Getting around when public transport is on strike": "Közlekedés, amikor sztrájkol a tömegközlekedés",
+      "#Getting around because my area is poorly served by public transport": "Közlekedés, mert a környékem rosszul ellátott tömegközlekedéssel",
+      "#Doing several errands in different places on the same day": "Több ügy intézése ugyanazon a napon, különböző helyeken",
+      "#Travelling with small children and their things (pushchair, bags)": "Utazás kisgyerekekkel és a holmijukkal (babakocsi, táskák)",
+      "#Making sure someone does not have to come home alone by public transport at night": "Annak biztosítása, hogy valakinek ne kelljen éjszaka egyedül hazamennie tömegközlekedéssel",
+      "#Carrying animals, for example to the vet": "Állatok szállítása, például az állatorvoshoz",
+      "#Doing big grocery shopping": "Nagybevásárlás",
+      "#Carrying bulky or fragile items": "Terjedelmes vagy törékeny holmik szállítása",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "Csomaggal érkező emberek felvétele az állomáson vagy a repülőtéren, különösen este",
+      "#Taking bulky or hazardous waste to a collection point": "Terjedelmes vagy veszélyes hulladék gyűjtőhelyre vitele",
+      "#Being sure of getting back, even after many hours": "Biztos hazajutás, akár sok óra elteltével is",
+      "#Making unexpected trips, even out of town": "Váratlan utak, akár a városon kívülre is",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Közlekedés, amikor nehéz megosztott autót vagy taxit találni (pl. éjszaka vagy a külső kerületekben)",
+      "#None of these": "Ezek közül egyik sem"
+    },
+    "ar": {
+      "code": "ar",
+      "#When the car is hard to replace": "عندما يصعب الاستغناء عن السيارة",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#If there were a reliable alternative for these trips, would you use the car less?": "لو توفر بديل موثوق لهذه الرحلات، هل ستستخدم السيارة أقل؟",
+      "#Car – When the car is hard to replace": "السيارة – عندما يصعب الاستغناء عنها",
+      "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - السيارة – عندما يصعب الاستغناء عنها",
+      "#Car on a street": "سيارة في شارع",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الرحلات يصعب القيام بها <b>بدون سيارة</b>. أخبرنا بأيّها تستخدم السيارة من أجله. تتم الإجابة عن معظم الأسئلة بنعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#What do you use the car for? (Select all that apply)": "ما الأغراض التي تستخدم السيارة من أجلها؟ (يمكن اختيار كل ما ينطبق)",
+      "#Taking older relatives or people with walking difficulties out": "اصطحاب كبار السن من الأقارب أو الأشخاص الذين يجدون صعوبة في المشي",
+      "#Going with someone to medical or official appointments": "مرافقة أحد إلى مواعيد طبية أو رسمية",
+      "#Travelling at night or getting to night shifts, when public transport is scarce": "التنقل ليلًا أو الوصول إلى نوبات العمل الليلية، حين يقل النقل العام",
+      "#Reaching places with no direct public transport, for example work outside the ring road": "الوصول إلى أماكن لا يوجد إليها نقل عام مباشر، مثل العمل خارج الطريق الدائري",
+      "#Carrying heavy work tools or equipment": "حمل أدوات أو معدات عمل ثقيلة",
+      "#Getting around when public transport is on strike": "التنقل عند إضراب النقل العام",
+      "#Getting around because my area is poorly served by public transport": "التنقل لأن منطقتي تخدمها وسائل النقل العام بشكل سيئ",
+      "#Doing several errands in different places on the same day": "قضاء عدة حاجات في أماكن مختلفة في اليوم نفسه",
+      "#Travelling with small children and their things (pushchair, bags)": "التنقل مع أطفال صغار وأغراضهم (عربة أطفال، حقائب)",
+      "#Making sure someone does not have to come home alone by public transport at night": "التأكد من أن أحدًا لا يضطر إلى العودة إلى البيت وحده بالنقل العام ليلًا",
+      "#Carrying animals, for example to the vet": "نقل الحيوانات، مثلًا إلى الطبيب البيطري",
+      "#Doing big grocery shopping": "شراء كميات كبيرة من المواد الغذائية",
+      "#Carrying bulky or fragile items": "نقل أغراض كبيرة الحجم أو قابلة للكسر",
+      "#Picking people up with luggage at a station or airport, especially in the evening": "استقبال أشخاص معهم حقائب في محطة أو مطار، خاصة في المساء",
+      "#Taking bulky or hazardous waste to a collection point": "نقل نفايات كبيرة الحجم أو خطرة إلى نقطة تجميع",
+      "#Being sure of getting back, even after many hours": "التأكد من العودة حتى بعد ساعات طويلة",
+      "#Making unexpected trips, even out of town": "القيام برحلات غير متوقعة، حتى خارج المدينة",
+      "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "التنقل عندما يصعب العثور على سيارات مشتركة أو سيارات أجرة (مثلًا ليلًا أو في المناطق الطرفية)",
+      "#None of these": "لا شيء مما سبق"
+    }
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Public transport – Personal security",
+    "questionnaire_id": "smarturbanity_public_transport_security",
+    "questionnaire_version": "3.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Public transport – Personal security",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_pt_service.svg",
+      "image_alt": "#Bus with a clock",
+      "description": "<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Public transport – Personal security",
+    "sections": [
+      {
+        "title": "Personal Security",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
+            "answer_key": "put_day_insecure",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "put_day_insecure",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?",
+            "answer_key": "put_evening_insecure",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "put_evening_insecure",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)",
+            "answer_key": "put_insecurity_factors",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Long waits at stops in the evening",
+                "value": "long_evening_waits"
+              },
+              {
+                "text": "Places with few people around (isolated or deserted areas)",
+                "value": "isolated_areas"
+              },
+              {
+                "text": "People behaving aggressively or in an intimidating way",
+                "value": "aggressive_behaviour"
+              },
+              {
+                "text": "Blind corners or obstructed views",
+                "value": "blind_corners"
+              },
+              {
+                "text": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+                "value": "poor_maintenance"
+              },
+              {
+                "text": "No surveillance or security measures (e.g. no cameras, no staff)",
+                "value": "no_surveillance"
+              },
+              {
+                "text": "Incidents that happened to me or were reported in the area",
+                "value": "past_incidents"
+              },
+              {
+                "text": "Overcrowded or chaotic places",
+                "value": "overcrowding"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "put_insecurity_factors",
+            "question_version": "1.0.1",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?",
+            "answer_key": "put_dark_lighting_change",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "question_id": "put_dark_lighting_change",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
+            "answer_key": "put_identity_harassment",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "put_identity_harassment",
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_public_transport_security",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Personal Security": "Personal Security",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Doesn't apply to me": "Doesn't apply to me",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
+      "#Public transport – Personal security": "Public transport – Personal security",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Public transport – Personal security",
+      "#Bus with a clock": "Bus with a clock",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)",
+      "#Long waits at stops in the evening": "Long waits at stops in the evening",
+      "#Places with few people around (isolated or deserted areas)": "Places with few people around (isolated or deserted areas)",
+      "#People behaving aggressively or in an intimidating way": "People behaving aggressively or in an intimidating way",
+      "#Blind corners or obstructed views": "Blind corners or obstructed views",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "No surveillance or security measures (e.g. no cameras, no staff)",
+      "#Incidents that happened to me or were reported in the area": "Incidents that happened to me or were reported in the area",
+      "#Overcrowded or chaotic places": "Overcrowded or chaotic places",
+      "#None of these": "None of these"
+    },
+    "it": {
+      "code": "it",
+      "#Personal Security": "Sicurezza personale",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Durante il giorno, ti capita di non sentirti al sicuro da reati o molestie quando usi i mezzi pubblici? (Le molestie includono commenti indesiderati, pedinamenti, contatti fisici o comportamenti intimidatori.)",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Doesn't apply to me": "Non mi riguarda",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "La sera o dopo il tramonto, ti capita di non sentirti al sicuro da reati o molestie quando usi i mezzi pubblici?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "Dopo il tramonto, la scarsa illuminazione alle fermate o lungo la strada per raggiungerle ti fa cambiare percorso o orario?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Quando usi i mezzi pubblici, hai subito o temi molestie per chi sei o per come appari (es. genere, aspetto, origine, età)?",
+      "#Public transport – Personal security": "Trasporto pubblico – Sicurezza personale",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Trasporto pubblico – Sicurezza personale",
+      "#Bus with a clock": "Autobus con un orologio",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando usi i mezzi pubblici</b>. Alla maggior parte delle domande si risponde con Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "Quando usi i mezzi pubblici, cosa ti fa sentire meno al sicuro da reati o molestie? (Seleziona tutte le opzioni applicabili)",
+      "#Long waits at stops in the evening": "Lunghe attese alle fermate di sera",
+      "#Places with few people around (isolated or deserted areas)": "Luoghi con poca gente (zone isolate o deserte)",
+      "#People behaving aggressively or in an intimidating way": "Persone che si comportano in modo aggressivo o intimidatorio",
+      "#Blind corners or obstructed views": "Angoli ciechi o visuale ostruita",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Scarsa manutenzione (es. edifici abbandonati, graffiti, infrastrutture rotte)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Mancanza di sorveglianza o di misure di sicurezza (es. niente telecamere, niente personale)",
+      "#Incidents that happened to me or were reported in the area": "Episodi accaduti a me o segnalati nella zona",
+      "#Overcrowded or chaotic places": "Luoghi sovraffollati o caotici",
+      "#None of these": "Nessuna di queste"
+    },
+    "fr": {
+      "code": "fr",
+      "#Personal Security": "Sécurité personnelle",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Pendant la journée, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous prenez les transports en commun ? (Le harcèlement comprend les commentaires non désirés, le fait que quelqu’un vous suive, les attouchements ou les comportements intimidants à votre égard.)",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Doesn't apply to me": "Ne me concerne pas",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "Le soir ou après la tombée de la nuit, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous prenez les transports en commun ?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "Une fois la nuit tombée, un mauvais éclairage aux arrêts ou sur le chemin pour s’y rendre vous fait-il changer d’itinéraire ou d’horaire ?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Lorsque vous prenez les transports en commun, avez-vous subi ou redoutez-vous du harcèlement en raison de qui vous êtes ou de votre aspect (par ex. genre, apparence, origine, âge) ?",
+      "#Public transport – Personal security": "Transports en commun – Sécurité personnelle",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Transports en commun – Sécurité personnelle",
+      "#Bus with a clock": "Bus avec une horloge",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous utilisez les transports en commun</b>. On répond à la plupart des questions par Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "Lorsque vous prenez les transports en commun, qu’est-ce qui vous fait vous sentir moins à l’abri de la criminalité ou du harcèlement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Long waits at stops in the evening": "Longues attentes aux arrêts le soir",
+      "#Places with few people around (isolated or deserted areas)": "Les lieux où il y a peu de monde (zones isolées ou désertes)",
+      "#People behaving aggressively or in an intimidating way": "Des personnes qui se comportent de façon agressive ou intimidante",
+      "#Blind corners or obstructed views": "Les angles morts ou les vues obstruées",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Un mauvais entretien (par ex. bâtiments abandonnés, graffitis, infrastructures dégradées)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "L’absence de surveillance ou de mesures de sécurité (par ex. pas de caméras, pas de personnel)",
+      "#Incidents that happened to me or were reported in the area": "Des incidents qui me sont arrivés ou qui ont été signalés dans le quartier",
+      "#Overcrowded or chaotic places": "Les lieux bondés ou chaotiques",
+      "#None of these": "Aucun de ces éléments"
+    },
+    "de": {
+      "code": "de",
+      "#Personal Security": "Persönliche Sicherheit",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Fühlen Sie sich tagsüber bei Fahrten mit öffentlichen Verkehrsmitteln manchmal nicht sicher vor Kriminalität oder Belästigung? (Belästigung umfasst unerwünschte Kommentare, Verfolgen, Berührungen oder einschüchterndes Verhalten Ihnen gegenüber.)",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Doesn't apply to me": "Trifft auf mich nicht zu",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "Fühlen Sie sich abends oder nach Einbruch der Dunkelheit bei Fahrten mit öffentlichen Verkehrsmitteln manchmal nicht sicher vor Kriminalität oder Belästigung?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "Ändern Sie nach Einbruch der Dunkelheit Ihre Route oder die Uhrzeit Ihrer Fahrt, weil Haltestellen oder der Weg dorthin schlecht beleuchtet sind?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Haben Sie bei Fahrten mit öffentlichen Verkehrsmitteln Belästigung wegen Ihrer Person oder Ihres Aussehens (z. B. Geschlecht, Aussehen, Herkunft, Alter) erlebt oder befürchten Sie sie?",
+      "#Public transport – Personal security": "Öffentliche Verkehrsmittel – Persönliche Sicherheit",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Öffentliche Verkehrsmittel – Persönliche Sicherheit",
+      "#Bus with a clock": "Bus mit einer Uhr",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie öffentliche Verkehrsmittel nutzen</b>. Die meisten Fragen beantworten Sie mit Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "Was gibt Ihnen bei Fahrten mit öffentlichen Verkehrsmitteln ein geringeres Sicherheitsgefühl vor Kriminalität oder Belästigung? (Wählen Sie alles Zutreffende aus)",
+      "#Long waits at stops in the evening": "Lange Wartezeiten an Haltestellen am Abend",
+      "#Places with few people around (isolated or deserted areas)": "Orte, an denen wenige Menschen sind (abgelegene oder menschenleere Gegenden)",
+      "#People behaving aggressively or in an intimidating way": "Menschen, die sich aggressiv oder einschüchternd verhalten",
+      "#Blind corners or obstructed views": "Unübersichtliche Ecken oder verdeckte Sicht",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Schlechte Instandhaltung (z. B. verlassene Gebäude, Graffiti, kaputte Infrastruktur)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Fehlende Überwachung oder Sicherheitsmaßnahmen (z. B. keine Kameras, kein Personal)",
+      "#Incidents that happened to me or were reported in the area": "Vorfälle, die mir passiert sind oder in der Gegend gemeldet wurden",
+      "#Overcrowded or chaotic places": "Überfüllte oder chaotische Orte",
+      "#None of these": "Keine davon"
+    },
+    "tr": {
+      "code": "tr",
+      "#Personal Security": "Kişisel güvenlik",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Gündüz toplu taşıma kullanırken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu? (Taciz; size yönelik istenmeyen yorumları, takip edilmeyi, dokunmayı veya yıldırıcı davranışları kapsar.)",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Doesn't apply to me": "Benim için geçerli değil",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "Akşam veya hava karardıktan sonra toplu taşıma kullanırken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "Hava karardıktan sonra duraklardaki veya durağa giderken yoldaki yetersiz aydınlatma güzergâhınızı veya yolculuk saatinizi değiştirmenize neden oluyor mu?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Toplu taşıma kullanırken kim olduğunuz ya da nasıl göründüğünüz nedeniyle (örn. cinsiyet, görünüş, köken, yaş) taciz yaşadınız mı ya da bundan korkuyor musunuz?",
+      "#Public transport – Personal security": "Toplu taşıma – Kişisel güvenlik",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Toplu taşıma – Kişisel güvenlik",
+      "#Bus with a clock": "Saatli otobüs",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Toplu taşıma kullanırken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Soruların çoğu Evet veya Hayır ile yanıtlanır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "Toplu taşıma kullanırken neler kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Long waits at stops in the evening": "Akşamları duraklarda uzun bekleme süreleri",
+      "#Places with few people around (isolated or deserted areas)": "Etrafta az insan olan yerler (ıssız veya tenha alanlar)",
+      "#People behaving aggressively or in an intimidating way": "Saldırgan veya gözdağı verici davranan insanlar",
+      "#Blind corners or obstructed views": "Kör köşeler veya kapalı görüş alanları",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Bakımsızlık (örn. terk edilmiş binalar, grafitiler, bozuk altyapı)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Gözetim veya güvenlik önlemlerinin eksikliği (örn. kamera yok, görevli yok)",
+      "#Incidents that happened to me or were reported in the area": "Başıma gelen veya bölgede bildirilen olaylar",
+      "#Overcrowded or chaotic places": "Aşırı kalabalık veya karmaşık yerler",
+      "#None of these": "Bunların hiçbiri"
+    },
+    "fa": {
+      "code": "fa",
+      "#Personal Security": "امنیت شخصی",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "در طول روز، آیا پیش می‌آید هنگام استفاده از حمل‌ونقل عمومی در برابر جرم یا آزار احساس امنیت نکنید؟ (آزار شامل اظهارنظرهای ناخواسته، تعقیب کردن، لمس کردن یا رفتار ارعاب‌آمیز نسبت به شما است.)",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Doesn't apply to me": "به من مربوط نمی‌شود",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "عصر یا پس از تاریک شدن هوا، آیا پیش می‌آید هنگام استفاده از حمل‌ونقل عمومی در برابر جرم یا آزار احساس امنیت نکنید؟",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "بعد از تاریک شدن هوا، آیا روشنایی ضعیف در ایستگاه‌ها یا مسیر رسیدن به آن‌ها باعث می‌شود مسیر یا زمان سفر خود را تغییر دهید؟",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "هنگام استفاده از حمل‌ونقل عمومی، آیا به دلیل ویژگی‌های شخصی یا ظاهرتان (مثلاً جنسیت، ظاهر، خاستگاه، سن) آزار دیده‌اید یا از آن می‌ترسید؟",
+      "#Public transport – Personal security": "حمل‌ونقل عمومی – امنیت شخصی",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - حمل‌ونقل عمومی – امنیت شخصی",
+      "#Bus with a clock": "اتوبوس با ساعت",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام استفاده از حمل‌ونقل عمومی</b>. به بیشتر پرسش‌ها با بله یا خیر پاسخ می‌دهید.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "هنگام استفاده از حمل‌ونقل عمومی، چه چیزهایی باعث می‌شوند در برابر جرم یا آزار کمتر احساس امنیت کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Long waits at stops in the evening": "انتظار طولانی در ایستگاه‌ها در شب",
+      "#Places with few people around (isolated or deserted areas)": "مکان‌هایی با رفت‌وآمد کم (مناطق دورافتاده یا خلوت)",
+      "#People behaving aggressively or in an intimidating way": "افرادی که رفتار پرخاشگرانه یا ترساننده دارند",
+      "#Blind corners or obstructed views": "پیچ‌های کور یا دید مسدود",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "نگهداری ضعیف (مثلاً ساختمان‌های متروکه، گرافیتی، زیرساخت‌های خراب)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "نبود نظارت یا اقدامات امنیتی (مثلاً بدون دوربین، بدون کارکنان)",
+      "#Incidents that happened to me or were reported in the area": "حوادثی که برای من رخ داده یا در منطقه گزارش شده است",
+      "#Overcrowded or chaotic places": "مکان‌های بسیار شلوغ یا پرهرج‌ومرج",
+      "#None of these": "هیچ‌کدام از این‌ها"
+    },
+    "hu": {
+      "code": "hu",
+      "#Personal Security": "Személyes biztonság",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Napközben előfordul, hogy tömegközlekedés közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Zaklatásnak számítanak az Önnek címzett kéretlen megjegyzések, a követés, az érintés vagy a megfélemlítő viselkedés.)",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Doesn't apply to me": "Rám nem vonatkozik",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "Este vagy sötétedés után előfordul, hogy tömegközlekedés közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "Sötétedés után a megállók vagy az odavezető út rossz világítása miatt megváltoztatja az útvonalát vagy az utazás idejét?",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Tömegközlekedés közben élt át vagy tart zaklatástól amiatt, hogy ki Ön vagy hogyan néz ki (pl. nem, külső, származás, életkor)?",
+      "#Public transport – Personal security": "Tömegközlekedés – Személyes biztonság",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - Tömegközlekedés – Személyes biztonság",
+      "#Bus with a clock": "Busz órával",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>tömegközlekedés közben</b>. A legtöbb kérdésre Igen vagy Nem a válasz.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "Tömegközlekedés közben mi miatt érzi magát kevésbé biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Jelölje meg az összes megfelelőt)",
+      "#Long waits at stops in the evening": "Hosszú várakozás a megállókban esténként",
+      "#Places with few people around (isolated or deserted areas)": "Olyan helyek, ahol kevés ember van (elhagyatott vagy néptelen helyek)",
+      "#People behaving aggressively or in an intimidating way": "Agresszíven vagy megfélemlítően viselkedő emberek",
+      "#Blind corners or obstructed views": "Beláthatatlan sarkok vagy takart kilátás",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Rossz karbantartás (pl. elhagyott épületek, graffitik, tönkrement infrastruktúra)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "A felügyelet vagy a biztonsági intézkedések hiánya (pl. nincs kamera, nincs személyzet)",
+      "#Incidents that happened to me or were reported in the area": "Velem történt vagy a környéken bejelentett incidensek",
+      "#Overcrowded or chaotic places": "Túlzsúfolt vagy kaotikus helyek",
+      "#None of these": "Ezek közül egyik sem"
+    },
+    "ar": {
+      "code": "ar",
+      "#Personal Security": "الأمان الشخصي",
+      "#During the day, do you ever feel unsafe from crime or harassment when you use public transport? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "خلال النهار، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند استخدام وسائل النقل العام؟ (يشمل التحرش التعليقات غير المرغوب فيها أو الملاحقة أو اللمس أو السلوك الترهيبي الموجّه إليك.)",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Doesn't apply to me": "لا ينطبق عليّ",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you use public transport?": "في المساء أو بعد حلول الظلام، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند استخدام وسائل النقل العام؟",
+      "#After dark, does poor lighting at stops or on the way to them make you change your route or the time you travel?": "بعد حلول الظلام، هل تدفعك الإنارة الضعيفة في المحطات أو في الطريق إليها إلى تغيير طريقك أو وقت تنقلك؟",
+      "#When you use public transport, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "عند استخدام وسائل النقل العام، هل سبق أن تعرضت للتحرش بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو السن)، أو هل يقلقك ذلك؟",
+      "#Public transport – Personal security": "النقل العام – الأمان الشخصي",
+      "#SmartUrbanity - Public transport – Personal security": "SmartUrbanity - النقل العام – الأمان الشخصي",
+      "#Bus with a clock": "حافلة مع ساعة",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>How secure you feel from crime or harassment <b>when you use public transport</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند استخدام وسائل النقل العام</b>. تتم الإجابة عن معظم الأسئلة بنعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you use public transport, what makes you feel less secure from crime or harassment? (Select all that apply)": "عند استخدام النقل العام، ما الذي يقلل شعورك بالأمان من الجريمة أو التحرش؟ (يمكن اختيار كل ما ينطبق)",
+      "#Long waits at stops in the evening": "الانتظار الطويل في المحطات مساءً",
+      "#Places with few people around (isolated or deserted areas)": "أماكن يقل فيها المارة (مناطق معزولة أو مهجورة)",
+      "#People behaving aggressively or in an intimidating way": "أشخاص يتصرفون بعدوانية أو بطريقة مخيفة",
+      "#Blind corners or obstructed views": "زوايا عمياء أو رؤية محجوبة",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "سوء الصيانة (مثل المباني المهجورة والكتابات على الجدران والبنية التحتية المتضررة)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "غياب المراقبة أو إجراءات الأمن (مثل عدم وجود كاميرات أو موظفين)",
+      "#Incidents that happened to me or were reported in the area": "حوادث وقعت لي أو تم الإبلاغ عنها في المنطقة",
+      "#Overcrowded or chaotic places": "أماكن مكتظة أو فوضوية",
+      "#None of these": "لا شيء مما سبق"
+    }
+  }
+}

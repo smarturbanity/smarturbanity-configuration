@@ -1,0 +1,1033 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Cycling – Your trips",
+    "questionnaire_id": "smarturbanity_cycling_habits",
+    "questionnaire_version": "3.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Cycling – Your trips",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_cycling_routes.svg",
+      "image_alt": "#Bicycle and a route between two points",
+      "description": "<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Cycling – Your trips",
+    "sections": [
+      {
+        "title": "How you cycle",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you ride a bike or e-bike to get around at least once a week?",
+            "help": "Your own bike or a shared one. Rides just for sport count too.",
+            "answer_key": "bike_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "bike_weekly",
+            "question_version": "1.2.1"
+          },
+          {
+            "text": "Why do you rarely cycle? (Select all that apply)",
+            "answer_key": "not_bike_reasons",
+            "question_type": "multiple_options",
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "options": [
+              {
+                "text": "I don't have a bike or e-bike I can use",
+                "value": "no_bike"
+              },
+              {
+                "text": "The places I go are too far or cycling takes too long",
+                "value": "distance"
+              },
+              {
+                "text": "Cycling is tiring or physically difficult for me",
+                "value": "effort"
+              },
+              {
+                "text": "I feel unsafe cycling (traffic, crime or harassment)",
+                "value": "unsafe"
+              },
+              {
+                "text": "There are no good cycle lanes or safe places to leave a bike",
+                "value": "streets"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
+              }
+            ],
+            "required": false,
+            "question_id": "not_bike_reasons",
+            "question_version": "1.0.2",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Which bike do you use most often?",
+            "answer_key": "bike_type",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "My own bike",
+                "value": "standard_pedal_bicycle_private"
+              },
+              {
+                "text": "My own e-bike",
+                "value": "electric_bicycle_e_bike_private"
+              },
+              {
+                "text": "A shared bike",
+                "value": "shared_hire_bicycle_docked_or_dockless"
+              },
+              {
+                "text": "A shared e-bike",
+                "value": "shared_hire_e_bike"
+              },
+              {
+                "text": "A cargo bike or an adapted bike (e.g. tricycle, handbike)",
+                "value": "cargo_bike_or_adapted_bike"
+              }
+            ],
+            "question_id": "bike_type",
+            "question_version": "1.1.2"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "How confident do you feel cycling in city traffic?",
+            "answer_key": "bike_confidence",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "Not at all: I avoid cycling in traffic",
+                "value": "not_confident_at_all_i_avoid_cycling_in"
+              },
+              {
+                "text": "Not very: I cycle in traffic only when I have to",
+                "value": "not_very_confident_i_cycle_only_when_i_h"
+              },
+              {
+                "text": "In between",
+                "value": "neither_confident_nor_unconfident"
+              },
+              {
+                "text": "Fairly: I manage most situations",
+                "value": "somewhat_confident_i_manage_most_situati"
+              },
+              {
+                "text": "Very: I cycle in any traffic",
+                "value": "very_confident_i_cycle_in_all_conditions"
+              },
+              {
+                "text": "I never cycle in traffic",
+                "value": "i_have_never_cycled_in_urban_traffic"
+              }
+            ],
+            "question_id": "bike_confidence",
+            "question_version": "1.1.0"
+          },
+          {
+            "text": "Does cycling in your daily life help your health or your mood?",
+            "answer_key": "bike_health_benefit",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "question_id": "bike_health_benefit",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          }
+        ]
+      },
+      {
+        "title": "Combining ways of travelling",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "In the same trip, do you usually combine cycling with another way of travelling?",
+            "help": "For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.",
+            "answer_key": "bike_combines",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "question_id": "bike_combines",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+            "answer_key": "bike_combined_modes",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+                "value": "walking_as_the_main_mode_for_most_of_the"
+              },
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bus",
+                "value": "bus"
+              },
+              {
+                "text": "Tram",
+                "value": "tram"
+              },
+              {
+                "text": "Metro",
+                "value": "metro"
+              },
+              {
+                "text": "Regional or suburban train",
+                "value": "train"
+              },
+              {
+                "text": "e-scooter (private)",
+                "value": "e_scooter_private"
+              },
+              {
+                "text": "e-scooter (shared)",
+                "value": "e_scooter_shared"
+              },
+              {
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ],
+              "bike_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "bike_combined_modes",
+            "question_version": "2.0.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+            "answer_key": "bike_combined_difficulties",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "options": [
+              {
+                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+                "value": "vehicles_are_too_crowded_e_g_no_space_fo"
+              },
+              {
+                "text": "Poor coordination between modes (long waiting times, missed connections)",
+                "value": "poor_coordination_between_modes_long_wai"
+              },
+              {
+                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+                "value": "lack_of_infrastructure_e_g_no_bicycle_pa"
+              },
+              {
+                "text": "Complicated transfers (stations far apart, unclear routes)",
+                "value": "complicated_transfers_stations_far_apart"
+              },
+              {
+                "text": "Travel time becomes too long",
+                "value": "travel_time_becomes_too_long"
+              },
+              {
+                "text": "Cost is too high when combining modes",
+                "value": "cost_is_too_high_when_combining_modes"
+              },
+              {
+                "text": "Safety concerns (traffic, theft, unsafe areas)",
+                "value": "safety_concerns_traffic_theft_unsafe_are"
+              },
+              {
+                "text": "Services are infrequent or do not run in the evening",
+                "value": "infrequent_or_no_evening_service"
+              },
+              {
+                "text": "Lack of reliable information (schedules, delays)",
+                "value": "lack_of_reliable_information_schedules_d"
+              },
+              {
+                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+                "value": "physical_effort_is_too_high_e_g_carrying"
+              },
+              {
+                "text": "Accessibility issues (stairs, no elevators, etc.)",
+                "value": "accessibility_issues_stairs_no_elevators"
+              },
+              {
+                "text": "Weather-related difficulties",
+                "value": "weather_related_difficulties"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ],
+              "bike_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "bike_combined_difficulties",
+            "question_version": "1.1.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "When you face these difficulties, how do you mostly respond?",
+            "answer_key": "bike_combined_response",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
+                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
+              },
+              {
+                "text": "I switch to a single mode (e.g. only car, only public transport)",
+                "value": "i_switch_to_a_single_mode_e_g_only_car_o"
+              },
+              {
+                "text": "I change the time of travel (e.g. avoid peak hours)",
+                "value": "i_change_the_time_of_travel_e_g_avoid_pe"
+              },
+              {
+                "text": "I change the route or transfer point",
+                "value": "i_change_the_route_or_transfer_point"
+              },
+              {
+                "text": "I choose a different combination of modes",
+                "value": "i_choose_a_different_combination_of_mode"
+              },
+              {
+                "text": "I continue using the same combination despite difficulties",
+                "value": "i_continue_using_the_same_combination_de"
+              },
+              {
+                "text": "I reduce how often I make that trip",
+                "value": "i_reduce_how_often_i_make_that_trip"
+              },
+              {
+                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+                "value": "i_look_for_alternative_solutions_e_g_bik"
+              },
+              {
+                "text": "I avoid that trip entirely if possible",
+                "value": "i_avoid_that_trip_entirely_if_possible"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ],
+              "bike_combines": [
+                "yes"
+              ],
+              "bike_combined_difficulties": {
+                "not": [
+                  "i_do_not_experience_significant_difficul"
+                ]
+              }
+            },
+            "question_id": "bike_combined_response",
+            "question_version": "1.0.2",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_cycling_habits",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#How you cycle": "How you cycle",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Do you ride a bike or e-bike to get around at least once a week?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Your own bike or a shared one. Rides just for sport count too.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Which bike do you use most often?": "Which bike do you use most often?",
+      "#My own bike": "My own bike",
+      "#My own e-bike": "My own e-bike",
+      "#A shared bike": "A shared bike",
+      "#A shared e-bike": "A shared e-bike",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "A cargo bike or an adapted bike (e.g. tricycle, handbike)",
+      "#How confident do you feel cycling in city traffic?": "How confident do you feel cycling in city traffic?",
+      "#Not at all: I avoid cycling in traffic": "Not at all: I avoid cycling in traffic",
+      "#Not very: I cycle in traffic only when I have to": "Not very: I cycle in traffic only when I have to",
+      "#In between": "In between",
+      "#Fairly: I manage most situations": "Fairly: I manage most situations",
+      "#Very: I cycle in any traffic": "Very: I cycle in any traffic",
+      "#I never cycle in traffic": "I never cycle in traffic",
+      "#Does cycling in your daily life help your health or your mood?": "Does cycling in your daily life help your health or your mood?",
+      "#Cycling – Your trips": "Cycling – Your trips",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Cycling – Your trips",
+      "#Bicycle and a route between two points": "Bicycle and a route between two points",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Combining ways of travelling": "Combining ways of travelling",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "In the same trip, do you usually combine cycling with another way of travelling?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+      "#When you face these difficulties, how do you mostly respond?": "When you face these difficulties, how do you mostly respond?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+      "#Car": "Car",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#Bus": "Bus",
+      "#Tram": "Tram",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Regional or suburban train",
+      "#e-scooter (private)": "e-scooter (private)",
+      "#e-scooter (shared)": "e-scooter (shared)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Poor coordination between modes (long waiting times, missed connections)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Complicated transfers (stations far apart, unclear routes)",
+      "#Travel time becomes too long": "Travel time becomes too long",
+      "#Cost is too high when combining modes": "Cost is too high when combining modes",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Safety concerns (traffic, theft, unsafe areas)",
+      "#Services are infrequent or do not run in the evening": "Services are infrequent or do not run in the evening",
+      "#Lack of reliable information (schedules, delays)": "Lack of reliable information (schedules, delays)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
+      "#Weather-related difficulties": "Weather-related difficulties",
+      "#I do not experience significant difficulties": "I do not experience significant difficulties",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "I stop using one of the modes (e.g. stop bringing my bike)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "I switch to a single mode (e.g. only car, only public transport)",
+      "#I change the time of travel (e.g. avoid peak hours)": "I change the time of travel (e.g. avoid peak hours)",
+      "#I change the route or transfer point": "I change the route or transfer point",
+      "#I choose a different combination of modes": "I choose a different combination of modes",
+      "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
+      "#I reduce how often I make that trip": "I reduce how often I make that trip",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
+      "#Other": "Other",
+      "#Why do you rarely cycle? (Select all that apply)": "Why do you rarely cycle? (Select all that apply)",
+      "#I don't have a bike or e-bike I can use": "I don't have a bike or e-bike I can use",
+      "#The places I go are too far or cycling takes too long": "The places I go are too far or cycling takes too long",
+      "#Cycling is tiring or physically difficult for me": "Cycling is tiring or physically difficult for me",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "I feel unsafe cycling (traffic, crime or harassment)",
+      "#There are no good cycle lanes or safe places to leave a bike": "There are no good cycle lanes or safe places to leave a bike",
+      "#Another reason": "Another reason"
+    },
+    "it": {
+      "code": "it",
+      "#How you cycle": "Come vai in bici",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Vai in bici o in bici elettrica almeno una volta a settimana per spostarti?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "La tua bici o una in condivisione. Contano anche i giri solo per sport.",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Which bike do you use most often?": "Quale bici usi più spesso?",
+      "#My own bike": "La mia bici",
+      "#My own e-bike": "La mia bici elettrica",
+      "#A shared bike": "Una bici in condivisione",
+      "#A shared e-bike": "Una bici elettrica in condivisione",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Una bici cargo o una bici adattata (ad es. triciclo, handbike)",
+      "#How confident do you feel cycling in city traffic?": "Quanto ti senti sicuro in bici nel traffico cittadino?",
+      "#Not at all: I avoid cycling in traffic": "Per niente: evito di andare in bici nel traffico",
+      "#Not very: I cycle in traffic only when I have to": "Poco: vado in bici nel traffico solo se devo",
+      "#In between": "Via di mezzo",
+      "#Fairly: I manage most situations": "Abbastanza: me la cavo nella maggior parte dei casi",
+      "#Very: I cycle in any traffic": "Molto: vado in bici con qualsiasi traffico",
+      "#I never cycle in traffic": "Non vado mai in bici nel traffico",
+      "#Does cycling in your daily life help your health or your mood?": "Andare in bici nella vita di tutti i giorni fa bene alla tua salute o al tuo umore?",
+      "#Cycling – Your trips": "In bici – I tuoi spostamenti",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - In bici – I tuoi spostamenti",
+      "#Bicycle and a route between two points": "Bicicletta e un percorso tra due punti",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande sugli spostamenti in bici o bici elettrica, anche in condivisione. Se vai poco in bici, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Combining ways of travelling": "Combinare più modi di spostarsi",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "Nello stesso spostamento, di solito oltre alla bici usi anche un altro modo di spostarti?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Per esempio bici e treno, oppure auto e metro. Un breve tratto a piedi fino alla fermata o al veicolo parcheggiato non conta.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quali altri modi di spostarti usi nello stesso spostamento? (Seleziona tutte le opzioni applicabili)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
+      "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
+      "#Car": "Auto",
+      "#Car sharing": "Auto in condivisione (car sharing)",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#Bus": "Autobus",
+      "#Tram": "Tram",
+      "#Metro": "Metropolitana",
+      "#Regional or suburban train": "Treno regionale o suburbano",
+      "#e-scooter (private)": "Monopattino elettrico (privato)",
+      "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o auto con conducente (NCC, ad es. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Cambi complicati (stazioni distanti tra loro, percorsi poco chiari)",
+      "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
+      "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
+      "#Services are infrequent or do not run in the evening": "Le corse sono rare o assenti la sera",
+      "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Lo sforzo fisico è troppo elevato (ad es. trasportare una bicicletta o camminare per lunghe distanze)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
+      "#Weather-related difficulties": "Difficoltà legate alle condizioni meteorologiche",
+      "#I do not experience significant difficulties": "Non incontro difficoltà significative",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Smetto di utilizzare uno dei mezzi (ad es. non porto più la mia bicicletta)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Passo a un'unica modalità di trasporto (ad es. solo auto o solo trasporto pubblico)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Cambio l'orario dello spostamento (ad es. evito le ore di punta)",
+      "#I change the route or transfer point": "Cambio il percorso o il punto di interscambio",
+      "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
+      "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
+      "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bici in condivisione invece della mia bicicletta)",
+      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
+      "#Other": "Altro",
+      "#Why do you rarely cycle? (Select all that apply)": "Perché vai poco in bici? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have a bike or e-bike I can use": "Non ho una bici o una bici elettrica da usare",
+      "#The places I go are too far or cycling takes too long": "I posti dove vado sono troppo lontani o in bici ci vuole troppo tempo",
+      "#Cycling is tiring or physically difficult for me": "Pedalare è faticoso o fisicamente difficile per me",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "In bici non mi sento al sicuro (traffico, criminalità o molestie)",
+      "#There are no good cycle lanes or safe places to leave a bike": "Mancano buone piste ciclabili o posti sicuri dove lasciare la bici",
+      "#Another reason": "Un altro motivo"
+    },
+    "fr": {
+      "code": "fr",
+      "#How you cycle": "Votre façon de faire du vélo",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Faites-vous du vélo ou du vélo électrique au moins une fois par semaine pour vous déplacer ?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Votre propre vélo ou un vélo en libre-service. Les sorties uniquement sportives comptent aussi.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Which bike do you use most often?": "Quel vélo utilisez-vous le plus souvent ?",
+      "#My own bike": "Mon propre vélo",
+      "#My own e-bike": "Mon propre vélo électrique",
+      "#A shared bike": "Un vélo en libre-service",
+      "#A shared e-bike": "Un vélo électrique en libre-service",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Un vélo cargo ou un vélo adapté (par ex. tricycle, handbike)",
+      "#How confident do you feel cycling in city traffic?": "Quelle confiance avez-vous à vélo dans la circulation en ville ?",
+      "#Not at all: I avoid cycling in traffic": "Pas du tout : j'évite le vélo dans la circulation",
+      "#Not very: I cycle in traffic only when I have to": "Peu : je ne fais du vélo dans la circulation que si je dois",
+      "#In between": "Entre les deux",
+      "#Fairly: I manage most situations": "Assez : je me débrouille dans la plupart des situations",
+      "#Very: I cycle in any traffic": "Très : je roule à vélo dans toute circulation",
+      "#I never cycle in traffic": "Je ne fais jamais de vélo dans la circulation",
+      "#Does cycling in your daily life help your health or your mood?": "Faire du vélo au quotidien est-il bon pour votre santé ou votre moral ?",
+      "#Cycling – Your trips": "Vélo – Vos trajets",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Vélo – Vos trajets",
+      "#Bicycle and a route between two points": "Vélo et un itinéraire entre deux points",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur vos déplacements à vélo ou à vélo électrique, y compris en libre-service. Si vous faites rarement du vélo, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Combining ways of travelling": "Combiner plusieurs modes de déplacement",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "Au cours d’un même trajet, combinez-vous généralement le vélo avec un autre mode de déplacement ?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Par exemple vélo et train, ou voiture et métro. Une courte marche jusqu’à un arrêt ou à un véhicule garé ne compte pas.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quels autres modes de déplacement utilisez-vous au cours du même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
+      "#When you face these difficulties, how do you mostly respond?": "Quand vous rencontrez ces difficultés, que faites-vous le plus souvent ?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
+      "#Car": "Voiture",
+      "#Car sharing": "Autopartage",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#Bus": "Bus",
+      "#Tram": "Tramway",
+      "#Metro": "Métro",
+      "#Regional or suburban train": "Train régional ou de banlieue",
+      "#e-scooter (private)": "Trottinette électrique (personnelle)",
+      "#e-scooter (shared)": "Trottinette électrique (partagée)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Les véhicules sont trop remplis (par ex. pas de place pour un vélo ou des bagages)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Mauvaise coordination entre les modes (longues attentes, correspondances manquées)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Manque d’infrastructures (par ex. pas de stationnement vélo ou vélo non autorisé dans les transports publics)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Correspondances compliquées (stations éloignées, itinéraires peu clairs)",
+      "#Travel time becomes too long": "Le temps de trajet devient trop long",
+      "#Cost is too high when combining modes": "Le coût est trop élevé quand plusieurs modes sont combinés",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Problèmes de sécurité (circulation, vol, zones peu sûres)",
+      "#Services are infrequent or do not run in the evening": "Les passages sont rares ou inexistants le soir",
+      "#Lack of reliable information (schedules, delays)": "Manque d’informations fiables (horaires, retards)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "L’effort physique est trop important (par ex. porter un vélo ou marcher longtemps)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
+      "#Weather-related difficulties": "Difficultés liées à la météo",
+      "#I do not experience significant difficulties": "Je ne rencontre pas de difficulté importante",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "J’arrête d’utiliser l’un des modes (par ex. je ne prends plus mon vélo)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Je passe à un seul mode de transport (par ex. uniquement la voiture ou uniquement les transports publics)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Je change mon heure de déplacement (par ex. j’évite les heures de pointe)",
+      "#I change the route or transfer point": "Je change d’itinéraire ou de lieu de correspondance",
+      "#I choose a different combination of modes": "Je choisis une autre combinaison de modes",
+      "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
+      "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
+      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
+      "#Other": "Autre",
+      "#Why do you rarely cycle? (Select all that apply)": "Pourquoi faites-vous rarement du vélo ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have a bike or e-bike I can use": "Je n’ai pas de vélo ou de vélo électrique à disposition",
+      "#The places I go are too far or cycling takes too long": "Les lieux où je vais sont trop loin ou le trajet à vélo prend trop de temps",
+      "#Cycling is tiring or physically difficult for me": "Pédaler est fatigant ou physiquement difficile pour moi",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "Je ne me sens pas en sécurité à vélo (circulation, délinquance ou harcèlement)",
+      "#There are no good cycle lanes or safe places to leave a bike": "Il manque de bonnes pistes cyclables ou d’endroits sûrs pour laisser un vélo",
+      "#Another reason": "Une autre raison"
+    },
+    "de": {
+      "code": "de",
+      "#How you cycle": "Wie Sie Rad fahren",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Fahren Sie mindestens einmal pro Woche mit dem Fahrrad oder E-Bike, um irgendwohin zu kommen?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Ihr eigenes Rad oder ein Leihrad. Fahrten nur zum Sport zählen auch.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Which bike do you use most often?": "Welches Rad nutzen Sie am häufigsten?",
+      "#My own bike": "Mein eigenes Rad",
+      "#My own e-bike": "Mein eigenes E-Bike",
+      "#A shared bike": "Ein Leihrad",
+      "#A shared e-bike": "Ein Leih-E-Bike",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Ein Lastenrad oder ein angepasstes Rad (z. B. Dreirad, Handbike)",
+      "#How confident do you feel cycling in city traffic?": "Wie sicher fühlen Sie sich beim Radfahren im Stadtverkehr?",
+      "#Not at all: I avoid cycling in traffic": "Gar nicht: Ich vermeide Radfahren im Verkehr",
+      "#Not very: I cycle in traffic only when I have to": "Wenig: Ich fahre nur im Verkehr Rad, wenn ich muss",
+      "#In between": "Mittel",
+      "#Fairly: I manage most situations": "Einigermaßen: Ich komme in den meisten Situationen zurecht",
+      "#Very: I cycle in any traffic": "Sehr: Ich fahre in jedem Verkehr Rad",
+      "#I never cycle in traffic": "Ich fahre nie im Verkehr Rad",
+      "#Does cycling in your daily life help your health or your mood?": "Hilft Ihnen das Radfahren im Alltag für Ihre Gesundheit oder Ihre Stimmung?",
+      "#Cycling – Your trips": "Radfahren – Ihre Wege",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Radfahren – Ihre Wege",
+      "#Bicycle and a route between two points": "Fahrrad und eine Route zwischen zwei Punkten",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zum Unterwegssein mit dem Fahrrad oder E-Bike, auch mit Leihrädern. Wenn Sie selten Rad fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Combining ways of travelling": "Verkehrsmittel kombinieren",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "Kombinieren Sie auf demselben Weg das Fahrrad meist mit einer anderen Art der Fortbewegung?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Zum Beispiel Fahrrad und Zug oder Auto und U-Bahn. Ein kurzer Fußweg zur Haltestelle oder zum geparkten Fahrzeug zählt nicht.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Welche anderen Verkehrsmittel nutzen Sie auf demselben Weg? (Wählen Sie alles Zutreffende aus)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
+      "#When you face these difficulties, how do you mostly respond?": "Wie reagieren Sie normalerweise, wenn diese Schwierigkeiten auftreten?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
+      "#Car": "Auto",
+      "#Car sharing": "Carsharing",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#Bus": "Bus",
+      "#Tram": "Straßenbahn",
+      "#Metro": "U-Bahn/Metro",
+      "#Regional or suburban train": "Regional- oder S-Bahn",
+      "#e-scooter (private)": "E-Scooter (privat)",
+      "#e-scooter (shared)": "E-Scooter (Sharing)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad oder Gepäck)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Schlechte Abstimmung zwischen Verkehrsmitteln (lange Wartezeiten, verpasste Anschlüsse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Fehlende Infrastruktur (z. B. keine Fahrradabstellplätze oder Fahrräder dürfen nicht mitgenommen werden)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Kompliziertes Umsteigen (Haltestellen weit auseinander, unklare Wege)",
+      "#Travel time becomes too long": "Die gesamte Fahrzeit wird zu lang",
+      "#Cost is too high when combining modes": "Die Kosten sind beim Kombinieren mehrerer Verkehrsmittel zu hoch",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Sicherheitsbedenken (Verkehr, Diebstahl, unsichere Bereiche)",
+      "#Services are infrequent or do not run in the evening": "Die Verbindungen sind selten oder fahren abends nicht",
+      "#Lack of reliable information (schedules, delays)": "Fehlende verlässliche Informationen (Fahrpläne, Verspätungen)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Der körperliche Aufwand ist zu hoch (z. B. Fahrrad tragen oder lange Strecken zu Fuß gehen)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
+      "#Weather-related difficulties": "Schwierigkeiten durch das Wetter",
+      "#I do not experience significant difficulties": "Ich habe keine größeren Schwierigkeiten",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ich nutze eines der Verkehrsmittel nicht mehr (z. B. nehme ich mein Fahrrad nicht mehr mit)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Ich wechsle zu nur einem Verkehrsmittel (z. B. nur Auto oder nur öffentlicher Verkehr)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Ich ändere meine Fahrzeit (z. B. vermeide ich Stoßzeiten)",
+      "#I change the route or transfer point": "Ich ändere Route oder Umsteigepunkt",
+      "#I choose a different combination of modes": "Ich wähle eine andere Kombination von Verkehrsmitteln",
+      "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
+      "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
+      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
+      "#Other": "Anderes",
+      "#Why do you rarely cycle? (Select all that apply)": "Warum fahren Sie selten Rad? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have a bike or e-bike I can use": "Ich habe kein Fahrrad oder E-Bike, das ich nutzen kann",
+      "#The places I go are too far or cycling takes too long": "Meine Ziele sind zu weit entfernt oder der Weg mit dem Rad dauert zu lange",
+      "#Cycling is tiring or physically difficult for me": "Radfahren ist für mich anstrengend oder körperlich schwierig",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "Ich fühle mich beim Radfahren unsicher (Verkehr, Kriminalität oder Belästigung)",
+      "#There are no good cycle lanes or safe places to leave a bike": "Es gibt keine guten Radwege oder sicheren Abstellplätze für Fahrräder",
+      "#Another reason": "Ein anderer Grund"
+    },
+    "tr": {
+      "code": "tr",
+      "#How you cycle": "Bisiklet sürme şekliniz",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Haftada en az bir kez bisikletle veya elektrikli bisikletle yolculuk ediyor musunuz?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Kendi bisikletiniz veya paylaşımlı bir bisiklet. Sadece spor için yapılan sürüşler de sayılır.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Which bike do you use most often?": "En sık hangi bisikleti kullanıyorsunuz?",
+      "#My own bike": "Kendi bisikletim",
+      "#My own e-bike": "Kendi elektrikli bisikletim",
+      "#A shared bike": "Paylaşımlı bir bisiklet",
+      "#A shared e-bike": "Paylaşımlı bir elektrikli bisiklet",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Yük bisikleti veya uyarlanmış bir bisiklet (örn. üç tekerlekli, el pedallı bisiklet)",
+      "#How confident do you feel cycling in city traffic?": "Şehir trafiğinde bisiklet sürerken kendinizi ne kadar güvende hissediyorsunuz?",
+      "#Not at all: I avoid cycling in traffic": "Hiç değil: Trafikte bisiklet sürmekten kaçınırım",
+      "#Not very: I cycle in traffic only when I have to": "Pek değil: Trafikte yalnızca zorunluysam bisiklet sürerim",
+      "#In between": "Orta",
+      "#Fairly: I manage most situations": "Oldukça: Çoğu durumun üstesinden gelirim",
+      "#Very: I cycle in any traffic": "Çok: Her trafikte bisiklet sürerim",
+      "#I never cycle in traffic": "Trafikte hiç bisiklet sürmem",
+      "#Does cycling in your daily life help your health or your mood?": "Günlük hayatınızda bisiklet sürmek sağlığınıza veya ruh halinize yardımcı oluyor mu?",
+      "#Cycling – Your trips": "Bisiklet – Yolculuklarınız",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Bisiklet – Yolculuklarınız",
+      "#Bicycle and a route between two points": "Bisiklet ve iki nokta arasında bir güzergâh",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Paylaşımlı bisikletler dahil, bisiklet veya elektrikli bisikletle ulaşım hakkında birkaç soru. Nadiren bisiklet sürüyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Combining ways of travelling": "Ulaşım şekillerini birleştirme",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "Aynı yolculukta bisikleti genellikle başka bir ulaşım şekliyle birleştiriyor musunuz?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Örneğin bisiklet ve tren ya da otomobil ve metro. Durağa veya park edilmiş araca kısa bir yürüyüş sayılmaz.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Aynı yolculukta başka hangi ulaşım şekillerini kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
+      "#When you face these difficulties, how do you mostly respond?": "Bu güçlüklerle karşılaştığınızda genellikle ne yaparsınız?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
+      "#Car": "Otomobil",
+      "#Car sharing": "Araç paylaşımı",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#Bus": "Otobüs",
+      "#Tram": "Tramvay",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Bölgesel veya banliyö treni",
+      "#e-scooter (private)": "E-scooter (kişisel)",
+      "#e-scooter (shared)": "E-scooter (paylaşımlı)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Araçlar çok kalabalık (ör. bisiklet veya bagaj için yer yok)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Ulaşım seçenekleri arasında kötü koordinasyon var (uzun bekleme süreleri, kaçırılan bağlantılar)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Altyapı eksik (ör. bisiklet parkı yok veya toplu taşımaya bisikletle binilemiyor)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Aktarmalar karmaşık (istasyonlar birbirinden uzak, güzergâhlar belirsiz)",
+      "#Travel time becomes too long": "Toplam yolculuk süresi çok uzuyor",
+      "#Cost is too high when combining modes": "Farklı ulaşım seçeneklerini birleştirince maliyet çok yüksek oluyor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Güvenlikle ilgili kaygılar (trafik, hırsızlık, güvensiz bölgeler)",
+      "#Services are infrequent or do not run in the evening": "Seferler seyrek veya akşamları hiç yok",
+      "#Lack of reliable information (schedules, delays)": "Güvenilir bilgi eksikliği (sefer saatleri, gecikmeler)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Fiziksel çaba çok fazla (ör. bisikleti taşımak veya uzun mesafe yürümek)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
+      "#Weather-related difficulties": "Hava koşullarıyla ilgili güçlükler",
+      "#I do not experience significant difficulties": "Önemli bir güçlük yaşamıyorum",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ulaşım seçeneklerinden birini kullanmayı bırakırım (ör. bisikletimi yanımda götürmem)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Tek bir ulaşım seçeneğine geçerim (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Yolculuk saatimi değiştiririm (ör. yoğun saatlerden kaçınırım)",
+      "#I change the route or transfer point": "Güzergâhı veya aktarma noktasını değiştiririm",
+      "#I choose a different combination of modes": "Farklı bir ulaşım seçeneği kombinasyonu kullanırım",
+      "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
+      "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
+      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
+      "#Other": "Diğer",
+      "#Why do you rarely cycle? (Select all that apply)": "Neden nadiren bisiklet sürüyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have a bike or e-bike I can use": "Kullanabileceğim bir bisikletim veya elektrikli bisikletim yok",
+      "#The places I go are too far or cycling takes too long": "Gittiğim yerler çok uzak veya bisikletle gitmek çok uzun sürüyor",
+      "#Cycling is tiring or physically difficult for me": "Bisiklet sürmek benim için yorucu veya fiziksel olarak zor",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "Bisiklet sürerken kendimi güvende hissetmiyorum (trafik, suç veya taciz)",
+      "#There are no good cycle lanes or safe places to leave a bike": "İyi bisiklet yolları veya bisiklet bırakmak için güvenli yerler yok",
+      "#Another reason": "Başka bir neden"
+    },
+    "fa": {
+      "code": "fa",
+      "#How you cycle": "دوچرخه‌سواری شما",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد با دوچرخه یا دوچرخه برقی می‌روید؟",
+      "#Your own bike or a shared one. Rides just for sport count too.": "دوچرخه شخصی یا اشتراکی. سواری فقط برای ورزش هم حساب می‌شود.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Which bike do you use most often?": "بیشتر از کدام دوچرخه استفاده می‌کنید؟",
+      "#My own bike": "دوچرخه شخصی خودم",
+      "#My own e-bike": "دوچرخه برقی شخصی خودم",
+      "#A shared bike": "دوچرخه اشتراکی",
+      "#A shared e-bike": "دوچرخه برقی اشتراکی",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "دوچرخه باربری یا دوچرخه ویژه (مثلاً سه‌چرخه، دوچرخه دستی)",
+      "#How confident do you feel cycling in city traffic?": "در ترافیک شهر با دوچرخه چقدر احساس اطمینان می‌کنید؟",
+      "#Not at all: I avoid cycling in traffic": "اصلاً: از دوچرخه‌سواری در ترافیک دوری می‌کنم",
+      "#Not very: I cycle in traffic only when I have to": "زیاد نه: فقط وقتی مجبورم در ترافیک دوچرخه‌سواری می‌کنم",
+      "#In between": "متوسط",
+      "#Fairly: I manage most situations": "نسبتاً: از پس بیشتر موقعیت‌ها برمی‌آیم",
+      "#Very: I cycle in any traffic": "بسیار: در هر ترافیکی دوچرخه‌سواری می‌کنم",
+      "#I never cycle in traffic": "هرگز در ترافیک دوچرخه‌سواری نمی‌کنم",
+      "#Does cycling in your daily life help your health or your mood?": "آیا دوچرخه‌سواری در زندگی روزمره به سلامت یا حال شما کمک می‌کند؟",
+      "#Cycling – Your trips": "دوچرخه‌سواری – سفرهای شما",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - دوچرخه‌سواری – سفرهای شما",
+      "#Bicycle and a route between two points": "دوچرخه و مسیری میان دو نقطه",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش دربارهٔ رفت‌وآمد با دوچرخه یا دوچرخهٔ برقی، از جمله دوچرخه‌های اشتراکی. اگر کم دوچرخه‌سواری می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#Combining ways of travelling": "ترکیب روش‌های رفت‌وآمد",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "آیا معمولاً در یک سفر، دوچرخه‌سواری را با روش دیگری از رفت‌وآمد ترکیب می‌کنید؟",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلاً دوچرخه و قطار، یا خودرو و مترو. پیاده‌روی کوتاه تا ایستگاه یا تا وسیلهٔ پارک‌شده حساب نمی‌شود.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "در همان سفر از کدام روش‌های دیگر رفت‌وآمد استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
+      "#When you face these difficulties, how do you mostly respond?": "وقتی با این مشکلات روبه‌رو می‌شوید معمولاً چه کار می‌کنید؟",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به‌عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیلهٔ دیگر یا تعویض وسیله)",
+      "#Car": "خودرو",
+      "#Car sharing": "خودروی اشتراکی",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#Bus": "اتوبوس",
+      "#Tram": "تراموا",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار منطقه‌ای یا حومه‌ای",
+      "#e-scooter (private)": "اسکوتر برقی (شخصی)",
+      "#e-scooter (shared)": "اسکوتر برقی (اشتراکی)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "وسیله‌ها خیلی شلوغ هستند (مثلاً جا برای دوچرخه یا بار وجود ندارد)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "هماهنگی بین روش‌ها ضعیف است (انتظار طولانی، از دست دادن وسیله بعدی)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "زیرساخت کافی نیست (مثلاً پارک دوچرخه وجود ندارد یا بردن دوچرخه در حمل‌ونقل عمومی ممکن نیست)",
+      "#Complicated transfers (stations far apart, unclear routes)": "تعویض وسیله پیچیده است (ایستگاه‌ها از هم دورند، مسیرها نامشخص‌اند)",
+      "#Travel time becomes too long": "زمان کل سفر خیلی طولانی می‌شود",
+      "#Cost is too high when combining modes": "هزینه ترکیب چند روش خیلی زیاد است",
+      "#Safety concerns (traffic, theft, unsafe areas)": "نگرانی‌های ایمنی و امنیتی (ترافیک، سرقت، مناطق ناامن)",
+      "#Services are infrequent or do not run in the evening": "سرویس‌ها کم‌تعدادند یا عصرها و شب‌ها کار نمی‌کنند",
+      "#Lack of reliable information (schedules, delays)": "اطلاعات قابل‌اعتماد کافی نیست (زمان‌بندی، تأخیر)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "تلاش جسمی خیلی زیاد است (مثلاً حمل دوچرخه یا پیاده‌روی طولانی)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
+      "#Weather-related difficulties": "مشکلات مربوط به آب‌وهوا",
+      "#I do not experience significant difficulties": "مشکل قابل توجهی ندارم",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "استفاده از یکی از روش‌ها را کنار می‌گذارم (مثلاً دیگر دوچرخه‌ام را نمی‌برم)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
+      "#I change the time of travel (e.g. avoid peak hours)": "زمان سفر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم)",
+      "#I change the route or transfer point": "مسیر یا محل تعویض وسیله را تغییر می‌دهم",
+      "#I choose a different combination of modes": "ترکیب دیگری از روش‌های رفت‌وآمد را انتخاب می‌کنم",
+      "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
+      "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
+      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
+      "#Other": "سایر",
+      "#Why do you rarely cycle? (Select all that apply)": "چرا به‌ندرت دوچرخه‌سواری می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have a bike or e-bike I can use": "دوچرخه یا دوچرخه برقی در دسترس ندارم",
+      "#The places I go are too far or cycling takes too long": "جاهایی که می‌روم خیلی دورند یا دوچرخه‌سواری زمان زیادی می‌برد",
+      "#Cycling is tiring or physically difficult for me": "دوچرخه‌سواری برای من خسته‌کننده یا از نظر جسمی دشوار است",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "در دوچرخه‌سواری احساس ناامنی می‌کنم (ترافیک، جرم یا آزار)",
+      "#There are no good cycle lanes or safe places to leave a bike": "مسیر دوچرخه مناسب یا جای امن برای گذاشتن دوچرخه وجود ندارد",
+      "#Another reason": "دلیل دیگر"
+    },
+    "hu": {
+      "code": "hu",
+      "#How you cycle": "Hogyan biciklizik",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Használ kerékpárt vagy e-bike-ot a közlekedéshez legalább hetente egyszer?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Saját vagy megosztott kerékpár. A csak sportolásból tett körök is számítanak.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Which bike do you use most often?": "Melyik kerékpárt használja a leggyakrabban?",
+      "#My own bike": "Saját kerékpár",
+      "#My own e-bike": "Saját elektromos kerékpár",
+      "#A shared bike": "Megosztott kerékpár",
+      "#A shared e-bike": "Megosztott elektromos kerékpár",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Teherszállító vagy átalakított kerékpár (pl. háromkerekű, kézihajtású)",
+      "#How confident do you feel cycling in city traffic?": "Mennyire érzi magabiztosnak magát, ha a városi forgalomban biciklizik?",
+      "#Not at all: I avoid cycling in traffic": "Egyáltalán nem: kerülöm a forgalomban való biciklizést",
+      "#Not very: I cycle in traffic only when I have to": "Nem nagyon: csak akkor biciklizem a forgalomban, ha muszáj",
+      "#In between": "Valahol a kettő között",
+      "#Fairly: I manage most situations": "Eléggé: a legtöbb helyzettel megbirkózom",
+      "#Very: I cycle in any traffic": "Nagyon: bármilyen forgalomban biciklizem",
+      "#I never cycle in traffic": "Soha nem biciklizem a forgalomban",
+      "#Does cycling in your daily life help your health or your mood?": "A mindennapi kerékpározás segít az egészségének vagy a hangulatának?",
+      "#Cycling – Your trips": "Kerékpározás – Az Ön útjai",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Kerékpározás – Az Ön útjai",
+      "#Bicycle and a route between two points": "Kerékpár és egy útvonal két pont között",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a kerékpáros és e-bike-os közlekedésről, a közbringát is beleértve. Ha ritkán kerékpározik, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Combining ways of travelling": "Közlekedési módok kombinálása",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "Ugyanazon az úton a kerékpározást általában más közlekedési móddal kombinálja?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Például kerékpár és vonat, vagy autó és metró. A megállóig vagy a parkoló járműig tartó rövid gyaloglás nem számít.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Milyen más közlekedési módokat használ ugyanazon az úton? (Jelölje meg az összes megfelelőt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
+      "#When you face these difficulties, how do you mostly respond?": "Mit tesz általában, amikor ilyen nehézségekkel találkozik?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (ez a fő közlekedési mód az út nagy részén, nem csak a megállóig vagy átszálláskor megtett rövid gyaloglás)",
+      "#Car": "Autó",
+      "#Car sharing": "Autómegosztás",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#Bus": "Busz",
+      "#Tram": "Villamos",
+      "#Metro": "Metró",
+      "#Regional or suburban train": "Regionális vagy elővárosi vonat",
+      "#e-scooter (private)": "Elektromos roller (saját)",
+      "#e-scooter (shared)": "Elektromos roller (megosztott)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "A járművek túl zsúfoltak (pl. nincs hely kerékpárnak vagy csomagnak)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Gyenge az összehangolás a közlekedési módok között (hosszú várakozás, lekésett csatlakozás)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Hiányos az infrastruktúra (pl. nincs kerékpárparkoló, vagy nem lehet kerékpárt vinni a tömegközlekedési járművekre)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Bonyolult az átszállás (az állomások messze vannak egymástól, az útvonalak nem egyértelműek)",
+      "#Travel time becomes too long": "Az utazási idő túl hosszú lesz",
+      "#Cost is too high when combining modes": "Túl magas a költség több közlekedési mód kombinálásakor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Biztonsági problémák (forgalom, lopás, nem biztonságos területek)",
+      "#Services are infrequent or do not run in the evening": "Ritkán járnak a járatok, vagy este nem közlekednek",
+      "#Lack of reliable information (schedules, delays)": "Nincs elég megbízható információ (menetrend, késés)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Túl nagy a fizikai megterhelés (pl. kerékpár cipelése vagy hosszú gyaloglás)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
+      "#Weather-related difficulties": "Időjárással kapcsolatos nehézségek",
+      "#I do not experience significant difficulties": "Nem tapasztalok jelentős nehézséget",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Abbahagyom az egyik közlekedési mód használatát (pl. nem viszem magammal a kerékpárt)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Egyetlen közlekedési módra váltok (pl. csak autó vagy csak tömegközlekedés)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Megváltoztatom az utazás időpontját (pl. kerülöm a csúcsidőt)",
+      "#I change the route or transfer point": "Megváltoztatom az útvonalat vagy az átszállási pontot",
+      "#I choose a different combination of modes": "Más közlekedési módokat kombinálok",
+      "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
+      "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett megosztott kerékpárt használok)",
+      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
+      "#Other": "Egyéb",
+      "#Why do you rarely cycle? (Select all that apply)": "Miért kerékpározik ritkán? (Jelölje meg az összes megfelelőt)",
+      "#I don't have a bike or e-bike I can use": "Nincs használható kerékpárom vagy e-bike-om",
+      "#The places I go are too far or cycling takes too long": "Az úti céljaim túl messze vannak, vagy kerékpárral túl sokáig tart az út",
+      "#Cycling is tiring or physically difficult for me": "A kerékpározás fárasztó vagy fizikailag nehéz számomra",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "Kerékpározás közben nem érzem magam biztonságban (forgalom, bűncselekmények vagy zaklatás)",
+      "#There are no good cycle lanes or safe places to leave a bike": "Nincsenek jó kerékpársávok vagy biztonságos helyek, ahol otthagyhatom a kerékpárt",
+      "#Another reason": "Egyéb ok"
+    },
+    "ar": {
+      "code": "ar",
+      "#How you cycle": "كيف تركب الدراجة",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "هل تستخدم الدراجة أو الدراجة الكهربائية للتنقل مرة واحدة على الأقل في الأسبوع؟",
+      "#Your own bike or a shared one. Rides just for sport count too.": "دراجتك الخاصة أو مشتركة. وتُحسب أيضًا الجولات للرياضة فقط.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Which bike do you use most often?": "أي دراجة تستخدمها في أغلب الأحيان؟",
+      "#My own bike": "دراجتي الخاصة",
+      "#My own e-bike": "دراجتي الكهربائية الخاصة",
+      "#A shared bike": "دراجة مشتركة",
+      "#A shared e-bike": "دراجة كهربائية مشتركة",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "دراجة شحن أو دراجة معدّلة (مثل ثلاثية العجلات أو دراجة تُدار باليد)",
+      "#How confident do you feel cycling in city traffic?": "ما مدى ثقتك عند ركوب الدراجة في حركة المرور داخل المدينة؟",
+      "#Not at all: I avoid cycling in traffic": "على الإطلاق: أتجنب ركوب الدراجة وسط حركة المرور",
+      "#Not very: I cycle in traffic only when I have to": "ليس كثيرًا: أركب الدراجة وسط حركة المرور فقط عند الضرورة",
+      "#In between": "بين بين",
+      "#Fairly: I manage most situations": "إلى حد كبير: أتعامل مع معظم المواقف",
+      "#Very: I cycle in any traffic": "كثيرًا: أركب الدراجة في أي حركة مرور",
+      "#I never cycle in traffic": "لا أركب الدراجة وسط حركة المرور أبدًا",
+      "#Does cycling in your daily life help your health or your mood?": "هل يفيد ركوب الدراجة في حياتك اليومية صحتك أو مزاجك؟",
+      "#Cycling – Your trips": "ركوب الدراجة – رحلاتك",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - ركوب الدراجة – رحلاتك",
+      "#Bicycle and a route between two points": "دراجة هوائية ومسار بين نقطتين",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن التنقل بالدراجة أو الدراجة الكهربائية، بما في ذلك الدراجات المشتركة. إذا كنت نادرًا ما تركب الدراجة، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#Combining ways of travelling": "الجمع بين وسائل التنقل",
+      "#In the same trip, do you usually combine cycling with another way of travelling?": "هل تجمع عادةً بين ركوب الدراجة ووسيلة تنقل أخرى في الرحلة نفسها؟",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلًا الدراجة والقطار، أو السيارة والمترو. لا يُحتسب المشي القصير إلى المحطة أو إلى مركبة متوقفة.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "ما وسائل التنقل الأخرى المستخدمة في الرحلة نفسها؟ (يمكن اختيار كل ما ينطبق)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تظهر عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
+      "#When you face these difficulties, how do you mostly respond?": "ما الإجراء المعتاد عند ظهور هذه الصعوبات؟",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
+      "#Car": "السيارة",
+      "#Car sharing": "مشاركة السيارات",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#Bus": "حافلة",
+      "#Tram": "ترام",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار إقليمي أو قطار ضواحي",
+      "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
+      "#e-scooter (shared)": "السكوتر الكهربائي (مشترك)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "المركبات مزدحمة جدًا (مثل عدم وجود مساحة للدراجة أو الأمتعة)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "ضعف التنسيق بين الوسائل (انتظار طويل، فقدان وسيلة الربط)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "نقص البنية التحتية (مثل عدم وجود موقف للدراجات أو عدم السماح بالدراجة في النقل العام)",
+      "#Complicated transfers (stations far apart, unclear routes)": "التبديل بين الوسائل معقد (المحطات بعيدة عن بعضها، الطرق غير واضحة)",
+      "#Travel time becomes too long": "وقت الرحلة يصبح طويلًا جدًا",
+      "#Cost is too high when combining modes": "التكلفة مرتفعة جدًا عند الجمع بين عدة وسائل",
+      "#Safety concerns (traffic, theft, unsafe areas)": "مخاوف تتعلق بالأمان والسلامة (حركة المرور، السرقة، مناطق غير آمنة)",
+      "#Services are infrequent or do not run in the evening": "الرحلات قليلة أو لا تعمل في المساء",
+      "#Lack of reliable information (schedules, delays)": "نقص المعلومات الموثوقة (المواعيد، التأخير)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "الجهد البدني مرتفع جدًا (مثل حمل الدراجة أو المشي لمسافات طويلة)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
+      "#Weather-related difficulties": "صعوبات بسبب الطقس",
+      "#I do not experience significant difficulties": "لا أواجه صعوبات كبيرة",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "أتوقف عن استخدام إحدى الوسائل (مثل عدم أخذ الدراجة معي)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "أنتقل إلى وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
+      "#I change the time of travel (e.g. avoid peak hours)": "أغيّر وقت الرحلة (مثل تجنب ساعات الذروة)",
+      "#I change the route or transfer point": "أغيّر الطريق أو نقطة التبديل",
+      "#I choose a different combination of modes": "أختار مزيجًا مختلفًا من وسائل التنقل",
+      "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
+      "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
+      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
+      "#Other": "أخرى",
+      "#Why do you rarely cycle? (Select all that apply)": "لماذا نادرًا ما تركب الدراجة الهوائية؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have a bike or e-bike I can use": "ليست لدي دراجة هوائية أو كهربائية يمكنني استخدامها",
+      "#The places I go are too far or cycling takes too long": "الأماكن التي أذهب إليها بعيدة جدًا أو ركوب الدراجة يستغرق وقتًا طويلًا",
+      "#Cycling is tiring or physically difficult for me": "ركوب الدراجة متعب أو صعب جسديًا بالنسبة لي",
+      "#I feel unsafe cycling (traffic, crime or harassment)": "أشعر بعدم الأمان عند ركوب الدراجة (المرور أو الجريمة أو التحرش)",
+      "#There are no good cycle lanes or safe places to leave a bike": "لا توجد مسارات جيدة للدراجات أو أماكن آمنة لترك الدراجة",
+      "#Another reason": "سبب آخر"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.1.4",
+  "config_version": "0.2.0",
   "pilot_id": "rome",
   "pilot_period": {
     "start_date": "2026-11-14",
@@ -13,7 +13,7 @@
   },
   "campaigns": {
     "rome_profile": {
-      "name": "About you",
+      "name": "Your profile",
       "enabled": true,
       "priority": 0,
       "window": {
@@ -46,7 +46,158 @@
         "smarturbanity_safety"
       ]
     },
-    "rome_future_surveys": {
+    "rome_travel_habits": {
+      "name": "Travel habits",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_habits",
+        "smarturbanity_cycling_habits",
+        "smarturbanity_e_scooter_habits",
+        "smarturbanity_public_transport_habits",
+        "smarturbanity_car_habits",
+        "smarturbanity_motorcycle_habits"
+      ]
+    },
+    "rome_road_safety": {
+      "name": "Road safety",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_road_safety",
+        "smarturbanity_cycling_road_safety",
+        "smarturbanity_e_scooter_road_safety",
+        "smarturbanity_public_transport_road_safety",
+        "smarturbanity_car_road_safety",
+        "smarturbanity_motorcycle_road_safety"
+      ]
+    },
+    "rome_personal_security": {
+      "name": "Personal security",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_security",
+        "smarturbanity_cycling_security",
+        "smarturbanity_e_scooter_security",
+        "smarturbanity_public_transport_security",
+        "smarturbanity_car_security",
+        "smarturbanity_motorcycle_security"
+      ]
+    },
+    "rome_comfort": {
+      "name": "Comfort",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_comfort",
+        "smarturbanity_cycling_comfort",
+        "smarturbanity_e_scooter_comfort",
+        "smarturbanity_public_transport_comfort",
+        "smarturbanity_car_comfort",
+        "smarturbanity_motorcycle_comfort"
+      ]
+    },
+    "rome_trip_experience": {
+      "name": "How the trip feels",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_experience",
+        "smarturbanity_cycling_experience",
+        "smarturbanity_e_scooter_experience",
+        "smarturbanity_public_transport_experience",
+        "smarturbanity_car_experience",
+        "smarturbanity_motorcycle_experience"
+      ]
+    },
+    "rome_improvements": {
+      "name": "What would help",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_improvements",
+        "smarturbanity_cycling_improvements",
+        "smarturbanity_e_scooter_improvements",
+        "smarturbanity_public_transport_improvements",
+        "smarturbanity_motorcycle_improvements"
+      ]
+    },
+    "rome_doing_without_car": {
+      "name": "Doing without the car",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_car_need",
+        "smarturbanity_motorcycle_need",
+        "smarturbanity_car_alternatives",
+        "smarturbanity_public_transport_without_car"
+      ]
+    },
+    "rome_future": {
       "name": "Future questionnaires",
       "enabled": false,
       "priority": 0,
@@ -60,30 +211,132 @@
       "area": null,
       "exclusive": false,
       "questionnaires": [
-        "smarturbanity_about_you",
-        "smarturbanity_daily_travel",
-        "smarturbanity_safety_environment",
-        "smarturbanity_experience_on_the_move",
-        "smarturbanity_public_transport",
-        "smarturbanity_motorcycle",
-        "smarturbanity_cycling",
-        "smarturbanity_walking",
-        "smarturbanity_car"
+        "smarturbanity_travel_choices"
       ]
+    }
+  },
+  "surveys_gallery": {
+    "title": {
+      "en": "Short questionnaires on how you get around and on the places you use, one topic at a time.",
+      "it": "Brevi questionari su come ti muovi e sui luoghi che usi, un tema alla volta.",
+      "fr": "De courts questionnaires sur votre façon de vous déplacer et les lieux que vous utilisez, un thème à la fois.",
+      "de": "Kurze Fragebögen dazu, wie Sie sich fortbewegen und welche Orte Sie nutzen, ein Thema nach dem anderen.",
+      "tr": "Nasıl ulaşım sağladığınız ve kullandığınız yerler hakkında kısa anketler, her seferinde bir konu.",
+      "fa": "پرسش‌نامه‌های کوتاه دربارهٔ شیوهٔ رفت‌وآمد شما و مکان‌هایی که استفاده می‌کنید، هر بار یک موضوع.",
+      "hu": "Rövid kérdőívek arról, hogyan közlekedik és milyen helyeket használ, egyszerre egy témában.",
+      "ar": "استبيانات قصيرة عن طريقة تنقلك والأماكن التي تستخدمها، موضوعًا تلو الآخر.",
+      "da": "Korte spørgeskemaer om, hvordan du kommer rundt, og om de steder, du bruger, ét emne ad gangen.",
+      "lb": "Kuerz Froebéi doriwwer, wéi Dir Iech beweegt an iwwer d'Plazen, déi Dir benotzt, een Thema no deem aneren.",
+      "nl": "Korte vragenlijsten over hoe u zich verplaatst en over de plekken die u gebruikt, één thema tegelijk.",
+      "pl": "Krótkie ankiety o tym, jak się przemieszczasz i z jakich miejsc korzystasz, jeden temat naraz."
+    },
+    "note": {
+      "en": "Your answers help the research understand what works and what is missing near you, to propose better services and places.",
+      "it": "Le tue risposte aiutano la ricerca a capire cosa funziona e cosa manca vicino a te, per proporre servizi e luoghi migliori.",
+      "fr": "Vos réponses aident la recherche à comprendre ce qui fonctionne et ce qui manque près de chez vous, pour proposer de meilleurs services et lieux.",
+      "de": "Ihre Antworten helfen der Forschung zu verstehen, was in Ihrer Nähe funktioniert und was fehlt, um bessere Angebote und Orte vorzuschlagen.",
+      "tr": "Yanıtlarınız, araştırmanın yakınınızda neyin işe yaradığını ve neyin eksik olduğunu anlamasına yardımcı olur; böylece daha iyi hizmetler ve yerler önerilebilir.",
+      "fa": "پاسخ‌های شما به پژوهش کمک می‌کند بفهمد چه چیزی در نزدیکی شما خوب کار می‌کند و چه چیزی کم است، تا خدمات و مکان‌های بهتری پیشنهاد شود.",
+      "hu": "Válaszai segítenek a kutatásnak megérteni, mi működik és mi hiányzik a környékén, hogy jobb szolgáltatásokat és helyeket javasolhassunk.",
+      "ar": "تساعد إجاباتك البحث على فهم ما ينجح وما ينقص بالقرب منك، لاقتراح خدمات وأماكن أفضل.",
+      "da": "Dine svar hjælper forskningen med at forstå, hvad der virker, og hvad der mangler i dit nærområde, så der kan foreslås bedre tilbud og steder.",
+      "lb": "Är Äntwerten hëllefen der Fuerschung ze verstoen, wat bei Iech an der Géigend funktionéiert a wat feelt, fir besser Servicer a Plazen virzeschloen.",
+      "nl": "Uw antwoorden helpen het onderzoek te begrijpen wat in uw buurt werkt en wat ontbreekt, om betere voorzieningen en plekken voor te stellen.",
+      "pl": "Twoje odpowiedzi pomagają badaniu zrozumieć, co działa, a czego brakuje w Twojej okolicy, aby zaproponować lepsze usługi i miejsca."
+    },
+    "feedback_questionnaire": "smarturbanity_feedback_surveys",
+    "follow_ups": {
+      "smarturbanity_walking_habits": "smarturbanity_walking_road_safety",
+      "smarturbanity_walking_road_safety": "smarturbanity_walking_security",
+      "smarturbanity_walking_security": "smarturbanity_walking_comfort",
+      "smarturbanity_walking_comfort": "smarturbanity_walking_experience",
+      "smarturbanity_walking_experience": "smarturbanity_walking_improvements",
+      "smarturbanity_cycling_habits": "smarturbanity_cycling_road_safety",
+      "smarturbanity_cycling_road_safety": "smarturbanity_cycling_security",
+      "smarturbanity_cycling_security": "smarturbanity_cycling_comfort",
+      "smarturbanity_cycling_comfort": "smarturbanity_cycling_experience",
+      "smarturbanity_cycling_experience": "smarturbanity_cycling_improvements",
+      "smarturbanity_public_transport_habits": "smarturbanity_public_transport_road_safety",
+      "smarturbanity_public_transport_road_safety": "smarturbanity_public_transport_security",
+      "smarturbanity_public_transport_security": "smarturbanity_public_transport_comfort",
+      "smarturbanity_public_transport_comfort": "smarturbanity_public_transport_experience",
+      "smarturbanity_public_transport_experience": "smarturbanity_public_transport_without_car",
+      "smarturbanity_public_transport_without_car": "smarturbanity_public_transport_improvements",
+      "smarturbanity_car_habits": "smarturbanity_car_road_safety",
+      "smarturbanity_car_road_safety": "smarturbanity_car_security",
+      "smarturbanity_car_security": "smarturbanity_car_comfort",
+      "smarturbanity_car_comfort": "smarturbanity_car_experience",
+      "smarturbanity_car_experience": "smarturbanity_car_need",
+      "smarturbanity_car_need": "smarturbanity_car_alternatives",
+      "smarturbanity_motorcycle_habits": "smarturbanity_motorcycle_road_safety",
+      "smarturbanity_motorcycle_road_safety": "smarturbanity_motorcycle_security",
+      "smarturbanity_motorcycle_security": "smarturbanity_motorcycle_comfort",
+      "smarturbanity_motorcycle_comfort": "smarturbanity_motorcycle_experience",
+      "smarturbanity_motorcycle_experience": "smarturbanity_motorcycle_need",
+      "smarturbanity_motorcycle_need": "smarturbanity_motorcycle_improvements",
+      "smarturbanity_e_scooter_habits": "smarturbanity_e_scooter_road_safety",
+      "smarturbanity_e_scooter_road_safety": "smarturbanity_e_scooter_security",
+      "smarturbanity_e_scooter_security": "smarturbanity_e_scooter_comfort",
+      "smarturbanity_e_scooter_comfort": "smarturbanity_e_scooter_experience",
+      "smarturbanity_e_scooter_experience": "smarturbanity_e_scooter_improvements"
+    },
+    "follow_up_stop_when": {
+      "smarturbanity_walking_habits": {
+        "walk_days": [
+          "no"
+        ]
+      },
+      "smarturbanity_cycling_habits": {
+        "bike_weekly": [
+          "no"
+        ]
+      },
+      "smarturbanity_public_transport_habits": {
+        "put_weekly": [
+          "no"
+        ]
+      },
+      "smarturbanity_car_habits": {
+        "car_weekly": [
+          "no"
+        ]
+      },
+      "smarturbanity_motorcycle_habits": {
+        "motorcycle_weekly": [
+          "no"
+        ]
+      },
+      "smarturbanity_e_scooter_habits": {
+        "escooter_weekly": [
+          "no"
+        ]
+      }
     }
   },
   "languages": {
     "it": {
       "code": "it",
-      "#About you": "Su di te",
+      "#Your profile": "Il tuo profilo",
       "#Safety": "Sicurezza",
-      "#Future questionnaires": "Questionari futuri"
+      "#Travel habits": "Abitudini di viaggio",
+      "#Road safety": "Sicurezza stradale",
+      "#Personal security": "Sicurezza personale",
+      "#Comfort": "Comfort",
+      "#How the trip feels": "Come si vive il viaggio",
+      "#What would help": "Cosa aiuterebbe",
+      "#Doing without the car": "Fare a meno dell'auto"
     },
     "en": {
       "code": "en",
-      "#About you": "About you",
+      "#Your profile": "Your profile",
       "#Safety": "Safety",
-      "#Future questionnaires": "Future questionnaires"
+      "#Travel habits": "Travel habits",
+      "#Road safety": "Road safety",
+      "#Personal security": "Personal security",
+      "#Comfort": "Comfort",
+      "#How the trip feels": "How the trip feels",
+      "#What would help": "What would help",
+      "#Doing without the car": "Doing without the car"
     }
   }
 }

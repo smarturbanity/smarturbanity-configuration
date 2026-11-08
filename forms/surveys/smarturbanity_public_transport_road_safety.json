@@ -1,0 +1,498 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Public transport – Road safety",
+    "questionnaire_id": "smarturbanity_public_transport_road_safety",
+    "questionnaire_version": "2.2.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Public transport – Road safety",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_pt_service.svg",
+      "image_alt": "#Bus with a clock",
+      "description": "<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Public transport – Road safety",
+    "sections": [
+      {
+        "title": "Getting to the stop",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "What problems do you meet at stops or when getting on and off?",
+            "answer_key": "put_barriers",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "options": [
+              {
+                "text": "Stairs or steps",
+                "value": "stairs_or_level_differences"
+              },
+              {
+                "text": "Hard to get on or off the vehicle",
+                "value": "difficulty_boarding_or_exiting_the_vehic"
+              },
+              {
+                "text": "Narrow or crowded spaces",
+                "value": "narrow_or_crowded_spaces"
+              },
+              {
+                "text": "Broken or poorly kept stops (e.g. broken lifts, damaged shelters)",
+                "value": "poor_maintenance_or_damaged_infrastructu"
+              },
+              {
+                "text": "Stop or vehicle cannot be used with a wheelchair, walker or stroller",
+                "value": "stop_or_vehicle_unusable_with_mobility_aid"
+              },
+              {
+                "text": "Vehicles too crowded to get on with a stroller or wheelchair",
+                "value": "too_crowded_to_board_with_stroller_or_wheelchair"
+              },
+              {
+                "text": "The ramp does not work or the wheelchair space is taken",
+                "value": "broken_ramp_or_space_taken"
+              },
+              {
+                "text": "Vehicles so full that I have to wait for the next one",
+                "value": "vehicle_full"
+              },
+              {
+                "text": "No sidewalk or walkway to reach the stop",
+                "value": "no_walkway_to_reach_the_stop"
+              },
+              {
+                "text": "No real-time arrival information, on screen or announced",
+                "value": "lack_of_real_time_information_displays"
+              },
+              {
+                "text": "Not enough seats or shelter",
+                "value": "insufficient_seating_or_shelter_at_stops"
+              },
+              {
+                "text": "Nothing in particular",
+                "value": "i_don_t_face_any_specific_barrier",
+                "exclusive": true
+              }
+            ],
+            "question_id": "put_barriers",
+            "question_version": "2.1.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you cross the road to reach or leave a stop, how safe do you feel?",
+            "help": "Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.",
+            "answer_key": "stop_crossing_safety",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "I avoid some stops because crossing to them feels unsafe",
+                "value": "i_avoid_using_this_stop_because_the_cros"
+              },
+              {
+                "text": "I often feel unsafe when I cross",
+                "value": "i_often_feel_unsafe_when_crossing_to_rea"
+              },
+              {
+                "text": "I sometimes go a longer way to cross more safely",
+                "value": "i_sometimes_change_my_route_to_use_cross"
+              },
+              {
+                "text": "I feel safe, but I have to be careful",
+                "value": "i_generally_feel_safe_but_i_still_need_t"
+              },
+              {
+                "text": "I feel safe: the crossings are well protected",
+                "value": "i_feel_safe_and_well_protected_by_the_cr"
+              }
+            ],
+            "question_id": "stop_crossing_safety",
+            "question_version": "2.0.2"
+          }
+        ]
+      },
+      {
+        "title": "Situations on the Road",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "When you use public transport, which of these situations make you feel unsafe? (Select all that apply)",
+            "answer_key": "put_unsafe_situations",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Poor visibility or limited sightlines",
+                "value": "poor_visibility"
+              },
+              {
+                "text": "Unsafe behaviour from drivers, riders or pedestrians",
+                "value": "unsafe_behaviour"
+              },
+              {
+                "text": "Crowding",
+                "value": "crowding"
+              },
+              {
+                "text": "Conflicts with other road users",
+                "value": "conflicts_road_users"
+              },
+              {
+                "text": "Lack of safe or adequate stops, crossings or lighting",
+                "value": "poor_infrastructure"
+              },
+              {
+                "text": "No emergency services nearby",
+                "value": "no_emergency_services"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "put_unsafe_situations",
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_public_transport_road_safety",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Getting to the stop": "Getting to the stop",
+      "#What problems do you meet at stops or when getting on and off?": "What problems do you meet at stops or when getting on and off?",
+      "#Stairs or steps": "Stairs or steps",
+      "#Hard to get on or off the vehicle": "Hard to get on or off the vehicle",
+      "#Narrow or crowded spaces": "Narrow or crowded spaces",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Broken or poorly kept stops (e.g. broken lifts, damaged shelters)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "Stop or vehicle cannot be used with a wheelchair, walker or stroller",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "Vehicles too crowded to get on with a stroller or wheelchair",
+      "#No sidewalk or walkway to reach the stop": "No sidewalk or walkway to reach the stop",
+      "#No real-time arrival information, on screen or announced": "No real-time arrival information, on screen or announced",
+      "#Not enough seats or shelter": "Not enough seats or shelter",
+      "#Nothing in particular": "Nothing in particular",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "When you cross the road to reach or leave a stop, how safe do you feel?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.",
+      "#I avoid some stops because crossing to them feels unsafe": "I avoid some stops because crossing to them feels unsafe",
+      "#I often feel unsafe when I cross": "I often feel unsafe when I cross",
+      "#I sometimes go a longer way to cross more safely": "I sometimes go a longer way to cross more safely",
+      "#I feel safe, but I have to be careful": "I feel safe, but I have to be careful",
+      "#I feel safe: the crossings are well protected": "I feel safe: the crossings are well protected",
+      "#Situations on the Road": "Situations on the Road",
+      "#Public transport – Road safety": "Public transport – Road safety",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Public transport – Road safety",
+      "#Bus with a clock": "Bus with a clock",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "When you use public transport, which of these situations make you feel unsafe? (Select all that apply)",
+      "#Poor visibility or limited sightlines": "Poor visibility or limited sightlines",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsafe behaviour from drivers, riders or pedestrians",
+      "#Crowding": "Crowding",
+      "#Conflicts with other road users": "Conflicts with other road users",
+      "#Lack of safe or adequate stops, crossings or lighting": "Lack of safe or adequate stops, crossings or lighting",
+      "#No emergency services nearby": "No emergency services nearby",
+      "#None of these": "None of these",
+      "#The ramp does not work or the wheelchair space is taken": "The ramp does not work or the wheelchair space is taken",
+      "#Vehicles so full that I have to wait for the next one": "Vehicles so full that I have to wait for the next one"
+    },
+    "it": {
+      "code": "it",
+      "#Getting to the stop": "Arrivare alla fermata",
+      "#What problems do you meet at stops or when getting on and off?": "Quali problemi incontri alle fermate o quando sali e scendi?",
+      "#Stairs or steps": "Scale o gradini",
+      "#Hard to get on or off the vehicle": "È difficile salire o scendere dal mezzo",
+      "#Narrow or crowded spaces": "Spazi stretti o affollati",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Fermate rotte o mal tenute (ad es. ascensori guasti, pensiline danneggiate)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "Fermata o mezzo non utilizzabili con sedia a rotelle, deambulatore o passeggino",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "Mezzi troppo pieni per salire con passeggino o sedia a rotelle",
+      "#No sidewalk or walkway to reach the stop": "Nessun marciapiede o percorso pedonale per arrivare alla fermata",
+      "#No real-time arrival information, on screen or announced": "Nessuna informazione sull'arrivo in tempo reale, né sullo schermo né a voce",
+      "#Not enough seats or shelter": "Pochi posti a sedere o poco riparo",
+      "#Nothing in particular": "Niente in particolare",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "Quando attraversi la strada per raggiungere o lasciare una fermata, quanto ti senti al sicuro?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Pensa a semafori, strisce pedonali, passerelle o sottopassi vicino alle fermate che usi.",
+      "#I avoid some stops because crossing to them feels unsafe": "Evito alcune fermate perché attraversare per raggiungerle non mi sembra sicuro",
+      "#I often feel unsafe when I cross": "Spesso non mi sento al sicuro quando attraverso",
+      "#I sometimes go a longer way to cross more safely": "A volte faccio un giro più lungo per attraversare in modo più sicuro",
+      "#I feel safe, but I have to be careful": "Mi sento al sicuro, ma devo fare attenzione",
+      "#I feel safe: the crossings are well protected": "Mi sento al sicuro: gli attraversamenti sono ben protetti",
+      "#Situations on the Road": "Situazioni in strada",
+      "#Public transport – Road safety": "Trasporto pubblico – Sicurezza stradale",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Trasporto pubblico – Sicurezza stradale",
+      "#Bus with a clock": "Autobus con un orologio",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Fermate, attraversamenti e situazioni lungo il percorso <b>quando usi i mezzi pubblici</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Quando usi i mezzi pubblici, quali di queste situazioni ti fanno sentire in pericolo? (Seleziona tutte le opzioni applicabili)",
+      "#Poor visibility or limited sightlines": "Scarsa visibilità o visuale limitata",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi",
+      "#Crowding": "Affollamento",
+      "#Conflicts with other road users": "Conflitti con altre persone in strada",
+      "#Lack of safe or adequate stops, crossings or lighting": "Mancanza di fermate, attraversamenti o illuminazione sicuri e adeguati",
+      "#No emergency services nearby": "Nessun servizio di emergenza nelle vicinanze",
+      "#None of these": "Nessuna di queste",
+      "#The ramp does not work or the wheelchair space is taken": "La pedana non funziona o il posto per la sedia a rotelle è occupato",
+      "#Vehicles so full that I have to wait for the next one": "Mezzi così pieni che devo aspettare il successivo"
+    },
+    "fr": {
+      "code": "fr",
+      "#Getting to the stop": "Se rendre à l'arrêt",
+      "#What problems do you meet at stops or when getting on and off?": "Quels problèmes rencontrez-vous aux arrêts ou en montant et en descendant ?",
+      "#Stairs or steps": "Escaliers ou marches",
+      "#Hard to get on or off the vehicle": "Il est difficile de monter dans le véhicule ou d'en descendre",
+      "#Narrow or crowded spaces": "Espaces étroits ou très fréquentés",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Arrêts en panne ou mal entretenus (par ex. ascenseurs en panne, abribus abîmés)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "Arrêt ou véhicule inutilisable en fauteuil roulant, avec un déambulateur ou une poussette",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "Véhicules trop bondés pour monter avec une poussette ou un fauteuil roulant",
+      "#No sidewalk or walkway to reach the stop": "Pas de trottoir ni de cheminement piéton pour rejoindre l'arrêt",
+      "#No real-time arrival information, on screen or announced": "Pas d'information en temps réel sur les arrivées, ni à l'écran ni par annonce",
+      "#Not enough seats or shelter": "Pas assez de places assises ou d'abri",
+      "#Nothing in particular": "Rien en particulier",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "Quand vous traversez la route pour rejoindre ou quitter un arrêt, à quel point vous sentez-vous en sécurité ?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Pensez aux feux, aux passages piétons, aux passerelles ou aux passages souterrains près des arrêts que vous utilisez.",
+      "#I avoid some stops because crossing to them feels unsafe": "J'évite certains arrêts parce que les traverser pour les rejoindre me semble dangereux",
+      "#I often feel unsafe when I cross": "Je me sens souvent en danger quand je traverse",
+      "#I sometimes go a longer way to cross more safely": "Je fais parfois un détour pour traverser plus sûrement",
+      "#I feel safe, but I have to be careful": "Je me sens en sécurité, mais je dois faire attention",
+      "#I feel safe: the crossings are well protected": "Je me sens en sécurité : les passages sont bien protégés",
+      "#Situations on the Road": "Situations sur la route",
+      "#Public transport – Road safety": "Transports en commun – Sécurité routière",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Transports en commun – Sécurité routière",
+      "#Bus with a clock": "Bus avec une horloge",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Les arrêts, les passages piétons et les situations en chemin <b>lorsque vous utilisez les transports en commun</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Lorsque vous prenez les transports en commun, lesquelles de ces situations vous font vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Poor visibility or limited sightlines": "Mauvaise visibilité ou champ de vision limité",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Les comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent",
+      "#Crowding": "Forte affluence",
+      "#Conflicts with other road users": "Conflits avec d’autres personnes qui circulent",
+      "#Lack of safe or adequate stops, crossings or lighting": "Le manque d’arrêts, de passages ou d’éclairage sûrs et adaptés",
+      "#No emergency services nearby": "Aucun service d’urgence à proximité",
+      "#None of these": "Aucun de ces éléments",
+      "#The ramp does not work or the wheelchair space is taken": "La rampe ne fonctionne pas ou la place pour fauteuil roulant est occupée",
+      "#Vehicles so full that I have to wait for the next one": "Véhicules si pleins que je dois attendre le suivant"
+    },
+    "de": {
+      "code": "de",
+      "#Getting to the stop": "Zur Haltestelle kommen",
+      "#What problems do you meet at stops or when getting on and off?": "Welche Probleme begegnen Ihnen an Haltestellen oder beim Ein- und Aussteigen?",
+      "#Stairs or steps": "Treppen oder Stufen",
+      "#Hard to get on or off the vehicle": "Das Ein- oder Aussteigen ist schwierig",
+      "#Narrow or crowded spaces": "Enge oder überfüllte Bereiche",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Kaputte oder schlecht gepflegte Haltestellen (z. B. defekte Aufzüge, beschädigte Wartehäuschen)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "Haltestelle oder Fahrzeug mit Rollstuhl, Rollator oder Kinderwagen nicht nutzbar",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "Fahrzeuge zu voll, um mit Kinderwagen oder Rollstuhl einzusteigen",
+      "#No sidewalk or walkway to reach the stop": "Kein Gehweg oder Fußweg zur Haltestelle",
+      "#No real-time arrival information, on screen or announced": "Keine Echtzeit-Ankunftsinformationen, weder auf Anzeigen noch durch Ansagen",
+      "#Not enough seats or shelter": "Nicht genug Sitzplätze oder Schutz vor dem Wetter",
+      "#Nothing in particular": "Nichts Besonderes",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "Wie sicher fühlen Sie sich, wenn Sie die Straße überqueren, um zu einer Haltestelle zu kommen oder sie zu verlassen?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Denken Sie an Ampeln, Zebrastreifen, Fußgängerbrücken oder Unterführungen bei den Haltestellen, die Sie nutzen.",
+      "#I avoid some stops because crossing to them feels unsafe": "Ich meide manche Haltestellen, weil mir das Überqueren dorthin unsicher vorkommt",
+      "#I often feel unsafe when I cross": "Ich fühle mich beim Überqueren oft unsicher",
+      "#I sometimes go a longer way to cross more safely": "Manchmal gehe ich einen Umweg, um sicherer zu überqueren",
+      "#I feel safe, but I have to be careful": "Ich fühle mich sicher, muss aber aufpassen",
+      "#I feel safe: the crossings are well protected": "Ich fühle mich sicher: Die Übergänge sind gut gesichert",
+      "#Situations on the Road": "Situationen im Straßenverkehr",
+      "#Public transport – Road safety": "Öffentliche Verkehrsmittel – Verkehrssicherheit",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Öffentliche Verkehrsmittel – Verkehrssicherheit",
+      "#Bus with a clock": "Bus mit einer Uhr",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haltestellen, Überwege und Situationen unterwegs, <b>wenn Sie öffentliche Verkehrsmittel nutzen</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Welche dieser Situationen geben Ihnen bei Fahrten mit öffentlichen Verkehrsmitteln ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Poor visibility or limited sightlines": "Schlechte Sicht oder eingeschränkte Sichtweite",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden",
+      "#Crowding": "Überfüllung",
+      "#Conflicts with other road users": "Konflikte mit anderen Verkehrsteilnehmenden",
+      "#Lack of safe or adequate stops, crossings or lighting": "Fehlende sichere oder geeignete Haltestellen, Überwege oder Beleuchtung",
+      "#No emergency services nearby": "Keine Rettungsdienste in der Nähe",
+      "#None of these": "Keine davon",
+      "#The ramp does not work or the wheelchair space is taken": "Die Rampe funktioniert nicht oder der Rollstuhlplatz ist belegt",
+      "#Vehicles so full that I have to wait for the next one": "Fahrzeuge so voll, dass ich auf das nächste warten muss"
+    },
+    "tr": {
+      "code": "tr",
+      "#Getting to the stop": "Durağa ulaşmak",
+      "#What problems do you meet at stops or when getting on and off?": "Duraklarda veya araca binip inerken hangi sorunlarla karşılaşıyorsunuz?",
+      "#Stairs or steps": "Merdivenler veya basamaklar",
+      "#Hard to get on or off the vehicle": "Araca binmek veya inmek zor",
+      "#Narrow or crowded spaces": "Dar veya kalabalık alanlar",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Bozuk veya bakımsız duraklar (örn. bozuk asansörler, hasarlı durak kulübeleri)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "Durak veya araç tekerlekli sandalye, yürüteç ya da bebek arabasıyla kullanılamıyor",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "Araçlar bebek arabası veya tekerlekli sandalyeyle binilemeyecek kadar kalabalık",
+      "#No sidewalk or walkway to reach the stop": "Durağa ulaşmak için kaldırım veya yaya yolu yok",
+      "#No real-time arrival information, on screen or announced": "Gerçek zamanlı varış bilgisi yok, ne ekranda ne anonsla",
+      "#Not enough seats or shelter": "Yeterli oturma yeri veya korunak yok",
+      "#Nothing in particular": "Özellikle hiçbir şey",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "Bir durağa gitmek veya durağdan ayrılmak için yolu geçerken kendinizi ne kadar güvende hissediyorsunuz?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Kullandığınız durakların yakınındaki trafik ışıklarını, yaya geçitlerini, üst geçitleri veya alt geçitleri düşünün.",
+      "#I avoid some stops because crossing to them feels unsafe": "Bazı duraklardan kaçınırım çünkü oraya geçmek güvensiz geliyor",
+      "#I often feel unsafe when I cross": "Karşıya geçerken sık sık kendimi güvende hissetmem",
+      "#I sometimes go a longer way to cross more safely": "Bazen daha güvenli geçmek için daha uzun bir yol izlerim",
+      "#I feel safe, but I have to be careful": "Kendimi güvende hissederim ama dikkatli olmam gerekir",
+      "#I feel safe: the crossings are well protected": "Kendimi güvende hissederim: Geçitler iyi korunuyor",
+      "#Situations on the Road": "Yoldaki durumlar",
+      "#Public transport – Road safety": "Toplu taşıma – Yol güvenliği",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Toplu taşıma – Yol güvenliği",
+      "#Bus with a clock": "Saatli otobüs",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Toplu taşıma kullanırken</b> duraklar, yaya geçitleri ve yoldaki durumlar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Toplu taşıma kullanırken bu durumlardan hangileri kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Poor visibility or limited sightlines": "Kötü görüş veya sınırlı görüş mesafesi",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Sürücülerin veya yayaların güvensiz davranışları",
+      "#Crowding": "Kalabalık",
+      "#Conflicts with other road users": "Diğer yol kullanıcılarıyla tartışma ya da sürtüşme",
+      "#Lack of safe or adequate stops, crossings or lighting": "Güvenli veya yeterli durak, geçit ya da aydınlatma eksikliği",
+      "#No emergency services nearby": "Yakınlarda acil durum hizmetlerinin olmaması",
+      "#None of these": "Bunların hiçbiri",
+      "#The ramp does not work or the wheelchair space is taken": "Rampa çalışmıyor veya tekerlekli sandalye yeri dolu",
+      "#Vehicles so full that I have to wait for the next one": "Araçlar o kadar dolu ki bir sonrakini beklemem gerekiyor"
+    },
+    "fa": {
+      "code": "fa",
+      "#Getting to the stop": "رسیدن به ایستگاه",
+      "#What problems do you meet at stops or when getting on and off?": "در ایستگاه‌ها یا هنگام سوار و پیاده شدن با چه مشکلاتی روبه‌رو می‌شوید؟",
+      "#Stairs or steps": "پله یا پلکان",
+      "#Hard to get on or off the vehicle": "سوار یا پیاده شدن از وسیله دشوار است",
+      "#Narrow or crowded spaces": "فضای باریک یا شلوغ",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "ایستگاه‌های خراب یا نگهداری‌نشده (مثلاً آسانسور خراب، سایبان آسیب‌دیده)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "ایستگاه یا وسیلهٔ نقلیه با ویلچر، واکر یا کالسکهٔ کودک قابل استفاده نیست",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "وسایل نقلیه برای سوار شدن با کالسکهٔ کودک یا ویلچر بیش از حد شلوغ هستند",
+      "#No sidewalk or walkway to reach the stop": "پیاده‌رو یا مسیر پیاده‌ای برای رسیدن به ایستگاه وجود ندارد",
+      "#No real-time arrival information, on screen or announced": "اطلاعات لحظه‌ای رسیدن، روی صفحه یا با اعلام صوتی، وجود ندارد",
+      "#Not enough seats or shelter": "صندلی یا سایبان کافی نیست",
+      "#Nothing in particular": "هیچ مورد خاصی",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "وقتی برای رسیدن به ایستگاه یا ترک آن از جاده عبور می‌کنید، چقدر احساس امنیت می‌کنید؟",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "به چراغ راهنمایی، خط عابر پیاده، پل هوایی یا زیرگذر نزدیک ایستگاه‌هایی که استفاده می‌کنید فکر کنید.",
+      "#I avoid some stops because crossing to them feels unsafe": "از بعضی ایستگاه‌ها دوری می‌کنم چون عبور به آن‌ها ناامن است",
+      "#I often feel unsafe when I cross": "اغلب هنگام عبور احساس ناامنی می‌کنم",
+      "#I sometimes go a longer way to cross more safely": "گاهی برای عبور امن‌تر مسیر طولانی‌تری می‌روم",
+      "#I feel safe, but I have to be careful": "احساس امنیت می‌کنم، اما باید مراقب باشم",
+      "#I feel safe: the crossings are well protected": "احساس امنیت می‌کنم: گذرگاه‌ها خوب محافظت شده‌اند",
+      "#Situations on the Road": "موقعیت‌ها در خیابان",
+      "#Public transport – Road safety": "حمل‌ونقل عمومی – ایمنی راه",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - حمل‌ونقل عمومی – ایمنی راه",
+      "#Bus with a clock": "اتوبوس با ساعت",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ایستگاه‌ها، گذرگاه‌ها و موقعیت‌های سر راه <b>هنگام استفاده از حمل‌ونقل عمومی</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "هنگام استفاده از حمل‌ونقل عمومی، کدام یک از این موقعیت‌ها باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Poor visibility or limited sightlines": "دید ضعیف یا میدان دید محدود",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "رفتار ناایمن رانندگان، موتورسواران و دوچرخه‌سواران یا عابران پیاده",
+      "#Crowding": "شلوغی",
+      "#Conflicts with other road users": "برخورد و تعارض با سایر کاربران راه",
+      "#Lack of safe or adequate stops, crossings or lighting": "نبود ایستگاه، گذرگاه یا روشنایی ایمن و کافی",
+      "#No emergency services nearby": "نبود خدمات اورژانس در نزدیکی",
+      "#None of these": "هیچ‌کدام از این‌ها",
+      "#The ramp does not work or the wheelchair space is taken": "رمپ کار نمی‌کند یا جای ویلچر اشغال است",
+      "#Vehicles so full that I have to wait for the next one": "وسایل نقلیه آن‌قدر پر هستند که باید منتظر بعدی بمانم"
+    },
+    "hu": {
+      "code": "hu",
+      "#Getting to the stop": "Eljutás a megállóba",
+      "#What problems do you meet at stops or when getting on and off?": "Milyen problémákkal találkozik a megállókban, illetve fel- és leszálláskor?",
+      "#Stairs or steps": "Lépcsők vagy lépcsőfokok",
+      "#Hard to get on or off the vehicle": "Nehéz fel- vagy leszállni a járműre",
+      "#Narrow or crowded spaces": "Szűk vagy zsúfolt terek",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "Elromlott vagy rosszul karbantartott megállók (pl. elromlott liftek, megrongálódott fedett várakozóhelyek)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "A megálló vagy a jármű nem használható kerekesszékkel, járókerettel vagy babakocsival",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "A járművek túl zsúfoltak ahhoz, hogy babakocsival vagy kerekesszékkel felszálljak",
+      "#No sidewalk or walkway to reach the stop": "Nincs járda vagy gyalogút a megállóhoz",
+      "#No real-time arrival information, on screen or announced": "Nincs valós idejű érkezési információ, sem kijelzőn, sem hangosbemondóval",
+      "#Not enough seats or shelter": "Nincs elég ülőhely vagy fedett várakozóhely",
+      "#Nothing in particular": "Semmi különös",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "Amikor átkel az úton, hogy elérjen egy megállót vagy elhagyja azt, mennyire érzi magát biztonságban?",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "Gondoljon a lámpákra, zebrákra, gyalogos-felüljárókra vagy aluljárókra az Ön által használt megállók közelében.",
+      "#I avoid some stops because crossing to them feels unsafe": "Egyes megállókat elkerülök, mert nem érzem biztonságosnak az odajutást",
+      "#I often feel unsafe when I cross": "Átkelés közben gyakran nem érzem magam biztonságban",
+      "#I sometimes go a longer way to cross more safely": "Néha hosszabb utat teszek meg, hogy biztonságosabban kelhessek át",
+      "#I feel safe, but I have to be careful": "Biztonságban érzem magam, de óvatosnak kell lennem",
+      "#I feel safe: the crossings are well protected": "Biztonságban érzem magam: az átkelők jól védettek",
+      "#Situations on the Road": "Helyzetek az úton",
+      "#Public transport – Road safety": "Tömegközlekedés – Közlekedésbiztonság",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Tömegközlekedés – Közlekedésbiztonság",
+      "#Bus with a clock": "Busz órával",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Megállók, átkelőhelyek és helyzetek útközben <b>tömegközlekedés közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Tömegközlekedés közben mely helyzetek miatt érzi magát veszélyben? (Jelölje meg az összes megfelelőt)",
+      "#Poor visibility or limited sightlines": "Rossz látási viszonyok vagy korlátozott beláthatóság",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "A járművezetők, kerékpárosok, motorosok vagy gyalogosok veszélyes viselkedése",
+      "#Crowding": "Zsúfoltság",
+      "#Conflicts with other road users": "Konfliktus más közlekedőkkel",
+      "#Lack of safe or adequate stops, crossings or lighting": "A biztonságos vagy megfelelő megállók, átkelőhelyek vagy világítás hiánya",
+      "#No emergency services nearby": "Nincs a közelben mentő- vagy sürgősségi szolgálat",
+      "#None of these": "Ezek közül egyik sem",
+      "#The ramp does not work or the wheelchair space is taken": "A rámpa nem működik, vagy a kerekesszékes hely foglalt",
+      "#Vehicles so full that I have to wait for the next one": "A járművek annyira tele vannak, hogy meg kell várnom a következőt"
+    },
+    "ar": {
+      "code": "ar",
+      "#Getting to the stop": "الوصول إلى المحطة",
+      "#What problems do you meet at stops or when getting on and off?": "ما المشكلات التي تواجهها في المحطات أو عند الصعود والنزول؟",
+      "#Stairs or steps": "سلالم أو درجات",
+      "#Hard to get on or off the vehicle": "يصعب الصعود إلى المركبة أو النزول منها",
+      "#Narrow or crowded spaces": "مساحات ضيقة أو مزدحمة",
+      "#Broken or poorly kept stops (e.g. broken lifts, damaged shelters)": "محطات معطلة أو سيئة الصيانة (مثل مصاعد معطلة أو مظلات متضررة)",
+      "#Stop or vehicle cannot be used with a wheelchair, walker or stroller": "لا يمكن استخدام المحطة أو المركبة بكرسي متحرك أو مشّاية أو عربة أطفال",
+      "#Vehicles too crowded to get on with a stroller or wheelchair": "المركبات مزدحمة جدًا للصعود بعربة أطفال أو كرسي متحرك",
+      "#No sidewalk or walkway to reach the stop": "لا يوجد رصيف أو ممر للمشاة للوصول إلى المحطة",
+      "#No real-time arrival information, on screen or announced": "لا توجد معلومات فورية عن وقت الوصول، لا على الشاشة ولا بالإعلان الصوتي",
+      "#Not enough seats or shelter": "لا توجد مقاعد أو مظلات كافية",
+      "#Nothing in particular": "لا شيء بعينه",
+      "#When you cross the road to reach or leave a stop, how safe do you feel?": "عندما تعبر الطريق للوصول إلى المحطة أو مغادرتها، ما مدى شعورك بالأمان؟",
+      "#Think of traffic lights, zebra crossings, footbridges or underpasses near the stops you use.": "فكّر في إشارات المرور وممرات المشاة والجسور أو الأنفاق قرب المحطات التي تستخدمها.",
+      "#I avoid some stops because crossing to them feels unsafe": "أتجنب بعض المحطات لأن العبور إليها لا يبدو آمنًا",
+      "#I often feel unsafe when I cross": "أشعر غالبًا بعدم الأمان عند العبور",
+      "#I sometimes go a longer way to cross more safely": "أسلك أحيانًا طريقًا أطول لأعبر بأمان أكبر",
+      "#I feel safe, but I have to be careful": "أشعر بالأمان، لكن عليّ أن أكون حذرًا",
+      "#I feel safe: the crossings are well protected": "أشعر بالأمان: المعابر محمية جيدًا",
+      "#Situations on the Road": "مواقف على الطريق",
+      "#Public transport – Road safety": "النقل العام – السلامة على الطريق",
+      "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - النقل العام – السلامة على الطريق",
+      "#Bus with a clock": "حافلة مع ساعة",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>المحطات والمعابر والمواقف على الطريق <b>عند استخدام وسائل النقل العام</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "عند استخدام النقل العام، أي من هذه المواقف يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Poor visibility or limited sightlines": "ضعف الرؤية أو محدودية مجال النظر",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "سلوك غير آمن من السائقين أو الراكبين أو المشاة",
+      "#Crowding": "الازدحام",
+      "#Conflicts with other road users": "الاحتكاك بمستخدمي الطريق الآخرين",
+      "#Lack of safe or adequate stops, crossings or lighting": "غياب محطات أو معابر أو إضاءة آمنة وكافية",
+      "#No emergency services nearby": "عدم وجود خدمات طوارئ قريبة",
+      "#None of these": "لا شيء مما سبق",
+      "#The ramp does not work or the wheelchair space is taken": "المنحدر لا يعمل أو مكان الكرسي المتحرك مشغول",
+      "#Vehicles so full that I have to wait for the next one": "المركبات ممتلئة لدرجة أنني أضطر لانتظار التالية"
+    }
+  }
+}
