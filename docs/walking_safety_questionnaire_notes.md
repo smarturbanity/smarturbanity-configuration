@@ -382,7 +382,15 @@ On the felt duplicates between forms (2026-11-08):
     `future/smarturbanity_travel_choices` ("Your Travel Choices", 1.0.0, review mode). It is listed in both indexes and
     in the disabled "Future questionnaires" campaign (`rome_future`), so participants do not see it yet.
 
-Still to decide: grouping the 14 modes and an evening follow-up question.
+15. `walking_security` (2.4.0) asks a follow-up right after `evening_insecure_yn`, only when the answer is Yes:
+    `evening_insecure_changes` 1.0.0, "When you feel unsafe in the evening, what do you change?" (IT "Quando la sera
+    non ti senti al sicuro, cosa cambi?"), multiple choice and optional, with the help "You can choose more than one
+    answer." Options: change my route, change the time, share my location with someone, ask someone to come with me,
+    use a different means of transport, give up going out, Nothing, Prefer not to say. "Nothing" and "Prefer not to
+    say" are exclusive. The wording was approved by Lory on 2026-11-08 (#422). It replaces the retired single-choice
+    `evening_travel_behaviour` of the general safety form.
+
+Still to decide: grouping the 14 modes (#296/#303, proposal waiting for Lory's choice).
 
 ## Not yet covered
 
