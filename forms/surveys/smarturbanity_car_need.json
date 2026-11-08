@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Car – When the car is hard to replace",
     "questionnaire_id": "smarturbanity_car_need",
-    "questionnaire_version": "3.0.1",
+    "questionnaire_version": "3.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -30,121 +30,146 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "What do you use the car for? (Select all that apply)",
-            "answer_key": "car_need_uses",
-            "question_type": "multiple_options",
-            "options": [
+            "text": "Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.",
+            "answer_key": "car_need_frequency_alternative",
+            "question_type": "matrix",
+            "row_source": "car_need_uses",
+            "columns": [
               {
-                "text": "Taking older relatives or people with walking difficulties out",
-                "value": "accompany_older"
+                "key": "frequency",
+                "label": "How often?",
+                "type": "select",
+                "options": [
+                  {
+                    "value": "several_times_a_week",
+                    "label": "Several times a week"
+                  },
+                  {
+                    "value": "weekly",
+                    "label": "Weekly"
+                  },
+                  {
+                    "value": "monthly",
+                    "label": "Monthly"
+                  },
+                  {
+                    "value": "rarely",
+                    "label": "Rarely"
+                  }
+                ]
               },
               {
-                "text": "Going with someone to medical or official appointments",
-                "value": "care_appointments"
-              },
-              {
-                "text": "Travelling at night or getting to night shifts, when public transport is scarce",
-                "value": "night_hours"
-              },
-              {
-                "text": "Reaching places with no direct public transport, for example work outside the ring road",
-                "value": "no_direct_link"
-              },
-              {
-                "text": "Carrying heavy work tools or equipment",
-                "value": "heavy_equipment"
-              },
-              {
-                "text": "Getting around when public transport is on strike",
-                "value": "strikes"
-              },
-              {
-                "text": "Getting around because my area is poorly served by public transport",
-                "value": "area_not_served"
-              },
-              {
-                "text": "Doing several errands in different places on the same day",
-                "value": "trip_chains"
-              },
-              {
-                "text": "Travelling with small children and their things (pushchair, bags)",
-                "value": "children"
-              },
-              {
-                "text": "Making sure someone does not have to come home alone by public transport at night",
-                "value": "accompany_evening"
-              },
-              {
-                "text": "Carrying animals, for example to the vet",
-                "value": "animals"
-              },
-              {
-                "text": "Doing big grocery shopping",
-                "value": "big_shopping"
-              },
-              {
-                "text": "Carrying bulky or fragile items",
-                "value": "bulky_items"
-              },
-              {
-                "text": "Picking people up with luggage at a station or airport, especially in the evening",
-                "value": "luggage"
-              },
-              {
-                "text": "Taking bulky or hazardous waste to a collection point",
-                "value": "waste_disposal"
-              },
-              {
-                "text": "Being sure of getting back, even after many hours",
-                "value": "certain_return"
-              },
-              {
-                "text": "Making unexpected trips, even out of town",
-                "value": "unplanned_trips"
-              },
-              {
-                "text": "Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)",
-                "value": "sharing_unavailable"
-              },
-              {
-                "text": "None of these",
-                "value": "none",
-                "exclusive": true
+                "key": "alternative",
+                "label": "What would let you leave the car for this?",
+                "type": "select",
+                "options": [
+                  {
+                    "value": "more_frequent_reliable_public_transport",
+                    "label": "More frequent and reliable public transport, also in the evening"
+                  },
+                  {
+                    "value": "accompanied_or_on_demand_transport",
+                    "label": "An accompanied or on-demand transport service"
+                  },
+                  {
+                    "value": "home_delivery",
+                    "label": "Home delivery"
+                  },
+                  {
+                    "value": "shared_van",
+                    "label": "A shared van"
+                  },
+                  {
+                    "value": "nothing",
+                    "label": "Nothing would"
+                  }
+                ]
               }
             ],
             "required": false,
-            "question_id": "car_need_uses",
-            "question_version": "1.0.2",
+            "question_id": "car_need_frequency_alternative",
+            "question_version": "1.0.0",
             "privacy_classification": "personal_data"
-          },
-          {
-            "text": "If there were a reliable alternative for these trips, would you use the car less?",
-            "answer_key": "car_less_with_alternative",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "car_less_with_alternative",
-            "question_version": "1.1.0",
-            "privacy_classification": "personal_data",
-            "show_if": {
-              "car_need_uses": {
-                "not": [
-                  "none"
-                ]
-              }
-            }
           }
         ]
       }
-    ]
+    ],
+    "row_sources": {
+      "car_need_uses": [
+        {
+          "key": "accompany_older",
+          "label": "Taking older relatives or people with walking difficulties out"
+        },
+        {
+          "key": "care_appointments",
+          "label": "Going with someone to medical or official appointments"
+        },
+        {
+          "key": "night_hours",
+          "label": "Travelling at night or getting to night shifts, when public transport is scarce"
+        },
+        {
+          "key": "no_direct_link",
+          "label": "Reaching places with no direct public transport, for example work outside the ring road"
+        },
+        {
+          "key": "heavy_equipment",
+          "label": "Carrying heavy work tools or equipment"
+        },
+        {
+          "key": "strikes",
+          "label": "Getting around when public transport is on strike"
+        },
+        {
+          "key": "area_not_served",
+          "label": "Getting around because my area is poorly served by public transport"
+        },
+        {
+          "key": "trip_chains",
+          "label": "Doing several errands in different places on the same day"
+        },
+        {
+          "key": "children",
+          "label": "Travelling with small children and their things (pushchair, bags)"
+        },
+        {
+          "key": "accompany_evening",
+          "label": "Making sure someone does not have to come home alone by public transport at night"
+        },
+        {
+          "key": "animals",
+          "label": "Carrying animals, for example to the vet"
+        },
+        {
+          "key": "big_shopping",
+          "label": "Doing big grocery shopping"
+        },
+        {
+          "key": "bulky_items",
+          "label": "Carrying bulky or fragile items"
+        },
+        {
+          "key": "luggage",
+          "label": "Picking people up with luggage at a station or airport, especially in the evening"
+        },
+        {
+          "key": "waste_disposal",
+          "label": "Taking bulky or hazardous waste to a collection point"
+        },
+        {
+          "key": "certain_return",
+          "label": "Being sure of getting back, even after many hours"
+        },
+        {
+          "key": "unplanned_trips",
+          "label": "Making unexpected trips, even out of town"
+        },
+        {
+          "key": "sharing_unavailable",
+          "label": "Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)"
+        }
+      ]
+    }
   },
   "id": "smarturbanity_car_need",
   "db_set": "questionnaires",
@@ -157,15 +182,11 @@
     "en": {
       "code": "en",
       "#When the car is hard to replace": "When the car is hard to replace",
-      "#Yes": "Yes",
-      "#No": "No",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "If there were a reliable alternative for these trips, would you use the car less?",
       "#Car – When the car is hard to replace": "Car – When the car is hard to replace",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Car – When the car is hard to replace",
       "#Car on a street": "Car on a street",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#What do you use the car for? (Select all that apply)": "What do you use the car for? (Select all that apply)",
       "#Taking older relatives or people with walking difficulties out": "Taking older relatives or people with walking difficulties out",
       "#Going with someone to medical or official appointments": "Going with someone to medical or official appointments",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Travelling at night or getting to night shifts, when public transport is scarce",
@@ -184,21 +205,28 @@
       "#Being sure of getting back, even after many hours": "Being sure of getting back, even after many hours",
       "#Making unexpected trips, even out of town": "Making unexpected trips, even out of town",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)",
-      "#None of these": "None of these",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.",
+      "#How often?": "How often?",
+      "#What would let you leave the car for this?": "What would let you leave the car for this?",
+      "#Several times a week": "Several times a week",
+      "#Weekly": "Weekly",
+      "#Monthly": "Monthly",
+      "#Rarely": "Rarely",
+      "#More frequent and reliable public transport, also in the evening": "More frequent and reliable public transport, also in the evening",
+      "#An accompanied or on-demand transport service": "An accompanied or on-demand transport service",
+      "#Home delivery": "Home delivery",
+      "#A shared van": "A shared van",
+      "#Nothing would": "Nothing would"
     },
     "it": {
       "code": "it",
       "#When the car is hard to replace": "Quando l’auto è difficile da sostituire",
-      "#Yes": "Sì",
-      "#No": "No",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "Se per questi spostamenti ci fosse un’alternativa affidabile, useresti meno l’auto?",
       "#Car – When the car is hard to replace": "In auto – Quando l’auto è difficile da sostituire",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - In auto – Quando l’auto è difficile da sostituire",
       "#Car on a street": "Auto su una strada",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#What do you use the car for? (Select all that apply)": "Per cosa usi l’auto? (Seleziona tutte le opzioni applicabili)",
       "#Taking older relatives or people with walking difficulties out": "Portare fuori familiari anziani o persone con difficoltà a camminare",
       "#Going with someone to medical or official appointments": "Accompagnare qualcuno a visite mediche o appuntamenti ufficiali",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Spostarmi di notte o raggiungere i turni di notte, quando i mezzi pubblici sono pochi",
@@ -217,21 +245,28 @@
       "#Being sure of getting back, even after many hours": "Avere la certezza di tornare, anche dopo molte ore",
       "#Making unexpected trips, even out of town": "Fare spostamenti imprevisti, anche fuori città",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Spostarmi quando auto in condivisione o taxi sono difficili da trovare (ad es. di notte o in periferia)",
-      "#None of these": "Nessuna di queste",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcuni spostamenti sono difficili <b>senza auto</b>. Dicci per quali usi l’auto.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcuni spostamenti sono difficili <b>senza auto</b>. Dicci per quali usi l’auto.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Seleziona gli usi che ti riguardano. Per ogni uso selezionato, indica quanto spesso e cosa ti permetterebbe di lasciare l’auto. Se nessuno ti riguarda, lascia tutti gli usi non selezionati.",
+      "#How often?": "Quanto spesso?",
+      "#What would let you leave the car for this?": "Cosa ti permetterebbe di lasciare l’auto per questo uso?",
+      "#Several times a week": "Più volte a settimana",
+      "#Weekly": "Ogni settimana",
+      "#Monthly": "Ogni mese",
+      "#Rarely": "Raramente",
+      "#More frequent and reliable public transport, also in the evening": "Un trasporto pubblico più frequente e affidabile, anche di sera",
+      "#An accompanied or on-demand transport service": "Un servizio di accompagnamento o di trasporto a chiamata",
+      "#Home delivery": "La consegna a casa",
+      "#A shared van": "Un furgone in condivisione",
+      "#Nothing would": "Niente"
     },
     "fr": {
       "code": "fr",
       "#When the car is hard to replace": "Quand la voiture est difficile à remplacer",
-      "#Yes": "Oui",
-      "#No": "Non",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "S’il existait une alternative fiable pour ces trajets, utiliseriez-vous moins la voiture ?",
       "#Car – When the car is hard to replace": "Voiture – Quand la voiture est difficile à remplacer",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Voiture – Quand la voiture est difficile à remplacer",
       "#Car on a street": "Voiture dans une rue",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#What do you use the car for? (Select all that apply)": "Pour quoi utilisez-vous la voiture ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Taking older relatives or people with walking difficulties out": "Emmener en sortie des proches âgés ou des personnes qui ont du mal à marcher",
       "#Going with someone to medical or official appointments": "Accompagner quelqu’un à des rendez-vous médicaux ou administratifs",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Me déplacer la nuit ou me rendre à un travail de nuit, quand les transports en commun sont rares",
@@ -250,21 +285,28 @@
       "#Being sure of getting back, even after many hours": "Avoir la certitude de pouvoir rentrer, même après de nombreuses heures",
       "#Making unexpected trips, even out of town": "Faire des trajets imprévus, même hors de la ville",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Me déplacer quand les voitures partagées ou les taxis sont difficiles à trouver (par ex. la nuit ou en périphérie)",
-      "#None of these": "Aucun de ces éléments",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Certains trajets sont difficiles à faire <b>sans voiture</b>. Dites-nous pour lesquels vous utilisez la voiture.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Certains trajets sont difficiles à faire <b>sans voiture</b>. Dites-nous pour lesquels vous utilisez la voiture.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Sélectionnez les usages qui vous concernent. Pour chaque usage sélectionné, indiquez à quelle fréquence et ce qui vous permettrait de laisser la voiture. Si aucun ne vous concerne, ne sélectionnez aucun usage.",
+      "#How often?": "À quelle fréquence ?",
+      "#What would let you leave the car for this?": "Qu’est-ce qui vous permettrait de laisser la voiture pour cet usage ?",
+      "#Several times a week": "Plusieurs fois par semaine",
+      "#Weekly": "Chaque semaine",
+      "#Monthly": "Chaque mois",
+      "#Rarely": "Rarement",
+      "#More frequent and reliable public transport, also in the evening": "Des transports en commun plus fréquents et plus fiables, y compris le soir",
+      "#An accompanied or on-demand transport service": "Un service de transport accompagné ou à la demande",
+      "#Home delivery": "La livraison à domicile",
+      "#A shared van": "Une camionnette partagée",
+      "#Nothing would": "Rien"
     },
     "de": {
       "code": "de",
       "#When the car is hard to replace": "Wenn das Auto schwer zu ersetzen ist",
-      "#Yes": "Ja",
-      "#No": "Nein",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "Würden Sie das Auto weniger nutzen, wenn es für diese Wege eine verlässliche Alternative gäbe?",
       "#Car – When the car is hard to replace": "Auto – Wenn das Auto schwer zu ersetzen ist",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Auto – Wenn das Auto schwer zu ersetzen ist",
       "#Car on a street": "Auto auf einer Straße",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#What do you use the car for? (Select all that apply)": "Wofür nutzen Sie das Auto? (Wählen Sie alles Zutreffende aus)",
       "#Taking older relatives or people with walking difficulties out": "Ältere Angehörige oder Menschen mit Gehschwierigkeiten begleiten",
       "#Going with someone to medical or official appointments": "Jemanden zu Arzt- oder Behördenterminen begleiten",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Nachts unterwegs sein oder zur Nachtschicht kommen, wenn kaum öffentliche Verkehrsmittel fahren",
@@ -283,21 +325,28 @@
       "#Being sure of getting back, even after many hours": "Sicher sein, wieder zurückzukommen, auch nach vielen Stunden",
       "#Making unexpected trips, even out of town": "Unvorhergesehene Fahrten machen, auch außerhalb der Stadt",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Unterwegs sein, wenn Carsharing-Autos oder Taxis schwer zu finden sind (z. B. nachts oder in Außenbezirken)",
-      "#None of these": "Keine davon",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Manche Wege sind <b>ohne Auto</b> schwer zu bewältigen. Sagen Sie uns, für welche Sie das Auto nutzen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Manche Wege sind <b>ohne Auto</b> schwer zu bewältigen. Sagen Sie uns, für welche Sie das Auto nutzen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Wählen Sie die Nutzungen aus, die auf Sie zutreffen. Geben Sie für jede ausgewählte Nutzung an, wie oft und was es Ihnen ermöglichen würde, das Auto stehen zu lassen. Wenn keine zutrifft, wählen Sie keine Nutzung aus.",
+      "#How often?": "Wie oft?",
+      "#What would let you leave the car for this?": "Was würde es Ihnen ermöglichen, das Auto dafür stehen zu lassen?",
+      "#Several times a week": "Mehrmals pro Woche",
+      "#Weekly": "Jede Woche",
+      "#Monthly": "Jeden Monat",
+      "#Rarely": "Selten",
+      "#More frequent and reliable public transport, also in the evening": "Häufigere und zuverlässigere öffentliche Verkehrsmittel, auch am Abend",
+      "#An accompanied or on-demand transport service": "Ein begleiteter Fahrdienst oder ein Fahrdienst auf Abruf",
+      "#Home delivery": "Lieferung nach Hause",
+      "#A shared van": "Ein gemeinsam genutzter Lieferwagen",
+      "#Nothing would": "Nichts"
     },
     "tr": {
       "code": "tr",
       "#When the car is hard to replace": "Arabanın yerini tutmanın zor olduğu durumlar",
-      "#Yes": "Evet",
-      "#No": "Hayır",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "Bu yolculuklar için güvenilir bir alternatif olsaydı arabayı daha az kullanır mıydınız?",
       "#Car – When the car is hard to replace": "Araba – Arabanın yerini tutmanın zor olduğu durumlar",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Araba – Arabanın yerini tutmanın zor olduğu durumlar",
       "#Car on a street": "Sokakta bir araba",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#What do you use the car for? (Select all that apply)": "Arabayı ne için kullanıyorsunuz? (Uygun olanların tümünü seçin)",
       "#Taking older relatives or people with walking difficulties out": "Yaşlı akrabaları veya yürüme güçlüğü olan kişileri dışarı çıkarmak",
       "#Going with someone to medical or official appointments": "Birine sağlık veya resmî randevularda eşlik etmek",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Toplu taşımanın az olduğu saatlerde geceleri yolculuk etmek veya gece vardiyalarına gitmek",
@@ -316,21 +365,28 @@
       "#Being sure of getting back, even after many hours": "Saatler sonra bile geri dönebileceğimden emin olmak",
       "#Making unexpected trips, even out of town": "Şehir dışı da dahil, beklenmedik yolculuklar yapmak",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Paylaşımlı araba veya taksi bulmanın zor olduğu durumlarda (örn. geceleri veya şehrin dış bölgelerinde) ulaşmak",
-      "#None of these": "Bunların hiçbiri",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bazı yolculuklar <b>arabasız</b> yapılması zor yolculuklardır. Arabayı hangileri için kullandığınızı bize söyleyin.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bazı yolculuklar <b>arabasız</b> yapılması zor yolculuklardır. Arabayı hangileri için kullandığınızı bize söyleyin.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Size uygun kullanım amaçlarını seçin. Seçtiğiniz her amaç için ne sıklıkta olduğunu ve arabayı kullanmamanızı neyin sağlayacağını belirtin. Hiçbiri size uygun değilse hiçbirini seçmeyin.",
+      "#How often?": "Ne sıklıkta?",
+      "#What would let you leave the car for this?": "Bu amaç için arabayı kullanmamanızı ne sağlar?",
+      "#Several times a week": "Haftada birkaç kez",
+      "#Weekly": "Her hafta",
+      "#Monthly": "Her ay",
+      "#Rarely": "Nadiren",
+      "#More frequent and reliable public transport, also in the evening": "Akşamları da dahil olmak üzere daha sık ve güvenilir toplu taşıma",
+      "#An accompanied or on-demand transport service": "Refakatli veya talep üzerine ulaşım hizmeti",
+      "#Home delivery": "Eve teslimat",
+      "#A shared van": "Paylaşımlı bir kamyonet",
+      "#Nothing would": "Hiçbir şey"
     },
     "fa": {
       "code": "fa",
       "#When the car is hard to replace": "وقتی جایگزین کردن خودرو سخت است",
-      "#Yes": "بله",
-      "#No": "خیر",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "اگر برای این سفرها جایگزین قابل‌اعتمادی وجود داشت، کمتر از خودرو استفاده می‌کردید؟",
       "#Car – When the car is hard to replace": "خودرو – وقتی جایگزین کردن خودرو سخت است",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - خودرو – وقتی جایگزین کردن خودرو سخت است",
       "#Car on a street": "خودرو در خیابان",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#What do you use the car for? (Select all that apply)": "از خودرو برای چه کارهایی استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Taking older relatives or people with walking difficulties out": "بردن اعضای مسن خانواده یا افراد دارای مشکل در راه رفتن به بیرون",
       "#Going with someone to medical or official appointments": "همراهی یک نفر در قرارهای پزشکی یا اداری",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "سفر در شب یا رفتن به شیفت شب، وقتی حمل‌ونقل عمومی کم است",
@@ -349,21 +405,28 @@
       "#Being sure of getting back, even after many hours": "اطمینان از بازگشت، حتی پس از ساعت‌های طولانی",
       "#Making unexpected trips, even out of town": "سفرهای پیش‌بینی‌نشده، حتی به خارج از شهر",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "جابه‌جایی وقتی خودروی اشتراکی یا تاکسی به‌سختی پیدا می‌شود (مثلاً شب یا در مناطق دورتر)",
-      "#None of these": "هیچ‌کدام از این‌ها",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>انجام بعضی سفرها <b>بدون خودرو</b> سخت است. بگویید برای کدام‌ها از خودرو استفاده می‌کنید.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>انجام بعضی سفرها <b>بدون خودرو</b> سخت است. بگویید برای کدام‌ها از خودرو استفاده می‌کنید.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "موارد استفاده‌ای را که درباره شما صدق می‌کند انتخاب کنید. برای هر مورد انتخاب‌شده، بگویید چند وقت یک‌بار و چه چیزی به شما امکان می‌دهد از خودرو استفاده نکنید. اگر هیچ‌کدام صدق نمی‌کند، هیچ موردی را انتخاب نکنید.",
+      "#How often?": "چند وقت یک‌بار؟",
+      "#What would let you leave the car for this?": "چه چیزی به شما امکان می‌دهد برای این کار از خودرو استفاده نکنید؟",
+      "#Several times a week": "چند بار در هفته",
+      "#Weekly": "هر هفته",
+      "#Monthly": "هر ماه",
+      "#Rarely": "به‌ندرت",
+      "#More frequent and reliable public transport, also in the evening": "حمل‌ونقل عمومی پرتکرارتر و قابل‌اعتمادتر، حتی در عصر و شب",
+      "#An accompanied or on-demand transport service": "خدمات حمل‌ونقل همراه با کمک یا بنا به درخواست",
+      "#Home delivery": "تحویل در منزل",
+      "#A shared van": "وانت اشتراکی",
+      "#Nothing would": "هیچ‌چیز"
     },
     "hu": {
       "code": "hu",
       "#When the car is hard to replace": "Amikor az autót nehéz kiváltani",
-      "#Yes": "Igen",
-      "#No": "Nem",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "Ha lenne megbízható alternatíva ezekre az utakra, kevesebbet használná az autót?",
       "#Car – When the car is hard to replace": "Autó – Amikor az autót nehéz kiváltani",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - Autó – Amikor az autót nehéz kiváltani",
       "#Car on a street": "Autó az utcán",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#What do you use the car for? (Select all that apply)": "Mire használja az autót? (Jelölje meg az összes megfelelőt)",
       "#Taking older relatives or people with walking difficulties out": "Idős hozzátartozók vagy nehezen járó emberek elvitele",
       "#Going with someone to medical or official appointments": "Valaki elkísérése orvosi vagy hivatalos ügyintézésre",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "Éjszakai utazás vagy éjszakai műszakba járás, amikor kevés a tömegközlekedés",
@@ -382,21 +445,28 @@
       "#Being sure of getting back, even after many hours": "Biztos hazajutás, akár sok óra elteltével is",
       "#Making unexpected trips, even out of town": "Váratlan utak, akár a városon kívülre is",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "Közlekedés, amikor nehéz megosztott autót vagy taxit találni (pl. éjszaka vagy a külső kerületekben)",
-      "#None of these": "Ezek közül egyik sem",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány utat nehéz megtenni <b>autó nélkül</b>. Mondja el, melyekhez használja az autót.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány utat nehéz megtenni <b>autó nélkül</b>. Mondja el, melyekhez használja az autót.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "Válassza ki az Önre vonatkozó felhasználási célokat. Minden kiválasztott célnál adja meg, milyen gyakran fordul elő, és mi tenné lehetővé, hogy ne autóval menjen. Ha egyik sem vonatkozik Önre, ne válasszon ki semmit.",
+      "#How often?": "Milyen gyakran?",
+      "#What would let you leave the car for this?": "Mi tenné lehetővé, hogy ehhez ne használjon autót?",
+      "#Several times a week": "Hetente többször",
+      "#Weekly": "Hetente",
+      "#Monthly": "Havonta",
+      "#Rarely": "Ritkán",
+      "#More frequent and reliable public transport, also in the evening": "Gyakoribb és megbízhatóbb tömegközlekedés, este is",
+      "#An accompanied or on-demand transport service": "Kísérővel biztosított vagy igény szerinti közlekedési szolgáltatás",
+      "#Home delivery": "Házhoz szállítás",
+      "#A shared van": "Közösségi kisteherautó",
+      "#Nothing would": "Semmi"
     },
     "ar": {
       "code": "ar",
       "#When the car is hard to replace": "عندما يصعب الاستغناء عن السيارة",
-      "#Yes": "نعم",
-      "#No": "لا",
-      "#If there were a reliable alternative for these trips, would you use the car less?": "لو توفر بديل موثوق لهذه الرحلات، هل ستستخدم السيارة أقل؟",
       "#Car – When the car is hard to replace": "السيارة – عندما يصعب الاستغناء عنها",
       "#SmartUrbanity - Car – When the car is hard to replace": "SmartUrbanity - السيارة – عندما يصعب الاستغناء عنها",
       "#Car on a street": "سيارة في شارع",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#What do you use the car for? (Select all that apply)": "ما الأغراض التي تستخدم السيارة من أجلها؟ (يمكن اختيار كل ما ينطبق)",
       "#Taking older relatives or people with walking difficulties out": "اصطحاب كبار السن من الأقارب أو الأشخاص الذين يجدون صعوبة في المشي",
       "#Going with someone to medical or official appointments": "مرافقة أحد إلى مواعيد طبية أو رسمية",
       "#Travelling at night or getting to night shifts, when public transport is scarce": "التنقل ليلًا أو الوصول إلى نوبات العمل الليلية، حين يقل النقل العام",
@@ -415,8 +485,19 @@
       "#Being sure of getting back, even after many hours": "التأكد من العودة حتى بعد ساعات طويلة",
       "#Making unexpected trips, even out of town": "القيام برحلات غير متوقعة، حتى خارج المدينة",
       "#Getting around when shared cars or taxis are hard to find (e.g. at night or in outer areas)": "التنقل عندما يصعب العثور على سيارات مشتركة أو سيارات أجرة (مثلًا ليلًا أو في المناطق الطرفية)",
-      "#None of these": "لا شيء مما سبق",
-      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الرحلات يصعب القيام بها <b>بدون سيارة</b>. أخبرنا بأيّها تستخدم السيارة من أجله.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you use the car for.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الرحلات يصعب القيام بها <b>بدون سيارة</b>. أخبرنا بأيّها تستخدم السيارة من أجله.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, leave all uses unselected.": "يُرجى اختيار الاستخدامات التي تنطبق عليك. لكل استخدام تختاره، حدّد مدى تكراره وما الذي يتيح لك الاستغناء عن السيارة. إذا لم ينطبق أيّ منها، فاترك جميع الاستخدامات دون اختيار.",
+      "#How often?": "كم مرة؟",
+      "#What would let you leave the car for this?": "ما الذي يتيح لك الاستغناء عن السيارة لهذا الاستخدام؟",
+      "#Several times a week": "عدة مرات في الأسبوع",
+      "#Weekly": "كل أسبوع",
+      "#Monthly": "كل شهر",
+      "#Rarely": "نادرًا",
+      "#More frequent and reliable public transport, also in the evening": "نقل عام أكثر تواترًا وموثوقية، حتى في المساء",
+      "#An accompanied or on-demand transport service": "خدمة نقل مع مرافقة أو حسب الطلب",
+      "#Home delivery": "التوصيل إلى المنزل",
+      "#A shared van": "شاحنة صغيرة مشتركة",
+      "#Nothing would": "لا شيء"
     }
   }
 }

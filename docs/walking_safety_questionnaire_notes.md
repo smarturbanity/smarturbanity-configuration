@@ -519,21 +519,23 @@ when the pin moves to this configuration.
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
   it must be updated when the pin moves to a configuration that includes these forms.
 
-### When the car cannot be replaced (proposals, not built)
+### When the car cannot be replaced (implemented)
 
-Lory (2026-11-08, decision 1A) checked a citizens' text about the uses for which the car cannot be replaced.
-`car_need_uses` (car need) and `put_no_car_hard` (public transport without a car) already list nearly every case.
-What is missing is which alternative would work for each use and how often each case happens:
-`car_less_with_alternative` is one generic Yes/No, and `car_sustainable_motivation` covers only walking, cycling and
-sharing. Proposal only, to be built later from the wording of the existing forms (Lory: "1 e 2 sarebbero una bella
-matrice"):
+The car-need form 3.1.0 replaces `car_need_uses` and the generic
+`car_less_with_alternative` Yes/No with one optional matrix question,
+`car_need_frequency_alternative` 1.0.0, translated in all eight languages.
 
-- One `matrix` question replaces `car_need_uses`. Its rows are the same uses, written in the form (`rows`), so the
-  person picks the uses that apply and only those rows show the columns, as in the service report matrix.
-- Column "How often?": several times a week / weekly / monthly / rarely.
-- Column "What would let you leave the car for this?": for example public transport at night ("More frequent and
-  reliable public transport, also in the evening"), an accompanied or on-demand service, home delivery, a shared van,
-  "Nothing would". Options reuse existing option texts where possible.
-- Data impact: the answer becomes one value per use and column, so it needs a new answer key; `car_need_uses` answers
-  already collected stay as they are. `car_less_with_alternative` can then be dropped, because the matrix asks the
-  same thing per use.
+- People first select from the same 18 car uses. Only selected uses show the two
+  columns. The list lives in the form's `questionnaire.row_sources`, referenced by
+  `row_source`: inline question `rows` would make the viewer select every row.
+- "How often?": several times a week / weekly / monthly / rarely.
+- "What would let you leave the car for this?": more frequent and reliable public
+  transport, also in the evening / an accompanied or on-demand transport service /
+  home delivery / a shared van / nothing would. The public transport option reuses
+  the existing car-alternatives wording and value.
+- "None of these" is expressed by leaving all uses unselected, as the instructions
+  explain; it is not a car use and must not ask for frequency or an alternative.
+  As with the optional questions it replaces, leaving the question unanswered is allowed.
+- Each selected row stores `frequency` and `alternative` under the new answer key.
+  Already collected answers keep their original keys and are not migrated or rewritten.
+  The generic Yes/No is no longer asked.
