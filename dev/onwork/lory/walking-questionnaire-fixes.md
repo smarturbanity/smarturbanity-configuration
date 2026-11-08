@@ -75,3 +75,8 @@ Lory approved the Italian option "Spazi per chi va a piedi o in sedia a rotelle,
 Translation-only patches: walk_want_changes 1.2.2, walking improvements 3.2.2.
 Structural comparison confirms all answer values, settings, other content and
 languages are preserved. No browser or persona retest is claimed.
+
+Lory approved the Italian title "A piedi o in sedia a rotelle – Cosa ti
+aiuterebbe", including its SmartUrbanity-prefixed form. Walking improvements
+3.2.3; structural comparison confirms only both title translations and the form
+patch version changed. All question definitions and other languages are preserved.
