@@ -1,0 +1,695 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Public transport – Trips without a car",
+    "questionnaire_id": "smarturbanity_public_transport_without_car",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Public transport – Trips without a car",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_pt_service.svg",
+      "image_alt": "#Bus with a clock",
+      "description": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Public transport – Trips without a car",
+    "sections": [
+      {
+        "title": "Trips without a car",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Do you live without a car, or with a car you can rarely use?",
+            "answer_key": "put_no_car_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "required": true,
+            "question_id": "put_no_car_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?",
+            "answer_key": "put_no_car_accompany_older_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_accompany_older_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?",
+            "answer_key": "put_no_car_care_appointments_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_care_appointments_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?",
+            "answer_key": "put_no_car_night_hours_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_night_hours_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?",
+            "answer_key": "put_no_car_no_direct_link_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_no_direct_link_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?",
+            "answer_key": "put_no_car_heavy_equipment_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_heavy_equipment_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to get around when public transport is on strike?",
+            "answer_key": "put_no_car_strikes_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_strikes_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?",
+            "answer_key": "put_no_car_area_not_served_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_area_not_served_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?",
+            "answer_key": "put_no_car_trip_chains_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_trip_chains_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?",
+            "answer_key": "put_no_car_children_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_children_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?",
+            "answer_key": "put_no_car_accompany_evening_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_accompany_evening_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to take animals to the vet or other places?",
+            "answer_key": "put_no_car_animals_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_animals_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to do big grocery shopping?",
+            "answer_key": "put_no_car_big_shopping_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_big_shopping_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to carry bulky or fragile items?",
+            "answer_key": "put_no_car_bulky_items_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_bulky_items_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?",
+            "answer_key": "put_no_car_luggage_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_luggage_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?",
+            "answer_key": "put_no_car_waste_disposal_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_waste_disposal_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?",
+            "answer_key": "put_no_car_certain_return_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_certain_return_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?",
+            "answer_key": "put_no_car_unplanned_trips_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "put_no_car_yn": [
+                "yes"
+              ]
+            },
+            "question_id": "put_no_car_unplanned_trips_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_public_transport_without_car",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Trips without a car": "Trips without a car",
+      "#Do you live without a car, or with a car you can rarely use?": "Do you live without a car, or with a car you can rarely use?",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Without a car, do you give up trying or find it very hard to get around when public transport is on strike?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Without a car, do you give up trying or find it very hard to take animals to the vet or other places?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Without a car, do you give up trying or find it very hard to do big grocery shopping?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Without a car, do you give up trying or find it very hard to carry bulky or fragile items?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?",
+      "#Public transport – Trips without a car": "Public transport – Trips without a car",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Public transport – Trips without a car",
+      "#Bus with a clock": "Bus with a clock",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#Trips without a car": "Spostamenti senza auto",
+      "#Do you live without a car, or with a car you can rarely use?": "Vivi senza auto, o con un’auto che puoi usare raramente?",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Senza auto, rinunci o fai molta fatica a portare fuori familiari anziani o persone con difficoltà a camminare?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Senza auto, rinunci o fai molta fatica a accompagnare qualcuno a visite mediche o appuntamenti ufficiali?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Senza auto, rinunci o fai molta fatica a spostarti di notte o raggiungere i turni di notte?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Senza auto, rinunci o fai molta fatica a raggiungere posti senza collegamenti diretti con i mezzi pubblici, per esempio il lavoro fuori dal raccordo anulare?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Senza auto, rinunci o fai molta fatica a portare attrezzi o attrezzature da lavoro pesanti?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Senza auto, rinunci o fai molta fatica a spostarti quando i mezzi pubblici sono in sciopero?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Senza auto, rinunci o fai molta fatica a andare o tornare da zone poco servite dai mezzi pubblici?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Senza auto, rinunci o fai molta fatica a fare più commissioni in posti diversi nella stessa giornata?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Senza auto, rinunci o fai molta fatica a spostarti con bambini piccoli e le loro cose (passeggino, borse)?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Senza auto, rinunci o fai molta fatica a tornare a casa di notte senza viaggiare da sola o da solo sui mezzi pubblici?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Senza auto, rinunci o fai molta fatica a portare animali dal veterinario o in altri posti?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Senza auto, rinunci o fai molta fatica a fare la spesa grande?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Senza auto, rinunci o fai molta fatica a trasportare oggetti ingombranti o fragili?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Senza auto, rinunci o fai molta fatica a andare a prendere persone con i bagagli in stazione o in aeroporto?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Senza auto, rinunci o fai molta fatica a portare rifiuti ingombranti o pericolosi a un punto di raccolta?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Senza auto, rinunci o fai molta fatica a fare viaggi lunghi in cui devi essere certo di tornare?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Senza auto, rinunci o fai molta fatica a fare spostamenti imprevisti, anche fuori città?",
+      "#Public transport – Trips without a car": "Trasporto pubblico – Spostamenti senza auto",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Trasporto pubblico – Spostamenti senza auto",
+      "#Bus with a clock": "Autobus con un orologio",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcuni spostamenti sono difficili <b>senza auto</b>. Dicci quali eviti o trovi molto difficili. Ogni domanda ha due risposte: Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#Trips without a car": "Trajets sans voiture",
+      "#Do you live without a car, or with a car you can rarely use?": "Vivez-vous sans voiture, ou avec une voiture que vous pouvez rarement utiliser ?",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de emmener des proches âgés ou des personnes qui ont du mal à marcher en sortie ?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de accompagner quelqu’un à des rendez-vous médicaux ou administratifs ?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de vous déplacer la nuit ou vous rendre à un travail de nuit ?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de rejoindre des lieux sans transport en commun direct, par exemple un travail en dehors du périphérique ?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de transporter des outils ou du matériel de travail lourds ?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de vous déplacer en cas de grève des transports en commun ?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de aller vers ou revenir de zones mal desservies par les transports en commun ?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de faire plusieurs courses à des endroits différents dans la même journée ?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de voyager avec de jeunes enfants et leurs affaires (poussette, sacs) ?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de rentrer la nuit sans devoir voyager seul·e dans les transports en commun ?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de emmener des animaux chez le vétérinaire ou ailleurs ?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de faire de grosses courses alimentaires ?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de transporter des objets encombrants ou fragiles ?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de aller chercher des personnes avec des bagages à une gare ou à un aéroport ?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de apporter des déchets encombrants ou dangereux à un point de collecte ?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de faire de longs trajets pour lesquels vous devez avoir la certitude de pouvoir rentrer ?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Sans voiture, renoncez-vous à essayer ou trouvez-vous très difficile de faire des trajets imprévus, même hors de la ville ?",
+      "#Public transport – Trips without a car": "Transports en commun – Trajets sans voiture",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Transports en commun – Trajets sans voiture",
+      "#Bus with a clock": "Bus avec une horloge",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Certains trajets sont difficiles à faire <b>sans voiture</b>. Dites-nous lesquels vous renoncez à faire ou trouvez très difficiles. Chaque question a deux réponses : Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#Trips without a car": "Wege ohne Auto",
+      "#Do you live without a car, or with a car you can rarely use?": "Leben Sie ohne Auto oder mit einem Auto, das Sie nur selten nutzen können?",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, mit älteren Angehörigen oder Menschen mit Gehschwierigkeiten unterwegs zu sein?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, jemanden zu Arzt- oder Behördenterminen zu begleiten?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, nachts unterwegs zu sein oder zur Nachtschicht zu kommen?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, Orte ohne direkte Verbindung mit öffentlichen Verkehrsmitteln zu erreichen, zum Beispiel einen Arbeitsplatz außerhalb des Autobahnrings?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, schweres Arbeitswerkzeug oder schwere Ausrüstung zu transportieren?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, unterwegs zu sein, wenn im öffentlichen Verkehr gestreikt wird?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, in Gegenden zu fahren oder aus Gegenden zu kommen, die schlecht mit öffentlichen Verkehrsmitteln erschlossen sind?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, am selben Tag mehrere Erledigungen an verschiedenen Orten zu machen?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, mit kleinen Kindern und ihren Sachen (Kinderwagen, Taschen) unterwegs zu sein?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, nachts nach Hause zu kommen, ohne allein mit öffentlichen Verkehrsmitteln zu fahren?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, Tiere zum Tierarzt oder an andere Orte zu bringen?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, einen großen Lebensmitteleinkauf zu machen?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, sperrige oder zerbrechliche Gegenstände zu transportieren?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, Menschen mit Gepäck am Bahnhof oder Flughafen abzuholen?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, Sperrmüll oder Sondermüll zu einer Sammelstelle zu bringen?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, lange Fahrten zu machen, bei denen Sie sicher sein müssen, wieder zurückzukommen?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Verzichten Sie ohne Auto darauf oder fällt es Ihnen sehr schwer, unvorhergesehene Fahrten zu machen, auch außerhalb der Stadt?",
+      "#Public transport – Trips without a car": "Öffentliche Verkehrsmittel – Wege ohne Auto",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Öffentliche Verkehrsmittel – Wege ohne Auto",
+      "#Bus with a clock": "Bus mit einer Uhr",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Manche Wege sind <b>ohne Auto</b> schwer zu bewältigen. Sagen Sie uns, auf welche Sie verzichten oder welche Ihnen sehr schwerfallen. Jede Frage hat zwei Antworten: Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#Trips without a car": "Arabasız yolculuklar",
+      "#Do you live without a car, or with a car you can rarely use?": "Arabasız mı yaşıyorsunuz, yoksa nadiren kullanabildiğiniz bir arabayla mı?",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Arabanız olmadan, yaşlı akrabalarınızı veya yürüme güçlüğü olan kişileri dışarı çıkarmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Arabanız olmadan, birine sağlık veya resmî randevularda eşlik etmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Arabanız olmadan, geceleri yolculuk etmekten veya gece vardiyalarına gitmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Arabanız olmadan, doğrudan toplu taşıma olmayan yerlere, örneğin çevre yolunun dışındaki işe ulaşmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Arabanız olmadan, ağır iş aletlerini veya ekipmanlarını taşımaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Arabanız olmadan, toplu taşıma grevdeyken ulaşmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Arabanız olmadan, toplu taşımanın yetersiz olduğu bölgelere veya bölgelerden yolculuk etmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Arabanız olmadan, aynı gün farklı yerlerde birkaç iş halletmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Arabanız olmadan, küçük çocuklarla ve eşyalarıyla (bebek arabası, çantalar) yolculuk etmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Arabanız olmadan, geceleri toplu taşımayla yalnız yolculuk etmeden eve dönmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Arabanız olmadan, hayvanları veterinere veya başka yerlere götürmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Arabanız olmadan, büyük market alışverişi yapmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Arabanız olmadan, hacimli veya kırılgan eşyaları taşımaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Arabanız olmadan, bir istasyondan veya havalimanından bagajlı kişileri almaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Arabanız olmadan, hacimli veya tehlikeli atıkları toplama noktasına götürmekten vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Arabanız olmadan, geri dönebileceğinizden emin olmanız gereken uzun yolculuklar yapmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Arabanız olmadan, şehir dışı da dahil, beklenmedik yolculuklar yapmaktan vazgeçiyor veya bunu çok zor buluyor musunuz?",
+      "#Public transport – Trips without a car": "Toplu taşıma – Arabasız yolculuklar",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Toplu taşıma – Arabasız yolculuklar",
+      "#Bus with a clock": "Saatli otobüs",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Bazı yolculuklar <b>arabasız</b> yapılması zor yolculuklardır. Hangilerinden vazgeçtiğinizi veya hangilerini çok zor bulduğunuzu bize söyleyin. Her sorunun iki cevabı var: Evet veya Hayır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#Trips without a car": "سفر بدون خودرو",
+      "#Do you live without a car, or with a car you can rarely use?": "آیا بدون خودرو زندگی می‌کنید یا خودرویی دارید که به‌ندرت می‌توانید از آن استفاده کنید؟",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که سالمندان خانواده یا افراد دارای مشکل راه رفتن را بیرون ببرید؟",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که کسی را به قرار پزشکی یا اداری همراهی کنید؟",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که شب سفر کنید یا به شیفت شب برسید؟",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که به جاهایی که حمل‌ونقل عمومی مستقیم ندارند بروید، مثلاً کاری خارج از کمربندی؟",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که ابزار یا تجهیزات سنگین کار را جابه‌جا کنید؟",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که وقتی حمل‌ونقل عمومی اعتصاب دارد رفت‌وآمد کنید؟",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که به مناطقی که حمل‌ونقل عمومی ضعیفی دارند بروید یا از آنجا برگردید؟",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که در یک روز چند کار را در جاهای مختلف انجام دهید؟",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که با کودکان کوچک و وسایلشان (کالسکه، کیف) سفر کنید؟",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که شب بدون سفر تنها با حمل‌ونقل عمومی به خانه برگردید؟",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که حیوانات را نزد دامپزشک یا جاهای دیگر ببرید؟",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که خرید بزرگ مواد غذایی انجام دهید؟",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که وسایل حجیم یا شکستنی را جابه‌جا کنید؟",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که افرادی را که چمدان دارند از ایستگاه یا فرودگاه بردارید؟",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که زباله حجیم یا خطرناک را به محل جمع‌آوری ببرید؟",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که سفرهای طولانی بروید که باید مطمئن باشید برمی‌گردید؟",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "بدون خودرو، آیا از تلاش دست می‌کشید یا برایتان خیلی سخت است که سفرهای پیش‌بینی‌نشده، حتی خارج از شهر، انجام دهید؟",
+      "#Public transport – Trips without a car": "حمل‌ونقل عمومی – سفر بدون خودرو",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - حمل‌ونقل عمومی – سفر بدون خودرو",
+      "#Bus with a clock": "اتوبوس با ساعت",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>انجام بعضی سفرها <b>بدون خودرو</b> سخت است. بگویید کدام‌ها را رها می‌کنید یا برایتان خیلی سخت است. هر پرسش دو پاسخ دارد: بله یا خیر.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#Trips without a car": "Utak autó nélkül",
+      "#Do you live without a car, or with a car you can rarely use?": "Autó nélkül él, vagy olyan autóval, amelyet ritkán tud használni?",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy idős hozzátartozókat vagy nehezen járó embereket elvinni valahová?",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy valakit orvosi vagy hivatalos ügyintézésre elkísérni?",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy éjszaka utazni vagy éjszakai műszakba eljutni?",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy olyan helyekre eljutni, ahová nincs közvetlen tömegközlekedés, például a körgyűrűn kívüli munkahelyre?",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy nehéz munkaeszközöket vagy felszerelést szállítani?",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy közlekedni, amikor sztrájkol a tömegközlekedés?",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy a tömegközlekedéssel rosszul ellátott területekre vagy onnan utazni?",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy ugyanazon a napon több ügyet intézni különböző helyeken?",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy kisgyerekekkel és a holmijukkal (babakocsi, táskák) utazni?",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy éjszaka úgy hazajutni, hogy ne kelljen egyedül utaznia tömegközlekedéssel?",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy állatokat elvinni az állatorvoshoz vagy máshová?",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy nagybevásárlást intézni?",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy terjedelmes vagy törékeny holmit szállítani?",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy csomaggal érkező embereket felvenni az állomáson vagy a repülőtéren?",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy terjedelmes vagy veszélyes hulladékot elvinni a gyűjtőhelyre?",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy hosszú utakat megtenni, ahol biztosnak kell lennie a hazajutásban?",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "Autó nélkül lemond arról, vagy nagyon nehéznek találja, hogy váratlan utakat megtenni, akár a városon kívülre is?",
+      "#Public transport – Trips without a car": "Tömegközlekedés – Utak autó nélkül",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - Tömegközlekedés – Utak autó nélkül",
+      "#Bus with a clock": "Busz órával",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány utat nehéz megtenni <b>autó nélkül</b>. Mondja el, melyekről mond le, vagy melyeket talál nagyon nehéznek. Minden kérdésre két válasz van: Igen vagy Nem.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#Trips without a car": "الرحلات بدون سيارة",
+      "#Do you live without a car, or with a car you can rarely use?": "هل تعيش بدون سيارة، أو بسيارة نادرًا ما يمكنك استخدامها؟",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Without a car, do you give up trying or find it very hard to take older relatives or people with walking difficulties out?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في اصطحاب كبار السن من أقاربك أو من يجدون صعوبة في المشي إلى الخارج؟",
+      "#Without a car, do you give up trying or find it very hard to accompany someone to medical or official appointments?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في مرافقة شخص إلى مواعيد طبية أو رسمية؟",
+      "#Without a car, do you give up trying or find it very hard to travel at night or get to night shifts?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في التنقل ليلًا أو الوصول إلى ورديات العمل الليلية؟",
+      "#Without a car, do you give up trying or find it very hard to reach places with no direct public transport, for example work outside the ring road?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في الوصول إلى أماكن ليس إليها نقل عام مباشر، مثل العمل خارج الطريق الدائري؟",
+      "#Without a car, do you give up trying or find it very hard to carry heavy work tools or equipment?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في حمل أدوات أو معدات عمل ثقيلة؟",
+      "#Without a car, do you give up trying or find it very hard to get around when public transport is on strike?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في التنقل عندما يكون النقل العام مضربًا عن العمل؟",
+      "#Without a car, do you give up trying or find it very hard to travel to or from areas poorly served by public transport?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في التنقل من وإلى مناطق تخدمها وسائل النقل العام بشكل ضعيف؟",
+      "#Without a car, do you give up trying or find it very hard to do several errands in different places on the same day?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في قضاء عدة مشاوير في أماكن مختلفة في اليوم نفسه؟",
+      "#Without a car, do you give up trying or find it very hard to travel with small children and their things (pushchair, bags)?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في التنقل مع أطفال صغار وأغراضهم (عربة أطفال وحقائب)؟",
+      "#Without a car, do you give up trying or find it very hard to come home at night without travelling alone on public transport?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في العودة إلى البيت ليلًا دون السفر وحدك في النقل العام؟",
+      "#Without a car, do you give up trying or find it very hard to take animals to the vet or other places?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في اصطحاب الحيوانات إلى الطبيب البيطري أو إلى أماكن أخرى؟",
+      "#Without a car, do you give up trying or find it very hard to do big grocery shopping?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في التسوق الكبير للبقالة؟",
+      "#Without a car, do you give up trying or find it very hard to carry bulky or fragile items?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في حمل أغراض كبيرة أو قابلة للكسر؟",
+      "#Without a car, do you give up trying or find it very hard to pick people up with luggage at a station or airport?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في استقبال أشخاص معهم أمتعة في محطة أو مطار؟",
+      "#Without a car, do you give up trying or find it very hard to take bulky or hazardous waste to a collection point?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في نقل نفايات كبيرة أو خطرة إلى نقطة تجميع؟",
+      "#Without a car, do you give up trying or find it very hard to make long trips where you must be sure of getting back?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في القيام برحلات طويلة تحتاج فيها إلى التأكد من العودة؟",
+      "#Without a car, do you give up trying or find it very hard to make unexpected trips, even out of town?": "بدون سيارة، هل تتخلى عن المحاولة أو تجد صعوبة بالغة في القيام برحلات غير متوقعة، حتى خارج المدينة؟",
+      "#Public transport – Trips without a car": "النقل العام – الرحلات بدون سيارة",
+      "#SmartUrbanity - Public transport – Trips without a car": "SmartUrbanity - النقل العام – الرحلات بدون سيارة",
+      "#Bus with a clock": "حافلة مع ساعة",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>Some trips are hard to make <b>without a car</b>. Tell us which ones you give up or find very hard. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الرحلات يصعب القيام بها <b>بدون سيارة</b>. أخبرنا بأيّها تتخلى عنه أو تجده صعبًا جدًا. لكل سؤال إجابتان: نعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  }
+}

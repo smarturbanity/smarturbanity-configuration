@@ -1,0 +1,543 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Cycling – Your trips",
+    "questionnaire_id": "smarturbanity_cycling_habits",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Cycling – Your trips",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_cycling_routes.svg",
+      "image_alt": "#Bicycle and a route between two points",
+      "description": "<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Cycling – Your trips",
+    "sections": [
+      {
+        "title": "How you cycle",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you ride a bike or e-bike to get around at least once a week?",
+            "help": "Your own bike or a shared one. Rides just for sport count too.",
+            "answer_key": "bike_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "bike_weekly",
+            "question_version": "1.1.0"
+          },
+          {
+            "text": "Do you rarely cycle because you do not have a bike or e-bike you can use?",
+            "answer_key": "not_bike_no_bike_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_bike_no_bike_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely cycle because the places you go are too far or cycling takes too long?",
+            "answer_key": "not_bike_distance_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_bike_distance_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely cycle because cycling is tiring or physically difficult for you?",
+            "answer_key": "not_bike_effort_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_bike_effort_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "text": "Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?",
+            "answer_key": "not_bike_unsafe_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_bike_unsafe_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?",
+            "answer_key": "not_bike_streets_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_bike_streets_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Which bike do you use most often?",
+            "answer_key": "bike_type",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "My own bike",
+                "value": "standard_pedal_bicycle_private"
+              },
+              {
+                "text": "My own e-bike",
+                "value": "electric_bicycle_e_bike_private"
+              },
+              {
+                "text": "A shared bike",
+                "value": "shared_hire_bicycle_docked_or_dockless"
+              },
+              {
+                "text": "A shared e-bike",
+                "value": "shared_hire_e_bike"
+              },
+              {
+                "text": "A cargo bike or an adapted bike (e.g. tricycle, handbike)",
+                "value": "cargo_bike_or_adapted_bike"
+              }
+            ],
+            "question_id": "bike_type",
+            "question_version": "1.1.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "How confident do you feel cycling in city traffic?",
+            "answer_key": "bike_confidence",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "Not at all: I avoid cycling in traffic",
+                "value": "not_confident_at_all_i_avoid_cycling_in"
+              },
+              {
+                "text": "Not very: I cycle in traffic only when I have to",
+                "value": "not_very_confident_i_cycle_only_when_i_h"
+              },
+              {
+                "text": "In between",
+                "value": "neither_confident_nor_unconfident"
+              },
+              {
+                "text": "Fairly: I manage most situations",
+                "value": "somewhat_confident_i_manage_most_situati"
+              },
+              {
+                "text": "Very: I cycle in any traffic",
+                "value": "very_confident_i_cycle_in_all_conditions"
+              },
+              {
+                "text": "I never cycle in traffic",
+                "value": "i_have_never_cycled_in_urban_traffic"
+              }
+            ],
+            "question_id": "bike_confidence",
+            "question_version": "1.1.0"
+          },
+          {
+            "text": "Does cycling in your daily life help your health or your mood?",
+            "answer_key": "bike_health_benefit_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "bike_weekly": [
+                "yes"
+              ]
+            },
+            "question_id": "bike_health_benefit_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_cycling_habits",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#How you cycle": "How you cycle",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Do you ride a bike or e-bike to get around at least once a week?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Your own bike or a shared one. Rides just for sport count too.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Do you rarely cycle because you do not have a bike or e-bike you can use?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Do you rarely cycle because the places you go are too far or cycling takes too long?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Do you rarely cycle because cycling is tiring or physically difficult for you?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?",
+      "#Which bike do you use most often?": "Which bike do you use most often?",
+      "#My own bike": "My own bike",
+      "#My own e-bike": "My own e-bike",
+      "#A shared bike": "A shared bike",
+      "#A shared e-bike": "A shared e-bike",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "A cargo bike or an adapted bike (e.g. tricycle, handbike)",
+      "#How confident do you feel cycling in city traffic?": "How confident do you feel cycling in city traffic?",
+      "#Not at all: I avoid cycling in traffic": "Not at all: I avoid cycling in traffic",
+      "#Not very: I cycle in traffic only when I have to": "Not very: I cycle in traffic only when I have to",
+      "#In between": "In between",
+      "#Fairly: I manage most situations": "Fairly: I manage most situations",
+      "#Very: I cycle in any traffic": "Very: I cycle in any traffic",
+      "#I never cycle in traffic": "I never cycle in traffic",
+      "#Does cycling in your daily life help your health or your mood?": "Does cycling in your daily life help your health or your mood?",
+      "#Cycling – Your trips": "Cycling – Your trips",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Cycling – Your trips",
+      "#Bicycle and a route between two points": "Bicycle and a route between two points",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#How you cycle": "Come vai in bici",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Vai in bici o in bici elettrica almeno una volta a settimana per spostarti?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "La tua bici o una in sharing. Contano anche i giri solo per sport.",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Vai poco in bici perché non hai una bici o una e-bike da usare?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Vai poco in bici perché i posti dove vai sono troppo lontani o in bici ci vuole troppo tempo?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Vai poco in bici perché pedalare è faticoso o difficile per te fisicamente?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Vai poco in bici perché in bici non ti senti al sicuro (traffico, criminalità o molestie)?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "Vai poco in bici perché mancano buone piste ciclabili o posti sicuri dove lasciare la bici?",
+      "#Which bike do you use most often?": "Quale bici usi più spesso?",
+      "#My own bike": "La mia bici",
+      "#My own e-bike": "La mia bici elettrica",
+      "#A shared bike": "Una bici in sharing",
+      "#A shared e-bike": "Una bici elettrica in sharing",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Una bici cargo o una bici adattata (ad es. triciclo, handbike)",
+      "#How confident do you feel cycling in city traffic?": "Quanto ti senti sicuro in bici nel traffico cittadino?",
+      "#Not at all: I avoid cycling in traffic": "Per niente: evito di andare in bici nel traffico",
+      "#Not very: I cycle in traffic only when I have to": "Poco: vado in bici nel traffico solo se devo",
+      "#In between": "Via di mezzo",
+      "#Fairly: I manage most situations": "Abbastanza: me la cavo nella maggior parte dei casi",
+      "#Very: I cycle in any traffic": "Molto: vado in bici con qualsiasi traffico",
+      "#I never cycle in traffic": "Non vado mai in bici nel traffico",
+      "#Does cycling in your daily life help your health or your mood?": "Andare in bici nella vita di tutti i giorni fa bene alla tua salute o al tuo umore?",
+      "#Cycling – Your trips": "In bici – I tuoi spostamenti",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - In bici – I tuoi spostamenti",
+      "#Bicycle and a route between two points": "Bicicletta e un percorso tra due punti",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande sugli spostamenti in bici o e-bike, anche in sharing. Se vai poco in bici, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#How you cycle": "Votre façon de faire du vélo",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Faites-vous du vélo ou du vélo électrique au moins une fois par semaine pour vous déplacer ?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Votre propre vélo ou un vélo en libre-service. Les sorties uniquement sportives comptent aussi.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Faites-vous rarement du vélo parce que vous n'avez pas de vélo ou de vélo électrique à disposition ?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Faites-vous rarement du vélo parce que les lieux où vous allez sont trop loin ou que le trajet à vélo prend trop de temps ?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Faites-vous rarement du vélo parce que pédaler est fatigant ou physiquement difficile pour vous ?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Faites-vous rarement du vélo parce que vous ne vous sentez pas en sécurité à vélo (circulation, délinquance ou harcèlement) ?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "Faites-vous rarement du vélo parce qu'il manque de bonnes pistes cyclables ou d'endroits sûrs pour laisser un vélo ?",
+      "#Which bike do you use most often?": "Quel vélo utilisez-vous le plus souvent ?",
+      "#My own bike": "Mon propre vélo",
+      "#My own e-bike": "Mon propre vélo électrique",
+      "#A shared bike": "Un vélo en libre-service",
+      "#A shared e-bike": "Un vélo électrique en libre-service",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Un vélo cargo ou un vélo adapté (p. ex. tricycle, handbike)",
+      "#How confident do you feel cycling in city traffic?": "Quelle confiance avez-vous à vélo dans la circulation en ville ?",
+      "#Not at all: I avoid cycling in traffic": "Pas du tout : j'évite le vélo dans la circulation",
+      "#Not very: I cycle in traffic only when I have to": "Peu : je ne fais du vélo dans la circulation que si je dois",
+      "#In between": "Entre les deux",
+      "#Fairly: I manage most situations": "Assez : je me débrouille dans la plupart des situations",
+      "#Very: I cycle in any traffic": "Très : je roule à vélo dans toute circulation",
+      "#I never cycle in traffic": "Je ne fais jamais de vélo dans la circulation",
+      "#Does cycling in your daily life help your health or your mood?": "Faire du vélo au quotidien est-il bon pour votre santé ou votre moral ?",
+      "#Cycling – Your trips": "Vélo – Vos trajets",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Vélo – Vos trajets",
+      "#Bicycle and a route between two points": "Vélo et un itinéraire entre deux points",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur vos déplacements à vélo ou à vélo électrique, y compris en libre-service. Si vous faites rarement du vélo, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#How you cycle": "Wie Sie Rad fahren",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Fahren Sie mindestens einmal pro Woche mit dem Fahrrad oder E-Bike, um irgendwohin zu kommen?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Ihr eigenes Rad oder ein Leihrad. Fahrten nur zum Sport zählen auch.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Fahren Sie selten Rad, weil Sie kein Fahrrad oder E-Bike zur Verfügung haben?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Fahren Sie selten Rad, weil Ihre Ziele zu weit entfernt sind oder der Weg mit dem Rad zu lange dauert?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Fahren Sie selten Rad, weil Radfahren für Sie anstrengend oder körperlich schwierig ist?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Fahren Sie selten Rad, weil Sie sich beim Radfahren unsicher fühlen (Verkehr, Kriminalität oder Belästigung)?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "Fahren Sie selten Rad, weil gute Radwege oder sichere Abstellplätze fehlen?",
+      "#Which bike do you use most often?": "Welches Rad nutzen Sie am häufigsten?",
+      "#My own bike": "Mein eigenes Rad",
+      "#My own e-bike": "Mein eigenes E-Bike",
+      "#A shared bike": "Ein Leihrad",
+      "#A shared e-bike": "Ein Leih-E-Bike",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Ein Lastenrad oder ein angepasstes Rad (z. B. Dreirad, Handbike)",
+      "#How confident do you feel cycling in city traffic?": "Wie sicher fühlen Sie sich beim Radfahren im Stadtverkehr?",
+      "#Not at all: I avoid cycling in traffic": "Gar nicht: Ich vermeide Radfahren im Verkehr",
+      "#Not very: I cycle in traffic only when I have to": "Wenig: Ich fahre nur im Verkehr Rad, wenn ich muss",
+      "#In between": "Mittel",
+      "#Fairly: I manage most situations": "Einigermaßen: Ich komme in den meisten Situationen zurecht",
+      "#Very: I cycle in any traffic": "Sehr: Ich fahre in jedem Verkehr Rad",
+      "#I never cycle in traffic": "Ich fahre nie im Verkehr Rad",
+      "#Does cycling in your daily life help your health or your mood?": "Hilft Ihnen das Radfahren im Alltag für Ihre Gesundheit oder Ihre Stimmung?",
+      "#Cycling – Your trips": "Radfahren – Ihre Wege",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Radfahren – Ihre Wege",
+      "#Bicycle and a route between two points": "Fahrrad und eine Route zwischen zwei Punkten",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zum Unterwegssein mit dem Fahrrad oder E-Bike, auch mit Leihrädern. Wenn Sie selten Rad fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#How you cycle": "Bisiklet sürme şekliniz",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Haftada en az bir kez bisikletle veya elektrikli bisikletle yolculuk ediyor musunuz?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Kendi bisikletiniz veya paylaşımlı bir bisiklet. Sadece spor için yapılan sürüşler de sayılır.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Kullanabileceğiniz bir bisikletiniz veya elektrikli bisikletiniz olmadığı için mi nadiren bisiklet sürüyorsunuz?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Gittiğiniz yerler çok uzak olduğu ya da bisikletle gitmek çok uzun sürdüğü için mi nadiren bisiklet sürüyorsunuz?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Bisiklet sürmek sizin için yorucu veya fiziksel olarak zor olduğu için mi nadiren bisiklet sürüyorsunuz?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Bisiklet sürerken kendinizi güvende hissetmediğiniz için mi (Trafik, suç veya taciz) nadiren bisiklet sürüyorsunuz?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "İyi bisiklet yolları veya bisiklet bırakmak için güvenli yerler olmadığı için mi nadiren bisiklet sürüyorsunuz?",
+      "#Which bike do you use most often?": "En sık hangi bisikleti kullanıyorsunuz?",
+      "#My own bike": "Kendi bisikletim",
+      "#My own e-bike": "Kendi elektrikli bisikletim",
+      "#A shared bike": "Paylaşımlı bir bisiklet",
+      "#A shared e-bike": "Paylaşımlı bir elektrikli bisiklet",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Yük bisikleti veya uyarlanmış bir bisiklet (örn. üç tekerlekli, el pedallı bisiklet)",
+      "#How confident do you feel cycling in city traffic?": "Şehir trafiğinde bisiklet sürerken kendinizi ne kadar güvende hissediyorsunuz?",
+      "#Not at all: I avoid cycling in traffic": "Hiç değil: Trafikte bisiklet sürmekten kaçınırım",
+      "#Not very: I cycle in traffic only when I have to": "Pek değil: Trafikte yalnızca zorunluysam bisiklet sürerim",
+      "#In between": "Orta",
+      "#Fairly: I manage most situations": "Oldukça: Çoğu durumun üstesinden gelirim",
+      "#Very: I cycle in any traffic": "Çok: Her trafikte bisiklet sürerim",
+      "#I never cycle in traffic": "Trafikte hiç bisiklet sürmem",
+      "#Does cycling in your daily life help your health or your mood?": "Günlük hayatınızda bisiklet sürmek sağlığınıza veya ruh halinize yardımcı oluyor mu?",
+      "#Cycling – Your trips": "Bisiklet – Yolculuklarınız",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Bisiklet – Yolculuklarınız",
+      "#Bicycle and a route between two points": "Bisiklet ve iki nokta arasında bir güzergâh",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Paylaşımlı bisikletler dahil, bisiklet veya elektrikli bisikletle ulaşım hakkında birkaç soru. Nadiren bisiklet sürüyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#How you cycle": "دوچرخه‌سواری شما",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد با دوچرخه یا دوچرخه برقی می‌روید؟",
+      "#Your own bike or a shared one. Rides just for sport count too.": "دوچرخه شخصی یا اشتراکی. سواری فقط برای ورزش هم حساب می‌شود.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "آیا کم دوچرخه‌سواری می‌کنید چون دوچرخه یا دوچرخهٔ برقی در اختیار ندارید؟",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "آیا کم دوچرخه‌سواری می‌کنید چون مقصدهایتان خیلی دور است یا با دوچرخه خیلی طول می‌کشد؟",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "آیا کم دوچرخه‌سواری می‌کنید چون دوچرخه‌سواری برایتان خسته‌کننده یا از نظر جسمی دشوار است؟",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "آیا کم دوچرخه‌سواری می‌کنید چون هنگام دوچرخه‌سواری احساس امنیت نمی‌کنید (ترافیک، جرم یا آزار)؟",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "آیا کم دوچرخه‌سواری می‌کنید چون مسیر دوچرخهٔ خوب یا جای امن برای گذاشتن دوچرخه وجود ندارد؟",
+      "#Which bike do you use most often?": "بیشتر از کدام دوچرخه استفاده می‌کنید؟",
+      "#My own bike": "دوچرخه شخصی خودم",
+      "#My own e-bike": "دوچرخه برقی شخصی خودم",
+      "#A shared bike": "دوچرخه اشتراکی",
+      "#A shared e-bike": "دوچرخه برقی اشتراکی",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "دوچرخه باربری یا دوچرخه ویژه (مثلاً سه‌چرخه، دوچرخه دستی)",
+      "#How confident do you feel cycling in city traffic?": "در ترافیک شهر با دوچرخه چقدر احساس اطمینان می‌کنید؟",
+      "#Not at all: I avoid cycling in traffic": "اصلاً: از دوچرخه‌سواری در ترافیک دوری می‌کنم",
+      "#Not very: I cycle in traffic only when I have to": "زیاد نه: فقط وقتی مجبورم در ترافیک دوچرخه‌سواری می‌کنم",
+      "#In between": "متوسط",
+      "#Fairly: I manage most situations": "نسبتاً: از پس بیشتر موقعیت‌ها برمی‌آیم",
+      "#Very: I cycle in any traffic": "بسیار: در هر ترافیکی دوچرخه‌سواری می‌کنم",
+      "#I never cycle in traffic": "هرگز در ترافیک دوچرخه‌سواری نمی‌کنم",
+      "#Does cycling in your daily life help your health or your mood?": "آیا دوچرخه‌سواری در زندگی روزمره به سلامت یا حال شما کمک می‌کند؟",
+      "#Cycling – Your trips": "دوچرخه‌سواری – سفرهای شما",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - دوچرخه‌سواری – سفرهای شما",
+      "#Bicycle and a route between two points": "دوچرخه و مسیری میان دو نقطه",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش دربارهٔ رفت‌وآمد با دوچرخه یا دوچرخهٔ برقی، از جمله دوچرخه‌های اشتراکی. اگر کم دوچرخه‌سواری می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#How you cycle": "Hogyan biciklizik",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "Használ kerékpárt vagy e-bike-ot a közlekedéshez legalább hetente egyszer?",
+      "#Your own bike or a shared one. Rides just for sport count too.": "Saját vagy megosztott kerékpár. A csak sportolásból tett körök is számítanak.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "Azért kerékpározik ritkán, mert nincs használható kerékpárja vagy e-bike-ja?",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "Azért kerékpározik ritkán, mert az úti céljai túl messze vannak, vagy kerékpárral túl sokáig tart az út?",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "Azért kerékpározik ritkán, mert a kerékpározás fárasztó vagy fizikailag nehéz Önnek?",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "Azért kerékpározik ritkán, mert kerékpározás közben nem érzi magát biztonságban (forgalom, bűncselekmények vagy zaklatás)?",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "Azért kerékpározik ritkán, mert hiányoznak a jó kerékpárutak vagy a biztonságos kerékpártárolók?",
+      "#Which bike do you use most often?": "Melyik kerékpárt használja a leggyakrabban?",
+      "#My own bike": "Saját kerékpár",
+      "#My own e-bike": "Saját elektromos kerékpár",
+      "#A shared bike": "Megosztott kerékpár",
+      "#A shared e-bike": "Megosztott elektromos kerékpár",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "Teherszállító vagy átalakított kerékpár (pl. háromkerekű, kézihajtású)",
+      "#How confident do you feel cycling in city traffic?": "Mennyire érzi magabiztosnak magát, ha a városi forgalomban biciklizik?",
+      "#Not at all: I avoid cycling in traffic": "Egyáltalán nem: kerülöm a forgalomban való biciklizést",
+      "#Not very: I cycle in traffic only when I have to": "Nem nagyon: csak akkor biciklizem a forgalomban, ha muszáj",
+      "#In between": "Valahol a kettő között",
+      "#Fairly: I manage most situations": "Eléggé: a legtöbb helyzettel megbirkózom",
+      "#Very: I cycle in any traffic": "Nagyon: bármilyen forgalomban biciklizem",
+      "#I never cycle in traffic": "Soha nem biciklizem a forgalomban",
+      "#Does cycling in your daily life help your health or your mood?": "A mindennapi kerékpározás segít az egészségének vagy a hangulatának?",
+      "#Cycling – Your trips": "Kerékpározás – Az Ön útjai",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - Kerékpározás – Az Ön útjai",
+      "#Bicycle and a route between two points": "Kerékpár és egy útvonal két pont között",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a kerékpáros és e-bike-os közlekedésről, a közbringát is beleértve. Ha ritkán kerékpározik, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#How you cycle": "كيف تركب الدراجة",
+      "#Do you ride a bike or e-bike to get around at least once a week?": "هل تستخدم الدراجة أو الدراجة الكهربائية للتنقل مرة واحدة على الأقل في الأسبوع؟",
+      "#Your own bike or a shared one. Rides just for sport count too.": "دراجتك الخاصة أو مشتركة. وتُحسب أيضًا الجولات للرياضة فقط.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Do you rarely cycle because you do not have a bike or e-bike you can use?": "هل تعود قلّة ركوبك الدراجة إلى أنه ليس لديك دراجة أو دراجة كهربائية يمكنك استخدامها؟",
+      "#Do you rarely cycle because the places you go are too far or cycling takes too long?": "هل تعود قلّة ركوبك الدراجة إلى أن وجهاتك بعيدة جدًا أو أن الطريق بالدراجة يستغرق وقتًا طويلًا؟",
+      "#Do you rarely cycle because cycling is tiring or physically difficult for you?": "هل تعود قلّة ركوبك الدراجة إلى أن ركوبها متعب أو صعب عليك جسديًا؟",
+      "#Do you rarely cycle because you feel unsafe cycling (traffic, crime or harassment)?": "هل تعود قلّة ركوبك الدراجة إلى شعور بعدم الأمان عند ركوبها (حركة المرور أو الجرائم أو التحرش)؟",
+      "#Do you rarely cycle because there are no good cycle lanes or safe places to leave a bike?": "هل تعود قلّة ركوبك الدراجة إلى غياب مسارات جيدة للدراجات أو أماكن آمنة لترك الدراجة؟",
+      "#Which bike do you use most often?": "أي دراجة تستخدمها في أغلب الأحيان؟",
+      "#My own bike": "دراجتي الخاصة",
+      "#My own e-bike": "دراجتي الكهربائية الخاصة",
+      "#A shared bike": "دراجة مشتركة",
+      "#A shared e-bike": "دراجة كهربائية مشتركة",
+      "#A cargo bike or an adapted bike (e.g. tricycle, handbike)": "دراجة شحن أو دراجة معدّلة (مثل ثلاثية العجلات أو دراجة تُدار باليد)",
+      "#How confident do you feel cycling in city traffic?": "ما مدى ثقتك عند ركوب الدراجة في حركة المرور داخل المدينة؟",
+      "#Not at all: I avoid cycling in traffic": "على الإطلاق: أتجنب ركوب الدراجة وسط حركة المرور",
+      "#Not very: I cycle in traffic only when I have to": "ليس كثيرًا: أركب الدراجة وسط حركة المرور فقط عند الضرورة",
+      "#In between": "بين بين",
+      "#Fairly: I manage most situations": "إلى حد كبير: أتعامل مع معظم المواقف",
+      "#Very: I cycle in any traffic": "كثيرًا: أركب الدراجة في أي حركة مرور",
+      "#I never cycle in traffic": "لا أركب الدراجة وسط حركة المرور أبدًا",
+      "#Does cycling in your daily life help your health or your mood?": "هل يفيد ركوب الدراجة في حياتك اليومية صحتك أو مزاجك؟",
+      "#Cycling – Your trips": "ركوب الدراجة – رحلاتك",
+      "#SmartUrbanity - Cycling – Your trips": "SmartUrbanity - ركوب الدراجة – رحلاتك",
+      "#Bicycle and a route between two points": "دراجة هوائية ومسار بين نقطتين",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>A few questions about getting around by bike or e-bike, including shared bikes. If you rarely cycle, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن التنقل بالدراجة أو الدراجة الكهربائية، بما في ذلك الدراجات المشتركة. إذا كنت نادرًا ما تركب الدراجة، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Car – Your trips",
+    "questionnaire_id": "smarturbanity_car_habits",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Car – Your trips",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car.svg",
+      "image_alt": "#Car on a street",
+      "description": "<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Car – Your trips",
+    "sections": [
+      {
+        "title": "Your car trips",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you travel by car at least once a week?",
+            "help": "As the driver or as a passenger, also car sharing.",
+            "answer_key": "car_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "car_weekly",
+            "question_version": "1.1.0"
+          },
+          {
+            "text": "Do you rarely travel by car because you do not have a car or a driving licence?",
+            "answer_key": "not_car_no_car_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_no_car_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?",
+            "answer_key": "not_car_cost_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_cost_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely travel by car because traffic and finding a parking space take too long?",
+            "answer_key": "not_car_time_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_time_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely travel by car because driving is stressful or tiring for you?",
+            "answer_key": "not_car_stress_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_stress_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely travel by car because you feel unsafe on the road by car?",
+            "answer_key": "not_car_unsafe_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_unsafe_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?",
+            "answer_key": "not_car_other_ways_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_car_other_ways_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_car_habits",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Your car trips": "Your car trips",
+      "#Do you travel by car at least once a week?": "Do you travel by car at least once a week?",
+      "#As the driver or as a passenger, also car sharing.": "As the driver or as a passenger, also car sharing.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Do you rarely travel by car because you do not have a car or a driving licence?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Do you rarely travel by car because traffic and finding a parking space take too long?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Do you rarely travel by car because driving is stressful or tiring for you?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Do you rarely travel by car because you feel unsafe on the road by car?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?",
+      "#Car – Your trips": "Car – Your trips",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Car – Your trips",
+      "#Car on a street": "Car on a street",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#Your car trips": "I tuoi spostamenti in auto",
+      "#Do you travel by car at least once a week?": "Vai in auto almeno una volta a settimana?",
+      "#As the driver or as a passenger, also car sharing.": "Alla guida o come passeggero, anche con il car sharing.",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Usi poco l'auto perché non hai un'auto o la patente?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Usi poco l'auto perché costa troppo (carburante, parcheggio, pedaggi, assicurazione)?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Usi poco l'auto perché il traffico e la ricerca del parcheggio richiedono troppo tempo?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Usi poco l'auto perché guidare è stressante o faticoso per te?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Usi poco l'auto perché in auto non ti senti al sicuro sulla strada?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Usi poco l'auto perché preferisci altri modi di spostarti, per esempio per l'ambiente?",
+      "#Car – Your trips": "In auto – I tuoi spostamenti",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - In auto – I tuoi spostamenti",
+      "#Car on a street": "Auto su una strada",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande sugli spostamenti in auto. Se usi poco l'auto, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#Your car trips": "Vos trajets en voiture",
+      "#Do you travel by car at least once a week?": "Vous déplacez-vous en voiture au moins une fois par semaine ?",
+      "#As the driver or as a passenger, also car sharing.": "Comme conducteur ou comme passager, y compris en autopartage.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Utilisez-vous rarement la voiture parce que vous n'avez pas de voiture ou de permis de conduire ?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Utilisez-vous rarement la voiture parce qu'elle coûte trop cher (carburant, stationnement, péages, assurance) ?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Utilisez-vous rarement la voiture parce que les embouteillages et la recherche d'une place prennent trop de temps ?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Utilisez-vous rarement la voiture parce que conduire est stressant ou fatigant pour vous ?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Utilisez-vous rarement la voiture parce que vous ne vous sentez pas en sécurité sur la route en voiture ?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Utilisez-vous rarement la voiture parce que vous préférez d'autres façons de vous déplacer, par exemple pour l'environnement ?",
+      "#Car – Your trips": "Voiture – Vos trajets",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Voiture – Vos trajets",
+      "#Car on a street": "Voiture dans une rue",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur vos déplacements en voiture. Si vous utilisez rarement la voiture, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#Your car trips": "Ihre Autofahrten",
+      "#Do you travel by car at least once a week?": "Fahren Sie mindestens einmal pro Woche Auto?",
+      "#As the driver or as a passenger, also car sharing.": "Als Fahrer oder Fahrerin oder als Mitfahrende, auch Carsharing.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Fahren Sie selten mit dem Auto, weil Sie kein Auto oder keinen Führerschein haben?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Fahren Sie selten mit dem Auto, weil es zu teuer ist (Kraftstoff, Parken, Maut, Versicherung)?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Fahren Sie selten mit dem Auto, weil Stau und Parkplatzsuche zu lange dauern?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Fahren Sie selten mit dem Auto, weil Autofahren für Sie stressig oder anstrengend ist?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Fahren Sie selten mit dem Auto, weil Sie sich im Auto auf der Straße unsicher fühlen?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Fahren Sie selten mit dem Auto, weil Sie andere Arten der Fortbewegung bevorzugen, zum Beispiel der Umwelt zuliebe?",
+      "#Car – Your trips": "Auto – Ihre Wege",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Auto – Ihre Wege",
+      "#Car on a street": "Auto auf einer Straße",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zum Unterwegssein mit dem Auto. Wenn Sie selten mit dem Auto fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#Your car trips": "Otomobil yolculuklarınız",
+      "#Do you travel by car at least once a week?": "Haftada en az bir kez otomobille yolculuk yapıyor musunuz?",
+      "#As the driver or as a passenger, also car sharing.": "Sürücü veya yolcu olarak, araç paylaşımı da dahil.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Arabanız veya ehliyetiniz olmadığı için mi arabayı nadiren kullanıyorsunuz?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Çok pahalı olduğu için mi (yakıt, otopark, geçiş ücretleri, sigorta) arabayı nadiren kullanıyorsunuz?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Trafik ve park yeri aramak çok uzun sürdüğü için mi arabayı nadiren kullanıyorsunuz?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Araba kullanmak sizin için stresli veya yorucu olduğu için mi arabayı nadiren kullanıyorsunuz?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Arabayla yolda kendinizi güvende hissetmediğiniz için mi arabayı nadiren kullanıyorsunuz?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Örneğin çevre için başka ulaşım yollarını tercih ettiğiniz için mi arabayı nadiren kullanıyorsunuz?",
+      "#Car – Your trips": "Araba – Yolculuklarınız",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Araba – Yolculuklarınız",
+      "#Car on a street": "Sokakta bir araba",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Arabayla ulaşım hakkında birkaç soru. Arabayı nadiren kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#Your car trips": "سفرهای شما با خودرو",
+      "#Do you travel by car at least once a week?": "آیا حداقل هفته‌ای یک بار با خودرو سفر می‌کنید؟",
+      "#As the driver or as a passenger, also car sharing.": "چه راننده باشید چه سرنشین، و همچنین خودروی اشتراکی.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "آیا کم با خودرو سفر می‌کنید چون خودرو یا گواهینامهٔ رانندگی ندارید؟",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "آیا کم با خودرو سفر می‌کنید چون خیلی گران تمام می‌شود (سوخت، پارکینگ، عوارض، بیمه)؟",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "آیا کم با خودرو سفر می‌کنید چون ترافیک و پیدا کردن جای پارک خیلی طول می‌کشد؟",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "آیا کم با خودرو سفر می‌کنید چون رانندگی برایتان پراسترس یا خسته‌کننده است؟",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "آیا کم با خودرو سفر می‌کنید چون با خودرو در جاده احساس امنیت نمی‌کنید؟",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "آیا کم با خودرو سفر می‌کنید چون روش‌های دیگر رفت‌وآمد را ترجیح می‌دهید، مثلاً به خاطر محیط زیست؟",
+      "#Car – Your trips": "خودرو – سفرهای شما",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - خودرو – سفرهای شما",
+      "#Car on a street": "خودرو در خیابان",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش دربارهٔ رفت‌وآمد با خودرو. اگر کم با خودرو سفر می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#Your car trips": "Az autós útjai",
+      "#Do you travel by car at least once a week?": "Utazik autóval legalább hetente egyszer?",
+      "#As the driver or as a passenger, also car sharing.": "Vezetőként vagy utasként, az autómegosztás is számít.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Azért utazik ritkán autóval, mert nincs autója vagy jogosítványa?",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Azért utazik ritkán autóval, mert túl drága (üzemanyag, parkolás, útdíj, biztosítás)?",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Azért utazik ritkán autóval, mert a dugók és a parkolóhely keresése túl sokáig tart?",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Azért utazik ritkán autóval, mert a vezetés stresszes vagy fárasztó Önnek?",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Azért utazik ritkán autóval, mert autóval nem érzi magát biztonságban az úton?",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Azért utazik ritkán autóval, mert más közlekedési módokat részesít előnyben, például a környezet miatt?",
+      "#Car – Your trips": "Autó – Az Ön útjai",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Autó – Az Ön útjai",
+      "#Car on a street": "Autó az utcán",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés az autós közlekedésről. Ha ritkán utazik autóval, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#Your car trips": "رحلاتك بالسيارة",
+      "#Do you travel by car at least once a week?": "هل تتنقل بالسيارة مرة واحدة على الأقل في الأسبوع؟",
+      "#As the driver or as a passenger, also car sharing.": "سواء كنت السائق أو راكبًا، وتشمل مشاركة السيارة.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Do you rarely travel by car because you do not have a car or a driving licence?": "هل تعود قلّة تنقلك بالسيارة إلى أنه ليس لديك سيارة أو رخصة قيادة؟",
+      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "هل تعود قلّة تنقلك بالسيارة إلى أنها مكلفة جدًا (الوقود، المواقف، رسوم الطرق، التأمين)؟",
+      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "هل تعود قلّة تنقلك بالسيارة إلى أن الزحام والبحث عن موقف يستغرقان وقتًا طويلًا؟",
+      "#Do you rarely travel by car because driving is stressful or tiring for you?": "هل تعود قلّة تنقلك بالسيارة إلى أن القيادة مرهقة أو متعبة لك؟",
+      "#Do you rarely travel by car because you feel unsafe on the road by car?": "هل تعود قلّة تنقلك بالسيارة إلى شعور بعدم الأمان على الطريق بالسيارة؟",
+      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "هل تعود قلّة تنقلك بالسيارة إلى أنك تفضّل طرقًا أخرى للتنقل، مثلًا من أجل البيئة؟",
+      "#Car – Your trips": "السيارة – رحلاتك",
+      "#SmartUrbanity - Car – Your trips": "SmartUrbanity - السيارة – رحلاتك",
+      "#Car on a street": "سيارة في شارع",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن التنقل بالسيارة. إذا كنت نادرًا ما تتنقل بالسيارة، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  }
+}

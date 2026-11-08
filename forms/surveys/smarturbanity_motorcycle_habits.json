@@ -1,0 +1,301 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Motorcycle and scooter – Your trips",
+    "questionnaire_id": "smarturbanity_motorcycle_habits",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Motorcycle and scooter – Your trips",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_motorcycle.svg",
+      "image_alt": "#Motorcycle on a street",
+      "description": "<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Motorcycle and scooter – Your trips",
+    "sections": [
+      {
+        "title": "Riding",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you ride a motorcycle, scooter or moped at least once a week?",
+            "help": "Petrol or electric. Stand-up e-scooters don't count here.",
+            "answer_key": "motorcycle_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "motorcycle_weekly",
+            "question_version": "1.1.0"
+          },
+          {
+            "text": "Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?",
+            "answer_key": "not_motorcycle_no_vehicle_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "motorcycle_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_motorcycle_no_vehicle_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?",
+            "answer_key": "not_motorcycle_unsafe_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "motorcycle_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_motorcycle_unsafe_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?",
+            "answer_key": "not_motorcycle_uncomfortable_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "motorcycle_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_motorcycle_uncomfortable_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?",
+            "answer_key": "not_motorcycle_cost_yn",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "motorcycle_weekly": [
+                "no"
+              ]
+            },
+            "question_id": "not_motorcycle_cost_yn",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_motorcycle_habits",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "code": "en",
+      "#Riding": "Riding",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Do you ride a motorcycle, scooter or moped at least once a week?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "Petrol or electric. Stand-up e-scooters don't count here.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?",
+      "#Motorcycle and scooter – Your trips": "Motorcycle and scooter – Your trips",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorcycle and scooter – Your trips",
+      "#Motorcycle on a street": "Motorcycle on a street",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "code": "it",
+      "#Riding": "Guidare",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Vai in moto, scooter o motorino almeno una volta a settimana?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "A benzina o elettrico. I monopattini elettrici in piedi qui non contano.",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Usi poco la moto o lo scooter perché non ne hai uno o non hai la patente?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Usi poco la moto o lo scooter perché nel traffico non ti senti al sicuro?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Usi poco la moto o lo scooter perché è scomodo (meteo, fatica, cose da portare)?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Usi poco la moto o lo scooter perché costa troppo (carburante, parcheggio, assicurazione)?",
+      "#Motorcycle and scooter – Your trips": "Moto e scooter – I tuoi spostamenti",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Moto e scooter – I tuoi spostamenti",
+      "#Motorcycle on a street": "Moto su una strada",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande sugli spostamenti in moto, scooter o motorino. Se li usi poco, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "code": "fr",
+      "#Riding": "La conduite",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Faites-vous de la moto, du scooter ou du cyclomoteur au moins une fois par semaine ?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "À essence ou électrique. Les trottinettes électriques debout ne comptent pas ici.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Utilisez-vous rarement une moto ou un scooter parce que vous n'en avez pas, ou pas le permis nécessaire ?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Utilisez-vous rarement une moto ou un scooter parce que vous ne vous sentez pas en sécurité dans la circulation ?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Utilisez-vous rarement une moto ou un scooter parce que c'est inconfortable (météo, effort, objets à transporter) ?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Utilisez-vous rarement une moto ou un scooter parce que cela coûte trop cher (carburant, stationnement, assurance) ?",
+      "#Motorcycle and scooter – Your trips": "Moto et scooter – Vos trajets",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Moto et scooter – Vos trajets",
+      "#Motorcycle on a street": "Moto dans une rue",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur vos déplacements en moto, scooter ou cyclomoteur. Si vous en utilisez rarement, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "code": "de",
+      "#Riding": "Fahren",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Fahren Sie mindestens einmal pro Woche Motorrad, Roller oder Moped?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzin oder elektrisch. Stehroller zählen hier nicht.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Fahren Sie selten Motorrad oder Roller, weil Sie keines haben oder keinen Führerschein dafür?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Fahren Sie selten Motorrad oder Roller, weil Sie sich im Verkehr unsicher fühlen?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Fahren Sie selten Motorrad oder Roller, weil es unbequem ist (Wetter, Anstrengung, Dinge transportieren)?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Fahren Sie selten Motorrad oder Roller, weil es zu teuer ist (Kraftstoff, Parken, Versicherung)?",
+      "#Motorcycle and scooter – Your trips": "Motorrad und Roller – Ihre Wege",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorrad und Roller – Ihre Wege",
+      "#Motorcycle on a street": "Motorrad auf einer Straße",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zum Unterwegssein mit Motorrad, Roller oder Moped. Wenn Sie selten damit fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "code": "tr",
+      "#Riding": "Sürüş",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Haftada en az bir kez motosiklet, scooter veya moped kullanıyor musunuz?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzinli veya elektrikli. Ayakta kullanılan elektrikli scooter'lar burada sayılmaz.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Motosikletiniz veya skuteriniz ya da bunun için ehliyetiniz olmadığı için mi nadiren motosiklet veya skuter kullanıyorsunuz?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Trafikte kendinizi güvende hissetmediğiniz için mi nadiren motosiklet veya skuter kullanıyorsunuz?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Rahatsız olduğu için mi (hava, yorgunluk, eşya taşımak) nadiren motosiklet veya skuter kullanıyorsunuz?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Çok pahalı olduğu için mi (yakıt, otopark, sigorta) nadiren motosiklet veya skuter kullanıyorsunuz?",
+      "#Motorcycle and scooter – Your trips": "Motosiklet ve scooter – Yolculuklarınız",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motosiklet ve scooter – Yolculuklarınız",
+      "#Motorcycle on a street": "Sokakta bir motosiklet",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Motosiklet, skuter veya mopedle ulaşım hakkında birkaç soru. Bunları nadiren kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "code": "fa",
+      "#Riding": "رانندگی با موتورسیکلت",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "آیا حداقل هفته‌ای یک بار با موتورسیکلت، اسکوتر یا موتور کوچک سفر می‌کنید؟",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "بنزینی یا برقی. اسکوترهای برقی ایستاده در اینجا حساب نمی‌شوند.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "آیا کم موتورسواری می‌کنید چون موتورسیکلت یا اسکوتر یا گواهینامهٔ آن را ندارید؟",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "آیا کم موتورسواری می‌کنید چون در ترافیک احساس امنیت نمی‌کنید؟",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "آیا کم موتورسواری می‌کنید چون ناراحت است (آب‌وهوا، خستگی، حمل وسایل)؟",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "آیا کم موتورسواری می‌کنید چون خیلی گران تمام می‌شود (سوخت، پارکینگ، بیمه)؟",
+      "#Motorcycle and scooter – Your trips": "موتورسیکلت و اسکوتر – سفرهای شما",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - موتورسیکلت و اسکوتر – سفرهای شما",
+      "#Motorcycle on a street": "موتورسیکلت در خیابان",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش دربارهٔ رفت‌وآمد با موتورسیکلت، اسکوتر یا موتور گازی. اگر کم از آن‌ها استفاده می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "code": "hu",
+      "#Riding": "Motorozás",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "Közlekedik motorkerékpárral, robogóval vagy segédmotoros kerékpárral legalább hetente egyszer?",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzines vagy elektromos. Az álló elektromos rollerek itt nem számítanak.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Azért motorozik vagy robogózik ritkán, mert nincs motorja vagy robogója, vagy nincs hozzá jogosítványa?",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Azért motorozik vagy robogózik ritkán, mert a forgalomban nem érzi magát biztonságban?",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Azért motorozik vagy robogózik ritkán, mert kényelmetlen (időjárás, fáradság, csomagok szállítása)?",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Azért motorozik vagy robogózik ritkán, mert túl drága (üzemanyag, parkolás, biztosítás)?",
+      "#Motorcycle and scooter – Your trips": "Motorkerékpár és robogó – Az Ön útjai",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorkerékpár és robogó – Az Ön útjai",
+      "#Motorcycle on a street": "Motorkerékpár az utcán",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a motoros, robogós vagy segédmotoros közlekedésről. Ha ritkán használja ezeket, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "code": "ar",
+      "#Riding": "قيادة الدراجة النارية",
+      "#Do you ride a motorcycle, scooter or moped at least once a week?": "هل تركب دراجة نارية أو سكوترًا أو دراجة نارية خفيفة مرة واحدة على الأقل في الأسبوع؟",
+      "#Petrol or electric. Stand-up e-scooters don't count here.": "بالبنزين أو بالكهرباء. السكوترات الكهربائية الواقفة لا تُحسب هنا.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أنه ليس لديك واحدة أو ليس لديك رخصة لها؟",
+      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى شعور بعدم الأمان في حركة المرور؟",
+      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أن ركوبها غير مريح (الطقس، التعب، حمل الأغراض)؟",
+      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أنها مكلفة جدًا (الوقود، المواقف، التأمين)؟",
+      "#Motorcycle and scooter – Your trips": "الدراجة النارية والسكوتر – رحلاتك",
+      "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - الدراجة النارية والسكوتر – رحلاتك",
+      "#Motorcycle on a street": "دراجة نارية في شارع",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#<p>A few questions about getting around by motorcycle, scooter or moped. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن التنقل بالدراجة النارية أو السكوتر أو الدراجة الآلية الصغيرة. إذا كنت نادرًا ما تستخدمها، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  }
+}
