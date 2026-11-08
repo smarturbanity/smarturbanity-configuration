@@ -377,8 +377,12 @@ On the felt duplicates between forms (2026-11-08):
     if something happens suddenly?", from "Not quick at all: I often cannot react in time" to "Extremely quick: I
     always react in time" (3.0.0 and 2.0.0; the help with examples is unchanged).
 
-Still to decide: grouping the 14 modes, an evening follow-up question and which profile questions could be dropped to
-make it shorter.
+14. To make `your_profile` shorter (1.19.0, about 7 minutes), `professional_role`, `shared_frequency`, `app_mobility`
+    and `choice_factors` move unchanged, with their translations, to a new future form
+    `future/smarturbanity_travel_choices` ("Your Travel Choices", 1.0.0, review mode). It is listed in both indexes and
+    in the disabled "Future questionnaires" campaign (`rome_future`), so participants do not see it yet.
+
+Still to decide: grouping the 14 modes and an evening follow-up question.
 
 ## Not yet covered
 
