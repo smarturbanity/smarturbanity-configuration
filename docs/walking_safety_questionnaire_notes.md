@@ -27,33 +27,36 @@ questionnaires") and then `rome_travel_habits`, until 2026-11-08.
 
 Rules applied:
 
-1. Every question comes from an existing form, rephrased as Yes/No, split per option or asked about another way of
+1. Every question comes from an existing form, rephrased as Yes/No or as a list (rule 3), or asked about another way of
    travelling. The only new questions are the ones Lory asked for on 2026-11-08 (see "New questions").
 2. In Yes/No questions, "Yes" always means the problem is present (or, for improvements, that the change would help).
-3. New Yes/No ids end in `_yn`, so answers never mix with the old 5-point or multiple-choice data. Questions asked about
+3. Lists of related Yes/No questions are one multiple choice "(Select all that apply)" with an exclusive "None of
+   these" (or "Nobody in particular"), so an unticked option means No (Lory, 2026-11-08, decisions 1A 2A 3A; see
+   "Grouped lists"). Questions that stand alone stay Yes/No.
+4. New Yes/No ids end in `_yn`, so answers never mix with the old 5-point or multiple-choice data. Questions asked about
    another way of travelling get that mode's prefix (`walk_`, `bike_`, `escooter_`, `put_` for public transport, `car_`,
    `motorcycle_`).
-4. Only the weekly question of each chain is required; all others are optional, because some touch health or harassment.
-5. The weekly question opens each chain (`walk_days`, `bike_weekly`, `escooter_weekly`, `put_weekly`, `car_weekly`,
+5. Only the weekly question of each chain is required; all others are optional, because some touch health or harassment.
+6. The weekly question opens each chain (`walk_days`, `bike_weekly`, `escooter_weekly`, `put_weekly`, `car_weekly`,
    `motorcycle_weekly`).
    Who answers No is asked only why, and the chain stops there: CityMaaS `followUpStopWhen` hides "Continue".
    This replaces the earlier rule that everyone answers the walking safety questions (Lory, 2026-11-08, decision 2A).
-6. Wheelchairs, pushchairs, canes and other aids are covered by the walking welcome text, so questions stay short.
-7. Experience (stress, tiredness, time) and surroundings (noise, air, weather, cleanliness) are asked per way of
+7. Wheelchairs, pushchairs, canes and other aids are covered by the walking welcome text, so questions stay short.
+8. Experience (stress, tiredness, time) and surroundings (noise, air, weather, cleanliness) are asked per way of
    travelling (decision 3B); the general travel questions are in `your_profile`.
 
 ## The chains
 
 | Way of travelling | Pieces in order (questions) |
 |---|---|
-| Walking | `walking_habits` (13), `walking_road_safety` (24), `walking_security` (11), `walking_comfort` (12), `walking_experience` (10), `walking_improvements` (6) |
-| Cycling | `cycling_habits` (13), `cycling_road_safety` (17), `cycling_security` (11), `cycling_comfort` (9), `cycling_experience` (10), `cycling_improvements` (1) |
-| E-scooter | `e_scooter_habits` (12), `e_scooter_road_safety` (17), `e_scooter_security` (11), `e_scooter_comfort` (9), `e_scooter_experience` (10), `e_scooter_improvements` (1) |
-| Public transport | `public_transport_habits` (13), `public_transport_road_safety` (7), `public_transport_security` (12), `public_transport_comfort` (13), `public_transport_experience` (10), `public_transport_without_car` (18), `public_transport_improvements` (7) |
-| Car | `car_habits` (11), `car_road_safety` (14), `car_security` (10), `car_comfort` (12), `car_experience` (10), `car_need` (19), `car_alternatives` (4) |
-| Motorcycle and scooter | `motorcycle_habits` (9), `motorcycle_road_safety` (18), `motorcycle_security` (11), `motorcycle_comfort` (8), `motorcycle_experience` (10), `motorcycle_need` (5), `motorcycle_improvements` (9) |
+| Walking | `walking_habits` (10), `walking_road_safety` (9), `walking_security` (5), `walking_comfort` (12), `walking_experience` (10), `walking_improvements` (1) |
+| Cycling | `cycling_habits` (9), `cycling_road_safety` (7), `cycling_security` (5), `cycling_comfort` (9), `cycling_experience` (10), `cycling_improvements` (1) |
+| E-scooter | `e_scooter_habits` (8), `e_scooter_road_safety` (7), `e_scooter_security` (5), `e_scooter_comfort` (9), `e_scooter_experience` (10), `e_scooter_improvements` (1) |
+| Public transport | `public_transport_habits` (9), `public_transport_road_safety` (3), `public_transport_security` (5), `public_transport_comfort` (13), `public_transport_experience` (10), `public_transport_without_car` (2), `public_transport_improvements` (1) |
+| Car | `car_habits` (6), `car_road_safety` (3), `car_security` (4), `car_comfort` (12), `car_experience` (10), `car_need` (2), `car_alternatives` (4) |
+| Motorcycle and scooter | `motorcycle_habits` (6), `motorcycle_road_safety` (7), `motorcycle_security` (5), `motorcycle_comfort` (8), `motorcycle_experience` (10), `motorcycle_need` (2), `motorcycle_improvements` (5) |
 
-Each file is `smarturbanity_<piece>.json`, version 1.0.0, one to three minutes. Each piece carries the translations of
+Each file is `smarturbanity_<piece>.json`, one to three minutes; the pieces with grouped lists are at version 2.0.0. Each piece carries the translations of
 its own texts in en, it, fr, de, tr, fa, hu and ar.
 
 ## Replaced forms
@@ -172,17 +175,19 @@ through the mapping.
 
 | Ids | Piece | Why |
 |---|---|---|
-| `not_walk_distance_yn`, `not_walk_effort_yn`, `not_walk_unsafe_yn`, `not_walk_streets_yn` | walking habits | reasons for walking rarely; reasons from daily travel `choice_factors` and walking `walk_improvements` |
-| `not_bike_no_bike_yn`, `not_bike_distance_yn`, `not_bike_effort_yn`, `not_bike_unsafe_yn`, `not_bike_streets_yn` | cycling habits | reasons for cycling rarely, as for walking |
-| `not_escooter_no_scooter_yn`, `not_escooter_distance_yn`, `not_escooter_effort_yn`, `not_escooter_unsafe_yn`, `not_escooter_streets_yn` | e-scooter habits | reasons for riding an e-scooter rarely, as for cycling |
-| `not_put_slow_yn`, `not_put_unreliable_yn`, `not_put_effort_yn`, `not_put_unsafe_yn`, `not_put_cost_yn` | public transport habits | reasons for rarely using public transport |
-| `not_car_no_car_yn`, `not_car_cost_yn`, `not_car_time_yn`, `not_car_stress_yn`, `not_car_unsafe_yn`, `not_car_other_ways_yn` | car habits | reasons for rarely travelling by car |
-| `not_motorcycle_no_vehicle_yn`, `not_motorcycle_unsafe_yn`, `not_motorcycle_uncomfortable_yn`, `not_motorcycle_cost_yn` | motorcycle habits | reasons for rarely riding |
-| `car_need_<trip>_yn` (18) and `car_less_with_alternative_yn` | car need | trips where the car is hard to replace, from citizens' comments forwarded by Lory |
-| `put_no_car_yn` and `put_no_car_<trip>_yn` (17) | public transport without a car | the same trips, asked of people without a car (decision 5B) |
-| `motorcycle_need_<trip>_yn` (4) and `motorcycle_less_with_alternative_yn` | motorcycle need | the trips of the car list that apply to riding |
+| `not_walk_reasons` | walking habits | reasons for walking rarely; reasons from daily travel `choice_factors` and walking `walk_improvements` |
+| `not_bike_reasons` | cycling habits | reasons for cycling rarely, as for walking |
+| `not_escooter_reasons` | e-scooter habits | reasons for riding an e-scooter rarely, as for cycling |
+| `not_put_reasons` | public transport habits | reasons for rarely using public transport |
+| `not_car_reasons` | car habits | reasons for rarely travelling by car |
+| `not_motorcycle_reasons` | motorcycle habits | reasons for rarely riding |
+| `car_need_uses` (18 trips) and `car_less_with_alternative_yn` | car need | trips where the car is hard to replace, from citizens' comments forwarded by Lory |
+| `put_no_car_yn` and `put_no_car_hard` (17 trips) | public transport without a car | the same trips, asked of people without a car (decision 5B) |
+| `motorcycle_need_uses` (4 trips) and `motorcycle_less_with_alternative_yn` | motorcycle need | the trips of the car list that apply to riding |
 
-The reason questions are shown only after a No to the weekly question. `*_effort_yn` is health data.
+The reason questions are shown only after a No to the weekly question; each adds "Another reason". They are health
+data because one option is about physical effort (walking, cycling, e-scooter, public transport).
+The `*_less_with_alternative_yn` question is shown unless the citizen ticked "None of these".
 
 ## Questions asked about another way of travelling
 
@@ -192,15 +197,15 @@ These come from one mode's form and are asked in another chain too. They can be 
 |---|---|
 | `walk_crowding_comfort` | public transport `put_crowding_comfort` |
 | `bike_health_benefit_yn` | walking `walk_health_benefit`, as Yes/No |
-| `bike_`, `car_` and `motorcycle_` road users (8 each) | walking `risky_road_users` |
+| `bike_`, `escooter_`, `car_` and `motorcycle_unsafe_road_users` | walking `risky_road_users` |
 | `put_dark_lighting_change_yn`, `motorcycle_dark_lighting_change_yn` | safety `walk_lighting_effect` |
 | `put_heat_waiting_yn`, `put_no_seats_yn`, `put_wayfinding_yn` | walking `walk_heat_shade_effect`, `benches_importance`, `wayfinding`, as Yes/No |
-| `put_want_<change>_yn` (7) | walking `walk_improvements` and public transport options, as Yes/No |
+| `put_want_changes` (7 options) | walking `walk_improvements` and public transport options |
 | all `escooter_` questions | cycling, same question with `bike_` | "cycle" becomes "ride an e-scooter"; `escooter_type` asks own or shared; no health-benefit question; `escooter_barriers` asks about pedestrians in cycle lanes instead of pedestrians or e-scooters; `escooter_tiredness_cause` without carrying children or shopping, with physical effort described as standing and keeping balance; `escooter_improvements` replaces bike parking, training, junctions and money help with e-scooter versions and adds cheaper shared e-scooters and sharing in more areas |
 | `car_hazard_confidence`, `car_charging` | motorcycle `motorcycle_hazard_confidence`, `motorcycle_charging` |
 | `motorcycle_delay_stress` | car `car_delay_stress` |
 | `motorcycle_poor_surface_unsafe_yn` | cycling `bike_poor_surface_effect`, as Yes/No |
-| `motorcycle_want_<change>_yn` (5) | motorcycle form options, as Yes/No |
+| `motorcycle_want_changes` (5 options) | motorcycle form options |
 | `motorcycle_sustainable_motivation`, `motorcycle_free_shared_trial`, `motorcycle_cost_sensitivity`, `motorcycle_emissions` | car `car_sustainable_motivation`, `car_free_shared_trial`, `car_cost_sensitivity`, `car_emissions` |
 | `<mode>_` experience (8) and surroundings (5) | `experience_on_the_move` and `safety_environment` |
 
@@ -224,22 +229,31 @@ The walking pieces reuse the Yes/No walking questions written earlier the same d
 For former 5-point items, a Yes/No answer corresponds to the stronger answers ("often", "a lot", "I avoid it")
 versus the weaker ones; the two scales are not comparable answer by answer.
 
-One Yes/No question per former option:
+## Grouped lists
 
-| Group | New ids | Source (multiple choice) |
-|---|---|---|
-| Road users | `car_drivers_unsafe_yn`, `motorcycle_riders_unsafe_yn`, `bus_drivers_unsafe_yn`, `delivery_vehicles_unsafe_yn`, `taxi_drivers_unsafe_yn`, `cyclists_unsafe_yn`, `e_scooter_riders_unsafe_yn`, `other_pedestrians_unsafe_yn` | walking `risky_road_users` |
-| Situations on the road | `poor_visibility_unsafe_yn`, `unsafe_behaviour_unsafe_yn`, `crowding_conflicts_unsafe_yn`, `poor_infrastructure_unsafe_yn`, `no_emergency_services_unsafe_yn` | safety `road_unsafe_situations` |
-| Personal security | `isolated_areas_yn`, `aggressive_behaviour_yn`, `identity_harassment_yn`, `blind_corners_yn`, `poor_maintenance_yn`, `no_surveillance_yn`, `past_incidents_yn`, `overcrowding_yn` | safety `insecurity_factors_detailed` |
-| Barriers on your route | `steps_without_ramps_yn`, `missing_dropped_kerbs_yn`, `narrow_paths_yn`, `missing_tactile_paving_yn`, `low_branches_yn`, `stairs_only_way_yn`, `no_sidewalk_yn`, `pedestrian_lights_out_of_order_yn` | walking `walk_physical_barriers` |
-| What would make walking safer | `want_safer_crossings_yn`, `want_better_lighting_yn`, `want_separation_yn`, `want_better_sidewalks_yn`, `want_audible_signals_yn`, `want_cleaner_streets_yn`, `want_sidewalks_where_missing_yn`, `want_longer_green_time_yn` | walking `walk_improvements` |
+Lory (2026-11-08, decisions 1A 2A 3A): each list of related Yes/No questions is now one multiple choice "(Select all
+that apply)" with an exclusive last option, so ticking nothing else means No to every item. The questions stay in the
+same piece and position; the option values are the old id without prefix and `_yn`.
 
-The other chains ask the "Situations on the road" and "Personal security" groups with their prefix (`bike_`, `escooter_`,
-`put_`, `car_`, `motorcycle_`); cycling and e-scooter leave out `poor_infrastructure_unsafe_yn`, covered by its infrastructure questions.
-Public transport adds `put_long_evening_waits_yn` from the safety option `long_evening_waits`.
+| Group | New id (`<p>_` = `bike_`, `escooter_`, `put_`, `car_`, `motorcycle_`; none for walking) | Options | Source |
+|---|---|---|---|
+| Road users | `<p>_unsafe_road_users` (not public transport) | 8 road users, the piece's own as "Other …"; "Nobody in particular" | walking `risky_road_users` |
+| Situations on the road | `<p>_unsafe_situations` | 5 situations (4 for cycling and e-scooter, without infrastructure); "None of these" | safety `road_unsafe_situations` |
+| Barriers on your route | `route_barriers` (walking) | 8 barriers; "None of these" | walking `walk_physical_barriers` |
+| Personal security | `<p>_insecurity_factors` | 7 factors (public transport adds long evening waits); "None of these" | safety `insecurity_factors_detailed` |
+| Reasons for rarely using a way | `not_<p>_reasons` | 4–6 reasons; "Another reason" | new (see "New questions") |
+| Car and motorcycle need | `car_need_uses`, `motorcycle_need_uses` | 18 and 4 trips; "None of these" | new |
+| Without a car | `put_no_car_hard` | 17 trips; "None of these" | new |
+| What would help | `want_changes`, `put_want_changes`, `motorcycle_want_changes` | 8, 7 and 5 changes; "None of these" | walking `walk_improvements`, motorcycle form |
 
-Dropped options: "none" / "never unsafe" / "never insecure" / "nothing" (implied by all No) and "other".
-A multiple choice with `max_answers` becomes independent Yes/No answers, so counts per item are no longer capped.
+Kept as separate Yes/No: the weekly and combining gates, day and evening insecurity, `identity_harassment_yn`
+(heightened personal data, kept apart from the other factors), `dark_lighting_change_yn`, the walking traffic and
+sidewalk items, `motorcycle_poor_surface_unsafe_yn`, `bike_health_benefit_yn`, `put_no_car_yn`, the public transport
+waiting items (`put_heat_waiting_yn`, `put_no_seats_yn`, `put_wayfinding_yn`) and the two `*_less_with_alternative_yn`.
+
+The earlier one-Yes/No-per-option ids (for example `car_drivers_unsafe_yn`, `isolated_areas_yn`, `car_need_<trip>_yn`)
+were never published, so no answers are lost. A multiple choice with `max_answers` in the source becomes a list with no
+cap. The source's "other" option is dropped except for the reasons.
 
 ## Not yet covered
 

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - E-scooter – Your trips",
     "questionnaire_id": "smarturbanity_e_scooter_habits",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -50,119 +50,44 @@
             "question_version": "1.0.0"
           },
           {
-            "text": "Do you rarely ride an e-scooter because you do not have one you can use?",
-            "answer_key": "not_escooter_no_scooter_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
+            "text": "Why do you rarely ride an e-scooter? (Select all that apply)",
+            "answer_key": "not_escooter_reasons",
+            "question_type": "multiple_options",
             "show_if": {
               "escooter_weekly": [
                 "no"
               ]
             },
-            "question_id": "not_escooter_no_scooter_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride an e-scooter because the places you go are too far or it takes too long?",
-            "answer_key": "not_escooter_distance_yn",
-            "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "I don't have an e-scooter I can use",
+                "value": "no_scooter"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "escooter_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_escooter_distance_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?",
-            "answer_key": "not_escooter_effort_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "The places I go are too far or it takes too long",
+                "value": "distance"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Standing and keeping my balance on it is tiring or difficult for me",
+                "value": "effort"
+              },
+              {
+                "text": "I feel unsafe riding one (traffic, crime or harassment)",
+                "value": "unsafe"
+              },
+              {
+                "text": "There are no good cycle lanes or places to leave it",
+                "value": "streets"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
               }
             ],
-            "show_if": {
-              "escooter_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_escooter_effort_yn",
+            "required": false,
+            "question_id": "not_escooter_reasons",
             "question_version": "1.0.0",
             "privacy_classification": "special_category_health"
-          },
-          {
-            "text": "Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?",
-            "answer_key": "not_escooter_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "escooter_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_escooter_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?",
-            "answer_key": "not_escooter_streets_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "escooter_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_escooter_streets_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
           },
           {
             "privacy_classification": "personal_data",
@@ -481,11 +406,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.",
       "#Yes": "Yes",
       "#No": "No",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Do you rarely ride an e-scooter because you do not have one you can use?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Do you rarely ride an e-scooter because the places you go are too far or it takes too long?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?",
       "#Which e-scooter do you use most often?": "Which e-scooter do you use most often?",
       "#My own e-scooter": "My own e-scooter",
       "#A shared e-scooter": "A shared e-scooter",
@@ -534,7 +454,14 @@
       "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
       "#I reduce how often I make that trip": "I reduce how often I make that trip",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
-      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible"
+      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Why do you rarely ride an e-scooter? (Select all that apply)",
+      "#I don't have an e-scooter I can use": "I don't have an e-scooter I can use",
+      "#The places I go are too far or it takes too long": "The places I go are too far or it takes too long",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Standing and keeping my balance on it is tiring or difficult for me",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "I feel unsafe riding one (traffic, crime or harassment)",
+      "#There are no good cycle lanes or places to leave it": "There are no good cycle lanes or places to leave it",
+      "#Another reason": "Another reason"
     },
     "it": {
       "code": "it",
@@ -548,11 +475,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Il tuo monopattino o uno in condivisione. Motorini e scooter con sella qui non contano.",
       "#Yes": "Sì",
       "#No": "No",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Vai poco in monopattino elettrico perché non ne hai uno da usare?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Vai poco in monopattino elettrico perché i posti dove vai sono troppo lontani o ci vuole troppo tempo?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Vai poco in monopattino elettrico perché stare in piedi e mantenere l’equilibrio è faticoso o difficile per te?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Vai poco in monopattino elettrico perché non ti senti al sicuro (traffico, criminalità o molestie)?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "Vai poco in monopattino elettrico perché mancano buone piste ciclabili o posti dove lasciarlo?",
       "#Which e-scooter do you use most often?": "Quale monopattino elettrico usi più spesso?",
       "#My own e-scooter": "Il mio monopattino elettrico",
       "#A shared e-scooter": "Un monopattino elettrico in condivisione",
@@ -601,7 +523,14 @@
       "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
       "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
-      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile"
+      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Perché vai poco in monopattino elettrico? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have an e-scooter I can use": "Non ho un monopattino elettrico da usare",
+      "#The places I go are too far or it takes too long": "I posti dove vado sono troppo lontani o ci vuole troppo tempo",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Stare in piedi e mantenere l’equilibrio è faticoso o difficile per me",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "In monopattino non mi sento al sicuro (traffico, criminalità o molestie)",
+      "#There are no good cycle lanes or places to leave it": "Mancano buone piste ciclabili o posti dove lasciarlo",
+      "#Another reason": "Un altro motivo"
     },
     "fr": {
       "code": "fr",
@@ -615,11 +544,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "La vôtre ou une en libre-service. Les cyclomoteurs et scooters à selle ne comptent pas ici.",
       "#Yes": "Oui",
       "#No": "Non",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Utilisez-vous rarement une trottinette électrique parce que vous n’en avez pas à disposition ?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Utilisez-vous rarement une trottinette électrique parce que les lieux où vous allez sont trop loin ou que le trajet prend trop de temps ?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Utilisez-vous rarement une trottinette électrique parce que rester debout et garder l’équilibre est fatigant ou difficile pour vous ?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Utilisez-vous rarement une trottinette électrique parce que vous ne vous sentez pas en sécurité (circulation, délinquance ou harcèlement) ?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "Utilisez-vous rarement une trottinette électrique parce qu’il manque de bonnes pistes cyclables ou d’endroits où la laisser ?",
       "#Which e-scooter do you use most often?": "Quelle trottinette électrique utilisez-vous le plus souvent ?",
       "#My own e-scooter": "Ma propre trottinette électrique",
       "#A shared e-scooter": "Une trottinette électrique en libre-service",
@@ -668,7 +592,14 @@
       "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
       "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
-      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible"
+      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Pourquoi utilisez-vous rarement une trottinette électrique ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have an e-scooter I can use": "Je n’ai pas de trottinette électrique à disposition",
+      "#The places I go are too far or it takes too long": "Les lieux où je vais sont trop loin ou le trajet prend trop de temps",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Rester debout et garder l’équilibre dessus est fatigant ou difficile pour moi",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Je ne me sens pas en sécurité en trottinette (circulation, délinquance ou harcèlement)",
+      "#There are no good cycle lanes or places to leave it": "Il manque de bonnes pistes cyclables ou d’endroits où la laisser",
+      "#Another reason": "Une autre raison"
     },
     "de": {
       "code": "de",
@@ -682,11 +613,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Ihr eigener E-Scooter oder ein geliehener. Mopeds und Motorroller mit Sitz zählen hier nicht.",
       "#Yes": "Ja",
       "#No": "Nein",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Fahren Sie selten E-Scooter, weil Sie keinen zur Verfügung haben?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Fahren Sie selten E-Scooter, weil Ihre Ziele zu weit entfernt sind oder der Weg damit zu lange dauert?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Fahren Sie selten E-Scooter, weil das Stehen und Balancehalten darauf für Sie anstrengend oder schwierig ist?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Fahren Sie selten E-Scooter, weil Sie sich dabei unsicher fühlen (Verkehr, Kriminalität oder Belästigung)?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "Fahren Sie selten E-Scooter, weil gute Radwege oder Abstellplätze fehlen?",
       "#Which e-scooter do you use most often?": "Welchen E-Scooter nutzen Sie am häufigsten?",
       "#My own e-scooter": "Mein eigener E-Scooter",
       "#A shared e-scooter": "Ein geliehener E-Scooter",
@@ -735,7 +661,14 @@
       "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
       "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
-      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist"
+      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Warum fahren Sie selten E-Scooter? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have an e-scooter I can use": "Ich habe keinen E-Scooter, den ich nutzen kann",
+      "#The places I go are too far or it takes too long": "Meine Ziele sind zu weit entfernt oder der Weg damit dauert zu lange",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Darauf zu stehen und das Gleichgewicht zu halten ist für mich anstrengend oder schwierig",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Ich fühle mich dabei unsicher (Verkehr, Kriminalität oder Belästigung)",
+      "#There are no good cycle lanes or places to leave it": "Es gibt keine guten Radwege oder Abstellplätze dafür",
+      "#Another reason": "Ein anderer Grund"
     },
     "tr": {
       "code": "tr",
@@ -749,11 +682,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Kendi elektrikli scooter'ınız veya paylaşımlı bir elektrikli scooter. Mopedler ve oturaklı scooterlar burada sayılmaz.",
       "#Yes": "Evet",
       "#No": "Hayır",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Kullanabileceğiniz bir elektrikli scooter'ınız olmadığı için mi nadiren elektrikli scooter kullanıyorsunuz?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Gittiğiniz yerler çok uzak olduğu ya da çok uzun sürdüğü için mi nadiren elektrikli scooter kullanıyorsunuz?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Üzerinde ayakta durmak ve dengenizi korumak sizin için yorucu veya zor olduğu için mi nadiren elektrikli scooter kullanıyorsunuz?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Elektrikli scooter kullanırken kendinizi güvende hissetmediğiniz için mi (trafik, suç veya taciz) nadiren elektrikli scooter kullanıyorsunuz?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "İyi bisiklet yolları veya scooter'ı bırakacak yerler olmadığı için mi nadiren elektrikli scooter kullanıyorsunuz?",
       "#Which e-scooter do you use most often?": "En sık hangi elektrikli scooter'ı kullanıyorsunuz?",
       "#My own e-scooter": "Kendi elektrikli scooter'ım",
       "#A shared e-scooter": "Paylaşımlı bir elektrikli scooter",
@@ -802,7 +730,14 @@
       "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
       "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
-      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam"
+      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Neden nadiren elektrikli scooter kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have an e-scooter I can use": "Kullanabileceğim bir elektrikli scooter'ım yok",
+      "#The places I go are too far or it takes too long": "Gittiğim yerler çok uzak veya çok uzun sürüyor",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Üzerinde ayakta durmak ve dengemi korumak benim için yorucu veya zor",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Kullanırken kendimi güvende hissetmiyorum (trafik, suç veya taciz)",
+      "#There are no good cycle lanes or places to leave it": "İyi bisiklet yolları veya bırakacak yerler yok",
+      "#Another reason": "Başka bir neden"
     },
     "fa": {
       "code": "fa",
@@ -816,11 +751,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "اسکوتر برقی شخصی یا اشتراکی. موتور گازی و اسکوترهای صندلی‌دار اینجا حساب نمی‌شوند.",
       "#Yes": "بله",
       "#No": "خیر",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "آیا کم با اسکوتر برقی می‌روید چون اسکوتر برقی در اختیار ندارید؟",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "آیا کم با اسکوتر برقی می‌روید چون مقصدهایتان خیلی دور است یا خیلی طول می‌کشد؟",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "آیا کم با اسکوتر برقی می‌روید چون ایستادن و حفظ تعادل روی آن برایتان خسته‌کننده یا دشوار است؟",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "آیا کم با اسکوتر برقی می‌روید چون هنگام استفاده از آن احساس امنیت نمی‌کنید (ترافیک، جرم یا آزار)؟",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "آیا کم با اسکوتر برقی می‌روید چون مسیر دوچرخهٔ خوب یا جایی برای گذاشتن آن وجود ندارد؟",
       "#Which e-scooter do you use most often?": "بیشتر از کدام اسکوتر برقی استفاده می‌کنید؟",
       "#My own e-scooter": "اسکوتر برقی شخصی خودم",
       "#A shared e-scooter": "اسکوتر برقی اشتراکی",
@@ -869,7 +799,14 @@
       "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
       "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
-      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم"
+      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "چرا به‌ندرت از اسکوتر برقی استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have an e-scooter I can use": "اسکوتر برقی در دسترس ندارم",
+      "#The places I go are too far or it takes too long": "جاهایی که می‌روم خیلی دورند یا زمان زیادی می‌برد",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "ایستادن و حفظ تعادل روی آن برای من خسته‌کننده یا دشوار است",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "در سواری با آن احساس ناامنی می‌کنم (ترافیک، جرم یا آزار)",
+      "#There are no good cycle lanes or places to leave it": "مسیر دوچرخه مناسب یا جای مناسب برای گذاشتن آن وجود ندارد",
+      "#Another reason": "دلیل دیگر"
     },
     "hu": {
       "code": "hu",
@@ -883,11 +820,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Saját vagy megosztott elektromos roller. A segédmotoros kerékpárok és az ülős robogók itt nem számítanak.",
       "#Yes": "Igen",
       "#No": "Nem",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "Azért rollerezik ritkán, mert nincs használható elektromos rollere?",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "Azért rollerezik ritkán, mert az úti céljai túl messze vannak, vagy rollerrel túl sokáig tart az út?",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "Azért rollerezik ritkán, mert a rolleren állni és egyensúlyozni fárasztó vagy nehéz Önnek?",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "Azért rollerezik ritkán, mert rollerezés közben nem érzi magát biztonságban (forgalom, bűncselekmények vagy zaklatás)?",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "Azért rollerezik ritkán, mert hiányoznak a jó kerékpárutak vagy a hely, ahol a rollert le lehet tenni?",
       "#Which e-scooter do you use most often?": "Melyik elektromos rollert használja a leggyakrabban?",
       "#My own e-scooter": "Saját elektromos roller",
       "#A shared e-scooter": "Megosztott elektromos roller",
@@ -936,7 +868,14 @@
       "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
       "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett közösségi kerékpárt használok)",
-      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat"
+      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Miért rollerezik ritkán elektromos rollerrel? (Jelölje meg az összes megfelelőt)",
+      "#I don't have an e-scooter I can use": "Nincs használható elektromos rollerem",
+      "#The places I go are too far or it takes too long": "Az úti céljaim túl messze vannak, vagy túl sokáig tart az út",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "A rolleren állni és egyensúlyozni fárasztó vagy nehéz számomra",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Rollerezés közben nem érzem magam biztonságban (forgalom, bűncselekmények vagy zaklatás)",
+      "#There are no good cycle lanes or places to leave it": "Nincsenek jó kerékpárutak vagy helyek, ahol le lehet tenni",
+      "#Another reason": "Egyéb ok"
     },
     "ar": {
       "code": "ar",
@@ -950,11 +889,6 @@
       "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "سكوترك الكهربائي الخاص أو مشترك. لا تُحتسب هنا الدراجات النارية الصغيرة والسكوترات ذات المقعد.",
       "#Yes": "نعم",
       "#No": "لا",
-      "#Do you rarely ride an e-scooter because you do not have one you can use?": "هل تعود قلّة ركوبك السكوتر الكهربائي إلى أنه ليس لديك سكوتر كهربائي يمكنك استخدامه؟",
-      "#Do you rarely ride an e-scooter because the places you go are too far or it takes too long?": "هل تعود قلّة ركوبك السكوتر الكهربائي إلى أن وجهاتك بعيدة جدًا أو أن الوصول إليها يستغرق وقتًا طويلًا؟",
-      "#Do you rarely ride an e-scooter because standing and keeping your balance on it is tiring or difficult for you?": "هل تعود قلّة ركوبك السكوتر الكهربائي إلى أن الوقوف عليه والحفاظ على التوازن متعب أو صعب عليك؟",
-      "#Do you rarely ride an e-scooter because you feel unsafe riding one (traffic, crime or harassment)?": "هل تعود قلّة ركوبك السكوتر الكهربائي إلى شعور بعدم الأمان عند ركوبه (حركة المرور أو الجرائم أو التحرش)؟",
-      "#Do you rarely ride an e-scooter because there are no good cycle lanes or places to leave it?": "هل تعود قلّة ركوبك السكوتر الكهربائي إلى غياب مسارات جيدة للدراجات أو أماكن لترك السكوتر؟",
       "#Which e-scooter do you use most often?": "أي سكوتر كهربائي تستخدمه في أغلب الأحيان؟",
       "#My own e-scooter": "سكوتري الكهربائي الخاص",
       "#A shared e-scooter": "سكوتر كهربائي مشترك",
@@ -1003,7 +937,14 @@
       "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
       "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
-      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا"
+      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "لماذا نادرًا ما تستخدم السكوتر الكهربائي؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have an e-scooter I can use": "ليس لدي سكوتر كهربائي يمكنني استخدامه",
+      "#The places I go are too far or it takes too long": "الأماكن التي أذهب إليها بعيدة جدًا أو يستغرق الأمر وقتًا طويلًا",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "الوقوف والحفاظ على التوازن عليه متعب أو صعب بالنسبة لي",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "أشعر بعدم الأمان عند ركوبه (المرور أو الجريمة أو التحرش)",
+      "#There are no good cycle lanes or places to leave it": "لا توجد مسارات جيدة للدراجات أو أماكن لتركه",
+      "#Another reason": "سبب آخر"
     }
   }
 }

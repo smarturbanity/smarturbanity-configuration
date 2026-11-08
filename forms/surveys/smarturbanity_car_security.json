@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Car – Personal security",
     "questionnaire_id": "smarturbanity_car_security",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -68,40 +68,46 @@
             "privacy_classification": "personal_data"
           },
           {
-            "text": "When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?",
-            "answer_key": "car_isolated_areas_yn",
-            "question_type": "single_option",
+            "text": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
+            "answer_key": "car_insecurity_factors",
+            "question_type": "multiple_options",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Places with few people around (isolated or deserted areas)",
+                "value": "isolated_areas"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "People behaving aggressively or in an intimidating way",
+                "value": "aggressive_behaviour"
+              },
+              {
+                "text": "Blind corners or obstructed views",
+                "value": "blind_corners"
+              },
+              {
+                "text": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+                "value": "poor_maintenance"
+              },
+              {
+                "text": "No surveillance or security measures (e.g. no cameras, no staff)",
+                "value": "no_surveillance"
+              },
+              {
+                "text": "Incidents that happened to me or were reported in the area",
+                "value": "past_incidents"
+              },
+              {
+                "text": "Overcrowded or chaotic places",
+                "value": "overcrowding"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
               }
             ],
             "required": false,
-            "question_id": "car_isolated_areas_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?",
-            "answer_key": "car_aggressive_behaviour_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_aggressive_behaviour_yn",
+            "question_id": "car_insecurity_factors",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
@@ -123,101 +129,6 @@
             "question_id": "car_identity_harassment_yn",
             "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?",
-            "answer_key": "car_blind_corners_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_blind_corners_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?",
-            "answer_key": "car_poor_maintenance_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_poor_maintenance_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?",
-            "answer_key": "car_no_surveillance_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_no_surveillance_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?",
-            "answer_key": "car_past_incidents_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_past_incidents_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?",
-            "answer_key": "car_overcrowding_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "car_overcrowding_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
           }
         ]
       }
@@ -238,20 +149,22 @@
       "#Yes": "Yes",
       "#No": "No",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?",
       "#Car – Personal security": "Car – Personal security",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - Car – Personal security",
       "#Car on a street": "Car on a street",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
+      "#Places with few people around (isolated or deserted areas)": "Places with few people around (isolated or deserted areas)",
+      "#People behaving aggressively or in an intimidating way": "People behaving aggressively or in an intimidating way",
+      "#Blind corners or obstructed views": "Blind corners or obstructed views",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "No surveillance or security measures (e.g. no cameras, no staff)",
+      "#Incidents that happened to me or were reported in the area": "Incidents that happened to me or were reported in the area",
+      "#Overcrowded or chaotic places": "Overcrowded or chaotic places",
+      "#None of these": "None of these"
     },
     "it": {
       "code": "it",
@@ -260,20 +173,22 @@
       "#Yes": "Sì",
       "#No": "No",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "La sera o dopo il tramonto, ti capita di non sentirti al sicuro da reati o molestie quando viaggi in auto?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "Quando viaggi in auto, ti senti meno al sicuro da reati o molestie dove c’è poca gente (zone isolate o deserte)?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "Quando viaggi in auto, le persone che si comportano in modo aggressivo o intimidatorio ti fanno sentire meno al sicuro?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Quando viaggi in auto, hai subito o temi molestie per chi sei o per come appari (es. genere, aspetto, origine, età)?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "Quando viaggi in auto, gli angoli ciechi o la visuale ostruita ti fanno sentire meno al sicuro da reati o molestie?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "Quando viaggi in auto, la scarsa manutenzione (es. edifici abbandonati, graffiti, infrastrutture rotte) ti fa sentire meno al sicuro?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "Quando viaggi in auto, la mancanza di sorveglianza o di misure di sicurezza (es. niente telecamere, niente personale) ti fa sentire meno al sicuro?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Episodi accaduti a te o segnalati in una zona ti fanno sentire meno al sicuro quando ci passi in auto?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "Quando viaggi in auto, i luoghi sovraffollati o caotici ti fanno sentire meno al sicuro da reati o molestie?",
       "#Car – Personal security": "In auto – Sicurezza personale",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - In auto – Sicurezza personale",
       "#Car on a street": "Auto su una strada",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando viaggi in auto</b>. Ogni domanda ha due risposte: Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando viaggi in auto</b>. Ogni domanda ha due risposte: Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Quando viaggi in auto, cosa ti fa sentire meno al sicuro da reati o molestie? (Seleziona tutte le opzioni applicabili)",
+      "#Places with few people around (isolated or deserted areas)": "Luoghi con poca gente (zone isolate o deserte)",
+      "#People behaving aggressively or in an intimidating way": "Persone che si comportano in modo aggressivo o intimidatorio",
+      "#Blind corners or obstructed views": "Angoli ciechi o visuale ostruita",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Scarsa manutenzione (es. edifici abbandonati, graffiti, infrastrutture rotte)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Mancanza di sorveglianza o di misure di sicurezza (es. niente telecamere, niente personale)",
+      "#Incidents that happened to me or were reported in the area": "Episodi accaduti a me o segnalati nella zona",
+      "#Overcrowded or chaotic places": "Luoghi sovraffollati o caotici",
+      "#None of these": "Nessuna di queste"
     },
     "fr": {
       "code": "fr",
@@ -282,20 +197,22 @@
       "#Yes": "Oui",
       "#No": "Non",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Le soir ou après la tombée de la nuit, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous vous déplacez en voiture ?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins à l’abri de la criminalité ou du harcèlement là où il y a peu de monde (zones isolées ou désertes) ?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins en sécurité à cause de personnes au comportement agressif ou intimidant ?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Lorsque vous vous déplacez en voiture, avez-vous subi ou redoutez-vous du harcèlement en raison de qui vous êtes ou de votre aspect (par ex. genre, apparence, origine, âge) ?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins à l’abri de la criminalité ou du harcèlement à cause des angles morts ou des vues obstruées ?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins en sécurité à cause d’un mauvais entretien (par ex. bâtiments abandonnés, graffitis, infrastructures dégradées) ?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins en sécurité à cause du manque de surveillance ou de mesures de sécurité (par ex. pas de caméras, pas de personnel) ?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Vous sentez-vous moins en sécurité lorsque vous vous déplacez en voiture dans un quartier où des incidents vous sont arrivés ou ont été signalés ?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "Lorsque vous vous déplacez en voiture, vous sentez-vous moins à l’abri de la criminalité ou du harcèlement dans les lieux bondés ou chaotiques ?",
       "#Car – Personal security": "Voiture – Sécurité personnelle",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - Voiture – Sécurité personnelle",
       "#Car on a street": "Voiture dans une rue",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous vous déplacez en voiture</b>. Chaque question a deux réponses : Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous vous déplacez en voiture</b>. Chaque question a deux réponses : Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous fait vous sentir moins à l’abri de la criminalité ou du harcèlement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Places with few people around (isolated or deserted areas)": "Les lieux où il y a peu de monde (zones isolées ou désertes)",
+      "#People behaving aggressively or in an intimidating way": "Des personnes qui se comportent de façon agressive ou intimidante",
+      "#Blind corners or obstructed views": "Les angles morts ou les vues obstruées",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Un mauvais entretien (par ex. bâtiments abandonnés, graffitis, infrastructures dégradées)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "L’absence de surveillance ou de mesures de sécurité (par ex. pas de caméras, pas de personnel)",
+      "#Incidents that happened to me or were reported in the area": "Des incidents qui me sont arrivés ou qui ont été signalés dans le quartier",
+      "#Overcrowded or chaotic places": "Les lieux bondés ou chaotiques",
+      "#None of these": "Aucun de ces éléments"
     },
     "de": {
       "code": "de",
@@ -304,20 +221,22 @@
       "#Yes": "Ja",
       "#No": "Nein",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Fühlen Sie sich abends oder nach Einbruch der Dunkelheit bei Autofahrten manchmal nicht sicher vor Kriminalität oder Belästigung?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "Fühlen Sie sich bei Autofahrten dort, wo wenige Menschen sind (abgelegene oder menschenleere Orte), weniger sicher vor Kriminalität oder Belästigung?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "Fühlen Sie sich bei Autofahrten durch Menschen, die sich aggressiv oder einschüchternd verhalten, weniger sicher?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Haben Sie bei Autofahrten Belästigung wegen Ihrer Person oder Ihres Aussehens (z. B. Geschlecht, Aussehen, Herkunft, Alter) erlebt oder befürchten Sie sie?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "Fühlen Sie sich bei Autofahrten durch unübersichtliche Ecken oder verdeckte Sicht weniger sicher vor Kriminalität oder Belästigung?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "Fühlen Sie sich bei Autofahrten durch schlechte Instandhaltung (z. B. verlassene Gebäude, Graffiti, kaputte Infrastruktur) weniger sicher?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "Fühlen Sie sich bei Autofahrten durch fehlende Überwachung oder Sicherheitsmaßnahmen (z. B. keine Kameras, kein Personal) weniger sicher?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Fühlen Sie sich in einer Gegend, in der Ihnen etwas passiert ist oder Vorfälle gemeldet wurden, bei Autofahrten weniger sicher?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "Fühlen Sie sich bei Autofahrten an überfüllten oder chaotischen Orten weniger sicher vor Kriminalität oder Belästigung?",
       "#Car – Personal security": "Auto – Persönliche Sicherheit",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - Auto – Persönliche Sicherheit",
       "#Car on a street": "Auto auf einer Straße",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie mit dem Auto unterwegs sind</b>. Jede Frage hat zwei Antworten: Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie mit dem Auto unterwegs sind</b>. Jede Frage hat zwei Antworten: Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Was gibt Ihnen bei Autofahrten ein geringeres Sicherheitsgefühl vor Kriminalität oder Belästigung? (Wählen Sie alles Zutreffende aus)",
+      "#Places with few people around (isolated or deserted areas)": "Orte, an denen wenige Menschen sind (abgelegene oder menschenleere Gegenden)",
+      "#People behaving aggressively or in an intimidating way": "Menschen, die sich aggressiv oder einschüchternd verhalten",
+      "#Blind corners or obstructed views": "Unübersichtliche Ecken oder verdeckte Sicht",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Schlechte Instandhaltung (z. B. verlassene Gebäude, Graffiti, kaputte Infrastruktur)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Fehlende Überwachung oder Sicherheitsmaßnahmen (z. B. keine Kameras, kein Personal)",
+      "#Incidents that happened to me or were reported in the area": "Vorfälle, die mir passiert sind oder in der Gegend gemeldet wurden",
+      "#Overcrowded or chaotic places": "Überfüllte oder chaotische Orte",
+      "#None of these": "Keine davon"
     },
     "tr": {
       "code": "tr",
@@ -326,20 +245,22 @@
       "#Yes": "Evet",
       "#No": "Hayır",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Akşam veya hava karardıktan sonra arabayla yolculuk ederken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "Arabayla yolculuk ederken etrafta az insan olan yerlerde (ıssız veya tenha alanlarda) kendinizi suça veya tacize karşı daha az güvende hissediyor musunuz?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "Arabayla yolculuk ederken saldırgan veya yıldırıcı davranan insanlar kendinizi daha az güvende hissetmenize neden oluyor mu?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Arabayla yolculuk ederken kim olduğunuz ya da nasıl göründüğünüz nedeniyle (örn. cinsiyet, görünüş, köken, yaş) taciz yaşadınız mı ya da bundan korkuyor musunuz?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "Arabayla yolculuk ederken kör köşeler veya kapalı görüş alanları kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor mu?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "Arabayla yolculuk ederken bakımsızlık (örn. terk edilmiş binalar, grafitiler, bozuk altyapı) kendinizi daha az güvende hissetmenize neden oluyor mu?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "Arabayla yolculuk ederken gözetim veya güvenlik önlemlerinin eksikliği (örn. kamera yok, görevli yok) kendinizi daha az güvende hissetmenize neden oluyor mu?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Bir bölgede başınıza gelen veya bildirilen olaylar, orada arabayla yolculuk ederken kendinizi daha az güvende hissetmenize neden oluyor mu?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "Arabayla yolculuk ederken aşırı kalabalık veya karmaşık yerlerde kendinizi suça veya tacize karşı daha az güvende hissediyor musunuz?",
       "#Car – Personal security": "Araba – Kişisel güvenlik",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - Araba – Kişisel güvenlik",
       "#Car on a street": "Sokakta bir araba",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Arabayla yolculuk ederken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Her sorunun iki cevabı var: Evet veya Hayır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Arabayla yolculuk ederken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Her sorunun iki cevabı var: Evet veya Hayır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Arabayla yolculuk ederken neler kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Places with few people around (isolated or deserted areas)": "Etrafta az insan olan yerler (ıssız veya tenha alanlar)",
+      "#People behaving aggressively or in an intimidating way": "Saldırgan veya gözdağı verici davranan insanlar",
+      "#Blind corners or obstructed views": "Kör köşeler veya kapalı görüş alanları",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Bakımsızlık (örn. terk edilmiş binalar, grafitiler, bozuk altyapı)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Gözetim veya güvenlik önlemlerinin eksikliği (örn. kamera yok, görevli yok)",
+      "#Incidents that happened to me or were reported in the area": "Başıma gelen veya bölgede bildirilen olaylar",
+      "#Overcrowded or chaotic places": "Aşırı kalabalık veya karmaşık yerler",
+      "#None of these": "Bunların hiçbiri"
     },
     "fa": {
       "code": "fa",
@@ -348,20 +269,22 @@
       "#Yes": "بله",
       "#No": "خیر",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "عصر یا پس از تاریک شدن هوا، آیا پیش می‌آید هنگام سفر با خودرو در برابر جرم یا آزار احساس امنیت نکنید؟",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "هنگام سفر با خودرو، آیا در جاهایی که آدم کمی هست (مناطق خلوت یا متروک) در برابر جرم یا آزار احساس امنیت کمتری می‌کنید؟",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "هنگام سفر با خودرو، آیا افرادی که رفتار پرخاشگرانه یا ارعاب‌آمیز دارند باعث می‌شوند احساس امنیت کمتری کنید؟",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "هنگام سفر با خودرو، آیا به دلیل ویژگی‌های شخصی یا ظاهرتان (مثلاً جنسیت، ظاهر، اصالت، سن) آزار دیده‌اید یا از آن می‌ترسید؟",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "هنگام سفر با خودرو، آیا گوشه‌های کور یا دید مسدود باعث می‌شود در برابر جرم یا آزار احساس امنیت کمتری کنید؟",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "هنگام سفر با خودرو، آیا نگهداری ضعیف (مثلاً ساختمان‌های متروکه، دیوارنویسی، زیرساخت‌های خراب) باعث می‌شود احساس امنیت کمتری کنید؟",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "هنگام سفر با خودرو، آیا نبود نظارت یا تدابیر امنیتی (مثلاً نبود دوربین یا کارکنان) باعث می‌شود احساس امنیت کمتری کنید؟",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "آیا حوادثی که برای خودتان پیش آمده یا در یک محله گزارش شده، باعث می‌شود هنگام سفر با خودرو در آنجا احساس امنیت کمتری کنید؟",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "هنگام سفر با خودرو، آیا در جاهای بسیار شلوغ یا آشفته در برابر جرم یا آزار احساس امنیت کمتری می‌کنید؟",
       "#Car – Personal security": "خودرو – امنیت شخصی",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - خودرو – امنیت شخصی",
       "#Car on a street": "خودرو در خیابان",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام سفر با خودرو</b>. هر پرسش دو پاسخ دارد: بله یا خیر.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام سفر با خودرو</b>. هر پرسش دو پاسخ دارد: بله یا خیر.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "هنگام سفر با خودرو، چه چیزهایی باعث می‌شوند در برابر جرم یا آزار کمتر احساس امنیت کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Places with few people around (isolated or deserted areas)": "مکان‌هایی با رفت‌وآمد کم (مناطق منزوی یا خلوت)",
+      "#People behaving aggressively or in an intimidating way": "افرادی که رفتار پرخاشگرانه یا ترساننده دارند",
+      "#Blind corners or obstructed views": "پیچ‌های کور یا دید مسدود",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "نگهداری ضعیف (مثلاً ساختمان‌های متروکه، گرافیتی، زیرساخت‌های خراب)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "نبود نظارت یا اقدامات امنیتی (مثلاً بدون دوربین، بدون کارکنان)",
+      "#Incidents that happened to me or were reported in the area": "حوادثی که برای من رخ داده یا در منطقه گزارش شده است",
+      "#Overcrowded or chaotic places": "مکان‌های بسیار شلوغ یا پرهرج‌ومرج",
+      "#None of these": "هیچ‌کدام از این‌ها"
     },
     "hu": {
       "code": "hu",
@@ -370,20 +293,22 @@
       "#Yes": "Igen",
       "#No": "Nem",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Este vagy sötétedés után előfordul, hogy autós utazás közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "Autós utazás közben kevésbé érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben ott, ahol kevés ember van (elhagyatott vagy néptelen helyeken)?",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "Autós utazás közben kevésbé érzi magát biztonságban az agresszívan vagy megfélemlítően viselkedő emberek miatt?",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Autós utazás közben élt át vagy tart zaklatástól amiatt, hogy ki Ön vagy hogyan néz ki (pl. nem, külső, származás, életkor)?",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "Autós utazás közben a beláthatatlan sarkok vagy a takart kilátás miatt kevésbé érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "Autós utazás közben kevésbé érzi magát biztonságban a rossz karbantartás (pl. elhagyott épületek, graffitik, tönkrement infrastruktúra) miatt?",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "Autós utazás közben kevésbé érzi magát biztonságban a felügyelet vagy a biztonsági intézkedések hiánya (pl. nincs kamera, nincs személyzet) miatt?",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "Kevésbé érzi magát biztonságban, amikor olyan környéken autózik, ahol Önnel történt vagy bejelentett incidens volt?",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "Autós utazás közben túlzsúfolt vagy kaotikus helyeken kevésbé érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
       "#Car – Personal security": "Autó – Személyes biztonság",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - Autó – Személyes biztonság",
       "#Car on a street": "Autó az utcán",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>autós utazás közben</b>. Minden kérdésre két válasz van: Igen vagy Nem.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>autós utazás közben</b>. Minden kérdésre két válasz van: Igen vagy Nem.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Autós utazás közben mi miatt érzi magát kevésbé biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Jelölje meg az összes megfelelőt)",
+      "#Places with few people around (isolated or deserted areas)": "Olyan helyek, ahol kevés ember van (elhagyatott vagy néptelen helyek)",
+      "#People behaving aggressively or in an intimidating way": "Agresszíven vagy megfélemlítően viselkedő emberek",
+      "#Blind corners or obstructed views": "Beláthatatlan sarkok vagy takart kilátás",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Rossz karbantartás (pl. elhagyott épületek, graffitik, tönkrement infrastruktúra)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "A felügyelet vagy a biztonsági intézkedések hiánya (pl. nincs kamera, nincs személyzet)",
+      "#Incidents that happened to me or were reported in the area": "Velem történt vagy a környéken bejelentett incidensek",
+      "#Overcrowded or chaotic places": "Túlzsúfolt vagy kaotikus helyek",
+      "#None of these": "Ezek közül egyik sem"
     },
     "ar": {
       "code": "ar",
@@ -392,20 +317,22 @@
       "#Yes": "نعم",
       "#No": "لا",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "في المساء أو بعد حلول الظلام، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند التنقل بالسيارة؟",
-      "#When you travel by car, do you feel less secure from crime or harassment where there are few people around (isolated or deserted areas)?": "عند التنقل بالسيارة، هل يقلّ شعورك بالأمان من الجرائم أو التحرش في الأماكن التي يقلّ فيها الناس (المناطق المعزولة أو المهجورة)؟",
-      "#When you travel by car, do people behaving aggressively or in an intimidating way make you feel less secure?": "عند التنقل بالسيارة، هل يقلّ شعورك بالأمان بسبب أشخاص يتصرفون بعدوانية أو بطريقة ترهيبية؟",
       "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "عند التنقل بالسيارة، هل سبق أن تعرضت للتحرش بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو السن)، أو هل يقلقك ذلك؟",
-      "#When you travel by car, do blind corners or obstructed views make you feel less secure from crime or harassment?": "عند التنقل بالسيارة، هل تُضعف الزوايا العمياء أو الرؤية المحجوبة شعورك بالأمان من الجرائم أو التحرش؟",
-      "#When you travel by car, does poor maintenance (e.g., abandoned buildings, graffiti, broken infrastructure) make you feel less secure?": "عند التنقل بالسيارة، هل يُضعف سوء الصيانة (مثل المباني المهجورة أو الكتابة على الجدران أو البنية التحتية المتضررة) شعورك بالأمان؟",
-      "#When you travel by car, does the lack of surveillance or security measures (e.g., no cameras, no staff) make you feel less secure?": "عند التنقل بالسيارة، هل يُضعف غياب المراقبة أو إجراءات الأمن (مثل عدم وجود كاميرات أو موظفين) شعورك بالأمان؟",
-      "#Do previous personal or reported incidents in an area make you feel less secure when you travel there by car?": "هل تُضعف حوادث وقعت لك أو أُبلغ عنها في منطقة ما شعورك بالأمان عند التنقل بالسيارة فيها؟",
-      "#When you travel by car, do overcrowded or chaotic places make you feel less secure from crime or harassment?": "عند التنقل بالسيارة، هل يقلّ شعورك بالأمان من الجرائم أو التحرش في الأماكن المكتظة أو الفوضوية؟",
       "#Car – Personal security": "السيارة – الأمان الشخصي",
       "#SmartUrbanity - Car – Personal security": "SmartUrbanity - السيارة – الأمان الشخصي",
       "#Car on a street": "سيارة في شارع",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند التنقل بالسيارة</b>. لكل سؤال إجابتان: نعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Each question has two answers: Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند التنقل بالسيارة</b>. لكل سؤال إجابتان: نعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "عند السفر بالسيارة، ما الذي يقلل شعورك بالأمان من الجريمة أو التحرش؟ (يمكن اختيار كل ما ينطبق)",
+      "#Places with few people around (isolated or deserted areas)": "أماكن قليلة الازدحام بالناس (مناطق معزولة أو مهجورة)",
+      "#People behaving aggressively or in an intimidating way": "أشخاص يتصرفون بعدوانية أو بطريقة مخيفة",
+      "#Blind corners or obstructed views": "زوايا عمياء أو مناظر محجوبة",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "سوء الصيانة (مثل المباني المهجورة والكتابات على الجدران والبنية التحتية المتضررة)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "غياب المراقبة أو إجراءات الأمن (مثل عدم وجود كاميرات أو موظفين)",
+      "#Incidents that happened to me or were reported in the area": "حوادث وقعت لي أو تم الإبلاغ عنها في المنطقة",
+      "#Overcrowded or chaotic places": "أماكن مكتظة أو فوضوية",
+      "#None of these": "لا شيء مما سبق"
     }
   }
 }

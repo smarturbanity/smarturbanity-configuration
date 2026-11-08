@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Your trips",
     "questionnaire_id": "smarturbanity_walking_habits",
-    "questionnaire_version": "1.1.1",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -50,92 +50,38 @@
             "question_version": "1.1.1"
           },
           {
-            "text": "Do you rarely walk because the places you go are too far or walking takes too long?",
-            "answer_key": "not_walk_distance_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
+            "text": "Why do you rarely walk? (Select all that apply)",
+            "answer_key": "not_walk_reasons",
+            "question_type": "multiple_options",
             "show_if": {
               "walk_days": "no"
             },
-            "question_id": "not_walk_distance_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely walk because walking is tiring or physically difficult for you?",
-            "answer_key": "not_walk_effort_yn",
-            "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "The places I go are too far or walking takes too long",
+                "value": "distance"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Walking is tiring or physically difficult for me",
+                "value": "effort"
+              },
+              {
+                "text": "I feel unsafe on foot (traffic, crime or harassment)",
+                "value": "unsafe"
+              },
+              {
+                "text": "The streets are uncomfortable for walking (sidewalks, shade, benches)",
+                "value": "streets"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
               }
             ],
             "required": false,
-            "show_if": {
-              "walk_days": "no"
-            },
-            "question_id": "not_walk_effort_yn",
+            "question_id": "not_walk_reasons",
             "question_version": "1.0.0",
             "privacy_classification": "special_category_health"
-          },
-          {
-            "text": "Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?",
-            "answer_key": "not_walk_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "show_if": {
-              "walk_days": "no"
-            },
-            "question_id": "not_walk_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?",
-            "answer_key": "not_walk_streets_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "show_if": {
-              "walk_days": "no"
-            },
-            "question_id": "not_walk_streets_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
           }
         ]
       },
@@ -532,11 +478,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "Walking here also means walking with a pushchair, a cane or another aid.",
       "#Yes": "Yes",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "No, only short bits (e.g. to a stop or the car) or not at all",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Do you rarely walk because the places you go are too far or walking takes too long?",
       "#No": "No",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Do you rarely walk because walking is tiring or physically difficult for you?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?",
       "#Walking – Your trips": "Walking – Your trips",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - Walking – Your trips",
       "#Person walking and a route between two points": "Person walking and a route between two points",
@@ -614,7 +556,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Count every kind of walk: to get somewhere, for leisure or for exercise.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?",
-      "#Height affects the length of your step and your walking pace.": "Height affects the length of your step and your walking pace."
+      "#Height affects the length of your step and your walking pace.": "Height affects the length of your step and your walking pace.",
+      "#Why do you rarely walk? (Select all that apply)": "Why do you rarely walk? (Select all that apply)",
+      "#The places I go are too far or walking takes too long": "The places I go are too far or walking takes too long",
+      "#Walking is tiring or physically difficult for me": "Walking is tiring or physically difficult for me",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "I feel unsafe on foot (traffic, crime or harassment)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "The streets are uncomfortable for walking (sidewalks, shade, benches)",
+      "#Another reason": "Another reason"
     },
     "it": {
       "code": "it",
@@ -623,11 +571,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "Qui camminare vuol dire anche camminare con un passeggino, un bastone o un altro ausilio.",
       "#Yes": "Sì",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "No, solo tratti brevi (ad es. fino a una fermata o all'auto) o per niente",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Cammini poco perché i posti dove vai sono troppo lontani o a piedi ci vuole troppo tempo?",
       "#No": "No",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Cammini poco perché per te camminare è faticoso o fisicamente difficile?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Cammini poco perché a piedi non ti senti al sicuro (traffico, criminalità o molestie)?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Cammini poco perché le strade sono scomode per camminare (marciapiedi, ombra, panchine)?",
       "#Walking – Your trips": "A piedi – I tuoi spostamenti",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - A piedi – I tuoi spostamenti",
       "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
@@ -705,7 +649,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In una settimana tipo, in quanti giorni cammini, o ti sposti in carrozzina, per almeno 10 minuti di fila?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Conta ogni tipo di camminata: per andare da qualche parte, per svago o per fare esercizio.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Come descriveresti in questo momento la tua forma fisica per camminare (forza, resistenza, equilibrio)?",
-      "#Height affects the length of your step and your walking pace.": "L’altezza influisce sulla lunghezza del passo e sulla velocità con cui cammini."
+      "#Height affects the length of your step and your walking pace.": "L’altezza influisce sulla lunghezza del passo e sulla velocità con cui cammini.",
+      "#Why do you rarely walk? (Select all that apply)": "Perché cammini poco? (Seleziona tutte le opzioni applicabili)",
+      "#The places I go are too far or walking takes too long": "I posti dove vado sono troppo lontani o a piedi ci vuole troppo tempo",
+      "#Walking is tiring or physically difficult for me": "Camminare è faticoso o fisicamente difficile per me",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "A piedi non mi sento al sicuro (traffico, criminalità o molestie)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Le strade sono scomode per camminare (marciapiedi, ombra, panchine)",
+      "#Another reason": "Un altro motivo"
     },
     "fr": {
       "code": "fr",
@@ -714,11 +664,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "Ici, marcher inclut aussi marcher avec une poussette, une canne ou une autre aide.",
       "#Yes": "Oui",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "Non, seulement de courts tronçons (par ex. jusqu'à un arrêt ou à la voiture) ou pas du tout",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Marchez-vous rarement parce que les lieux où vous allez sont trop loin ou que le trajet à pied prend trop de temps ?",
       "#No": "Non",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Marchez-vous rarement parce que marcher est fatigant ou physiquement difficile pour vous ?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Marchez-vous rarement parce que vous ne vous sentez pas en sécurité à pied (circulation, délinquance ou harcèlement) ?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Marchez-vous rarement parce que les rues sont peu agréables pour marcher (trottoirs, ombre, bancs) ?",
       "#Walking – Your trips": "À pied – Vos trajets",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - À pied – Vos trajets",
       "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
@@ -796,7 +742,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Au cours d’une semaine type, combien de jours marchez-vous, ou vous déplacez-vous en fauteuil roulant, pendant au moins 10 minutes d’affilée ?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Comptez toutes les marches : pour aller quelque part, pour le loisir ou pour faire de l’exercice.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Comment décririez-vous actuellement votre condition physique pour marcher (force, endurance, équilibre) ?",
-      "#Height affects the length of your step and your walking pace.": "La taille influe sur la longueur du pas et sur la vitesse de marche."
+      "#Height affects the length of your step and your walking pace.": "La taille influe sur la longueur du pas et sur la vitesse de marche.",
+      "#Why do you rarely walk? (Select all that apply)": "Pourquoi marchez-vous rarement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#The places I go are too far or walking takes too long": "Les lieux où je vais sont trop loin ou le trajet à pied prend trop de temps",
+      "#Walking is tiring or physically difficult for me": "Marcher est fatigant ou physiquement difficile pour moi",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "Je ne me sens pas en sécurité à pied (circulation, délinquance ou harcèlement)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Les rues sont peu agréables pour marcher (trottoirs, ombre, bancs)",
+      "#Another reason": "Une autre raison"
     },
     "de": {
       "code": "de",
@@ -805,11 +757,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "Gehen schließt hier auch das Gehen mit Kinderwagen, Stock oder einer anderen Hilfe ein.",
       "#Yes": "Ja",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "Nein, nur kurze Stücke (z. B. zur Haltestelle oder zum Auto) oder gar nicht",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Gehen Sie selten zu Fuß, weil Ihre Ziele zu weit entfernt sind oder der Weg zu Fuß zu lange dauert?",
       "#No": "Nein",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Gehen Sie selten zu Fuß, weil Gehen für Sie anstrengend oder körperlich schwierig ist?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Gehen Sie selten zu Fuß, weil Sie sich zu Fuß unsicher fühlen (Verkehr, Kriminalität oder Belästigung)?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Gehen Sie selten zu Fuß, weil die Straßen zum Gehen unbequem sind (Gehwege, Schatten, Bänke)?",
       "#Walking – Your trips": "Zu Fuß – Ihre Wege",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - Zu Fuß – Ihre Wege",
       "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
@@ -887,7 +835,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "An wie vielen Tagen in einer typischen Woche gehen Sie zu Fuß oder fahren mit Ihrem Rollstuhl mindestens 10 Minuten am Stück?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Zählen Sie alle Wege zu Fuß: um irgendwohin zu kommen, in der Freizeit oder zum Training.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Wie würden Sie Ihre derzeitige körperliche Fitness zum Gehen beschreiben (Kraft, Ausdauer, Gleichgewicht)?",
-      "#Height affects the length of your step and your walking pace.": "Die Körpergröße beeinflusst die Schrittlänge und das Gehtempo."
+      "#Height affects the length of your step and your walking pace.": "Die Körpergröße beeinflusst die Schrittlänge und das Gehtempo.",
+      "#Why do you rarely walk? (Select all that apply)": "Warum gehen Sie selten zu Fuß? (Wählen Sie alles Zutreffende aus)",
+      "#The places I go are too far or walking takes too long": "Meine Ziele sind zu weit entfernt oder der Weg zu Fuß dauert zu lange",
+      "#Walking is tiring or physically difficult for me": "Gehen ist für mich anstrengend oder körperlich schwierig",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "Ich fühle mich zu Fuß unsicher (Verkehr, Kriminalität oder Belästigung)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Die Straßen sind zum Gehen unbequem (Gehwege, Schatten, Bänke)",
+      "#Another reason": "Ein anderer Grund"
     },
     "tr": {
       "code": "tr",
@@ -896,11 +850,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "Burada yürümek, bebek arabası, baston veya başka bir yardımcıyla yürümeyi de kapsar.",
       "#Yes": "Evet",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "Hayır, yalnızca kısa bölümler (örn. durağa veya otomobile kadar) veya hiç",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Gittiğiniz yerler çok uzak olduğu ya da yürümek çok uzun sürdüğü için mi nadiren yürüyorsunuz?",
       "#No": "Hayır",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Yürümek sizin için yorucu ya da fiziksel olarak zor olduğu için mi nadiren yürüyorsunuz?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Trafik, suç veya taciz nedeniyle yürürken kendinizi güvende hissetmediğiniz için mi nadiren yürüyorsunuz?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Sokaklar yürümeye elverişli olmadığı için mi (kaldırımlar, gölge, banklar) nadiren yürüyorsunuz?",
       "#Walking – Your trips": "Yürüyüş – Yolculuklarınız",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - Yürüyüş – Yolculuklarınız",
       "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
@@ -978,7 +928,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Tipik bir haftada kaç gün en az 10 dakika aralıksız yürüyor ya da tekerlekli sandalyenizle ilerliyorsunuz?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Her türlü yürüyüşü sayın: bir yere gitmek, boş zaman veya egzersiz için.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Yürümek için şu anki fiziksel formunuzu nasıl tanımlarsınız (güç, dayanıklılık, denge)?",
-      "#Height affects the length of your step and your walking pace.": "Boy, adım uzunluğunu ve yürüme hızını etkiler."
+      "#Height affects the length of your step and your walking pace.": "Boy, adım uzunluğunu ve yürüme hızını etkiler.",
+      "#Why do you rarely walk? (Select all that apply)": "Neden nadiren yürüyorsunuz? (Uygun olanların tümünü seçin)",
+      "#The places I go are too far or walking takes too long": "Gittiğim yerler çok uzak veya yürümek çok uzun sürüyor",
+      "#Walking is tiring or physically difficult for me": "Yürümek benim için yorucu ya da fiziksel olarak zor",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "Yürürken kendimi güvende hissetmiyorum (trafik, suç veya taciz)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Sokaklar yürümeye elverişli değil (kaldırımlar, gölge, banklar)",
+      "#Another reason": "Başka bir neden"
     },
     "fa": {
       "code": "fa",
@@ -987,11 +943,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "پیاده‌روی در اینجا شامل پیاده‌روی با کالسکه، عصا یا وسیله کمکی دیگر هم می‌شود.",
       "#Yes": "بله",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "نه، فقط بخش‌های کوتاه (مثلاً تا ایستگاه یا خودرو) یا اصلاً",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "آیا کم پیاده‌روی می‌کنید چون مقصدهایتان خیلی دور است یا پیاده رفتن خیلی طول می‌کشد؟",
       "#No": "خیر",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "آیا کم پیاده‌روی می‌کنید چون پیاده‌روی برایتان خسته‌کننده یا از نظر جسمی دشوار است؟",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "آیا کم پیاده‌روی می‌کنید چون هنگام پیاده‌روی احساس امنیت نمی‌کنید (ترافیک، جرم یا آزار)؟",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "آیا کم پیاده‌روی می‌کنید چون خیابان‌ها برای پیاده‌روی راحت نیستند (پیاده‌رو، سایه، نیمکت)؟",
       "#Walking – Your trips": "پیاده‌روی – سفرهای شما",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - پیاده‌روی – سفرهای شما",
       "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
@@ -1069,7 +1021,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "در یک هفتهٔ معمولی، چند روز دست‌کم ۱۰ دقیقه پشت سر هم پیاده‌روی می‌کنید یا با ویلچر حرکت می‌کنید؟",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "هر نوع پیاده‌روی را حساب کنید: برای رفتن به جایی، برای تفریح یا برای ورزش.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "آمادگی جسمانی فعلی خود را برای پیاده‌روی (قدرت، استقامت، تعادل) چگونه توصیف می‌کنید؟",
-      "#Height affects the length of your step and your walking pace.": "قد بر طول گام و سرعت پیاده‌روی اثر می‌گذارد."
+      "#Height affects the length of your step and your walking pace.": "قد بر طول گام و سرعت پیاده‌روی اثر می‌گذارد.",
+      "#Why do you rarely walk? (Select all that apply)": "چرا به‌ندرت پیاده‌روی می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#The places I go are too far or walking takes too long": "جاهایی که می‌روم خیلی دورند یا پیاده‌روی زمان زیادی می‌برد",
+      "#Walking is tiring or physically difficult for me": "پیاده‌روی برای من خسته‌کننده یا از نظر جسمی دشوار است",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "در پیاده‌روی احساس ناامنی می‌کنم (ترافیک، جرم یا آزار)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "خیابان‌ها برای پیاده‌روی راحت نیستند (پیاده‌رو، سایه، نیمکت)",
+      "#Another reason": "دلیل دیگر"
     },
     "hu": {
       "code": "hu",
@@ -1078,11 +1036,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "A gyaloglás itt a babakocsival, bottal vagy más segédeszközzel való járást is jelenti.",
       "#Yes": "Igen",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "Nem, csak rövid szakaszokat (pl. a megállóig vagy az autóig), vagy egyáltalán nem",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "Azért jár ritkán gyalog, mert az úti céljai túl messze vannak, vagy gyalog túl sokáig tart az út?",
       "#No": "Nem",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "Azért jár ritkán gyalog, mert a gyaloglás fárasztó vagy fizikailag nehéz Önnek?",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "Azért jár ritkán gyalog, mert gyalog nem érzi magát biztonságban (forgalom, bűncselekmények vagy zaklatás)?",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "Azért jár ritkán gyalog, mert az utcák kényelmetlenek a gyalogláshoz (járdák, árnyék, padok)?",
       "#Walking – Your trips": "Gyaloglás – Az Ön útjai",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - Gyaloglás – Az Ön útjai",
       "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
@@ -1160,7 +1114,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Egy átlagos héten hány napon gyalogol, vagy közlekedik kerekesszékkel, legalább 10 percig egyhuzamban?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Számítson bele minden gyaloglást: ha valahová megy, szabadidőben vagy edzésként.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Hogyan írná le jelenlegi fizikai erőnlétét a gyalogláshoz (erő, állóképesség, egyensúly)?",
-      "#Height affects the length of your step and your walking pace.": "A testmagasság befolyásolja a lépéshosszt és a gyaloglási tempót."
+      "#Height affects the length of your step and your walking pace.": "A testmagasság befolyásolja a lépéshosszt és a gyaloglási tempót.",
+      "#Why do you rarely walk? (Select all that apply)": "Miért jár ritkán gyalog? (Jelölje meg az összes megfelelőt)",
+      "#The places I go are too far or walking takes too long": "Az úti céljaim túl messze vannak, vagy gyalog túl sokáig tart az út",
+      "#Walking is tiring or physically difficult for me": "A gyaloglás fárasztó vagy fizikailag nehéz számomra",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "Gyalog nem érzem magam biztonságban (forgalom, bűncselekmények vagy zaklatás)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Az utcák kényelmetlenek a gyalogláshoz (járdák, árnyék, padok)",
+      "#Another reason": "Egyéb ok"
     },
     "ar": {
       "code": "ar",
@@ -1169,11 +1129,7 @@
       "#Walking here also means walking with a pushchair, a cane or another aid.": "المشي هنا يشمل أيضًا المشي مع عربة أطفال أو عكاز أو أداة مساعدة أخرى.",
       "#Yes": "نعم",
       "#No, only short bits (e.g. to a stop or the car) or not at all": "لا، فقط مسافات قصيرة (مثل الوصول إلى محطة أو السيارة) أو لا أمشي أبدًا",
-      "#Do you rarely walk because the places you go are too far or walking takes too long?": "هل تعود قلّة مشيك إلى أن وجهاتك بعيدة جدًا أو أن المشي يستغرق وقتًا طويلًا؟",
       "#No": "لا",
-      "#Do you rarely walk because walking is tiring or physically difficult for you?": "هل تعود قلّة مشيك إلى أن المشي متعب أو صعب جسديًا بالنسبة إليك؟",
-      "#Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?": "هل تعود قلّة مشيك إلى شعور بعدم الأمان عند المشي (حركة المرور أو الجرائم أو التحرش)؟",
-      "#Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?": "هل تعود قلّة مشيك إلى أن الشوارع غير مريحة للمشي (الأرصفة، الظل، المقاعد)؟",
       "#Walking – Your trips": "المشي – رحلاتك",
       "#SmartUrbanity - Walking – Your trips": "SmartUrbanity - المشي – رحلاتك",
       "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
@@ -1251,7 +1207,13 @@
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "في أسبوع عادي، كم يومًا تمشي، أو تتنقل بكرسيك المتحرك، لمدة 10 دقائق متواصلة على الأقل؟",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "احسب كل أنواع المشي: للذهاب إلى مكان ما، أو للترفيه، أو لممارسة الرياضة.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "كيف تصف لياقتك البدنية الحالية للمشي (القوة، التحمل، التوازن)؟",
-      "#Height affects the length of your step and your walking pace.": "يؤثر الطول في طول الخطوة وسرعة المشي."
+      "#Height affects the length of your step and your walking pace.": "يؤثر الطول في طول الخطوة وسرعة المشي.",
+      "#Why do you rarely walk? (Select all that apply)": "لماذا نادرًا ما تمشي؟ (يمكن اختيار كل ما ينطبق)",
+      "#The places I go are too far or walking takes too long": "الأماكن التي أذهب إليها بعيدة جدًا أو المشي يستغرق وقتًا طويلًا",
+      "#Walking is tiring or physically difficult for me": "المشي متعب أو صعب جسديًا بالنسبة لي",
+      "#I feel unsafe on foot (traffic, crime or harassment)": "أشعر بعدم الأمان عند المشي (المرور أو الجريمة أو التحرش)",
+      "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "الشوارع غير مريحة للمشي (الأرصفة والظل والمقاعد)",
+      "#Another reason": "سبب آخر"
     }
   }
 }

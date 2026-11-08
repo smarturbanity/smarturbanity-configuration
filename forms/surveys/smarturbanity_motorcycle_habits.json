@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Motorcycle and scooter – Your trips",
     "questionnaire_id": "smarturbanity_motorcycle_habits",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -50,94 +50,38 @@
             "question_version": "1.1.0"
           },
           {
-            "text": "Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?",
-            "answer_key": "not_motorcycle_no_vehicle_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
+            "text": "Why do you rarely ride a motorcycle or scooter? (Select all that apply)",
+            "answer_key": "not_motorcycle_reasons",
+            "question_type": "multiple_options",
             "show_if": {
               "motorcycle_weekly": [
                 "no"
               ]
             },
-            "question_id": "not_motorcycle_no_vehicle_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?",
-            "answer_key": "not_motorcycle_unsafe_yn",
-            "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "I don't have a motorcycle or scooter, or the licence for one",
+                "value": "no_vehicle"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "motorcycle_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_motorcycle_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?",
-            "answer_key": "not_motorcycle_uncomfortable_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "I feel unsafe riding in traffic",
+                "value": "unsafe"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "motorcycle_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_motorcycle_uncomfortable_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?",
-            "answer_key": "not_motorcycle_cost_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Riding is uncomfortable (weather, effort, carrying things)",
+                "value": "uncomfortable"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "It costs too much (fuel, parking, insurance)",
+                "value": "cost"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
               }
             ],
-            "show_if": {
-              "motorcycle_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_motorcycle_cost_yn",
+            "required": false,
+            "question_id": "not_motorcycle_reasons",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -393,10 +337,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "Petrol or electric. Stand-up e-scooters don't count here.",
       "#Yes": "Yes",
       "#No": "No",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?",
       "#Motorcycle and scooter – Your trips": "Motorcycle and scooter – Your trips",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorcycle and scooter – Your trips",
       "#Motorcycle on a street": "Motorcycle on a street",
@@ -443,7 +383,13 @@
       "#I reduce how often I make that trip": "I reduce how often I make that trip",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
       "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
-      "#Other": "Other"
+      "#Other": "Other",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Why do you rarely ride a motorcycle or scooter? (Select all that apply)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "I don't have a motorcycle or scooter, or the licence for one",
+      "#I feel unsafe riding in traffic": "I feel unsafe riding in traffic",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "Riding is uncomfortable (weather, effort, carrying things)",
+      "#It costs too much (fuel, parking, insurance)": "It costs too much (fuel, parking, insurance)",
+      "#Another reason": "Another reason"
     },
     "it": {
       "code": "it",
@@ -452,10 +398,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "A benzina o elettrico. I monopattini elettrici in piedi qui non contano.",
       "#Yes": "Sì",
       "#No": "No",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Usi poco la moto o lo scooter perché non ne hai uno o non hai la patente?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Usi poco la moto o lo scooter perché nel traffico non ti senti al sicuro?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Usi poco la moto o lo scooter perché è scomodo (meteo, fatica, cose da portare)?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Usi poco la moto o lo scooter perché costa troppo (carburante, parcheggio, assicurazione)?",
       "#Motorcycle and scooter – Your trips": "Moto e scooter – I tuoi spostamenti",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Moto e scooter – I tuoi spostamenti",
       "#Motorcycle on a street": "Moto su una strada",
@@ -502,7 +444,13 @@
       "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
       "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
-      "#Other": "Altro"
+      "#Other": "Altro",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Perché usi poco la moto o lo scooter? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "Non ho una moto o uno scooter, né la patente per guidarli",
+      "#I feel unsafe riding in traffic": "Nel traffico non mi sento al sicuro",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "È scomodo (meteo, fatica, cose da portare)",
+      "#It costs too much (fuel, parking, insurance)": "Costa troppo (carburante, parcheggio, assicurazione)",
+      "#Another reason": "Un altro motivo"
     },
     "fr": {
       "code": "fr",
@@ -511,10 +459,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "À essence ou électrique. Les trottinettes électriques debout ne comptent pas ici.",
       "#Yes": "Oui",
       "#No": "Non",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Utilisez-vous rarement une moto ou un scooter parce que vous n'en avez pas, ou pas le permis nécessaire ?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Utilisez-vous rarement une moto ou un scooter parce que vous ne vous sentez pas en sécurité dans la circulation ?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Utilisez-vous rarement une moto ou un scooter parce que c'est inconfortable (météo, effort, objets à transporter) ?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Utilisez-vous rarement une moto ou un scooter parce que cela coûte trop cher (carburant, stationnement, assurance) ?",
       "#Motorcycle and scooter – Your trips": "Moto et scooter – Vos trajets",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Moto et scooter – Vos trajets",
       "#Motorcycle on a street": "Moto dans une rue",
@@ -561,7 +505,13 @@
       "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
       "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
-      "#Other": "Autre"
+      "#Other": "Autre",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Pourquoi utilisez-vous rarement une moto ou un scooter ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "Je n’ai ni moto ni scooter, ou pas le permis nécessaire",
+      "#I feel unsafe riding in traffic": "Je ne me sens pas en sécurité dans la circulation",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "C’est inconfortable (météo, effort, objets à transporter)",
+      "#It costs too much (fuel, parking, insurance)": "Cela coûte trop cher (carburant, stationnement, assurance)",
+      "#Another reason": "Une autre raison"
     },
     "de": {
       "code": "de",
@@ -570,10 +520,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzin oder elektrisch. Stehroller zählen hier nicht.",
       "#Yes": "Ja",
       "#No": "Nein",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Fahren Sie selten Motorrad oder Roller, weil Sie keines haben oder keinen Führerschein dafür?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Fahren Sie selten Motorrad oder Roller, weil Sie sich im Verkehr unsicher fühlen?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Fahren Sie selten Motorrad oder Roller, weil es unbequem ist (Wetter, Anstrengung, Dinge transportieren)?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Fahren Sie selten Motorrad oder Roller, weil es zu teuer ist (Kraftstoff, Parken, Versicherung)?",
       "#Motorcycle and scooter – Your trips": "Motorrad und Roller – Ihre Wege",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorrad und Roller – Ihre Wege",
       "#Motorcycle on a street": "Motorrad auf einer Straße",
@@ -620,7 +566,13 @@
       "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
       "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
-      "#Other": "Anderes"
+      "#Other": "Anderes",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Warum fahren Sie selten Motorrad oder Roller? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "Ich habe kein Motorrad und keinen Roller oder keinen Führerschein dafür",
+      "#I feel unsafe riding in traffic": "Ich fühle mich im Verkehr unsicher",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "Das Fahren ist unbequem (Wetter, Anstrengung, Dinge transportieren)",
+      "#It costs too much (fuel, parking, insurance)": "Es ist zu teuer (Kraftstoff, Parken, Versicherung)",
+      "#Another reason": "Ein anderer Grund"
     },
     "tr": {
       "code": "tr",
@@ -629,10 +581,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzinli veya elektrikli. Ayakta kullanılan elektrikli scooter'lar burada sayılmaz.",
       "#Yes": "Evet",
       "#No": "Hayır",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Motosikletiniz veya skuteriniz ya da bunun için ehliyetiniz olmadığı için mi nadiren motosiklet veya skuter kullanıyorsunuz?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Trafikte kendinizi güvende hissetmediğiniz için mi nadiren motosiklet veya skuter kullanıyorsunuz?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Rahatsız olduğu için mi (hava, yorgunluk, eşya taşımak) nadiren motosiklet veya skuter kullanıyorsunuz?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Çok pahalı olduğu için mi (yakıt, otopark, sigorta) nadiren motosiklet veya skuter kullanıyorsunuz?",
       "#Motorcycle and scooter – Your trips": "Motosiklet ve scooter – Yolculuklarınız",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motosiklet ve scooter – Yolculuklarınız",
       "#Motorcycle on a street": "Sokakta bir motosiklet",
@@ -679,7 +627,13 @@
       "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
       "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
-      "#Other": "Diğer"
+      "#Other": "Diğer",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Neden nadiren motosiklet veya scooter kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "Motosikletim veya scooter'ım ya da bunun için ehliyetim yok",
+      "#I feel unsafe riding in traffic": "Trafikte kendimi güvende hissetmiyorum",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "Sürmek rahatsız (hava, yorgunluk, eşya taşımak)",
+      "#It costs too much (fuel, parking, insurance)": "Çok pahalı (yakıt, otopark, sigorta)",
+      "#Another reason": "Başka bir neden"
     },
     "fa": {
       "code": "fa",
@@ -688,10 +642,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "بنزینی یا برقی. اسکوترهای برقی ایستاده در اینجا حساب نمی‌شوند.",
       "#Yes": "بله",
       "#No": "خیر",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "آیا کم موتورسواری می‌کنید چون موتورسیکلت یا اسکوتر یا گواهینامهٔ آن را ندارید؟",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "آیا کم موتورسواری می‌کنید چون در ترافیک احساس امنیت نمی‌کنید؟",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "آیا کم موتورسواری می‌کنید چون ناراحت است (آب‌وهوا، خستگی، حمل وسایل)؟",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "آیا کم موتورسواری می‌کنید چون خیلی گران تمام می‌شود (سوخت، پارکینگ، بیمه)؟",
       "#Motorcycle and scooter – Your trips": "موتورسیکلت و اسکوتر – سفرهای شما",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - موتورسیکلت و اسکوتر – سفرهای شما",
       "#Motorcycle on a street": "موتورسیکلت در خیابان",
@@ -738,7 +688,13 @@
       "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
       "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
-      "#Other": "سایر"
+      "#Other": "سایر",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "چرا به‌ندرت از موتور یا اسکوتر استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "موتور یا اسکوتر یا گواهینامه آن را ندارم",
+      "#I feel unsafe riding in traffic": "در ترافیک احساس ناامنی می‌کنم",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "سواری ناراحت‌کننده است (آب‌وهوا، زحمت، حمل وسایل)",
+      "#It costs too much (fuel, parking, insurance)": "هزینه‌اش زیاد است (سوخت، پارکینگ، بیمه)",
+      "#Another reason": "دلیل دیگر"
     },
     "hu": {
       "code": "hu",
@@ -747,10 +703,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "Benzines vagy elektromos. Az álló elektromos rollerek itt nem számítanak.",
       "#Yes": "Igen",
       "#No": "Nem",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "Azért motorozik vagy robogózik ritkán, mert nincs motorja vagy robogója, vagy nincs hozzá jogosítványa?",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "Azért motorozik vagy robogózik ritkán, mert a forgalomban nem érzi magát biztonságban?",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "Azért motorozik vagy robogózik ritkán, mert kényelmetlen (időjárás, fáradság, csomagok szállítása)?",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "Azért motorozik vagy robogózik ritkán, mert túl drága (üzemanyag, parkolás, biztosítás)?",
       "#Motorcycle and scooter – Your trips": "Motorkerékpár és robogó – Az Ön útjai",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - Motorkerékpár és robogó – Az Ön útjai",
       "#Motorcycle on a street": "Motorkerékpár az utcán",
@@ -797,7 +749,13 @@
       "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett közösségi kerékpárt használok)",
       "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
-      "#Other": "Egyéb"
+      "#Other": "Egyéb",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "Miért motorozik vagy robogózik ritkán? (Jelölje meg az összes megfelelőt)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "Nincs motorom vagy robogóm, vagy nincs hozzá jogosítványom",
+      "#I feel unsafe riding in traffic": "A forgalomban nem érzem magam biztonságban",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "Kényelmetlen (időjárás, fáradság, csomagok szállítása)",
+      "#It costs too much (fuel, parking, insurance)": "Túl drága (üzemanyag, parkolás, biztosítás)",
+      "#Another reason": "Egyéb ok"
     },
     "ar": {
       "code": "ar",
@@ -806,10 +764,6 @@
       "#Petrol or electric. Stand-up e-scooters don't count here.": "بالبنزين أو بالكهرباء. السكوترات الكهربائية الواقفة لا تُحسب هنا.",
       "#Yes": "نعم",
       "#No": "لا",
-      "#Do you rarely ride a motorcycle or scooter because you do not have a motorcycle or scooter, or the licence for one?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أنه ليس لديك واحدة أو ليس لديك رخصة لها؟",
-      "#Do you rarely ride a motorcycle or scooter because you feel unsafe riding in traffic?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى شعور بعدم الأمان في حركة المرور؟",
-      "#Do you rarely ride a motorcycle or scooter because riding is uncomfortable (weather, effort, carrying things)?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أن ركوبها غير مريح (الطقس، التعب، حمل الأغراض)؟",
-      "#Do you rarely ride a motorcycle or scooter because it costs too much (fuel, parking, insurance)?": "هل تعود قلّة ركوبك الدراجة النارية أو السكوتر إلى أنها مكلفة جدًا (الوقود، المواقف، التأمين)؟",
       "#Motorcycle and scooter – Your trips": "الدراجة النارية والسكوتر – رحلاتك",
       "#SmartUrbanity - Motorcycle and scooter – Your trips": "SmartUrbanity - الدراجة النارية والسكوتر – رحلاتك",
       "#Motorcycle on a street": "دراجة نارية في شارع",
@@ -856,7 +810,13 @@
       "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
       "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
-      "#Other": "أخرى"
+      "#Other": "أخرى",
+      "#Why do you rarely ride a motorcycle or scooter? (Select all that apply)": "لماذا نادرًا ما تركب الدراجة النارية أو السكوتر؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have a motorcycle or scooter, or the licence for one": "ليست لدي دراجة نارية أو سكوتر، أو الرخصة اللازمة لهما",
+      "#I feel unsafe riding in traffic": "أشعر بعدم الأمان عند القيادة في الزحام",
+      "#Riding is uncomfortable (weather, effort, carrying things)": "القيادة غير مريحة (الطقس، الجهد، حمل الأغراض)",
+      "#It costs too much (fuel, parking, insurance)": "تكلفتها مرتفعة (الوقود، موقف السيارات، التأمين)",
+      "#Another reason": "سبب آخر"
     }
   }
 }

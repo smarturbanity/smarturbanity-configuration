@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Cycling – Road safety",
     "questionnaire_id": "smarturbanity_cycling_road_safety",
-    "questionnaire_version": "1.2.1",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -221,146 +221,50 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "When you cycle, do car drivers make you feel unsafe?",
-            "answer_key": "bike_car_drivers_unsafe_yn",
-            "question_type": "single_option",
+            "text": "When you cycle, who on the road makes you feel unsafe? (Select all that apply)",
+            "answer_key": "bike_unsafe_road_users",
+            "question_type": "multiple_options",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Car drivers",
+                "value": "car_drivers"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_car_drivers_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do motorcycle or scooter riders make you feel unsafe?",
-            "answer_key": "bike_motorcycle_riders_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Motorcycle or scooter riders",
+                "value": "motorcycle_riders"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_motorcycle_riders_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do bus drivers make you feel unsafe?",
-            "answer_key": "bike_bus_drivers_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Bus drivers",
+                "value": "bus_drivers"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_bus_drivers_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?",
-            "answer_key": "bike_delivery_vehicles_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Delivery vehicles (vans, cargo bikes, scooters)",
+                "value": "delivery_vehicles"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_delivery_vehicles_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do taxi or ride-hailing drivers make you feel unsafe?",
-            "answer_key": "bike_taxi_drivers_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Taxi or ride-hailing drivers",
+                "value": "taxi_drivers"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_taxi_drivers_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do other cyclists make you feel unsafe?",
-            "answer_key": "bike_cyclists_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Other cyclists",
+                "value": "cyclists"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_cyclists_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do e-scooter riders make you feel unsafe?",
-            "answer_key": "bike_e_scooter_riders_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "E-scooter riders",
+                "value": "e_scooter_riders"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "question_id": "bike_e_scooter_riders_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do pedestrians make you feel unsafe?",
-            "answer_key": "bike_pedestrians_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Pedestrians",
+                "value": "pedestrians"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Nobody in particular",
+                "value": "nobody",
+                "exclusive": true
               }
             ],
-            "question_id": "bike_pedestrians_unsafe_yn",
+            "required": false,
+            "question_id": "bike_unsafe_road_users",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -372,78 +276,34 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "When you cycle, do poor visibility or limited sightlines make you feel unsafe?",
-            "answer_key": "bike_poor_visibility_unsafe_yn",
-            "question_type": "single_option",
+            "text": "When you cycle, which of these situations make you feel unsafe? (Select all that apply)",
+            "answer_key": "bike_unsafe_situations",
+            "question_type": "multiple_options",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Poor visibility or limited sightlines",
+                "value": "poor_visibility"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Unsafe behaviour from drivers, riders or pedestrians",
+                "value": "unsafe_behaviour"
+              },
+              {
+                "text": "Crowding or conflicts with other road users",
+                "value": "crowding_conflicts"
+              },
+              {
+                "text": "No emergency services nearby",
+                "value": "no_emergency_services"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
               }
             ],
             "required": false,
-            "question_id": "bike_poor_visibility_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?",
-            "answer_key": "bike_unsafe_behaviour_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "bike_unsafe_behaviour_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, do crowding or conflicts with other road users make you feel unsafe?",
-            "answer_key": "bike_crowding_conflicts_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "bike_crowding_conflicts_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you cycle, does the absence of emergency services make you feel unsafe?",
-            "answer_key": "bike_no_emergency_services_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "bike_no_emergency_services_unsafe_yn",
+            "question_id": "bike_unsafe_situations",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -502,27 +362,29 @@
       "#It often makes me feel stressed or unsafe": "It often makes me feel stressed or unsafe",
       "#I change my route or time to avoid it": "I change my route or time to avoid it",
       "#Road Users": "Road Users",
-      "#When you cycle, do car drivers make you feel unsafe?": "When you cycle, do car drivers make you feel unsafe?",
-      "#Yes": "Yes",
-      "#No": "No",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "When you cycle, do motorcycle or scooter riders make you feel unsafe?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "When you cycle, do bus drivers make you feel unsafe?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "When you cycle, do taxi or ride-hailing drivers make you feel unsafe?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "When you cycle, do other cyclists make you feel unsafe?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "When you cycle, do e-scooter riders make you feel unsafe?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "When you cycle, do pedestrians make you feel unsafe?",
       "#Situations on the Road": "Situations on the Road",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "When you cycle, do poor visibility or limited sightlines make you feel unsafe?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "When you cycle, do crowding or conflicts with other road users make you feel unsafe?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "When you cycle, does the absence of emergency services make you feel unsafe?",
       "#Cycling – Road safety": "Cycling – Road safety",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - Cycling – Road safety",
       "#Bicycle and a route between two points": "Bicycle and a route between two points",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "When you cycle, who on the road makes you feel unsafe? (Select all that apply)",
+      "#Car drivers": "Car drivers",
+      "#Motorcycle or scooter riders": "Motorcycle or scooter riders",
+      "#Bus drivers": "Bus drivers",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Delivery vehicles (vans, cargo bikes, scooters)",
+      "#Taxi or ride-hailing drivers": "Taxi or ride-hailing drivers",
+      "#Other cyclists": "Other cyclists",
+      "#E-scooter riders": "E-scooter riders",
+      "#Pedestrians": "Pedestrians",
+      "#Nobody in particular": "Nobody in particular",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "When you cycle, which of these situations make you feel unsafe? (Select all that apply)",
+      "#Poor visibility or limited sightlines": "Poor visibility or limited sightlines",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsafe behaviour from drivers, riders or pedestrians",
+      "#Crowding or conflicts with other road users": "Crowding or conflicts with other road users",
+      "#No emergency services nearby": "No emergency services nearby",
+      "#None of these": "None of these"
     },
     "it": {
       "code": "it",
@@ -567,27 +429,29 @@
       "#It often makes me feel stressed or unsafe": "Spesso mi fa sentire stressato o poco sicuro",
       "#I change my route or time to avoid it": "Cambio percorso o orario per evitarlo",
       "#Road Users": "Utenti della strada",
-      "#When you cycle, do car drivers make you feel unsafe?": "Quando vai in bici, chi guida l’auto ti fa sentire in pericolo?",
-      "#Yes": "Sì",
-      "#No": "No",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "Quando vai in bici, chi guida moto o scooter ti fa sentire in pericolo?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "Quando vai in bici, chi guida l’autobus ti fa sentire in pericolo?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "Quando vai in bici, i veicoli per le consegne (furgoni, cargo bike, scooter) ti fanno sentire in pericolo?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "Quando vai in bici, chi guida taxi o servizi di ride-hailing ti fa sentire in pericolo?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "Quando vai in bici, altre persone in bici ti fanno sentire in pericolo?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "Quando vai in bici, chi va in monopattino elettrico ti fa sentire in pericolo?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "Quando vai in bici, chi va a piedi ti fa sentire in pericolo?",
       "#Situations on the Road": "Situazioni in strada",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "Quando vai in bici, la scarsa visibilità o la visuale limitata ti fanno sentire in pericolo?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Quando vai in bici, i comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi ti fanno sentire in pericolo?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "Quando vai in bici, l’affollamento o i conflitti con altri utenti della strada ti fanno sentire in pericolo?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "Quando vai in bici, l’assenza di servizi di emergenza ti fa sentire in pericolo?",
       "#Cycling – Road safety": "In bici – Sicurezza stradale",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - In bici – Sicurezza stradale",
       "#Bicycle and a route between two points": "Bicicletta e un percorso tra due punti",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Traffico, piste ciclabili, fondo stradale e altri utenti della strada <b>quando vai in bici</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Traffico, piste ciclabili, fondo stradale e altri utenti della strada <b>quando vai in bici</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "Quando vai in bici, chi ti fa sentire in pericolo sulla strada? (Seleziona tutte le opzioni applicabili)",
+      "#Car drivers": "Chi guida l’auto",
+      "#Motorcycle or scooter riders": "Chi guida moto o scooter",
+      "#Bus drivers": "Chi guida l’autobus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Veicoli per le consegne (furgoni, cargo bike, scooter)",
+      "#Taxi or ride-hailing drivers": "Chi guida taxi o servizi di ride-hailing",
+      "#Other cyclists": "Altre persone in bici",
+      "#E-scooter riders": "Chi va in monopattino elettrico",
+      "#Pedestrians": "Chi va a piedi",
+      "#Nobody in particular": "Nessuno in particolare",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "Quando vai in bici, quali di queste situazioni ti fanno sentire in pericolo? (Seleziona tutte le opzioni applicabili)",
+      "#Poor visibility or limited sightlines": "Scarsa visibilità o visuale limitata",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi",
+      "#Crowding or conflicts with other road users": "Affollamento o conflitti con altre persone in strada",
+      "#No emergency services nearby": "Nessun servizio di emergenza nelle vicinanze",
+      "#None of these": "Nessuna di queste"
     },
     "fr": {
       "code": "fr",
@@ -632,27 +496,29 @@
       "#It often makes me feel stressed or unsafe": "Cela me stresse ou me fait souvent sentir en danger",
       "#I change my route or time to avoid it": "Je change d'itinéraire ou d'horaire pour l'éviter",
       "#Road Users": "Personnes sur la route",
-      "#When you cycle, do car drivers make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes qui conduisent une voiture ?",
-      "#Yes": "Oui",
-      "#No": "Non",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes à moto ou en scooter ?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes qui conduisent un bus ?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des véhicules de livraison (fourgonnettes, vélos cargo, scooters) ?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes qui conduisent un taxi ou un VTC ?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des autres cyclistes ?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes en trottinette électrique ?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause des personnes à pied ?",
       "#Situations on the Road": "Situations sur la route",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause d’une mauvaise visibilité ou d’un champ de vision limité ?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause de comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent ?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause de la foule ou de conflits avec d’autres personnes sur la route ?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "Lorsque vous faites du vélo, vous sentez-vous en danger à cause de l’absence de services d’urgence ?",
       "#Cycling – Road safety": "Vélo – Sécurité routière",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - Vélo – Sécurité routière",
       "#Bicycle and a route between two points": "Vélo et un itinéraire entre deux points",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>La circulation, les pistes cyclables, l’état des routes et les autres personnes sur la route <b>lorsque vous faites du vélo</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>La circulation, les pistes cyclables, l’état des routes et les autres personnes sur la route <b>lorsque vous faites du vélo</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "Lorsque vous faites du vélo, qui sur la route vous fait vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Car drivers": "Les personnes qui conduisent une voiture",
+      "#Motorcycle or scooter riders": "Les personnes à moto ou en scooter",
+      "#Bus drivers": "Les personnes qui conduisent un bus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Les véhicules de livraison (fourgonnettes, vélos cargo, scooters)",
+      "#Taxi or ride-hailing drivers": "Les personnes qui conduisent un taxi ou un VTC",
+      "#Other cyclists": "Les autres cyclistes",
+      "#E-scooter riders": "Les personnes en trottinette électrique",
+      "#Pedestrians": "Les personnes à pied",
+      "#Nobody in particular": "Personne en particulier",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "Lorsque vous faites du vélo, lesquelles de ces situations vous font vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Poor visibility or limited sightlines": "Mauvaise visibilité ou champ de vision limité",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Les comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent",
+      "#Crowding or conflicts with other road users": "Forte affluence ou conflits avec d’autres personnes qui circulent",
+      "#No emergency services nearby": "Aucun service d’urgence à proximité",
+      "#None of these": "Aucun de ces éléments"
     },
     "de": {
       "code": "de",
@@ -697,27 +563,29 @@
       "#It often makes me feel stressed or unsafe": "Oft fühle ich mich dadurch gestresst oder unsicher",
       "#I change my route or time to avoid it": "Ich ändere Route oder Zeit, um es zu vermeiden",
       "#Road Users": "Verkehrsteilnehmende",
-      "#When you cycle, do car drivers make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Autofahrende unsicher?",
-      "#Yes": "Ja",
-      "#No": "Nein",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Motorrad- oder Rollerfahrende unsicher?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Busfahrende unsicher?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Lieferfahrzeuge (Transporter, Lastenräder, Roller) unsicher?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Taxi- oder Fahrdienstfahrende unsicher?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch andere Radfahrende unsicher?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch E-Scooter-Fahrende unsicher?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch zu Fuß Gehende unsicher?",
       "#Situations on the Road": "Situationen im Straßenverkehr",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch schlechte Sicht oder eingeschränkte Sichtlinien unsicher?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden unsicher?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch Gedränge oder Konflikte mit anderen Verkehrsteilnehmenden unsicher?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "Fühlen Sie sich beim Radfahren durch das Fehlen von Rettungsdiensten unsicher?",
       "#Cycling – Road safety": "Radfahren – Verkehrssicherheit",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - Radfahren – Verkehrssicherheit",
       "#Bicycle and a route between two points": "Fahrrad und eine Route zwischen zwei Punkten",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Verkehr, Radwege, Straßenbelag und andere Verkehrsteilnehmende, <b>wenn Sie Rad fahren</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Verkehr, Radwege, Straßenbelag und andere Verkehrsteilnehmende, <b>wenn Sie Rad fahren</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "Wer im Straßenverkehr gibt Ihnen beim Radfahren ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Car drivers": "Autofahrende",
+      "#Motorcycle or scooter riders": "Motorrad- oder Rollerfahrende",
+      "#Bus drivers": "Busfahrende",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Lieferfahrzeuge (Transporter, Lastenräder, Roller)",
+      "#Taxi or ride-hailing drivers": "Taxi- oder Fahrdienstfahrende",
+      "#Other cyclists": "Andere Radfahrende",
+      "#E-scooter riders": "E-Scooter-Fahrende",
+      "#Pedestrians": "Zu Fuß Gehende",
+      "#Nobody in particular": "Niemand Bestimmtes",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "Welche dieser Situationen geben Ihnen beim Radfahren ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Poor visibility or limited sightlines": "Schlechte Sicht oder eingeschränkte Sichtweite",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden",
+      "#Crowding or conflicts with other road users": "Überfüllung oder Konflikte mit anderen Verkehrsteilnehmenden",
+      "#No emergency services nearby": "Keine Rettungsdienste in der Nähe",
+      "#None of these": "Keine davon"
     },
     "tr": {
       "code": "tr",
@@ -762,27 +630,29 @@
       "#It often makes me feel stressed or unsafe": "Sık sık stresli veya güvensiz hissetmeme neden olur",
       "#I change my route or time to avoid it": "Bundan kaçınmak için güzergâhımı veya saatimi değiştiririm",
       "#Road Users": "Yol kullanıcıları",
-      "#When you cycle, do car drivers make you feel unsafe?": "Bisiklet sürerken araba sürücüleri kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#Yes": "Evet",
-      "#No": "Hayır",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "Bisiklet sürerken motosiklet veya scooter sürücüleri kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "Bisiklet sürerken otobüs şoförleri kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "Bisiklet sürerken teslimat araçları (kamyonet, kargo bisikleti, scooter) kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "Bisiklet sürerken taksi veya uygulama üzerinden çağrılan araç sürücüleri kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "Bisiklet sürerken diğer bisikletliler kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "Bisiklet sürerken e-scooter kullanıcıları kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "Bisiklet sürerken yayalar kendinizi güvensiz hissetmenize neden oluyor mu?",
       "#Situations on the Road": "Yoldaki durumlar",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "Bisiklet sürerken kötü görüş veya sınırlı görüş açısı kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Bisiklet sürerken sürücülerin veya yayaların güvensiz davranışları kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "Bisiklet sürerken kalabalık veya diğer yol kullanıcılarıyla yaşanan anlaşmazlıklar kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "Bisiklet sürerken acil durum hizmetlerinin olmaması kendinizi güvensiz hissetmenize neden oluyor mu?",
       "#Cycling – Road safety": "Bisiklet – Yol güvenliği",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - Bisiklet – Yol güvenliği",
       "#Bicycle and a route between two points": "Bisiklet ve iki nokta arasında bir güzergâh",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Bisiklet sürerken</b> trafik, bisiklet yolları, yol yüzeyleri ve diğer yol kullanıcıları.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Bisiklet sürerken</b> trafik, bisiklet yolları, yol yüzeyleri ve diğer yol kullanıcıları.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "Bisiklet sürerken yolda kimler kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Car drivers": "Araba sürücüleri",
+      "#Motorcycle or scooter riders": "Motosiklet veya scooter sürücüleri",
+      "#Bus drivers": "Otobüs şoförleri",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Teslimat araçları (kamyonet, kargo bisikleti, scooter)",
+      "#Taxi or ride-hailing drivers": "Taksi veya uygulama üzerinden çağrılan araç sürücüleri",
+      "#Other cyclists": "Diğer bisikletliler",
+      "#E-scooter riders": "E-scooter kullanıcıları",
+      "#Pedestrians": "Yayalar",
+      "#Nobody in particular": "Özellikle kimse değil",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "Bisiklet sürerken bu durumlardan hangileri kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Poor visibility or limited sightlines": "Kötü görüş veya sınırlı görüş mesafesi",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Sürücülerin veya yayaların güvensiz davranışları",
+      "#Crowding or conflicts with other road users": "Kalabalık veya diğer yol kullanıcılarıyla tartışma ya da sürtüşme",
+      "#No emergency services nearby": "Yakınlarda acil durum hizmetlerinin olmaması",
+      "#None of these": "Bunların hiçbiri"
     },
     "fa": {
       "code": "fa",
@@ -827,27 +697,29 @@
       "#It often makes me feel stressed or unsafe": "اغلب باعث می‌شود احساس تنش یا ناامنی کنم",
       "#I change my route or time to avoid it": "برای دوری از آن، مسیر یا زمان خود را تغییر می‌دهم",
       "#Road Users": "کاربران راه",
-      "#When you cycle, do car drivers make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا رانندگان خودرو باعث می‌شوند احساس ناامنی کنید؟",
-      "#Yes": "بله",
-      "#No": "خیر",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا موتورسواران یا اسکوترسواران باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do bus drivers make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا رانندگان اتوبوس باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا وسایل نقلیه تحویل کالا (ون، دوچرخه باری، اسکوتر) باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا رانندگان تاکسی یا تاکسی اینترنتی باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do other cyclists make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا دیگر دوچرخه‌سواران باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا کاربران اسکوتر برقی باعث می‌شوند احساس ناامنی کنید؟",
-      "#When you cycle, do pedestrians make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا عابران پیاده باعث می‌شوند احساس ناامنی کنید؟",
       "#Situations on the Road": "موقعیت‌ها در خیابان",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا دید ضعیف یا میدان دید محدود باعث می‌شود احساس ناامنی کنید؟",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا رفتار ناایمن رانندگان، دوچرخه‌سواران یا عابران پیاده باعث می‌شود احساس ناامنی کنید؟",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا شلوغی یا درگیری با دیگر کاربران راه باعث می‌شود احساس ناامنی کنید؟",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "هنگام دوچرخه‌سواری، آیا نبود خدمات اضطراری باعث می‌شود احساس ناامنی کنید؟",
       "#Cycling – Road safety": "دوچرخه‌سواری – ایمنی راه",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - دوچرخه‌سواری – ایمنی راه",
       "#Bicycle and a route between two points": "دوچرخه و مسیری میان دو نقطه",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ترافیک، مسیر دوچرخه، سطح جاده و دیگر کاربران راه <b>هنگام دوچرخه‌سواری</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ترافیک، مسیر دوچرخه، سطح جاده و دیگر کاربران راه <b>هنگام دوچرخه‌سواری</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "هنگام دوچرخه‌سواری، چه کسانی در جاده باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Car drivers": "رانندگان خودرو",
+      "#Motorcycle or scooter riders": "موتورسواران یا اسکوترسواران",
+      "#Bus drivers": "رانندگان اتوبوس",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "وسایل نقلیه تحویل کالا (ون، دوچرخه باری، اسکوتر)",
+      "#Taxi or ride-hailing drivers": "رانندگان تاکسی یا تاکسی اینترنتی",
+      "#Other cyclists": "دیگر دوچرخه‌سواران",
+      "#E-scooter riders": "کاربران اسکوتر برقی",
+      "#Pedestrians": "عابران پیاده",
+      "#Nobody in particular": "هیچ‌کس به‌طور خاص",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "هنگام دوچرخه‌سواری، کدام یک از این موقعیت‌ها باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Poor visibility or limited sightlines": "دید ضعیف یا میدان دید محدود",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "رفتار ناایمن رانندگان، سواران یا عابران پیاده",
+      "#Crowding or conflicts with other road users": "شلوغی یا برخورد و تعارض با سایر کاربران راه",
+      "#No emergency services nearby": "نبود خدمات اورژانس در نزدیکی",
+      "#None of these": "هیچ‌کدام از این‌ها"
     },
     "hu": {
       "code": "hu",
@@ -892,27 +764,29 @@
       "#It often makes me feel stressed or unsafe": "Gyakran feszültté tesz, vagy nem érzem tőle biztonságban magam",
       "#I change my route or time to avoid it": "Megváltoztatom az útvonalat vagy az időpontot, hogy elkerüljem",
       "#Road Users": "Közlekedők",
-      "#When you cycle, do car drivers make you feel unsafe?": "Kerékpározás közben az autóvezetők miatt érzi magát veszélyben?",
-      "#Yes": "Igen",
-      "#No": "Nem",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "Kerékpározás közben a motorosok vagy robogósok miatt érzi magát veszélyben?",
-      "#When you cycle, do bus drivers make you feel unsafe?": "Kerékpározás közben a buszvezetők miatt érzi magát veszélyben?",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "Kerékpározás közben az áruszállító járművek (furgonok, teherkerékpárok, robogók) miatt érzi magát veszélyben?",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "Kerékpározás közben a taxi- vagy személyszállító szolgáltatás vezetői miatt érzi magát veszélyben?",
-      "#When you cycle, do other cyclists make you feel unsafe?": "Kerékpározás közben a többi kerékpáros miatt érzi magát veszélyben?",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "Kerékpározás közben az elektromosroller-használók miatt érzi magát veszélyben?",
-      "#When you cycle, do pedestrians make you feel unsafe?": "Kerékpározás közben a gyalogosok miatt érzi magát veszélyben?",
       "#Situations on the Road": "Helyzetek az úton",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "Kerékpározás közben a rossz látási viszonyok vagy a korlátozott rálátás miatt érzi magát veszélyben?",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Kerékpározás közben a járművezetők, kerékpárosok vagy gyalogosok veszélyes viselkedése miatt érzi magát veszélyben?",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "Kerékpározás közben a tömeg vagy a más közlekedőkkel való konfliktusok miatt érzi magát veszélyben?",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "Kerékpározás közben a mentő- és sürgősségi szolgálatok hiánya miatt érzi magát veszélyben?",
       "#Cycling – Road safety": "Kerékpározás – Közlekedésbiztonság",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - Kerékpározás – Közlekedésbiztonság",
       "#Bicycle and a route between two points": "Kerékpár és egy útvonal két pont között",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Forgalom, kerékpársávok, útburkolatok és más közlekedők <b>kerékpározás közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Forgalom, kerékpársávok, útburkolatok és más közlekedők <b>kerékpározás közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "Kerékpározás közben kik miatt érzi magát veszélyben az úton? (Jelölje meg az összes megfelelőt)",
+      "#Car drivers": "Autóvezetők",
+      "#Motorcycle or scooter riders": "Motorosok vagy robogósok",
+      "#Bus drivers": "Buszvezetők",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Áruszállító járművek (furgonok, teherkerékpárok, robogók)",
+      "#Taxi or ride-hailing drivers": "Taxi- vagy személyszállító szolgáltatás vezetői",
+      "#Other cyclists": "Más kerékpárosok",
+      "#E-scooter riders": "Elektromosroller-használók",
+      "#Pedestrians": "Gyalogosok",
+      "#Nobody in particular": "Senki konkrétan",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "Kerékpározás közben mely helyzetek miatt érzi magát veszélyben? (Jelölje meg az összes megfelelőt)",
+      "#Poor visibility or limited sightlines": "Rossz látási viszonyok vagy korlátozott beláthatóság",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "A járművezetők, kerékpárosok vagy gyalogosok veszélyes viselkedése",
+      "#Crowding or conflicts with other road users": "Zsúfoltság vagy konfliktus más közlekedőkkel",
+      "#No emergency services nearby": "Nincs a közelben mentő- vagy sürgősségi szolgálat",
+      "#None of these": "Ezek közül egyik sem"
     },
     "ar": {
       "code": "ar",
@@ -957,27 +831,29 @@
       "#It often makes me feel stressed or unsafe": "تجعلني غالبًا أشعر بالتوتر أو بعدم الأمان",
       "#I change my route or time to avoid it": "أغيّر طريقي أو وقتي لتجنبها",
       "#Road Users": "من يستخدمون الطريق",
-      "#When you cycle, do car drivers make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يقودون السيارات بعدم الأمان؟",
-      "#Yes": "نعم",
-      "#No": "لا",
-      "#When you cycle, do motorcycle or scooter riders make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يقودون الدراجات النارية أو السكوترات بعدم الأمان؟",
-      "#When you cycle, do bus drivers make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يقودون الحافلات بعدم الأمان؟",
-      "#When you cycle, do delivery vehicles (vans, cargo bikes, scooters) make you feel unsafe?": "عند ركوب الدراجة، هل تُشعرك مركبات التوصيل (شاحنات صغيرة، دراجات شحن، سكوتر) بعدم الأمان؟",
-      "#When you cycle, do taxi or ride-hailing drivers make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يقودون سيارات الأجرة أو سيارات خدمات الطلب عبر التطبيقات بعدم الأمان؟",
-      "#When you cycle, do other cyclists make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يركبون الدراجات الآخرون بعدم الأمان؟",
-      "#When you cycle, do e-scooter riders make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك من يستخدمون السكوتر الكهربائي بعدم الأمان؟",
-      "#When you cycle, do pedestrians make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك المشاة بعدم الأمان؟",
       "#Situations on the Road": "مواقف على الطريق",
-      "#When you cycle, do poor visibility or limited sightlines make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك ضعف الرؤية أو محدودية مجال النظر بعدم الأمان؟",
-      "#When you cycle, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك السلوك غير الآمن ممن يقودون أو يركبون الدراجات أو يمشون بعدم الأمان؟",
-      "#When you cycle, do crowding or conflicts with other road users make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك الازدحام أو النزاعات مع آخرين على الطريق بعدم الأمان؟",
-      "#When you cycle, does the absence of emergency services make you feel unsafe?": "عند ركوب الدراجة، هل يُشعرك غياب خدمات الطوارئ بعدم الأمان؟",
       "#Cycling – Road safety": "ركوب الدراجة – السلامة على الطريق",
       "#SmartUrbanity - Cycling – Road safety": "SmartUrbanity - ركوب الدراجة – السلامة على الطريق",
       "#Bicycle and a route between two points": "دراجة هوائية ومسار بين نقطتين",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>حركة المرور ومسارات الدراجات وأسطح الطرق ومستخدمو الطريق الآخرون <b>عند ركوب الدراجة</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>Traffic, cycle lanes, road surfaces and other road users <b>when you cycle</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>حركة المرور ومسارات الدراجات وأسطح الطرق ومستخدمو الطريق الآخرون <b>عند ركوب الدراجة</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you cycle, who on the road makes you feel unsafe? (Select all that apply)": "عند ركوب الدراجة الهوائية، من على الطريق يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Car drivers": "سائقو السيارات",
+      "#Motorcycle or scooter riders": "سائقو الدراجات النارية أو السكوترات",
+      "#Bus drivers": "سائقو الحافلات",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "مركبات التوصيل (شاحنات صغيرة، دراجات الشحن، سكوترات)",
+      "#Taxi or ride-hailing drivers": "سائقو سيارات الأجرة أو خدمات النقل عبر التطبيقات",
+      "#Other cyclists": "راكبو الدراجات الهوائية الآخرون",
+      "#E-scooter riders": "مستخدمو السكوتر الكهربائي",
+      "#Pedestrians": "المشاة",
+      "#Nobody in particular": "لا أحد بعينه",
+      "#When you cycle, which of these situations make you feel unsafe? (Select all that apply)": "عند ركوب الدراجة الهوائية، أي من هذه المواقف يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Poor visibility or limited sightlines": "ضعف الرؤية أو محدودية مجال النظر",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "سلوك غير آمن من السائقين أو الراكبين أو المشاة",
+      "#Crowding or conflicts with other road users": "الازدحام أو التعارض مع أشخاص آخرين يستخدمون الطريق",
+      "#No emergency services nearby": "عدم وجود خدمات طوارئ قريبة",
+      "#None of these": "لا شيء مما سبق"
     }
   }
 }

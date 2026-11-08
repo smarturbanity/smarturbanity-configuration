@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Car – Your trips",
     "questionnaire_id": "smarturbanity_car_habits",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -50,140 +50,46 @@
             "question_version": "1.1.0"
           },
           {
-            "text": "Do you rarely travel by car because you do not have a car or a driving licence?",
-            "answer_key": "not_car_no_car_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
+            "text": "Why do you rarely travel by car? (Select all that apply)",
+            "answer_key": "not_car_reasons",
+            "question_type": "multiple_options",
             "show_if": {
               "car_weekly": [
                 "no"
               ]
             },
-            "question_id": "not_car_no_car_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?",
-            "answer_key": "not_car_cost_yn",
-            "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "I don't have a car or a driving licence",
+                "value": "no_car"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "car_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_car_cost_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely travel by car because traffic and finding a parking space take too long?",
-            "answer_key": "not_car_time_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "It costs too much (fuel, parking, tolls, insurance)",
+                "value": "cost"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "car_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_car_time_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely travel by car because driving is stressful or tiring for you?",
-            "answer_key": "not_car_stress_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Traffic and finding a parking space take too long",
+                "value": "time"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "car_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_car_stress_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely travel by car because you feel unsafe on the road by car?",
-            "answer_key": "not_car_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Driving is stressful or tiring for me",
+                "value": "stress"
               },
               {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "show_if": {
-              "car_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_car_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?",
-            "answer_key": "not_car_other_ways_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
+                "text": "I feel unsafe on the road by car",
+                "value": "unsafe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "I prefer other ways of getting around, for example for the environment",
+                "value": "other_ways"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
               }
             ],
-            "show_if": {
-              "car_weekly": [
-                "no"
-              ]
-            },
-            "question_id": "not_car_other_ways_yn",
+            "required": false,
+            "question_id": "not_car_reasons",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -435,12 +341,6 @@
       "#As the driver or as a passenger, also car sharing.": "As the driver or as a passenger, also car sharing.",
       "#Yes": "Yes",
       "#No": "No",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Do you rarely travel by car because you do not have a car or a driving licence?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Do you rarely travel by car because traffic and finding a parking space take too long?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Do you rarely travel by car because driving is stressful or tiring for you?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Do you rarely travel by car because you feel unsafe on the road by car?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?",
       "#Car – Your trips": "Car – Your trips",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Car – Your trips",
       "#Car on a street": "Car on a street",
@@ -486,7 +386,15 @@
       "#I reduce how often I make that trip": "I reduce how often I make that trip",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
       "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
-      "#Other": "Other"
+      "#Other": "Other",
+      "#Why do you rarely travel by car? (Select all that apply)": "Why do you rarely travel by car? (Select all that apply)",
+      "#I don't have a car or a driving licence": "I don't have a car or a driving licence",
+      "#It costs too much (fuel, parking, tolls, insurance)": "It costs too much (fuel, parking, tolls, insurance)",
+      "#Traffic and finding a parking space take too long": "Traffic and finding a parking space take too long",
+      "#Driving is stressful or tiring for me": "Driving is stressful or tiring for me",
+      "#I feel unsafe on the road by car": "I feel unsafe on the road by car",
+      "#I prefer other ways of getting around, for example for the environment": "I prefer other ways of getting around, for example for the environment",
+      "#Another reason": "Another reason"
     },
     "it": {
       "code": "it",
@@ -495,12 +403,6 @@
       "#As the driver or as a passenger, also car sharing.": "Alla guida o come passeggero, anche con il car sharing.",
       "#Yes": "Sì",
       "#No": "No",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Usi poco l'auto perché non hai un'auto o la patente?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Usi poco l'auto perché costa troppo (carburante, parcheggio, pedaggi, assicurazione)?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Usi poco l'auto perché il traffico e la ricerca del parcheggio richiedono troppo tempo?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Usi poco l'auto perché guidare è stressante o faticoso per te?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Usi poco l'auto perché in auto non ti senti al sicuro sulla strada?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Usi poco l'auto perché preferisci altri modi di spostarti, per esempio per l'ambiente?",
       "#Car – Your trips": "In auto – I tuoi spostamenti",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - In auto – I tuoi spostamenti",
       "#Car on a street": "Auto su una strada",
@@ -546,7 +448,15 @@
       "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bike sharing invece della mia bicicletta)",
       "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
-      "#Other": "Altro"
+      "#Other": "Altro",
+      "#Why do you rarely travel by car? (Select all that apply)": "Perché usi poco l’auto? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have a car or a driving licence": "Non ho un’auto o la patente",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Costa troppo (carburante, parcheggio, pedaggi, assicurazione)",
+      "#Traffic and finding a parking space take too long": "Il traffico e la ricerca del parcheggio richiedono troppo tempo",
+      "#Driving is stressful or tiring for me": "Guidare è stressante o faticoso per me",
+      "#I feel unsafe on the road by car": "In auto non mi sento al sicuro sulla strada",
+      "#I prefer other ways of getting around, for example for the environment": "Preferisco altri modi di spostarmi, per esempio per l’ambiente",
+      "#Another reason": "Un altro motivo"
     },
     "fr": {
       "code": "fr",
@@ -555,12 +465,6 @@
       "#As the driver or as a passenger, also car sharing.": "Comme conducteur ou comme passager, y compris en autopartage.",
       "#Yes": "Oui",
       "#No": "Non",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Utilisez-vous rarement la voiture parce que vous n'avez pas de voiture ou de permis de conduire ?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Utilisez-vous rarement la voiture parce qu'elle coûte trop cher (carburant, stationnement, péages, assurance) ?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Utilisez-vous rarement la voiture parce que les embouteillages et la recherche d'une place prennent trop de temps ?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Utilisez-vous rarement la voiture parce que conduire est stressant ou fatigant pour vous ?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Utilisez-vous rarement la voiture parce que vous ne vous sentez pas en sécurité sur la route en voiture ?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Utilisez-vous rarement la voiture parce que vous préférez d'autres façons de vous déplacer, par exemple pour l'environnement ?",
       "#Car – Your trips": "Voiture – Vos trajets",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Voiture – Vos trajets",
       "#Car on a street": "Voiture dans une rue",
@@ -606,7 +510,15 @@
       "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
       "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
-      "#Other": "Autre"
+      "#Other": "Autre",
+      "#Why do you rarely travel by car? (Select all that apply)": "Pourquoi utilisez-vous rarement la voiture ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have a car or a driving licence": "Je n’ai pas de voiture ou de permis de conduire",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Elle coûte trop cher (carburant, stationnement, péages, assurance)",
+      "#Traffic and finding a parking space take too long": "Les embouteillages et la recherche d’une place prennent trop de temps",
+      "#Driving is stressful or tiring for me": "Conduire est stressant ou fatigant pour moi",
+      "#I feel unsafe on the road by car": "Je ne me sens pas en sécurité sur la route en voiture",
+      "#I prefer other ways of getting around, for example for the environment": "Je préfère d’autres façons de me déplacer, par exemple pour l’environnement",
+      "#Another reason": "Une autre raison"
     },
     "de": {
       "code": "de",
@@ -615,12 +527,6 @@
       "#As the driver or as a passenger, also car sharing.": "Als Fahrer oder Fahrerin oder als Mitfahrende, auch Carsharing.",
       "#Yes": "Ja",
       "#No": "Nein",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Fahren Sie selten mit dem Auto, weil Sie kein Auto oder keinen Führerschein haben?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Fahren Sie selten mit dem Auto, weil es zu teuer ist (Kraftstoff, Parken, Maut, Versicherung)?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Fahren Sie selten mit dem Auto, weil Stau und Parkplatzsuche zu lange dauern?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Fahren Sie selten mit dem Auto, weil Autofahren für Sie stressig oder anstrengend ist?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Fahren Sie selten mit dem Auto, weil Sie sich im Auto auf der Straße unsicher fühlen?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Fahren Sie selten mit dem Auto, weil Sie andere Arten der Fortbewegung bevorzugen, zum Beispiel der Umwelt zuliebe?",
       "#Car – Your trips": "Auto – Ihre Wege",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Auto – Ihre Wege",
       "#Car on a street": "Auto auf einer Straße",
@@ -666,7 +572,15 @@
       "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
       "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
-      "#Other": "Anderes"
+      "#Other": "Anderes",
+      "#Why do you rarely travel by car? (Select all that apply)": "Warum fahren Sie selten mit dem Auto? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have a car or a driving licence": "Ich habe kein Auto oder keinen Führerschein",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Es ist zu teuer (Kraftstoff, Parken, Maut, Versicherung)",
+      "#Traffic and finding a parking space take too long": "Stau und Parkplatzsuche dauern zu lange",
+      "#Driving is stressful or tiring for me": "Autofahren ist für mich stressig oder anstrengend",
+      "#I feel unsafe on the road by car": "Ich fühle mich im Auto auf der Straße unsicher",
+      "#I prefer other ways of getting around, for example for the environment": "Ich bevorzuge andere Arten der Fortbewegung, zum Beispiel der Umwelt zuliebe",
+      "#Another reason": "Ein anderer Grund"
     },
     "tr": {
       "code": "tr",
@@ -675,12 +589,6 @@
       "#As the driver or as a passenger, also car sharing.": "Sürücü veya yolcu olarak, araç paylaşımı da dahil.",
       "#Yes": "Evet",
       "#No": "Hayır",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Arabanız veya ehliyetiniz olmadığı için mi arabayı nadiren kullanıyorsunuz?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Çok pahalı olduğu için mi (yakıt, otopark, geçiş ücretleri, sigorta) arabayı nadiren kullanıyorsunuz?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Trafik ve park yeri aramak çok uzun sürdüğü için mi arabayı nadiren kullanıyorsunuz?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Araba kullanmak sizin için stresli veya yorucu olduğu için mi arabayı nadiren kullanıyorsunuz?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Arabayla yolda kendinizi güvende hissetmediğiniz için mi arabayı nadiren kullanıyorsunuz?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Örneğin çevre için başka ulaşım yollarını tercih ettiğiniz için mi arabayı nadiren kullanıyorsunuz?",
       "#Car – Your trips": "Araba – Yolculuklarınız",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Araba – Yolculuklarınız",
       "#Car on a street": "Sokakta bir araba",
@@ -726,7 +634,15 @@
       "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
       "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
-      "#Other": "Diğer"
+      "#Other": "Diğer",
+      "#Why do you rarely travel by car? (Select all that apply)": "Neden nadiren arabayla yolculuk ediyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have a car or a driving licence": "Arabam veya ehliyetim yok",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Çok pahalı (yakıt, otopark, geçiş ücretleri, sigorta)",
+      "#Traffic and finding a parking space take too long": "Trafik ve park yeri aramak çok uzun sürüyor",
+      "#Driving is stressful or tiring for me": "Araba kullanmak benim için stresli veya yorucu",
+      "#I feel unsafe on the road by car": "Arabayla yolda kendimi güvende hissetmiyorum",
+      "#I prefer other ways of getting around, for example for the environment": "Örneğin çevre için başka ulaşım yollarını tercih ediyorum",
+      "#Another reason": "Başka bir neden"
     },
     "fa": {
       "code": "fa",
@@ -735,12 +651,6 @@
       "#As the driver or as a passenger, also car sharing.": "چه راننده باشید چه سرنشین، و همچنین خودروی اشتراکی.",
       "#Yes": "بله",
       "#No": "خیر",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "آیا کم با خودرو سفر می‌کنید چون خودرو یا گواهینامهٔ رانندگی ندارید؟",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "آیا کم با خودرو سفر می‌کنید چون خیلی گران تمام می‌شود (سوخت، پارکینگ، عوارض، بیمه)؟",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "آیا کم با خودرو سفر می‌کنید چون ترافیک و پیدا کردن جای پارک خیلی طول می‌کشد؟",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "آیا کم با خودرو سفر می‌کنید چون رانندگی برایتان پراسترس یا خسته‌کننده است؟",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "آیا کم با خودرو سفر می‌کنید چون با خودرو در جاده احساس امنیت نمی‌کنید؟",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "آیا کم با خودرو سفر می‌کنید چون روش‌های دیگر رفت‌وآمد را ترجیح می‌دهید، مثلاً به خاطر محیط زیست؟",
       "#Car – Your trips": "خودرو – سفرهای شما",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - خودرو – سفرهای شما",
       "#Car on a street": "خودرو در خیابان",
@@ -786,7 +696,15 @@
       "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
       "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
-      "#Other": "سایر"
+      "#Other": "سایر",
+      "#Why do you rarely travel by car? (Select all that apply)": "چرا به‌ندرت با خودرو سفر می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have a car or a driving licence": "خودرو یا گواهینامه رانندگی ندارم",
+      "#It costs too much (fuel, parking, tolls, insurance)": "هزینه‌اش زیاد است (سوخت، پارکینگ، عوارض، بیمه)",
+      "#Traffic and finding a parking space take too long": "ترافیک و پیدا کردن جای پارک زمان زیادی می‌برد",
+      "#Driving is stressful or tiring for me": "رانندگی برای من استرس‌زا یا خسته‌کننده است",
+      "#I feel unsafe on the road by car": "با خودرو در جاده احساس ناامنی می‌کنم",
+      "#I prefer other ways of getting around, for example for the environment": "ترجیح می‌دهم از راه‌های دیگری جابه‌جا شوم، مثلاً برای حفظ محیط زیست",
+      "#Another reason": "دلیل دیگر"
     },
     "hu": {
       "code": "hu",
@@ -795,12 +713,6 @@
       "#As the driver or as a passenger, also car sharing.": "Vezetőként vagy utasként, az autómegosztás is számít.",
       "#Yes": "Igen",
       "#No": "Nem",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "Azért utazik ritkán autóval, mert nincs autója vagy jogosítványa?",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "Azért utazik ritkán autóval, mert túl drága (üzemanyag, parkolás, útdíj, biztosítás)?",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "Azért utazik ritkán autóval, mert a dugók és a parkolóhely keresése túl sokáig tart?",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "Azért utazik ritkán autóval, mert a vezetés stresszes vagy fárasztó Önnek?",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "Azért utazik ritkán autóval, mert autóval nem érzi magát biztonságban az úton?",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "Azért utazik ritkán autóval, mert más közlekedési módokat részesít előnyben, például a környezet miatt?",
       "#Car – Your trips": "Autó – Az Ön útjai",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - Autó – Az Ön útjai",
       "#Car on a street": "Autó az utcán",
@@ -846,7 +758,15 @@
       "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett közösségi kerékpárt használok)",
       "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
-      "#Other": "Egyéb"
+      "#Other": "Egyéb",
+      "#Why do you rarely travel by car? (Select all that apply)": "Miért utazik ritkán autóval? (Jelölje meg az összes megfelelőt)",
+      "#I don't have a car or a driving licence": "Nincs autóm vagy jogosítványom",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Túl drága (üzemanyag, parkolás, útdíj, biztosítás)",
+      "#Traffic and finding a parking space take too long": "A dugók és a parkolóhely keresése túl sokáig tart",
+      "#Driving is stressful or tiring for me": "A vezetés stresszes vagy fárasztó számomra",
+      "#I feel unsafe on the road by car": "Autóval nem érzem magam biztonságban az úton",
+      "#I prefer other ways of getting around, for example for the environment": "Más közlekedési módokat részesítek előnyben, például a környezet miatt",
+      "#Another reason": "Egyéb ok"
     },
     "ar": {
       "code": "ar",
@@ -855,12 +775,6 @@
       "#As the driver or as a passenger, also car sharing.": "سواء كنت السائق أو راكبًا، وتشمل مشاركة السيارة.",
       "#Yes": "نعم",
       "#No": "لا",
-      "#Do you rarely travel by car because you do not have a car or a driving licence?": "هل تعود قلّة تنقلك بالسيارة إلى أنه ليس لديك سيارة أو رخصة قيادة؟",
-      "#Do you rarely travel by car because it costs too much (fuel, parking, tolls, insurance)?": "هل تعود قلّة تنقلك بالسيارة إلى أنها مكلفة جدًا (الوقود، المواقف، رسوم الطرق، التأمين)؟",
-      "#Do you rarely travel by car because traffic and finding a parking space take too long?": "هل تعود قلّة تنقلك بالسيارة إلى أن الزحام والبحث عن موقف يستغرقان وقتًا طويلًا؟",
-      "#Do you rarely travel by car because driving is stressful or tiring for you?": "هل تعود قلّة تنقلك بالسيارة إلى أن القيادة مرهقة أو متعبة لك؟",
-      "#Do you rarely travel by car because you feel unsafe on the road by car?": "هل تعود قلّة تنقلك بالسيارة إلى شعور بعدم الأمان على الطريق بالسيارة؟",
-      "#Do you rarely travel by car because you prefer other ways of getting around, for example for the environment?": "هل تعود قلّة تنقلك بالسيارة إلى أنك تفضّل طرقًا أخرى للتنقل، مثلًا من أجل البيئة؟",
       "#Car – Your trips": "السيارة – رحلاتك",
       "#SmartUrbanity - Car – Your trips": "SmartUrbanity - السيارة – رحلاتك",
       "#Car on a street": "سيارة في شارع",
@@ -906,7 +820,15 @@
       "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
       "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
       "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
-      "#Other": "أخرى"
+      "#Other": "أخرى",
+      "#Why do you rarely travel by car? (Select all that apply)": "لماذا نادرًا ما تسافر بالسيارة؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have a car or a driving licence": "ليست لدي سيارة أو رخصة قيادة",
+      "#It costs too much (fuel, parking, tolls, insurance)": "تكلفتها مرتفعة (الوقود، موقف السيارات، الرسوم، التأمين)",
+      "#Traffic and finding a parking space take too long": "الازدحام وإيجاد موقف للسيارة يستغرقان وقتًا طويلًا",
+      "#Driving is stressful or tiring for me": "القيادة مرهقة أو متعبة بالنسبة لي",
+      "#I feel unsafe on the road by car": "أشعر بعدم الأمان على الطريق بالسيارة",
+      "#I prefer other ways of getting around, for example for the environment": "أفضّل وسائل تنقل أخرى، مثلًا من أجل البيئة",
+      "#Another reason": "سبب آخر"
     }
   }
 }

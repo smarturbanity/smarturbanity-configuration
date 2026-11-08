@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Public transport – Road safety",
     "questionnaire_id": "smarturbanity_public_transport_road_safety",
-    "questionnaire_version": "1.1.1",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -123,97 +123,38 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "When you use public transport, do poor visibility or limited sightlines make you feel unsafe?",
-            "answer_key": "put_poor_visibility_unsafe_yn",
-            "question_type": "single_option",
+            "text": "When you use public transport, which of these situations make you feel unsafe? (Select all that apply)",
+            "answer_key": "put_unsafe_situations",
+            "question_type": "multiple_options",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Poor visibility or limited sightlines",
+                "value": "poor_visibility"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Unsafe behaviour from drivers, riders or pedestrians",
+                "value": "unsafe_behaviour"
+              },
+              {
+                "text": "Crowding or conflicts with other road users",
+                "value": "crowding_conflicts"
+              },
+              {
+                "text": "Lack of safe or adequate stops, crossings or lighting",
+                "value": "poor_infrastructure"
+              },
+              {
+                "text": "No emergency services nearby",
+                "value": "no_emergency_services"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
+                "exclusive": true
               }
             ],
             "required": false,
-            "question_id": "put_poor_visibility_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?",
-            "answer_key": "put_unsafe_behaviour_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "put_unsafe_behaviour_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you use public transport, do crowding or conflicts with other road users make you feel unsafe?",
-            "answer_key": "put_crowding_conflicts_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "put_crowding_conflicts_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?",
-            "answer_key": "put_poor_infrastructure_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "put_poor_infrastructure_unsafe_yn",
-            "question_version": "1.0.0",
-            "privacy_classification": "personal_data"
-          },
-          {
-            "text": "When you use public transport, does the absence of emergency services make you feel unsafe?",
-            "answer_key": "put_no_emergency_services_unsafe_yn",
-            "question_type": "single_option",
-            "options": [
-              {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              }
-            ],
-            "required": false,
-            "question_id": "put_no_emergency_services_unsafe_yn",
+            "question_id": "put_unsafe_situations",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -251,19 +192,19 @@
       "#I feel safe, but I have to be careful": "I feel safe, but I have to be careful",
       "#I feel safe: the crossings are well protected": "I feel safe: the crossings are well protected",
       "#Situations on the Road": "Situations on the Road",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "When you use public transport, do poor visibility or limited sightlines make you feel unsafe?",
-      "#Yes": "Yes",
-      "#No": "No",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "When you use public transport, do crowding or conflicts with other road users make you feel unsafe?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "When you use public transport, does the absence of emergency services make you feel unsafe?",
       "#Public transport – Road safety": "Public transport – Road safety",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Public transport – Road safety",
       "#Bus with a clock": "Bus with a clock",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "When you use public transport, which of these situations make you feel unsafe? (Select all that apply)",
+      "#Poor visibility or limited sightlines": "Poor visibility or limited sightlines",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsafe behaviour from drivers, riders or pedestrians",
+      "#Crowding or conflicts with other road users": "Crowding or conflicts with other road users",
+      "#Lack of safe or adequate stops, crossings or lighting": "Lack of safe or adequate stops, crossings or lighting",
+      "#No emergency services nearby": "No emergency services nearby",
+      "#None of these": "None of these"
     },
     "it": {
       "code": "it",
@@ -287,19 +228,19 @@
       "#I feel safe, but I have to be careful": "Mi sento sicuro, ma devo stare attento",
       "#I feel safe: the crossings are well protected": "Mi sento sicuro: gli attraversamenti sono ben protetti",
       "#Situations on the Road": "Situazioni in strada",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "Quando usi i mezzi pubblici, la scarsa visibilità o la visuale limitata ti fanno sentire in pericolo?",
-      "#Yes": "Sì",
-      "#No": "No",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Quando usi i mezzi pubblici, i comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi ti fanno sentire in pericolo?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "Quando usi i mezzi pubblici, l’affollamento o i conflitti con altri utenti della strada ti fanno sentire in pericolo?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "Quando usi i mezzi pubblici, la mancanza di fermate, attraversamenti o illuminazione sicuri e adeguati ti fa sentire in pericolo?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "Quando usi i mezzi pubblici, l’assenza di servizi di emergenza ti fa sentire in pericolo?",
       "#Public transport – Road safety": "Trasporto pubblico – Sicurezza stradale",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Trasporto pubblico – Sicurezza stradale",
       "#Bus with a clock": "Autobus con un orologio",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Fermate, attraversamenti e situazioni lungo il percorso <b>quando usi i mezzi pubblici</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Fermate, attraversamenti e situazioni lungo il percorso <b>quando usi i mezzi pubblici</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome. Lasciare l'email è facoltativo; l'informativa sulla privacy di SmartUrbanity spiega come viene protetta e come vengono usate le risposte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Quando usi i mezzi pubblici, quali di queste situazioni ti fanno sentire in pericolo? (Seleziona tutte le opzioni applicabili)",
+      "#Poor visibility or limited sightlines": "Scarsa visibilità o visuale limitata",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi",
+      "#Crowding or conflicts with other road users": "Affollamento o conflitti con altre persone in strada",
+      "#Lack of safe or adequate stops, crossings or lighting": "Mancanza di fermate, attraversamenti o illuminazione sicuri e adeguati",
+      "#No emergency services nearby": "Nessun servizio di emergenza nelle vicinanze",
+      "#None of these": "Nessuna di queste"
     },
     "fr": {
       "code": "fr",
@@ -323,19 +264,19 @@
       "#I feel safe, but I have to be careful": "Je me sens en sécurité, mais je dois faire attention",
       "#I feel safe: the crossings are well protected": "Je me sens en sécurité : les passages sont bien protégés",
       "#Situations on the Road": "Situations sur la route",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "Lorsque vous prenez les transports en commun, vous sentez-vous en danger à cause d’une mauvaise visibilité ou d’un champ de vision limité ?",
-      "#Yes": "Oui",
-      "#No": "Non",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Lorsque vous prenez les transports en commun, vous sentez-vous en danger à cause de comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent ?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "Lorsque vous prenez les transports en commun, vous sentez-vous en danger à cause de la foule ou de conflits avec d’autres personnes sur la route ?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "Lorsque vous prenez les transports en commun, vous sentez-vous en danger à cause du manque d’arrêts, de passages ou d’éclairage sûrs et adaptés ?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "Lorsque vous prenez les transports en commun, vous sentez-vous en danger à cause de l’absence de services d’urgence ?",
       "#Public transport – Road safety": "Transports en commun – Sécurité routière",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Transports en commun – Sécurité routière",
       "#Bus with a clock": "Bus avec une horloge",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Les arrêts, les passages piétons et les situations en chemin <b>lorsque vous utilisez les transports en commun</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Les arrêts, les passages piétons et les situations en chemin <b>lorsque vous utilisez les transports en commun</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom. Indiquer votre adresse e-mail est facultatif ; les informations sur la protection des données de SmartUrbanity expliquent comment elle est protégée et comment vos réponses sont utilisées.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Lorsque vous prenez les transports en commun, lesquelles de ces situations vous font vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Poor visibility or limited sightlines": "Mauvaise visibilité ou champ de vision limité",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Les comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent",
+      "#Crowding or conflicts with other road users": "Forte affluence ou conflits avec d’autres personnes qui circulent",
+      "#Lack of safe or adequate stops, crossings or lighting": "Le manque d’arrêts, de passages ou d’éclairage sûrs et adaptés",
+      "#No emergency services nearby": "Aucun service d’urgence à proximité",
+      "#None of these": "Aucun de ces éléments"
     },
     "de": {
       "code": "de",
@@ -359,19 +300,19 @@
       "#I feel safe, but I have to be careful": "Ich fühle mich sicher, muss aber aufpassen",
       "#I feel safe: the crossings are well protected": "Ich fühle mich sicher: Die Übergänge sind gut gesichert",
       "#Situations on the Road": "Situationen im Straßenverkehr",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "Fühlen Sie sich bei Fahrten mit öffentlichen Verkehrsmitteln durch schlechte Sicht oder eingeschränkte Sichtlinien unsicher?",
-      "#Yes": "Ja",
-      "#No": "Nein",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Fühlen Sie sich bei Fahrten mit öffentlichen Verkehrsmitteln durch unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden unsicher?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "Fühlen Sie sich bei Fahrten mit öffentlichen Verkehrsmitteln durch Gedränge oder Konflikte mit anderen Verkehrsteilnehmenden unsicher?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "Fühlen Sie sich bei Fahrten mit öffentlichen Verkehrsmitteln durch fehlende sichere oder geeignete Haltestellen, Überwege oder Beleuchtung unsicher?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "Fühlen Sie sich bei Fahrten mit öffentlichen Verkehrsmitteln durch das Fehlen von Rettungsdiensten unsicher?",
       "#Public transport – Road safety": "Öffentliche Verkehrsmittel – Verkehrssicherheit",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Öffentliche Verkehrsmittel – Verkehrssicherheit",
       "#Bus with a clock": "Bus mit einer Uhr",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haltestellen, Überwege und Situationen unterwegs, <b>wenn Sie öffentliche Verkehrsmittel nutzen</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haltestellen, Überwege und Situationen unterwegs, <b>wenn Sie öffentliche Verkehrsmittel nutzen</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft. Die Angabe Ihrer E-Mail-Adresse ist freiwillig; die Datenschutzhinweise von SmartUrbanity erklären, wie sie geschützt wird und wie Ihre Antworten verwendet werden.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Welche dieser Situationen geben Ihnen bei Fahrten mit öffentlichen Verkehrsmitteln ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Poor visibility or limited sightlines": "Schlechte Sicht oder eingeschränkte Sichtweite",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden",
+      "#Crowding or conflicts with other road users": "Überfüllung oder Konflikte mit anderen Verkehrsteilnehmenden",
+      "#Lack of safe or adequate stops, crossings or lighting": "Fehlende sichere oder geeignete Haltestellen, Überwege oder Beleuchtung",
+      "#No emergency services nearby": "Keine Rettungsdienste in der Nähe",
+      "#None of these": "Keine davon"
     },
     "tr": {
       "code": "tr",
@@ -395,19 +336,19 @@
       "#I feel safe, but I have to be careful": "Kendimi güvende hissederim ama dikkatli olmam gerekir",
       "#I feel safe: the crossings are well protected": "Kendimi güvende hissederim: Geçitler iyi korunuyor",
       "#Situations on the Road": "Yoldaki durumlar",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "Toplu taşıma kullanırken kötü görüş veya sınırlı görüş açısı kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#Yes": "Evet",
-      "#No": "Hayır",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Toplu taşıma kullanırken sürücülerin veya yayaların güvensiz davranışları kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "Toplu taşıma kullanırken kalabalık veya diğer yol kullanıcılarıyla yaşanan anlaşmazlıklar kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "Toplu taşıma kullanırken güvenli veya yeterli durak, geçit ya da aydınlatma eksikliği kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "Toplu taşıma kullanırken acil durum hizmetlerinin olmaması kendinizi güvensiz hissetmenize neden oluyor mu?",
       "#Public transport – Road safety": "Toplu taşıma – Yol güvenliği",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Toplu taşıma – Yol güvenliği",
       "#Bus with a clock": "Saatli otobüs",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Toplu taşıma kullanırken</b> duraklar, yaya geçitleri ve yoldaki durumlar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Toplu taşıma kullanırken</b> duraklar, yaya geçitleri ve yoldaki durumlar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez. E-posta adresi vermek isteğe bağlıdır; SmartUrbanity gizlilik bildirimi bunun nasıl korunduğunu ve yanıtların nasıl kullanıldığını açıklar.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Toplu taşıma kullanırken bu durumlardan hangileri kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Poor visibility or limited sightlines": "Kötü görüş veya sınırlı görüş mesafesi",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Sürücülerin veya yayaların güvensiz davranışları",
+      "#Crowding or conflicts with other road users": "Kalabalık veya diğer yol kullanıcılarıyla tartışma ya da sürtüşme",
+      "#Lack of safe or adequate stops, crossings or lighting": "Güvenli veya yeterli durak, geçit ya da aydınlatma eksikliği",
+      "#No emergency services nearby": "Yakınlarda acil durum hizmetlerinin olmaması",
+      "#None of these": "Bunların hiçbiri"
     },
     "fa": {
       "code": "fa",
@@ -431,19 +372,19 @@
       "#I feel safe, but I have to be careful": "احساس امنیت می‌کنم، اما باید مراقب باشم",
       "#I feel safe: the crossings are well protected": "احساس امنیت می‌کنم: گذرگاه‌ها خوب محافظت شده‌اند",
       "#Situations on the Road": "موقعیت‌ها در خیابان",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "هنگام استفاده از حمل‌ونقل عمومی، آیا دید ضعیف یا میدان دید محدود باعث می‌شود احساس ناامنی کنید؟",
-      "#Yes": "بله",
-      "#No": "خیر",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "هنگام استفاده از حمل‌ونقل عمومی، آیا رفتار ناایمن رانندگان، دوچرخه‌سواران یا عابران پیاده باعث می‌شود احساس ناامنی کنید؟",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "هنگام استفاده از حمل‌ونقل عمومی، آیا شلوغی یا درگیری با دیگر کاربران راه باعث می‌شود احساس ناامنی کنید؟",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "هنگام استفاده از حمل‌ونقل عمومی، آیا نبود ایستگاه، گذرگاه یا روشنایی ایمن و مناسب باعث می‌شود احساس ناامنی کنید؟",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "هنگام استفاده از حمل‌ونقل عمومی، آیا نبود خدمات اضطراری باعث می‌شود احساس ناامنی کنید؟",
       "#Public transport – Road safety": "حمل‌ونقل عمومی – ایمنی راه",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - حمل‌ونقل عمومی – ایمنی راه",
       "#Bus with a clock": "اتوبوس با ساعت",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ایستگاه‌ها، گذرگاه‌ها و موقعیت‌های سر راه <b>هنگام استفاده از حمل‌ونقل عمومی</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ایستگاه‌ها، گذرگاه‌ها و موقعیت‌های سر راه <b>هنگام استفاده از حمل‌ونقل عمومی</b>.</p><p>شرکت در این پرسشنامه داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند. وارد کردن ایمیل اختیاری است؛ بیانیه حریم خصوصی SmartUrbanity توضیح می‌دهد ایمیل چگونه محافظت می‌شود و پاسخ‌ها چگونه استفاده می‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "هنگام استفاده از حمل‌ونقل عمومی، کدام یک از این موقعیت‌ها باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Poor visibility or limited sightlines": "دید ضعیف یا میدان دید محدود",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "رفتار ناایمن رانندگان، سواران یا عابران پیاده",
+      "#Crowding or conflicts with other road users": "شلوغی یا برخورد و تعارض با سایر کاربران راه",
+      "#Lack of safe or adequate stops, crossings or lighting": "نبود ایستگاه، گذرگاه یا روشنایی ایمن و کافی",
+      "#No emergency services nearby": "نبود خدمات اورژانس در نزدیکی",
+      "#None of these": "هیچ‌کدام از این‌ها"
     },
     "hu": {
       "code": "hu",
@@ -467,19 +408,19 @@
       "#I feel safe, but I have to be careful": "Biztonságban érzem magam, de óvatosnak kell lennem",
       "#I feel safe: the crossings are well protected": "Biztonságban érzem magam: az átkelők jól védettek",
       "#Situations on the Road": "Helyzetek az úton",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "Tömegközlekedés közben a rossz látási viszonyok vagy a korlátozott rálátás miatt érzi magát veszélyben?",
-      "#Yes": "Igen",
-      "#No": "Nem",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "Tömegközlekedés közben a járművezetők, kerékpárosok vagy gyalogosok veszélyes viselkedése miatt érzi magát veszélyben?",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "Tömegközlekedés közben a tömeg vagy a más közlekedőkkel való konfliktusok miatt érzi magát veszélyben?",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "Tömegközlekedés közben a biztonságos vagy megfelelő megállók, átkelőhelyek vagy világítás hiánya miatt érzi magát veszélyben?",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "Tömegközlekedés közben a mentő- és sürgősségi szolgálatok hiánya miatt érzi magát veszélyben?",
       "#Public transport – Road safety": "Tömegközlekedés – Közlekedésbiztonság",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - Tömegközlekedés – Közlekedésbiztonság",
       "#Bus with a clock": "Busz órával",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Megállók, átkelőhelyek és helyzetek útközben <b>tömegközlekedés közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Megállók, átkelőhelyek és helyzetek útközben <b>tömegközlekedés közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez. Az e-mail-cím megadása nem kötelező; a SmartUrbanity adatvédelmi tájékoztatója leírja, hogyan védjük, és hogyan használjuk fel a válaszokat.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "Tömegközlekedés közben mely helyzetek miatt érzi magát veszélyben? (Jelölje meg az összes megfelelőt)",
+      "#Poor visibility or limited sightlines": "Rossz látási viszonyok vagy korlátozott beláthatóság",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "A járművezetők, kerékpárosok vagy gyalogosok veszélyes viselkedése",
+      "#Crowding or conflicts with other road users": "Zsúfoltság vagy konfliktus más közlekedőkkel",
+      "#Lack of safe or adequate stops, crossings or lighting": "A biztonságos vagy megfelelő megállók, átkelőhelyek vagy világítás hiánya",
+      "#No emergency services nearby": "Nincs a közelben mentő- vagy sürgősségi szolgálat",
+      "#None of these": "Ezek közül egyik sem"
     },
     "ar": {
       "code": "ar",
@@ -503,19 +444,19 @@
       "#I feel safe, but I have to be careful": "أشعر بالأمان، لكن عليّ أن أكون حذرًا",
       "#I feel safe: the crossings are well protected": "أشعر بالأمان: المعابر محمية جيدًا",
       "#Situations on the Road": "مواقف على الطريق",
-      "#When you use public transport, do poor visibility or limited sightlines make you feel unsafe?": "عند استخدام وسائل النقل العام، هل يُشعرك ضعف الرؤية أو محدودية مجال النظر بعدم الأمان؟",
-      "#Yes": "نعم",
-      "#No": "لا",
-      "#When you use public transport, does unsafe behaviour from drivers, riders or pedestrians make you feel unsafe?": "عند استخدام وسائل النقل العام، هل يُشعرك السلوك غير الآمن ممن يقودون أو يركبون الدراجات أو يمشون بعدم الأمان؟",
-      "#When you use public transport, do crowding or conflicts with other road users make you feel unsafe?": "عند استخدام وسائل النقل العام، هل يُشعرك الازدحام أو النزاعات مع آخرين على الطريق بعدم الأمان؟",
-      "#When you use public transport, does the lack of safe or adequate stops, crossings or lighting make you feel unsafe?": "عند استخدام وسائل النقل العام، هل يُشعرك غياب محطات أو معابر أو إنارة آمنة ومناسبة بعدم الأمان؟",
-      "#When you use public transport, does the absence of emergency services make you feel unsafe?": "عند استخدام وسائل النقل العام، هل يُشعرك غياب خدمات الطوارئ بعدم الأمان؟",
       "#Public transport – Road safety": "النقل العام – السلامة على الطريق",
       "#SmartUrbanity - Public transport – Road safety": "SmartUrbanity - النقل العام – السلامة على الطريق",
       "#Bus with a clock": "حافلة مع ساعة",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>المحطات والمعابر والمواقف على الطريق <b>عند استخدام وسائل النقل العام</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>Stops, crossings and situations on the way <b>when you use public transport</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name. Giving your email is optional; the SmartUrbanity privacy notice explains how it is protected and how answers are used.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>المحطات والمعابر والمواقف على الطريق <b>عند استخدام وسائل النقل العام</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك. إدخال البريد الإلكتروني اختياري؛ يوضح إشعار الخصوصية الخاص بـ SmartUrbanity كيف يُحمى وكيف تُستخدم الإجابات.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#When you use public transport, which of these situations make you feel unsafe? (Select all that apply)": "عند استخدام النقل العام، أي من هذه المواقف يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Poor visibility or limited sightlines": "ضعف الرؤية أو محدودية مجال النظر",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "سلوك غير آمن من السائقين أو الراكبين أو المشاة",
+      "#Crowding or conflicts with other road users": "الازدحام أو التعارض مع أشخاص آخرين يستخدمون الطريق",
+      "#Lack of safe or adequate stops, crossings or lighting": "غياب محطات أو معابر أو إضاءة آمنة وكافية",
+      "#No emergency services nearby": "عدم وجود خدمات طوارئ قريبة",
+      "#None of these": "لا شيء مما سبق"
     }
   }
 }
