@@ -363,8 +363,22 @@ Lory's decisions on these points (2026-11-08):
    `your_profile` 1.18.2).
 9. `economic_status` already offers "Prefer not to say" (`add_prefer_not_to_say`); nothing changed.
 
-Still to decide: merging felt duplicates between forms, grouping the 14 modes, an evening follow-up question and which
-profile questions could be dropped to make it shorter.
+On the felt duplicates between forms (2026-11-08):
+
+10. The overlap between the general Safety form and the walking chain needs no change: the Safety form is retired when
+    the chains are published (decision 4A).
+11. The per-mode time question (`car_`, `bike_`, `escooter_`, `motorcycle_`, `put_`, `walk_time_vs_expected`) asked the
+    same thing as the post-trip `trip_time_vs_expected`. It now asks how reliable the mode usually is: "When you travel
+    by car, how often do you arrive in the time you planned?" with Never, Rarely, Sometimes, Often, Always (2.0.0). The
+    post-trip question about the single trip is unchanged.
+12. `car_delay_schedule_impact` is dropped from `car_comfort`; `car_delay_stress` stays, as in `motorcycle_comfort`.
+13. `bike_hazard_confidence` and `escooter_hazard_confidence` asked the same as the general confidence of
+    `cycling_habits` and `e_scooter_habits`. They now ask about reflexes: "When you cycle, how quick are your reflexes
+    if something happens suddenly?", from "Not quick at all: I often cannot react in time" to "Extremely quick: I
+    always react in time" (3.0.0 and 2.0.0; the help with examples is unchanged).
+
+Still to decide: grouping the 14 modes, an evening follow-up question and which profile questions could be dropped to
+make it shorter.
 
 ## Not yet covered
 
