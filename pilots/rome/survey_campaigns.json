@@ -1,6 +1,6 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.3.0",
+  "config_version": "0.4.0",
   "pilot_id": "rome",
   "pilot_period": {
     "start_date": "2026-11-14",
@@ -26,7 +26,9 @@
       "area": null,
       "exclusive": false,
       "questionnaires": [
-        "smarturbanity_your_profile"
+        "smarturbanity_your_profile",
+        "smarturbanity_your_household",
+        "smarturbanity_your_travel"
       ]
     },
     "rome_travel_habits": {
@@ -110,11 +112,17 @@
       "exclusive": false,
       "questionnaires": [
         "smarturbanity_walking_comfort",
+        "smarturbanity_walking_surroundings",
         "smarturbanity_cycling_comfort",
+        "smarturbanity_cycling_surroundings",
         "smarturbanity_e_scooter_comfort",
+        "smarturbanity_e_scooter_surroundings",
         "smarturbanity_public_transport_comfort",
+        "smarturbanity_public_transport_surroundings",
         "smarturbanity_car_comfort",
-        "smarturbanity_motorcycle_comfort"
+        "smarturbanity_car_surroundings",
+        "smarturbanity_motorcycle_comfort",
+        "smarturbanity_motorcycle_surroundings"
       ]
     },
     "rome_trip_experience": {
@@ -132,11 +140,17 @@
       "exclusive": false,
       "questionnaires": [
         "smarturbanity_walking_experience",
+        "smarturbanity_walking_effort",
         "smarturbanity_cycling_experience",
+        "smarturbanity_cycling_effort",
         "smarturbanity_e_scooter_experience",
+        "smarturbanity_e_scooter_effort",
         "smarturbanity_public_transport_experience",
+        "smarturbanity_public_transport_effort",
         "smarturbanity_car_experience",
-        "smarturbanity_motorcycle_experience"
+        "smarturbanity_car_effort",
+        "smarturbanity_motorcycle_experience",
+        "smarturbanity_motorcycle_effort"
       ]
     },
     "rome_improvements": {
@@ -229,39 +243,53 @@
     },
     "feedback_questionnaire": "smarturbanity_feedback_surveys",
     "follow_ups": {
+      "smarturbanity_your_profile": "smarturbanity_your_household",
+      "smarturbanity_your_household": "smarturbanity_your_travel",
       "smarturbanity_walking_habits": "smarturbanity_walking_road_safety",
       "smarturbanity_walking_road_safety": "smarturbanity_walking_security",
       "smarturbanity_walking_security": "smarturbanity_walking_comfort",
-      "smarturbanity_walking_comfort": "smarturbanity_walking_experience",
-      "smarturbanity_walking_experience": "smarturbanity_walking_improvements",
+      "smarturbanity_walking_comfort": "smarturbanity_walking_surroundings",
+      "smarturbanity_walking_surroundings": "smarturbanity_walking_experience",
+      "smarturbanity_walking_experience": "smarturbanity_walking_effort",
+      "smarturbanity_walking_effort": "smarturbanity_walking_improvements",
       "smarturbanity_cycling_habits": "smarturbanity_cycling_road_safety",
       "smarturbanity_cycling_road_safety": "smarturbanity_cycling_security",
       "smarturbanity_cycling_security": "smarturbanity_cycling_comfort",
-      "smarturbanity_cycling_comfort": "smarturbanity_cycling_experience",
-      "smarturbanity_cycling_experience": "smarturbanity_cycling_improvements",
+      "smarturbanity_cycling_comfort": "smarturbanity_cycling_surroundings",
+      "smarturbanity_cycling_surroundings": "smarturbanity_cycling_experience",
+      "smarturbanity_cycling_experience": "smarturbanity_cycling_effort",
+      "smarturbanity_cycling_effort": "smarturbanity_cycling_improvements",
       "smarturbanity_public_transport_habits": "smarturbanity_public_transport_road_safety",
       "smarturbanity_public_transport_road_safety": "smarturbanity_public_transport_security",
       "smarturbanity_public_transport_security": "smarturbanity_public_transport_comfort",
-      "smarturbanity_public_transport_comfort": "smarturbanity_public_transport_experience",
-      "smarturbanity_public_transport_experience": "smarturbanity_public_transport_without_car",
+      "smarturbanity_public_transport_comfort": "smarturbanity_public_transport_surroundings",
+      "smarturbanity_public_transport_surroundings": "smarturbanity_public_transport_experience",
+      "smarturbanity_public_transport_experience": "smarturbanity_public_transport_effort",
+      "smarturbanity_public_transport_effort": "smarturbanity_public_transport_without_car",
       "smarturbanity_public_transport_without_car": "smarturbanity_public_transport_improvements",
       "smarturbanity_car_habits": "smarturbanity_car_road_safety",
       "smarturbanity_car_road_safety": "smarturbanity_car_security",
       "smarturbanity_car_security": "smarturbanity_car_comfort",
-      "smarturbanity_car_comfort": "smarturbanity_car_experience",
-      "smarturbanity_car_experience": "smarturbanity_car_need",
+      "smarturbanity_car_comfort": "smarturbanity_car_surroundings",
+      "smarturbanity_car_surroundings": "smarturbanity_car_experience",
+      "smarturbanity_car_experience": "smarturbanity_car_effort",
+      "smarturbanity_car_effort": "smarturbanity_car_need",
       "smarturbanity_car_need": "smarturbanity_car_alternatives",
       "smarturbanity_motorcycle_habits": "smarturbanity_motorcycle_road_safety",
       "smarturbanity_motorcycle_road_safety": "smarturbanity_motorcycle_security",
       "smarturbanity_motorcycle_security": "smarturbanity_motorcycle_comfort",
-      "smarturbanity_motorcycle_comfort": "smarturbanity_motorcycle_experience",
-      "smarturbanity_motorcycle_experience": "smarturbanity_motorcycle_need",
+      "smarturbanity_motorcycle_comfort": "smarturbanity_motorcycle_surroundings",
+      "smarturbanity_motorcycle_surroundings": "smarturbanity_motorcycle_experience",
+      "smarturbanity_motorcycle_experience": "smarturbanity_motorcycle_effort",
+      "smarturbanity_motorcycle_effort": "smarturbanity_motorcycle_need",
       "smarturbanity_motorcycle_need": "smarturbanity_motorcycle_improvements",
       "smarturbanity_e_scooter_habits": "smarturbanity_e_scooter_road_safety",
       "smarturbanity_e_scooter_road_safety": "smarturbanity_e_scooter_security",
       "smarturbanity_e_scooter_security": "smarturbanity_e_scooter_comfort",
-      "smarturbanity_e_scooter_comfort": "smarturbanity_e_scooter_experience",
-      "smarturbanity_e_scooter_experience": "smarturbanity_e_scooter_improvements"
+      "smarturbanity_e_scooter_comfort": "smarturbanity_e_scooter_surroundings",
+      "smarturbanity_e_scooter_surroundings": "smarturbanity_e_scooter_experience",
+      "smarturbanity_e_scooter_experience": "smarturbanity_e_scooter_effort",
+      "smarturbanity_e_scooter_effort": "smarturbanity_e_scooter_improvements"
     },
     "follow_up_stop_when": {
       "smarturbanity_walking_habits": {

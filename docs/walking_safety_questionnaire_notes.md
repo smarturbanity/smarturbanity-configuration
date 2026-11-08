@@ -7,7 +7,7 @@ The pieces of a chain are linked by the "Continue" button on the thank-you page 
 which skips the pieces already answered on the same device. `smarturbanity_daily_travel` is deleted: its questions moved to
 `your_profile` and to the pieces (see "Daily travel").
 
-All 39 pieces live in `forms/surveys/`, next to `smarturbanity_your_profile`. They are
+All 51 pieces live in `forms/surveys/`, next to the three profile pieces (see "Shorter pieces"). They are
 grouped by topic in seven disabled campaigns (visible in debug mode) until the persona test and approval
 (Lory, 2026-11-08; `config_version` 0.2.0). Each campaign holds the piece of that topic for every way of travelling:
 
@@ -16,8 +16,8 @@ grouped by topic in seven disabled campaigns (visible in debug mode) until the p
 | `rome_travel_habits` | Abitudini di viaggio | `*_habits` |
 | `rome_road_safety` | Sicurezza stradale | `*_road_safety` |
 | `rome_personal_security` | Sicurezza personale | `*_security` |
-| `rome_comfort` | Comfort | `*_comfort` |
-| `rome_trip_experience` | Come si vive il viaggio | `*_experience` |
+| `rome_comfort` | Comfort | `*_comfort`, `*_surroundings` |
+| `rome_trip_experience` | Come si vive il viaggio | `*_experience`, `*_effort` |
 | `rome_improvements` | Cosa aiuterebbe | `*_improvements` (no car piece) |
 | `rome_doing_without_car` | Fare a meno dell'auto | `car_need`, `motorcycle_need`, `car_alternatives`, `public_transport_without_car` |
 
@@ -444,6 +444,34 @@ applications read before the form's `gdpr_link`; the forms add no retention text
 
 Each changed form moves up one version against `main`: minor when questions or options are added or removed,
 patch for wording only.
+
+## Shorter pieces
+
+Lory (2026-11-08, decisions 1A 2A 3A 4A 6A 7) split the longest forms so that each piece takes one or two minutes.
+Questions, options, answer keys and conditions are unchanged and only move to a new form, so the data keeps the same
+keys; only the form id that holds them changes. `post_trip` stays whole. Campaigns move to `config_version` 0.4.0
+and the survey index to 3.6.0.
+
+| Change | Before | After | Data impact |
+|---|---|---|---|
+| Profile | `your_profile` 1.20.0, 6 min, 26 questions | `your_profile` 1.21.0 (about you and where you live, 9 questions, 2 min) → `your_household` 1.0.0 (household, vehicles and work, 11 questions, 3 min) → `your_travel` 1.0.0 (how you get around and most frequent trip, 5 questions, 1 min), linked by "Continue" and all in `rome_profile` | answers to the moved questions now arrive with the new form ids |
+| Navigation apps | `app_navigation` "How comfortable are you using navigation or map apps for travel?" in `your_profile` | removed | no answers from now on; `app_mobility` (`future/travel_choices`, disabled campaign) and `app_pt_tickets` stay |
+| Surroundings | the "Your surroundings" section (noise, air quality, bad weather, cleanliness, how places look: 5 questions) inside each `*_comfort` piece | own piece `<mode>_surroundings` 1.0.0, 1 min, after `<mode>_comfort` in the chain and in `rome_comfort` | form id changes for those 5 answers per mode |
+| Trip experience | one piece with 10 questions on feelings and effort | `<mode>_experience` keeps mood, worries and route liveliness (4 questions); `<mode>_effort` 1.0.0 takes tiredness, effort compared with alternatives, time and satisfaction (6 questions), after `<mode>_experience` in the chain and in `rome_trip_experience` | form id changes for those 6 answers per mode |
+| Arabic wording | generic masculine for the person answering in the profile, comfort and experience forms (e.g. «متعبًا», «كسائق», «فكّر») | neutral forms (nouns, first person, «يُرجى») in 78 texts; plurals about other people unchanged | wording only |
+
+Welcome texts list only what each piece asks. Comfort pieces move up one minor version (walking 2.1.0, cycling
+1.1.0, e-scooter 1.1.0, public transport 2.2.0, car 1.2.0, motorcycle 1.1.0), as do experience pieces (walking 1.5.0,
+cycling 1.4.0, e-scooter 1.2.0, public transport, car and motorcycle 1.4.0).
+
+| Form | Minutes before | Minutes after |
+|---|---|---|
+| `your_profile` | 6 | 2 + 3 + 1 |
+| `*_comfort` | 2 (public transport 3) | 1 + 1 surroundings (public transport 2 + 1) |
+| `*_experience` | 2 (cycling, e-scooter, public transport, motorcycle 3) | 1 + effort 1 (cycling, e-scooter, public transport, motorcycle 1 + 2) |
+
+The CityMaaS guided flow asks only `smarturbanity_your_profile` as its profile form (`profileForms`); the other two
+profile pieces reach people through "Continue" in the surveys gallery.
 
 ## Question IDs
 

@@ -1,0 +1,677 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - E-scooter – Effort and satisfaction",
+    "questionnaire_id": "smarturbanity_e_scooter_effort",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 2,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "E-scooter – Effort and satisfaction",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_e_scooter.svg",
+      "image_alt": "#E-scooter on a street",
+      "description": "<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "E-scooter – Effort and satisfaction",
+    "sections": [
+      {
+        "title": "Effort and satisfaction",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, how tired do you usually feel when you arrive?",
+            "answer_key": "escooter_tiredness",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all tired",
+                "value": "not_tired"
+              },
+              {
+                "text": "A little tired",
+                "value": "slightly"
+              },
+              {
+                "text": "Quite tired",
+                "value": "moderately"
+              },
+              {
+                "text": "Very tired",
+                "value": "very"
+              },
+              {
+                "text": "Exhausted",
+                "value": "exhausted"
+              }
+            ],
+            "question_id": "escooter_tiredness",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, what tires you most?",
+            "answer_key": "escooter_tiredness_cause",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "escooter_tiredness": {
+                "not": [
+                  "not_tired"
+                ]
+              }
+            },
+            "options": [
+              {
+                "text": "Physical effort (standing, keeping your balance, carrying bags)",
+                "value": "physical_effort_e_g_walking_cycling_carr"
+              },
+              {
+                "text": "Slopes, stairs and changes in level",
+                "value": "slopes_and_stairs"
+              },
+              {
+                "text": "Stress (traffic, finding the way, being late, feeling unsafe)",
+                "value": "mental_stress_e_g_traffic_navigation_tim"
+              },
+              {
+                "text": "Heat, noise or bad air",
+                "value": "environmental_discomfort_e_g_heat_noise"
+              },
+              {
+                "text": "Waiting or standing (at traffic lights, in queues)",
+                "value": "waiting_and_standing_e_g_at_stops_in_que"
+              },
+              {
+                "text": "I rarely feel tired after my trips",
+                "value": "i_usually_do_not_feel_tired_after_my_tri"
+              }
+            ],
+            "question_id": "escooter_tiredness_cause",
+            "question_version": "1.0.3"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, how demanding is it compared with other ways you could travel?",
+            "help": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
+            "answer_key": "escooter_effort_vs_alternatives",
+            "question_type": "single_option",
+            "required": false,
+            "add_i_dont_know": true,
+            "options": [
+              {
+                "text": "Much easier than the others",
+                "value": "my_current_mode_is_significantly_easier"
+              },
+              {
+                "text": "A bit easier",
+                "value": "this_is_a_bit_easier_than_other_ways_i_c"
+              },
+              {
+                "text": "About the same",
+                "value": "regardless_of_the_mode_the_effort_feels"
+              },
+              {
+                "text": "A bit more demanding",
+                "value": "this_takes_a_bit_more_out_of_me_than_oth"
+              },
+              {
+                "text": "Much more demanding",
+                "value": "far_more_demanding_than_alternatives_phy"
+              },
+              {
+                "text": "I have no other way to travel",
+                "value": "no_alternative"
+              }
+            ],
+            "question_id": "escooter_effort_vs_alternatives",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, how often do you arrive in the time you planned?",
+            "answer_key": "escooter_time_vs_expected",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ],
+            "question_id": "escooter_time_vs_expected",
+            "question_version": "2.0.0"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, how satisfied are you overall?",
+            "answer_key": "escooter_satisfaction",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very dissatisfied",
+                "value": "very_dissatisfied"
+              },
+              {
+                "text": "Dissatisfied",
+                "value": "dissatisfied"
+              },
+              {
+                "text": "Neither satisfied nor dissatisfied",
+                "value": "neutral"
+              },
+              {
+                "text": "Satisfied",
+                "value": "satisfied"
+              },
+              {
+                "text": "Very satisfied",
+                "value": "very_satisfied"
+              }
+            ],
+            "question_id": "escooter_satisfaction",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you ride an e-scooter, what are you least happy with?",
+            "answer_key": "escooter_dissatisfied",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 3,
+            "add_other": true,
+            "show_if": {
+              "escooter_satisfaction": [
+                "very_dissatisfied",
+                "dissatisfied",
+                "neutral"
+              ]
+            },
+            "options": [
+              {
+                "text": "Travel time",
+                "value": "travel_time_speed"
+              },
+              {
+                "text": "Cost",
+                "value": "cost_value_for_money"
+              },
+              {
+                "text": "It's not reliable or predictable",
+                "value": "reliability_predictability"
+              },
+              {
+                "text": "Comfort",
+                "value": "comfort"
+              },
+              {
+                "text": "Safety from traffic or crime",
+                "value": "safety_security"
+              },
+              {
+                "text": "It's hard to reach or use",
+                "value": "accessibility_convenience"
+              },
+              {
+                "text": "Crowding or lack of space",
+                "value": "crowding_availability_of_space"
+              },
+              {
+                "text": "It's not flexible",
+                "value": "lack_of_flexibility"
+              }
+            ],
+            "question_id": "escooter_dissatisfied",
+            "question_version": "1.0.1"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "smarturbanity_e_scooter_effort",
+  "db_set": "questionnaires",
+  "response_format": "planeasy.response",
+  "response_schema_version": "2.0",
+  "response_kind": "survey",
+  "default_language": "en",
+  "category": "surveys",
+  "languages": {
+    "en": {
+      "#E-scooter on a street": "E-scooter on a street",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "When you ride an e-scooter, how tired do you usually feel when you arrive?",
+      "#Not at all tired": "Not at all tired",
+      "#A little tired": "A little tired",
+      "#Quite tired": "Quite tired",
+      "#Very tired": "Very tired",
+      "#Exhausted": "Exhausted",
+      "#When you ride an e-scooter, what tires you most?": "When you ride an e-scooter, what tires you most?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Physical effort (standing, keeping your balance, carrying bags)",
+      "#Slopes, stairs and changes in level": "Slopes, stairs and changes in level",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffic, finding the way, being late, feeling unsafe)",
+      "#Heat, noise or bad air": "Heat, noise or bad air",
+      "#I rarely feel tired after my trips": "I rarely feel tired after my trips",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "When you ride an e-scooter, how demanding is it compared with other ways you could travel?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
+      "#Much easier than the others": "Much easier than the others",
+      "#A bit easier": "A bit easier",
+      "#About the same": "About the same",
+      "#A bit more demanding": "A bit more demanding",
+      "#Much more demanding": "Much more demanding",
+      "#I have no other way to travel": "I have no other way to travel",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "When you ride an e-scooter, how often do you arrive in the time you planned?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "When you ride an e-scooter, how satisfied are you overall?",
+      "#Very dissatisfied": "Very dissatisfied",
+      "#Dissatisfied": "Dissatisfied",
+      "#Neither satisfied nor dissatisfied": "Neither satisfied nor dissatisfied",
+      "#Satisfied": "Satisfied",
+      "#Very satisfied": "Very satisfied",
+      "#When you ride an e-scooter, what are you least happy with?": "When you ride an e-scooter, what are you least happy with?",
+      "#Travel time": "Travel time",
+      "#Cost": "Cost",
+      "#It's not reliable or predictable": "It's not reliable or predictable",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Safety from traffic or crime",
+      "#It's hard to reach or use": "It's hard to reach or use",
+      "#Crowding or lack of space": "Crowding or lack of space",
+      "#It's not flexible": "It's not flexible",
+      "#Always": "Always",
+      "#Waiting or standing (at traffic lights, in queues)": "Waiting or standing (at traffic lights, in queues)",
+      "#E-scooter – Effort and satisfaction": "E-scooter – Effort and satisfaction",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - E-scooter – Effort and satisfaction",
+      "#Effort and satisfaction": "Effort and satisfaction",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "#E-scooter on a street": "Monopattino elettrico su una strada",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "Quando vai in monopattino elettrico, quanta stanchezza senti di solito all’arrivo?",
+      "#Not at all tired": "Nessuna stanchezza",
+      "#A little tired": "Poca stanchezza",
+      "#Quite tired": "Moderata stanchezza",
+      "#Very tired": "Molta stanchezza",
+      "#Exhausted": "Sfinimento",
+      "#When you ride an e-scooter, what tires you most?": "Quando vai in monopattino elettrico, cosa ti stanca di più?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Fatica fisica (stare in piedi, mantenere l'equilibrio, portare borse)",
+      "#Slopes, stairs and changes in level": "Salite, scale e dislivelli",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffico, trovare la strada, fare tardi, non sentirsi al sicuro)",
+      "#Heat, noise or bad air": "Caldo, rumore o aria cattiva",
+      "#I rarely feel tired after my trips": "Raramente mi stanco dopo i miei spostamenti",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "Quando vai in monopattino elettrico, quanto è impegnativo rispetto ad altri modi in cui potresti spostarti?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Pensa sia allo sforzo fisico sia a quello mentale. Gli altri modi possono essere camminare, guidare o i mezzi pubblici.",
+      "#Much easier than the others": "Molto più facile degli altri",
+      "#A bit easier": "Un po' più facile",
+      "#About the same": "Più o meno uguale",
+      "#A bit more demanding": "Un po' più impegnativo",
+      "#Much more demanding": "Molto più impegnativo",
+      "#I have no other way to travel": "Non ho altri modi per spostarmi",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Quando vai in monopattino elettrico, quanto spesso arrivi nel tempo che avevi previsto?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "Quando vai in monopattino elettrico, qual è nel complesso il tuo livello di soddisfazione?",
+      "#Very dissatisfied": "Molto basso",
+      "#Dissatisfied": "Basso",
+      "#Neither satisfied nor dissatisfied": "Né alto né basso",
+      "#Satisfied": "Alto",
+      "#Very satisfied": "Molto alto",
+      "#When you ride an e-scooter, what are you least happy with?": "Quando vai in monopattino elettrico, cosa ti soddisfa di meno?",
+      "#Travel time": "Tempo di viaggio",
+      "#Cost": "Costo",
+      "#It's not reliable or predictable": "Non è affidabile o prevedibile",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Sicurezza rispetto al traffico o alla criminalità",
+      "#It's hard to reach or use": "È difficile da raggiungere o da usare",
+      "#Crowding or lack of space": "Affollamento o mancanza di spazio",
+      "#It's not flexible": "Non è flessibile",
+      "#Always": "Sempre",
+      "#Waiting or standing (at traffic lights, in queues)": "Aspettare o stare in piedi (ai semafori, in coda)",
+      "#E-scooter – Effort and satisfaction": "In monopattino – Fatica e soddisfazione",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - In monopattino – Fatica e soddisfazione",
+      "#Effort and satisfaction": "Fatica e soddisfazione",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Stanchezza, fatica, tempi e soddisfazione <b>quando vai in monopattino elettrico</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "#E-scooter on a street": "Trottinette électrique dans une rue",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "Lorsque vous roulez en trottinette électrique, quel est généralement votre niveau de fatigue à l’arrivée ?",
+      "#Not at all tired": "Aucune fatigue",
+      "#A little tired": "Un peu fatigué",
+      "#Quite tired": "Assez fatigué",
+      "#Very tired": "Grande fatigue",
+      "#Exhausted": "Épuisement",
+      "#When you ride an e-scooter, what tires you most?": "Lorsque vous roulez en trottinette électrique, qu’est-ce qui vous fatigue le plus ?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Effort physique (rester debout, garder l'équilibre, porter des sacs)",
+      "#Slopes, stairs and changes in level": "Montées, escaliers et dénivelés",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (circulation, trouver son chemin, être en retard, se sentir en danger)",
+      "#Heat, noise or bad air": "Chaleur, bruit ou mauvaise qualité de l'air",
+      "#I rarely feel tired after my trips": "Je me sens rarement fatigué après mes trajets",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "Lorsque vous roulez en trottinette électrique, dans quelle mesure est-ce exigeant par rapport à d’autres modes de déplacement possibles ?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Pensez à l'effort physique comme mental. Les autres façons peuvent être la marche, la conduite ou les transports en commun.",
+      "#Much easier than the others": "Beaucoup plus facile que les autres",
+      "#A bit easier": "Un peu plus facile",
+      "#About the same": "À peu près pareil",
+      "#A bit more demanding": "Un peu plus exigeant",
+      "#Much more demanding": "Beaucoup plus exigeant",
+      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Lorsque vous roulez en trottinette électrique, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "Lorsque vous roulez en trottinette électrique, quel est votre niveau de satisfaction global ?",
+      "#Very dissatisfied": "Très faible",
+      "#Dissatisfied": "Faible",
+      "#Neither satisfied nor dissatisfied": "Ni faible ni élevé",
+      "#Satisfied": "Élevé",
+      "#Very satisfied": "Très élevé",
+      "#When you ride an e-scooter, what are you least happy with?": "Lorsque vous roulez en trottinette électrique, qu’est-ce qui vous satisfait le moins ?",
+      "#Travel time": "Durée du trajet",
+      "#Cost": "Coût",
+      "#It's not reliable or predictable": "Ce n'est pas fiable ni prévisible",
+      "#Comfort": "Confort",
+      "#Safety from traffic or crime": "Sécurité face à la circulation ou à la délinquance",
+      "#It's hard to reach or use": "C'est difficile d'accès ou d'utilisation",
+      "#Crowding or lack of space": "Foule ou manque de place",
+      "#It's not flexible": "Ce n'est pas flexible",
+      "#Always": "Toujours",
+      "#Waiting or standing (at traffic lights, in queues)": "Attendre ou rester debout (aux feux, dans les files)",
+      "#E-scooter – Effort and satisfaction": "Trottinette électrique – Effort et satisfaction",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - Trottinette électrique – Effort et satisfaction",
+      "#Effort and satisfaction": "Effort et satisfaction",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>La fatigue, l’effort, le temps et la satisfaction <b>lorsque vous roulez en trottinette électrique</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "#E-scooter on a street": "E-Scooter auf einer Straße",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "Wie müde fühlen Sie sich beim E-Scooter-Fahren normalerweise, wenn Sie ankommen?",
+      "#Not at all tired": "Gar nicht müde",
+      "#A little tired": "Ein wenig müde",
+      "#Quite tired": "Ziemlich müde",
+      "#Very tired": "Sehr müde",
+      "#Exhausted": "Erschöpft",
+      "#When you ride an e-scooter, what tires you most?": "Was ermüdet Sie beim E-Scooter-Fahren am meisten?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Körperliche Anstrengung (Stehen, Gleichgewicht halten, Taschen tragen)",
+      "#Slopes, stairs and changes in level": "Steigungen, Treppen und Höhenunterschiede",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (Verkehr, Weg finden, Verspätung, Unsicherheit)",
+      "#Heat, noise or bad air": "Hitze, Lärm oder schlechte Luft",
+      "#I rarely feel tired after my trips": "Nach meinen Wegen bin ich selten müde",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "Wie anstrengend ist das E-Scooter-Fahren im Vergleich zu anderen Möglichkeiten, unterwegs zu sein?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Denken Sie an körperliche und geistige Anstrengung. Andere Möglichkeiten wären Gehen, Autofahren oder öffentlicher Verkehr.",
+      "#Much easier than the others": "Viel leichter als die anderen",
+      "#A bit easier": "Etwas leichter",
+      "#About the same": "Ungefähr gleich",
+      "#A bit more demanding": "Etwas anstrengender",
+      "#Much more demanding": "Viel anstrengender",
+      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem E-Scooter in der Zeit an, die Sie eingeplant haben?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt, wenn Sie E-Scooter fahren?",
+      "#Very dissatisfied": "Sehr unzufrieden",
+      "#Dissatisfied": "Unzufrieden",
+      "#Neither satisfied nor dissatisfied": "Weder zufrieden noch unzufrieden",
+      "#Satisfied": "Zufrieden",
+      "#Very satisfied": "Sehr zufrieden",
+      "#When you ride an e-scooter, what are you least happy with?": "Womit sind Sie beim E-Scooter-Fahren am wenigsten zufrieden?",
+      "#Travel time": "Reisezeit",
+      "#Cost": "Kosten",
+      "#It's not reliable or predictable": "Es ist nicht verlässlich oder planbar",
+      "#Comfort": "Komfort",
+      "#Safety from traffic or crime": "Sicherheit vor Verkehr oder Kriminalität",
+      "#It's hard to reach or use": "Es ist schwer zu erreichen oder zu nutzen",
+      "#Crowding or lack of space": "Gedränge oder Platzmangel",
+      "#It's not flexible": "Es ist nicht flexibel",
+      "#Always": "Immer",
+      "#Waiting or standing (at traffic lights, in queues)": "Warten oder Stehen (an Ampeln, in Schlangen)",
+      "#E-scooter – Effort and satisfaction": "E-Scooter – Aufwand und Zufriedenheit",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - E-Scooter – Aufwand und Zufriedenheit",
+      "#Effort and satisfaction": "Aufwand und Zufriedenheit",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Müdigkeit, Aufwand, Zeit und Zufriedenheit, <b>wenn Sie E-Scooter fahren</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "#E-scooter on a street": "Sokakta bir elektrikli scooter",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "Elektrikli scooter kullanırken varış noktasına genellikle ne kadar yorgun varırsınız?",
+      "#Not at all tired": "Hiç yorgun değilim",
+      "#A little tired": "Biraz yorgun",
+      "#Quite tired": "Oldukça yorgun",
+      "#Very tired": "Çok yorgunum",
+      "#Exhausted": "Çok bitkinim",
+      "#When you ride an e-scooter, what tires you most?": "Elektrikli scooter kullanırken sizi en çok ne yorar?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Fiziksel efor (ayakta durmak, dengeyi korumak, çanta taşımak)",
+      "#Slopes, stairs and changes in level": "Yokuşlar, merdivenler ve seviye farkları",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stres (trafik, yolu bulmak, geç kalmak, kendini güvensiz hissetmek)",
+      "#Heat, noise or bad air": "Sıcak, gürültü veya kötü hava kalitesi",
+      "#I rarely feel tired after my trips": "Yolculuklarımdan sonra nadiren yorgun hissederim",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "Elektrikli scooter kullanmak, gidebileceğiniz diğer ulaşım şekillerine kıyasla ne kadar zorlayıcıdır?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Hem fiziksel hem de zihinsel eforu düşünün. Diğer yollar yürümek, otomobil kullanmak veya toplu taşıma olabilir.",
+      "#Much easier than the others": "Diğerlerinden çok daha kolay",
+      "#A bit easier": "Biraz daha kolay",
+      "#About the same": "Yaklaşık aynı",
+      "#A bit more demanding": "Biraz daha zorlayıcı",
+      "#Much more demanding": "Çok daha zorlayıcı",
+      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Elektrikli scooter kullanırken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "Elektrikli scooter kullanırken genel olarak ne kadar memnunsunuz?",
+      "#Very dissatisfied": "Hiç memnun değilim",
+      "#Dissatisfied": "Memnun değilim",
+      "#Neither satisfied nor dissatisfied": "Ne memnunum ne de memnun değilim",
+      "#Satisfied": "Memnunum",
+      "#Very satisfied": "Çok memnunum",
+      "#When you ride an e-scooter, what are you least happy with?": "Elektrikli scooter kullanırken en az neyden memnunsunuz?",
+      "#Travel time": "Yolculuk süresi",
+      "#Cost": "Maliyet",
+      "#It's not reliable or predictable": "Güvenilir veya öngörülebilir değil",
+      "#Comfort": "Konfor",
+      "#Safety from traffic or crime": "Trafiğe veya suça karşı güvenlik",
+      "#It's hard to reach or use": "Ulaşması veya kullanması zor",
+      "#Crowding or lack of space": "Kalabalık veya yer yetersizliği",
+      "#It's not flexible": "Esnek değil",
+      "#Always": "Her zaman",
+      "#Waiting or standing (at traffic lights, in queues)": "Beklemek veya ayakta durmak (trafik ışıklarında, kuyruklarda)",
+      "#E-scooter – Effort and satisfaction": "Elektrikli scooter – Çaba ve memnuniyet",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - Elektrikli scooter – Çaba ve memnuniyet",
+      "#Effort and satisfaction": "Çaba ve memnuniyet",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Elektrikli scooter kullanırken</b> yorgunluk, çaba, süre ve memnuniyet.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "#E-scooter on a street": "اسکوتر برقی در خیابان",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "هنگام استفاده از اسکوتر برقی، معمولاً وقتی می‌رسید چقدر خسته‌اید؟",
+      "#Not at all tired": "اصلاً خسته نیستم",
+      "#A little tired": "کمی خسته‌ام",
+      "#Quite tired": "نسبتاً خسته‌ام",
+      "#Very tired": "خیلی خسته‌ام",
+      "#Exhausted": "کاملاً خسته‌ام",
+      "#When you ride an e-scooter, what tires you most?": "هنگام استفاده از اسکوتر برقی، چه چیزی بیش از همه شما را خسته می‌کند؟",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "تلاش جسمی (ایستادن، حفظ تعادل، حمل کیف و کیسه)",
+      "#Slopes, stairs and changes in level": "سربالایی‌ها، پله‌ها و اختلاف سطح‌ها",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "استرس (ترافیک، پیدا کردن راه، دیر رسیدن، احساس ناامنی)",
+      "#Heat, noise or bad air": "گرما، سر و صدا یا هوای آلوده",
+      "#I rarely feel tired after my trips": "به‌ندرت بعد از سفرهایم احساس خستگی می‌کنم",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "هنگام استفاده از اسکوتر برقی، در مقایسه با روش‌های دیگر رفت‌وآمد، چقدر سخت و پرزحمت است؟",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "هم تلاش جسمی و هم ذهنی را در نظر بگیرید. روش‌های دیگر می‌تواند پیاده‌روی، رانندگی یا حمل‌ونقل عمومی باشد.",
+      "#Much easier than the others": "خیلی راحت‌تر از بقیه",
+      "#A bit easier": "کمی راحت‌تر",
+      "#About the same": "تقریباً یکسان",
+      "#A bit more demanding": "کمی سخت‌تر",
+      "#Much more demanding": "خیلی سخت‌تر",
+      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "هنگام استفاده از اسکوتر برقی، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
+      "#When you ride an e-scooter, how satisfied are you overall?": "هنگام استفاده از اسکوتر برقی، در کل چقدر راضی هستید؟",
+      "#Very dissatisfied": "بسیار ناراضی",
+      "#Dissatisfied": "ناراضی",
+      "#Neither satisfied nor dissatisfied": "نه راضی و نه ناراضی",
+      "#Satisfied": "راضی",
+      "#Very satisfied": "بسیار راضی",
+      "#When you ride an e-scooter, what are you least happy with?": "هنگام استفاده از اسکوتر برقی، از چه چیزی کمتر از همه راضی هستید؟",
+      "#Travel time": "زمان سفر",
+      "#Cost": "هزینه",
+      "#It's not reliable or predictable": "قابل‌اعتماد یا قابل‌پیش‌بینی نیست",
+      "#Comfort": "راحتی",
+      "#Safety from traffic or crime": "ایمنی در ترافیک یا امنیت در برابر جرم",
+      "#It's hard to reach or use": "رسیدن به آن یا استفاده از آن سخت است",
+      "#Crowding or lack of space": "شلوغی یا کمبود جا",
+      "#It's not flexible": "انعطاف‌پذیر نیست",
+      "#Always": "همیشه",
+      "#Waiting or standing (at traffic lights, in queues)": "انتظار یا ایستادن (پشت چراغ قرمز، در صف)",
+      "#E-scooter – Effort and satisfaction": "اسکوتر برقی – تلاش و رضایت",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - اسکوتر برقی – تلاش و رضایت",
+      "#Effort and satisfaction": "تلاش و رضایت",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>خستگی، تلاش، زمان و رضایت <b>هنگام استفاده از اسکوتر برقی</b>.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "#E-scooter on a street": "Elektromos roller az utcán",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "Ha elektromos rollerrel közlekedik, általában mennyire fáradtan érkezik meg?",
+      "#Not at all tired": "Egyáltalán nem vagyok fáradt",
+      "#A little tired": "Kissé fáradt vagyok",
+      "#Quite tired": "Meglehetősen fáradt vagyok",
+      "#Very tired": "Nagyon fáradt vagyok",
+      "#Exhausted": "Kimerült vagyok",
+      "#When you ride an e-scooter, what tires you most?": "Elektromos rollerezés közben mi fárasztja a legjobban?",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "Fizikai megterhelés (állás, egyensúlyozás, szatyrok cipelése)",
+      "#Slopes, stairs and changes in level": "Emelkedők, lépcsők és szintkülönbségek",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stressz (forgalom, eligazodás, késés, a biztonság hiányának érzése)",
+      "#Heat, noise or bad air": "Hőség, zaj vagy rossz levegő",
+      "#I rarely feel tired after my trips": "Ritkán fáradok el az utak után",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "Mennyire megterhelő az elektromos rollerezés más közlekedési módokhoz képest, amelyeket választhatna?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Gondoljon a testi és a szellemi megterhelésre is. Más módok lehetnek a gyaloglás, az autózás vagy a tömegközlekedés.",
+      "#Much easier than the others": "Sokkal könnyebb, mint a többi",
+      "#A bit easier": "Kicsit könnyebb",
+      "#About the same": "Nagyjából ugyanolyan",
+      "#A bit more demanding": "Kicsit megterhelőbb",
+      "#Much more demanding": "Sokkal megterhelőbb",
+      "#I have no other way to travel": "Nincs más módom az utazásra",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Ha elektromos rollerrel közlekedik, milyen gyakran ér célba a tervezett idő alatt?",
+      "#When you ride an e-scooter, how satisfied are you overall?": "Összességében mennyire elégedett, amikor elektromos rollerrel közlekedik?",
+      "#Very dissatisfied": "Nagyon elégedetlen",
+      "#Dissatisfied": "Elégedetlen",
+      "#Neither satisfied nor dissatisfied": "Sem elégedett, sem elégedetlen",
+      "#Satisfied": "Elégedett",
+      "#Very satisfied": "Nagyon elégedett",
+      "#When you ride an e-scooter, what are you least happy with?": "Elektromos rollerezés közben mivel a legkevésbé elégedett?",
+      "#Travel time": "Utazási idő",
+      "#Cost": "Költség",
+      "#It's not reliable or predictable": "Nem megbízható, és nem kiszámítható",
+      "#Comfort": "Kényelem",
+      "#Safety from traffic or crime": "Biztonság a forgalomtól vagy a bűnözéstől",
+      "#It's hard to reach or use": "Nehéz elérni vagy használni",
+      "#Crowding or lack of space": "Zsúfoltság vagy helyhiány",
+      "#It's not flexible": "Nem rugalmas",
+      "#Always": "Mindig",
+      "#Waiting or standing (at traffic lights, in queues)": "Várakozás vagy állás (a lámpánál, sorban)",
+      "#E-scooter – Effort and satisfaction": "Elektromos roller – Erőfeszítés és elégedettség",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - Elektromos roller – Erőfeszítés és elégedettség",
+      "#Effort and satisfaction": "Erőfeszítés és elégedettség",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Fáradtság, erőfeszítés, idő és elégedettség, <b>amikor elektromos rollerrel közlekedik</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "#E-scooter on a street": "سكوتر كهربائي في شارع",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#When you ride an e-scooter, how tired do you usually feel when you arrive?": "عند ركوب السكوتر الكهربائي، ما مدى تعبك المعتاد عند الوصول؟",
+      "#Not at all tired": "لا تعب إطلاقًا",
+      "#A little tired": "تعب خفيف",
+      "#Quite tired": "تعب متوسط",
+      "#Very tired": "تعب شديد",
+      "#Exhausted": "إرهاق تام",
+      "#When you ride an e-scooter, what tires you most?": "عند ركوب السكوتر الكهربائي، ما أكثر ما يتعبك؟",
+      "#Physical effort (standing, keeping your balance, carrying bags)": "الجهد البدني (الوقوف، الحفاظ على التوازن، حمل الأكياس)",
+      "#Slopes, stairs and changes in level": "المنحدرات والدرج وفروق المستوى",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "التوتر (حركة المرور، معرفة الطريق، التأخر، الشعور بعدم الأمان)",
+      "#Heat, noise or bad air": "الحر أو الضجيج أو الهواء السيئ",
+      "#I rarely feel tired after my trips": "نادرًا ما أشعر بالتعب بعد رحلاتي",
+      "#When you ride an e-scooter, how demanding is it compared with other ways you could travel?": "عند ركوب السكوتر الكهربائي، ما مدى صعوبته مقارنة بوسائل التنقل الأخرى المتاحة؟",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "المقصود الجهد البدني والذهني معًا. ومن الوسائل الأخرى المشي أو القيادة أو النقل العام.",
+      "#Much easier than the others": "أسهل بكثير من غيرها",
+      "#A bit easier": "أسهل قليلًا",
+      "#About the same": "بالقدر نفسه تقريبًا",
+      "#A bit more demanding": "أصعب قليلًا",
+      "#Much more demanding": "أصعب بكثير",
+      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
+      "#When you ride an e-scooter, how often do you arrive in the time you planned?": "عند ركوب السكوتر الكهربائي، كم مرة يكون وصولك في الوقت الذي خططت له؟",
+      "#When you ride an e-scooter, how satisfied are you overall?": "عند ركوب السكوتر الكهربائي، ما مدى رضاك بوجه عام؟",
+      "#Very dissatisfied": "عدم رضا شديد",
+      "#Dissatisfied": "عدم رضا",
+      "#Neither satisfied nor dissatisfied": "لا رضا ولا عدم رضا",
+      "#Satisfied": "رضا",
+      "#Very satisfied": "رضا كبير",
+      "#When you ride an e-scooter, what are you least happy with?": "عند ركوب السكوتر الكهربائي، ما أكثر ما لا يعجبك؟",
+      "#Travel time": "مدة الرحلة",
+      "#Cost": "التكلفة",
+      "#It's not reliable or predictable": "لا يمكن الاعتماد عليه أو توقّع أدائه",
+      "#Comfort": "الراحة",
+      "#Safety from traffic or crime": "الأمان من حركة المرور أو الجريمة",
+      "#It's hard to reach or use": "يصعب الوصول إليه أو استخدامه",
+      "#Crowding or lack of space": "الازدحام أو قلة المساحة",
+      "#It's not flexible": "غير مرن",
+      "#Always": "دائمًا",
+      "#Waiting or standing (at traffic lights, in queues)": "الانتظار أو الوقوف (عند إشارات المرور أو في الطوابير)",
+      "#E-scooter – Effort and satisfaction": "السكوتر الكهربائي – الجهد والرضا",
+      "#SmartUrbanity - E-scooter – Effort and satisfaction": "SmartUrbanity - السكوتر الكهربائي – الجهد والرضا",
+      "#Effort and satisfaction": "الجهد والرضا",
+      "#<p>Tiredness, effort, time and satisfaction <b>when you ride an e-scooter</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>التعب والجهد والوقت والرضا <b>عند ركوب السكوتر الكهربائي</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  }
+}

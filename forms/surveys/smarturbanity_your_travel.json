@@ -1,0 +1,650 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - How you get around",
+    "questionnaire_id": "smarturbanity_your_travel",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 1,
+    "options": {
+      "review_mode": false,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "How you get around",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_about_you.svg",
+      "image_alt": "#Person with a speech bubble",
+      "description": "<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "How you get around",
+    "sections": [
+      {
+        "title": "How you get around",
+        "backgroundColor": "#f0f0f0",
+        "description": "",
+        "questions": [
+          {
+            "text": "Which travel mode do you most often use for your trips?",
+            "answer_key": "usual_mode",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "On foot or in a wheelchair",
+                "value": "walking_as_the_main_mode_for_the_trip_no"
+              },
+              {
+                "text": "Car (as driver)",
+                "value": "car_driver"
+              },
+              {
+                "text": "Car (as passenger)",
+                "value": "car_passenger"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Public transport",
+                "value": "public_transport"
+              },
+              {
+                "text": "School bus or shuttle service",
+                "value": "school_bus_or_shuttle"
+              },
+              {
+                "text": "Bicycle/e-bike (private)",
+                "value": "bicycle_e_bike_private"
+              },
+              {
+                "text": "Bicycle/e-bike (shared)",
+                "value": "bicycle_e_bike_shared"
+              },
+              {
+                "text": "e-scooter (private)",
+                "value": "e_scooter_private"
+              },
+              {
+                "text": "e-scooter (shared)",
+                "value": "e_scooter_shared"
+              },
+              {
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
+              }
+            ],
+            "question_id": "usual_mode",
+            "question_version": "2.1.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "At what times of day do you most often travel? (Select all that apply)",
+            "answer_key": "travel_times",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Before 7:00",
+                "value": "before_7"
+              },
+              {
+                "text": "7:00-10:00 (morning rush)",
+                "value": "7_10"
+              },
+              {
+                "text": "10:00-16:00 (daytime)",
+                "value": "10_16"
+              },
+              {
+                "text": "16:00-20:00 (afternoon and evening rush)",
+                "value": "16_20"
+              },
+              {
+                "text": "20:00-22:00 (evening)",
+                "value": "20_22"
+              },
+              {
+                "text": "After 22:00 (night)",
+                "value": "after_22"
+              },
+              {
+                "text": "Variable hours or shifts",
+                "value": "variable"
+              }
+            ],
+            "question_id": "travel_times",
+            "question_version": "2.0.0",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      },
+      {
+        "title": "Your most frequent trip",
+        "backgroundColor": "#f0f0f0",
+        "description": "<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>",
+        "questions": [
+          {
+            "text": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
+            "answer_key": "freq_trip_purpose",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Work or professional business",
+                "value": "work_or_professional_business"
+              },
+              {
+                "text": "Education",
+                "value": "education"
+              },
+              {
+                "text": "Shopping or daily activities",
+                "value": "shopping_or_daily_activities"
+              },
+              {
+                "text": "Appointments (medical,legal,banking)",
+                "value": "appointments_medical_legal_banking"
+              },
+              {
+                "text": "Social/Leisure",
+                "value": "social_leisure"
+              },
+              {
+                "text": "Health/Exercise",
+                "value": "health_exercise"
+              },
+              {
+                "text": "Caring/Escort",
+                "value": "caring_escort"
+              }
+            ],
+            "question_id": "frequent_trip_purpose",
+            "question_version": "1.0.0",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "text": "On average, how often do you make your most frequent journey?",
+            "answer_key": "freq_trip_frequency",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "5 or more days a week (Daily/Commuter)",
+                "value": "5_plus_week"
+              },
+              {
+                "text": "3–4 days a week (Frequent)",
+                "value": "3_4_week"
+              },
+              {
+                "text": "1–2 days a week (Regular)",
+                "value": "1_2_week"
+              },
+              {
+                "text": "1–3 times a month (Occasional)",
+                "value": "1_3_month"
+              },
+              {
+                "text": "Less than once a month (Rarely)",
+                "value": "lt_monthly"
+              }
+            ],
+            "question_id": "frequent_trip_frequency",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
+            "answer_key": "freq_trip_company",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Mostly alone",
+                "value": "mostly_alone"
+              },
+              {
+                "text": "Accompanying children or people I look after",
+                "value": "accompanying_others"
+              },
+              {
+                "text": "Accompanied by someone who helps me",
+                "value": "accompanied_by_helper"
+              },
+              {
+                "text": "Often with family members",
+                "value": "often_with_family_members"
+              },
+              {
+                "text": "Often with colleagues or friends",
+                "value": "often_with_colleagues_or_friends"
+              }
+            ],
+            "question_id": "frequent_trip_company",
+            "question_version": "2.0.2",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "#Person with a speech bubble": "Person with a speech bubble",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#Car (as driver)": "Car (as driver)",
+      "#Car (as passenger)": "Car (as passenger)",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#Which travel mode do you most often use for your trips?": "Which travel mode do you most often use for your trips?",
+      "#On foot or in a wheelchair": "On foot or in a wheelchair",
+      "#Car sharing": "Car sharing",
+      "#Public transport": "Public transport",
+      "#School bus or shuttle service": "School bus or shuttle service",
+      "#Bicycle/e-bike (private)": "Bicycle/e-bike (private)",
+      "#Bicycle/e-bike (shared)": "Bicycle/e-bike (shared)",
+      "#e-scooter (private)": "e-scooter (private)",
+      "#e-scooter (shared)": "e-scooter (shared)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "At what times of day do you most often travel? (Select all that apply)",
+      "#Before 7:00": "Before 7:00",
+      "#7:00-10:00 (morning rush)": "7:00-10:00 (morning rush)",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (daytime)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (afternoon and evening rush)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (evening)",
+      "#After 22:00 (night)": "After 22:00 (night)",
+      "#Variable hours or shifts": "Variable hours or shifts",
+      "#How you get around": "How you get around",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)",
+      "#Work or professional business": "Work or professional business",
+      "#Education": "Education",
+      "#Shopping or daily activities": "Shopping or daily activities",
+      "#Appointments (medical,legal,banking)": "Appointments (medical,legal,banking)",
+      "#Social/Leisure": "Social/Leisure",
+      "#Health/Exercise": "Health/Exercise",
+      "#Caring/Escort": "Caring/Escort",
+      "#On average, how often do you make your most frequent journey?": "On average, how often do you make your most frequent journey?",
+      "#5 or more days a week (Daily/Commuter)": "5 or more days a week (Daily/Commuter)",
+      "#3–4 days a week (Frequent)": "3–4 days a week (Frequent)",
+      "#1–2 days a week (Regular)": "1–2 days a week (Regular)",
+      "#1–3 times a month (Occasional)": "1–3 times a month (Occasional)",
+      "#Less than once a month (Rarely)": "Less than once a month (Rarely)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "On the trips you make most often during a typical week, do you usually travel alone or with other people?",
+      "#Mostly alone": "Mostly alone",
+      "#Accompanying children or people I look after": "Accompanying children or people I look after",
+      "#Accompanied by someone who helps me": "Accompanied by someone who helps me",
+      "#Often with family members": "Often with family members",
+      "#Often with colleagues or friends": "Often with colleagues or friends",
+      "#Your most frequent trip": "Your most frequent trip",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - How you get around",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+    },
+    "it": {
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#Car (as driver)": "Auto (alla guida)",
+      "#Car (as passenger)": "Auto (come passeggero o passeggera)",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#Person with a speech bubble": "Persona con un fumetto",
+      "#Which travel mode do you most often use for your trips?": "Quale mezzo di trasporto utilizzi più frequentemente per i tuoi spostamenti?",
+      "#On foot or in a wheelchair": "A piedi o in sedia a rotelle",
+      "#Car sharing": "Auto in condivisione (car sharing)",
+      "#Public transport": "Trasporto pubblico",
+      "#School bus or shuttle service": "Scuolabus o navetta",
+      "#Bicycle/e-bike (private)": "Bicicletta o bici elettrica (privata)",
+      "#Bicycle/e-bike (shared)": "Bicicletta o bici elettrica (condivisa)",
+      "#e-scooter (private)": "Monopattino elettrico (privato)",
+      "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o auto con conducente (NCC, ad es. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "In quali momenti della giornata ti sposti più frequentemente? (Seleziona tutte le opzioni applicabili)",
+      "#Before 7:00": "Prima delle 7:00",
+      "#7:00-10:00 (morning rush)": "7:00-10:00 (ora di punta mattutina)",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (in giornata)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (ora di punta del pomeriggio e della sera)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (sera)",
+      "#After 22:00 (night)": "Dopo le 22:00 (notte)",
+      "#Variable hours or shifts": "Orari variabili o a turni",
+      "#How you get around": "Come ti sposti",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Qual è lo scopo principale del tuo spostamento più frequente? (Pensa allo spostamento che effettui più spesso durante una settimana tipica.)",
+      "#Work or professional business": "Lavoro o attività professionali",
+      "#Education": "Studio o formazione",
+      "#Shopping or daily activities": "Acquisti o attività quotidiane",
+      "#Appointments (medical,legal,banking)": "Appuntamenti (medici, legali, bancari)",
+      "#Social/Leisure": "Socialità/tempo libero",
+      "#Health/Exercise": "Salute/attività fisica",
+      "#Caring/Escort": "Assistenza/accompagnamento",
+      "#On average, how often do you make your most frequent journey?": "In media, con quale frequenza effettui il tuo spostamento più frequente?",
+      "#5 or more days a week (Daily/Commuter)": "5 o più giorni alla settimana (quotidiano/pendolare)",
+      "#3–4 days a week (Frequent)": "3-4 giorni alla settimana (frequente)",
+      "#1–2 days a week (Regular)": "1-2 giorni alla settimana (regolare)",
+      "#1–3 times a month (Occasional)": "1-3 volte al mese (occasionale)",
+      "#Less than once a month (Rarely)": "Meno di una volta al mese (raramente)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Negli spostamenti che effettui più spesso durante una settimana tipica, viaggi di solito senza compagnia o con altre persone?",
+      "#Mostly alone": "Principalmente senza compagnia",
+      "#Accompanying children or people I look after": "Accompagno bambini o persone che assisto",
+      "#Accompanied by someone who helps me": "In compagnia di qualcuno che mi aiuta",
+      "#Often with family members": "Spesso con familiari",
+      "#Often with colleagues or friends": "Spesso con persone del lavoro o amicizie",
+      "#Your most frequent trip": "Il tuo spostamento più frequente",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>Lo spostamento che fai più spesso in una settimana normale. Altre domande di SmartUrbanity lo chiamano il tuo spostamento abituale.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Come ti sposti",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Come ti sposti di solito e lo spostamento che fai più spesso.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+    },
+    "fr": {
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#Car (as driver)": "Voiture (au volant)",
+      "#Car (as passenger)": "Voiture (comme passager ou passagère)",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#Person with a speech bubble": "Personne avec une bulle de dialogue",
+      "#Which travel mode do you most often use for your trips?": "Quel mode de transport utilisez-vous le plus souvent pour vos déplacements ?",
+      "#On foot or in a wheelchair": "À pied ou en fauteuil roulant",
+      "#Car sharing": "Autopartage",
+      "#Public transport": "Transports publics",
+      "#School bus or shuttle service": "Bus scolaire ou navette",
+      "#Bicycle/e-bike (private)": "Vélo / vélo électrique (personnel)",
+      "#Bicycle/e-bike (shared)": "Vélo / vélo électrique (partagé)",
+      "#e-scooter (private)": "Trottinette électrique (personnelle)",
+      "#e-scooter (shared)": "Trottinette électrique (partagée)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "À quels moments de la journée vous déplacez-vous le plus souvent ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Before 7:00": "Avant 7 h",
+      "#7:00-10:00 (morning rush)": "7 h-10 h (heure de pointe du matin)",
+      "#10:00-16:00 (daytime)": "10 h-16 h (journée)",
+      "#16:00-20:00 (afternoon and evening rush)": "16 h-20 h (heure de pointe de l’après-midi et du soir)",
+      "#20:00-22:00 (evening)": "20 h-22 h (soirée)",
+      "#After 22:00 (night)": "Après 22 h (nuit)",
+      "#Variable hours or shifts": "Horaires variables ou postés",
+      "#How you get around": "Votre façon de vous déplacer",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Quel est le but principal de votre trajet le plus fréquent ? (Pensez au trajet que vous faites le plus souvent pendant une semaine habituelle.)",
+      "#Work or professional business": "Travail ou activité professionnelle",
+      "#Education": "Études",
+      "#Shopping or daily activities": "Achats ou activités quotidiennes",
+      "#Appointments (medical,legal,banking)": "Rendez-vous (médical, juridique, bancaire)",
+      "#Social/Leisure": "Vie sociale / loisirs",
+      "#Health/Exercise": "Santé / activité physique",
+      "#Caring/Escort": "Accompagnement ou aide à une autre personne",
+      "#On average, how often do you make your most frequent journey?": "En moyenne, à quelle fréquence faites-vous votre trajet le plus fréquent ?",
+      "#5 or more days a week (Daily/Commuter)": "5 jours ou plus par semaine (quotidien / domicile-travail)",
+      "#3–4 days a week (Frequent)": "3 à 4 jours par semaine (fréquent)",
+      "#1–2 days a week (Regular)": "1 à 2 jours par semaine (régulier)",
+      "#1–3 times a month (Occasional)": "1 à 3 fois par mois (occasionnel)",
+      "#Less than once a month (Rarely)": "Moins d’une fois par mois (rare)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Pour les trajets que vous faites le plus souvent pendant une semaine habituelle, vous déplacez-vous généralement sans compagnie ou avec d’autres personnes ?",
+      "#Mostly alone": "Le plus souvent sans compagnie",
+      "#Accompanying children or people I look after": "J’accompagne des enfants ou des personnes dont je m’occupe",
+      "#Accompanied by someone who helps me": "Avec une personne qui m’aide",
+      "#Often with family members": "Souvent avec des membres de ma famille",
+      "#Often with colleagues or friends": "Souvent avec des collègues ou des personnes de mon entourage",
+      "#Your most frequent trip": "Votre trajet le plus fréquent",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>Le trajet que vous faites le plus souvent pendant une semaine habituelle. D'autres questions de SmartUrbanity l'appellent votre trajet habituel.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Votre façon de vous déplacer",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Comment vous vous déplacez d’habitude et le trajet que vous faites le plus souvent.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+    },
+    "de": {
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#Car (as driver)": "Auto (als Fahrerin oder Fahrer)",
+      "#Car (as passenger)": "Auto (als Mitfahrerin oder Mitfahrer)",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#Person with a speech bubble": "Person mit einer Sprechblase",
+      "#Which travel mode do you most often use for your trips?": "Welches Verkehrsmittel nutzen Sie für Ihre Wege am häufigsten?",
+      "#On foot or in a wheelchair": "Zu Fuß oder im Rollstuhl",
+      "#Car sharing": "Carsharing",
+      "#Public transport": "Öffentliche Verkehrsmittel",
+      "#School bus or shuttle service": "Schulbus oder Shuttle",
+      "#Bicycle/e-bike (private)": "Fahrrad / E-Bike (privat)",
+      "#Bicycle/e-bike (shared)": "Fahrrad / E-Bike (Sharing)",
+      "#e-scooter (private)": "E-Scooter (privat)",
+      "#e-scooter (shared)": "E-Scooter (Sharing)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "Zu welchen Tageszeiten sind Sie am häufigsten unterwegs? (Wählen Sie alles Zutreffende aus)",
+      "#Before 7:00": "Vor 7:00 Uhr",
+      "#7:00-10:00 (morning rush)": "7:00-10:00 Uhr (morgendliche Stoßzeit)",
+      "#10:00-16:00 (daytime)": "10:00-16:00 Uhr (tagsüber)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 Uhr (Nachmittags- und Abendverkehr)",
+      "#20:00-22:00 (evening)": "20:00-22:00 Uhr (abends)",
+      "#After 22:00 (night)": "Nach 22:00 Uhr (nachts)",
+      "#Variable hours or shifts": "Wechselnde Zeiten oder Schichtdienst",
+      "#How you get around": "Wie Sie unterwegs sind",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Was ist der Hauptzweck Ihres häufigsten Weges? (Denken Sie an den Weg, den Sie in einer typischen Woche am häufigsten machen.)",
+      "#Work or professional business": "Arbeit oder berufliche Tätigkeit",
+      "#Education": "Ausbildung oder Studium",
+      "#Shopping or daily activities": "Einkaufen oder tägliche Erledigungen",
+      "#Appointments (medical,legal,banking)": "Termine (medizinisch, rechtlich, Bank)",
+      "#Social/Leisure": "Soziale Aktivitäten / Freizeit",
+      "#Health/Exercise": "Gesundheit / Sport",
+      "#Caring/Escort": "Begleitung oder Betreuung einer anderen Person",
+      "#On average, how often do you make your most frequent journey?": "Wie oft machen Sie im Durchschnitt Ihren häufigsten Weg?",
+      "#5 or more days a week (Daily/Commuter)": "5 oder mehr Tage pro Woche (täglich / Pendeln)",
+      "#3–4 days a week (Frequent)": "3-4 Tage pro Woche (häufig)",
+      "#1–2 days a week (Regular)": "1-2 Tage pro Woche (regelmäßig)",
+      "#1–3 times a month (Occasional)": "1-3 Mal pro Monat (gelegentlich)",
+      "#Less than once a month (Rarely)": "Weniger als einmal im Monat (selten)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Bei den Wegen, die Sie in einer typischen Woche am häufigsten machen: Sind Sie dabei normalerweise allein oder mit anderen Personen unterwegs?",
+      "#Mostly alone": "Meist allein",
+      "#Accompanying children or people I look after": "Ich begleite Kinder oder Personen, die ich betreue",
+      "#Accompanied by someone who helps me": "In Begleitung einer Person, die mir hilft",
+      "#Often with family members": "Oft mit Familienmitgliedern",
+      "#Often with colleagues or friends": "Oft mit Personen aus dem Arbeits- oder Freundeskreis",
+      "#Your most frequent trip": "Ihr häufigster Weg",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>Der Weg, den Sie in einer typischen Woche am häufigsten machen. Andere SmartUrbanity-Fragen nennen ihn Ihren üblichen Weg.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Wie Sie unterwegs sind",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie Sie normalerweise unterwegs sind und welchen Weg Sie am häufigsten zurücklegen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+    },
+    "tr": {
+      "#Thank you!": "Teşekkürler!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#Car (as driver)": "Otomobil (sürücü olarak)",
+      "#Car (as passenger)": "Otomobil (yolcu olarak)",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#Person with a speech bubble": "Konuşma balonu olan bir kişi",
+      "#Which travel mode do you most often use for your trips?": "Yolculuklarınızda en sık hangi ulaşım seçeneğini kullanıyorsunuz?",
+      "#On foot or in a wheelchair": "Yürüyerek veya tekerlekli sandalyeyle",
+      "#Car sharing": "Araç paylaşımı",
+      "#Public transport": "Toplu taşıma",
+      "#School bus or shuttle service": "Okul servisi veya servis aracı",
+      "#Bicycle/e-bike (private)": "Bisiklet / elektrikli bisiklet (kişisel)",
+      "#Bicycle/e-bike (shared)": "Bisiklet / elektrikli bisiklet (paylaşımlı)",
+      "#e-scooter (private)": "E-scooter (kişisel)",
+      "#e-scooter (shared)": "E-scooter (paylaşımlı)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "En sık günün hangi saatlerinde yolculuk yaparsınız? (Uygun olanların tümünü seçin)",
+      "#Before 7:00": "07.00’den önce",
+      "#7:00-10:00 (morning rush)": "07.00-10.00 (sabah yoğunluğu)",
+      "#10:00-16:00 (daytime)": "10.00-16.00 (gün içi)",
+      "#16:00-20:00 (afternoon and evening rush)": "16.00-20.00 (öğleden sonra ve akşam yoğunluğu)",
+      "#20:00-22:00 (evening)": "20.00-22.00 (akşam)",
+      "#After 22:00 (night)": "22.00’den sonra (gece)",
+      "#Variable hours or shifts": "Değişken saatler veya vardiyalı",
+      "#How you get around": "Nasıl yolculuk ediyorsunuz",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "En sık yaptığınız yolculuğun temel amacı nedir? (Tipik bir haftada en sık yaptığınız yolculuğu düşünün.)",
+      "#Work or professional business": "İş veya mesleki faaliyet",
+      "#Education": "Eğitim",
+      "#Shopping or daily activities": "Alışveriş veya günlük işler",
+      "#Appointments (medical,legal,banking)": "Randevular (sağlık, hukuk, banka)",
+      "#Social/Leisure": "Sosyal etkinlik / boş zaman",
+      "#Health/Exercise": "Sağlık / egzersiz",
+      "#Caring/Escort": "Birine bakım veya eşlik etme",
+      "#On average, how often do you make your most frequent journey?": "En sık yaptığınız yolculuğu ortalama ne sıklıkta yaparsınız?",
+      "#5 or more days a week (Daily/Commuter)": "Haftada 5 gün veya daha fazla (günlük / işe gidip gelme)",
+      "#3–4 days a week (Frequent)": "Haftada 3-4 gün (sık)",
+      "#1–2 days a week (Regular)": "Haftada 1-2 gün (düzenli)",
+      "#1–3 times a month (Occasional)": "Ayda 1-3 kez (ara sıra)",
+      "#Less than once a month (Rarely)": "Ayda birden az (nadiren)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Tipik bir haftada en sık yaptığınız yolculuklarda genellikle yalnız mı yoksa başka kişilerle mi seyahat edersiniz?",
+      "#Mostly alone": "Çoğunlukla yalnız",
+      "#Accompanying children or people I look after": "Çocuklara veya baktığım kişilere eşlik ediyorum",
+      "#Accompanied by someone who helps me": "Bana yardım eden biri eşliğinde",
+      "#Often with family members": "Sık sık aile üyeleriyle",
+      "#Often with colleagues or friends": "Sık sık iş arkadaşları veya arkadaşlarla",
+      "#Your most frequent trip": "En sık yaptığınız yolculuk",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>Tipik bir haftada en sık yaptığınız yolculuk. Diğer SmartUrbanity soruları buna olağan yolculuğunuz der.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Nasıl yolculuk ediyorsunuz",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Genellikle nasıl yolculuk ettiğiniz ve en sık yaptığınız yolculuk.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+    },
+    "fa": {
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#Car (as driver)": "خودرو (به‌عنوان راننده)",
+      "#Car (as passenger)": "خودرو (به‌عنوان سرنشین)",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#Person with a speech bubble": "فردی با حباب گفتگو",
+      "#Which travel mode do you most often use for your trips?": "برای سفرهای خود بیشتر از کدام روش رفت‌وآمد استفاده می‌کنید؟",
+      "#On foot or in a wheelchair": "پیاده یا با ویلچر",
+      "#Car sharing": "خودروی اشتراکی",
+      "#Public transport": "حمل‌ونقل عمومی",
+      "#School bus or shuttle service": "سرویس مدرسه یا شاتل",
+      "#Bicycle/e-bike (private)": "دوچرخه / دوچرخه برقی (شخصی)",
+      "#Bicycle/e-bike (shared)": "دوچرخه / دوچرخه برقی (اشتراکی)",
+      "#e-scooter (private)": "اسکوتر برقی (شخصی)",
+      "#e-scooter (shared)": "اسکوتر برقی (اشتراکی)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "بیشتر در چه ساعت‌هایی از روز سفر می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Before 7:00": "قبل از ۷:۰۰",
+      "#7:00-10:00 (morning rush)": "۷:۰۰ تا ۱۰:۰۰ (ساعت شلوغی صبح)",
+      "#10:00-16:00 (daytime)": "۱۰:۰۰ تا ۱۶:۰۰ (طول روز)",
+      "#16:00-20:00 (afternoon and evening rush)": "۱۶:۰۰ تا ۲۰:۰۰ (ساعات شلوغی بعدازظهر و عصر)",
+      "#20:00-22:00 (evening)": "۲۰:۰۰ تا ۲۲:۰۰ (اوایل شب)",
+      "#After 22:00 (night)": "بعد از ۲۲:۰۰ (شب)",
+      "#Variable hours or shifts": "ساعات متغیر یا شیفتی",
+      "#How you get around": "رفت‌وآمد شما",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "هدف اصلی پرتکرارترین سفر شما چیست؟ (سفری را در نظر بگیرید که در یک هفته معمولی بیشتر انجام می‌دهید.)",
+      "#Work or professional business": "کار یا فعالیت حرفه‌ای",
+      "#Education": "تحصیل",
+      "#Shopping or daily activities": "خرید یا کارهای روزمره",
+      "#Appointments (medical,legal,banking)": "قرارها (پزشکی، حقوقی، بانکی)",
+      "#Social/Leisure": "فعالیت اجتماعی / تفریح",
+      "#Health/Exercise": "سلامت / ورزش",
+      "#Caring/Escort": "مراقبت یا همراهی فرد دیگر",
+      "#On average, how often do you make your most frequent journey?": "به طور متوسط پرتکرارترین سفر خود را چند وقت یک بار انجام می‌دهید؟",
+      "#5 or more days a week (Daily/Commuter)": "هفته‌ای ۵ روز یا بیشتر (روزانه / رفت‌وآمد کاری)",
+      "#3–4 days a week (Frequent)": "هفته‌ای ۳ تا ۴ روز (زیاد)",
+      "#1–2 days a week (Regular)": "هفته‌ای ۱ تا ۲ روز (منظم)",
+      "#1–3 times a month (Occasional)": "ماهی ۱ تا ۳ بار (گاهی)",
+      "#Less than once a month (Rarely)": "کمتر از ماهی یک بار (به ندرت)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "در سفرهایی که در یک هفته معمولی بیشتر انجام می‌دهید، معمولاً تنها سفر می‌کنید یا با دیگران؟",
+      "#Mostly alone": "بیشتر تنها",
+      "#Accompanying children or people I look after": "کودکان یا افرادی را که از آن‌ها مراقبت می‌کنم همراهی می‌کنم",
+      "#Accompanied by someone who helps me": "همراه با کسی که به من کمک می‌کند",
+      "#Often with family members": "اغلب با اعضای خانواده",
+      "#Often with colleagues or friends": "اغلب با همکاران یا دوستان",
+      "#Your most frequent trip": "پرتکرارترین سفر شما",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>سفری که در یک هفته معمولی بیشتر از همه انجام می‌دهید. در پرسش‌های دیگر SmartUrbanity آن را «سفر معمول» شما می‌نامیم.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - رفت‌وآمد شما",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>معمولاً چگونه رفت‌وآمد می‌کنید و سفری که بیشتر از همه انجام می‌دهید.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+    },
+    "hu": {
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#Car (as driver)": "Autó (vezetőként)",
+      "#Car (as passenger)": "Autó (utasként)",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#Person with a speech bubble": "Személy egy szövegbuborékkal",
+      "#Which travel mode do you most often use for your trips?": "Melyik közlekedési módot használja a leggyakrabban?",
+      "#On foot or in a wheelchair": "Gyalog vagy kerekesszékkel",
+      "#Car sharing": "Autómegosztás",
+      "#Public transport": "Tömegközlekedés",
+      "#School bus or shuttle service": "Iskolabusz vagy transzferjárat",
+      "#Bicycle/e-bike (private)": "Kerékpár / e-bike (saját)",
+      "#Bicycle/e-bike (shared)": "Kerékpár / e-bike (megosztott)",
+      "#e-scooter (private)": "Elektromos roller (saját)",
+      "#e-scooter (shared)": "Elektromos roller (megosztott)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "A nap mely időszakaiban közlekedik leggyakrabban? (Jelölje meg az összes megfelelőt)",
+      "#Before 7:00": "7:00 előtt",
+      "#7:00-10:00 (morning rush)": "7:00-10:00 (reggeli csúcsidő)",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (napközben)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (délutáni és esti csúcsidő)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (este)",
+      "#After 22:00 (night)": "22:00 után (éjszaka)",
+      "#Variable hours or shifts": "Változó időpontok vagy műszakbeosztás",
+      "#How you get around": "Hogyan közlekedik",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "Mi a leggyakoribb utazásának fő célja? (Gondoljon arra az útra, amelyet egy tipikus héten a leggyakrabban megtesz.)",
+      "#Work or professional business": "Munka vagy üzleti tevékenység",
+      "#Education": "Oktatás",
+      "#Shopping or daily activities": "Vásárlás vagy mindennapi ügyintézés",
+      "#Appointments (medical,legal,banking)": "Időpontok (orvosi, jogi, banki)",
+      "#Social/Leisure": "Társasági élet / szabadidő",
+      "#Health/Exercise": "Egészség / testmozgás",
+      "#Caring/Escort": "Gondozás vagy más személy kísérése",
+      "#On average, how often do you make your most frequent journey?": "Átlagosan milyen gyakran teszi meg a leggyakoribb útját?",
+      "#5 or more days a week (Daily/Commuter)": "Hetente 5 vagy több napon (napi / ingázás)",
+      "#3–4 days a week (Frequent)": "Hetente 3-4 napon (gyakran)",
+      "#1–2 days a week (Regular)": "Hetente 1-2 napon (rendszeresen)",
+      "#1–3 times a month (Occasional)": "Havonta 1-3 alkalommal (alkalmanként)",
+      "#Less than once a month (Rarely)": "Havonta kevesebb mint egyszer (ritkán)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "Egy tipikus héten a leggyakoribb utazásai során általában egyedül vagy másokkal közlekedik?",
+      "#Mostly alone": "Többnyire egyedül",
+      "#Accompanying children or people I look after": "Gyermekeket vagy általam gondozott személyeket kísérek",
+      "#Accompanied by someone who helps me": "Valaki elkísér, aki segít nekem",
+      "#Often with family members": "Gyakran családtagokkal",
+      "#Often with colleagues or friends": "Gyakran kollégákkal vagy barátokkal",
+      "#Your most frequent trip": "A leggyakoribb útja",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>Az az út, amelyet egy átlagos héten a leggyakrabban megtesz. A SmartUrbanity más kérdései ezt szokásos útjaként említik.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - Hogyan közlekedik",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Hogyan közlekedik általában, és melyik utat teszi meg a leggyakrabban.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+    },
+    "ar": {
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#Car (as driver)": "سيارة (أقودها بنفسي)",
+      "#Car (as passenger)": "سيارة (أركبها دون أن أقودها)",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#Person with a speech bubble": "شخص مع فقاعة كلام",
+      "#Which travel mode do you most often use for your trips?": "ما وسيلة التنقل الأكثر استخدامًا في رحلاتك؟",
+      "#On foot or in a wheelchair": "سيرًا على الأقدام أو بالكرسي المتحرك",
+      "#Car sharing": "مشاركة السيارات",
+      "#Public transport": "النقل العام",
+      "#School bus or shuttle service": "حافلة مدرسية أو خدمة نقل مكوكية",
+      "#Bicycle/e-bike (private)": "الدراجة / الدراجة الكهربائية (خاصة)",
+      "#Bicycle/e-bike (shared)": "الدراجة / الدراجة الكهربائية (مشتركة)",
+      "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
+      "#e-scooter (shared)": "السكوتر الكهربائي (مشترك)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
+      "#At what times of day do you most often travel? (Select all that apply)": "في أي أوقات من اليوم يكون التنقل غالبًا؟ (يمكن اختيار كل ما ينطبق)",
+      "#Before 7:00": "قبل الساعة 7:00",
+      "#7:00-10:00 (morning rush)": "7:00-10:00 (ذروة الصباح)",
+      "#10:00-16:00 (daytime)": "10:00-16:00 (خلال النهار)",
+      "#16:00-20:00 (afternoon and evening rush)": "16:00-20:00 (ذروة بعد الظهر والمساء)",
+      "#20:00-22:00 (evening)": "20:00-22:00 (المساء)",
+      "#After 22:00 (night)": "بعد 22:00 (الليل)",
+      "#Variable hours or shifts": "أوقات متغيرة أو نظام مناوبات",
+      "#How you get around": "طريقة تنقّلك",
+      "#What is the main purpose of your most frequent journey? (Think about the trip you make most often in a typical week.)": "ما الغرض الرئيسي من رحلتك الأكثر تكرارًا؟ (يمكن التفكير في الرحلة التي تتكرر غالبًا خلال أسبوع عادي.)",
+      "#Work or professional business": "العمل أو نشاط مهني",
+      "#Education": "التعليم",
+      "#Shopping or daily activities": "التسوق أو الأنشطة اليومية",
+      "#Appointments (medical,legal,banking)": "المواعيد (طبية، قانونية، مصرفية)",
+      "#Social/Leisure": "نشاط اجتماعي / ترفيه",
+      "#Health/Exercise": "الصحة / الرياضة",
+      "#Caring/Escort": "رعاية شخص آخر أو مرافقته",
+      "#On average, how often do you make your most frequent journey?": "في المتوسط، كم مرة يحدث القيام برحلتك الأكثر تكرارًا؟",
+      "#5 or more days a week (Daily/Commuter)": "5 أيام أو أكثر في الأسبوع (يوميًا / تنقل للعمل)",
+      "#3–4 days a week (Frequent)": "3-4 أيام في الأسبوع (متكرر)",
+      "#1–2 days a week (Regular)": "1-2 يوم في الأسبوع (منتظم)",
+      "#1–3 times a month (Occasional)": "1-3 مرات في الشهر (أحيانًا)",
+      "#Less than once a month (Rarely)": "أقل من مرة في الشهر (نادرًا)",
+      "#On the trips you make most often during a typical week, do you usually travel alone or with other people?": "في الرحلات المعتادة خلال أسبوع عادي، هل يكون التنقل عادةً بمفردك أم مع أشخاص آخرين؟",
+      "#Mostly alone": "غالبًا وحدي",
+      "#Accompanying children or people I look after": "أرافق أطفالًا أو أشخاصًا أعتني بهم",
+      "#Accompanied by someone who helps me": "برفقة شخص يساعدني",
+      "#Often with family members": "غالبًا مع أفراد العائلة",
+      "#Often with colleagues or friends": "غالبًا مع أشخاص من محيط العمل أو المعارف",
+      "#Your most frequent trip": "رحلتك الأكثر تكرارًا",
+      "#<p>The trip you make most often in a typical week. Other SmartUrbanity questions call it your usual trip.</p>": "<p>رحلتك الأكثر تكرارًا في أسبوع عادي. تسميها أسئلة SmartUrbanity الأخرى رحلتك المعتادة.</p>",
+      "#SmartUrbanity - How you get around": "SmartUrbanity - طريقة تنقّلك",
+      "#<p>How you usually get around and the trip you make most often.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>طريقة تنقلك المعتادة ورحلتك الأكثر تكرارًا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+    }
+  },
+  "id": "smarturbanity_your_travel",
+  "db_set": "questionnaires",
+  "default_language": "en"
+}

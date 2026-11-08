@@ -2,9 +2,9 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – How the trip feels",
     "questionnaire_id": "smarturbanity_walking_experience",
-    "questionnaire_version": "1.4.1",
+    "questionnaire_version": "1.5.0",
     "project": "SmartUrbanity",
-    "estimated_minutes": 2,
+    "estimated_minutes": 1,
     "options": {
       "review_mode": true,
       "save_user_id": true,
@@ -16,7 +16,7 @@
       "title": "Walking – How the trip feels",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_walking_routes.svg",
       "image_alt": "#Person walking and a route between two points",
-      "description": "<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -186,226 +186,6 @@
             ],
             "question_id": "walk_route_liveliness_effect",
             "question_version": "1.1.0"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, how tired do you usually feel when you arrive?",
-            "answer_key": "walk_tiredness",
-            "question_type": "single_option",
-            "required": false,
-            "options": [
-              {
-                "text": "Not at all tired",
-                "value": "not_tired"
-              },
-              {
-                "text": "A little tired",
-                "value": "slightly"
-              },
-              {
-                "text": "Quite tired",
-                "value": "moderately"
-              },
-              {
-                "text": "Very tired",
-                "value": "very"
-              },
-              {
-                "text": "Exhausted",
-                "value": "exhausted"
-              }
-            ],
-            "question_id": "walk_tiredness",
-            "question_version": "1.1.0"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, what tires you most?",
-            "answer_key": "walk_tiredness_cause",
-            "question_type": "single_option",
-            "required": false,
-            "show_if": {
-              "walk_tiredness": {
-                "not": [
-                  "not_tired"
-                ]
-              }
-            },
-            "options": [
-              {
-                "text": "Physical effort (walking, carrying bags)",
-                "value": "physical_effort_e_g_walking_cycling_carr"
-              },
-              {
-                "text": "Slopes, stairs and changes in level",
-                "value": "slopes_and_stairs"
-              },
-              {
-                "text": "Carrying children, a pushchair or shopping",
-                "value": "carrying_children_or_shopping"
-              },
-              {
-                "text": "Stress (traffic, finding the way, being late, feeling unsafe)",
-                "value": "mental_stress_e_g_traffic_navigation_tim"
-              },
-              {
-                "text": "Heat, noise or bad air",
-                "value": "environmental_discomfort_e_g_heat_noise"
-              },
-              {
-                "text": "Waiting or standing (at traffic lights, in queues)",
-                "value": "waiting_and_standing_e_g_at_stops_in_que"
-              },
-              {
-                "text": "I rarely feel tired after my trips",
-                "value": "i_usually_do_not_feel_tired_after_my_tri"
-              }
-            ],
-            "question_id": "walk_tiredness_cause",
-            "question_version": "1.2.1"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?",
-            "help": "Think of both physical and mental effort. Other ways could be cycling, driving or public transport.",
-            "answer_key": "walk_effort_vs_alternatives",
-            "question_type": "single_option",
-            "required": false,
-            "add_i_dont_know": true,
-            "options": [
-              {
-                "text": "Much easier than the others",
-                "value": "my_current_mode_is_significantly_easier"
-              },
-              {
-                "text": "A bit easier",
-                "value": "this_is_a_bit_easier_than_other_ways_i_c"
-              },
-              {
-                "text": "About the same",
-                "value": "regardless_of_the_mode_the_effort_feels"
-              },
-              {
-                "text": "A bit more demanding",
-                "value": "this_takes_a_bit_more_out_of_me_than_oth"
-              },
-              {
-                "text": "Much more demanding",
-                "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I have no other way to travel",
-                "value": "no_alternative"
-              }
-            ],
-            "question_id": "walk_effort_vs_alternatives",
-            "question_version": "1.1.1"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, how often do you arrive in the time you planned?",
-            "answer_key": "walk_time_vs_expected",
-            "question_type": "single_option",
-            "required": false,
-            "options": [
-              {
-                "text": "Never",
-                "value": "never"
-              },
-              {
-                "text": "Rarely",
-                "value": "rarely"
-              },
-              {
-                "text": "Sometimes",
-                "value": "sometimes"
-              },
-              {
-                "text": "Often",
-                "value": "often"
-              },
-              {
-                "text": "Always",
-                "value": "always"
-              }
-            ],
-            "question_id": "walk_time_vs_expected",
-            "question_version": "2.0.0"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, how satisfied are you overall?",
-            "answer_key": "walk_satisfaction",
-            "question_type": "single_option",
-            "required": false,
-            "options": [
-              {
-                "text": "Very dissatisfied",
-                "value": "very_dissatisfied"
-              },
-              {
-                "text": "Dissatisfied",
-                "value": "dissatisfied"
-              },
-              {
-                "text": "Neither satisfied nor dissatisfied",
-                "value": "neutral"
-              },
-              {
-                "text": "Satisfied",
-                "value": "satisfied"
-              },
-              {
-                "text": "Very satisfied",
-                "value": "very_satisfied"
-              }
-            ],
-            "question_id": "walk_satisfaction",
-            "question_version": "1.1.0"
-          },
-          {
-            "privacy_classification": "heightened_personal",
-            "text": "When you walk or use a wheelchair, what are you least happy with?",
-            "answer_key": "walk_dissatisfied",
-            "question_type": "multiple_options",
-            "required": false,
-            "max_answers": 3,
-            "add_other": true,
-            "show_if": {
-              "walk_satisfaction": [
-                "very_dissatisfied",
-                "dissatisfied",
-                "neutral"
-              ]
-            },
-            "options": [
-              {
-                "text": "Travel time",
-                "value": "travel_time_speed"
-              },
-              {
-                "text": "Comfort",
-                "value": "comfort"
-              },
-              {
-                "text": "Safety from traffic or crime",
-                "value": "safety_security"
-              },
-              {
-                "text": "It's hard to reach or use",
-                "value": "accessibility_convenience"
-              },
-              {
-                "text": "Crowding or lack of space",
-                "value": "crowding_availability_of_space"
-              },
-              {
-                "text": "It's not flexible",
-                "value": "lack_of_flexibility"
-              }
-            ],
-            "question_id": "walk_dissatisfied",
-            "question_version": "1.1.0"
           }
         ]
       }
@@ -420,7 +200,6 @@
   "category": "surveys",
   "languages": {
     "en": {
-      "code": "en",
       "#How the trip feels": "How the trip feels",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "When you walk or use a wheelchair, how stressed or relaxed do you usually feel?",
       "#Very stressed": "Very stressed",
@@ -452,53 +231,14 @@
       "#It makes no difference to me": "It makes no difference to me",
       "#They are sometimes a bit too much for me": "They are sometimes a bit too much for me",
       "#Crowds stress me or make it hard to get through": "Crowds stress me or make it hard to get through",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "When you walk or use a wheelchair, how tired do you usually feel when you arrive?",
-      "#Not at all tired": "Not at all tired",
-      "#A little tired": "A little tired",
-      "#Quite tired": "Quite tired",
-      "#Very tired": "Very tired",
-      "#Exhausted": "Exhausted",
-      "#When you walk or use a wheelchair, what tires you most?": "When you walk or use a wheelchair, what tires you most?",
-      "#Slopes, stairs and changes in level": "Slopes, stairs and changes in level",
-      "#Carrying children, a pushchair or shopping": "Carrying children, a pushchair or shopping",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffic, finding the way, being late, feeling unsafe)",
-      "#Heat, noise or bad air": "Heat, noise or bad air",
-      "#I rarely feel tired after my trips": "I rarely feel tired after my trips",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?",
-      "#Much easier than the others": "Much easier than the others",
-      "#A bit easier": "A bit easier",
-      "#About the same": "About the same",
-      "#A bit more demanding": "A bit more demanding",
-      "#Much more demanding": "Much more demanding",
-      "#I have no other way to travel": "I have no other way to travel",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "When you walk or use a wheelchair, how often do you arrive in the time you planned?",
       "#Walking – How the trip feels": "Walking – How the trip feels",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - Walking – How the trip feels",
       "#Person walking and a route between two points": "Person walking and a route between two points",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "When you walk or use a wheelchair, how satisfied are you overall?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "When you walk or use a wheelchair, what are you least happy with?",
-      "#Very dissatisfied": "Very dissatisfied",
-      "#Dissatisfied": "Dissatisfied",
-      "#Neither satisfied nor dissatisfied": "Neither satisfied nor dissatisfied",
-      "#Satisfied": "Satisfied",
-      "#Very satisfied": "Very satisfied",
-      "#Travel time": "Travel time",
-      "#Comfort": "Comfort",
-      "#Safety from traffic or crime": "Safety from traffic or crime",
-      "#It's hard to reach or use": "It's hard to reach or use",
-      "#Crowding or lack of space": "Crowding or lack of space",
-      "#It's not flexible": "It's not flexible",
-      "#Other": "Other",
-      "#Always": "Always",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Think of both physical and mental effort. Other ways could be cycling, driving or public transport.",
-      "#Physical effort (walking, carrying bags)": "Physical effort (walking, carrying bags)",
-      "#Waiting or standing (at traffic lights, in queues)": "Waiting or standing (at traffic lights, in queues)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
     },
     "it": {
-      "code": "it",
       "#How the trip feels": "Come vivi lo spostamento",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "Quando ti sposti a piedi o in sedia a rotelle, di solito provi più tensione o più tranquillità?",
       "#Very stressed": "Molto stress",
@@ -530,53 +270,14 @@
       "#It makes no difference to me": "Per me non fa differenza",
       "#They are sometimes a bit too much for me": "A volte sono un po' troppo per me",
       "#Crowds stress me or make it hard to get through": "La folla mi stressa o mi rende difficile passare",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "Quando ti sposti a piedi o in sedia a rotelle, quanta stanchezza senti di solito quando arrivi?",
-      "#Not at all tired": "Nessuna stanchezza",
-      "#A little tired": "Poca stanchezza",
-      "#Quite tired": "Moderata stanchezza",
-      "#Very tired": "Molta stanchezza",
-      "#Exhausted": "Sfinimento",
-      "#When you walk or use a wheelchair, what tires you most?": "Quando ti sposti a piedi o in sedia a rotelle, cosa ti stanca di più?",
-      "#Slopes, stairs and changes in level": "Salite, scale e dislivelli",
-      "#Carrying children, a pushchair or shopping": "Portare bambini, passeggino o spesa",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffico, trovare la strada, fare tardi, non sentirsi al sicuro)",
-      "#Heat, noise or bad air": "Caldo, rumore o aria cattiva",
-      "#I rarely feel tired after my trips": "Raramente mi stanco dopo i miei spostamenti",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "Quando ti sposti a piedi o in sedia a rotelle, quanto è impegnativo rispetto ad altri modi di spostarsi?",
-      "#Much easier than the others": "Molto più facile degli altri",
-      "#A bit easier": "Un po' più facile",
-      "#About the same": "Più o meno uguale",
-      "#A bit more demanding": "Un po' più impegnativo",
-      "#Much more demanding": "Molto più impegnativo",
-      "#I have no other way to travel": "Non ho altri modi per spostarmi",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "Quando ti sposti a piedi o in sedia a rotelle, quanto spesso arrivi nel tempo che avevi previsto?",
       "#Walking – How the trip feels": "A piedi – Come vivi lo spostamento",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - A piedi – Come vivi lo spostamento",
       "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "Quando ti sposti a piedi o in sedia a rotelle, qual è nel complesso il tuo livello di soddisfazione?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "Quando ti sposti a piedi o in sedia a rotelle, cosa ti piace di meno?",
-      "#Very dissatisfied": "Molto basso",
-      "#Dissatisfied": "Basso",
-      "#Neither satisfied nor dissatisfied": "Né alto né basso",
-      "#Satisfied": "Alto",
-      "#Very satisfied": "Molto alto",
-      "#Travel time": "Tempo di viaggio",
-      "#Comfort": "Comfort",
-      "#Safety from traffic or crime": "Sicurezza rispetto al traffico o alla criminalità",
-      "#It's hard to reach or use": "È difficile da raggiungere o da usare",
-      "#Crowding or lack of space": "Affollamento o mancanza di spazio",
-      "#It's not flexible": "Non è flessibile",
-      "#Other": "Altro",
-      "#Always": "Sempre",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Pensa sia allo sforzo fisico sia a quello mentale. Gli altri modi possono essere andare in bici, guidare o i mezzi pubblici.",
-      "#Physical effort (walking, carrying bags)": "Fatica fisica (camminare, portare borse)",
-      "#Waiting or standing (at traffic lights, in queues)": "Aspettare o stare in piedi (ai semafori, in coda)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Come ti senti <b>quando cammini</b>: stress, stanchezza e tempo.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Come ti senti <b>quando cammini</b>: umore e preoccupazioni.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
     },
     "fr": {
-      "code": "fr",
       "#How the trip feels": "Ressenti du trajet",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, ressentez-vous en général plutôt du stress ou de la détente ?",
       "#Very stressed": "Stress très fort",
@@ -608,53 +309,14 @@
       "#It makes no difference to me": "Cela ne fait aucune différence pour moi",
       "#They are sometimes a bit too much for me": "Elles sont parfois un peu trop pour moi",
       "#Crowds stress me or make it hard to get through": "La foule me stresse ou m'empêche de passer",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, quel niveau de fatigue ressentez-vous en général à l’arrivée ?",
-      "#Not at all tired": "Aucune fatigue",
-      "#A little tired": "Un peu fatigué",
-      "#Quite tired": "Assez fatigué",
-      "#Very tired": "Grande fatigue",
-      "#Exhausted": "Épuisement",
-      "#When you walk or use a wheelchair, what tires you most?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, qu’est-ce qui vous fatigue le plus ?",
-      "#Slopes, stairs and changes in level": "Montées, escaliers et dénivelés",
-      "#Carrying children, a pushchair or shopping": "Porter des enfants, une poussette ou des courses",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (circulation, trouver son chemin, être en retard, se sentir en danger)",
-      "#Heat, noise or bad air": "Chaleur, bruit ou mauvaise qualité de l'air",
-      "#I rarely feel tired after my trips": "Je me sens rarement fatigué après mes trajets",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, dans quelle mesure est-ce exigeant par rapport aux autres moyens de se déplacer ?",
-      "#Much easier than the others": "Beaucoup plus facile que les autres",
-      "#A bit easier": "Un peu plus facile",
-      "#About the same": "À peu près pareil",
-      "#A bit more demanding": "Un peu plus exigeant",
-      "#Much more demanding": "Beaucoup plus exigeant",
-      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
       "#Walking – How the trip feels": "À pied – Ressenti du trajet",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - À pied – Ressenti du trajet",
       "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, quel est votre niveau de satisfaction global ?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, qu’est-ce qui vous plaît le moins ?",
-      "#Very dissatisfied": "Très faible",
-      "#Dissatisfied": "Faible",
-      "#Neither satisfied nor dissatisfied": "Ni faible ni élevé",
-      "#Satisfied": "Élevé",
-      "#Very satisfied": "Très élevé",
-      "#Travel time": "Durée du trajet",
-      "#Comfort": "Confort",
-      "#Safety from traffic or crime": "Sécurité face à la circulation ou à la délinquance",
-      "#It's hard to reach or use": "C'est difficile d'accès ou d'utilisation",
-      "#Crowding or lack of space": "Foule ou manque de place",
-      "#It's not flexible": "Ce n'est pas flexible",
-      "#Other": "Autre",
-      "#Always": "Toujours",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Pensez à l'effort physique comme mental. Les autres façons peuvent être le vélo, la conduite ou les transports en commun.",
-      "#Physical effort (walking, carrying bags)": "Effort physique (marcher, porter des sacs)",
-      "#Waiting or standing (at traffic lights, in queues)": "Attendre ou rester debout (aux feux, dans les files)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce que vous ressentez <b>lorsque vous marchez</b> : stress, fatigue et temps.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Ce que vous ressentez <b>lorsque vous marchez</b> : humeur et inquiétudes.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
     },
     "de": {
-      "code": "de",
       "#How the trip feels": "Wie sich der Weg anfühlt",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "Wie gestresst oder entspannt fühlen Sie sich beim Gehen oder Fahren im Rollstuhl normalerweise?",
       "#Very stressed": "Sehr gestresst",
@@ -686,53 +348,14 @@
       "#It makes no difference to me": "Für mich macht es keinen Unterschied",
       "#They are sometimes a bit too much for me": "Sie sind mir manchmal ein bisschen zu viel",
       "#Crowds stress me or make it hard to get through": "Menschenmengen stressen mich oder machen das Durchkommen schwer",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "Wie müde fühlen Sie sich beim Gehen oder Fahren im Rollstuhl normalerweise, wenn Sie ankommen?",
-      "#Not at all tired": "Gar nicht müde",
-      "#A little tired": "Ein wenig müde",
-      "#Quite tired": "Ziemlich müde",
-      "#Very tired": "Sehr müde",
-      "#Exhausted": "Erschöpft",
-      "#When you walk or use a wheelchair, what tires you most?": "Was ermüdet Sie beim Gehen oder Fahren im Rollstuhl am meisten?",
-      "#Slopes, stairs and changes in level": "Steigungen, Treppen und Höhenunterschiede",
-      "#Carrying children, a pushchair or shopping": "Kinder, Kinderwagen oder Einkäufe tragen bzw. schieben",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (Verkehr, Weg finden, Verspätung, Unsicherheit)",
-      "#Heat, noise or bad air": "Hitze, Lärm oder schlechte Luft",
-      "#I rarely feel tired after my trips": "Nach meinen Wegen bin ich selten müde",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "Wie anstrengend ist das Gehen oder Fahren im Rollstuhl im Vergleich zu anderen Fortbewegungsarten, die Sie nutzen könnten?",
-      "#Much easier than the others": "Viel leichter als die anderen",
-      "#A bit easier": "Etwas leichter",
-      "#About the same": "Ungefähr gleich",
-      "#A bit more demanding": "Etwas anstrengender",
-      "#Much more demanding": "Viel anstrengender",
-      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "Wie oft kommen Sie zu Fuß oder im Rollstuhl in der Zeit an, die Sie eingeplant haben?",
       "#Walking – How the trip feels": "Zu Fuß – Wie sich der Weg anfühlt",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - Zu Fuß – Wie sich der Weg anfühlt",
       "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt, wenn Sie zu Fuß oder im Rollstuhl unterwegs sind?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "Was gefällt Ihnen beim Gehen oder Fahren im Rollstuhl am wenigsten?",
-      "#Very dissatisfied": "Sehr unzufrieden",
-      "#Dissatisfied": "Unzufrieden",
-      "#Neither satisfied nor dissatisfied": "Weder zufrieden noch unzufrieden",
-      "#Satisfied": "Zufrieden",
-      "#Very satisfied": "Sehr zufrieden",
-      "#Travel time": "Reisezeit",
-      "#Comfort": "Komfort",
-      "#Safety from traffic or crime": "Sicherheit vor Verkehr oder Kriminalität",
-      "#It's hard to reach or use": "Es ist schwer zu erreichen oder zu nutzen",
-      "#Crowding or lack of space": "Gedränge oder Platzmangel",
-      "#It's not flexible": "Es ist nicht flexibel",
-      "#Other": "Anderes",
-      "#Always": "Immer",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Denken Sie an körperliche und geistige Anstrengung. Andere Möglichkeiten wären Radfahren, Autofahren oder öffentlicher Verkehr.",
-      "#Physical effort (walking, carrying bags)": "Körperliche Anstrengung (Gehen, Taschen tragen)",
-      "#Waiting or standing (at traffic lights, in queues)": "Warten oder Stehen (an Ampeln, in Schlangen)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie Sie sich fühlen, <b>wenn Sie zu Fuß unterwegs sind</b>: Stress, Müdigkeit und Zeit.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Wie Sie sich fühlen, <b>wenn Sie zu Fuß unterwegs sind</b>: Stimmung und Sorgen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
     },
     "tr": {
-      "code": "tr",
       "#How the trip feels": "Yolculuk nasıl hissettiriyor",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "Yürürken veya tekerlekli sandalyeyle ilerlerken genellikle ne kadar stresli veya rahat hissediyorsunuz?",
       "#Very stressed": "Çok stresli",
@@ -764,53 +387,14 @@
       "#It makes no difference to me": "Benim için fark etmez",
       "#They are sometimes a bit too much for me": "Bazen benim için biraz fazla gelirler",
       "#Crowds stress me or make it hard to get through": "Kalabalık beni strese sokar veya geçmeyi zorlaştırır",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "Yürürken veya tekerlekli sandalyeyle ilerlerken vardığınızda genellikle ne kadar yorgun hissediyorsunuz?",
-      "#Not at all tired": "Hiç yorgun değilim",
-      "#A little tired": "Biraz yorgun",
-      "#Quite tired": "Oldukça yorgun",
-      "#Very tired": "Çok yorgunum",
-      "#Exhausted": "Çok bitkinim",
-      "#When you walk or use a wheelchair, what tires you most?": "Yürürken veya tekerlekli sandalyeyle ilerlerken sizi en çok ne yorar?",
-      "#Slopes, stairs and changes in level": "Yokuşlar, merdivenler ve seviye farkları",
-      "#Carrying children, a pushchair or shopping": "Çocuk, bebek arabası veya alışveriş taşımak",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stres (trafik, yolu bulmak, geç kalmak, kendini güvensiz hissetmek)",
-      "#Heat, noise or bad air": "Sıcak, gürültü veya kötü hava kalitesi",
-      "#I rarely feel tired after my trips": "Yolculuklarımdan sonra nadiren yorgun hissederim",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "Yürürken veya tekerlekli sandalyeyle ilerlerken gidebileceğiniz diğer yollara kıyasla bu ne kadar zahmetli?",
-      "#Much easier than the others": "Diğerlerinden çok daha kolay",
-      "#A bit easier": "Biraz daha kolay",
-      "#About the same": "Yaklaşık aynı",
-      "#A bit more demanding": "Biraz daha zorlayıcı",
-      "#Much more demanding": "Çok daha zorlayıcı",
-      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "Yürürken veya tekerlekli sandalyeyle ilerlerken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
       "#Walking – How the trip feels": "Yürüyüş – Yolculuk nasıl hissettiriyor",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - Yürüyüş – Yolculuk nasıl hissettiriyor",
       "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "Yürürken veya tekerlekli sandalyeyle ilerlerken genel olarak ne kadar memnunsunuz?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "Yürürken veya tekerlekli sandalyeyle ilerlerken en az neyden memnunsunuz?",
-      "#Very dissatisfied": "Hiç memnun değilim",
-      "#Dissatisfied": "Memnun değilim",
-      "#Neither satisfied nor dissatisfied": "Ne memnunum ne de memnun değilim",
-      "#Satisfied": "Memnunum",
-      "#Very satisfied": "Çok memnunum",
-      "#Travel time": "Yolculuk süresi",
-      "#Comfort": "Konfor",
-      "#Safety from traffic or crime": "Trafiğe veya suça karşı güvenlik",
-      "#It's hard to reach or use": "Ulaşması veya kullanması zor",
-      "#Crowding or lack of space": "Kalabalık veya yer yetersizliği",
-      "#It's not flexible": "Esnek değil",
-      "#Other": "Diğer",
-      "#Always": "Her zaman",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Hem fiziksel hem de zihinsel eforu düşünün. Diğer yollar bisiklet sürmek, otomobil kullanmak veya toplu taşıma olabilir.",
-      "#Physical effort (walking, carrying bags)": "Fiziksel efor (yürümek, çanta taşımak)",
-      "#Waiting or standing (at traffic lights, in queues)": "Beklemek veya ayakta durmak (trafik ışıklarında, kuyruklarda)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Yürürken</b> kendinizi nasıl hissettiğiniz: stres, yorgunluk ve süre.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p><b>Yürürken</b> kendinizi nasıl hissettiğiniz: ruh hâli ve kaygılar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
     },
     "fa": {
-      "code": "fa",
       "#How the trip feels": "حال و هوای سفر",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "هنگام پیاده‌روی یا حرکت با ویلچر، معمولاً چقدر احساس تنش یا آرامش می‌کنید؟",
       "#Very stressed": "خیلی استرس دارم",
@@ -842,53 +426,14 @@
       "#It makes no difference to me": "برایم فرقی نمی‌کند",
       "#They are sometimes a bit too much for me": "گاهی کمی زیادی برایم هستند",
       "#Crowds stress me or make it hard to get through": "شلوغی مرا مضطرب می‌کند یا عبور را سخت می‌کند",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "هنگام پیاده‌روی یا حرکت با ویلچر، معمولاً هنگام رسیدن چقدر احساس خستگی می‌کنید؟",
-      "#Not at all tired": "اصلاً خسته نیستم",
-      "#A little tired": "کمی خسته‌ام",
-      "#Quite tired": "نسبتاً خسته‌ام",
-      "#Very tired": "خیلی خسته‌ام",
-      "#Exhausted": "کاملاً خسته‌ام",
-      "#When you walk or use a wheelchair, what tires you most?": "هنگام پیاده‌روی یا حرکت با ویلچر، چه چیزی بیشتر از همه شما را خسته می‌کند؟",
-      "#Slopes, stairs and changes in level": "سربالایی‌ها، پله‌ها و اختلاف سطح‌ها",
-      "#Carrying children, a pushchair or shopping": "حمل کودک، کالسکه یا خرید",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "استرس (ترافیک، پیدا کردن راه، دیر رسیدن، احساس ناامنی)",
-      "#Heat, noise or bad air": "گرما، سر و صدا یا هوای آلوده",
-      "#I rarely feel tired after my trips": "به‌ندرت بعد از سفرهایم احساس خستگی می‌کنم",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "هنگام پیاده‌روی یا حرکت با ویلچر، در مقایسه با روش‌های دیگر رفت‌وآمد، چقدر سخت و پرزحمت است؟",
-      "#Much easier than the others": "خیلی راحت‌تر از بقیه",
-      "#A bit easier": "کمی راحت‌تر",
-      "#About the same": "تقریباً یکسان",
-      "#A bit more demanding": "کمی سخت‌تر",
-      "#Much more demanding": "خیلی سخت‌تر",
-      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "هنگام پیاده‌روی یا حرکت با ویلچر، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
       "#Walking – How the trip feels": "پیاده‌روی – حال و هوای سفر",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - پیاده‌روی – حال و هوای سفر",
       "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "هنگام پیاده‌روی یا حرکت با ویلچر، در مجموع چقدر راضی هستید؟",
-      "#When you walk or use a wheelchair, what are you least happy with?": "هنگام پیاده‌روی یا حرکت با ویلچر، از چه چیزی کمتر از همه راضی هستید؟",
-      "#Very dissatisfied": "بسیار ناراضی",
-      "#Dissatisfied": "ناراضی",
-      "#Neither satisfied nor dissatisfied": "نه راضی و نه ناراضی",
-      "#Satisfied": "راضی",
-      "#Very satisfied": "بسیار راضی",
-      "#Travel time": "زمان سفر",
-      "#Comfort": "راحتی",
-      "#Safety from traffic or crime": "ایمنی در ترافیک یا امنیت در برابر جرم",
-      "#It's hard to reach or use": "رسیدن به آن یا استفاده از آن سخت است",
-      "#Crowding or lack of space": "شلوغی یا کمبود جا",
-      "#It's not flexible": "انعطاف‌پذیر نیست",
-      "#Other": "سایر",
-      "#Always": "همیشه",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "هم تلاش جسمی و هم ذهنی را در نظر بگیرید. روش‌های دیگر می‌تواند دوچرخه‌سواری، رانندگی یا حمل‌ونقل عمومی باشد.",
-      "#Physical effort (walking, carrying bags)": "تلاش بدنی (پیاده‌روی، حمل کیسه)",
-      "#Waiting or standing (at traffic lights, in queues)": "انتظار یا ایستادن (پشت چراغ قرمز، در صف)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چه احساسی دارید <b>هنگام پیاده‌روی</b>: تنش، خستگی و زمان.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چه احساسی دارید <b>هنگام پیاده‌روی</b>: حال و نگرانی‌ها.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
     },
     "hu": {
-      "code": "hu",
       "#How the trip feels": "Az utazás élménye",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "Gyaloglás vagy kerekesszékes közlekedés közben általában mennyire érzi magát feszültnek vagy nyugodtnak?",
       "#Very stressed": "Nagyon feszült vagyok",
@@ -920,67 +465,28 @@
       "#It makes no difference to me": "Nekem mindegy",
       "#They are sometimes a bit too much for me": "Néha egy kicsit sok nekem",
       "#Crowds stress me or make it hard to get through": "A tömeg stresszel, vagy megnehezíti az átjutást",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "Gyaloglás vagy kerekesszékes közlekedés közben általában mennyire érzi magát fáradtnak, amikor megérkezik?",
-      "#Not at all tired": "Egyáltalán nem vagyok fáradt",
-      "#A little tired": "Kissé fáradt vagyok",
-      "#Quite tired": "Meglehetősen fáradt vagyok",
-      "#Very tired": "Nagyon fáradt vagyok",
-      "#Exhausted": "Kimerült vagyok",
-      "#When you walk or use a wheelchair, what tires you most?": "Gyaloglás vagy kerekesszékes közlekedés közben mi fárasztja ki a legjobban?",
-      "#Slopes, stairs and changes in level": "Emelkedők, lépcsők és szintkülönbségek",
-      "#Carrying children, a pushchair or shopping": "Gyermek, babakocsi vagy bevásárlás cipelése",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stressz (forgalom, eligazodás, késés, a biztonság hiányának érzése)",
-      "#Heat, noise or bad air": "Hőség, zaj vagy rossz levegő",
-      "#I rarely feel tired after my trips": "Ritkán fáradok el az utak után",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "Gyaloglás vagy kerekesszékes közlekedés közben mennyire megterhelő ez a többi lehetőséghez képest, amellyel utazhatna?",
-      "#Much easier than the others": "Sokkal könnyebb, mint a többi",
-      "#A bit easier": "Kicsit könnyebb",
-      "#About the same": "Nagyjából ugyanolyan",
-      "#A bit more demanding": "Kicsit megterhelőbb",
-      "#Much more demanding": "Sokkal megterhelőbb",
-      "#I have no other way to travel": "Nincs más módom az utazásra",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "Gyaloglás vagy kerekesszékes közlekedés közben milyen gyakran ér célba a tervezett idő alatt?",
       "#Walking – How the trip feels": "Gyaloglás – Az utazás élménye",
       "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - Gyaloglás – Az utazás élménye",
       "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "Gyaloglás vagy kerekesszékes közlekedés közben összességében mennyire elégedett?",
-      "#When you walk or use a wheelchair, what are you least happy with?": "Gyaloglás vagy kerekesszékes közlekedés közben mivel a legkevésbé elégedett?",
-      "#Very dissatisfied": "Nagyon elégedetlen",
-      "#Dissatisfied": "Elégedetlen",
-      "#Neither satisfied nor dissatisfied": "Sem elégedett, sem elégedetlen",
-      "#Satisfied": "Elégedett",
-      "#Very satisfied": "Nagyon elégedett",
-      "#Travel time": "Utazási idő",
-      "#Comfort": "Kényelem",
-      "#Safety from traffic or crime": "Biztonság a forgalomtól vagy a bűnözéstől",
-      "#It's hard to reach or use": "Nehéz elérni vagy használni",
-      "#Crowding or lack of space": "Zsúfoltság vagy helyhiány",
-      "#It's not flexible": "Nem rugalmas",
-      "#Other": "Egyéb",
-      "#Always": "Mindig",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "Gondoljon a testi és a szellemi megterhelésre is. Más módok lehetnek a kerékpározás, az autózás vagy a tömegközlekedés.",
-      "#Physical effort (walking, carrying bags)": "Fizikai megterhelés (gyaloglás, szatyrok cipelése)",
-      "#Waiting or standing (at traffic lights, in queues)": "Várakozás vagy állás (a lámpánál, sorban)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Hogyan érzi magát <b>gyaloglás közben</b>: feszültség, fáradtság és idő.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Hogyan érzi magát <b>gyaloglás közben</b>: hangulat és aggodalmak.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
     },
     "ar": {
-      "code": "ar",
-      "#How the trip feels": "كيف تشعر أثناء الرحلة",
+      "#How the trip feels": "شعورك أثناء الرحلة",
       "#When you walk or use a wheelchair, how stressed or relaxed do you usually feel?": "عند المشي أو التنقل بكرسي متحرك، ما مدى شعورك عادةً بالتوتر أو بالاسترخاء؟",
       "#Very stressed": "توتر شديد",
       "#A little stressed": "بعض التوتر",
       "#Neither stressed nor relaxed": "لا توتر ولا ارتياح",
       "#A little relaxed": "بعض الارتياح",
       "#Very relaxed": "ارتياح كبير",
-      "#When you walk or use a wheelchair, how often do you feel anxious or overwhelmed?": "عند المشي أو التنقل بكرسي متحرك، كم مرة تشعر بالقلق أو بالإرهاق الشديد؟",
+      "#When you walk or use a wheelchair, how often do you feel anxious or overwhelmed?": "عند المشي أو التنقل بكرسي متحرك، كم مرة ينتابك القلق أو الإرهاق الشديد؟",
       "#Never": "أبدًا",
       "#Rarely": "نادرًا",
       "#Sometimes": "أحيانًا",
       "#Often": "غالبًا",
       "#All the time": "طوال الوقت",
-      "#When you walk or use a wheelchair, what makes you feel anxious or overwhelmed?": "عند المشي أو التنقل بكرسي متحرك، ما الذي يجعلك تشعر بالقلق أو بالإرهاق الشديد؟",
+      "#When you walk or use a wheelchair, what makes you feel anxious or overwhelmed?": "عند المشي أو التنقل بكرسي متحرك، ما الذي يسبب لك القلق أو الإرهاق الشديد؟",
       "#Heavy traffic or traffic jams": "حركة مرور كثيفة أو ازدحامات",
       "#Aggressive or careless drivers, riders or pedestrians": "سائقون أو راكبو دراجات أو مشاة عدوانيون أو غير منتبهين",
       "#Routes that are complicated or new to me": "طرق معقّدة أو غير مألوفة بالنسبة إليّ",
@@ -998,50 +504,12 @@
       "#It makes no difference to me": "لا فرق عندي",
       "#They are sometimes a bit too much for me": "تكون أحيانًا أكثر مما أحتمل",
       "#Crowds stress me or make it hard to get through": "الزحام يوترني أو يصعّب عليّ المرور",
-      "#When you walk or use a wheelchair, how tired do you usually feel when you arrive?": "عند المشي أو التنقل بكرسي متحرك، ما مدى شعورك عادةً بالتعب عند الوصول؟",
-      "#Not at all tired": "لا تعب إطلاقًا",
-      "#A little tired": "تعب خفيف",
-      "#Quite tired": "تعب متوسط",
-      "#Very tired": "تعب شديد",
-      "#Exhausted": "إرهاق تام",
-      "#When you walk or use a wheelchair, what tires you most?": "عند المشي أو التنقل بكرسي متحرك، ما الذي يرهقك أكثر؟",
-      "#Slopes, stairs and changes in level": "المنحدرات والدرج وفروق المستوى",
-      "#Carrying children, a pushchair or shopping": "حمل الأطفال أو عربة الأطفال أو المشتريات",
-      "#Stress (traffic, finding the way, being late, feeling unsafe)": "التوتر (حركة المرور، معرفة الطريق، التأخر، الشعور بعدم الأمان)",
-      "#Heat, noise or bad air": "الحر أو الضجيج أو الهواء السيئ",
-      "#I rarely feel tired after my trips": "نادرًا ما أشعر بالتعب بعد رحلاتي",
-      "#When you walk or use a wheelchair, how demanding is it compared with other ways you could travel?": "عند المشي أو التنقل بكرسي متحرك، ما مدى صعوبة ذلك مقارنةً بوسائل التنقل الأخرى المتاحة لك؟",
-      "#Much easier than the others": "أسهل بكثير من غيرها",
-      "#A bit easier": "أسهل قليلًا",
-      "#About the same": "بالقدر نفسه تقريبًا",
-      "#A bit more demanding": "أصعب قليلًا",
-      "#Much more demanding": "أصعب بكثير",
-      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
-      "#When you walk or use a wheelchair, how often do you arrive in the time you planned?": "عند المشي أو التنقل بكرسي متحرك، كم مرة تصل في الوقت الذي خططت له؟",
-      "#Walking – How the trip feels": "المشي – كيف تشعر أثناء الرحلة",
-      "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - المشي – كيف تشعر أثناء الرحلة",
+      "#Walking – How the trip feels": "المشي – شعورك أثناء الرحلة",
+      "#SmartUrbanity - Walking – How the trip feels": "SmartUrbanity - المشي – شعورك أثناء الرحلة",
       "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#When you walk or use a wheelchair, how satisfied are you overall?": "عند المشي أو التنقل بكرسي متحرك، ما مدى رضاك بشكل عام؟",
-      "#When you walk or use a wheelchair, what are you least happy with?": "عند المشي أو التنقل بكرسي متحرك، ما أكثر ما لا يعجبك؟",
-      "#Very dissatisfied": "عدم رضا شديد",
-      "#Dissatisfied": "عدم رضا",
-      "#Neither satisfied nor dissatisfied": "لا رضا ولا عدم رضا",
-      "#Satisfied": "رضا",
-      "#Very satisfied": "رضا كبير",
-      "#Travel time": "مدة الرحلة",
-      "#Comfort": "الراحة",
-      "#Safety from traffic or crime": "الأمان من حركة المرور أو الجريمة",
-      "#It's hard to reach or use": "يصعب الوصول إليه أو استخدامه",
-      "#Crowding or lack of space": "الازدحام أو قلة المساحة",
-      "#It's not flexible": "غير مرن",
-      "#Other": "أخرى",
-      "#Always": "دائمًا",
-      "#Think of both physical and mental effort. Other ways could be cycling, driving or public transport.": "المقصود الجهد البدني والذهني معًا. ومن الوسائل الأخرى ركوب الدراجة أو القيادة أو النقل العام.",
-      "#Physical effort (walking, carrying bags)": "الجهد البدني (المشي، حمل الأكياس)",
-      "#Waiting or standing (at traffic lights, in queues)": "الانتظار أو الوقوف (عند إشارات المرور أو في الطوابير)",
-      "#<p>How you feel <b>when you walk</b>: stress, tiredness and time.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>ما تشعر به <b>عند المشي</b>: التوتر والتعب والوقت.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>How you feel <b>when you walk</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>شعورك <b>عند المشي</b>: المزاج والقلق.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
     }
   }
 }
