@@ -7,9 +7,23 @@ The pieces of a chain are linked by the "Continue" button on the thank-you page 
 which skips the pieces already answered on the same device. `smarturbanity_daily_travel` is deleted: its questions moved to
 `your_profile` and to the pieces (see "Daily travel").
 
-All 39 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`, and sit in the
-disabled `rome_travel_habits` campaign ("Travel habits", one campaign per topic; visible in debug mode) until the
-persona test and approval. It was called `rome_future_surveys` ("Future questionnaires") until 2026-11-08.
+All 39 pieces live in `forms/surveys/`, next to `smarturbanity_safety` and `smarturbanity_your_profile`. They are
+grouped by topic in seven disabled campaigns (visible in debug mode) until the persona test and approval
+(Lory, 2026-11-08; `config_version` 0.2.0). Each campaign holds the piece of that topic for every way of travelling:
+
+| Campaign | Name (IT) | Pieces |
+|---|---|---|
+| `rome_travel_habits` | Abitudini di viaggio | `*_habits` |
+| `rome_road_safety` | Sicurezza stradale | `*_road_safety` |
+| `rome_personal_security` | Sicurezza personale | `*_security` |
+| `rome_comfort` | Comfort | `*_comfort` |
+| `rome_trip_experience` | Come si vive il viaggio | `*_experience` |
+| `rome_improvements` | Cosa aiuterebbe | `*_improvements` (no car piece) |
+| `rome_doing_without_car` | Fare a meno dell'auto | `car_need`, `motorcycle_need`, `car_alternatives`, `public_transport_without_car` |
+
+"Continue" still follows the chain of the way of travelling, across topics (decision 2A). The campaigns only decide
+when and where a piece is offered. All pieces were in one campaign, called `rome_future_surveys` ("Future
+questionnaires") and then `rome_travel_habits`, until 2026-11-08.
 
 Rules applied:
 
@@ -45,7 +59,7 @@ its own texts in en, it, fr, de, tr, fa, hu and ar.
 ## Replaced forms
 
 Every question of these forms is in the chains, so their entries were removed from `forms/surveys/index.json`
-(3.1.0 → 3.2.0), `forms/index.json` and the `rome_travel_habits` campaign:
+(3.1.0 → 3.2.0), `forms/index.json` and the topic campaigns:
 
 - `smarturbanity_walking_safety` and `smarturbanity_walking_safety_details` (the earlier Yes/No walking forms, never published;
   the details file is removed);
@@ -56,7 +70,7 @@ Every question of these forms is in the chains, so their entries were removed fr
 With the questions used by the chains removed none of the seven `future/` forms keeps a question, so they are deleted
 (Lory, 2026-11-08: remove the moved questions from the old forms) here and on the local `lory/future-questionnaires` and
 `questionnaire-14` branches, together with their entries in `forms/index.json`, `forms/surveys/index.json` and the
-`rome_travel_habits` campaign. `future/smarturbanity_about_you` and `future/smarturbanity_daily_travel` are emptied and deleted too (see "About you"
+topic campaigns. `future/smarturbanity_about_you` and `future/smarturbanity_daily_travel` are emptied and deleted too (see "About you"
 and "Daily travel").
 
 Not carried over: walking `walk_days` from the walking form (the copy from the Yes/No walking form is used, same text
@@ -99,7 +113,7 @@ question; the habits pieces now take about 2 minutes.
 
 Lory (2026-11-08): the remaining "About you" questions move to `your_profile` and to the walking habits piece, and the
 form is deleted on all three branches with its entries in `forms/index.json`, `forms/surveys/index.json` and the
-`rome_travel_habits` campaign. Each branch moves its own wording and translations; where the profile already
+topic campaigns. Each branch moves its own wording and translations; where the profile already
 translated "None" or "Other", its own translation is kept.
 
 | Question | Goes to | Change |
@@ -121,7 +135,7 @@ other two have no walking habits piece; there they are deleted with the form. Th
 
 Lory (2026-11-08, decisions 1A 2A 3A 4A): the remaining 13 questions of `future/smarturbanity_daily_travel` move to
 `your_profile` and to the pieces, and the form is deleted on all three branches with its entries in `forms/index.json`,
-`forms/surveys/index.json` and the `rome_travel_habits` campaign. In `your_profile` each branch moves its own wording
+`forms/surveys/index.json` and the topic campaigns. In `your_profile` each branch moves its own wording
 and translations; the two new section titles and the trip description come from `lory/future-questionnaires`.
 
 | Question | Goes to | Change |

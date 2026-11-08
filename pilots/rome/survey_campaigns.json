@@ -1,6 +1,6 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.1.6",
+  "config_version": "0.2.0",
   "pilot_id": "rome",
   "pilot_period": {
     "start_date": "2026-11-14",
@@ -61,44 +61,140 @@
       "exclusive": false,
       "questionnaires": [
         "smarturbanity_walking_habits",
-        "smarturbanity_walking_road_safety",
-        "smarturbanity_walking_security",
-        "smarturbanity_walking_comfort",
-        "smarturbanity_walking_experience",
-        "smarturbanity_walking_improvements",
         "smarturbanity_cycling_habits",
-        "smarturbanity_cycling_road_safety",
-        "smarturbanity_cycling_security",
-        "smarturbanity_cycling_comfort",
-        "smarturbanity_cycling_experience",
-        "smarturbanity_cycling_improvements",
         "smarturbanity_e_scooter_habits",
-        "smarturbanity_e_scooter_road_safety",
-        "smarturbanity_e_scooter_security",
-        "smarturbanity_e_scooter_comfort",
-        "smarturbanity_e_scooter_experience",
-        "smarturbanity_e_scooter_improvements",
         "smarturbanity_public_transport_habits",
-        "smarturbanity_public_transport_road_safety",
-        "smarturbanity_public_transport_security",
-        "smarturbanity_public_transport_comfort",
-        "smarturbanity_public_transport_experience",
-        "smarturbanity_public_transport_without_car",
-        "smarturbanity_public_transport_improvements",
         "smarturbanity_car_habits",
+        "smarturbanity_motorcycle_habits"
+      ]
+    },
+    "rome_road_safety": {
+      "name": "Road safety",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_road_safety",
+        "smarturbanity_cycling_road_safety",
+        "smarturbanity_e_scooter_road_safety",
+        "smarturbanity_public_transport_road_safety",
         "smarturbanity_car_road_safety",
+        "smarturbanity_motorcycle_road_safety"
+      ]
+    },
+    "rome_personal_security": {
+      "name": "Personal security",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_security",
+        "smarturbanity_cycling_security",
+        "smarturbanity_e_scooter_security",
+        "smarturbanity_public_transport_security",
         "smarturbanity_car_security",
+        "smarturbanity_motorcycle_security"
+      ]
+    },
+    "rome_comfort": {
+      "name": "Comfort",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_comfort",
+        "smarturbanity_cycling_comfort",
+        "smarturbanity_e_scooter_comfort",
+        "smarturbanity_public_transport_comfort",
         "smarturbanity_car_comfort",
+        "smarturbanity_motorcycle_comfort"
+      ]
+    },
+    "rome_trip_experience": {
+      "name": "How the trip feels",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_experience",
+        "smarturbanity_cycling_experience",
+        "smarturbanity_e_scooter_experience",
+        "smarturbanity_public_transport_experience",
         "smarturbanity_car_experience",
-        "smarturbanity_car_need",
-        "smarturbanity_car_alternatives",
-        "smarturbanity_motorcycle_habits",
-        "smarturbanity_motorcycle_road_safety",
-        "smarturbanity_motorcycle_security",
-        "smarturbanity_motorcycle_comfort",
-        "smarturbanity_motorcycle_experience",
-        "smarturbanity_motorcycle_need",
+        "smarturbanity_motorcycle_experience"
+      ]
+    },
+    "rome_improvements": {
+      "name": "What would help",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_improvements",
+        "smarturbanity_cycling_improvements",
+        "smarturbanity_e_scooter_improvements",
+        "smarturbanity_public_transport_improvements",
         "smarturbanity_motorcycle_improvements"
+      ]
+    },
+    "rome_doing_without_car": {
+      "name": "Doing without the car",
+      "enabled": false,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": null,
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_car_need",
+        "smarturbanity_motorcycle_need",
+        "smarturbanity_car_alternatives",
+        "smarturbanity_public_transport_without_car"
       ]
     }
   },
@@ -107,13 +203,25 @@
       "code": "it",
       "#Your profile": "Il tuo profilo",
       "#Safety": "Sicurezza",
-      "#Travel habits": "Abitudini di viaggio"
+      "#Travel habits": "Abitudini di viaggio",
+      "#Road safety": "Sicurezza stradale",
+      "#Personal security": "Sicurezza personale",
+      "#Comfort": "Comfort",
+      "#How the trip feels": "Come si vive il viaggio",
+      "#What would help": "Cosa aiuterebbe",
+      "#Doing without the car": "Fare a meno dell'auto"
     },
     "en": {
       "code": "en",
       "#Your profile": "Your profile",
       "#Safety": "Safety",
-      "#Travel habits": "Travel habits"
+      "#Travel habits": "Travel habits",
+      "#Road safety": "Road safety",
+      "#Personal security": "Personal security",
+      "#Comfort": "Comfort",
+      "#How the trip feels": "How the trip feels",
+      "#What would help": "What would help",
+      "#Doing without the car": "Doing without the car"
     }
   }
 }
