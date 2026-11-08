@@ -14,3 +14,6 @@ is unchanged because the reported problem was missing introductory information.
 Validated all 55 forms, eight language dictionaries, unchanged unrelated question
 definitions and preserved walking response values. Browser acceptance and a new
 persona test are not performed; this is a local configuration change.
+
+The newer main car-matrix fix is preserved, including its exclusive none-of-these
+answer. Its form version is 3.2.1 after combining the retention introduction.

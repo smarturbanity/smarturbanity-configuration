@@ -28,3 +28,8 @@ application configuration pin change is part of this work. Full application
 acceptance and the aggregate readiness check remain outstanding; no ready claim.
 The initial none-of-these option becomes the instruction to leave all uses
 unselected, avoiding frequency/alternative questions for a non-use.
+
+## Follow-up verification
+
+The explicit no-use answer and the browser verification supersede the earlier
+empty-answer assumption above. See `lory/car-matrix-none.md` for the current behavior and remaining verification.

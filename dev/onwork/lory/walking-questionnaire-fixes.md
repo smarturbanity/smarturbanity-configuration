@@ -25,6 +25,12 @@ unique options and complete translations of the added text. No browser persona
 retest or application deployment is claimed. The shared pool is separately owned;
 this change publishes standalone form definitions only.
 
+The later car-matrix fix from main is integrated without changing its question,
+row-source definitions or translations. The merge combines its exclusive
+none-of-these answer with the confirmed retention introduction; the car-need form
+is 3.2.1. Checks compare the combined question and row source with the incoming
+main definition and confirm all eight retention translations.
+
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.
