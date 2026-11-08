@@ -1,23 +1,20 @@
-# Ask car-use frequency and alternatives in one matrix
+# Car-use matrix and verified round30 corrections
 
 Source: `round30`. Target: `main`.
 
-People select the car uses that apply to them, then choose frequency and one
-alternative for each selected use. The optional matrix replaces the old use list
-and generic alternative Yes/No. All 18 actual uses are retained, and no selected
-uses means none apply or the question was skipped. All eight languages are covered.
+People select car uses and fill frequency and alternative only for those uses.
+"None of these" is an exclusive answer with no columns. All 18 uses and eight
+languages remain. The form is 3.2.0 and the question is 1.1.0; historical answers
+keep their original format.
 
-The form moves to 3.1.0 and the matrix uses a new question ID and answer key;
-historical responses are not migrated. A form-local row source keeps the initial
-selection empty without changing application code. Notes now describe the
-implemented behavior.
+The matching app renderer and questionnaire regression fixes are collected in
+CityMaaS `round30`; clickable issue details are in Wemo Experiments `round30`.
+Each repository retains only its own code.
 
-Focused renderer/data checks and whitespace checks passed. Full browser acceptance
-and aggregate PR verification remain outstanding: the CityMaaS tooling cannot
-verify this separate configuration repository without an owning manifest.
-This is a local implementation, not a PR-readiness or deployment declaration.
+The matrix passes 14 isolated actual-app browser checks. All five questionnaire
+browser scenarios and final aggregate PR checks pass. The dashboard passes 42
+checks plus an actual-browser mouse/keyboard/mobile check. No live response writes,
+new persona study, pin change or push is included.
 
-## Follow-up verification
-
-The explicit no-use answer and the browser verification supersede the earlier
-empty-answer assumption above. See `lory/car-matrix-none.md` for the current behavior and remaining verification.
+See [the completed-corrections record](../../docs/round30_resolved.md) for versions,
+verification and remaining limits.

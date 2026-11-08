@@ -519,7 +519,7 @@ when the pin moves to this configuration.
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
   it must be updated when the pin moves to a configuration that includes these forms.
 
-### When the car cannot be replaced (implemented)
+## When the car cannot be replaced (implemented and browser-verified)
 
 The car-need form 3.2.0 replaces `car_need_uses` and the generic
 `car_less_with_alternative` Yes/No with one optional matrix question,
@@ -541,3 +541,7 @@ The car-need form 3.2.0 replaces `car_need_uses` and the generic
 - Each selected row stores `frequency` and `alternative` under the new answer key.
   Already collected answers keep their original keys and are not migrated or rewritten.
   The generic Yes/No is no longer asked.
+
+The local round30 candidates pass the matrix browser checks, all five questionnaire
+scenarios and the app's aggregate PR verification. The two earlier test failures
+are fixed. See [the completion inventory](round30_resolved.md) for scope and limits.
