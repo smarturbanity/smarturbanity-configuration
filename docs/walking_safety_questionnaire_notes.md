@@ -17,8 +17,19 @@ Rules applied:
    `walk_days` is first asked why, including whether safety is the reason.
 6. Wheelchairs, pushchairs, canes and other aids are covered by the welcome text, so questions stay short.
 
-Both forms sit in the disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval;
-the old forms and questions are removed only after that.
+Both forms sit in the disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval.
+
+## Questions removed from the source forms (2026-11-08)
+
+| Form | New version | Removed questions |
+|---|---|---|
+| `smarturbanity_safety` | 1.0.0 → 1.1.0 | `fast_vehicles`, `walk_lighting_effect` |
+| `future/smarturbanity_walking` | 3.1.0 → 3.2.0 | `walk_physical_barriers`, `walk_sidewalk_condition_effect`, `avoid_obstacles`, `avoid_dangerous_crossing`, `avoid_fast_traffic`, `risky_road_users`, `riding_on_pavement`, `walk_improvements` |
+
+Their translations were removed with them. The walking form keeps `walk_days` and the comfort questions (slope, benches,
+greenery, shade and heat, signs, health), which have no Yes/No counterpart; its estimated time drops from 7 to 3 minutes.
+The safety questions that cover every way of travelling (`road_unsafe_situations`, `personal_security_day_v1`,
+`personal_security_evening`, `insecurity_factors_detailed`) stay in the safety form, because the new forms ask them about walking only.
 
 ## Part 1
 
@@ -37,7 +48,7 @@ the old forms and questions are removed only after that.
 | `obstacles_near_traffic_yn` | walking `avoid_obstacles` | 5-point → Yes/No |
 | `day_insecure_yn` | safety `personal_security_day` | 5-point + prefer-not-to-say → Yes/No (optional); walking only |
 | `evening_insecure_yn` | safety `personal_security_evening` | as above |
-| `dark_lighting_change_yn` | walking `walk_lighting_effect`, safety `evening_travel_behaviour` | 5-point effect → Yes/No |
+| `dark_lighting_change_yn` | safety `walk_lighting_effect` | 5-point effect → Yes/No |
 
 For former 5-point items, a Yes/No answer corresponds to the stronger answers ("often", "a lot", "I avoid it")
 versus the weaker ones; the two scales are not comparable answer by answer.
