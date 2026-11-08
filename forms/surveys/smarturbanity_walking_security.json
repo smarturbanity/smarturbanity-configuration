@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Personal security",
     "questionnaire_id": "smarturbanity_walking_security",
-    "questionnaire_version": "2.4.1",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -31,7 +31,7 @@
         "questions": [
           {
             "text": "During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
-            "answer_key": "day_insecure_yn",
+            "answer_key": "walk_day_insecure",
             "question_type": "single_option",
             "options": [
               {
@@ -49,13 +49,13 @@
             ],
             "required": false,
             "add_prefer_not_to_say": true,
-            "question_id": "day_insecure_yn",
+            "question_id": "walk_day_insecure",
             "question_version": "1.3.1",
             "privacy_classification": "personal_data"
           },
           {
             "text": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?",
-            "answer_key": "evening_insecure_yn",
+            "answer_key": "walk_evening_insecure",
             "question_type": "single_option",
             "options": [
               {
@@ -73,14 +73,14 @@
             ],
             "required": false,
             "add_prefer_not_to_say": true,
-            "question_id": "evening_insecure_yn",
+            "question_id": "walk_evening_insecure",
             "question_version": "1.3.1",
             "privacy_classification": "personal_data"
           },
           {
             "text": "When you feel unsafe in the evening, what do you change?",
             "help": "You can choose more than one answer.",
-            "answer_key": "evening_insecure_changes",
+            "answer_key": "walk_evening_insecure_changes",
             "question_type": "multiple_options",
             "options": [
               {
@@ -120,17 +120,17 @@
             ],
             "required": false,
             "show_if": {
-              "evening_insecure_yn": [
+              "walk_evening_insecure": [
                 "yes"
               ]
             },
-            "question_id": "evening_insecure_changes",
+            "question_id": "walk_evening_insecure_changes",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "After dark, does poor street lighting make you change your route or the time you go out on foot?",
-            "answer_key": "dark_lighting_change_yn",
+            "answer_key": "walk_dark_lighting_change",
             "question_type": "single_option",
             "options": [
               {
@@ -147,13 +147,13 @@
               }
             ],
             "required": false,
-            "question_id": "dark_lighting_change_yn",
+            "question_id": "walk_dark_lighting_change",
             "question_version": "1.1.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)",
-            "answer_key": "insecurity_factors",
+            "answer_key": "walk_insecurity_factors",
             "question_type": "multiple_options",
             "options": [
               {
@@ -191,13 +191,13 @@
               }
             ],
             "required": false,
-            "question_id": "insecurity_factors",
+            "question_id": "walk_insecurity_factors",
             "question_version": "3.1.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
-            "answer_key": "identity_harassment_yn",
+            "answer_key": "walk_identity_harassment",
             "question_type": "single_option",
             "options": [
               {
@@ -215,7 +215,7 @@
             ],
             "required": false,
             "add_prefer_not_to_say": true,
-            "question_id": "identity_harassment_yn",
+            "question_id": "walk_identity_harassment",
             "question_version": "1.3.1",
             "privacy_classification": "heightened_personal"
           }

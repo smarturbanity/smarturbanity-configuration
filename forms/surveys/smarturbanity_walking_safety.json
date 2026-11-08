@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking Safety",
     "questionnaire_id": "smarturbanity_walking_safety",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -50,7 +50,7 @@
           },
           {
             "text": "Do you rarely walk because the places you go are too far or walking takes too long?",
-            "answer_key": "not_walk_distance_yn",
+            "answer_key": "not_walk_distance",
             "question_type": "single_option",
             "options": [
               {
@@ -66,13 +66,13 @@
             "show_if": {
               "walk_days": "no"
             },
-            "question_id": "not_walk_distance_yn",
+            "question_id": "not_walk_distance",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "Do you rarely walk because walking is tiring or physically difficult for you?",
-            "answer_key": "not_walk_effort_yn",
+            "answer_key": "not_walk_effort",
             "question_type": "single_option",
             "options": [
               {
@@ -88,13 +88,13 @@
             "show_if": {
               "walk_days": "no"
             },
-            "question_id": "not_walk_effort_yn",
+            "question_id": "not_walk_effort",
             "question_version": "1.0.0",
             "privacy_classification": "special_category_health"
           },
           {
             "text": "Do you rarely walk because you feel unsafe on foot (traffic, crime or harassment)?",
-            "answer_key": "not_walk_unsafe_yn",
+            "answer_key": "not_walk_unsafe",
             "question_type": "single_option",
             "options": [
               {
@@ -110,13 +110,13 @@
             "show_if": {
               "walk_days": "no"
             },
-            "question_id": "not_walk_unsafe_yn",
+            "question_id": "not_walk_unsafe",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "Do you rarely walk because the streets are uncomfortable for walking (sidewalks, shade, benches)?",
-            "answer_key": "not_walk_streets_yn",
+            "answer_key": "not_walk_streets",
             "question_type": "single_option",
             "options": [
               {
@@ -132,7 +132,7 @@
             "show_if": {
               "walk_days": "no"
             },
-            "question_id": "not_walk_streets_yn",
+            "question_id": "not_walk_streets",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -144,7 +144,7 @@
         "questions": [
           {
             "text": "When you walk along roads with fast or heavy traffic, do you feel unsafe?",
-            "answer_key": "fast_traffic_along_unsafe_yn",
+            "answer_key": "walk_fast_traffic_along_unsafe",
             "question_type": "single_option",
             "options": [
               {
@@ -157,13 +157,13 @@
               }
             ],
             "required": false,
-            "question_id": "fast_traffic_along_unsafe_yn",
+            "question_id": "walk_fast_traffic_along_unsafe",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "When you cross roads with fast or heavy traffic on foot, do you feel unsafe?",
-            "answer_key": "fast_traffic_crossing_unsafe_yn",
+            "answer_key": "walk_fast_traffic_crossing_unsafe",
             "question_type": "single_option",
             "options": [
               {
@@ -176,13 +176,13 @@
               }
             ],
             "required": false,
-            "question_id": "fast_traffic_crossing_unsafe_yn",
+            "question_id": "walk_fast_traffic_crossing_unsafe",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "Do you avoid some roads or crossings because you cannot cross them safely on foot?",
-            "answer_key": "unsafe_crossings_yn",
+            "answer_key": "walk_unsafe_crossings",
             "question_type": "single_option",
             "options": [
               {
@@ -195,13 +195,13 @@
               }
             ],
             "required": false,
-            "question_id": "unsafe_crossings_yn",
+            "question_id": "walk_unsafe_crossings",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "While walking, do you feel unsafe when cyclists or e-scooter riders pass close to you?",
-            "answer_key": "cyclists_scooters_unsafe_yn",
+            "answer_key": "walk_cyclists_scooters_unsafe",
             "question_type": "single_option",
             "options": [
               {
@@ -214,7 +214,7 @@
               }
             ],
             "required": false,
-            "question_id": "cyclists_scooters_unsafe_yn",
+            "question_id": "walk_cyclists_scooters_unsafe",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -226,7 +226,7 @@
         "questions": [
           {
             "text": "While walking, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?",
-            "answer_key": "poor_sidewalk_unsafe_yn",
+            "answer_key": "walk_poor_sidewalk_unsafe",
             "question_type": "single_option",
             "options": [
               {
@@ -239,13 +239,13 @@
               }
             ],
             "required": false,
-            "question_id": "poor_sidewalk_unsafe_yn",
+            "question_id": "walk_poor_sidewalk_unsafe",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or walk closer to traffic?",
-            "answer_key": "obstacles_near_traffic_yn",
+            "answer_key": "walk_obstacles_near_traffic",
             "question_type": "single_option",
             "options": [
               {
@@ -258,7 +258,7 @@
               }
             ],
             "required": false,
-            "question_id": "obstacles_near_traffic_yn",
+            "question_id": "walk_obstacles_near_traffic",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }
@@ -270,7 +270,7 @@
         "questions": [
           {
             "text": "During the day, do you ever feel unsafe from crime or harassment when you walk? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
-            "answer_key": "day_insecure_yn",
+            "answer_key": "walk_day_insecure",
             "question_type": "single_option",
             "options": [
               {
@@ -283,13 +283,13 @@
               }
             ],
             "required": false,
-            "question_id": "day_insecure_yn",
+            "question_id": "walk_day_insecure",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk?",
-            "answer_key": "evening_insecure_yn",
+            "answer_key": "walk_evening_insecure",
             "question_type": "single_option",
             "options": [
               {
@@ -302,13 +302,13 @@
               }
             ],
             "required": false,
-            "question_id": "evening_insecure_yn",
+            "question_id": "walk_evening_insecure",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           },
           {
             "text": "After dark, does poor street lighting make you change your route or the time you go out on foot?",
-            "answer_key": "dark_lighting_change_yn",
+            "answer_key": "walk_dark_lighting_change",
             "question_type": "single_option",
             "options": [
               {
@@ -321,7 +321,7 @@
               }
             ],
             "required": false,
-            "question_id": "dark_lighting_change_yn",
+            "question_id": "walk_dark_lighting_change",
             "question_version": "1.0.0",
             "privacy_classification": "personal_data"
           }

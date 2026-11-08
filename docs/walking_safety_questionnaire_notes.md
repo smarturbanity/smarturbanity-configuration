@@ -398,6 +398,42 @@ On the felt duplicates between forms (2026-11-08):
 
 Still to decide: grouping the 14 modes (#296/#303, proposal waiting for Lory's choice).
 
+## Question IDs
+
+Lory (2026-11-08, decisions 1A 2A 3A) asked to clean the question IDs, in line with the PlanEasy question pool:
+
+1. Yes/No questions drop the `_yn` ending from both `question_id` and `answer_key`, as the pool already did; the
+   `show_if` conditions that use them follow. 47 questions; the 12 walking ones are listed under 2, the other 35 are:
+   `bike_combines_yn`, `bike_day_insecure_yn`, `bike_evening_insecure_yn`, `bike_health_benefit_yn`,
+   `bike_identity_harassment_yn`, `car_combines_yn`, `car_day_insecure_yn`, `car_evening_insecure_yn`,
+   `car_identity_harassment_yn`, `car_less_with_alternative_yn`, `escooter_combines_yn`, `escooter_day_insecure_yn`,
+   `escooter_evening_insecure_yn`, `escooter_identity_harassment_yn`, `motorcycle_combines_yn`,
+   `motorcycle_dark_lighting_change_yn`, `motorcycle_day_insecure_yn`, `motorcycle_evening_insecure_yn`,
+   `motorcycle_identity_harassment_yn`, `motorcycle_less_with_alternative_yn`, `motorcycle_poor_surface_unsafe_yn`,
+   `not_walk_distance_yn`, `not_walk_effort_yn`, `not_walk_streets_yn`, `not_walk_unsafe_yn`, `put_combines_yn`,
+   `put_dark_lighting_change_yn`, `put_day_insecure_yn`, `put_evening_insecure_yn`, `put_heat_waiting_yn`,
+   `put_identity_harassment_yn`, `put_no_car_yn`, `put_no_seats_yn`, `put_wayfinding_yn`, `walk_combines_yn`.
+2. Questions that exist only in the walking forms and ask about walking get the `walk_` prefix, like `bike_`, `car_`,
+   `put_`, `motorcycle_` and `escooter_` in the other modes (21): `benches_importance` → `walk_benches_importance`,
+   `crossing_rushed_unsure_yn` → `walk_crossing_rushed_unsure`, `cyclists_scooters_unsafe_yn` →
+   `walk_cyclists_scooters_unsafe`, `dark_lighting_change_yn` → `walk_dark_lighting_change`, `day_insecure_yn` →
+   `walk_day_insecure`, `evening_insecure_changes` → `walk_evening_insecure_changes`, `evening_insecure_yn` →
+   `walk_evening_insecure`, `fast_traffic_along_unsafe_yn` → `walk_fast_traffic_along_unsafe`,
+   `fast_traffic_crossing_unsafe_yn` → `walk_fast_traffic_crossing_unsafe`, `identity_harassment_yn` →
+   `walk_identity_harassment`, `insecurity_factors` → `walk_insecurity_factors`, `obstacles_change_path_yn` →
+   `walk_obstacles_change_path`, `obstacles_near_traffic_yn` → `walk_obstacles_near_traffic`, `poor_sidewalk_unsafe_yn`
+   → `walk_poor_sidewalk_unsafe`, `prefer_pleasant` → `walk_prefer_pleasant`, `route_barriers` → `walk_route_barriers`,
+   `unsafe_crossings_yn` → `walk_unsafe_crossings`, `unsafe_road_users` → `walk_unsafe_road_users`, `unsafe_situations`
+   → `walk_unsafe_situations`, `want_changes` → `walk_want_changes`, `wayfinding` → `walk_wayfinding`. `height` stays as
+   it is, because it is about the person.
+3. The feedback and usability-test forms keep their questions without `question_id`, because they are outside the pool.
+
+The question content and the `question_version` values are unchanged. Because the stored answer keys change, every
+questionnaire that contains one of these questions moves to a new major version. CityMaaS code does not read the old
+names, but its `QuestionnaireBanks` test expects the walking keys `benches_importance`, `wayfinding` and
+`prefer_pleasant`, so that test must change to `walk_benches_importance`, `walk_wayfinding` and `walk_prefer_pleasant`
+when the pin moves to this configuration.
+
 ## Not yet covered
 
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
