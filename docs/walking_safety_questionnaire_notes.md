@@ -322,7 +322,10 @@ answer limits of the location reports, whose versions are pinned in the manifest
 
 On 2026-11-08 the issues still open after the source-code recheck of 77b559e were fixed where no decision was needed.
 The persona tests of round 27 ran on the unpublished `smarturbanity_walking_safety` form; their fixes went to the walking
-chain that replaced it (walking road safety and walking security), and `smarturbanity_walking_safety` was left as it is.
+chain that replaced it (walking road safety and walking security), and `smarturbanity_walking_safety` was left as it is,
+except for `walk_days`: Lory chose to ask it there as in `walking_habits` (1.2.1, with the wheelchair, the aids hint and
+"No, only short bits … or not at all"; same yes/no values, so the conditions that use it are unchanged). No answers had
+been collected with the old wording. `walking_safety` 1.1.0. Its other questions are still the older Yes/No versions.
 
 - **Your profile.** The carer answer for an adult living with you names dementia; the income question explains why it is
   asked and its three upper answers are shorter; the limitation question says it is about you, not the people you help
