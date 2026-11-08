@@ -255,6 +255,26 @@ The earlier one-Yes/No-per-option ids (for example `car_drivers_unsafe_yn`, `iso
 were never published, so no answers are lost. A multiple choice with `max_answers` in the source becomes a list with no
 cap. The source's "other" option is dropped except for the reasons.
 
+## Exclusive "None" options
+
+Lory (2026-11-08, "1A, 2A"): in every form, a multiple choice option meaning "None of these", "None" or "Nothing" is
+exclusive, so it cannot be ticked together with another option. "No …" items that name a barrier (for example "No
+ramp") are ordinary options and stay non-exclusive. Only option metadata changed, so the changed questions and forms
+moved by a patch version: `geolocated_perception_report`, `street_connection_assessment` and
+`street_segment_assessment` 3.0.1 (also in both manifests), `post_trip` 4.6.1, `your_profile` 1.16.2. The forms of
+the chains already had exclusive "None" options.
+
+## E-scooter picture and translation review
+
+The six e-scooter pieces open with their own picture, `assets/smarturbanity_e_scooter.svg` ("E-scooter on a street"),
+drawn in the style of the other mode pictures, instead of the cycling one.
+
+The Arabic, Persian and Hungarian texts changed since the chains were built were reviewed on 2026-11-08 and corrected:
+gender-neutral scale labels (Arabic stress and tiredness), "travel" as everyday getting around rather than a journey
+(Arabic), parking as a place to leave the vehicle, the order of "Fairly" and "Quite", the formal Ön address
+(Hungarian), خاستگاه for "origin" in the harassment questions (Persian), and the gender question without an added
+"(male / female)". Every form with corrected texts moved by a patch version, together with the questions that use them.
+
 ## Not yet covered
 
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
@@ -262,8 +282,5 @@ cap. The source's "other" option is dropped except for the reasons.
 
 - CityMaaS `QuestionnaireResponseFirestoreRules` test uses `smarturbanity_daily_travel` as a sample id; check it still holds
   when the pin moves to a configuration without that form.
-- CityMaaS needs the chain and stop rules in `surveys-gallery.json` (branch `lory/questionnaire-follow-up`), including the
-  new e-scooter chain (stop when `escooter_weekly` is No).
-- The e-scooter pieces reuse the cycling picture; a dedicated e-scooter image is still to be made.
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
   it must be updated when the pin moves to a configuration that includes these forms.
