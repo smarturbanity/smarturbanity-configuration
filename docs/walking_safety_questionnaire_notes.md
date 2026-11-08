@@ -511,20 +511,6 @@ when the pin moves to this configuration.
 
 ## Not yet covered
 
-### When the car cannot be replaced (proposals, not built)
-
-Lory (2026-11-08, decision 1A) checked a citizens' text about the uses for which the car cannot be replaced.
-`car_need_uses` (car need) and `put_no_car_hard` (public transport without a car) already list nearly every case. Two
-questions are missing; they are proposals only, to be built later from the wording of the existing forms:
-
-1. **Which alternative would work for each use.** `car_less_with_alternative` is one generic Yes/No, and
-   `car_sustainable_motivation` covers only walking, cycling and sharing. Proposal: for each use ticked in
-   `car_need_uses`, ask which reliable alternative would let the person leave the car for that use, for example
-   public transport at night ("More frequent and reliable public transport, also in the evening"), an accompanied or
-   on-demand service, home delivery, a shared van. Options reuse existing option texts where possible.
-2. **How often each case happens.** Proposal: one frequency question for the ticked uses: several times a week /
-   weekly / monthly / rarely.
-
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
   must point to `smarturbanity_your_profile` before this configuration is used there.
 
@@ -532,3 +518,22 @@ questions are missing; they are proposals only, to be built later from the wordi
   when the pin moves to a configuration without that form.
 - CityMaaS `SmartUrbanityExternalConfiguration` test expects 22 forms and release version 3.0.0 in the pinned configuration;
   it must be updated when the pin moves to a configuration that includes these forms.
+
+### When the car cannot be replaced (proposals, not built)
+
+Lory (2026-11-08, decision 1A) checked a citizens' text about the uses for which the car cannot be replaced.
+`car_need_uses` (car need) and `put_no_car_hard` (public transport without a car) already list nearly every case.
+What is missing is which alternative would work for each use and how often each case happens:
+`car_less_with_alternative` is one generic Yes/No, and `car_sustainable_motivation` covers only walking, cycling and
+sharing. Proposal only, to be built later from the wording of the existing forms (Lory: "1 e 2 sarebbero una bella
+matrice"):
+
+- One `matrix` question replaces `car_need_uses`. Its rows are the same uses, written in the form (`rows`), so the
+  person picks the uses that apply and only those rows show the columns, as in the service report matrix.
+- Column "How often?": several times a week / weekly / monthly / rarely.
+- Column "What would let you leave the car for this?": for example public transport at night ("More frequent and
+  reliable public transport, also in the evening"), an accompanied or on-demand service, home delivery, a shared van,
+  "Nothing would". Options reuse existing option texts where possible.
+- Data impact: the answer becomes one value per use and column, so it needs a new answer key; `car_need_uses` answers
+  already collected stay as they are. `car_less_with_alternative` can then be dropped, because the matrix asks the
+  same thing per use.
