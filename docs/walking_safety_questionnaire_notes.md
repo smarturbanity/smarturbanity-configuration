@@ -583,3 +583,7 @@ Both trip welcome pages now state the confirmed 36-month research retention
 period followed by deletion or anonymisation, reusing the approved feedback-form
 translations; pre-trip 4.6.1. Structural comparison verifies only these additions,
 their translations and version changes; no browser/persona retest is implied.
+Lory approved the neutral Italian economic-status explanation: "Lo chiediamo per
+capire come le possibilità economiche influiscono sugli spostamenti."
+Translation-only patches: economic_status 2.2.1, profile 1.21.3. Structural
+comparison confirms that all other content, settings and languages are preserved.

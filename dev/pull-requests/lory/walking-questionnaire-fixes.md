@@ -34,3 +34,7 @@ participant could not hear or read. Both pre- and post-trip introductions includ
 the confirmed 36-month retention period and subsequent deletion or anonymisation.
 Eight-language structural checks verify that all other content and settings are
 preserved; no new browser or persona test is claimed.
+Lory approved the neutral Italian economic-status explanation: "Lo chiediamo per
+capire come le possibilità economiche influiscono sugli spostamenti."
+Translation-only patches: economic_status 2.2.1, profile 1.21.3. Structural
+comparison confirms that all other content, settings and languages are preserved.

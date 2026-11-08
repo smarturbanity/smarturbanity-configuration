@@ -61,3 +61,7 @@ all eight languages; no browser or new persona execution is claimed.
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.
+Lory approved the neutral Italian economic-status explanation: "Lo chiediamo per
+capire come le possibilità economiche influiscono sugli spostamenti."
+Translation-only patches: economic_status 2.2.1, profile 1.21.3. Structural
+comparison confirms that all other content, settings and languages are preserved.
