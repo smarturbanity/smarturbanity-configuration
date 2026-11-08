@@ -210,8 +210,8 @@ One Yes/No question per former option:
 | Road users | `car_drivers_unsafe_yn`, `motorcycle_riders_unsafe_yn`, `bus_drivers_unsafe_yn`, `delivery_vehicles_unsafe_yn`, `taxi_drivers_unsafe_yn`, `cyclists_unsafe_yn`, `e_scooter_riders_unsafe_yn`, `other_pedestrians_unsafe_yn` | walking `risky_road_users` |
 | Situations on the road | `poor_visibility_unsafe_yn`, `unsafe_behaviour_unsafe_yn`, `crowding_conflicts_unsafe_yn`, `poor_infrastructure_unsafe_yn`, `no_emergency_services_unsafe_yn` | safety `road_unsafe_situations` |
 | Personal security | `isolated_areas_yn`, `aggressive_behaviour_yn`, `identity_harassment_yn`, `blind_corners_yn`, `poor_maintenance_yn`, `no_surveillance_yn`, `past_incidents_yn`, `overcrowding_yn` | safety `insecurity_factors_detailed` |
-| Barriers on your route | `steps_without_ramps_yn`, `missing_dropped_kerbs_yn`, `narrow_paths_yn`, `missing_tactile_paving_yn`, `low_branches_yn` | walking `walk_physical_barriers` |
-| What would make walking safer | `want_safer_crossings_yn`, `want_better_lighting_yn`, `want_separation_yn`, `want_better_sidewalks_yn`, `want_audible_signals_yn`, `want_cleaner_streets_yn` | walking `walk_improvements` |
+| Barriers on your route | `steps_without_ramps_yn`, `missing_dropped_kerbs_yn`, `narrow_paths_yn`, `missing_tactile_paving_yn`, `low_branches_yn`, `stairs_only_way_yn`, `no_sidewalk_yn`, `pedestrian_lights_out_of_order_yn` | walking `walk_physical_barriers` |
+| What would make walking safer | `want_safer_crossings_yn`, `want_better_lighting_yn`, `want_separation_yn`, `want_better_sidewalks_yn`, `want_audible_signals_yn`, `want_cleaner_streets_yn`, `want_sidewalks_where_missing_yn`, `want_longer_green_time_yn` | walking `walk_improvements` |
 
 The other chains ask the "Situations on the road" and "Personal security" groups with their prefix (`bike_`, `put_`,
 `car_`, `motorcycle_`); cycling leaves out `poor_infrastructure_unsafe_yn`, covered by its infrastructure questions.

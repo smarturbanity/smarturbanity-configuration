@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Motorcycle and scooter – Your trips",
     "questionnaire_id": "smarturbanity_motorcycle_habits",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "1.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -190,8 +190,20 @@
                 "value": "car_sharing"
               },
               {
-                "text": "Public transport",
-                "value": "public_transport"
+                "text": "Bus",
+                "value": "bus"
+              },
+              {
+                "text": "Tram",
+                "value": "tram"
+              },
+              {
+                "text": "Metro",
+                "value": "metro"
+              },
+              {
+                "text": "Regional or suburban train",
+                "value": "train"
               },
               {
                 "text": "Bicycle/e-bike (private)",
@@ -223,7 +235,7 @@
               ]
             },
             "question_id": "motorcycle_combined_modes",
-            "question_version": "1.0.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
@@ -261,6 +273,10 @@
                 "value": "safety_concerns_traffic_theft_unsafe_are"
               },
               {
+                "text": "Services are infrequent or do not run in the evening",
+                "value": "infrequent_or_no_evening_service"
+              },
+              {
                 "text": "Lack of reliable information (schedules, delays)",
                 "value": "lack_of_reliable_information_schedules_d"
               },
@@ -291,7 +307,7 @@
               ]
             },
             "question_id": "motorcycle_combined_difficulties",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "heightened_personal"
           },
           {
@@ -396,7 +412,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
       "#Car": "Car",
       "#Car sharing": "Car sharing",
-      "#Public transport": "Public transport",
+      "#Bus": "Bus",
+      "#Tram": "Tram",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Regional or suburban train",
       "#Bicycle/e-bike (private)": "Bicycle/e-bike (private)",
       "#Bicycle/e-bike (shared)": "Bicycle/e-bike (shared)",
       "#e-scooter (private)": "e-scooter (private)",
@@ -409,6 +428,7 @@
       "#Travel time becomes too long": "Travel time becomes too long",
       "#Cost is too high when combining modes": "Cost is too high when combining modes",
       "#Safety concerns (traffic, theft, unsafe areas)": "Safety concerns (traffic, theft, unsafe areas)",
+      "#Services are infrequent or do not run in the evening": "Services are infrequent or do not run in the evening",
       "#Lack of reliable information (schedules, delays)": "Lack of reliable information (schedules, delays)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
@@ -451,12 +471,15 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
       "#Car": "Auto",
       "#Car sharing": "Car sharing",
-      "#Public transport": "Trasporto pubblico",
+      "#Bus": "Autobus",
+      "#Tram": "Tram",
+      "#Metro": "Metropolitana",
+      "#Regional or suburban train": "Treno regionale o suburbano",
       "#Bicycle/e-bike (private)": "Bicicletta/e-bike (privata)",
       "#Bicycle/e-bike (shared)": "Bicicletta/e-bike (condivisa)",
       "#e-scooter (private)": "Monopattino elettrico (privato)",
       "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
-      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o servizio simile (ad es. Uber, Bolt)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o NCC (ad es. Uber, Bolt)",
       "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
       "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
       "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
@@ -464,6 +487,7 @@
       "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
       "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
       "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
+      "#Services are infrequent or do not run in the evening": "Le corse sono rare o assenti la sera",
       "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Lo sforzo fisico è troppo elevato (ad es. trasportare una bicicletta o camminare per lunghe distanze)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
@@ -506,7 +530,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
       "#Car": "Voiture",
       "#Car sharing": "Autopartage",
-      "#Public transport": "Transports publics",
+      "#Bus": "Bus",
+      "#Tram": "Tramway",
+      "#Metro": "Métro",
+      "#Regional or suburban train": "Train régional ou de banlieue",
       "#Bicycle/e-bike (private)": "Vélo / vélo électrique (personnel)",
       "#Bicycle/e-bike (shared)": "Vélo / vélo électrique (partagé)",
       "#e-scooter (private)": "Trottinette électrique (personnelle)",
@@ -519,6 +546,7 @@
       "#Travel time becomes too long": "Le temps de trajet devient trop long",
       "#Cost is too high when combining modes": "Le coût est trop élevé quand plusieurs modes sont combinés",
       "#Safety concerns (traffic, theft, unsafe areas)": "Problèmes de sécurité (trafic, vol, zones peu sûres)",
+      "#Services are infrequent or do not run in the evening": "Les passages sont rares ou inexistants le soir",
       "#Lack of reliable information (schedules, delays)": "Manque d’informations fiables (horaires, retards)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "L’effort physique est trop important (par ex. porter un vélo ou marcher longtemps)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
@@ -561,7 +589,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
       "#Car": "Auto",
       "#Car sharing": "Carsharing",
-      "#Public transport": "Öffentliche Verkehrsmittel",
+      "#Bus": "Bus",
+      "#Tram": "Straßenbahn",
+      "#Metro": "U-Bahn/Metro",
+      "#Regional or suburban train": "Regional- oder S-Bahn",
       "#Bicycle/e-bike (private)": "Fahrrad / E-Bike (privat)",
       "#Bicycle/e-bike (shared)": "Fahrrad / E-Bike (Sharing)",
       "#e-scooter (private)": "E-Scooter (privat)",
@@ -574,6 +605,7 @@
       "#Travel time becomes too long": "Die gesamte Fahrzeit wird zu lang",
       "#Cost is too high when combining modes": "Die Kosten sind beim Kombinieren mehrerer Verkehrsmittel zu hoch",
       "#Safety concerns (traffic, theft, unsafe areas)": "Sicherheitsbedenken (Verkehr, Diebstahl, unsichere Bereiche)",
+      "#Services are infrequent or do not run in the evening": "Die Verbindungen sind selten oder fahren abends nicht",
       "#Lack of reliable information (schedules, delays)": "Fehlende verlässliche Informationen (Fahrpläne, Verspätungen)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Der körperliche Aufwand ist zu hoch (z. B. Fahrrad tragen oder lange Strecken zu Fuß gehen)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
@@ -616,7 +648,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
       "#Car": "Otomobil",
       "#Car sharing": "Araç paylaşımı",
-      "#Public transport": "Toplu taşıma",
+      "#Bus": "Otobüs",
+      "#Tram": "Tramvay",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Bölgesel veya banliyö treni",
       "#Bicycle/e-bike (private)": "Bisiklet / elektrikli bisiklet (kişisel)",
       "#Bicycle/e-bike (shared)": "Bisiklet / elektrikli bisiklet (paylaşımlı)",
       "#e-scooter (private)": "E-scooter (kişisel)",
@@ -629,6 +664,7 @@
       "#Travel time becomes too long": "Toplam yolculuk süresi çok uzuyor",
       "#Cost is too high when combining modes": "Farklı ulaşım seçeneklerini birleştirince maliyet çok yüksek oluyor",
       "#Safety concerns (traffic, theft, unsafe areas)": "Güvenlikle ilgili kaygılar (trafik, hırsızlık, güvensiz bölgeler)",
+      "#Services are infrequent or do not run in the evening": "Seferler seyrek veya akşamları hiç yok",
       "#Lack of reliable information (schedules, delays)": "Güvenilir bilgi eksikliği (sefer saatleri, gecikmeler)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Fiziksel çaba çok fazla (ör. bisikleti taşımak veya uzun mesafe yürümek)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
@@ -671,7 +707,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیله دیگر یا تعویض وسیله)",
       "#Car": "خودرو",
       "#Car sharing": "خودروی اشتراکی",
-      "#Public transport": "حمل‌ونقل عمومی",
+      "#Bus": "اتوبوس",
+      "#Tram": "تراموا",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار منطقه‌ای یا حومه‌ای",
       "#Bicycle/e-bike (private)": "دوچرخه / دوچرخه برقی (شخصی)",
       "#Bicycle/e-bike (shared)": "دوچرخه / دوچرخه برقی (اشتراکی)",
       "#e-scooter (private)": "اسکوتر برقی (شخصی)",
@@ -684,6 +723,7 @@
       "#Travel time becomes too long": "زمان کل سفر خیلی طولانی می‌شود",
       "#Cost is too high when combining modes": "هزینه ترکیب چند روش خیلی زیاد است",
       "#Safety concerns (traffic, theft, unsafe areas)": "نگرانی‌های ایمنی و امنیتی (ترافیک، سرقت، مناطق ناامن)",
+      "#Services are infrequent or do not run in the evening": "سرویس‌ها کم‌تعدادند یا عصرها و شب‌ها کار نمی‌کنند",
       "#Lack of reliable information (schedules, delays)": "اطلاعات قابل اعتماد کافی نیست (زمان‌بندی، تأخیر)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "تلاش جسمی خیلی زیاد است (مثلاً حمل دوچرخه یا پیاده‌روی طولانی)",
       "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
@@ -726,7 +766,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (az út nagy részének fő közlekedési módjaként, nem csak rövid rá- vagy átszállási gyaloglásként)",
       "#Car": "Autó",
       "#Car sharing": "Autómegosztás",
-      "#Public transport": "Tömegközlekedés",
+      "#Bus": "Busz",
+      "#Tram": "Villamos",
+      "#Metro": "Metró",
+      "#Regional or suburban train": "Regionális vagy elővárosi vonat",
       "#Bicycle/e-bike (private)": "Kerékpár / e-bike (saját)",
       "#Bicycle/e-bike (shared)": "Kerékpár / e-bike (megosztott)",
       "#e-scooter (private)": "Elektromos roller (saját)",
@@ -739,6 +782,7 @@
       "#Travel time becomes too long": "Az utazási idő túl hosszú lesz",
       "#Cost is too high when combining modes": "Túl magas a költség több közlekedési mód kombinálásakor",
       "#Safety concerns (traffic, theft, unsafe areas)": "Biztonsági problémák (forgalom, lopás, nem biztonságos területek)",
+      "#Services are infrequent or do not run in the evening": "Ritkán járnak a járatok, vagy este nem közlekednek",
       "#Lack of reliable information (schedules, delays)": "Nincs elég megbízható információ (menetrend, késés)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Túl nagy a fizikai megterhelés (pl. kerékpár cipelése vagy hosszú gyaloglás)",
       "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
@@ -781,7 +825,10 @@
       "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
       "#Car": "السيارة",
       "#Car sharing": "مشاركة السيارات",
-      "#Public transport": "النقل العام",
+      "#Bus": "حافلة",
+      "#Tram": "ترام",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار إقليمي أو قطار ضواحي",
       "#Bicycle/e-bike (private)": "الدراجة / الدراجة الكهربائية (شخصية)",
       "#Bicycle/e-bike (shared)": "الدراجة / الدراجة الكهربائية (مشتركة)",
       "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
@@ -794,6 +841,7 @@
       "#Travel time becomes too long": "وقت الرحلة يصبح طويلًا جدًا",
       "#Cost is too high when combining modes": "التكلفة مرتفعة جدًا عند الجمع بين عدة وسائل",
       "#Safety concerns (traffic, theft, unsafe areas)": "مخاوف تتعلق بالأمان والسلامة (حركة المرور، السرقة، مناطق غير آمنة)",
+      "#Services are infrequent or do not run in the evening": "الرحلات قليلة أو لا تعمل في المساء",
       "#Lack of reliable information (schedules, delays)": "نقص المعلومات الموثوقة (المواعيد، التأخير)",
       "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "الجهد البدني مرتفع جدًا (مثل حمل الدراجة أو المشي لمسافات طويلة)",
       "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
