@@ -392,6 +392,9 @@ On the felt duplicates between forms (2026-11-08):
     use a different means of transport, give up going out, Nothing, Prefer not to say. "Nothing" and "Prefer not to
     say" are exclusive. The wording was approved by Lory on 2026-11-08 (#422). It replaces the retired single-choice
     `evening_travel_behaviour` of the general safety form.
+    The "Prefer not to say" translations it brought also translate the option that `day_insecure_yn`,
+    `evening_insecure_yn` and `identity_harassment_yn` add with `add_prefer_not_to_say`, so those three move to 1.3.1
+    (translation only) and `walking_security` to 2.4.1.
 
 Still to decide: grouping the 14 modes (#296/#303, proposal waiting for Lory's choice).
 
