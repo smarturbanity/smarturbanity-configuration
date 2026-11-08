@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "4.7.0",
+    "questionnaire_version": "4.8.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "trip_phase": "post",
@@ -196,7 +196,7 @@
           },
           {
             "question_id": "trip_rating",
-            "question_version": "1.0.2",
+            "question_version": "1.0.3",
             "text": "How would you rate this trip overall?",
             "answer_key": "trip_rating",
             "question_type": "single_option",
@@ -204,23 +204,23 @@
             "checks_inline": true,
             "options": [
               {
-                "text": "1 – Very poor",
+                "text": "Very poor (1)",
                 "value": "1"
               },
               {
-                "text": "2 – Poor",
+                "text": "Poor (2)",
                 "value": "2"
               },
               {
-                "text": "3 – Fair",
+                "text": "Fair (3)",
                 "value": "3"
               },
               {
-                "text": "4 – Good",
+                "text": "Good (4)",
                 "value": "4"
               },
               {
-                "text": "5 – Excellent",
+                "text": "Excellent (5)",
                 "value": "5"
               }
             ],
@@ -256,7 +256,7 @@
           },
           {
             "question_id": "route_reasons",
-            "question_version": "2.2.0",
+            "question_version": "2.3.0",
             "text": "Why did you choose this route?",
             "answer_key": "route_reasons",
             "question_type": "multiple_options",
@@ -301,8 +301,16 @@
                 "value": "better_surface"
               },
               {
+                "text": "The cycle lane doesn't break off along the way",
+                "value": "continuous_cycle_lane"
+              },
+              {
                 "text": "To stop somewhere on the way",
                 "value": "stop_on_way"
+              },
+              {
+                "text": "It suits what I carry for work (e.g. a delivery box)",
+                "value": "work_load"
               },
               {
                 "text": "My usual route was closed or diverted (e.g. roadworks)",
@@ -370,7 +378,7 @@
           },
           {
             "question_id": "avoided_reasons",
-            "question_version": "2.4.0",
+            "question_version": "2.5.0",
             "text": "What was the problem there? (Select all that apply)",
             "answer_key": "avoided_reasons",
             "question_type": "multiple_options",
@@ -405,6 +413,10 @@
                 "value": "bad_surface"
               },
               {
+                "text": "Slippery surfaces (e.g. manhole covers, wet cobbles)",
+                "value": "slippery_surface"
+              },
+              {
                 "text": "A kerb without a ramp, or a blocked ramp",
                 "value": "no_kerb_ramp"
               },
@@ -423,6 +435,10 @@
               {
                 "text": "Bikes or e-scooters on the pavement",
                 "value": "vehicles_on_pavement"
+              },
+              {
+                "text": "The cycle lane broke off",
+                "value": "cycle_lane_gap"
               },
               {
                 "text": "Too dark",
@@ -453,7 +469,7 @@
           },
           {
             "question_id": "trip_incidents",
-            "question_version": "2.5.0",
+            "question_version": "2.6.0",
             "text": "Did any of these happen on this trip? (Select all that apply)",
             "answer_key": "trip_incidents",
             "question_type": "multiple_options",
@@ -513,6 +529,10 @@
               {
                 "text": "I was harassed, threatened or made to feel uneasy",
                 "value": "harassment"
+              },
+              {
+                "text": "I felt a little uneasy, but nothing happened",
+                "value": "mild_unease"
               }
             ],
             "privacy_classification": "heightened_personal"
@@ -661,11 +681,11 @@
       "#Anxious": "Anxious",
       "#How would you rate this trip overall?": "How would you rate this trip overall?",
       "#How did you feel emotionally after this trip?": "How did you feel emotionally after this trip?",
-      "#1 – Very poor": "1 – Very poor",
-      "#2 – Poor": "2 – Poor",
-      "#3 – Fair": "3 – Fair",
-      "#4 – Good": "4 – Good",
-      "#5 – Excellent": "5 – Excellent",
+      "#Very poor (1)": "Very poor (1)",
+      "#Poor (2)": "Poor (2)",
+      "#Fair (3)": "Fair (3)",
+      "#Good (4)": "Good (4)",
+      "#Excellent (5)": "Excellent (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Anything else you want to tell us about this trip? (Optional)",
       "#The pedestrian light was too short": "The pedestrian light was too short",
       "#A crossing or light without an audible signal": "A crossing or light without an audible signal",
@@ -680,7 +700,12 @@
       "#A lift or escalator was out of order": "A lift or escalator was out of order",
       "#Dirt or dog droppings": "Dirt or dog droppings",
       "#A lift or escalator I needed was out of order": "A lift or escalator I needed was out of order",
-      "#I could not find a parking space, or only far from where I was going": "I could not find a parking space, or only far from where I was going"
+      "#I could not find a parking space, or only far from where I was going": "I could not find a parking space, or only far from where I was going",
+      "#The cycle lane doesn't break off along the way": "The cycle lane doesn't break off along the way",
+      "#It suits what I carry for work (e.g. a delivery box)": "It suits what I carry for work (e.g. a delivery box)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Slippery surfaces (e.g. manhole covers, wet cobbles)",
+      "#The cycle lane broke off": "The cycle lane broke off",
+      "#I felt a little uneasy, but nothing happened": "I felt a little uneasy, but nothing happened"
     },
     "it": {
       "code": "it",
@@ -766,11 +791,11 @@
       "#Anxious": "Ansia",
       "#How would you rate this trip overall?": "Come valuteresti questo spostamento nel complesso?",
       "#How did you feel emotionally after this trip?": "Che emozioni hai provato dopo questo spostamento?",
-      "#1 – Very poor": "1 – Pessimo",
-      "#2 – Poor": "2 – Scarso",
-      "#3 – Fair": "3 – Accettabile",
-      "#4 – Good": "4 – Buono",
-      "#5 – Excellent": "5 – Ottimo",
+      "#Very poor (1)": "Pessimo (1)",
+      "#Poor (2)": "Scarso (2)",
+      "#Fair (3)": "Accettabile (3)",
+      "#Good (4)": "Buono (4)",
+      "#Excellent (5)": "Ottimo (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Vuoi dirci altro su questo spostamento? (Facoltativo)",
       "#The pedestrian light was too short": "Il semaforo pedonale era troppo breve",
       "#A crossing or light without an audible signal": "Un attraversamento o un semaforo senza segnale acustico",
@@ -785,7 +810,12 @@
       "#A lift or escalator was out of order": "Un ascensore o una scala mobile era fuori servizio",
       "#Dirt or dog droppings": "Sporcizia o escrementi di cane",
       "#A lift or escalator I needed was out of order": "Un ascensore o una scala mobile che mi serviva era fuori servizio",
-      "#I could not find a parking space, or only far from where I was going": "Non ho trovato parcheggio, o solo lontano dalla mia meta"
+      "#I could not find a parking space, or only far from where I was going": "Non ho trovato parcheggio, o solo lontano dalla mia meta",
+      "#The cycle lane doesn't break off along the way": "La pista ciclabile non si interrompe lungo il percorso",
+      "#It suits what I carry for work (e.g. a delivery box)": "È adatto a ciò che porto per lavoro (es. un box per le consegne)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Superfici scivolose (es. tombini, sampietrini bagnati)",
+      "#The cycle lane broke off": "La pista ciclabile si interrompeva",
+      "#I felt a little uneasy, but nothing happened": "Ho provato un po' di disagio, ma non è successo nulla"
     },
     "fr": {
       "code": "fr",
@@ -871,11 +901,11 @@
       "#Anxious": "Anxiété",
       "#How would you rate this trip overall?": "Comment évalueriez-vous ce trajet dans l'ensemble ?",
       "#How did you feel emotionally after this trip?": "Quelles émotions avez-vous ressenties après ce trajet ?",
-      "#1 – Very poor": "1 – Très mauvais",
-      "#2 – Poor": "2 – Mauvais",
-      "#3 – Fair": "3 – Correct",
-      "#4 – Good": "4 – Bon",
-      "#5 – Excellent": "5 – Excellent",
+      "#Very poor (1)": "Très mauvais (1)",
+      "#Poor (2)": "Mauvais (2)",
+      "#Fair (3)": "Correct (3)",
+      "#Good (4)": "Bon (4)",
+      "#Excellent (5)": "Excellent (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Voulez-vous nous dire autre chose sur ce trajet ? (Facultatif)",
       "#The pedestrian light was too short": "Le feu piéton était trop court",
       "#A crossing or light without an audible signal": "Un passage piéton ou un feu sans signal sonore",
@@ -890,7 +920,12 @@
       "#A lift or escalator was out of order": "Un ascenseur ou un escalator était en panne",
       "#Dirt or dog droppings": "Saleté ou déjections canines",
       "#A lift or escalator I needed was out of order": "Un ascenseur ou un escalator dont j’avais besoin était en panne",
-      "#I could not find a parking space, or only far from where I was going": "Je n’ai pas trouvé de place pour me garer, ou seulement loin de ma destination"
+      "#I could not find a parking space, or only far from where I was going": "Je n’ai pas trouvé de place pour me garer, ou seulement loin de ma destination",
+      "#The cycle lane doesn't break off along the way": "La piste cyclable ne s’interrompt pas en chemin",
+      "#It suits what I carry for work (e.g. a delivery box)": "Il convient à ce que je transporte pour le travail (par ex. un sac de livraison)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Surfaces glissantes (par ex. plaques d’égout, pavés mouillés)",
+      "#The cycle lane broke off": "La piste cyclable s’interrompait",
+      "#I felt a little uneasy, but nothing happened": "J’ai ressenti un léger malaise, mais rien ne s’est passé"
     },
     "de": {
       "code": "de",
@@ -976,11 +1011,11 @@
       "#Anxious": "Ängstlich",
       "#How would you rate this trip overall?": "Wie würden Sie diesen Weg insgesamt bewerten?",
       "#How did you feel emotionally after this trip?": "Wie haben Sie sich nach diesem Weg gefühlt?",
-      "#1 – Very poor": "1 – Sehr schlecht",
-      "#2 – Poor": "2 – Schlecht",
-      "#3 – Fair": "3 – Mittelmäßig",
-      "#4 – Good": "4 – Gut",
-      "#5 – Excellent": "5 – Ausgezeichnet",
+      "#Very poor (1)": "Sehr schlecht (1)",
+      "#Poor (2)": "Schlecht (2)",
+      "#Fair (3)": "Mittelmäßig (3)",
+      "#Good (4)": "Gut (4)",
+      "#Excellent (5)": "Ausgezeichnet (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Möchten Sie uns noch etwas zu diesem Weg mitteilen? (Optional)",
       "#The pedestrian light was too short": "Die Fußgängerampel war zu kurz grün",
       "#A crossing or light without an audible signal": "Eine Querung oder Ampel ohne akustisches Signal",
@@ -995,7 +1030,12 @@
       "#A lift or escalator was out of order": "Ein Aufzug oder eine Rolltreppe war außer Betrieb",
       "#Dirt or dog droppings": "Schmutz oder Hundekot",
       "#A lift or escalator I needed was out of order": "Ein Aufzug oder eine Rolltreppe, die ich brauchte, war außer Betrieb",
-      "#I could not find a parking space, or only far from where I was going": "Ich habe keinen Parkplatz gefunden oder nur weit weg vom Ziel"
+      "#I could not find a parking space, or only far from where I was going": "Ich habe keinen Parkplatz gefunden oder nur weit weg vom Ziel",
+      "#The cycle lane doesn't break off along the way": "Der Radweg hört unterwegs nicht auf",
+      "#It suits what I carry for work (e.g. a delivery box)": "Er passt zu dem, was ich beruflich transportiere (z. B. eine Lieferbox)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Rutschige Flächen (z. B. Gullydeckel, nasses Pflaster)",
+      "#The cycle lane broke off": "Der Radweg hörte plötzlich auf",
+      "#I felt a little uneasy, but nothing happened": "Ich fühlte mich etwas unwohl, aber es ist nichts passiert"
     },
     "tr": {
       "code": "tr",
@@ -1081,11 +1121,11 @@
       "#Anxious": "Endişeli",
       "#How would you rate this trip overall?": "Bu yolculuğu genel olarak nasıl değerlendirirsiniz?",
       "#How did you feel emotionally after this trip?": "Bu yolculuktan sonra duygusal olarak kendinizi nasıl hissettiniz?",
-      "#1 – Very poor": "1 – Çok kötü",
-      "#2 – Poor": "2 – Kötü",
-      "#3 – Fair": "3 – Orta",
-      "#4 – Good": "4 – İyi",
-      "#5 – Excellent": "5 – Mükemmel",
+      "#Very poor (1)": "Çok kötü (1)",
+      "#Poor (2)": "Kötü (2)",
+      "#Fair (3)": "Orta (3)",
+      "#Good (4)": "İyi (4)",
+      "#Excellent (5)": "Mükemmel (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Bu yolculukla ilgili bize söylemek istediğiniz başka bir şey var mı? (İsteğe bağlı)",
       "#The pedestrian light was too short": "Yaya ışığı çok kısaydı",
       "#A crossing or light without an audible signal": "Sesli sinyali olmayan bir geçit veya trafik ışığı",
@@ -1100,7 +1140,12 @@
       "#A lift or escalator was out of order": "Bir asansör veya yürüyen merdiven çalışmıyordu",
       "#Dirt or dog droppings": "Kir veya köpek dışkısı",
       "#A lift or escalator I needed was out of order": "İhtiyacım olan bir asansör veya yürüyen merdiven çalışmıyordu",
-      "#I could not find a parking space, or only far from where I was going": "Park yeri bulamadım ya da yalnızca gideceğim yerden uzakta buldum"
+      "#I could not find a parking space, or only far from where I was going": "Park yeri bulamadım ya da yalnızca gideceğim yerden uzakta buldum",
+      "#The cycle lane doesn't break off along the way": "Bisiklet yolu yol boyunca kesilmiyor",
+      "#It suits what I carry for work (e.g. a delivery box)": "İş için taşıdığım şeylere uygun (örn. teslimat kutusu)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Kaygan yüzeyler (örn. rögar kapakları, ıslak parke taşları)",
+      "#The cycle lane broke off": "Bisiklet yolu kesiliyordu",
+      "#I felt a little uneasy, but nothing happened": "Biraz tedirgin oldum ama bir şey olmadı"
     },
     "fa": {
       "code": "fa",
@@ -1186,11 +1231,11 @@
       "#Anxious": "نگران",
       "#How would you rate this trip overall?": "در مجموع، این سفر را چگونه ارزیابی می‌کنید؟",
       "#How did you feel emotionally after this trip?": "بعد از این سفر چه حسی داشتید؟",
-      "#1 – Very poor": "۱ – بسیار بد",
-      "#2 – Poor": "۲ – بد",
-      "#3 – Fair": "۳ – متوسط",
-      "#4 – Good": "۴ – خوب",
-      "#5 – Excellent": "۵ – عالی",
+      "#Very poor (1)": "بسیار بد (۱)",
+      "#Poor (2)": "بد (۲)",
+      "#Fair (3)": "متوسط (۳)",
+      "#Good (4)": "خوب (۴)",
+      "#Excellent (5)": "عالی (۵)",
       "#Anything else you want to tell us about this trip? (Optional)": "چیز دیگری درباره این سفر می‌خواهید به ما بگویید؟ (اختیاری)",
       "#The pedestrian light was too short": "چراغ عابر پیاده خیلی کوتاه بود",
       "#A crossing or light without an audible signal": "گذرگاه یا چراغی بدون علامت صوتی",
@@ -1205,7 +1250,12 @@
       "#A lift or escalator was out of order": "یک آسانسور یا پله برقی از کار افتاده بود",
       "#Dirt or dog droppings": "کثیفی یا مدفوع سگ",
       "#A lift or escalator I needed was out of order": "آسانسور یا پله برقی‌ای که لازم داشتم از کار افتاده بود",
-      "#I could not find a parking space, or only far from where I was going": "جای پارک پیدا نکردم، یا فقط دور از مقصدم پیدا کردم"
+      "#I could not find a parking space, or only far from where I was going": "جای پارک پیدا نکردم، یا فقط دور از مقصدم پیدا کردم",
+      "#The cycle lane doesn't break off along the way": "مسیر دوچرخه در طول راه قطع نمی‌شود",
+      "#It suits what I carry for work (e.g. a delivery box)": "با چیزی که برای کار حمل می‌کنم سازگار است (مثلاً جعبه تحویل سفارش)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "سطوح لغزنده (مثلاً درپوش فاضلاب، سنگفرش خیس)",
+      "#The cycle lane broke off": "مسیر دوچرخه قطع می‌شد",
+      "#I felt a little uneasy, but nothing happened": "کمی احساس ناراحتی کردم، اما اتفاقی نیفتاد"
     },
     "hu": {
       "code": "hu",
@@ -1291,11 +1341,11 @@
       "#Anxious": "Szorongónak",
       "#How would you rate this trip overall?": "Összességében hogyan értékelné ezt az utat?",
       "#How did you feel emotionally after this trip?": "Hogyan érezte magát érzelmileg az út után?",
-      "#1 – Very poor": "1 – Nagyon rossz",
-      "#2 – Poor": "2 – Rossz",
-      "#3 – Fair": "3 – Közepes",
-      "#4 – Good": "4 – Jó",
-      "#5 – Excellent": "5 – Kiváló",
+      "#Very poor (1)": "Nagyon rossz (1)",
+      "#Poor (2)": "Rossz (2)",
+      "#Fair (3)": "Közepes (3)",
+      "#Good (4)": "Jó (4)",
+      "#Excellent (5)": "Kiváló (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "Szeretne még valamit elmondani erről az útról? (Nem kötelező)",
       "#The pedestrian light was too short": "A gyalogos lámpa túl rövid ideig volt zöld",
       "#A crossing or light without an audible signal": "Hangjelzés nélküli átkelő vagy lámpa",
@@ -1310,7 +1360,12 @@
       "#A lift or escalator was out of order": "Egy lift vagy mozgólépcső nem működött",
       "#Dirt or dog droppings": "Kosz vagy kutyapiszok",
       "#A lift or escalator I needed was out of order": "Egy lift vagy mozgólépcső, amelyre szükségem volt, nem működött",
-      "#I could not find a parking space, or only far from where I was going": "Nem találtam parkolóhelyet, vagy csak messze attól, ahová mentem"
+      "#I could not find a parking space, or only far from where I was going": "Nem találtam parkolóhelyet, vagy csak messze attól, ahová mentem",
+      "#The cycle lane doesn't break off along the way": "A kerékpárút nem szakad meg útközben",
+      "#It suits what I carry for work (e.g. a delivery box)": "Megfelel annak, amit munkához viszek (pl. ételfutár-doboz)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "Csúszós felületek (pl. csatornafedelek, nedves macskakő)",
+      "#The cycle lane broke off": "A kerékpárút megszakadt",
+      "#I felt a little uneasy, but nothing happened": "Kicsit kellemetlenül éreztem magam, de nem történt semmi"
     },
     "ar": {
       "code": "ar",
@@ -1396,11 +1451,11 @@
       "#Anxious": "قلق",
       "#How would you rate this trip overall?": "ما تقييمك لهذه الرحلة بشكل عام؟",
       "#How did you feel emotionally after this trip?": "ما المشاعر التي شعرت بها بعد هذه الرحلة؟",
-      "#1 – Very poor": "1 – سيئ جدًا",
-      "#2 – Poor": "2 – سيئ",
-      "#3 – Fair": "3 – مقبول",
-      "#4 – Good": "4 – جيد",
-      "#5 – Excellent": "5 – ممتاز",
+      "#Very poor (1)": "سيئ جدًا (1)",
+      "#Poor (2)": "سيئ (2)",
+      "#Fair (3)": "مقبول (3)",
+      "#Good (4)": "جيد (4)",
+      "#Excellent (5)": "ممتاز (5)",
       "#Anything else you want to tell us about this trip? (Optional)": "أي ملاحظات أخرى عن هذه الرحلة؟ (اختياري)",
       "#The pedestrian light was too short": "كانت إشارة المشاة قصيرة جدًا",
       "#A crossing or light without an audible signal": "معبر أو إشارة ضوئية بلا إشارة صوتية",
@@ -1415,7 +1470,12 @@
       "#A lift or escalator was out of order": "كان مصعد أو سلم متحرك معطلًا",
       "#Dirt or dog droppings": "أوساخ أو فضلات كلاب",
       "#A lift or escalator I needed was out of order": "كان مصعد أو سلم متحرك أحتاج إليه معطلًا",
-      "#I could not find a parking space, or only far from where I was going": "لم أجد مكانًا لركن السيارة، أو وجدته بعيدًا عن وجهتي فقط"
+      "#I could not find a parking space, or only far from where I was going": "لم أجد مكانًا لركن السيارة، أو وجدته بعيدًا عن وجهتي فقط",
+      "#The cycle lane doesn't break off along the way": "مسار الدراجات لا ينقطع على طول الطريق",
+      "#It suits what I carry for work (e.g. a delivery box)": "يناسب ما أحمله للعمل (مثل صندوق التوصيل)",
+      "#Slippery surfaces (e.g. manhole covers, wet cobbles)": "أسطح زلقة (مثل أغطية الصرف أو الحجارة المبللة)",
+      "#The cycle lane broke off": "كان مسار الدراجات ينقطع",
+      "#I felt a little uneasy, but nothing happened": "شعرت ببعض الانزعاج، لكن لم يحدث شيء"
     }
   },
   "id": "smarturbanity_post_trip",

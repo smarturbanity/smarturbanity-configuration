@@ -316,6 +316,38 @@ forms are different nuances and stay (Q26-3, Q26-4, Q26-6, Q26-7, Q26-9, Q26-10)
 title and the Latin-script brand in Persian (Q27-9), the Turkish "Mod değiştir" that matches the app button, and the
 answer limits of the location reports, whose versions are pinned in the manifests.
 
+## Persona test fixes, second pass
+
+On 2026-11-08 the issues still open after the source-code recheck of 77b559e were fixed where no decision was needed.
+The persona tests of round 27 ran on the unpublished `smarturbanity_walking_safety` form; their fixes went to the walking
+chain that replaced it (walking road safety and walking security), and `smarturbanity_walking_safety` was left as it is.
+
+- **Your profile.** The carer answer for an adult living with you names dementia; the income question explains why it is
+  asked and its three upper answers are shorter; the limitation question says it is about you, not the people you help
+  (Persian stem reworded); Italian "Mi occupo della casa"; French "vous déplacez-vous" in the usual-trip company question.
+- **Safety.** The welcome page says who reads the answers; the evening answer "change my route, stop or company" also
+  names the time; a new reason "few cues to find my way without sight"; the Italian road safety scale says "al sicuro".
+- **Walking chain.** Day, evening and identity harassment questions offer "Prefer not to say". Forms whose questions
+  have more than Yes and No (for example "Doesn't apply to me" or lists) now say "Most questions are answered Yes or No"
+  instead of "Each question has two answers".
+- **Walking habits.** The distance question has "Distance is not a limit for me (e.g. power wheelchair)"; Italian
+  fitness scale in the feminine ("Bassa", "Buona"); Persian height labels with Persian digits and "سانتی‌متر".
+- **Pre-trip.** Planned stops counts only the way there; the company question is optional, "children" covers teenagers
+  on foot or in the car, and "someone I accompany or care for" matches the Italian.
+- **Post-trip.** Rating labels read "Very poor (1)" instead of "1 – Very poor", which screen readers spell out; route
+  reasons add a cycle lane without gaps and work loads such as a delivery box; problem places add slippery surfaces and
+  a cycle lane that broke off; incidents add "I felt a little uneasy, but nothing happened".
+- **Public transport.** Stop problems add a ramp that does not work or a taken wheelchair space, and vehicles too full
+  to get on; Italian crossing answers say "al sicuro" and "fare attenzione"; Turkish "duraklara ulaşmak".
+- **Wording in every mode.** Italian tiredness scale "Poca / Moderata stanchezza", "Raramente mi stanco", "La solitudine
+  o l’isolamento", "più al sicuro", "non sentirsi al sicuro", the aggressive road users option without gendered nouns,
+  "quando mi stanco"; French "circulation" and "je me déplace"; Hungarian "Különösebben senki".
+
+Versions follow the rules above; a question whose PlanEasy pool already holds a higher version moves on from that one.
+Still to decide: dropping the health benefit, height and social comfort questions, a shorter profile, several trip
+purposes, merging felt duplicates, grouping the 14 modes, the wheelchair wording in question texts against rule 7, the
+three reasons joined in "not walking because unsafe", the Gianicolense mapping and an evening follow-up question.
+
 ## Not yet covered
 
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
