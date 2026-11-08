@@ -3,7 +3,7 @@
 Two new forms replace the walking material spread across `future/smarturbanity_walking.json`,
 `smarturbanity_safety.json` and `future/smarturbanity_safety_environment.json`:
 
-- `smarturbanity_walking_safety` (Part 1, about 3 minutes, 9 questions);
+- `smarturbanity_walking_safety` (Part 1, about 3 minutes, 10 questions);
 - `smarturbanity_walking_safety_details` (Part 2, follow-up offered after Part 1, 29 questions).
 
 Rules applied:
@@ -23,7 +23,8 @@ the old forms and questions are removed only after that.
 | New id | Source | Data change |
 |---|---|---|
 | `walk_days` | walking `walk_days` | unchanged |
-| `fast_traffic_unsafe_yn` | safety `fast_vehicles`, walking `avoid_fast_traffic` | 5-point frequency → Yes/No; walking only |
+| `fast_traffic_along_unsafe_yn` | safety `fast_vehicles`, walking `avoid_fast_traffic` | 5-point frequency → Yes/No; walking along roads only |
+| `fast_traffic_crossing_unsafe_yn` | safety `fast_vehicles`, walking `avoid_fast_traffic` | 5-point frequency → Yes/No; crossing roads only |
 | `unsafe_crossings_yn` | walking `avoid_dangerous_crossing` | 5-point → Yes/No |
 | `cyclists_scooters_unsafe_yn` | walking `riding_on_pavement` | 5-point → Yes/No |
 | `poor_sidewalk_unsafe_yn` | walking `walk_sidewalk_condition_effect` | 5-point effect → Yes/No |
