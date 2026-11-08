@@ -12,7 +12,7 @@ Rules applied:
 2. "Yes" always means the problem is present (or, for improvements, that the change would help).
 3. New question ids end in `_yn` (except `walk_days`, reused unchanged), so answers never mix with the old 5-point or multiple-choice data.
 4. Only `walk_days` is required; all others are optional, as in the safety form, because some touch harassment.
-5. Part 1 sections 2–4 are shown only to people who answer Yes to `walk_days`.
+5. Everyone answers all Part 1 questions, including people who walk less than once a week: `walk_days` only describes how often they walk.
 6. Wheelchairs, pushchairs, canes and other aids are covered by the welcome text, so questions stay short.
 
 Both forms sit in the disabled `rome_future_surveys` campaign (visible in debug mode) until the persona test and approval;
