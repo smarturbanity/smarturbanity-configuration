@@ -16,3 +16,8 @@ Focused renderer/data checks and whitespace checks passed. Full browser acceptan
 and aggregate PR verification remain outstanding: the CityMaaS tooling cannot
 verify this separate configuration repository without an owning manifest.
 This is a local implementation, not a PR-readiness or deployment declaration.
+
+## Follow-up verification
+
+The explicit no-use answer and the browser verification supersede the earlier
+empty-answer assumption above. See `lory/car-matrix-none.md` for the current behavior and remaining verification.

@@ -521,9 +521,9 @@ when the pin moves to this configuration.
 
 ### When the car cannot be replaced (implemented)
 
-The car-need form 3.1.0 replaces `car_need_uses` and the generic
+The car-need form 3.2.0 replaces `car_need_uses` and the generic
 `car_less_with_alternative` Yes/No with one optional matrix question,
-`car_need_frequency_alternative` 1.0.0, translated in all eight languages.
+`car_need_frequency_alternative` 1.1.0, translated in all eight languages.
 
 - People first select from the same 18 car uses. Only selected uses show the two
   columns. The list lives in the form's `questionnaire.row_sources`, referenced by
@@ -533,9 +533,11 @@ The car-need form 3.1.0 replaces `car_need_uses` and the generic
   transport, also in the evening / an accompanied or on-demand transport service /
   home delivery / a shared van / nothing would. The public transport option reuses
   the existing car-alternatives wording and value.
-- "None of these" is expressed by leaving all uses unselected, as the instructions
-  explain; it is not a car use and must not ask for frequency or an alternative.
-  As with the optional questions it replaces, leaving the question unanswered is allowed.
+- "None of these" remains an explicit exclusive choice. It clears selected uses,
+  shows no columns and stores `{"none": true}`. Selecting a use clears this choice.
+  This requires the CityMaaS matrix renderer with exclusive-row support. Leaving
+  every row unselected means skipping the question; a completely empty questionnaire
+  cannot be submitted, following the existing application rule.
 - Each selected row stores `frequency` and `alternative` under the new answer key.
   Already collected answers keep their original keys and are not migrated or rewritten.
   The generic Yes/No is no longer asked.
