@@ -369,6 +369,24 @@ When a form is offered is pilot configuration, not part of the form. Each pilot 
 - While `pilot_period.start_date` is `null`, every form in `forms/index.json` stays available, as before the schedule existed. With `show_all_in_debug`, debug and review modes always show every form, marked with its schedule status.
 - A form card shows when its window ends ("until 24 Oct", "extended until ...", "opens on ...", "always available") and the form's `estimated_minutes`. Responses should record the id of the campaign through which the form was shown in their `campaign` metadata.
 
+The optional `surveys_gallery` block describes the page that lists the forms:
+
+```json
+"surveys_gallery": {
+  "title": {"en": "Short questionnaires on how you get around ...", "it": "Brevi questionari su come ti muovi ..."},
+  "note": {"en": "Your answers help the research understand ...", "it": "Le tue risposte aiutano la ricerca ..."},
+  "feedback_questionnaire": "smarturbanity_feedback_surveys",
+  "follow_ups": {"smarturbanity_walking_habits": "smarturbanity_walking_road_safety"},
+  "follow_up_stop_when": {"smarturbanity_walking_habits": {"walk_days": ["no"]}}
+}
+```
+
+- `title` and `note` are the page header and the line below it, one text per language code.
+- `feedback_questionnaire` is the form offered to comment on the questionnaires themselves.
+- `follow_ups` chains the forms of one topic: after a participant sends the form on the left, the application offers the form on the right.
+- `follow_up_stop_when` ends a chain early: when the sent form has one of the listed values for that question (for example "no" to the walking question "In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?"), no follow-up is offered.
+- Every id must be a `questionnaire_id` listed in `forms/index.json`, and every stop question and value must exist in its form.
+
 ## Context-dependent configuration
 
 Forms, sections, questions and potentially other configurable components may define conditions based on context.
