@@ -511,6 +511,27 @@ when the pin moves to this configuration.
 
 ## Not yet covered
 
+### When the car cannot be replaced (proposals, not built)
+
+Lory (2026-11-08, decision 1A) checked a citizens' text about the uses for which the car cannot be replaced.
+`car_need_uses` (car need) and `put_no_car_hard` (public transport without a car) already list nearly every case. Two
+questions are missing; they are proposals only, to be built later from the wording of the existing forms:
+
+1. **Which alternative would work for each use.** `car_less_with_alternative` is one generic Yes/No, and
+   `car_sustainable_motivation` covers only walking, cycling and sharing. Proposal: for each use ticked in
+   `car_need_uses`, ask which reliable alternative would let the person leave the car for that use, for example
+   public transport at night ("More frequent and reliable public transport, also in the evening"), an accompanied or
+   on-demand service, home delivery, a shared van. Options reuse existing option texts where possible.
+2. **How often each case happens.** Proposal: one frequency question for the ticked uses: several times a week /
+   weekly / monthly / rarely.
+
+Partly covered:
+
+- Metro after midnight: only the generic "night" (`night_hours`).
+- A taxi that must be booked in advance, so it fails in emergencies: only "shared cars or taxis are hard to find"
+  (`sharing_unavailable`) and "unexpected trips" (`unplanned_trips`).
+- Large families: only "small children" (`children`).
+
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
   must point to `smarturbanity_your_profile` before this configuration is used there.
 
