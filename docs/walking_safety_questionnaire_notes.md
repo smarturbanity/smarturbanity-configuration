@@ -62,10 +62,17 @@ Moved questions removed from the forms that stay:
 | Form | This branch | `lory/future-questionnaires` | `questionnaire-14` |
 | --- | --- | --- | --- |
 | `future/smarturbanity_daily_travel` | 3.1.0 → 3.2.0: `combined_modes`, `multimodal_difficulties`, `multimodal_response` | 3.2.0 → 3.3.0: same three | 3.1.0 → 3.2.0: same three |
-| `smarturbanity_safety` | 1.1.0 (unpublished): `bike_risky_users` | 1.5.0 → 1.6.0: `fast_vehicles`, `walk_lighting_effect` | 1.7.0 already without them |
+| `smarturbanity_safety` | 1.7.0 from `questionnaire-14` (see below) | 1.5.0 → 1.6.0: `fast_vehicles`, `walk_lighting_effect` | 1.7.0 already without them |
 
 The published `smarturbanity_safety` form keeps its general safety questions (road safety, unsafe situations, personal
 security by day and evening, insecurity factors) until the chains are published; then it is retired (decision 4A).
+
+Lory (2026-11-08, decision 2A): this branch takes the `questionnaire-14` safety form 1.7.0 whole, so that branch keeps
+nothing of its own. Compared with the 1.1.0 here it adds the six missing languages, the round25 wording fixes, the
+evening follow-up `evening_travel_behaviour` (shown only to who feels not at all or slightly secure in the evening) and
+the plain `personal_security_day` key, with the same text and options as `personal_security_day_v1`, following the
+earlier removal of version suffixes from answer keys. The `questionnaire-14` neighbourhood help example (Gianicolense,
+Portuense) is not taken.
 
 ## Combining ways of travelling
 
