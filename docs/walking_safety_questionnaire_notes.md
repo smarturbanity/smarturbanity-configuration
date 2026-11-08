@@ -358,7 +358,9 @@ Lory's decisions on these points (2026-11-08):
    `walking_experience`, `walking_road_safety` and `walking_security`.
 7. `not_walk_reasons` (`walking_habits`) replaces "unsafe (traffic, crime or harassment)" with three reasons: traffic,
    crime such as theft, harassment. `walking_safety` is not published and keeps its single question.
-8. The `home_neighbourhood` help no longer names Gianicolense; Portuense remains as the example.
+8. The `home_neighbourhood` help names no neighbourhood as an example (neither Gianicolense nor Portuense):
+   "If you use another name, choose the official neighbourhood closest to your home, or Other." (2.6.2, text only;
+   `your_profile` 1.18.2).
 9. `economic_status` already offers "Prefer not to say" (`add_prefer_not_to_say`); nothing changed.
 
 Still to decide: merging felt duplicates between forms, grouping the 14 modes, an evening follow-up question and which
