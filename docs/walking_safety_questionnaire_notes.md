@@ -564,3 +564,7 @@ would help choose an alternative to the car for some trips. Unlike the old list 
 walking/cycling/shared modes, this includes the public transport answers already
 offered. Eight languages, question 1.4.0, questionnaire 1.3.0; all answer keys,
 options and limits are preserved.
+
+Lory approved the Italian age-band label "85 o più" for consistency with the
+other numeric bands. This translation-only patch is age_group 1.1.1 and profile
+1.21.2; no age-band value or other language changes.

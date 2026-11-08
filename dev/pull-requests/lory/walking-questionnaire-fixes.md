@@ -21,3 +21,6 @@ answer. Its form version is 3.2.1 after combining the retention introduction.
 The approved car-alternatives question now asks what would help choose an
 alternative to the car, covering public transport as well as walking and cycling.
 It is shorter in all eight languages; available answers and limits are unchanged.
+
+The approved Italian age-band label is "85 o più", consistent with the numeric
+labels of the other bands. This translation-only patch preserves its answer value.

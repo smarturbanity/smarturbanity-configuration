@@ -36,6 +36,10 @@ would help choose an alternative to the car for some trips, including the public
 transport choices already offered. All eight languages are updated. Its question
 is 1.4.0 and form 1.3.0; answer keys, options, limits and optionality are preserved.
 
+Lory approved the Italian age-band label "85 o più", matching the other numeric
+bands. Only that translation changes: age_group 1.1.1, profile 1.21.2. Other
+languages, the age-band value and all question settings are preserved.
+
 The initial isolated checkout disappeared during work and the primary checkout
 changed branch externally. Work resumed in this newly created isolated checkout;
 the primary checkout and unrelated changes were preserved.
