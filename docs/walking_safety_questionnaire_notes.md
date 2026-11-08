@@ -607,3 +607,8 @@ Lory approved adding "disabilità" to the Italian examples in the walking
 identity-harassment question. Translation-only patches: walk_identity_harassment
 1.3.2, walking security 3.1.2. Structural comparison confirms all answer values,
 settings, other content and languages are preserved. No browser/persona retest.
+
+Lory approved "Angoli nascosti o visuale ostacolata" for the Italian walking
+insecurity factor. Translation-only patches: walk_insecurity_factors 3.2.1,
+walking security 3.1.3. Structural comparison confirms all other content, answer
+values, settings and languages are preserved. No browser/persona retest.
