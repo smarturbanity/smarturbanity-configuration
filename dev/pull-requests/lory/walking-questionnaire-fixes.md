@@ -38,3 +38,8 @@ Lory approved the neutral Italian economic-status explanation: "Lo chiediamo per
 capire come le possibilità economiche influiscono sugli spostamenti."
 Translation-only patches: economic_status 2.2.1, profile 1.21.3. Structural
 comparison confirms that all other content, settings and languages are preserved.
+
+Lory approved explaining tactile paving in Italian as "Percorsi riconoscibili
+con i piedi o il bastone, per chi non vede o vede poco". Translation-only
+patches: walk_want_changes 1.2.1, walking improvements 3.2.1. Structural comparison
+confirms all response values, settings, other content and languages are preserved.
