@@ -278,14 +278,15 @@ gender-neutral scale labels (Arabic stress and tiredness), "travel" as everyday 
 ## Persona test fixes (rounds 18–27)
 
 On 2026-11-08 the open issues of the persona tests that were still present in the forms were fixed. Lory's decisions:
-gender keeps two options plus "Prefer not to say"; no answer limits; Yes/No lists get "Doesn't apply to me"; only true
+gender keeps two options plus "Prefer not to say"; no answer limits in the questions about one trip, while the general
+questionnaires keep theirs so that people pick their priorities; Yes/No lists get "Doesn't apply to me"; only true
 duplicates are merged; height and professional role can be skipped with "Prefer not to say".
 
 - **Who reads the answers.** The pre-trip, post-trip and Your profile welcome pages now say that only the SmartUrbanity
   research team reads individual answers and that they are not sent to any public authority.
-- **No answer limits.** Every "choose up to N" limit was removed from the active forms (the post-trip route reasons and
-  feelings, the anxiety, dissatisfaction and combined-trip questions of every way of travelling, the improvement and
-  motivation lists, the Safety lists and the Your profile reasons and choice factors).
+- **No answer limits about one trip.** The post-trip route reasons and feelings no longer say "choose up to 2". The
+  general questionnaires (anxiety, dissatisfaction, combined trips, improvements and motivations, Safety, Your profile
+  reasons and choice factors) keep their "choose up to 3, 4 or 5" limits, so that people pick their priorities.
 - **"Doesn't apply to me".** Added as a third answer to the Yes/No questions of the road safety, security and public
   transport comfort forms that have no gate before them.
 - **Two questions in one, split.** Post-trip effort is now physical effort (required) plus mental effort (optional);
