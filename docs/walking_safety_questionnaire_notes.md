@@ -602,3 +602,8 @@ Lory approved the Italian title "A piedi o in sedia a rotelle – Cosa ti
 aiuterebbe", including its SmartUrbanity-prefixed form. Walking improvements
 3.2.3; structural comparison confirms only both title translations and the form
 patch version changed. All question definitions and other languages are preserved.
+
+Lory approved adding "disabilità" to the Italian examples in the walking
+identity-harassment question. Translation-only patches: walk_identity_harassment
+1.3.2, walking security 3.1.2. Structural comparison confirms all answer values,
+settings, other content and languages are preserved. No browser/persona retest.
