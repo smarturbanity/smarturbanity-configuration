@@ -1,4 +1,11 @@
-# Simplify mobility help and use neutral Italian wording
+# Simplify questionnaires and separate optional mobility support
+
+Location reports now ask about mobility aids and strollers separately from the
+journey context. The support question is optional and includes a refusal option;
+the two form versions advance to 5.0.0 to preserve the meaning of historical
+answers. Actual model/condition checks cover refusal options, broken-light paths
+and question ordering. Eight translations are present; full language and browser
+acceptance remain separate. See docs/open-report-follow-up-2026-11-09.md.
 
 Source: lory/questionnaire-open-issues. Target: main.
 

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "4.1.0",
+    "questionnaire_version": "5.0.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -61,7 +61,22 @@
               {
                 "text": "Accompanying a child (for example to school)",
                 "value": "accompanying_child"
-              },
+              }
+            ],
+            "show_if": {},
+            "required": true,
+            "question_id": "journey_context",
+            "question_version": "4.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true,
+            "add_none": true
+          },
+          {
+            "text": "Are you using any of these on this trip? (Optional)",
+            "answer_key": "trip_mobility_support",
+            "question_type": "multiple_options",
+            "checks_inline": false,
+            "options": [
               {
                 "text": "Using a wheelchair, walker, cane or other mobility aid",
                 "value": "mobility_aid"
@@ -72,9 +87,9 @@
               }
             ],
             "show_if": {},
-            "required": true,
-            "question_id": "journey_context",
-            "question_version": "3.0.0",
+            "required": false,
+            "question_id": "trip_mobility_support",
+            "question_version": "1.0.0",
             "privacy_classification": "special_category_health",
             "add_prefer_not_to_say": true,
             "add_none": true
@@ -2252,7 +2267,8 @@
       "#Would you like to add optional details?": "Would you like to add optional details?",
       "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
       "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
-      "#Doesn't apply to me": "Doesn't apply to me"
+      "#Doesn't apply to me": "Doesn't apply to me",
+      "#Are you using any of these on this trip? (Optional)": "Are you using any of these on this trip? (Optional)"
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -2560,7 +2576,8 @@
       "#Would you like to add optional details?": "Vuoi aggiungere dettagli facoltativi?",
       "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
       "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
-      "#Doesn't apply to me": "Non mi riguarda"
+      "#Doesn't apply to me": "Non mi riguarda",
+      "#Are you using any of these on this trip? (Optional)": "In questo spostamento usi uno di questi ausili o un passeggino? (Facoltativo)"
     },
     "fr": {
       "#Street Connection Assessment – User Friendly": "Évaluer une traversée",
@@ -2868,7 +2885,8 @@
       "#Would you like to add optional details?": "Veux-tu ajouter des détails facultatifs ?",
       "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
       "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
-      "#Doesn't apply to me": "Ne me concerne pas"
+      "#Doesn't apply to me": "Ne me concerne pas",
+      "#Are you using any of these on this trip? (Optional)": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ? (Facultatif)"
     },
     "de": {
       "#Street Connection Assessment – User Friendly": "Eine Querung bewerten",
@@ -3176,7 +3194,8 @@
       "#Would you like to add optional details?": "Möchtest du freiwillige Angaben ergänzen?",
       "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
       "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
-      "#Doesn't apply to me": "Trifft auf mich nicht zu"
+      "#Doesn't apply to me": "Trifft auf mich nicht zu",
+      "#Are you using any of these on this trip? (Optional)": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen? (Freiwillig)"
     },
     "tr": {
       "#Street Connection Assessment – User Friendly": "Bir geçidi değerlendirin",
@@ -3484,7 +3503,8 @@
       "#Would you like to add optional details?": "İsteğe bağlı ayrıntılar eklemek ister misin?",
       "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
       "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
-      "#Doesn't apply to me": "Benim için geçerli değil"
+      "#Doesn't apply to me": "Benim için geçerli değil",
+      "#Are you using any of these on this trip? (Optional)": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz? (İsteğe bağlı)"
     },
     "fa": {
       "#Street Connection Assessment – User Friendly": "ارزیابی یک گذرگاه",
@@ -3792,7 +3812,8 @@
       "#Would you like to add optional details?": "آیا می‌خواهی جزئیات اختیاری اضافه کنی؟",
       "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
       "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
-      "#Doesn't apply to me": "به من مربوط نمی‌شود"
+      "#Doesn't apply to me": "به من مربوط نمی‌شود",
+      "#Are you using any of these on this trip? (Optional)": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟ (اختیاری)"
     },
     "hu": {
       "#Street Connection Assessment – User Friendly": "Egy átkelőhely értékelése",
@@ -4100,7 +4121,8 @@
       "#Would you like to add optional details?": "Szeretnél további, nem kötelező részleteket megadni?",
       "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
       "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
-      "#Doesn't apply to me": "Rám nem vonatkozik"
+      "#Doesn't apply to me": "Rám nem vonatkozik",
+      "#Are you using any of these on this trip? (Optional)": "Használ ezen az úton ilyen segédeszközt vagy babakocsit? (Nem kötelező)"
     },
     "ar": {
       "#Street Connection Assessment – User Friendly": "تقييم معبر",
@@ -4408,7 +4430,8 @@
       "#Would you like to add optional details?": "هل ترغب في إضافة تفاصيل اختيارية؟",
       "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
       "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
-      "#Doesn't apply to me": "لا ينطبق عليّ"
+      "#Doesn't apply to me": "لا ينطبق عليّ",
+      "#Are you using any of these on this trip? (Optional)": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟ (اختياري)"
     }
   },
   "id": "Street Connection",

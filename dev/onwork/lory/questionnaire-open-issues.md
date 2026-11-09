@@ -1,5 +1,11 @@
 # Questionnaire open issues
 
+9 November, open-report review: separate optional mobility support from journey
+context in both location forms (major version 5.0.0). Actual consumer checks
+confirm refusal options and broken-light branching. Mode-specific comfort and
+the cumulative language report retain their unverified acceptance portions.
+See docs/open-report-follow-up-2026-11-09.md for exact scope and checks.
+
 Owner: Lory. Candidate: lory/questionnaire-open-issues, based on main.
 Scope: four survey forms and approved source-review dispositions.
 Implemented: neutral Italian wording and shorter multilingual mobility help.
