@@ -1,13 +1,8 @@
-# Retain minimal runtime configuration on current questionnaires
+# Load questionnaires from the local delivery package
 
-The application needs the runtime manifest pins, Rome questionnaire overrides,
-campaign containers and reproducible package exporter. This branch starts from
-current main and adds only those eight files, preserving the exact runtime
-settings previously verified at 5e3a11b, with catalogue and report paths now using
-the package's local forms instead of raw commit URLs. It carries no retired questionnaire copies
-or composition tooling. The unified profile proceeds directly to travel.
+The package includes runtime configuration and current questionnaires from one
+commit. Catalogue and report paths use local forms; the unified profile proceeds
+directly to travel. No retired composition tools or forms are included.
 
-Validation: mode catalogue/conditions (16 forms, 258 questions), six regressions,
-19 SVG assets, framework translations and two location flows pass. Runtime roots
-and exporter match the previous candidate apart from the local forms paths. Full app verification
-and publication remain with the application coordinator; no push here.
+Source and path checks pass; see [delivery notes](../../../docs/questionnaire-runtime-refresh.md).
+Full application verification remains with the application coordinator. No push.
