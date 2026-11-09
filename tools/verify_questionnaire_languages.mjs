@@ -16,13 +16,13 @@ for (const name of fs.readdirSync(path.join(root, 'forms/surveys'), {recursive: 
   if (!data.questionnaire) continue;
   const authored = context.questionnaireTextTags(data.questionnaire);
   for (const tag of authored) {
+    if (shared.has(tag)) continue;
     assert.ok(data.languages.en[tag], name + '/en: missing questionnaire text ' + tag);
   }
   for (const [language, table] of Object.entries(data.languages)) {
     const framework = JSON.parse(fs.readFileSync(path.join(path.dirname(revisionFile), 'Configuration/languages', language + '.json'), 'utf8'));
     for (const tag of shared) {
-      if (authored.has(tag)) assert.ok(table[tag], name + '/' + language + ': missing authored answer ' + tag);
-      else assert.ok(!Object.hasOwn(table, tag), name + '/' + language + ': framework label duplicated ' + tag);
+      assert.ok(!Object.hasOwn(table, tag), name + '/' + language + ': framework label duplicated ' + tag);
       assert.ok(framework[tag], language + ': missing framework label ' + tag);
     }
   }

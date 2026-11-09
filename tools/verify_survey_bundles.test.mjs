@@ -27,7 +27,7 @@ test('survey languages use framework-owned standard choices', () => {
   assert.equal(result.status, 0, result.stderr);
 });
 test('rejects copied framework labels in a survey dictionary', () => {
-  for (const tag of ['#Other', '#None of these', "#I don't know"]) {
+  for (const tag of ['#Other', '#None of these', "#I don't know", '#Prefer not to say']) {
     const form = JSON.parse(original);
     form.languages.it[tag] = 'Duplicated framework text';
     fs.writeFileSync(file, JSON.stringify(form));
