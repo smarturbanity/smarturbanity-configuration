@@ -1,23 +1,43 @@
-# Ask car-use frequency and alternatives in one matrix
+# Car-use matrix and verified round30 corrections
 
 Source: `round30`. Target: `main`.
 
-People select the car uses that apply to them, then choose frequency and one
-alternative for each selected use. The optional matrix replaces the old use list
-and generic alternative Yes/No. All 18 actual uses are retained, and no selected
-uses means none apply or the question was skipped. All eight languages are covered.
+Q30-6, Q30-7, Q30-23 and Q30-25 are closed definitive product decisions confirmed
+by Lory, not outstanding issues: optional economic question, one main trip
+purpose, gender options supplied by the app and consistent Italian “tu”. Do not
+propose these choices again.
 
-The form moves to 3.1.0 and the matrix uses a new question ID and answer key;
-historical responses are not migrated. A form-local row source keeps the initial
-selection empty without changing application code. Notes now describe the
-implemented behavior.
+The remaining questionnaire follow-up adds explicit hearing-accessibility,
+step-free/rest options and a separate optional pushchair/mobility-support question.
+It explains selection limits, makes outside-neighborhood reasons and transport
+lighting skippable, clarifies feedback and translations, and points to the pilot
+privacy notice. Lory confirmed 1A, 2A, 3A, 4B and 5A. Eight existing-language sets
+and all prior answer keys/types/option values remain; forms have new versions.
 
-Focused renderer/data checks and whitespace checks passed. Full browser acceptance
-and aggregate PR verification remain outstanding: the CityMaaS tooling cannot
-verify this separate configuration repository without an owning manifest.
-This is a local implementation, not a PR-readiness or deployment declaration.
+All JSON and structural/localization checks pass, together with 12 isolated
+actual-app checks, including conditional feedback and enlarged/mobile layouts.
+See [all 39 finding dispositions](../../docs/round30_issue_dispositions.md).
+These checks do not claim new persona acceptance or native browser-menu coverage.
 
-## Follow-up verification
+People select car uses and fill frequency and alternative only for those uses.
+"None of these" is an exclusive answer with no columns. All 18 uses and eight
+languages remain. The form is 3.2.0 and the question is 1.1.0; historical answers
+keep their original format.
 
-The explicit no-use answer and the browser verification supersede the earlier
-empty-answer assumption above. See `lory/car-matrix-none.md` for the current behavior and remaining verification.
+The matching app renderer and questionnaire regression fixes are collected in
+CityMaaS `round30`; clickable issue details are in Wemo Experiments `round30`.
+Each repository retains only its own code.
+
+The matrix passes 14 isolated actual-app browser checks. All five questionnaire
+browser scenarios and final aggregate PR checks pass. The dashboard passes 42
+checks plus an actual-browser mouse/keyboard/mobile check. No live response writes,
+new persona study, pin change or push is included.
+
+See [the completed-corrections record](../../docs/round30_resolved.md) for versions,
+verification and remaining limits.
+
+## Main merge conflict resolution
+
+The nine conflicts retain the definitive round30 question definitions: they already incorporate selected approved language corrections from a889101 and add newer product decisions. Both documentation histories remain, with the newer dispositions taking precedence. Incoming changes to unrelated forms, including confirmed 36-month text in pre/post-trip forms, remain. No response values, conditions or accepted accessibility options are lost.
+
+Fresh checks: all form JSON parses; the eight conflicted questionnaire definitions preserve question inventory, types, required/conditional settings, option values and exclusivity; all visible strings have entries in all eight languages; no conflict markers or whitespace errors remain. Previous browser checks were not rerun for this conflict resolution. No application deployment or remote push.

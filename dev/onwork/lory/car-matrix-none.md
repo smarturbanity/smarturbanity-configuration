@@ -11,5 +11,7 @@ local candidate. It stores the explicit answer as `{none: true}`.
 Fourteen isolated actual-app browser checks pass: initial selection, independent
 values, restoration, deselection, local response capture, Italian text, mobile
 and desktop widths, and the exclusive answer. No live responses are written.
-The application regression has unrelated consent/startup-alert failures; this is
-not an aggregate readiness or deployment claim. No pin change or push included.
+The consent and startup-alert test failures were subsequently corrected. All five
+questionnaire scenarios and the app's final aggregate PR checks pass on the
+matching round30 candidate. No pin change or push included. See
+[the consolidated completion record](../../../docs/round30_resolved.md).

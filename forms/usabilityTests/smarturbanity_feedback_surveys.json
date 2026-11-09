@@ -15,7 +15,7 @@
     },
     "welcome_page": {
       "title": "Help us improve the questionnaires",
-      "description": "<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>"
+      "description": "<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -118,7 +118,7 @@
             }
           },
           {
-            "text": "Did you manage to answer it and send it?",
+            "text": "Did you manage to answer a questionnaire and send your answers?",
             "answer_key": "task_send",
             "question_type": "single_option",
             "options": [
@@ -321,7 +321,7 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "How useful would answering the questionnaires be for you?",
+            "text": "How useful was answering the questionnaires for you?",
             "answer_key": "tool_usefulness",
             "question_type": "single_option",
             "options": [
@@ -349,7 +349,13 @@
             "checks_inline": false,
             "required": false,
             "privacy_classification": "personal_data",
-            "add_i_dont_know": true
+            "add_i_dont_know": true,
+            "show_if": {
+              "task_send": [
+                "yes",
+                "yes_with_help"
+              ]
+            }
           },
           {
             "text": "Would you answer the next questionnaires, as they open week by week?",
@@ -403,7 +409,6 @@
       "#At the event, with the team": "At the event, with the team",
       "#Both": "Both",
       "#Computer": "Computer",
-      "#Did you manage to answer it and send it?": "Did you manage to answer it and send it?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Did you manage to open a questionnaire and understand what it asks?",
       "#Difficult": "Difficult",
       "#Do you have any recommendations to improve this tool?": "Do you have any recommendations to improve this tool?",
@@ -414,7 +419,6 @@
       "#How did it go? The questionnaires": "How did it go? The questionnaires",
       "#How easy to understand are the questions and the texts?": "How easy to understand are the questions and the texts?",
       "#How easy was it to answer the questionnaires?": "How easy was it to answer the questionnaires?",
-      "#How useful would answering the questionnaires be for you?": "How useful would answering the questionnaires be for you?",
       "#How you tried them": "How you tried them",
       "#I am not sure": "I am not sure",
       "#I didn’t try it": "I didn’t try it",
@@ -460,7 +464,9 @@
       "#I would probably not answer them": "I would probably not answer them",
       "#I would probably answer them": "I would probably answer them",
       "#I would definitely answer them": "I would definitely answer them",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Did you manage to answer a questionnaire and send your answers?",
+      "#How useful was answering the questionnaires for you?": "How useful was answering the questionnaires for you?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "What prevented you from opening a questionnaire and understanding what it asks?",
       "#What prevented you from answering and sending the questionnaire?": "What prevented you from answering and sending the questionnaire?"
     },
@@ -474,7 +480,6 @@
       "#At the event, with the team": "All’evento, con il team",
       "#Both": "In entrambi i modi",
       "#Computer": "Computer",
-      "#Did you manage to answer it and send it?": "Hai potuto rispondere e inviarlo?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Hai potuto aprire un questionario e capire cosa chiede?",
       "#Difficult": "Difficile",
       "#Do you have any recommendations to improve this tool?": "Hai suggerimenti per migliorare questo strumento?",
@@ -485,7 +490,6 @@
       "#How did it go? The questionnaires": "Com’è andata? I questionari",
       "#How easy to understand are the questions and the texts?": "Quanto sono facili da capire le domande e i testi?",
       "#How easy was it to answer the questionnaires?": "Quanto è stato facile rispondere ai questionari?",
-      "#How useful would answering the questionnaires be for you?": "Quanto ti sarebbe utile rispondere ai questionari?",
       "#How you tried them": "Come li hai provati",
       "#I am not sure": "Non so",
       "#I didn’t try it": "Non l’ho provato",
@@ -531,7 +535,9 @@
       "#I would probably not answer them": "Probabilmente non risponderei",
       "#I would probably answer them": "Probabilmente risponderei",
       "#I would definitely answer them": "Sicuramente risponderei",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Grazie per aver provato i questionari, le pagine SmartUrbanity che chiedono di te, di come ti muovi e dei luoghi che usi.</p><p>Dicci se hai potuto fare ogni cosa e quanto è stato facile: quando qualcosa non ha funzionato, un breve commento ci aiuta a sistemarla. Servono circa 3 minuti e puoi saltare qualsiasi domanda.</p><p>Le tue risposte servono solo a validare e migliorare gli strumenti e non sono collegate al tuo nome. Le legge solo il gruppo di ricerca SmartUrbanity e non vengono inviate a nessuna autorità pubblica.</p><p>Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Hai potuto compilare un questionario e inviare le risposte?",
+      "#How useful was answering the questionnaires for you?": "Quanto ti è stato utile rispondere ai questionari?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Grazie per aver provato i questionari, le pagine SmartUrbanity che chiedono di te, di come ti muovi e dei luoghi che usi.</p><p>Dicci se hai potuto fare ogni cosa e quanto è stato facile: quando qualcosa non ha funzionato, un breve commento ci aiuta a sistemarla. Servono circa 3 minuti e puoi saltare qualsiasi domanda.</p><p>Le tue risposte servono solo a validare e migliorare gli strumenti e non sono collegate al tuo nome. Le legge solo il gruppo di ricerca SmartUrbanity e non vengono inviate a nessuna autorità pubblica.</p><p>Prima di partecipare, leggi l’informativa privacy: spiega chi può accedere alle tue risposte e per quanto tempo vengono conservate.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "Cosa ti ha impedito di aprire un questionario e capire cosa chiede?",
       "#What prevented you from answering and sending the questionnaire?": "Cosa ti ha impedito di rispondere al questionario e inviarlo?"
     },
@@ -545,7 +551,6 @@
       "#At the event, with the team": "Lors de l’événement, avec l’équipe",
       "#Both": "Les deux",
       "#Computer": "Ordinateur",
-      "#Did you manage to answer it and send it?": "Avez-vous réussi à y répondre et à l’envoyer ?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Avez-vous réussi à ouvrir un questionnaire et à comprendre ce qu’il demande ?",
       "#Difficult": "Difficile",
       "#Do you have any recommendations to improve this tool?": "Avez-vous des recommandations pour améliorer cet outil ?",
@@ -556,7 +561,6 @@
       "#How did it go? The questionnaires": "Comment ça s’est passé ? Les questionnaires",
       "#How easy to understand are the questions and the texts?": "Les questions et les textes sont-ils faciles à comprendre ?",
       "#How easy was it to answer the questionnaires?": "Était-il facile de répondre aux questionnaires ?",
-      "#How useful would answering the questionnaires be for you?": "Dans quelle mesure trouvez-vous utile de répondre aux questionnaires ?",
       "#How you tried them": "Comment vous les avez essayés",
       "#I am not sure": "Je ne sais pas",
       "#I didn’t try it": "Je ne l’ai pas essayé",
@@ -602,7 +606,9 @@
       "#I would probably not answer them": "Je n’y répondrais probablement pas",
       "#I would probably answer them": "J’y répondrais probablement",
       "#I would definitely answer them": "J’y répondrais certainement",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Merci d’avoir essayé les questionnaires, les pages SmartUrbanity qui vous posent des questions sur vous, vos déplacements et les lieux que vous fréquentez.</p><p>Indiquez-nous si vous avez réussi à faire chaque chose et si cela a été facile : lorsque quelque chose n’a pas fonctionné, un court commentaire nous aide à le corriger. Cela prend environ 3 minutes et vous pouvez passer n’importe quelle question.</p><p>Vos réponses servent uniquement à valider et à améliorer les outils et ne sont pas associées à votre nom. Seule l’équipe de recherche SmartUrbanity les lit, et elles ne sont transmises à aucune administration.</p><p>Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Avez-vous réussi à remplir un questionnaire et à envoyer vos réponses ?",
+      "#How useful was answering the questionnaires for you?": "Dans quelle mesure trouvez-vous utile de répondre aux questionnaires ?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Merci d’avoir essayé les questionnaires, les pages SmartUrbanity qui vous posent des questions sur vous, vos déplacements et les lieux que vous fréquentez.</p><p>Indiquez-nous si vous avez réussi à faire chaque chose et si cela a été facile : lorsque quelque chose n’a pas fonctionné, un court commentaire nous aide à le corriger. Cela prend environ 3 minutes et vous pouvez passer n’importe quelle question.</p><p>Vos réponses servent uniquement à valider et à améliorer les outils et ne sont pas associées à votre nom. Seule l’équipe de recherche SmartUrbanity les lit, et elles ne sont transmises à aucune administration.</p><p>Avant de participer, lisez la notice de confidentialité : elle explique qui peut accéder à vos réponses et combien de temps elles sont conservées.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "Qu’est-ce qui vous a empêché d’ouvrir un questionnaire et de comprendre ce qu’il demande ?",
       "#What prevented you from answering and sending the questionnaire?": "Qu’est-ce qui vous a empêché de répondre au questionnaire et de l’envoyer ?"
     },
@@ -616,7 +622,6 @@
       "#At the event, with the team": "Bei der Veranstaltung, mit dem Team",
       "#Both": "Beides",
       "#Computer": "Computer",
-      "#Did you manage to answer it and send it?": "Konnten Sie ihn beantworten und absenden?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Konnten Sie einen Fragebogen öffnen und verstehen, was er fragt?",
       "#Difficult": "Schwierig",
       "#Do you have any recommendations to improve this tool?": "Haben Sie Vorschläge, wie dieses Tool verbessert werden kann?",
@@ -627,7 +632,6 @@
       "#How did it go? The questionnaires": "Wie ist es gelaufen? Die Fragebögen",
       "#How easy to understand are the questions and the texts?": "Wie leicht verständlich sind die Fragen und Texte?",
       "#How easy was it to answer the questionnaires?": "Wie einfach war es, die Fragebögen zu beantworten?",
-      "#How useful would answering the questionnaires be for you?": "Wie nützlich sind die Fragebögen für Sie?",
       "#How you tried them": "Wie Sie sie ausprobiert haben",
       "#I am not sure": "Ich bin mir nicht sicher",
       "#I didn’t try it": "Ich habe es nicht ausprobiert",
@@ -673,7 +677,9 @@
       "#I would probably not answer them": "Ich würde sie wahrscheinlich nicht beantworten",
       "#I would probably answer them": "Ich würde sie wahrscheinlich beantworten",
       "#I would definitely answer them": "Ich würde sie sicher beantworten",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Danke, dass Sie die Fragebögen ausprobiert haben, die SmartUrbanity-Seiten mit Fragen zu Ihrer Person, zu Ihren Wegen und zu den Orten, die Sie nutzen.</p><p>Sagen Sie uns, ob Sie die einzelnen Schritte geschafft haben und wie einfach es war: Wenn etwas nicht funktioniert hat, hilft uns ein kurzer Kommentar, es zu beheben. Das dauert etwa 3 Minuten, und Sie können jede Frage überspringen.</p><p>Ihre Antworten werden nur zur Prüfung und Verbesserung der Werkzeuge verwendet und nicht mit Ihrem Namen verknüpft. Nur das SmartUrbanity-Forschungsteam liest sie, und sie werden an keine Behörde weitergegeben.</p><p>Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Konnten Sie einen Fragebogen ausfüllen und Ihre Antworten absenden?",
+      "#How useful was answering the questionnaires for you?": "Wie nützlich war es für Sie, die Fragebögen zu beantworten?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Danke, dass Sie die Fragebögen ausprobiert haben, die SmartUrbanity-Seiten mit Fragen zu Ihrer Person, zu Ihren Wegen und zu den Orten, die Sie nutzen.</p><p>Sagen Sie uns, ob Sie die einzelnen Schritte geschafft haben und wie einfach es war: Wenn etwas nicht funktioniert hat, hilft uns ein kurzer Kommentar, es zu beheben. Das dauert etwa 3 Minuten, und Sie können jede Frage überspringen.</p><p>Ihre Antworten werden nur zur Prüfung und Verbesserung der Werkzeuge verwendet und nicht mit Ihrem Namen verknüpft. Nur das SmartUrbanity-Forschungsteam liest sie, und sie werden an keine Behörde weitergegeben.</p><p>Lesen Sie vor der Teilnahme die Datenschutzhinweise: Dort steht, wer auf Ihre Antworten zugreifen kann und wie lange sie gespeichert werden.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "Was hat Sie daran gehindert, einen Fragebogen zu öffnen und seine Fragen zu verstehen?",
       "#What prevented you from answering and sending the questionnaire?": "Was hat Sie daran gehindert, den Fragebogen auszufüllen und abzusenden?"
     },
@@ -687,7 +693,6 @@
       "#At the event, with the team": "Etkinlikte, ekiple birlikte",
       "#Both": "Her ikisi",
       "#Computer": "Bilgisayar",
-      "#Did you manage to answer it and send it?": "Onu yanıtlayıp gönderebildiniz mi?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Bir anketi açıp ne sorduğunu anlayabildiniz mi?",
       "#Difficult": "Zor",
       "#Do you have any recommendations to improve this tool?": "Bu aracı geliştirmek için önerileriniz var mı?",
@@ -698,7 +703,6 @@
       "#How did it go? The questionnaires": "Nasıl geçti? Anketler",
       "#How easy to understand are the questions and the texts?": "Sorular ve metinler ne kadar kolay anlaşılıyor?",
       "#How easy was it to answer the questionnaires?": "Anketleri yanıtlamak ne kadar kolaydı?",
-      "#How useful would answering the questionnaires be for you?": "Anketleri yanıtlamak sizin için ne kadar yararlı olurdu?",
       "#How you tried them": "Onları nasıl denediniz",
       "#I am not sure": "Emin değilim",
       "#I didn’t try it": "Denemedim",
@@ -737,14 +741,16 @@
       "#Where did you try the questionnaires?": "Anketleri nerede denediniz?",
       "#Which device did you use?": "Hangi cihazı kullandınız?",
       "#Which texts were hard to understand?": "Hangi metinleri anlamak zordu?",
-      "#Would you answer the next questionnaires, as they open week by week?": "Würden Sie die nächsten Fragebögen beantworten, wenn sie jede Woche freigeschaltet werden?",
+      "#Would you answer the next questionnaires, as they open week by week?": "Her hafta yeni anketler sunulduğunda bunları yanıtlar mısınız?",
       "#Yes": "Evet",
       "#Yes, with help": "Evet, yardımla",
       "#I would definitely not answer them": "Kesinlikle yanıtlamazdım",
       "#I would probably not answer them": "Muhtemelen yanıtlamazdım",
       "#I would probably answer them": "Muhtemelen yanıtlardım",
       "#I would definitely answer them": "Kesinlikle yanıtlardım",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Anketleri denediğiniz için teşekkür ederiz.</p><p>Her adımı yapıp yapamadığınızı ve ne kadar kolay olduğunu bize söyleyin: bir şey çalışmadığında kısa bir yorum onu düzeltmemize yardımcı olur. Yaklaşık 3 dakika sürer ve istediğiniz soruyu atlayabilirsiniz.</p><p>Yanıtlarınız yalnızca araçları doğrulamak ve geliştirmek için kullanılır ve adınızla ilişkilendirilmez. Onları yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Bir anketi doldurup yanıtlarınızı gönderebildiniz mi?",
+      "#How useful was answering the questionnaires for you?": "Anketleri yanıtlamak sizin için ne kadar yararlı oldu?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>SmartUrbanity anketlerini denediğiniz için teşekkürler. Bu anketler sizi, ulaşımınızı ve kullandığınız yerleri sorar.</p><p>Her adımın ne kadar kolay olduğunu belirtin. Bir sorun yaşadıysanız kısa bir yorum yazın. Yaklaşık 3 dakika sürer; soruları atlayabilirsiniz.</p><p>Yanıtlarınız yalnızca araçları doğrulamak ve geliştirmek için kullanılır ve adınızla ilişkilendirilmez. Onları yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Katılmadan önce gizlilik bildirimini okuyun: yanıtlarınıza kimlerin erişebileceğini ve ne kadar süre saklandıklarını açıklar.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "Bir anketi açıp ne sorduğunu anlamanızı ne engelledi?",
       "#What prevented you from answering and sending the questionnaire?": "Anketi yanıtlayıp göndermenizi ne engelledi?"
     },
@@ -758,7 +764,6 @@
       "#At the event, with the team": "در رویداد، همراه با تیم",
       "#Both": "هر دو",
       "#Computer": "رایانه",
-      "#Did you manage to answer it and send it?": "توانستید به آن پاسخ دهید و آن را بفرستید؟",
       "#Did you manage to open a questionnaire and understand what it asks?": "توانستید یک پرسشنامه را باز کنید و بفهمید چه می‌پرسد؟",
       "#Difficult": "دشوار",
       "#Do you have any recommendations to improve this tool?": "پیشنهادی برای بهبود این ابزار دارید؟",
@@ -769,7 +774,6 @@
       "#How did it go? The questionnaires": "چطور پیش رفت؟ پرسشنامه‌ها",
       "#How easy to understand are the questions and the texts?": "پرسش‌ها و متن‌ها چقدر آسان فهمیده می‌شوند؟",
       "#How easy was it to answer the questionnaires?": "پاسخ دادن به پرسشنامه‌ها چقدر آسان بود؟",
-      "#How useful would answering the questionnaires be for you?": "پاسخ دادن به پرسشنامه‌ها چقدر برای شما مفید خواهد بود؟",
       "#How you tried them": "چگونه آن‌ها را امتحان کردید",
       "#I am not sure": "مطمئن نیستم",
       "#I didn’t try it": "امتحانش نکردم",
@@ -815,7 +819,9 @@
       "#I would probably not answer them": "احتمالاً پاسخ نمی‌دادم",
       "#I would probably answer them": "احتمالاً پاسخ می‌دادم",
       "#I would definitely answer them": "قطعاً پاسخ می‌دادم",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>از اینکه پرسشنامه‌ها را امتحان کردید، سپاسگزاریم.</p><p>به ما بگویید آیا توانستید هر کار را انجام دهید و چقدر آسان بود: وقتی چیزی کار نکرد، یک توضیح کوتاه به ما کمک می‌کند آن را درست کنیم. حدود ۳ دقیقه طول می‌کشد و می‌توانید به هر پرسشی پاسخ ندهید.</p><p>پاسخ‌های شما فقط برای ارزیابی و بهبود ابزارها استفاده می‌شوند و به نام شما مرتبط نمی‌شوند. فقط تیم پژوهشی SmartUrbanity آن‌ها را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p>آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "آیا توانستید یک پرسش‌نامه را تکمیل و پاسخ‌هایتان را ارسال کنید؟",
+      "#How useful was answering the questionnaires for you?": "پاسخ دادن به پرسش‌نامه‌ها چقدر برای شما مفید بود؟",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>از اینکه پرسشنامه‌ها را امتحان کردید، سپاسگزاریم.</p><p>به ما بگویید آیا توانستید هر کار را انجام دهید و چقدر آسان بود: وقتی چیزی کار نکرد، یک توضیح کوتاه به ما کمک می‌کند آن را درست کنیم. حدود ۳ دقیقه طول می‌کشد و می‌توانید به هر پرسشی پاسخ ندهید.</p><p>پاسخ‌های شما فقط برای ارزیابی و بهبود ابزارها استفاده می‌شوند و به نام شما مرتبط نمی‌شوند. فقط تیم پژوهشی SmartUrbanity آن‌ها را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p>پیش از شرکت، اطلاعیه حریم خصوصی را بخوانید: توضیح می‌دهد چه کسانی به پاسخ‌های شما دسترسی دارند و پاسخ‌ها تا چه زمانی نگهداری می‌شوند.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "چه چیزی مانع شد یک پرسشنامه را باز کنید و بفهمید چه می‌پرسد؟",
       "#What prevented you from answering and sending the questionnaire?": "چه چیزی مانع شد به پرسشنامه پاسخ دهید و آن را ارسال کنید؟"
     },
@@ -829,7 +835,6 @@
       "#At the event, with the team": "A rendezvényen, a csapattal",
       "#Both": "Mindkettő",
       "#Computer": "Számítógép",
-      "#Did you manage to answer it and send it?": "Sikerült kitöltenie és elküldenie?",
       "#Did you manage to open a questionnaire and understand what it asks?": "Sikerült megnyitnia egy kérdőívet, és megértenie, mit kérdez?",
       "#Difficult": "Nehéz",
       "#Do you have any recommendations to improve this tool?": "Van javaslata az eszköz fejlesztésére?",
@@ -837,10 +842,9 @@
       "#Extremely useful": "Rendkívül hasznos",
       "#Help us improve the questionnaires": "Segítsen jobbá tenni a kérdőíveket",
       "#How clear is the layout of the screens?": "Mennyire átlátható a képernyők elrendezése?",
-      "#How did it go? The questionnaires": "Milyen volt a kérdőívek kitöltése?",
+      "#How did it go? The questionnaires": "Milyennek találta a kérdőívek kitöltését?",
       "#How easy to understand are the questions and the texts?": "Mennyire könnyen érthetők a kérdések és a szövegek?",
       "#How easy was it to answer the questionnaires?": "Mennyire volt könnyű kitölteni a kérdőíveket?",
-      "#How useful would answering the questionnaires be for you?": "Mennyire lenne hasznos Önnek a kérdőívek kitöltése?",
       "#How you tried them": "Hogyan próbálta ki őket",
       "#I am not sure": "Nem vagyok biztos benne",
       "#I didn’t try it": "Nem próbáltam ki",
@@ -886,7 +890,9 @@
       "#I would probably not answer them": "Valószínűleg nem tölteném ki őket",
       "#I would probably answer them": "Valószínűleg kitölteném őket",
       "#I would definitely answer them": "Biztosan kitölteném őket",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Köszönjük, hogy kipróbálta a kérdőíveket, a SmartUrbanity oldalait, amelyek Önről, a közlekedéséről és az Ön által használt helyekről kérdeznek.</p><p>Mondja el, sikerült-e elvégeznie az egyes lépéseket, és mennyire volt könnyű: ha valami nem működött, egy rövid megjegyzés segít kijavítani. Körülbelül 3 percet vesz igénybe, és bármelyik kérdést kihagyhatja.</p><p>Válaszait csak az eszközök ellenőrzésére és fejlesztésére használjuk, és nem kapcsolódnak a nevéhez. Csak a SmartUrbanity kutatócsoportja olvassa őket, és semmilyen hatósághoz nem kerülnek.</p><p>Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "Sikerült kitöltenie egy kérdőívet és elküldenie a válaszait?",
+      "#How useful was answering the questionnaires for you?": "Mennyire volt hasznos Önnek a kérdőívek kitöltése?",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Köszönjük, hogy kipróbálta a kérdőíveket, a SmartUrbanity oldalait, amelyek Önről, a közlekedéséről és az Ön által használt helyekről kérdeznek.</p><p>Mondja el, sikerült-e elvégeznie az egyes lépéseket, és mennyire volt könnyű: ha valami nem működött, egy rövid megjegyzés segít kijavítani. Körülbelül 3 percet vesz igénybe, és bármelyik kérdést kihagyhatja.</p><p>Válaszait csak az eszközök ellenőrzésére és fejlesztésére használjuk, és nem kapcsolódnak a nevéhez. Csak a SmartUrbanity kutatócsoportja olvassa őket, és semmilyen hatósághoz nem kerülnek.</p><p>Részvétel előtt olvassa el az adatkezelési tájékoztatót: megtudhatja, ki férhet hozzá a válaszaihoz és meddig őrzik meg azokat.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "Mi akadályozta meg abban, hogy megnyisson egy kérdőívet, és megértse, mire kérdez rá?",
       "#What prevented you from answering and sending the questionnaire?": "Mi akadályozta meg abban, hogy kitöltse és elküldje a kérdőívet?"
     },
@@ -900,8 +906,7 @@
       "#At the event, with the team": "في الفعالية، مع الفريق",
       "#Both": "كلاهما",
       "#Computer": "حاسوب",
-      "#Did you manage to answer it and send it?": "هل تمكنت من الإجابة عنه وإرساله؟",
-      "#Did you manage to open a questionnaire and understand what it asks?": "هل تمكنت من فتح استبيان وفهم ما يسأل عنه؟",
+      "#Did you manage to open a questionnaire and understand what it asks?": "هل أمكن فتح استبيان وفهم الأسئلة الواردة فيه؟",
       "#Difficult": "صعب",
       "#Do you have any recommendations to improve this tool?": "هل لديك توصيات لتحسين هذه الأداة؟",
       "#Easy": "سهل",
@@ -911,7 +916,6 @@
       "#How did it go? The questionnaires": "كيف كانت التجربة؟ الاستبيانات",
       "#How easy to understand are the questions and the texts?": "ما مدى سهولة فهم الأسئلة والنصوص؟",
       "#How easy was it to answer the questionnaires?": "ما مدى سهولة الإجابة عن الاستبيانات؟",
-      "#How useful would answering the questionnaires be for you?": "ما مدى فائدة الإجابة عن الاستبيانات بالنسبة لك؟",
       "#How you tried them": "كيف جربتها",
       "#I am not sure": "لا يقين لدي",
       "#I didn’t try it": "لم أجرّبه",
@@ -957,7 +961,9 @@
       "#I would probably not answer them": "على الأرجح لن أجيب عنها",
       "#I would probably answer them": "على الأرجح سأجيب عنها",
       "#I would definitely answer them": "بالتأكيد سأجيب عنها",
-      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>شكرًا على تجربة الاستبيانات، وهي صفحات SmartUrbanity التي تسأل عنك وعن طريقة تنقلك والأماكن التي تستخدمها.</p><p>أخبرنا هل تمكنت من القيام بكل خطوة ومدى سهولتها: عندما لا يعمل شيء ما، يساعدنا تعليق قصير على إصلاحه. يستغرق ذلك حوالي 3 دقائق، ويمكنك تخطي أي سؤال.</p><p>تُستخدم إجاباتك فقط للتحقق من الأدوات وتحسينها، ولا ترتبط باسمك. لا يقرؤها إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p>",
+      "#Did you manage to answer a questionnaire and send your answers?": "هل أمكن إكمال استبيان وإرسال الإجابات؟",
+      "#How useful was answering the questionnaires for you?": "ما مدى فائدة الإجابة عن الاستبيانات بالنسبة لك؟",
+      "#<p>Thank you for trying the questionnaires, the SmartUrbanity pages that ask about you, how you move around and the places you use.</p><p>Tell us whether you managed to do each thing and how easy it was: when something did not work, a short comment helps us fix it. It takes about 3 minutes and you can skip any question.</p><p>Your answers are used only to validate and improve the tools and are not linked to your name. Only the SmartUrbanity research team reads them, and they are not sent to any public authority.</p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>شكرًا على تجربة الاستبيانات، وهي صفحات SmartUrbanity التي تسأل عنك وعن طريقة تنقلك والأماكن التي تستخدمها.</p><p>أخبرنا هل تمكنت من القيام بكل خطوة ومدى سهولتها: عندما لا يعمل شيء ما، يساعدنا تعليق قصير على إصلاحه. يستغرق ذلك حوالي 3 دقائق، ويمكنك تخطي أي سؤال.</p><p>تُستخدم إجاباتك فقط للتحقق من الأدوات وتحسينها، ولا ترتبط باسمك. لا يقرؤها إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>قبل المشاركة، يُرجى قراءة إشعار الخصوصية الذي يوضح من يمكنه الوصول إلى الإجابات ومدة الاحتفاظ بها.</p>",
       "#What prevented you from opening a questionnaire and understanding what it asks?": "ما الذي منعك من فتح استبيان وفهم ما يسأل عنه؟",
       "#What prevented you from answering and sending the questionnaire?": "ما الذي منعك من الإجابة عن الاستبيان وإرساله؟"
     }
