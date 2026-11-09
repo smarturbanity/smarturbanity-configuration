@@ -25,7 +25,7 @@ def materialize(repo, revision, parent):
     destination.mkdir(parents=True, exist_ok=False)
     records = []
     transformations = []
-    paths = ['base.json', 'index.json', 'definitions', 'pilots', 'forms']
+    paths = ['index.json', 'definitions', 'pilots', 'forms']
     archive = zipfile.ZipFile(io.BytesIO(git(repo, 'archive', '--format=zip', revision, *paths)))
     for item in archive.infolist():
         if item.is_dir():

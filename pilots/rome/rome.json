@@ -1,20 +1,15 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "pilot_id": "rome",
   "mode_selection": [
     "walk",
     "bike",
     "transit"
   ],
-  "default_mode": "walk",
   "data_model": {
-    "runtime": {
-      "source": "server"
-    },
     "study_area": {
       "name": "Municipio XII",
       "area_group_id": "study_areas",
-      "minimum_area_overlap_ratio": 0.5,
       "selector": {
         "property": "municipio",
         "values": [
@@ -147,26 +142,12 @@
         ]
       }
     },
-    "default_area_group_id": "neighbourhoods",
     "area_groups": {
       "neighbourhoods": {
-        "name": "Quartieri",
-        "order": 10,
-        "view": "access_inspector",
-        "icon": "bi-map",
-        "source_layers": [
-          "su_areas"
-        ]
+        "name": "Quartieri"
       },
       "study_areas": {
-        "name": "Municipio XII",
-        "order": 20,
-        "view": "access_inspector",
-        "icon": "bi-bounding-box",
-        "selectable": false,
-        "source_layers": [
-          "su_study_areas"
-        ]
+        "name": "Municipio XII"
       },
       "census": {
         "name": "Sezioni censuarie",
@@ -179,23 +160,12 @@
         ]
       },
       "h3": {
-        "name": "Celle H3",
-        "order": 40,
-        "view": "access_inspector",
-        "icon": "bi-hexagon",
-        "source": "server",
-        "resolution": 9,
-        "source_layers": [
-          "su_hexagons"
-        ]
+        "name": "Celle H3"
       }
     }
   },
-  "application_config": "./pilots/rome/application.json",
   "datasets": {
     "service_subtypes": {
-      "config_type": "service_subtypes",
-      "pilot_id": "rome",
       "default_subtypes": {
         "ST_01": [
           "Medico di medicina generale",
@@ -537,6 +507,19 @@
       }
     }
   },
+  "map": {
+    "initial_view": {
+      "latitude": 41.87247,
+      "longitude": 12.35609,
+      "zoom": 12
+    },
+    "zoom_limits": {
+      "smart_urbanity_access_together": {
+        "min": 14
+      }
+    }
+  },
+  "application_config": "./pilots/rome/application.json",
   "content": {
     "dataset_files": [
       "./pilots/rome/survey_campaigns.json"
@@ -800,15 +783,12 @@
       }
     ]
   },
-  "map": {
-    "initial_view": {
-      "latitude": 41.87247,
-      "longitude": 12.35609,
-      "zoom": 12
-    }
-  },
   "questionnaire_catalog": {
     "source": "local",
     "path": "./forms"
+  },
+  "pilot_identity": {
+    "city": "Roma",
+    "place": "#In Rome we work in Municipio XII."
   }
 }
