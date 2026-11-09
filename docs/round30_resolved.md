@@ -33,5 +33,9 @@ or remote publication is part of this consolidation.
 The follow-up candidate changes eight forms using Lory's decisions 1A, 2A, 3A,
 4B and 5A. It addresses 31 of the 39 frozen findings with configuration changes,
 checks enlargement for one, and records why seven existing behaviors remain.
+Of those seven, Q30-6, Q30-7, Q30-23 and Q30-25 are closed definitive decisions
+by Lory: optional economic question, one main trip purpose, app-supplied gender
+options and consistent Italian “tu”. Do not count them as unresolved or propose
+them again.
 See [the complete per-finding disposition](round30_issue_dispositions.md) for
 versions, verification and limits. Historical persona outcomes remain unchanged.

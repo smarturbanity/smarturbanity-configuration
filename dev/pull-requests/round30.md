@@ -2,6 +2,11 @@
 
 Source: `round30`. Target: `main`.
 
+Q30-6, Q30-7, Q30-23 and Q30-25 are closed definitive product decisions confirmed
+by Lory, not outstanding issues: optional economic question, one main trip
+purpose, gender options supplied by the app and consistent Italian “tu”. Do not
+propose these choices again.
+
 The remaining questionnaire follow-up adds explicit hearing-accessibility,
 step-free/rest options and a separate optional pushchair/mobility-support question.
 It explains selection limits, makes outside-neighborhood reasons and transport

@@ -1,5 +1,10 @@
 # round30 consolidation
 
+Definitive decisions confirmed by Lory: Q30-6, Q30-7, Q30-23 and Q30-25 are
+closed, not remaining issues. Keep the optional economic question, one main trip
+purpose, app-supplied Other/Prefer not to say and consistent Italian “tu”. Do not
+reopen these questions or include them in future unresolved-work lists.
+
 Follow-up: remaining questionnaire changes now cover eight forms, according to
 Lory's 1A 2A 3A 4B 5A decisions. See the per-finding record in
 `docs/round30_issue_dispositions.md`. 31 configuration remedies, one requested

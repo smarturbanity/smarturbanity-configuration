@@ -14,6 +14,21 @@ original simulated reactions or claim a new persona acceptance run.
 5. Refer readers to the pilot privacy notice; do not duplicate its retention and
    recipient rules in questionnaire welcomes.
 
+## Definitive decisions — do not reopen
+
+Lory explicitly confirmed these four decisions on 2026-11-09 after reviewing
+the seven unchanged findings. They are closed product decisions, not unresolved
+issues or pending questions. Exclude them from future lists of remaining work and
+do not ask Lory to choose again:
+
+- Q30-6: keep the optional household-economic question and Prefer not to say.
+- Q30-7: ask for one main purpose of the most frequent trip.
+- Q30-23: keep Other and Prefer not to say supplied by the app; no duplication.
+- Q30-25: use the Italian informal “tu” consistently, including with older people.
+
+This closes the implementation discussion for these findings. The frozen study
+reports remain historical evidence and must not be interpreted as reopening them.
+
 ## Disposition of every finding
 
 IDs below omit the common `retest-e6fc235-hindered-v1/` prefix.
@@ -25,8 +40,8 @@ IDs below omit the common `retest-e6fc235-hindered-v1/` prefix.
 | Q30-3 | Add benches/rest places, step-free ramps/dropped kerbs, and paths free of vehicles/obstacles; all eight languages. Existing answers and exclusive None remain. |
 | Q30-4 | A separate optional question asks about pushchairs/prams, manual wheelchairs, and walking sticks/crutches/walking frames, for oneself or someone accompanied. Other, Prefer not to say and exclusive None are available. Powered wheelchairs retain their existing vehicle entry. |
 | Q30-5 | The three-main-reason limit is visible before choosing. The question is optional, consistent with the welcome's promise that any question can be skipped. |
-| Q30-6 | Retain: economic information can be sensitive; this question already permits skipping and Prefer not to say. No claim that wording removes that sensitivity. |
-| Q30-7 | Retain one main purpose, explicitly confirmed by decision 2A. The question does not attempt to describe every purpose of a multi-stop journey. |
+| Q30-6 | CLOSED — definitive decision by Lory: retain the optional economic question and Prefer not to say. Do not list as unresolved or ask again. |
+| Q30-7 | CLOSED — definitive decision by Lory: retain one main purpose of the most frequent trip. Do not list as unresolved or ask again. |
 | Q30-8, Q30-31 | Add not being able to hear approaching people/vehicles; retain the separate sight-orientation answer. Eight languages. |
 | Q30-9, Q30-32 | Include disability in walking harassment examples, in all eight languages. Retain the specifically approved Italian wording. |
 | Q30-10, Q30-33 | Add missing visual stop/service information for public transport, in all eight languages. |
@@ -39,9 +54,9 @@ IDs below omit the common `retest-e6fc235-hindered-v1/` prefix.
 | Q30-19 | Reuse the already approved neutral long-distance-walking exclusion, without attributing inability to age. Preserve its answer value and exclusivity. |
 | Q30-21 | Use consistent Italian age-band labels, including “anni”, while retaining stored band values. |
 | Q30-22 | Use natural Italian “per conto tuo / per conto mio”; simplify the corresponding French phrasing. |
-| Q30-23 | Retain: Other and Prefer not to say are already requested from the app. Do not duplicate them in the authored options. |
+| Q30-23 | CLOSED — definitive decision by Lory: Other and Prefer not to say are supplied by the app. Do not duplicate them, list this as unresolved or ask again. |
 | Q30-24 | Retain the optional household-economic question and its explanatory help. The original report itself accepts it; no new obligation is introduced. |
-| Q30-25 | Retain the consistent Italian informal address, as in the previously approved language-review disposition. Do not switch register based on age in one question. |
+| Q30-25 | CLOSED — definitive decision by Lory: consistently use the Italian “tu”, regardless of age. Do not list as unresolved or ask again. |
 | Q30-26 | Reuse the approved plain Italian explanation of tactile paving: recognizable with feet or a cane. |
 | Q30-27 | Reuse the approved Italian wording specifying spaces for walking/wheelchairs separated from bicycles/scooters. |
 | Q30-28 | Include wheelchair use in the title, introductory sentence and question. Preserve the specifically approved Italian title. |
@@ -53,8 +68,10 @@ IDs below omit the common `retest-e6fc235-hindered-v1/` prefix.
 | Q30-39 | Use a complete, polite Hungarian feedback title. |
 
 31 findings have configuration changes; Q30-15 has the requested layout check;
-seven findings (6, 7, 11, 23, 24, 25, 36) retain the stated behavior for the reasons
-above. None of these dispositions changes the frozen historical finding status.
+four findings (6, 7, 23, 25) are closed definitive decisions; three observations
+(11, 24, 36) retain the stated behavior for the reasons above. The four definitive
+decisions are excluded from remaining-work counts. The frozen historical finding
+status is not rewritten and does not override this implementation disposition.
 
 ## Versions and data
 
