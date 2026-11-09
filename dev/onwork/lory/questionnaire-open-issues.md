@@ -70,3 +70,8 @@ failures were harness errors: fresh fixture initialization, an empty survey and 
 obsolete aggregate safety key. The final probe asserts serialized answer values.
 No participant comprehension, native-language acceptance, remote backend or
 Dev/Test deployment is claimed. Dashboard statuses must preserve these limits.
+
+User clarification: a wheelchair can also be used on public transport. The ten
+context helps now distinguish movement along streets/pavements from waiting at
+stops and travelling aboard public transport, explicitly including wheelchair
+users in the latter. They distinguish journey contexts rather than mobility aids.

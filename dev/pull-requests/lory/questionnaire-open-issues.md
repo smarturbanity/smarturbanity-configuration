@@ -93,3 +93,5 @@ public-transport contexts in eight languages; all ten Italian helps render in th
 actual browser editor. Six regression tests and location-contract checks pass.
 No new participant acceptance, remote backend or app deployment is claimed;
 historical issues are not declared resolved by these technical checks.
+The context distinction is streets/pavements versus waiting/onboard public
+transport; wheelchair use is explicitly included in both relevant contexts.
