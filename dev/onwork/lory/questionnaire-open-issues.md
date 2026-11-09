@@ -75,3 +75,8 @@ User clarification: a wheelchair can also be used on public transport. The ten
 context helps now distinguish movement along streets/pavements from waiting at
 stops and travelling aboard public transport, explicitly including wheelchair
 users in the latter. They distinguish journey contexts rather than mobility aids.
+
+Final user wording correction: removed the redundant wheelchair qualification
+from all five transit helps in eight languages. Transit help now simply names
+waiting at stops and travelling aboard public transport. Street context and
+support options are unchanged; existing language consumer checks pass.
