@@ -21,3 +21,9 @@ that road-user answers concern concrete behaviour; clarify public-transport-only
 transfers; simplify Italian economic-situation wording. Preserve distinct current
 measurements and existing answer values. Seven further forms pass JSON, option,
 condition and eight-language addition checks.
+
+17A–46A: explicitly allow skipping personal vehicle-use answers and clarify car
+availability separately from using motorcycles/scooters. Technical source audit
+supports 23 exact historical dispositions and leaves 7 cumulative/experiential
+reports uncertain. Feedback and survey introductions have eight-language coverage.
+No historical study outcome or accepted privacy decision is rewritten.

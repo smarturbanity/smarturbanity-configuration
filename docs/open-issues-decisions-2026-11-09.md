@@ -84,6 +84,37 @@ Seven forms changed in this second slice. JSON parses, existing answers and
 conditions are preserved, every added help/option has eight translations, and
 `git diff --check` passes. No new persona or browser acceptance is claimed.
 
+## Decisions 17A–46A
+
+All thirty decisions approved. The maintained source audit checks exact historical
+finding IDs, not title similarity. New edits make `vehicles_used` explicitly optional
+and explain in eight languages that car availability is a separate question from
+using a motorcycle, scooter or another alternative. No stored answer is removed.
+
+Technically verified dispositions: 19, 21, 23, 24, 25, 27, 28, 29, 30, 31, 32,
+33, 35, 36, 37, 38, 39, 40, 41, 42, 43, 45, 46 (23 exact findings).
+The later duplicate reports retain their historical evidence and receive the same
+source check as the earlier report; their history is not deleted or rewritten.
+The approved 36-month decision and current privacy-notice pointer remain unchanged.
+
+Seven cumulative/experiential findings remain open: 17 (anxiety and understanding
+of alternatives), 18 (social discomfort and stigma), 20 (cycling burden and perceived
+overlap), 22 (cumulative language judgments), 26 (welcome density and HU/FA nuances),
+34 and 44 (perceived duplication across walking/public-transport contexts).
+Keep the useful distinct measurements and already approved wording; no unsupported
+claim that those people have accepted the current experience.
+
+The technical sidecar records pass versus uncertain separately. It cannot turn
+historical findings into persona-confirmed resolutions. No new browser/persona
+test, public deployment or real retention check is claimed. The application work
+for decision 1A remains separate.
+
+Verification: all configuration JSON parses; explicit optionality and eight new
+help translations; prior answers, options, conditions, privacy settings preserved;
+feedback language keys equal in eight languages; current survey introductions
+have translations and matching paragraph counts in eight languages; 23 source
+checks pass and 7 remain uncertain; `git diff --check` passes.
+
 ## Verification
 
 Four modified JSON files parse. Eight-language dictionaries introduce no new
