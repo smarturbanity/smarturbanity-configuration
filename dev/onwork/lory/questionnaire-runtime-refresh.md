@@ -3,7 +3,9 @@
 Requested outcome: retain only the runtime additions still needed for app delivery,
 starting from current main. Eight runtime files are extracted without carrying the
 old questionnaire composition tools or stale form copies. Questionnaires remain
-identical to main. The frozen source pin and runtime payload remain unchanged.
+identical to main. Catalogue and workflow paths use local forms, without raw URLs
+to another commit. Manifest paths resolve against the manifest; Rome paths resolve
+against the configuration root, as implemented by ConfigurationDataSource.js.
 
 Focused source checks and six regressions pass. The delivery materializer verifies
 Git object provenance and creates a fresh package. App-wide verification and dev
