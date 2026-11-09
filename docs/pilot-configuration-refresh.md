@@ -35,3 +35,10 @@ regressions and all twenty SVG validations also pass.
 This is a configuration candidate, not a deployment. It requires the corresponding
 app and spatial-server reader/defaults release. There is no old-layout fallback.
 The previously tested runtime branch and its dev publication remain separate.
+
+## Subsequent questionnaire request
+
+After the isolated refactoring commit, Lory requested a pre-trip company correction.
+That separate change is described in [the trip-survey comparison](trip-survey-comparison.md).
+The original byte-preservation statement above applies to the refactoring itself;
+the subsequent pre-trip revision is an intentional, separately tested exception.

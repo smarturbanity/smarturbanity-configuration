@@ -37,11 +37,11 @@ for (const container of Object.values(schedule.containers)) {
   for (const id of container.campaignIds) assert.ok(schedule.campaigns[id], 'Unknown campaign: ' + id);
 }
 const changedForms = execFileSync('git', ['diff', '655bbc8', '--name-only', '--', 'forms', 'definitions'], {cwd: root, encoding: 'utf8'}).trim();
-assert.equal(changedForms, '', 'Forms and shared definitions must stay unchanged');
+assert.ok(changedForms === '' || changedForms === 'forms/tripSurveys/smarturbanity_pre_trip.json', 'Only the separately requested pre-trip company correction may change a form');
 for (const obsolete of ['base.json', 'manifests', 'pilots/rome/index.json', 'pilots/rome/service_subtypes.json']) {
   assert.equal(fs.existsSync(path.join(root, obsolete)), false, 'Retired source still present: ' + obsolete);
 }
-console.log('PASS: actual app merge; current pilot values and services preserved; forms unchanged; technical ownership; campaign references; retired sources absent');
+console.log('PASS: actual app merge; current pilot values and services preserved; form changes confined to requested pre-trip fix; technical ownership; campaign references; retired sources absent');
 
 const registry = [];
 context.getDataSourceLocations = source => [typeof source === 'string' ? source : source.url];
