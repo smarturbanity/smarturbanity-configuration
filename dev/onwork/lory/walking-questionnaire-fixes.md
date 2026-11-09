@@ -111,3 +111,45 @@ qui vous posent des questions sur vous, vos déplacements et les lieux que vous
 fréquentez". Feedback form 1.1.4; structural comparison confirms only that phrase
 and the form patch version changed. Privacy, confirmed 36-month retention,
 questions, answers, settings and other languages are preserved.
+
+## Complete round30 language review — 2026-11-09
+
+Lory authorised fixing the remaining language findings together. Reviewed all 64
+language reports in the 58 retest response files, including duplicate reports and
+wording already superseded by the preceding approved changes. This is a review
+of reported language issues against current configuration, not a fresh user test
+or a claim that every possible wording issue in the full catalogue is absent.
+
+Remaining corrections:
+- Car alternatives: complete Italian introduction; simpler long-distance walking
+  exclusion without attributing limitations to age; dependent-adult care included
+  in examples; clearer negative motivation. Its negative answers were already
+  exclusive, so no selection behaviour changes. Form 1.3.1, motivation 1.4.1.
+- Walking and public-transport security: replace the uncommon Italian term for
+  following someone with a plain explanation. Public transport also uses the
+  approved hidden-corners wording and includes disability among harassment
+  examples, consistently with walking.
+- Add two distinct hearing-accessibility answers, translated into all eight
+  languages: difficulty hearing people/vehicles approaching from behind when
+  walking; missing written/visual travel information on transport or at stops.
+  Preserve the sight-orientation answer and every prior response value. Both
+  security forms 3.2.0; walking factors 3.3.0, transit factors 1.2.0; affected
+  Italian-only day questions patch versions, transit harassment 1.1.1.
+- Feedback: explicit separate opening/understanding and answering/sending problem
+  prompts in all eight languages; natural Turkish weekly-publication wording;
+  shorter Turkish/Persian welcome; direct German usefulness question; natural
+  Hungarian title. Form 1.2.0. Previous French corrections are preserved.
+
+Judgment on remaining suggestions: retain consistent Italian informal address
+rather than switching register based on age; retain the gender question whose
+additional answers are supplied by the app; retain lighting questions with the
+existing not-applicable answer; retain explicit wheelchair wording because people
+walking with a cane are already included. No extra question or forced disability
+disclosure is introduced for those stylistic suggestions. Do not adopt claims
+about aggregate-only use that are not established by current policy.
+
+Validation: all questionnaire JSON parses. Structural comparisons preserve stable
+answer keys, every existing option/value/exclusivity, required/show-if settings,
+privacy and the confirmed 36-month retention. New prompt/option keys have all
+eight translations. No application deployment or new browser/persona retest is
+claimed; consumers must adopt the new versioned configuration through release.
