@@ -15,8 +15,8 @@ compatibility or migrations. This is a [definitive decision](open-issues-decisio
 The 16 sectioned mode questionnaires under `forms/surveys/` are the sole source
 of their questions and translations. Small source forms, composition specifications
 and their builder have been removed. Edit the active files directly and run the
-sectioned-survey verifier. `tools/sectioned-surveys.json` stores only coverage and
-order expectations for that check; it is not an app input.
+sectioned-survey verifier, which reads the catalogue and active files directly.
+There is no separate inventory to maintain.
 
 ## Decision and change history
 

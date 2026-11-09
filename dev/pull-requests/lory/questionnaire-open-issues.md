@@ -75,3 +75,10 @@ verifier passes for 16 questionnaires, 51 sections, 258 questions and eight lang
 Four regression checks pass, including rejection of a reintroduced small form,
 a missing question and a broken non-user section gate. No compatibility layer,
 campaign activation or remote push is added.
+
+Follow-up: each of the 20 current surveys now has a distinct topic-specific SVG;
+welcome image links and translated title alternatives are updated. Question
+sections, answers and dictionaries are unchanged. Old unreferenced illustrations
+are removed. The separate section inventory is also removed at Lory's request;
+the verifier reads the active catalogue and forms directly. SVG checks and visual
+contact-sheet review pass; no new app-flow or participant acceptance is claimed.

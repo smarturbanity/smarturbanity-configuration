@@ -40,12 +40,11 @@ are unchanged. This change does not activate a pilot campaign or deploy the app.
 ## Edit and verify
 
 Edit the current sectioned JSON files directly. There is no composition builder or
-second set of source forms. `tools/sectioned-surveys.json` records section titles and
-question IDs for coverage and order checks; it contains no question definitions or
-translations and is not used by the app. Update it only for deliberate structure changes.
+second set of source forms or separate inventory. The verifier reads the catalogue
+and the current questionnaire files directly.
 
 `node tools/verify_survey_bundles.mjs <path-to-QuestionnaireConditions.js>` checks
-the actual consumer's conditions, question order and coverage, distinct translated
+the actual consumer's conditions, conditional order and total question coverage, distinct translated
 option labels, privacy text, catalogue/campaign links and follow-up cycles. It also
 rejects extra mode questionnaire files outside the 16 current forms. Pass the maintained
 CityMaaS `CityMaasRoot/Questionnaires/QuestionnaireConditions.js`.
@@ -54,7 +53,7 @@ CityMaaS `CityMaasRoot/Questionnaires/QuestionnaireConditions.js`.
 runs isolated regression checks for a valid catalogue, a reintroduced small form,
 a lost question and a broken screening gate.
 
-Cleanup verification: all 16 active files remain byte-identical, with 51 sections,
+Cleanup checkpoint `7c4ade6` kept all 16 active files byte-identical, with 51 sections,
 258 questions, 38 total catalogue forms and eight languages. Profile, household,
 general travel and future surveys remain separate. Browser navigation, measured
 completion time and human comprehension are separate acceptance checks.
@@ -70,3 +69,20 @@ The study also includes `street_connection_assessment` and
 places clearly labelled and no claim of live map selection, report submission or
 delivery. Their conditional branches and accessibility cases need dedicated
 scenarios rather than treating 47/44 configured questions as all shown at once.
+
+## Questionnaire illustrations
+
+Each of the 20 current survey files (16 mode questionnaires, profile, household,
+travel and future travel choices) has its own SVG under `forms/surveys/assets/`,
+named after its questionnaire ID. The illustration combines the mode or subject
+with two topics from its actual questions. Shared colours and a fixed 800×450
+canvas keep the gallery consistent. There is no text embedded in the drawing;
+the image alternative reuses the questionnaire's translated title. No scripts,
+external resources or animation are included. Questions and answer values are
+unchanged. The later illustration update changes only welcome image links and
+image alternatives in the 20 survey JSON files.
+
+Run `python tools/verify_survey_assets.py` to check all 20 image links, distinct
+drawings, valid SVG XML and translated alternatives. It also rejects unused SVGs,
+scripts, external image references and animation. The 19 old shared illustrations
+were removed after checking that no current form references them.
