@@ -6,7 +6,7 @@ The repository provides version-controlled, machine-readable configuration share
 
 ## Configuration principles
 
-The repository follows three main principles:
+The repository follows these principles:
 
 1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
 2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
@@ -62,16 +62,8 @@ smarturbanity-configuration/
 │   ├── locationReports/
 │   └── usabilityTests/
 │
-├── manifests/
-│   ├── smarturbanity.json
-│   └── smarturbanity_surveys.json
-│
 ├── pilots/
-│   ├── rome/
-│   ├── karlsruhe/
-│   ├── izmir/
-│   ├── lyon/
-│   └── zurich/
+│   └── rome/
 │
 └── README.md
 ```
@@ -88,17 +80,16 @@ pilot's `language` from their first screen. Keep `language` equal to the pilot's
 
 The structure may evolve as additional SmartUrbanity configuration domains are introduced.
 
-## CityMaaS manifests
+## CityMaaS configuration loading
 
-`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
-`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
-CityMaaS loads these manifests from this repository; their nested source URLs are
-relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
-when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog. Manifests declare no
-privacy notice: their `questionnaires.consent` is the installation layer, which
-would override the notice of the loaded pilot. A deployed installation requires the online sources because it
-does not bundle this repository as a fallback.
+CityMaaS loads its application defaults, the selected pilot and that pilot's
+technical application settings. Rome's `application_config` points to
+`pilots/rome/application.json`. Its questionnaire catalogue and report workflows
+refer to the local `forms/` directory, resolved against the root index.
+There are no separate installation manifests.
+
+See [delivery notes](docs/questionnaire-runtime-refresh.md) to export configuration,
+questionnaires and assets together from one commit for bundled app delivery.
 
 ## Shared definitions
 
