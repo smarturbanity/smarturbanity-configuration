@@ -15,10 +15,11 @@ Only the selected ID is stored. `legacySources` lists exact former source values
 must be unambiguous across the catalogue. Removed selections use the default.
 The three former Flowi choices migrate to the walking avatar.
 
-These 14 user-supplied Flowi assets are preserved byte for byte. They contain an
-inline raster image in an SVG wrapper, with no external image references or script.
-Their total size is 28,400,904 bytes (about 27.1 MiB); loading every choice has that
-transfer cost before caching/compression. The chooser requests native lazy loading.
+These 14 user-supplied Flowi assets keep their drawing; only the background around
+the figure is transparent, so each avatar sits on any card or top-bar colour. They
+contain an inline PNG image in an SVG wrapper, with no external image references or
+script. Their total size is 19,442,956 bytes (about 18.5 MiB); loading every choice
+has that transfer cost before caching/compression. The chooser requests native lazy loading.
 The runtime materializer includes the complete `pilots` directory, including SVGs.
 
 An avatar is a visual preference only. It does not select travel mode, mobility
