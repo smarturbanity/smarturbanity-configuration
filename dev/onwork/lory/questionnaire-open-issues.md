@@ -4,8 +4,8 @@ Owner: Lory. Candidate: lory/questionnaire-open-issues, based on main.
 Scope: four survey forms and approved source-review dispositions.
 Implemented: neutral Italian wording and shorter multilingual mobility help.
 Verified: focused JSON, translation regression and unchanged-answer checks.
-Pending: application behavior for decision 1A and separate result-library status
-import; remaining translation acceptance is not claimed.
+Pending: application behavior for decision 1A; remaining translation acceptance
+is not claimed.
 See docs/open-issues-decisions-2026-11-09.md.
 
 12A–16A implemented: audible-signal barrier, behaviour instruction, combination
@@ -14,5 +14,9 @@ focused regression checks passed; no result-library closure imported.
 
 17A–46A implemented/reviewed. Two further forms clarify optional personal use and
 car availability despite motorcycle/scooter alternatives. Exact-ID technical audit:
-23 pass, 7 uncertain. Preparing technical-sidecar import and local dashboard release;
-historical persona outcomes remain unchanged. See owning decisions document.
+23 pass, 7 uncertain. Technical sidecar imported and private dashboard activated:
+active open count 46 to 23, code-verified 219 to 242. Historical persona outcomes
+remain unchanged. Server returned HTTP 200 and active version matched the release.
+Source verification target d136e9baf1d3c7516ce33c2b6ed279e70e188ee3;
+library import 186e77471c4263fce61aa906021cd40919dc97c5.
+See owning decisions document.

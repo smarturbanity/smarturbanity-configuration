@@ -52,8 +52,8 @@ This record does not rewrite frozen persona results or mark acceptance tests pas
 - 1A: one profile with optional updates, and voluntarily selected trip pairs,
   requires verification of the application entry points and saved-response flow.
   This configuration change does not implement a scheduling or persistence rule.
-- The result-library sidecar and live dashboard have not been reclassified by this
-  commit. No fresh persona study, browser run, deployment or public release.
+- Earlier slices did not reclassify the result library. The final technical import
+  below updates only decisions 17–46. No fresh persona study or public release.
 
 ## Decisions 12A–16A
 
@@ -114,6 +114,14 @@ help translations; prior answers, options, conditions, privacy settings preserve
 feedback language keys equal in eight languages; current survey introductions
 have translations and matching paragraph counts in eight languages; 23 source
 checks pass and 7 remain uncertain; `git diff --check` passes.
+
+Technical import completed in library commit
+`186e77471c4263fce61aa906021cd40919dc97c5`, targeting configuration commit
+`d136e9baf1d3c7516ce33c2b6ed279e70e188ee3`. Private release
+`ca87cc54-f1a6-45be-acfe-46d568b1c211` is active. The running server returned HTTP
+200 and its version endpoint matched the active release. Active opens: 46 to 23;
+code-verified: 219 to 242. Historical persona-resolved count remains 62; the 125
+older items needing retest remain separately classified.
 
 ## Verification
 

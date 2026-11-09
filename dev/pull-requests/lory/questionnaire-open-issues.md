@@ -27,3 +27,7 @@ availability separately from using motorcycles/scooters. Technical source audit
 supports 23 exact historical dispositions and leaves 7 cumulative/experiential
 reports uncertain. Feedback and survey introductions have eight-language coverage.
 No historical study outcome or accepted privacy decision is rewritten.
+The separate private-library import is complete: 23 technical passes and seven
+partial checks, reducing active opens from 46 to 23. The local live dashboard
+serves the activated release (HTTP 200, matching release hash). Configuration
+verification target: d136e9baf1d3c7516ce33c2b6ed279e70e188ee3.
