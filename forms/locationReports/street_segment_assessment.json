@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Segment Assessment",
     "questionnaire_id": "street_segment_assessment",
-    "questionnaire_version": "3.0.1",
+    "questionnaire_version": "4.0.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
     "image_alt": "#Street section with a magnifying glass",
@@ -121,9 +121,7 @@
         ]
       },
       {
-        "title": "Quick assessment",
-        "description": "Answer these first. Then you can finish or add optional details.",
-        "backgroundColor": "#f0f0f0",
+        "title": "About this place",
         "questions": [
           {
             "text": "Is there a place for people to walk along this street?",
@@ -213,37 +211,30 @@
             "question_id": "bike_facility",
             "question_version": "2.0.0",
             "privacy_classification": "heightened_personal"
-          },
+          }
+        ]
+      },
+      {
+        "title": "Getting through",
+        "questions": [
           {
-            "text": "Which best describes using this street segment while walking?",
-            "answer_key": "pedestrian_use_difficulty",
+            "text": "Is it difficult for you to get through here on foot or using a wheelchair?",
+            "answer_key": "pedestrian_use_difficult",
             "question_type": "single_option",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "I can pass without slowing down",
-                "value": "1_no_slowing_down"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "I need to slow down a little",
-                "value": "2_slow_down"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "I need to be careful while passing",
-                "value": "3_be_careful"
-              },
-              {
-                "text": "It takes a lot of effort or attention",
-                "value": "4_high_effort_attention"
-              },
-              {
-                "text": "I avoid using it if possible",
-                "value": "5_avoid_if_possible"
-              },
-              {
-                "text": "I cannot get through (for example with a wheelchair or stroller)",
-                "value": "6_cannot_get_through"
+                "text": "I cannot get through",
+                "value": "cannot_get_through"
               }
             ],
             "show_if": {
@@ -252,36 +243,63 @@
               ]
             },
             "required": true,
-            "question_id": "pedestrian_use_difficulty",
-            "question_version": "2.0.0",
+            "question_id": "pedestrian_use_difficult",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Because of traffic (cars, motorcycles, bicycles), how risky does it feel to use this street segment on foot?",
-            "answer_key": "pedestrian_perceived_risk",
+            "text": "Is it difficult for you to get through here by bicycle or e-scooter?",
+            "answer_key": "cyclist_use_difficult",
             "question_type": "single_option",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Not risky",
-                "value": "1_not_risky"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "Slightly risky",
-                "value": "2_slightly_risky"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "Moderately risky",
-                "value": "3_moderately_risky"
+                "text": "I cannot get through",
+                "value": "cannot_get_through"
+              }
+            ],
+            "show_if": {
+              "assessment_perspective": [
+                "cyclist"
+              ]
+            },
+            "required": true,
+            "question_id": "cyclist_use_difficult",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      },
+      {
+        "title": "Road safety",
+        "questions": [
+          {
+            "text": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
+            "answer_key": "pedestrian_traffic_unsafe",
+            "question_type": "single_option",
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "Very risky",
-                "value": "4_very_risky"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "Extremely risky",
-                "value": "5_extremely_risky"
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
               }
             ],
             "show_if": {
@@ -290,40 +308,28 @@
               ]
             },
             "required": true,
-            "question_id": "pedestrian_perceived_risk",
-            "question_version": "2.0.0",
+            "question_id": "pedestrian_traffic_unsafe",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Which best describes using this street segment by bicycle or e-scooter?",
-            "answer_key": "cyclist_use_difficulty",
+            "text": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
+            "answer_key": "cyclist_traffic_unsafe",
             "question_type": "single_option",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "I can pass without slowing down",
-                "value": "1_no_slowing_down"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "I need to slow down a little",
-                "value": "2_slow_down"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "I need to be careful while passing",
-                "value": "3_be_careful"
-              },
-              {
-                "text": "It takes a lot of effort or attention",
-                "value": "4_high_effort_attention"
-              },
-              {
-                "text": "I avoid using it if possible",
-                "value": "5_avoid_if_possible"
-              },
-              {
-                "text": "I cannot get through by bicycle or e-scooter",
-                "value": "6_cannot_get_through"
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
               }
             ],
             "show_if": {
@@ -332,89 +338,78 @@
               ]
             },
             "required": true,
-            "question_id": "cyclist_use_difficulty",
-            "question_version": "2.0.0",
+            "question_id": "cyclist_traffic_unsafe",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal"
-          },
+          }
+        ]
+      },
+      {
+        "title": "Personal security",
+        "questions": [
           {
-            "text": "Because of traffic, how risky does it feel to use this street segment by bicycle or e-scooter?",
-            "answer_key": "cyclist_perceived_risk",
-            "question_type": "single_option",
-            "add_i_dont_know": true,
-            "checks_inline": false,
-            "options": [
-              {
-                "text": "Not risky",
-                "value": "1_not_risky"
-              },
-              {
-                "text": "Slightly risky",
-                "value": "2_slightly_risky"
-              },
-              {
-                "text": "Moderately risky",
-                "value": "3_moderately_risky"
-              },
-              {
-                "text": "Very risky",
-                "value": "4_very_risky"
-              },
-              {
-                "text": "Extremely risky",
-                "value": "5_extremely_risky"
-              }
-            ],
-            "show_if": {
-              "assessment_perspective": [
-                "cyclist"
-              ]
-            },
-            "required": true,
-            "question_id": "cyclist_perceived_risk",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
-          },
-          {
-            "text": "How safe from harassment or assault do you feel here, also in the evening?",
-            "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
-            "answer_key": "personal_safety",
+            "text": "During the day, do you feel unsafe here from crime or harassment?",
+            "answer_key": "personal_day_unsafe",
             "question_type": "single_option",
             "checks_inline": false,
             "options": [
               {
-                "text": "Very safe",
-                "value": "1_very_safe"
+                "text": "Yes",
+                "value": "yes"
               },
               {
-                "text": "Fairly safe",
-                "value": "2_safe"
+                "text": "No",
+                "value": "no"
               },
               {
-                "text": "Neither safe nor unsafe",
-                "value": "3_neutral"
-              },
-              {
-                "text": "Not very safe",
-                "value": "4_unsafe"
-              },
-              {
-                "text": "Not safe at all",
-                "value": "5_very_unsafe"
-              },
-              {
-                "text": "I do not go there in the evening",
-                "value": "avoid_in_evening"
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
               }
             ],
             "show_if": {},
             "add_i_dont_know": true,
             "required": true,
-            "question_id": "personal_safety",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_id": "personal_day_unsafe",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
+            "add_prefer_not_to_say": true
           },
           {
-            "text": "Would you like to add more details? There are about 10 to 20 optional questions for one way of moving, and up to about 30 if you chose both (about 4–10 minutes).",
+            "text": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+            "answer_key": "personal_evening_unsafe",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "show_if": {},
+            "add_i_dont_know": true,
+            "required": true,
+            "question_id": "personal_evening_unsafe",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
+            "add_prefer_not_to_say": true
+          }
+        ]
+      },
+      {
+        "title": "More details",
+        "questions": [
+          {
+            "text": "Would you like to add optional details?",
             "answer_key": "continue_audit",
             "question_type": "single_option",
             "checks_inline": false,
@@ -430,7 +425,7 @@
             ],
             "required": true,
             "question_id": "continue_audit",
-            "question_version": "2.0.0",
+            "question_version": "1.0.1",
             "privacy_classification": "heightened_personal"
           }
         ]
@@ -2262,7 +2257,23 @@
       "#Please do not write names or other personal data.": "Please do not write names or other personal data.",
       "#Other": "Other",
       "#I don't know": "I don't know",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths",
+      "#About this place": "About this place",
+      "#Getting through": "Getting through",
+      "#Road safety": "Road safety",
+      "#Personal security": "Personal security",
+      "#More details": "More details",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Is it difficult for you to get through here on foot or using a wheelchair?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Is it difficult for you to get through here by bicycle or e-scooter?",
+      "#I cannot get through": "I cannot get through",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "During the day, do you feel unsafe here from crime or harassment?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+      "#Would you like to add optional details?": "Would you like to add optional details?",
+      "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
+      "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
+      "#Doesn't apply to me": "Doesn't apply to me"
     },
     "it": {
       "#Street Segment Assessment": "Valutazione di un tratto di strada",
@@ -2510,7 +2521,23 @@
       "#Please do not write names or other personal data.": "Per favore non scrivere nomi o altri dati personali.",
       "#Other": "Altro",
       "#I don't know": "Non lo so",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La ciclabile taglia il marciapiede: bici e pedoni si incrociano"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La ciclabile taglia il marciapiede: bici e pedoni si incrociano",
+      "#About this place": "Questo luogo",
+      "#Getting through": "Passare da qui",
+      "#Road safety": "Sicurezza nel traffico",
+      "#Personal security": "Sicurezza personale",
+      "#More details": "Altri dettagli",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "È difficile per te passare da qui a piedi o in sedia a rotelle?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "È difficile per te passare da qui in bici o in monopattino elettrico?",
+      "#I cannot get through": "Non riesco a passare",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Il traffico ti fa sentire in pericolo qui a piedi o in sedia a rotelle?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Il traffico ti fa sentire in pericolo qui in bici o in monopattino elettrico?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "Di giorno, qui ti senti in pericolo per reati o molestie?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Di sera o dopo il tramonto, qui ti senti in pericolo per reati o molestie?",
+      "#Would you like to add optional details?": "Vuoi aggiungere dettagli facoltativi?",
+      "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
+      "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
+      "#Doesn't apply to me": "Non mi riguarda"
     },
     "fr": {
       "#Street Segment Assessment": "Évaluer un tronçon de rue",
@@ -2758,7 +2785,23 @@
       "#Please do not write names or other personal data.": "Merci de ne pas écrire de noms ni d’autres données personnelles.",
       "#Other": "Autre",
       "#I don't know": "Je ne sais pas",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La piste cyclable coupe le trottoir : vélos et personnes à pied se croisent"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "La piste cyclable coupe le trottoir : vélos et personnes à pied se croisent",
+      "#About this place": "Ce lieu",
+      "#Getting through": "Passer ici",
+      "#Road safety": "Sécurité routière",
+      "#Personal security": "Sécurité personnelle",
+      "#More details": "Plus de détails",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Est-il difficile pour toi de passer ici à pied ou en fauteuil roulant ?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Est-il difficile pour toi de passer ici à vélo ou en trottinette électrique ?",
+      "#I cannot get through": "Je ne peux pas passer",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "La circulation te fait-elle te sentir en danger ici à pied ou en fauteuil roulant ?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "La circulation te fait-elle te sentir en danger ici à vélo ou en trottinette électrique ?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "Le jour, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Le soir ou après la tombée de la nuit, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
+      "#Would you like to add optional details?": "Veux-tu ajouter des détails facultatifs ?",
+      "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
+      "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
+      "#Doesn't apply to me": "Ne me concerne pas"
     },
     "de": {
       "#Street Segment Assessment": "Einen Straßenabschnitt bewerten",
@@ -3006,7 +3049,23 @@
       "#Please do not write names or other personal data.": "Bitte schreiben Sie keine Namen oder anderen persönlichen Daten.",
       "#Other": "Sonstiges",
       "#I don't know": "Ich weiß es nicht",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Der Radweg schneidet den Gehweg: Fahrräder und zu Fuß Gehende kreuzen sich"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Der Radweg schneidet den Gehweg: Fahrräder und zu Fuß Gehende kreuzen sich",
+      "#About this place": "Dieser Ort",
+      "#Getting through": "Hier durchkommen",
+      "#Road safety": "Verkehrssicherheit",
+      "#Personal security": "Persönliche Sicherheit",
+      "#More details": "Weitere Angaben",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Ist es für dich schwierig, hier zu Fuß oder mit dem Rollstuhl durchzukommen?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Ist es für dich schwierig, hier mit dem Fahrrad oder E-Scooter durchzukommen?",
+      "#I cannot get through": "Ich komme nicht durch",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Fühlst du dich hier zu Fuß oder mit dem Rollstuhl durch den Verkehr unsicher?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Fühlst du dich hier mit dem Fahrrad oder E-Scooter durch den Verkehr unsicher?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "Fühlst du dich hier tagsüber wegen Kriminalität oder Belästigung unsicher?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Fühlst du dich hier abends oder nach Einbruch der Dunkelheit wegen Kriminalität oder Belästigung unsicher?",
+      "#Would you like to add optional details?": "Möchtest du freiwillige Angaben ergänzen?",
+      "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
+      "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
+      "#Doesn't apply to me": "Trifft auf mich nicht zu"
     },
     "tr": {
       "#Street Segment Assessment": "Bir sokak bölümünü değerlendirin",
@@ -3254,7 +3313,23 @@
       "#Please do not write names or other personal data.": "Lütfen isim veya başka kişisel bilgi yazmayın.",
       "#Other": "Diğer",
       "#I don't know": "Bilmiyorum",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Bisiklet yolu kaldırımı kesiyor: bisikletler ve yayalar kesişiyor"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "Bisiklet yolu kaldırımı kesiyor: bisikletler ve yayalar kesişiyor",
+      "#About this place": "Bu yer",
+      "#Getting through": "Buradan geçmek",
+      "#Road safety": "Trafik güvenliği",
+      "#Personal security": "Kişisel güvenlik",
+      "#More details": "Daha fazla ayrıntı",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Buradan yürüyerek veya tekerlekli sandalyeyle geçmek senin için zor mu?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Buradan bisiklet veya elektrikli scooter ile geçmek senin için zor mu?",
+      "#I cannot get through": "Geçemiyorum",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Burada yürürken veya tekerlekli sandalye kullanırken trafik seni güvensiz hissettiriyor mu?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Burada bisiklet veya elektrikli scooter kullanırken trafik seni güvensiz hissettiriyor mu?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "Gündüz burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Akşam veya hava karardıktan sonra burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
+      "#Would you like to add optional details?": "İsteğe bağlı ayrıntılar eklemek ister misin?",
+      "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
+      "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
+      "#Doesn't apply to me": "Benim için geçerli değil"
     },
     "fa": {
       "#Street Segment Assessment": "ارزیابی یک بخش از خیابان",
@@ -3502,7 +3577,23 @@
       "#Please do not write names or other personal data.": "لطفاً نام یا اطلاعات شخصی دیگر ننویسید.",
       "#Other": "سایر",
       "#I don't know": "نمی‌دانم",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسیر دوچرخه پیاده‌رو را قطع می‌کند: دوچرخه‌ها و عابران با هم تلاقی می‌کنند"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسیر دوچرخه پیاده‌رو را قطع می‌کند: دوچرخه‌ها و عابران با هم تلاقی می‌کنند",
+      "#About this place": "این مکان",
+      "#Getting through": "عبور از اینجا",
+      "#Road safety": "ایمنی در ترافیک",
+      "#Personal security": "امنیت شخصی",
+      "#More details": "جزئیات بیشتر",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "آیا عبور از اینجا پیاده یا با ویلچر برایت دشوار است؟",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "آیا عبور از اینجا با دوچرخه یا اسکوتر برقی برایت دشوار است؟",
+      "#I cannot get through": "نمی‌توانم عبور کنم",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "آیا ترافیک در اینجا هنگام پیاده‌روی یا استفاده از ویلچر باعث احساس ناامنی تو می‌شود؟",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "آیا ترافیک در اینجا هنگام دوچرخه‌سواری یا استفاده از اسکوتر برقی باعث احساس ناامنی تو می‌شود؟",
+      "#During the day, do you feel unsafe here from crime or harassment?": "آیا روزها در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "آیا عصرها یا پس از تاریکی در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
+      "#Would you like to add optional details?": "آیا می‌خواهی جزئیات اختیاری اضافه کنی؟",
+      "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
+      "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
+      "#Doesn't apply to me": "به من مربوط نمی‌شود"
     },
     "hu": {
       "#Street Segment Assessment": "Egy utcaszakasz értékelése",
@@ -3750,7 +3841,23 @@
       "#Please do not write names or other personal data.": "Kérjük, ne írjon neveket vagy más személyes adatot.",
       "#Other": "Egyéb",
       "#I don't know": "Nem tudom",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "A kerékpárút átvágja a járdát: kerékpárosok és gyalogosok keresztezik egymást"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "A kerékpárút átvágja a járdát: kerékpárosok és gyalogosok keresztezik egymást",
+      "#About this place": "Ez a hely",
+      "#Getting through": "Áthaladás",
+      "#Road safety": "Közlekedésbiztonság",
+      "#Personal security": "Személyes biztonság",
+      "#More details": "További részletek",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Nehéz itt gyalog vagy kerekesszékkel áthaladnod?",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Nehéz itt kerékpárral vagy elektromos rollerrel áthaladnod?",
+      "#I cannot get through": "Nem tudok áthaladni",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "A forgalom miatt veszélyben érzed magad itt gyalog vagy kerekesszékkel?",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "A forgalom miatt veszélyben érzed magad itt kerékpárral vagy elektromos rollerrel?",
+      "#During the day, do you feel unsafe here from crime or harassment?": "Napközben bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Este vagy sötétedés után bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
+      "#Would you like to add optional details?": "Szeretnél további, nem kötelező részleteket megadni?",
+      "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
+      "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
+      "#Doesn't apply to me": "Rám nem vonatkozik"
     },
     "ar": {
       "#Street Segment Assessment": "تقييم جزء من الشارع",
@@ -3998,7 +4105,23 @@
       "#Please do not write names or other personal data.": "يُرجى عدم كتابة أسماء أو بيانات شخصية أخرى.",
       "#Other": "أخرى",
       "#I don't know": "لا أعرف",
-      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسار الدراجات يقطع الرصيف: الدراجات والمشاة يتقاطعون"
+      "#The cycle path cuts across the sidewalk: bicycles and pedestrians cross paths": "مسار الدراجات يقطع الرصيف: الدراجات والمشاة يتقاطعون",
+      "#About this place": "هذا المكان",
+      "#Getting through": "المرور من هنا",
+      "#Road safety": "السلامة المرورية",
+      "#Personal security": "الأمان الشخصي",
+      "#More details": "المزيد من التفاصيل",
+      "#Is it difficult for you to get through here on foot or using a wheelchair?": "هل يصعب عليك المرور من هنا مشيًا أو باستخدام كرسي متحرك؟",
+      "#Is it difficult for you to get through here by bicycle or e-scooter?": "هل يصعب عليك المرور من هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#I cannot get through": "لا أستطيع المرور",
+      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "هل تجعلك حركة المرور تشعر بالخطر هنا مشيًا أو باستخدام كرسي متحرك؟",
+      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "هل تجعلك حركة المرور تشعر بالخطر هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#During the day, do you feel unsafe here from crime or harassment?": "هل تشعر هنا نهارًا بعدم الأمان بسبب الجرائم أو المضايقات؟",
+      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "هل تشعر هنا مساءً أو بعد حلول الظلام بعدم الأمان بسبب الجرائم أو المضايقات؟",
+      "#Would you like to add optional details?": "هل ترغب في إضافة تفاصيل اختيارية؟",
+      "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
+      "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
+      "#Doesn't apply to me": "لا ينطبق عليّ"
     }
   },
   "id": "street_segment_assessment",
