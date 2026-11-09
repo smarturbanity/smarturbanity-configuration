@@ -47,3 +47,26 @@ specifications and independently reviewed the generated modes. Actual consumer
 condition checks pass, including no-use paths and follow-up targets. Campaigns
 remain disabled/unscheduled. See docs/sectioned-surveys.md. The next study target
 must include these bundles plus connection/segment report scenarios.
+
+## 2026-11-09 — Approved open issue 501
+
+Added powered wheelchair or mobility scooter to the optional mobility-support
+question, reusing the existing stable value and eight translations. Manual
+wheelchair, none, refusal and skipping remain distinct. Profile and question
+versions are 2.1.0; browser-check version expectations were updated.
+Actual-consumer language and conditional bundle checks pass. Browser checks pass:
+six existing profile scenarios in English/Italian and twelve serialized-choice
+scenarios across profile, connection and segment forms. None, refusal and skipped
+optional support remain distinct. Required context/security questions use explicit
+refusal instead of a skip. Powered support serializes separately from manual support.
+Ten walking/public-transport comfort questions now clarify their different journey
+contexts in eight languages; the actual editor displays all ten Italian helps.
+Existing visual-quality examples, answer values and conditions are preserved.
+The two historical comfort reports refer to this single intervention and retain
+their original identities. The corrected language audit found no additional certain
+defects in its bounded cases; it does not close the cumulative 191-note report.
+Six bundle/language regressions and location contract checks pass. Earlier probe
+failures were harness errors: fresh fixture initialization, an empty survey and an
+obsolete aggregate safety key. The final probe asserts serialized answer values.
+No participant comprehension, native-language acceptance, remote backend or
+Dev/Test deployment is claimed. Dashboard statuses must preserve these limits.
