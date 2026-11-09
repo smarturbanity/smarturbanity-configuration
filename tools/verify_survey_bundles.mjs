@@ -35,7 +35,7 @@ for (const report of manifest.bundles) {
   assert.ok(spec);
   const sourceForms = report.sources.map(source => {
     const bytes = fs.readFileSync(path.join(root, source.path));
-    assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256);
+    assert.equal(createHash('sha256').update(bytes.toString('utf8').replace(/\r\n/g, '\n')).digest('hex'), source.sha256);
     const data = JSON.parse(bytes);
     assert.ok(!sourceIds.has(data.questionnaire.questionnaire_id));
     sourceIds.add(data.questionnaire.questionnaire_id);

@@ -26,3 +26,40 @@ Wemo study access-easy-residents, round34: three sequential source-based cycles,
 - connection-flows-90a6a13-cycle3: confirmed both finding IDs resolved, with no new concrete issue.
 
 The coordinating agent executed these personas sequentially from frozen source and reviewed the structured evidence. They are hypothetical personas, not independent agents, residents, native-language reviewers or rendered-app usability sessions. Raw prompts and response traces remain in the private evidence store; the study register retains hashes and provenance. No new product decision is pending from these cycles. No push or deployment was performed.
+
+## Integrated questionnaire candidate
+
+The coordinator locally merged questionnaire-open-issues d542e61 with this report
+candidate e06d93e, without changing either primary checkout or publishing. The
+combined catalogue has 38 forms, including 16 sectioned mode questionnaires that
+preserve all 258 questions from 51 source forms. Source checks pass for all eight
+languages, 362 condition terms, 12 follow-up edges, seven chains and the same 42
+representative report branches; all 274 report assertions still pass.
+
+Integration exposed a portable-verification defect: the bundle manifest mixed LF
+and CRLF byte hashes. Source hashes now explicitly normalize UTF-8 text to LF in
+both builder and verifier. Rebuilding changes eight provenance hashes and no form
+definitions. This does not weaken question, condition or translation comparisons.
+
+The actual local app editor reaches review for all 16 mode questionnaires and six
+additional non-use screening paths. Non-users do not see later mode sections.
+Choices are deterministic test inputs, optional matrix cells are skipped, and no
+response is submitted. Separate report browser cases and the existing matrix
+regressions remain distinct evidence. The app baseline previously passed its final
+PR aggregate at 4d0c4035ad72996b2ed5fd0e143d6b66ab5aae5d; the integrated handoff
+receives a refreshed exact-candidate aggregate with pinned release dependencies.
+
+### Human acceptance still open
+
+The 23 active study reports and their item-level acceptance checks remain open as
+described in questionnaire-retest-readiness.md; source or browser success does not
+close them. The three report-persona cycles tested the earlier report-only target,
+not the later composed mode surveys. No new persona run is claimed here.
+
+For a real participant session: open the applicable mode questionnaire; explain
+each section in the participant's own words; test both use/non-use screening;
+record optional skips and actual completion time; check the car-use matrix and
+large text or the participant's assistive technology. Separately verify profile
+submission, voluntary edits and return visits in an authorized test environment.
+Record the exact app/configuration versions and keep simulated and human evidence
+separate. No participant contact or external data collection was performed.

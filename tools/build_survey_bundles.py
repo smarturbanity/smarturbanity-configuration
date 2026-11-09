@@ -17,7 +17,7 @@ def read(path):
 
 
 def write(path, value):
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
 def strings(value):
@@ -114,7 +114,7 @@ def compose(spec, bundle):
     for item in normalizations:
         assert item['key'] in bundle.get('translationOverrides', {}).get(item['language'], {}), item
         item['resolved'] = result['languages'][item['language']][item['key']]
-    provenance = {'id': questionnaire['questionnaire_id'], 'title': bundle['titles']['it'], 'minutes': questionnaire['estimated_minutes'], 'questions': len(ids), 'translationNormalizations': normalizations, 'sources': [{'path': p.relative_to(ROOT).as_posix(), 'version': s['questionnaire']['questionnaire_version'], 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p, s in zip(paths, sources)]}
+    provenance = {'id': questionnaire['questionnaire_id'], 'title': bundle['titles']['it'], 'minutes': questionnaire['estimated_minutes'], 'questions': len(ids), 'translationNormalizations': normalizations, 'sources': [{'path': p.relative_to(ROOT).as_posix(), 'version': s['questionnaire']['questionnaire_version'], 'sha256': hashlib.sha256(p.read_text(encoding='utf-8').encode('utf-8')).hexdigest()} for p, s in zip(paths, sources)]}
     return result, provenance, gate
 
 

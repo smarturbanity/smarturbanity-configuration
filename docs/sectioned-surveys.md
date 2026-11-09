@@ -46,6 +46,10 @@ the actual consumer's conditional behavior, order, definitions, translations,
 privacy, exact coverage and catalogue/campaign links. Pass the maintained
 CityMaaS `CityMaasRoot/Questionnaires/QuestionnaireConditions.js`.
 
+Source SHA-256 values use UTF-8 text with LF line endings. The builder and verifier
+normalize Windows CRLF before hashing, so a Git checkout cannot invalidate source
+provenance solely by changing line endings. Generated files use LF.
+
 Verification passes for 51 source forms, 16 questionnaires, 258 retained questions,
 38 total active catalogue forms and eight languages. Three independent delegated
 reviews cover the six modes. Browser navigation, completion times and perceived
