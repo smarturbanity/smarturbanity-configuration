@@ -31,3 +31,15 @@ The separate private-library import is complete: 23 technical passes and seven
 partial checks, reducing active opens from 46 to 23. The local live dashboard
 serves the activated release (HTTP 200, matching release hash). Configuration
 verification target: d136e9baf1d3c7516ce33c2b6ed279e70e188ee3.
+
+Final clarification: explicitly ask about crowding aboard/at the stop and use a
+neutral midpoint in all eight languages. Preserve answer values and conditions.
+Readiness records separate the next definition simulation from application
+persistence/scheduling acceptance. The previous 58-file collection is withheld:
+19 files were scripted, and nested introduction/final pages were not presented.
+
+Final focused validation: all 73 catalogue JSON forms parse and exist; eight
+updated translations have matching keys; stored options, conditions, other
+questions and privacy pages are unchanged; `git diff --check` passes. This
+repository declares no aggregate verification runner. No app/browser readiness
+or new persona acceptance is claimed by these source checks.

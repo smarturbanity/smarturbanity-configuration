@@ -49,6 +49,11 @@ This record does not rewrite frozen persona results or mark acceptance tests pas
 
 ## Still pending
 
+Readiness and the final crowding clarification are tracked in
+`questionnaire-retest-readiness.md`. Earlier round31 text records are not valid
+as 58 model reviews: one 19-person group was scripted and welcome/final pages
+were omitted. They cannot close current acceptance findings.
+
 - 1A: one profile with optional updates, and voluntarily selected trip pairs,
   requires verification of the application entry points and saved-response flow.
   This configuration change does not implement a scheduling or persistence rule.
