@@ -44,7 +44,7 @@ def compose(spec, bundle):
     result = {'questionnaire': copy.deepcopy(first), 'languages': {lang: {} for lang in LANGUAGES}}
     questionnaire = result['questionnaire']
     questionnaire['questionnaire_id'] = f"smarturbanity_{mode}_{bundle['suffix']}"
-    questionnaire['questionnaire_version'] = '1.0.0'
+    questionnaire['questionnaire_version'] = bundle.get('version', '1.0.0')
     questionnaire['name'] = 'SmartUrbanity - ' + bundle['titles']['en']
     questionnaire['title'] = bundle['titles']['en']
     questionnaire['estimated_minutes'] = sum(s['questionnaire']['estimated_minutes'] for s in sources)

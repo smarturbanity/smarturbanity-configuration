@@ -55,6 +55,21 @@ catalogue, but must not claim those campaigns are available in the live app.
 
 ## Completion boundary
 
+## Motorcycle confidence correction (9 November 2026)
+
+The composed motorcycle safety/comfort form now uses contextual confidence text
+keys: Italian confidence ends in “Molto” / “Moltissimo”, while comfort retains
+“Molto”. Answer values and optionality are unchanged. The source question is
+1.1.3 and the composed questionnaire is 1.0.1. All eight translations retain
+their previous confidence meanings; English labels make confidence explicit.
+The bundle verifier rejects composition that collapses distinct source options
+into identical translated labels. Independent review confirmed deterministic
+composition and 51 sources, 16 bundles, 258 questions and eight languages.
+This correction does not close historical native-language or accessibility
+acceptance reports; browser evidence belongs to the application gate above.
+
+## Completion boundary
+
 Preparation saves a new plan and frozen source; it does not launch personas.
 After execution, validate identities, hashes, conditional answers, exact evidence
 and actual executor; review before import, then rebuild and republish the private

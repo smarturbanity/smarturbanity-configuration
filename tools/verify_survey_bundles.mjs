@@ -60,6 +60,16 @@ for (const report of manifest.bundles) {
         assert.equal(match(question, yes), match(before[qi], yes));
       }
       assert.deepEqual(actual, expected, report.id + '/' + question.question_id);
+      for (const lang of ['en', 'it', 'fr', 'de', 'tr', 'fa', 'hu', 'ar']) {
+        const labels = (question.options ?? []).map(option => option.text).filter(text => typeof text === 'string');
+        const translate = (table, text) => table[text.startsWith('#') ? text : '#' + text] ?? text;
+        const originalLabels = labels.map(text => translate(original.languages[lang], text));
+        if (new Set(originalLabels).size === originalLabels.length) {
+          const bundledLabels = labels.map(text => translate(bundle.languages[lang], text));
+          assert.equal(new Set(bundledLabels).size, bundledLabels.length,
+            report.id + '/' + question.question_id + '/' + lang + ': composition merged distinct option labels');
+        }
+      }
       questions++;
     }
     if (gate && si > 0) {
