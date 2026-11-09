@@ -1,0 +1,1495 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - E-scooter – Your trips, comfort and improvements",
+    "questionnaire_id": "smarturbanity_e_scooter_trips_comfort_and_improvements",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 4,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "E-scooter – Your trips, comfort and improvements",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_e_scooter.svg",
+      "image_alt": "#E-scooter on a street",
+      "description": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "E-scooter – Your trips, comfort and improvements",
+    "sections": [
+      {
+        "title": "E-scooter – Your trips",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you ride an e-scooter to get around at least once a week?",
+            "help": "Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.",
+            "answer_key": "escooter_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "escooter_weekly",
+            "question_version": "1.0.1"
+          },
+          {
+            "text": "Why do you rarely ride an e-scooter? (Select all that apply)",
+            "answer_key": "not_escooter_reasons",
+            "question_type": "multiple_options",
+            "show_if": {
+              "escooter_weekly": [
+                "no"
+              ]
+            },
+            "options": [
+              {
+                "text": "I don't have an e-scooter I can use",
+                "value": "no_scooter"
+              },
+              {
+                "text": "The places I go are too far or it takes too long",
+                "value": "distance"
+              },
+              {
+                "text": "Standing and keeping my balance on it is tiring or difficult for me",
+                "value": "effort"
+              },
+              {
+                "text": "I feel unsafe riding one (traffic, crime or harassment)",
+                "value": "unsafe"
+              },
+              {
+                "text": "There are no good cycle lanes or places to leave it",
+                "value": "streets"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
+              }
+            ],
+            "required": false,
+            "question_id": "not_escooter_reasons",
+            "question_version": "1.0.1",
+            "privacy_classification": "special_category_health"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Which e-scooter do you use most often?",
+            "answer_key": "escooter_type",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "My own e-scooter",
+                "value": "e_scooter_private"
+              },
+              {
+                "text": "A shared e-scooter",
+                "value": "e_scooter_shared"
+              }
+            ],
+            "question_id": "escooter_type",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "How confident do you feel riding an e-scooter in city traffic?",
+            "answer_key": "escooter_confidence",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ]
+            },
+            "options": [
+              {
+                "text": "Not at all: I avoid riding in traffic",
+                "value": "not_confident_at_all_i_avoid_cycling_in"
+              },
+              {
+                "text": "Not very: I ride in traffic only when I have to",
+                "value": "not_very_confident_i_cycle_only_when_i_h"
+              },
+              {
+                "text": "In between",
+                "value": "neither_confident_nor_unconfident"
+              },
+              {
+                "text": "Fairly: I manage most situations",
+                "value": "somewhat_confident_i_manage_most_situati"
+              },
+              {
+                "text": "Very: I ride in any traffic",
+                "value": "very_confident_i_cycle_in_all_conditions"
+              },
+              {
+                "text": "I never ride in traffic",
+                "value": "i_have_never_cycled_in_urban_traffic"
+              }
+            ],
+            "question_id": "escooter_confidence",
+            "question_version": "1.0.1"
+          },
+          {
+            "text": "In the same trip, do you usually combine the e-scooter with another way of travelling?",
+            "help": "For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.",
+            "answer_key": "escooter_combines",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ]
+            },
+            "question_id": "escooter_combines",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+            "answer_key": "escooter_combined_modes",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+                "value": "walking_as_the_main_mode_for_most_of_the"
+              },
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Car sharing",
+                "value": "car_sharing"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bus",
+                "value": "bus"
+              },
+              {
+                "text": "Tram",
+                "value": "tram"
+              },
+              {
+                "text": "Metro",
+                "value": "metro"
+              },
+              {
+                "text": "Regional or suburban train",
+                "value": "train"
+              },
+              {
+                "text": "Bicycle/e-bike (private)",
+                "value": "bicycle_e_bike_private"
+              },
+              {
+                "text": "Bicycle/e-bike (shared)",
+                "value": "bicycle_e_bike_shared"
+              },
+              {
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
+              }
+            ],
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ],
+              "escooter_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "escooter_combined_modes",
+            "question_version": "1.0.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+            "answer_key": "escooter_combined_difficulties",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "options": [
+              {
+                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+                "value": "vehicles_are_too_crowded_e_g_no_space_fo"
+              },
+              {
+                "text": "Poor coordination between modes (long waiting times, missed connections)",
+                "value": "poor_coordination_between_modes_long_wai"
+              },
+              {
+                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+                "value": "lack_of_infrastructure_e_g_no_bicycle_pa"
+              },
+              {
+                "text": "Complicated transfers (stations far apart, unclear routes)",
+                "value": "complicated_transfers_stations_far_apart"
+              },
+              {
+                "text": "Travel time becomes too long",
+                "value": "travel_time_becomes_too_long"
+              },
+              {
+                "text": "Cost is too high when combining modes",
+                "value": "cost_is_too_high_when_combining_modes"
+              },
+              {
+                "text": "Safety concerns (traffic, theft, unsafe areas)",
+                "value": "safety_concerns_traffic_theft_unsafe_are"
+              },
+              {
+                "text": "Services are infrequent or do not run in the evening",
+                "value": "infrequent_or_no_evening_service"
+              },
+              {
+                "text": "Lack of reliable information (schedules, delays)",
+                "value": "lack_of_reliable_information_schedules_d"
+              },
+              {
+                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+                "value": "physical_effort_is_too_high_e_g_carrying"
+              },
+              {
+                "text": "Accessibility issues (stairs, no elevators, etc.)",
+                "value": "accessibility_issues_stairs_no_elevators"
+              },
+              {
+                "text": "Weather-related difficulties",
+                "value": "weather_related_difficulties"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ],
+              "escooter_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "escooter_combined_difficulties",
+            "question_version": "1.0.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "When you face these difficulties, how do you mostly respond?",
+            "answer_key": "escooter_combined_response",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
+                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
+              },
+              {
+                "text": "I switch to a single mode (e.g. only car, only public transport)",
+                "value": "i_switch_to_a_single_mode_e_g_only_car_o"
+              },
+              {
+                "text": "I change the time of travel (e.g. avoid peak hours)",
+                "value": "i_change_the_time_of_travel_e_g_avoid_pe"
+              },
+              {
+                "text": "I change the route or transfer point",
+                "value": "i_change_the_route_or_transfer_point"
+              },
+              {
+                "text": "I choose a different combination of modes",
+                "value": "i_choose_a_different_combination_of_mode"
+              },
+              {
+                "text": "I continue using the same combination despite difficulties",
+                "value": "i_continue_using_the_same_combination_de"
+              },
+              {
+                "text": "I reduce how often I make that trip",
+                "value": "i_reduce_how_often_i_make_that_trip"
+              },
+              {
+                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+                "value": "i_look_for_alternative_solutions_e_g_bik"
+              },
+              {
+                "text": "I avoid that trip entirely if possible",
+                "value": "i_avoid_that_trip_entirely_if_possible"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "escooter_weekly": [
+                "yes"
+              ],
+              "escooter_combines": [
+                "yes"
+              ],
+              "escooter_combined_difficulties": {
+                "not": [
+                  "i_do_not_experience_significant_difficul"
+                ]
+              }
+            },
+            "question_id": "escooter_combined_response",
+            "question_version": "1.0.2",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      },
+      {
+        "title": "E-scooter – Comfort",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do hills and slopes change how you ride your e-scooter?",
+            "answer_key": "escooter_avoid_slopes",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, they don't affect me",
+                "value": "not_at_all"
+              },
+              {
+                "text": "I notice them, but they don't change my trip",
+                "value": "slightly_i_notice_hills_but_they_do_not"
+              },
+              {
+                "text": "They slow me down or tire me a lot",
+                "value": "moderately_hills_slow_me_down_or_increas"
+              },
+              {
+                "text": "I avoid steep roads when I can",
+                "value": "significantly_i_avoid_steep_routes_when"
+              },
+              {
+                "text": "They limit where I can ride",
+                "value": "extremely_hills_are_a_major_barrier_that"
+              }
+            ],
+            "question_id": "escooter_avoid_slopes",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you ride an e-scooter, do signs for cyclists help you find your way?",
+            "answer_key": "escooter_wayfinding",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "I find my way easily, with or without signs",
+                "value": "not_at_all_i_can_navigate_easily_regardl"
+              },
+              {
+                "text": "Signs help me now and then",
+                "value": "slightly_signs_are_occasionally_helpful"
+              },
+              {
+                "text": "I use signs to check I'm on the right route",
+                "value": "moderately_i_rely_on_signs_to_confirm_my"
+              },
+              {
+                "text": "Missing or unclear signs sometimes make me lose my way",
+                "value": "significantly_unclear_or_missing_signs_s"
+              },
+              {
+                "text": "Signs are so poor that I need my phone to find the way",
+                "value": "very_significantly_poor_signage_makes_na"
+              }
+            ],
+            "question_id": "escooter_wayfinding",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Where you go most often, is there a good place to leave your e-scooter?",
+            "help": "For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.",
+            "answer_key": "escooter_parking_destination",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, there is nowhere safe to leave it",
+                "value": "very_inadequate_there_is_nowhere_secure"
+              },
+              {
+                "text": "There is some, but too little or too far away",
+                "value": "inadequate_parking_exists_but_is_too_lim"
+              },
+              {
+                "text": "Yes, but it isn't always handy or safe",
+                "value": "partially_adequate_parking_is_available"
+              },
+              {
+                "text": "Yes, I can usually find a good place",
+                "value": "mostly_adequate_i_can_usually_find_a_sui"
+              },
+              {
+                "text": "Yes, always safe and handy",
+                "value": "very_adequate_secure_and_convenient_park"
+              }
+            ],
+            "question_id": "escooter_parking_destination",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?",
+            "answer_key": "escooter_parking_changed_plans",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ],
+            "question_id": "escooter_parking_changed_plans",
+            "question_version": "1.0.1"
+          }
+        ],
+        "show_if": {
+          "escooter_weekly": [
+            "yes"
+          ]
+        }
+      },
+      {
+        "title": "E-scooter – What would help",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "What would make you ride an e-scooter more often or further?",
+            "answer_key": "escooter_improvements",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "options": [
+              {
+                "text": "More cycle lanes separated from traffic",
+                "value": "more_dedicated_and_physically_separated"
+              },
+              {
+                "text": "Better road surfaces on bike routes",
+                "value": "better_road_surface_quality_on_cycling_r"
+              },
+              {
+                "text": "More places to park e-scooters where I go",
+                "value": "more_e_scooter_parking_at_destination"
+              },
+              {
+                "text": "Safe e-scooter storage near home",
+                "value": "secure_e_scooter_storage_near_home"
+              },
+              {
+                "text": "Slower traffic in residential streets",
+                "value": "reduced_vehicle_speeds_in_residential_ar"
+              },
+              {
+                "text": "Safer junctions and crossings for bikes and e-scooters",
+                "value": "better_junctions_and_crossings_for_bikes_and_e_scooters"
+              },
+              {
+                "text": "More trees and shade",
+                "value": "more_trees_and_shade_along_cycling_route"
+              },
+              {
+                "text": "Better street lighting",
+                "value": "better_street_lighting_on_cycling_routes"
+              },
+              {
+                "text": "E-scooter lessons or courses",
+                "value": "access_to_e_scooter_training"
+              },
+              {
+                "text": "Cheaper shared e-scooters",
+                "value": "cheaper_shared_e_scooters"
+              },
+              {
+                "text": "Shared e-scooters available in more areas",
+                "value": "shared_e_scooters_in_more_areas"
+              },
+              {
+                "text": "Money help (e.g. bonus to buy an e-scooter, employer allowance)",
+                "value": "financial_help_to_buy_an_e_scooter"
+              },
+              {
+                "text": "Continuous cycle routes connecting neighbourhoods",
+                "value": "continuous_routes_between_neighbourhoods"
+              },
+              {
+                "text": "Being able to take a bicycle or e-scooter on buses, trams, the metro or trains",
+                "value": "bike_on_public_transport"
+              },
+              {
+                "text": "Nothing: I'm happy as things are",
+                "value": "nothing_i_am_satisfied_with_current_cond",
+                "exclusive": true
+              }
+            ],
+            "question_id": "escooter_improvements",
+            "question_version": "1.0.2"
+          }
+        ],
+        "show_if": {
+          "escooter_weekly": [
+            "yes"
+          ]
+        }
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "#E-scooter – Your trips": "E-scooter – Your trips",
+      "#Do you ride an e-scooter to get around at least once a week?": "Do you ride an e-scooter to get around at least once a week?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Which e-scooter do you use most often?": "Which e-scooter do you use most often?",
+      "#My own e-scooter": "My own e-scooter",
+      "#A shared e-scooter": "A shared e-scooter",
+      "#How confident do you feel riding an e-scooter in city traffic?": "How confident do you feel riding an e-scooter in city traffic?",
+      "#Not at all: I avoid riding in traffic": "Not at all: I avoid riding in traffic",
+      "#Not very: I ride in traffic only when I have to": "Not very: I ride in traffic only when I have to",
+      "#In between": "In between",
+      "#Fairly: I manage most situations": "Fairly: I manage most situations",
+      "#Very: I ride in any traffic": "Very: I ride in any traffic",
+      "#I never ride in traffic": "I never ride in traffic",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "In the same trip, do you usually combine the e-scooter with another way of travelling?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+      "#Car": "Car",
+      "#Car sharing": "Car sharing",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#Bus": "Bus",
+      "#Tram": "Tram",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Regional or suburban train",
+      "#Bicycle/e-bike (private)": "Bicycle/e-bike (private)",
+      "#Bicycle/e-bike (shared)": "Bicycle/e-bike (shared)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Poor coordination between modes (long waiting times, missed connections)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Complicated transfers (stations far apart, unclear routes)",
+      "#Travel time becomes too long": "Travel time becomes too long",
+      "#Cost is too high when combining modes": "Cost is too high when combining modes",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Safety concerns (traffic, theft, unsafe areas)",
+      "#Services are infrequent or do not run in the evening": "Services are infrequent or do not run in the evening",
+      "#Lack of reliable information (schedules, delays)": "Lack of reliable information (schedules, delays)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
+      "#Weather-related difficulties": "Weather-related difficulties",
+      "#I do not experience significant difficulties": "I do not experience significant difficulties",
+      "#When you face these difficulties, how do you mostly respond?": "When you face these difficulties, how do you mostly respond?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "I stop using one of the modes (e.g. stop bringing my bike)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "I switch to a single mode (e.g. only car, only public transport)",
+      "#I change the time of travel (e.g. avoid peak hours)": "I change the time of travel (e.g. avoid peak hours)",
+      "#I change the route or transfer point": "I change the route or transfer point",
+      "#I choose a different combination of modes": "I choose a different combination of modes",
+      "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
+      "#I reduce how often I make that trip": "I reduce how often I make that trip",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Why do you rarely ride an e-scooter? (Select all that apply)",
+      "#I don't have an e-scooter I can use": "I don't have an e-scooter I can use",
+      "#The places I go are too far or it takes too long": "The places I go are too far or it takes too long",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Standing and keeping my balance on it is tiring or difficult for me",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "I feel unsafe riding one (traffic, crime or harassment)",
+      "#There are no good cycle lanes or places to leave it": "There are no good cycle lanes or places to leave it",
+      "#Another reason": "Another reason",
+      "#E-scooter – Comfort": "E-scooter – Comfort",
+      "#Do hills and slopes change how you ride your e-scooter?": "Do hills and slopes change how you ride your e-scooter?",
+      "#No, they don't affect me": "No, they don't affect me",
+      "#I notice them, but they don't change my trip": "I notice them, but they don't change my trip",
+      "#They slow me down or tire me a lot": "They slow me down or tire me a lot",
+      "#I avoid steep roads when I can": "I avoid steep roads when I can",
+      "#They limit where I can ride": "They limit where I can ride",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "When you ride an e-scooter, do signs for cyclists help you find your way?",
+      "#I find my way easily, with or without signs": "I find my way easily, with or without signs",
+      "#Signs help me now and then": "Signs help me now and then",
+      "#I use signs to check I'm on the right route": "I use signs to check I'm on the right route",
+      "#Missing or unclear signs sometimes make me lose my way": "Missing or unclear signs sometimes make me lose my way",
+      "#Signs are so poor that I need my phone to find the way": "Signs are so poor that I need my phone to find the way",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "Where you go most often, is there a good place to leave your e-scooter?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.",
+      "#No, there is nowhere safe to leave it": "No, there is nowhere safe to leave it",
+      "#There is some, but too little or too far away": "There is some, but too little or too far away",
+      "#Yes, but it isn't always handy or safe": "Yes, but it isn't always handy or safe",
+      "#Yes, I can usually find a good place": "Yes, I can usually find a good place",
+      "#Yes, always safe and handy": "Yes, always safe and handy",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
+      "#E-scooter – What would help": "E-scooter – What would help",
+      "#What would make you ride an e-scooter more often or further?": "What would make you ride an e-scooter more often or further?",
+      "#More cycle lanes separated from traffic": "More cycle lanes separated from traffic",
+      "#Better road surfaces on bike routes": "Better road surfaces on bike routes",
+      "#More places to park e-scooters where I go": "More places to park e-scooters where I go",
+      "#Safe e-scooter storage near home": "Safe e-scooter storage near home",
+      "#Slower traffic in residential streets": "Slower traffic in residential streets",
+      "#Safer junctions and crossings for bikes and e-scooters": "Safer junctions and crossings for bikes and e-scooters",
+      "#More trees and shade": "More trees and shade",
+      "#Better street lighting": "Better street lighting",
+      "#E-scooter lessons or courses": "E-scooter lessons or courses",
+      "#Cheaper shared e-scooters": "Cheaper shared e-scooters",
+      "#Shared e-scooters available in more areas": "Shared e-scooters available in more areas",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Money help (e.g. bonus to buy an e-scooter, employer allowance)",
+      "#Continuous cycle routes connecting neighbourhoods": "Continuous cycle routes connecting neighbourhoods",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Being able to take a bicycle or e-scooter on buses, trams, the metro or trains",
+      "#Nothing: I'm happy as things are": "Nothing: I'm happy as things are",
+      "#E-scooter – Your trips, comfort and improvements": "E-scooter – Your trips, comfort and improvements",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - E-scooter – Your trips, comfort and improvements",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#E-scooter on a street": "E-scooter on a street"
+    },
+    "it": {
+      "#E-scooter – Your trips": "In monopattino – I tuoi spostamenti",
+      "#Do you ride an e-scooter to get around at least once a week?": "Vai in monopattino elettrico almeno una volta a settimana per spostarti?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Il tuo monopattino o uno in condivisione. Motorini e scooter con sella qui non contano.",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Which e-scooter do you use most often?": "Quale monopattino elettrico usi più spesso?",
+      "#My own e-scooter": "Il mio monopattino elettrico",
+      "#A shared e-scooter": "Un monopattino elettrico in condivisione",
+      "#How confident do you feel riding an e-scooter in city traffic?": "Quanta fiducia hai nell’andare in monopattino elettrico nel traffico cittadino?",
+      "#Not at all: I avoid riding in traffic": "Per niente: evito di andare nel traffico",
+      "#Not very: I ride in traffic only when I have to": "Poca: vado nel traffico solo quando devo",
+      "#In between": "Via di mezzo",
+      "#Fairly: I manage most situations": "Abbastanza: me la cavo nella maggior parte dei casi",
+      "#Very: I ride in any traffic": "Molta: vado con qualsiasi traffico",
+      "#I never ride in traffic": "Non vado mai nel traffico",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Nello stesso spostamento, di solito oltre al monopattino usi anche un altro modo di spostarti?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Per esempio monopattino e treno, oppure monopattino e metro. Un breve tratto a piedi fino alla fermata o al veicolo parcheggiato non conta.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quali altri modi di spostarti usi nello stesso spostamento? (Seleziona tutte le opzioni applicabili)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
+      "#Car": "Auto",
+      "#Car sharing": "Auto in condivisione (car sharing)",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#Bus": "Autobus",
+      "#Tram": "Tram",
+      "#Metro": "Metropolitana",
+      "#Regional or suburban train": "Treno regionale o suburbano",
+      "#Bicycle/e-bike (private)": "Bicicletta o bici elettrica (privata)",
+      "#Bicycle/e-bike (shared)": "Bicicletta o bici elettrica (condivisa)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o auto con conducente (NCC, ad es. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Cambi complicati (stazioni distanti tra loro, percorsi poco chiari)",
+      "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
+      "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
+      "#Services are infrequent or do not run in the evening": "Le corse sono rare o assenti la sera",
+      "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Lo sforzo fisico è troppo elevato (ad es. trasportare una bicicletta o camminare per lunghe distanze)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
+      "#Weather-related difficulties": "Difficoltà legate alle condizioni meteorologiche",
+      "#I do not experience significant difficulties": "Non incontro difficoltà significative",
+      "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Smetto di utilizzare uno dei mezzi (ad es. non porto più la mia bicicletta)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Passo a un'unica modalità di trasporto (ad es. solo auto o solo trasporto pubblico)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Cambio l'orario dello spostamento (ad es. evito le ore di punta)",
+      "#I change the route or transfer point": "Cambio il percorso o il punto di interscambio",
+      "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
+      "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
+      "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bici in condivisione invece della mia bicicletta)",
+      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Perché vai poco in monopattino elettrico? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have an e-scooter I can use": "Non ho un monopattino elettrico da usare",
+      "#The places I go are too far or it takes too long": "I posti dove vado sono troppo lontani o ci vuole troppo tempo",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Stare in piedi e mantenere l’equilibrio è faticoso o difficile per me",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "In monopattino non mi sento al sicuro (traffico, criminalità o molestie)",
+      "#There are no good cycle lanes or places to leave it": "Mancano buone piste ciclabili o posti dove lasciarlo",
+      "#Another reason": "Un altro motivo",
+      "#E-scooter – Comfort": "In monopattino – Comfort",
+      "#Do hills and slopes change how you ride your e-scooter?": "Le salite e le pendenze cambiano il modo in cui vai in monopattino elettrico?",
+      "#No, they don't affect me": "No, non mi danno problemi",
+      "#I notice them, but they don't change my trip": "Me ne accorgo, ma non cambiano il mio viaggio",
+      "#They slow me down or tire me a lot": "Mi rallentano o mi stancano molto",
+      "#I avoid steep roads when I can": "Evito le strade ripide quando posso",
+      "#They limit where I can ride": "Limitano dove posso andare",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "Quando vai in monopattino elettrico, i cartelli per chi va in bici ti aiutano a orientarti?",
+      "#I find my way easily, with or without signs": "Trovo la strada facilmente, con o senza cartelli",
+      "#Signs help me now and then": "I cartelli mi aiutano ogni tanto",
+      "#I use signs to check I'm on the right route": "Uso i cartelli per controllare di essere sulla strada giusta",
+      "#Missing or unclear signs sometimes make me lose my way": "Cartelli mancanti o poco chiari a volte mi fanno perdere la strada",
+      "#Signs are so poor that I need my phone to find the way": "I cartelli sono così scarsi che mi serve il telefono per trovare la strada",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "Nei posti dove vai più spesso, c’è un buon posto dove lasciare il monopattino elettrico?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "Per il tuo monopattino, un posto dove chiuderlo in modo sicuro; per uno in condivisione, un’area dove il parcheggio è consentito.",
+      "#No, there is nowhere safe to leave it": "No, non c'è nessun posto sicuro dove lasciarla",
+      "#There is some, but too little or too far away": "Ce n'è qualcuno, ma troppo poco o troppo lontano",
+      "#Yes, but it isn't always handy or safe": "Sì, ma non è sempre comodo o sicuro",
+      "#Yes, I can usually find a good place": "Sì, di solito trovo un buon posto",
+      "#Yes, always safe and handy": "Sì, sempre sicuro e comodo",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "Non avere un buon posto dove lasciare un monopattino elettrico ti ha mai fatto cambiare programmi o rinunciare a usarlo?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
+      "#E-scooter – What would help": "In monopattino – Cosa ti aiuterebbe",
+      "#What would make you ride an e-scooter more often or further?": "Cosa ti farebbe andare in monopattino elettrico più spesso o più lontano?",
+      "#More cycle lanes separated from traffic": "Più piste ciclabili separate dal traffico",
+      "#Better road surfaces on bike routes": "Fondo stradale migliore sui percorsi ciclabili",
+      "#More places to park e-scooters where I go": "Più posti dove parcheggiare i monopattini elettrici nei luoghi dove vado",
+      "#Safe e-scooter storage near home": "Rimesse sicure per i monopattini elettrici vicino a casa",
+      "#Slower traffic in residential streets": "Traffico più lento nelle strade residenziali",
+      "#Safer junctions and crossings for bikes and e-scooters": "Incroci e attraversamenti più sicuri per bici e monopattini elettrici",
+      "#More trees and shade": "Più alberi e ombra",
+      "#Better street lighting": "Illuminazione stradale migliore",
+      "#E-scooter lessons or courses": "Lezioni o corsi per andare in monopattino elettrico",
+      "#Cheaper shared e-scooters": "Monopattini elettrici in condivisione più economici",
+      "#Shared e-scooters available in more areas": "Monopattini elettrici in condivisione disponibili in più zone",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Aiuti economici (ad es. bonus per comprare un monopattino elettrico, contributo del datore di lavoro)",
+      "#Continuous cycle routes connecting neighbourhoods": "Percorsi ciclabili continui che collegano i quartieri",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Poter portare la bicicletta o il monopattino su autobus, tram, metro o treni",
+      "#Nothing: I'm happy as things are": "Niente: mi va bene così",
+      "#E-scooter – Your trips, comfort and improvements": "Monopattino elettrico – I tuoi viaggi, il comfort e i miglioramenti desiderati",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Monopattino elettrico – I tuoi viaggi, il comfort e i miglioramenti desiderati",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Qualche domanda su come ti sposti in monopattino elettrico, tuo o in condivisione. Se ne usi uno raramente, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In monopattino – I tuoi spostamenti</li><li>In monopattino – Comfort</li><li>In monopattino – Cosa ti aiuterebbe</li></ul>",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#E-scooter on a street": "Monopattino elettrico su una strada"
+    },
+    "fr": {
+      "#E-scooter – Your trips": "Trottinette électrique – Vos déplacements",
+      "#Do you ride an e-scooter to get around at least once a week?": "Utilisez-vous une trottinette électrique pour vous déplacer au moins une fois par semaine ?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "La vôtre ou une en libre-service. Les cyclomoteurs et scooters à selle ne comptent pas ici.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Which e-scooter do you use most often?": "Quelle trottinette électrique utilisez-vous le plus souvent ?",
+      "#My own e-scooter": "Ma propre trottinette électrique",
+      "#A shared e-scooter": "Une trottinette électrique en libre-service",
+      "#How confident do you feel riding an e-scooter in city traffic?": "Quelle confiance avez-vous quand vous roulez en trottinette électrique dans la circulation en ville ?",
+      "#Not at all: I avoid riding in traffic": "Aucune : j’évite de rouler dans la circulation",
+      "#Not very: I ride in traffic only when I have to": "Peu : je roule dans la circulation seulement quand je dois",
+      "#In between": "Entre les deux",
+      "#Fairly: I manage most situations": "Assez : je me débrouille dans la plupart des situations",
+      "#Very: I ride in any traffic": "Beaucoup : je roule dans toute circulation",
+      "#I never ride in traffic": "Je ne roule jamais dans la circulation",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Au cours d’un même trajet, combinez-vous généralement la trottinette électrique avec un autre mode de déplacement ?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Par exemple trottinette électrique et train, ou trottinette électrique et métro. Une courte marche jusqu’à un arrêt ou à un véhicule garé ne compte pas.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quels autres modes de déplacement utilisez-vous au cours du même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
+      "#Car": "Voiture",
+      "#Car sharing": "Autopartage",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#Bus": "Bus",
+      "#Tram": "Tramway",
+      "#Metro": "Métro",
+      "#Regional or suburban train": "Train régional ou de banlieue",
+      "#Bicycle/e-bike (private)": "Vélo / vélo électrique (personnel)",
+      "#Bicycle/e-bike (shared)": "Vélo / vélo électrique (partagé)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Les véhicules sont trop remplis (par ex. pas de place pour un vélo ou des bagages)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Mauvaise coordination entre les modes (longues attentes, correspondances manquées)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Manque d’infrastructures (par ex. pas de stationnement vélo ou vélo non autorisé dans les transports publics)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Correspondances compliquées (stations éloignées, itinéraires peu clairs)",
+      "#Travel time becomes too long": "Le temps de trajet devient trop long",
+      "#Cost is too high when combining modes": "Le coût est trop élevé quand plusieurs modes sont combinés",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Problèmes de sécurité (circulation, vol, zones peu sûres)",
+      "#Services are infrequent or do not run in the evening": "Les passages sont rares ou inexistants le soir",
+      "#Lack of reliable information (schedules, delays)": "Manque d’informations fiables (horaires, retards)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "L’effort physique est trop important (par ex. porter un vélo ou marcher longtemps)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
+      "#Weather-related difficulties": "Difficultés liées à la météo",
+      "#I do not experience significant difficulties": "Je ne rencontre pas de difficulté importante",
+      "#When you face these difficulties, how do you mostly respond?": "Quand vous rencontrez ces difficultés, que faites-vous le plus souvent ?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "J’arrête d’utiliser l’un des modes (par ex. je ne prends plus mon vélo)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Je passe à un seul mode de transport (par ex. uniquement la voiture ou uniquement les transports publics)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Je change mon heure de déplacement (par ex. j’évite les heures de pointe)",
+      "#I change the route or transfer point": "Je change d’itinéraire ou de lieu de correspondance",
+      "#I choose a different combination of modes": "Je choisis une autre combinaison de modes",
+      "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
+      "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
+      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Pourquoi utilisez-vous rarement une trottinette électrique ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have an e-scooter I can use": "Je n’ai pas de trottinette électrique à disposition",
+      "#The places I go are too far or it takes too long": "Les lieux où je vais sont trop loin ou le trajet prend trop de temps",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Rester debout et garder l’équilibre dessus est fatigant ou difficile pour moi",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Je ne me sens pas en sécurité en trottinette (circulation, délinquance ou harcèlement)",
+      "#There are no good cycle lanes or places to leave it": "Il manque de bonnes pistes cyclables ou d’endroits où la laisser",
+      "#Another reason": "Une autre raison",
+      "#E-scooter – Comfort": "Trottinette électrique – Confort",
+      "#Do hills and slopes change how you ride your e-scooter?": "Les côtes et les pentes changent-elles votre façon de rouler en trottinette électrique ?",
+      "#No, they don't affect me": "Non, elles ne me gênent pas",
+      "#I notice them, but they don't change my trip": "Je les remarque, mais elles ne changent pas mon trajet",
+      "#They slow me down or tire me a lot": "Elles me ralentissent ou me fatiguent beaucoup",
+      "#I avoid steep roads when I can": "J'évite les routes raides quand je peux",
+      "#They limit where I can ride": "Elles limitent les endroits où je peux aller",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "Lorsque vous roulez en trottinette électrique, les panneaux destinés aux cyclistes vous aident-ils à vous repérer ?",
+      "#I find my way easily, with or without signs": "Je trouve facilement mon chemin, avec ou sans panneaux",
+      "#Signs help me now and then": "Les panneaux m'aident de temps en temps",
+      "#I use signs to check I'm on the right route": "J'utilise les panneaux pour vérifier que je suis sur le bon trajet",
+      "#Missing or unclear signs sometimes make me lose my way": "Des panneaux absents ou peu clairs me font parfois perdre mon chemin",
+      "#Signs are so poor that I need my phone to find the way": "Les panneaux sont si mauvais que j'ai besoin de mon téléphone pour trouver mon chemin",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "Là où vous allez le plus souvent, y a-t-il un bon endroit où laisser votre trottinette électrique ?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "Pour la vôtre, un endroit où l’attacher en sécurité ; pour une trottinette en libre-service, une zone où le stationnement est autorisé.",
+      "#No, there is nowhere safe to leave it": "Non, il n'y a aucun endroit sûr pour le laisser",
+      "#There is some, but too little or too far away": "Il y en a, mais trop peu ou trop loin",
+      "#Yes, but it isn't always handy or safe": "Oui, mais ce n'est pas toujours pratique ou sûr",
+      "#Yes, I can usually find a good place": "Oui, je trouve en général un bon endroit",
+      "#Yes, always safe and handy": "Oui, toujours sûr et pratique",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "Le manque d’un bon endroit où laisser une trottinette électrique vous a-t-il déjà fait changer vos plans ou renoncer à l’utiliser ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#Always": "Toujours",
+      "#E-scooter – What would help": "Trottinette électrique – Ce qui aiderait",
+      "#What would make you ride an e-scooter more often or further?": "Qu’est-ce qui vous ferait rouler plus souvent ou plus loin en trottinette électrique ?",
+      "#More cycle lanes separated from traffic": "Plus de pistes cyclables séparées de la circulation",
+      "#Better road surfaces on bike routes": "De meilleurs revêtements sur les itinéraires cyclables",
+      "#More places to park e-scooters where I go": "Plus d’endroits où garer les trottinettes électriques là où je vais",
+      "#Safe e-scooter storage near home": "Des abris sûrs pour les trottinettes électriques près de chez moi",
+      "#Slower traffic in residential streets": "Une circulation plus lente dans les rues résidentielles",
+      "#Safer junctions and crossings for bikes and e-scooters": "Des carrefours et des traversées plus sûrs pour les vélos et les trottinettes électriques",
+      "#More trees and shade": "Plus d'arbres et d'ombre",
+      "#Better street lighting": "Un meilleur éclairage des rues",
+      "#E-scooter lessons or courses": "Des leçons ou des cours de trottinette électrique",
+      "#Cheaper shared e-scooters": "Des trottinettes électriques en libre-service moins chères",
+      "#Shared e-scooters available in more areas": "Des trottinettes électriques en libre-service disponibles dans plus de quartiers",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Aides financières (par ex. prime à l’achat d’une trottinette électrique, aide de l’employeur)",
+      "#Continuous cycle routes connecting neighbourhoods": "Des itinéraires cyclables continus reliant les quartiers",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Pouvoir emporter son vélo ou sa trottinette dans les bus, tramways, métros ou trains",
+      "#Nothing: I'm happy as things are": "Rien : cela me convient ainsi",
+      "#E-scooter – Your trips, comfort and improvements": "Trottinette électrique – Vos trajets, le confort et les améliorations souhaitées",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Trottinette électrique – Vos trajets, le confort et les améliorations souhaitées",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Quelques questions sur vos déplacements en trottinette électrique, la vôtre ou en libre-service. Si vous en utilisez rarement une, nous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Trottinette électrique – Vos déplacements</li><li>Trottinette électrique – Confort</li><li>Trottinette électrique – Ce qui aiderait</li></ul>",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#E-scooter on a street": "Trottinette électrique dans une rue"
+    },
+    "de": {
+      "#E-scooter – Your trips": "E-Scooter – Ihre Wege",
+      "#Do you ride an e-scooter to get around at least once a week?": "Fahren Sie mindestens einmal pro Woche mit dem E-Scooter, um irgendwohin zu kommen?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Ihr eigener E-Scooter oder ein geliehener. Mopeds und Motorroller mit Sitz zählen hier nicht.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Which e-scooter do you use most often?": "Welchen E-Scooter nutzen Sie am häufigsten?",
+      "#My own e-scooter": "Mein eigener E-Scooter",
+      "#A shared e-scooter": "Ein geliehener E-Scooter",
+      "#How confident do you feel riding an e-scooter in city traffic?": "Wie sicher fühlen Sie sich beim E-Scooter-Fahren im Stadtverkehr?",
+      "#Not at all: I avoid riding in traffic": "Gar nicht: Ich vermeide es, im Verkehr zu fahren",
+      "#Not very: I ride in traffic only when I have to": "Wenig: Ich fahre nur im Verkehr, wenn ich muss",
+      "#In between": "Mittel",
+      "#Fairly: I manage most situations": "Einigermaßen: Ich komme in den meisten Situationen zurecht",
+      "#Very: I ride in any traffic": "Sehr: Ich fahre in jedem Verkehr",
+      "#I never ride in traffic": "Ich fahre nie im Verkehr",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Kombinieren Sie auf demselben Weg den E-Scooter meist mit einer anderen Art der Fortbewegung?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Zum Beispiel E-Scooter und Zug oder E-Scooter und U-Bahn. Ein kurzer Fußweg zur Haltestelle oder zum geparkten Fahrzeug zählt nicht.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Welche anderen Verkehrsmittel nutzen Sie auf demselben Weg? (Wählen Sie alles Zutreffende aus)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
+      "#Car": "Auto",
+      "#Car sharing": "Carsharing",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#Bus": "Bus",
+      "#Tram": "Straßenbahn",
+      "#Metro": "U-Bahn/Metro",
+      "#Regional or suburban train": "Regional- oder S-Bahn",
+      "#Bicycle/e-bike (private)": "Fahrrad / E-Bike (privat)",
+      "#Bicycle/e-bike (shared)": "Fahrrad / E-Bike (Sharing)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad oder Gepäck)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Schlechte Abstimmung zwischen Verkehrsmitteln (lange Wartezeiten, verpasste Anschlüsse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Fehlende Infrastruktur (z. B. keine Fahrradabstellplätze oder Fahrräder dürfen nicht mitgenommen werden)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Kompliziertes Umsteigen (Haltestellen weit auseinander, unklare Wege)",
+      "#Travel time becomes too long": "Die gesamte Fahrzeit wird zu lang",
+      "#Cost is too high when combining modes": "Die Kosten sind beim Kombinieren mehrerer Verkehrsmittel zu hoch",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Sicherheitsbedenken (Verkehr, Diebstahl, unsichere Bereiche)",
+      "#Services are infrequent or do not run in the evening": "Die Verbindungen sind selten oder fahren abends nicht",
+      "#Lack of reliable information (schedules, delays)": "Fehlende verlässliche Informationen (Fahrpläne, Verspätungen)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Der körperliche Aufwand ist zu hoch (z. B. Fahrrad tragen oder lange Strecken zu Fuß gehen)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
+      "#Weather-related difficulties": "Schwierigkeiten durch das Wetter",
+      "#I do not experience significant difficulties": "Ich habe keine größeren Schwierigkeiten",
+      "#When you face these difficulties, how do you mostly respond?": "Wie reagieren Sie normalerweise, wenn diese Schwierigkeiten auftreten?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ich nutze eines der Verkehrsmittel nicht mehr (z. B. nehme ich mein Fahrrad nicht mehr mit)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Ich wechsle zu nur einem Verkehrsmittel (z. B. nur Auto oder nur öffentlicher Verkehr)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Ich ändere meine Fahrzeit (z. B. vermeide ich Stoßzeiten)",
+      "#I change the route or transfer point": "Ich ändere Route oder Umsteigepunkt",
+      "#I choose a different combination of modes": "Ich wähle eine andere Kombination von Verkehrsmitteln",
+      "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
+      "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
+      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Warum fahren Sie selten E-Scooter? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have an e-scooter I can use": "Ich habe keinen E-Scooter, den ich nutzen kann",
+      "#The places I go are too far or it takes too long": "Meine Ziele sind zu weit entfernt oder der Weg damit dauert zu lange",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Darauf zu stehen und das Gleichgewicht zu halten ist für mich anstrengend oder schwierig",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Ich fühle mich dabei unsicher (Verkehr, Kriminalität oder Belästigung)",
+      "#There are no good cycle lanes or places to leave it": "Es gibt keine guten Radwege oder Abstellplätze dafür",
+      "#Another reason": "Ein anderer Grund",
+      "#E-scooter – Comfort": "E-Scooter – Komfort",
+      "#Do hills and slopes change how you ride your e-scooter?": "Verändern Hügel und Steigungen, wie Sie E-Scooter fahren?",
+      "#No, they don't affect me": "Nein, sie stören mich nicht",
+      "#I notice them, but they don't change my trip": "Ich merke sie, aber sie ändern meine Fahrt nicht",
+      "#They slow me down or tire me a lot": "Sie bremsen mich oder strengen mich sehr an",
+      "#I avoid steep roads when I can": "Ich meide steile Straßen, wenn ich kann",
+      "#They limit where I can ride": "Sie schränken ein, wo ich fahren kann",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "Helfen Ihnen beim E-Scooter-Fahren die Schilder für Radfahrende, sich zurechtzufinden?",
+      "#I find my way easily, with or without signs": "Ich finde den Weg leicht, mit oder ohne Schilder",
+      "#Signs help me now and then": "Schilder helfen mir ab und zu",
+      "#I use signs to check I'm on the right route": "Ich nutze Schilder, um zu prüfen, ob ich auf der richtigen Strecke bin",
+      "#Missing or unclear signs sometimes make me lose my way": "Fehlende oder unklare Schilder lassen mich manchmal den Weg verlieren",
+      "#Signs are so poor that I need my phone to find the way": "Die Schilder sind so schlecht, dass ich mein Handy brauche, um den Weg zu finden",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "Gibt es dort, wohin Sie am häufigsten fahren, einen guten Platz, um Ihren E-Scooter abzustellen?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "Für den eigenen E-Scooter ein Platz, an dem Sie ihn sicher abschließen können; für einen geliehenen ein Bereich, in dem Abstellen erlaubt ist.",
+      "#No, there is nowhere safe to leave it": "Nein, es gibt keinen sicheren Ort dafür",
+      "#There is some, but too little or too far away": "Es gibt welche, aber zu wenige oder zu weit weg",
+      "#Yes, but it isn't always handy or safe": "Ja, aber nicht immer praktisch oder sicher",
+      "#Yes, I can usually find a good place": "Ja, ich finde meistens einen guten Platz",
+      "#Yes, always safe and handy": "Ja, immer sicher und praktisch",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "Hat das Fehlen eines guten Abstellplatzes für E-Scooter Sie schon einmal dazu gebracht, Ihre Pläne zu ändern oder keinen E-Scooter zu nutzen?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#Always": "Immer",
+      "#E-scooter – What would help": "E-Scooter – Was helfen würde",
+      "#What would make you ride an e-scooter more often or further?": "Was würde dazu führen, dass Sie öfter oder weiter E-Scooter fahren?",
+      "#More cycle lanes separated from traffic": "Mehr vom Verkehr getrennte Radwege",
+      "#Better road surfaces on bike routes": "Bessere Fahrbahnbeläge auf Radrouten",
+      "#More places to park e-scooters where I go": "Mehr Abstellplätze für E-Scooter dort, wohin ich fahre",
+      "#Safe e-scooter storage near home": "Sichere Aufbewahrung für E-Scooter in der Nähe meiner Wohnung",
+      "#Slower traffic in residential streets": "Langsamerer Verkehr in Wohnstraßen",
+      "#Safer junctions and crossings for bikes and e-scooters": "Sicherere Kreuzungen und Übergänge für Fahrräder und E-Scooter",
+      "#More trees and shade": "Mehr Bäume und Schatten",
+      "#Better street lighting": "Bessere Straßenbeleuchtung",
+      "#E-scooter lessons or courses": "E-Scooter-Unterricht oder -Kurse",
+      "#Cheaper shared e-scooters": "Günstigere geliehene E-Scooter",
+      "#Shared e-scooters available in more areas": "Geliehene E-Scooter in mehr Gebieten verfügbar",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Finanzielle Unterstützung (z. B. Zuschuss zum Kauf eines E-Scooters, Zuschuss vom Arbeitgeber)",
+      "#Continuous cycle routes connecting neighbourhoods": "Durchgehende Radrouten, die Stadtviertel verbinden",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Fahrrad oder E-Scooter in Bussen, Straßenbahnen, U-Bahnen oder Zügen mitnehmen können",
+      "#Nothing: I'm happy as things are": "Nichts: Ich bin zufrieden, wie es ist",
+      "#E-scooter – Your trips, comfort and improvements": "E-Scooter – Ihre Fahrten, Komfort und gewünschte Verbesserungen",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - E-Scooter – Ihre Fahrten, Komfort und gewünschte Verbesserungen",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Ein paar Fragen dazu, wie Sie mit dem E-Scooter unterwegs sind, mit einem eigenen oder einem geliehenen. Wenn Sie selten E-Scooter fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>E-Scooter – Ihre Wege</li><li>E-Scooter – Komfort</li><li>E-Scooter – Was helfen würde</li></ul>",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#E-scooter on a street": "E-Scooter auf einer Straße"
+    },
+    "tr": {
+      "#E-scooter – Your trips": "Elektrikli scooter – Yolculuklarınız",
+      "#Do you ride an e-scooter to get around at least once a week?": "Haftada en az bir kez elektrikli scooter ile yolculuk ediyor musunuz?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Kendi elektrikli scooter'ınız veya paylaşımlı bir elektrikli scooter. Mopedler ve oturaklı scooterlar burada sayılmaz.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Which e-scooter do you use most often?": "En sık hangi elektrikli scooter'ı kullanıyorsunuz?",
+      "#My own e-scooter": "Kendi elektrikli scooter'ım",
+      "#A shared e-scooter": "Paylaşımlı bir elektrikli scooter",
+      "#How confident do you feel riding an e-scooter in city traffic?": "Şehir trafiğinde elektrikli scooter kullanırken kendinizi ne kadar güvende hissediyorsunuz?",
+      "#Not at all: I avoid riding in traffic": "Hiç değil: Trafikte scooter kullanmaktan kaçınırım",
+      "#Not very: I ride in traffic only when I have to": "Pek değil: Trafikte yalnızca zorunluysam scooter kullanırım",
+      "#In between": "Orta",
+      "#Fairly: I manage most situations": "Oldukça: Çoğu durumun üstesinden gelirim",
+      "#Very: I ride in any traffic": "Çok: Her trafikte scooter kullanırım",
+      "#I never ride in traffic": "Trafikte hiç scooter kullanmam",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Aynı yolculukta elektrikli scooter'ı genellikle başka bir ulaşım şekliyle birleştiriyor musunuz?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Örneğin elektrikli scooter ve tren ya da elektrikli scooter ve metro. Durağa veya park edilmiş araca kısa bir yürüyüş sayılmaz.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Aynı yolculukta başka hangi ulaşım şekillerini kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
+      "#Car": "Otomobil",
+      "#Car sharing": "Araç paylaşımı",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#Bus": "Otobüs",
+      "#Tram": "Tramvay",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Bölgesel veya banliyö treni",
+      "#Bicycle/e-bike (private)": "Bisiklet / elektrikli bisiklet (kişisel)",
+      "#Bicycle/e-bike (shared)": "Bisiklet / elektrikli bisiklet (paylaşımlı)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Araçlar çok kalabalık (ör. bisiklet veya bagaj için yer yok)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Ulaşım seçenekleri arasında kötü koordinasyon var (uzun bekleme süreleri, kaçırılan bağlantılar)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Altyapı eksik (ör. bisiklet parkı yok veya toplu taşımaya bisikletle binilemiyor)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Aktarmalar karmaşık (istasyonlar birbirinden uzak, güzergâhlar belirsiz)",
+      "#Travel time becomes too long": "Toplam yolculuk süresi çok uzuyor",
+      "#Cost is too high when combining modes": "Farklı ulaşım seçeneklerini birleştirince maliyet çok yüksek oluyor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Güvenlikle ilgili kaygılar (trafik, hırsızlık, güvensiz bölgeler)",
+      "#Services are infrequent or do not run in the evening": "Seferler seyrek veya akşamları hiç yok",
+      "#Lack of reliable information (schedules, delays)": "Güvenilir bilgi eksikliği (sefer saatleri, gecikmeler)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Fiziksel çaba çok fazla (ör. bisikleti taşımak veya uzun mesafe yürümek)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
+      "#Weather-related difficulties": "Hava koşullarıyla ilgili güçlükler",
+      "#I do not experience significant difficulties": "Önemli bir güçlük yaşamıyorum",
+      "#When you face these difficulties, how do you mostly respond?": "Bu güçlüklerle karşılaştığınızda genellikle ne yaparsınız?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ulaşım seçeneklerinden birini kullanmayı bırakırım (ör. bisikletimi yanımda götürmem)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Tek bir ulaşım seçeneğine geçerim (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Yolculuk saatimi değiştiririm (ör. yoğun saatlerden kaçınırım)",
+      "#I change the route or transfer point": "Güzergâhı veya aktarma noktasını değiştiririm",
+      "#I choose a different combination of modes": "Farklı bir ulaşım seçeneği kombinasyonu kullanırım",
+      "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
+      "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
+      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Neden nadiren elektrikli scooter kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have an e-scooter I can use": "Kullanabileceğim bir elektrikli scooter'ım yok",
+      "#The places I go are too far or it takes too long": "Gittiğim yerler çok uzak veya çok uzun sürüyor",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "Üzerinde ayakta durmak ve dengemi korumak benim için yorucu veya zor",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Kullanırken kendimi güvende hissetmiyorum (trafik, suç veya taciz)",
+      "#There are no good cycle lanes or places to leave it": "İyi bisiklet yolları veya bırakacak yerler yok",
+      "#Another reason": "Başka bir neden",
+      "#E-scooter – Comfort": "Elektrikli scooter – Konfor",
+      "#Do hills and slopes change how you ride your e-scooter?": "Tepeler ve yokuşlar elektrikli scooter kullanma şeklinizi değiştiriyor mu?",
+      "#No, they don't affect me": "Hayır, beni etkilemezler",
+      "#I notice them, but they don't change my trip": "Fark ederim ama yolculuğumu değiştirmezler",
+      "#They slow me down or tire me a lot": "Beni yavaşlatırlar veya çok yorarlar",
+      "#I avoid steep roads when I can": "Mümkünse dik yollardan kaçınırım",
+      "#They limit where I can ride": "Nerede scooter kullanabileceğimi sınırlarlar",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "Elektrikli scooter kullanırken bisikletlilere yönelik işaretler yolunuzu bulmanıza yardımcı oluyor mu?",
+      "#I find my way easily, with or without signs": "Tabela olsa da olmasa da yolumu kolayca bulurum",
+      "#Signs help me now and then": "Tabelalar bana ara sıra yardımcı olur",
+      "#I use signs to check I'm on the right route": "Doğru güzergâhta olduğumu kontrol etmek için tabelaları kullanırım",
+      "#Missing or unclear signs sometimes make me lose my way": "Eksik veya belirsiz tabelalar bazen yolumu kaybetmeme neden olur",
+      "#Signs are so poor that I need my phone to find the way": "Tabelalar o kadar yetersiz ki yolu bulmak için telefonuma ihtiyaç duyarım",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "En sık gittiğiniz yerlerde elektrikli scooter'ınızı bırakabileceğiniz iyi bir yer var mı?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "Kendi elektrikli scooter'ınız için güvenle kilitleyebileceğiniz bir yer; paylaşımlı olan için park etmeye izin verilen bir alan.",
+      "#No, there is nowhere safe to leave it": "Hayır, bırakabileceğim güvenli bir yer yok",
+      "#There is some, but too little or too far away": "Var ama çok az veya çok uzak",
+      "#Yes, but it isn't always handy or safe": "Evet, ama her zaman elverişli veya güvenli değil",
+      "#Yes, I can usually find a good place": "Evet, genellikle iyi bir yer bulabiliyorum",
+      "#Yes, always safe and handy": "Evet, her zaman güvenli ve elverişli",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "İyi bir elektrikli scooter bırakma yerinin olmaması, hiç planlarınızı değiştirmenize ya da scooter'ı kullanmamanıza neden oldu mu?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#Always": "Her zaman",
+      "#E-scooter – What would help": "Elektrikli scooter – Ne yardımcı olur",
+      "#What would make you ride an e-scooter more often or further?": "Elektrikli scooter'ı daha sık veya daha uzağa kullanmanızı ne sağlar?",
+      "#More cycle lanes separated from traffic": "Trafikten ayrılmış daha fazla bisiklet yolu",
+      "#Better road surfaces on bike routes": "Bisiklet güzergâhlarında daha iyi yol yüzeyleri",
+      "#More places to park e-scooters where I go": "Gittiğim yerlerde elektrikli scooter'lar için daha fazla park yeri",
+      "#Safe e-scooter storage near home": "Evin yakınında güvenli elektrikli scooter saklama yeri",
+      "#Slower traffic in residential streets": "Yerleşim sokaklarında daha yavaş trafik",
+      "#Safer junctions and crossings for bikes and e-scooters": "Bisikletler ve elektrikli scooter'lar için daha güvenli kavşaklar ve geçitler",
+      "#More trees and shade": "Daha fazla ağaç ve gölge",
+      "#Better street lighting": "Daha iyi sokak aydınlatması",
+      "#E-scooter lessons or courses": "Elektrikli scooter dersleri veya kursları",
+      "#Cheaper shared e-scooters": "Daha ucuz paylaşımlı elektrikli scooter'lar",
+      "#Shared e-scooters available in more areas": "Daha fazla bölgede paylaşımlı elektrikli scooter",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Maddi destek (örn. elektrikli scooter almak için teşvik, işveren desteği)",
+      "#Continuous cycle routes connecting neighbourhoods": "Mahalleleri birbirine bağlayan kesintisiz bisiklet güzergâhları",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Bisikleti veya elektrikli scooterı otobüs, tramvay, metro veya trene alabilmek",
+      "#Nothing: I'm happy as things are": "Hiçbir şey: Mevcut durumdan memnunum",
+      "#E-scooter – Your trips, comfort and improvements": "Elektrikli scooter – Yolculuklarınız, konfor ve istediğiniz iyileştirmeler",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Elektrikli scooter – Yolculuklarınız, konfor ve istediğiniz iyileştirmeler",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Kendi elektrikli scooter'ınız veya paylaşımlı bir elektrikli scooter ile ulaşım hakkında birkaç soru. Nadiren elektrikli scooter kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Elektrikli scooter – Yolculuklarınız</li><li>Elektrikli scooter – Konfor</li><li>Elektrikli scooter – Ne yardımcı olur</li></ul>",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#E-scooter on a street": "Sokakta bir elektrikli scooter"
+    },
+    "fa": {
+      "#E-scooter – Your trips": "اسکوتر برقی – سفرهای شما",
+      "#Do you ride an e-scooter to get around at least once a week?": "آیا حداقل هفته‌ای یک بار برای رفت‌وآمد از اسکوتر برقی استفاده می‌کنید؟",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "اسکوتر برقی شخصی یا اشتراکی. موتور گازی و اسکوترهای صندلی‌دار اینجا حساب نمی‌شوند.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Which e-scooter do you use most often?": "بیشتر از کدام نوع اسکوتر برقی استفاده می‌کنید؟",
+      "#My own e-scooter": "اسکوتر برقی شخصی خودم",
+      "#A shared e-scooter": "اسکوتر برقی اشتراکی",
+      "#How confident do you feel riding an e-scooter in city traffic?": "در ترافیک شهر با اسکوتر برقی چقدر احساس اطمینان می‌کنید؟",
+      "#Not at all: I avoid riding in traffic": "اصلاً: از اسکوترسواری در ترافیک دوری می‌کنم",
+      "#Not very: I ride in traffic only when I have to": "زیاد نه: فقط وقتی مجبورم در ترافیک اسکوترسوار می‌شوم",
+      "#In between": "متوسط",
+      "#Fairly: I manage most situations": "نسبتاً: از پس بیشتر موقعیت‌ها برمی‌آیم",
+      "#Very: I ride in any traffic": "بسیار: در هر ترافیکی اسکوترسوار می‌شوم",
+      "#I never ride in traffic": "هرگز در ترافیک اسکوترسوار نمی‌شوم",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "آیا معمولاً در یک سفر، اسکوتر برقی را با روش دیگری از رفت‌وآمد ترکیب می‌کنید؟",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلاً اسکوتر برقی و قطار، یا اسکوتر برقی و مترو. پیاده‌روی کوتاه تا ایستگاه یا تا وسیلهٔ پارک‌شده حساب نمی‌شود.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "در همان سفر از کدام روش‌های دیگر رفت‌وآمد استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به‌عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیلهٔ دیگر یا تعویض وسیله)",
+      "#Car": "خودرو",
+      "#Car sharing": "خودروی اشتراکی",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#Bus": "اتوبوس",
+      "#Tram": "تراموا",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار منطقه‌ای یا حومه‌ای",
+      "#Bicycle/e-bike (private)": "دوچرخه / دوچرخه برقی (شخصی)",
+      "#Bicycle/e-bike (shared)": "دوچرخه / دوچرخه برقی (اشتراکی)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "وسیله‌ها خیلی شلوغ هستند (مثلاً جا برای دوچرخه یا بار وجود ندارد)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "هماهنگی بین روش‌ها ضعیف است (انتظار طولانی، از دست دادن وسیله بعدی)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "زیرساخت کافی نیست (مثلاً پارک دوچرخه وجود ندارد یا بردن دوچرخه در حمل‌ونقل عمومی ممکن نیست)",
+      "#Complicated transfers (stations far apart, unclear routes)": "تعویض وسیله پیچیده است (ایستگاه‌ها از هم دورند، مسیرها نامشخص‌اند)",
+      "#Travel time becomes too long": "زمان کل سفر خیلی طولانی می‌شود",
+      "#Cost is too high when combining modes": "هزینه ترکیب چند روش خیلی زیاد است",
+      "#Safety concerns (traffic, theft, unsafe areas)": "نگرانی‌های ایمنی و امنیتی (ترافیک، سرقت، مناطق ناامن)",
+      "#Services are infrequent or do not run in the evening": "سرویس‌ها کم‌تعدادند یا عصرها و شب‌ها کار نمی‌کنند",
+      "#Lack of reliable information (schedules, delays)": "اطلاعات قابل‌اعتماد کافی نیست (زمان‌بندی، تأخیر)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "تلاش جسمی خیلی زیاد است (مثلاً حمل دوچرخه یا پیاده‌روی طولانی)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
+      "#Weather-related difficulties": "مشکلات مربوط به آب‌وهوا",
+      "#I do not experience significant difficulties": "مشکل قابل توجهی ندارم",
+      "#When you face these difficulties, how do you mostly respond?": "وقتی با این مشکلات روبه‌رو می‌شوید معمولاً چه کار می‌کنید؟",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "استفاده از یکی از روش‌ها را کنار می‌گذارم (مثلاً دیگر دوچرخه‌ام را نمی‌برم)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
+      "#I change the time of travel (e.g. avoid peak hours)": "زمان سفر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم)",
+      "#I change the route or transfer point": "مسیر یا محل تعویض وسیله را تغییر می‌دهم",
+      "#I choose a different combination of modes": "ترکیب دیگری از روش‌های رفت‌وآمد را انتخاب می‌کنم",
+      "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
+      "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
+      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "چرا به‌ندرت از اسکوتر برقی استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have an e-scooter I can use": "اسکوتر برقی در دسترس ندارم",
+      "#The places I go are too far or it takes too long": "جاهایی که می‌روم خیلی دورند یا زمان زیادی می‌برد",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "ایستادن و حفظ تعادل روی آن برای من خسته‌کننده یا دشوار است",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "هنگام استفاده از آن احساس ناامنی می‌کنم (ترافیک، جرم یا آزار)",
+      "#There are no good cycle lanes or places to leave it": "مسیر دوچرخه مناسب یا جای مناسب برای گذاشتن آن وجود ندارد",
+      "#Another reason": "دلیل دیگر",
+      "#E-scooter – Comfort": "اسکوتر برقی – راحتی",
+      "#Do hills and slopes change how you ride your e-scooter?": "آیا تپه‌ها و شیب‌ها شیوهٔ استفادهٔ شما از اسکوتر برقی را تغییر می‌دهند؟",
+      "#No, they don't affect me": "نه، بر من اثری ندارند",
+      "#I notice them, but they don't change my trip": "متوجه آن‌ها می‌شوم، اما سفرم را تغییر نمی‌دهند",
+      "#They slow me down or tire me a lot": "مرا کند می‌کنند یا خیلی خسته‌ام می‌کنند",
+      "#I avoid steep roads when I can": "تا می‌توانم از راه‌های پرشیب دوری می‌کنم",
+      "#They limit where I can ride": "محدود می‌کنند کجا بتوانم اسکوترسوار شوم",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "هنگام استفاده از اسکوتر برقی، آیا علامت‌های ویژهٔ دوچرخه‌سواران به پیدا کردن مسیر کمک می‌کنند؟",
+      "#I find my way easily, with or without signs": "چه علامت باشد چه نباشد، راه را راحت پیدا می‌کنم",
+      "#Signs help me now and then": "علامت‌ها گاهی به من کمک می‌کنند",
+      "#I use signs to check I'm on the right route": "از علامت‌ها استفاده می‌کنم تا مطمئن شوم در مسیر درست هستم",
+      "#Missing or unclear signs sometimes make me lose my way": "نبود علامت یا علامت نامشخص گاهی باعث می‌شود راه را گم کنم",
+      "#Signs are so poor that I need my phone to find the way": "علامت‌ها آن‌قدر ضعیف است که برای پیدا کردن راه به تلفنم نیاز دارم",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "در جاهایی که بیشتر می‌روید، جای خوبی برای گذاشتن اسکوتر برقی وجود دارد؟",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "برای اسکوتر برقی شخصی، جایی که بتوان آن را امن قفل کرد؛ برای اسکوتر اشتراکی، محدوده‌ای که پارک در آن مجاز است.",
+      "#No, there is nowhere safe to leave it": "نه، جای امنی برای گذاشتن آن نیست",
+      "#There is some, but too little or too far away": "کمی هست، اما خیلی کم است یا دور است",
+      "#Yes, but it isn't always handy or safe": "بله، اما همیشه در دسترس یا امن نیست",
+      "#Yes, I can usually find a good place": "بله، معمولاً جای خوبی پیدا می‌کنم",
+      "#Yes, always safe and handy": "بله، همیشه امن و در دسترس",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "آیا نبود جای خوب برای گذاشتن اسکوتر برقی تا به حال باعث شده برنامه‌تان را عوض کنید یا از آن استفاده نکنید؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#Always": "همیشه",
+      "#E-scooter – What would help": "اسکوتر برقی – چه چیزی کمک می‌کند",
+      "#What would make you ride an e-scooter more often or further?": "چه چیزی باعث می‌شود بیشتر یا برای مسافت‌های بیشتر با اسکوتر برقی بروید؟",
+      "#More cycle lanes separated from traffic": "مسیرهای دوچرخه بیشتر، جدا از ترافیک",
+      "#Better road surfaces on bike routes": "سطح جاده بهتر در مسیرهای دوچرخه",
+      "#More places to park e-scooters where I go": "جای پارک بیشتر برای اسکوتر برقی در مقصدهایی که می‌روم",
+      "#Safe e-scooter storage near home": "جای امن نگهداری اسکوتر برقی نزدیک خانه",
+      "#Slower traffic in residential streets": "ترافیک آهسته‌تر در خیابان‌های مسکونی",
+      "#Safer junctions and crossings for bikes and e-scooters": "تقاطع‌ها و گذرگاه‌های ایمن‌تر برای دوچرخه و اسکوتر برقی",
+      "#More trees and shade": "درخت و سایه بیشتر",
+      "#Better street lighting": "روشنایی بهتر خیابان",
+      "#E-scooter lessons or courses": "کلاس‌ها یا دوره‌های آموزش اسکوترسواری",
+      "#Cheaper shared e-scooters": "اسکوتر برقی اشتراکی ارزان‌تر",
+      "#Shared e-scooters available in more areas": "اسکوتر برقی اشتراکی در مناطق بیشتر",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "کمک مالی (مثلاً کمک‌هزینهٔ خرید اسکوتر برقی، کمک‌هزینهٔ کارفرما)",
+      "#Continuous cycle routes connecting neighbourhoods": "مسیرهای پیوستهٔ دوچرخه که محله‌ها را به هم وصل کنند",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "امکان بردن دوچرخه یا اسکوتر برقی در اتوبوس، تراموا، مترو یا قطار",
+      "#Nothing: I'm happy as things are": "هیچ چیز: وضعیت فعلی برایم خوب است",
+      "#E-scooter – Your trips, comfort and improvements": "اسکوتر برقی – سفرهای شما، آسایش و بهبودهای موردنظر",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - اسکوتر برقی – سفرهای شما، آسایش و بهبودهای موردنظر",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>چند پرسش دربارهٔ رفت‌وآمد با اسکوتر برقی، چه شخصی و چه اشتراکی. اگر کم با اسکوتر برقی می‌روید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>اسکوتر برقی – سفرهای شما</li><li>اسکوتر برقی – راحتی</li><li>اسکوتر برقی – چه چیزی کمک می‌کند</li></ul>",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#E-scooter on a street": "اسکوتر برقی در خیابان"
+    },
+    "hu": {
+      "#E-scooter – Your trips": "Elektromos roller – Az Ön útjai",
+      "#Do you ride an e-scooter to get around at least once a week?": "Használ elektromos rollert a közlekedéshez legalább hetente egyszer?",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "Saját vagy megosztott elektromos roller. A segédmotoros kerékpárok és az ülős robogók itt nem számítanak.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Which e-scooter do you use most often?": "Melyik elektromos rollert használja a leggyakrabban?",
+      "#My own e-scooter": "Saját elektromos roller",
+      "#A shared e-scooter": "Megosztott elektromos roller",
+      "#How confident do you feel riding an e-scooter in city traffic?": "Mennyire magabiztos, amikor a városi forgalomban elektromos rollerrel közlekedik?",
+      "#Not at all: I avoid riding in traffic": "Egyáltalán nem: kerülöm a forgalomban való rollerezést",
+      "#Not very: I ride in traffic only when I have to": "Nem nagyon: csak akkor rollerezem a forgalomban, ha muszáj",
+      "#In between": "Valahol a kettő között",
+      "#Fairly: I manage most situations": "Eléggé: a legtöbb helyzettel megbirkózom",
+      "#Very: I ride in any traffic": "Nagyon: bármilyen forgalomban rollerezem",
+      "#I never ride in traffic": "Soha nem rollerezem a forgalomban",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Ugyanazon az úton az elektromos rollert általában más közlekedési móddal kombinálja?",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Például elektromos roller és vonat, vagy elektromos roller és metró. A megállóig vagy a parkoló járműig tartó rövid gyaloglás nem számít.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Milyen más közlekedési módokat használ ugyanazon az úton? (Jelölje meg az összes megfelelőt)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (ez a fő közlekedési mód az út nagy részén, nem csak a megállóig vagy átszálláskor megtett rövid gyaloglás)",
+      "#Car": "Autó",
+      "#Car sharing": "Autómegosztás",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#Bus": "Busz",
+      "#Tram": "Villamos",
+      "#Metro": "Metró",
+      "#Regional or suburban train": "Regionális vagy elővárosi vonat",
+      "#Bicycle/e-bike (private)": "Kerékpár / e-bike (saját)",
+      "#Bicycle/e-bike (shared)": "Kerékpár / e-bike (megosztott)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "A járművek túl zsúfoltak (pl. nincs hely kerékpárnak vagy csomagnak)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Gyenge az összehangolás a közlekedési módok között (hosszú várakozás, lekésett csatlakozás)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Hiányos az infrastruktúra (pl. nincs kerékpárparkoló, vagy nem lehet kerékpárt vinni a tömegközlekedési járművekre)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Bonyolult az átszállás (az állomások messze vannak egymástól, az útvonalak nem egyértelműek)",
+      "#Travel time becomes too long": "Az utazási idő túl hosszú lesz",
+      "#Cost is too high when combining modes": "Túl magas a költség több közlekedési mód kombinálásakor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Biztonsági problémák (forgalom, lopás, nem biztonságos területek)",
+      "#Services are infrequent or do not run in the evening": "Ritkán járnak a járatok, vagy este nem közlekednek",
+      "#Lack of reliable information (schedules, delays)": "Nincs elég megbízható információ (menetrend, késés)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Túl nagy a fizikai megterhelés (pl. kerékpár cipelése vagy hosszú gyaloglás)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
+      "#Weather-related difficulties": "Időjárással kapcsolatos nehézségek",
+      "#I do not experience significant difficulties": "Nem tapasztalok jelentős nehézséget",
+      "#When you face these difficulties, how do you mostly respond?": "Mit tesz általában, amikor ilyen nehézségekkel találkozik?",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Abbahagyom az egyik közlekedési mód használatát (pl. nem viszem magammal a kerékpárt)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Egyetlen közlekedési módra váltok (pl. csak autó vagy csak tömegközlekedés)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Megváltoztatom az utazás időpontját (pl. kerülöm a csúcsidőt)",
+      "#I change the route or transfer point": "Megváltoztatom az útvonalat vagy az átszállási pontot",
+      "#I choose a different combination of modes": "Más közlekedési módokat kombinálok",
+      "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
+      "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett megosztott kerékpárt használok)",
+      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "Miért közlekedik ritkán elektromos rollerrel? (Jelölje meg az összes megfelelőt)",
+      "#I don't have an e-scooter I can use": "Nincs használható elektromos rollerem",
+      "#The places I go are too far or it takes too long": "Az úti céljaim túl messze vannak, vagy túl sokáig tart az út",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "A rolleren állni és egyensúlyozni fárasztó vagy nehéz számomra",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "Rollerezés közben nem érzem magam biztonságban (forgalom, bűncselekmények vagy zaklatás)",
+      "#There are no good cycle lanes or places to leave it": "Nincsenek jó kerékpársávok vagy olyan helyek, ahol le lehet állítani",
+      "#Another reason": "Egyéb ok",
+      "#E-scooter – Comfort": "Elektromos roller – Kényelem",
+      "#Do hills and slopes change how you ride your e-scooter?": "Befolyásolják a dombok és lejtők, hogyan közlekedik elektromos rollerrel?",
+      "#No, they don't affect me": "Nem, nincsenek rám hatással",
+      "#I notice them, but they don't change my trip": "Észreveszem őket, de nem változtatnak az utamon",
+      "#They slow me down or tire me a lot": "Lelassítanak, vagy nagyon elfárasztanak",
+      "#I avoid steep roads when I can": "Amikor tehetem, kerülöm a meredek utakat",
+      "#They limit where I can ride": "Korlátozzák, hogy hol rollerezhetek",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "Elektromos rollerezés közben segítenek a kerékpárosoknak szóló táblák az eligazodásban?",
+      "#I find my way easily, with or without signs": "Könnyen megtalálom az utat, táblákkal vagy anélkül",
+      "#Signs help me now and then": "A táblák időnként segítenek",
+      "#I use signs to check I'm on the right route": "A táblák alapján ellenőrzöm, hogy jó úton járok-e",
+      "#Missing or unclear signs sometimes make me lose my way": "A hiányzó vagy érthetetlen táblák miatt néha eltévedek",
+      "#Signs are so poor that I need my phone to find the way": "A táblák annyira rosszak, hogy a telefonomra van szükségem az eligazodáshoz",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "Ott, ahová a leggyakrabban megy, van jó hely, ahol az elektromos rollerét hagyhatja?",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "Saját elektromos rollernél olyan hely, ahol biztonságosan lezárhatja; megosztottnál olyan terület, ahol szabad parkolni.",
+      "#No, there is nowhere safe to leave it": "Nem, nincs biztonságos hely, ahol otthagyhatnám",
+      "#There is some, but too little or too far away": "Van, de túl kevés, vagy túl messze van",
+      "#Yes, but it isn't always handy or safe": "Igen, de nem mindig könnyen elérhető vagy biztonságos",
+      "#Yes, I can usually find a good place": "Igen, általában találok jó helyet",
+      "#Yes, always safe and handy": "Igen, mindig biztonságos és könnyen elérhető",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "Előfordult már, hogy mivel nem volt jó hely az elektromos roller leállítására, megváltoztatta a terveit, vagy nem használta a rollert?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#Always": "Mindig",
+      "#E-scooter – What would help": "Elektromos roller – Mi segítene",
+      "#What would make you ride an e-scooter more often or further?": "Mi késztetné arra, hogy gyakrabban vagy messzebbre rollerezzen?",
+      "#More cycle lanes separated from traffic": "Több, a forgalomtól elválasztott kerékpársáv",
+      "#Better road surfaces on bike routes": "Jobb útburkolat a kerékpáros útvonalakon",
+      "#More places to park e-scooters where I go": "Több rollerparkoló azokon a helyeken, ahová megyek",
+      "#Safe e-scooter storage near home": "Biztonságos rollertároló az otthonom közelében",
+      "#Slower traffic in residential streets": "Lassabb forgalom a lakóutcákban",
+      "#Safer junctions and crossings for bikes and e-scooters": "Biztonságosabb kereszteződések és átkelők kerékpároknak és elektromos rollereknek",
+      "#More trees and shade": "Több fa és árnyék",
+      "#Better street lighting": "Jobb utcai világítás",
+      "#E-scooter lessons or courses": "Elektromosroller-oktatás vagy -tanfolyamok",
+      "#Cheaper shared e-scooters": "Olcsóbb megosztott elektromos rollerek",
+      "#Shared e-scooters available in more areas": "Megosztott elektromos rollerek több területen",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "Anyagi segítség (pl. támogatás elektromos roller vásárlásához, munkáltatói hozzájárulás)",
+      "#Continuous cycle routes connecting neighbourhoods": "A városrészeket összekötő, összefüggő kerékpáros útvonalak",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Lehetőség a kerékpár vagy az elektromos roller szállítására buszon, villamoson, metrón vagy vonaton",
+      "#Nothing: I'm happy as things are": "Semmi: megfelel a jelenlegi helyzet",
+      "#E-scooter – Your trips, comfort and improvements": "Elektromos roller – Utazásai, kényelem és a kívánt fejlesztések",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Elektromos roller – Utazásai, kényelem és a kívánt fejlesztések",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Néhány kérdés arról, hogyan közlekedik elektromos rollerrel – akár a sajátjával, akár megosztottal. Ha ritkán rollerezik, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Elektromos roller – Az Ön útjai</li><li>Elektromos roller – Kényelem</li><li>Elektromos roller – Mi segítene</li></ul>",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#E-scooter on a street": "Elektromos roller az utcán"
+    },
+    "ar": {
+      "#E-scooter – Your trips": "السكوتر الكهربائي – رحلاتك",
+      "#Do you ride an e-scooter to get around at least once a week?": "هل تستخدم السكوتر الكهربائي للتنقل مرة واحدة على الأقل في الأسبوع؟",
+      "#Your own e-scooter or a shared one. Mopeds and seated scooters don't count here.": "سكوترك الكهربائي الخاص أو سكوتر كهربائي مشترك. لا تُحتسب هنا الدراجات ذات المحرك الصغير ولا السكوترات ذات المقعد.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Which e-scooter do you use most often?": "أي سكوتر كهربائي تستخدمه في أغلب الأحيان؟",
+      "#My own e-scooter": "سكوتري الكهربائي الخاص",
+      "#A shared e-scooter": "سكوتر كهربائي مشترك",
+      "#How confident do you feel riding an e-scooter in city traffic?": "ما مدى ثقتك عند ركوب السكوتر الكهربائي في حركة المرور داخل المدينة؟",
+      "#Not at all: I avoid riding in traffic": "على الإطلاق: أتجنب ركوب السكوتر وسط حركة المرور",
+      "#Not very: I ride in traffic only when I have to": "ليس كثيرًا: أركب السكوتر وسط حركة المرور فقط عند الضرورة",
+      "#In between": "بين بين",
+      "#Fairly: I manage most situations": "إلى حد كبير: أتعامل مع معظم المواقف",
+      "#Very: I ride in any traffic": "كثيرًا: أركب السكوتر في أي حركة مرور",
+      "#I never ride in traffic": "لا أركب السكوتر وسط حركة المرور أبدًا",
+      "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "هل تجمع عادةً بين السكوتر الكهربائي ووسيلة تنقل أخرى في الرحلة نفسها؟",
+      "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلًا السكوتر الكهربائي والقطار، أو السكوتر الكهربائي والمترو. لا يُحتسب المشي القصير إلى المحطة أو إلى مركبة متوقفة.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "ما وسائل التنقل الأخرى المستخدمة في الرحلة نفسها؟ (يمكن اختيار كل ما ينطبق)",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
+      "#Car": "السيارة",
+      "#Car sharing": "مشاركة السيارات",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#Bus": "حافلة",
+      "#Tram": "ترام",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار إقليمي أو قطار ضواحي",
+      "#Bicycle/e-bike (private)": "الدراجة / الدراجة الكهربائية (خاصة)",
+      "#Bicycle/e-bike (shared)": "الدراجة / الدراجة الكهربائية (مشتركة)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تظهر عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "المركبات مزدحمة جدًا (مثل عدم وجود مساحة للدراجة أو الأمتعة)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "ضعف التنسيق بين الوسائل (انتظار طويل، فقدان وسيلة الربط)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "نقص البنية التحتية (مثل عدم وجود موقف للدراجات أو عدم السماح بالدراجة في النقل العام)",
+      "#Complicated transfers (stations far apart, unclear routes)": "التبديل بين الوسائل معقد (المحطات بعيدة عن بعضها، الطرق غير واضحة)",
+      "#Travel time becomes too long": "وقت الرحلة يصبح طويلًا جدًا",
+      "#Cost is too high when combining modes": "التكلفة مرتفعة جدًا عند الجمع بين عدة وسائل",
+      "#Safety concerns (traffic, theft, unsafe areas)": "مخاوف تتعلق بالأمان والسلامة (حركة المرور، السرقة، مناطق غير آمنة)",
+      "#Services are infrequent or do not run in the evening": "الرحلات قليلة أو لا تعمل في المساء",
+      "#Lack of reliable information (schedules, delays)": "نقص المعلومات الموثوقة (المواعيد، التأخير)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "الجهد البدني مرتفع جدًا (مثل حمل الدراجة أو المشي لمسافات طويلة)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
+      "#Weather-related difficulties": "صعوبات بسبب الطقس",
+      "#I do not experience significant difficulties": "لا أواجه صعوبات كبيرة",
+      "#When you face these difficulties, how do you mostly respond?": "ما الإجراء المعتاد عند ظهور هذه الصعوبات؟",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "أتوقف عن استخدام إحدى الوسائل (مثل عدم أخذ الدراجة معي)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "أنتقل إلى وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
+      "#I change the time of travel (e.g. avoid peak hours)": "أغيّر وقت الرحلة (مثل تجنب ساعات الذروة)",
+      "#I change the route or transfer point": "أغيّر الطريق أو نقطة التبديل",
+      "#I choose a different combination of modes": "أختار مزيجًا مختلفًا من وسائل التنقل",
+      "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
+      "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
+      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
+      "#Why do you rarely ride an e-scooter? (Select all that apply)": "لماذا نادرًا ما تستخدم السكوتر الكهربائي؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have an e-scooter I can use": "ليس لدي سكوتر كهربائي يمكنني استخدامه",
+      "#The places I go are too far or it takes too long": "الأماكن التي أذهب إليها بعيدة جدًا أو يستغرق الأمر وقتًا طويلًا",
+      "#Standing and keeping my balance on it is tiring or difficult for me": "الوقوف والحفاظ على التوازن عليه متعب أو صعب بالنسبة لي",
+      "#I feel unsafe riding one (traffic, crime or harassment)": "أشعر بعدم الأمان عند ركوبه (المرور أو الجريمة أو التحرش)",
+      "#There are no good cycle lanes or places to leave it": "لا توجد مسارات جيدة للدراجات أو أماكن لتركه",
+      "#Another reason": "سبب آخر",
+      "#E-scooter – Comfort": "السكوتر الكهربائي – الراحة",
+      "#Do hills and slopes change how you ride your e-scooter?": "هل تغيّر التلال والمنحدرات طريقة ركوبك للسكوتر الكهربائي؟",
+      "#No, they don't affect me": "لا، لا تؤثر فيّ",
+      "#I notice them, but they don't change my trip": "ألاحظها، لكنها لا تغيّر رحلتي",
+      "#They slow me down or tire me a lot": "تبطئني أو تُتعبني كثيرًا",
+      "#I avoid steep roads when I can": "أتجنب الطرق شديدة الانحدار عندما أستطيع",
+      "#They limit where I can ride": "تحدّ من الأماكن التي أستطيع الركوب فيها",
+      "#When you ride an e-scooter, do signs for cyclists help you find your way?": "عند ركوب السكوتر الكهربائي، هل تساعدك اللافتات الموجهة لراكبي الدراجات على معرفة الطريق؟",
+      "#I find my way easily, with or without signs": "أجد طريقي بسهولة، مع وجود لافتات أو بدونها",
+      "#Signs help me now and then": "تساعدني اللافتات من حين لآخر",
+      "#I use signs to check I'm on the right route": "أستخدم اللافتات للتأكد من أنني على الطريق الصحيح",
+      "#Missing or unclear signs sometimes make me lose my way": "غياب اللافتات أو عدم وضوحها يجعلني أضل طريقي أحيانًا",
+      "#Signs are so poor that I need my phone to find the way": "اللافتات سيئة لدرجة أنني أحتاج إلى هاتفي لمعرفة الطريق",
+      "#Where you go most often, is there a good place to leave your e-scooter?": "في وجهاتك الأكثر تكرارًا، هل يوجد مكان جيد لترك السكوتر الكهربائي؟",
+      "#For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.": "للسكوتر الكهربائي الخاص، مكان يمكن قفله فيه بأمان؛ وللمشترك، منطقة يُسمح بركنه فيها.",
+      "#No, there is nowhere safe to leave it": "لا، لا يوجد مكان آمن لتركه",
+      "#There is some, but too little or too far away": "توجد بعض الأماكن، لكنها قليلة جدًا أو بعيدة",
+      "#Yes, but it isn't always handy or safe": "نعم، لكنه ليس دائمًا قريبًا أو آمنًا",
+      "#Yes, I can usually find a good place": "نعم، أجد عادةً مكانًا جيدًا",
+      "#Yes, always safe and handy": "نعم، دائمًا آمن وقريب",
+      "#Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?": "هل سبق أن دفعك غياب مكان جيد لترك السكوتر الكهربائي إلى تغيير خططك أو عدم استخدامه؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#Always": "دائمًا",
+      "#E-scooter – What would help": "السكوتر الكهربائي – ما الذي قد يساعد",
+      "#What would make you ride an e-scooter more often or further?": "ما الذي قد يشجعك على ركوب السكوتر الكهربائي أكثر أو لمسافات أبعد؟",
+      "#More cycle lanes separated from traffic": "مزيد من مسارات الدراجات المفصولة عن حركة المرور",
+      "#Better road surfaces on bike routes": "أسطح طرق أفضل على مسارات الدراجات",
+      "#More places to park e-scooters where I go": "مواقف أكثر للسكوترات الكهربائية في الأماكن التي أقصدها",
+      "#Safe e-scooter storage near home": "أماكن آمنة لحفظ السكوتر الكهربائي قرب المنزل",
+      "#Slower traffic in residential streets": "حركة مرور أبطأ في الشوارع السكنية",
+      "#Safer junctions and crossings for bikes and e-scooters": "تقاطعات ومعابر أكثر أمانًا للدراجات والسكوترات الكهربائية",
+      "#More trees and shade": "مزيد من الأشجار والظل",
+      "#Better street lighting": "إنارة شوارع أفضل",
+      "#E-scooter lessons or courses": "دروس أو دورات لركوب السكوتر الكهربائي",
+      "#Cheaper shared e-scooters": "سكوترات كهربائية مشتركة أرخص",
+      "#Shared e-scooters available in more areas": "سكوترات كهربائية مشتركة متاحة في مناطق أكثر",
+      "#Money help (e.g. bonus to buy an e-scooter, employer allowance)": "دعم مالي (مثل منحة لشراء سكوتر كهربائي أو بدل من جهة العمل)",
+      "#Continuous cycle routes connecting neighbourhoods": "مسارات دراجات متصلة تربط بين الأحياء",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "إمكانية اصطحاب الدراجة أو السكوتر الكهربائي في الحافلات أو الترام أو المترو أو القطارات",
+      "#Nothing: I'm happy as things are": "لا شيء: الوضع الحالي مناسب لي",
+      "#E-scooter – Your trips, comfort and improvements": "السكوتر الكهربائي – رحلاتك والراحة والتحسينات التي ترغب فيها",
+      "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - السكوتر الكهربائي – رحلاتك والراحة والتحسينات التي ترغب فيها",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>بعض الأسئلة عن التنقل بالسكوتر الكهربائي، الخاص أو المشترك. إذا كنت نادرًا ما تركبه، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>السكوتر الكهربائي – رحلاتك</li><li>السكوتر الكهربائي – الراحة</li><li>السكوتر الكهربائي – ما الذي قد يساعد</li></ul>",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#E-scooter on a street": "سكوتر كهربائي في شارع"
+    }
+  }
+}

@@ -43,3 +43,14 @@ updated translations have matching keys; stored options, conditions, other
 questions and privacy pages are unchanged; `git diff --check` passes. This
 repository declares no aggregate verification runner. No app/browser readiness
 or new persona acceptance is claimed by these source checks.
+
+Mode questionnaires are now grouped into 16 coherent sectioned surveys with
+4–5 declared minutes each. All 51 source forms remain available for history;
+the catalogue selects the bundles, and mode campaigns/follow-ups reference them.
+The 258 questions retain their meaning, IDs and answer values. Weekly non-use
+now skips later details and sections in the first bundle and ends the follow-up.
+Profile, trip pairs and location reports remain separate. Eight-language topic
+lists preserve privacy36months; explicit short-label normalization prevents
+translation collisions. Actual QuestionnaireConditions.js checks pass for full
+coverage, contract preservation, conditional order and campaign targets. See
+docs/sectioned-surveys.md for estimates, regeneration and acceptance boundaries.
