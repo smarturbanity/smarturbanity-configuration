@@ -86,3 +86,15 @@ Run `python tools/verify_survey_assets.py` to check all 20 image links, distinct
 drawings, valid SVG XML and translated alternatives. It also rejects unused SVGs,
 scripts, external image references and animation. The 19 old shared illustrations
 were removed after checking that no current form references them.
+
+## Definitive decision: shared choice labels
+
+Lory confirmed that Other, None of these, I don't know and Prefer not to say
+belong to the framework dictionaries, not to individual questionnaires. Generated
+choice flags use those shared translations. Do not duplicate these entries in
+survey language blocks or require them in questionnaire export tests. Questionnaire
+wording, custom answers and their translations remain owned by the survey files.
+
+`node tools/verify_questionnaire_languages.mjs <path-to-QuestionnaireRevision.js>`
+uses the actual app text tags, checks survey English text coverage and verifies
+that standard choices are supplied by the framework for every survey language.
