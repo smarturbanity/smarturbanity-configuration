@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Segment Assessment",
     "questionnaire_id": "street_segment_assessment",
-    "questionnaire_version": "4.0.1",
+    "questionnaire_version": "4.1.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
     "image_alt": "#Street section with a magnifying glass",
@@ -69,19 +69,15 @@
               {
                 "text": "Pushing a stroller",
                 "value": "stroller"
-              },
-              {
-                "text": "None of these",
-                "value": "none",
-                "exclusive": true
               }
             ],
             "show_if": {},
             "required": true,
             "question_id": "journey_context",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "special_category_health",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_none": true
           },
           {
             "text": "How often do you go along this street segment?",
@@ -611,17 +607,13 @@
               {
                 "text": "Good lighting",
                 "value": "good_lighting"
-              },
-              {
-                "text": "None of these",
-                "value": "none",
-                "exclusive": true
               }
             ],
             "required": false,
             "question_id": "walking_accessibility_features",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "3.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_none": true
           },
           {
             "text": "Are there steps or stairs along this path?",
@@ -721,11 +713,6 @@
               {
                 "text": "Resting place nearby",
                 "value": "resting_place"
-              },
-              {
-                "text": "None of these",
-                "value": "none",
-                "exclusive": true
               }
             ],
             "show_if": {
@@ -737,8 +724,9 @@
             },
             "required": false,
             "question_id": "stairs_features",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "3.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_none": true
           },
           {
             "text": "What problems do the stairs have?",
