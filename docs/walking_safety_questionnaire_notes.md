@@ -627,3 +627,9 @@ Lory approved the French usefulness question "Dans quelle mesure trouvez-vous
 utile de répondre aux questionnaires ?", asking directly about the experience.
 Feedback form 1.1.3; structural comparison confirms only that French translation
 and the form patch version changed. Answers, settings and other languages remain.
+
+Lory approved simplifying the French welcome phrase to "les pages SmartUrbanity
+qui vous posent des questions sur vous, vos déplacements et les lieux que vous
+fréquentez". Feedback form 1.1.4; structural comparison confirms only that phrase
+and the form patch version changed. Privacy, confirmed 36-month retention,
+questions, answers, settings and other languages are preserved.
