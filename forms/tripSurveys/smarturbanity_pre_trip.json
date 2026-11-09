@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Before the trip",
     "questionnaire_id": "smarturbanity_pre_trip",
-    "questionnaire_version": "4.6.1",
+    "questionnaire_version": "5.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "trip_phase": "pre",
@@ -18,7 +18,7 @@
       "title": "Before the trip",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/tripSurveys/assets/smarturbanity_pre_trip.svg",
       "image_alt": "#Smartphone showing a route, and a clock",
-      "description": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>"
+      "description": "<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -184,8 +184,8 @@
           },
           {
             "question_id": "trip_company",
-            "question_version": "2.1.0",
-            "text": "Who or what are you travelling with? (Select all that apply)",
+            "question_version": "3.0.0",
+            "text": "Who are you travelling with? (Select all that apply)",
             "answer_key": "trip_company",
             "question_type": "multiple_options",
             "required": false,
@@ -193,7 +193,8 @@
             "options": [
               {
                 "text": "Alone",
-                "value": "alone"
+                "value": "alone",
+                "exclusive": true
               },
               {
                 "text": "With other adults",
@@ -210,7 +211,20 @@
               {
                 "text": "With someone I accompany or care for",
                 "value": "person_in_care"
-              },
+              }
+            ],
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "question_id": "trip_load_and_pet",
+            "question_version": "1.0.0",
+            "text": "Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)",
+            "answer_key": "trip_load_and_pet",
+            "question_type": "multiple_options",
+            "required": false,
+            "checks_inline": false,
+            "add_none": true,
+            "options": [
               {
                 "text": "With heavy bags or a trolley",
                 "value": "heavy_bags"
@@ -252,7 +266,6 @@
       "#Taking or picking someone up": "Taking or picking someone up",
       "#Doctor or health appointment": "Doctor or health appointment",
       "#Leisure or visiting people": "Leisure or visiting people",
-      "#Who or what are you travelling with? (Select all that apply)": "Who or what are you travelling with? (Select all that apply)",
       "#Alone": "Alone",
       "#With other adults": "With other adults",
       "#With heavy bags or a trolley": "With heavy bags or a trolley",
@@ -276,7 +289,9 @@
       "#Van or work vehicle": "Van or work vehicle",
       "#Public office or paperwork (e.g. registry office, post office)": "Public office or paperwork (e.g. registry office, post office)",
       "#Count only stops on the way there, not on the way back.": "Count only stops on the way there, not on the way back.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Who are you travelling with? (Select all that apply)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>"
     },
     "it": {
       "code": "it",
@@ -303,7 +318,6 @@
       "#Taking or picking someone up": "Accompagnare o andare a prendere una persona",
       "#Doctor or health appointment": "Visita medica o appuntamento sanitario",
       "#Leisure or visiting people": "Svago o visite a persone",
-      "#Who or what are you travelling with? (Select all that apply)": "Con chi o con cosa viaggi? (Puoi sceglierne più di uno)",
       "#Alone": "Senza compagnia",
       "#With other adults": "Con altre persone adulte",
       "#With heavy bags or a trolley": "Con borse pesanti o un carrello",
@@ -327,7 +341,9 @@
       "#Van or work vehicle": "Furgone o mezzo di lavoro",
       "#Public office or paperwork (e.g. registry office, post office)": "Uffici pubblici o pratiche (ad es. anagrafe, posta)",
       "#Count only stops on the way there, not on the way back.": "Conta solo le soste all'andata, non al ritorno.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Quattro domande veloci prima che l'app registri il percorso.</p><p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p><p>Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Con chi viaggi? (Puoi scegliere più risposte)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Viaggi con borse pesanti, un carrello o un animale? (Puoi scegliere più risposte)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Cinque domande veloci prima che l'app registri il percorso.</p><p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p><p>Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p>"
     },
     "fr": {
       "code": "fr",
@@ -354,7 +370,6 @@
       "#Taking or picking someone up": "Accompagner ou aller chercher une personne",
       "#Doctor or health appointment": "Rendez-vous médical ou de santé",
       "#Leisure or visiting people": "Loisirs ou visites à des proches",
-      "#Who or what are you travelling with? (Select all that apply)": "Qui ou quoi vous accompagne pendant ce trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Alone": "Sans compagnie",
       "#With other adults": "Avec d'autres personnes adultes",
       "#With heavy bags or a trolley": "Avec des sacs lourds ou un chariot",
@@ -378,7 +393,9 @@
       "#Van or work vehicle": "Camionnette ou véhicule de travail",
       "#Public office or paperwork (e.g. registry office, post office)": "Administration ou démarches (par ex. mairie, poste)",
       "#Count only stops on the way there, not on the way back.": "Comptez seulement les arrêts à l’aller, pas au retour.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Quatre questions rapides avant de commencer l’enregistrement.</p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p><p>Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Avec qui voyagez-vous ? (Plusieurs réponses possibles)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Voyagez-vous avec des sacs lourds, un chariot ou un animal ? (Plusieurs réponses possibles)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Cinq questions rapides avant de commencer l’enregistrement.</p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p><p>Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p>"
     },
     "de": {
       "code": "de",
@@ -405,7 +422,6 @@
       "#Taking or picking someone up": "Jemanden bringen oder abholen",
       "#Doctor or health appointment": "Medizinischer oder gesundheitlicher Termin",
       "#Leisure or visiting people": "Freizeit oder Besuche",
-      "#Who or what are you travelling with? (Select all that apply)": "Mit wem oder womit sind Sie unterwegs? (Alle zutreffenden auswählen)",
       "#Alone": "Allein",
       "#With other adults": "Mit anderen Erwachsenen",
       "#With heavy bags or a trolley": "Mit schweren Taschen oder einem Einkaufstrolley",
@@ -429,7 +445,9 @@
       "#Van or work vehicle": "Lieferwagen oder Arbeitsfahrzeug",
       "#Public office or paperwork (e.g. registry office, post office)": "Behörde oder Amtsgang (z. B. Bürgeramt, Post)",
       "#Count only stops on the way there, not on the way back.": "Zählen Sie nur Stopps auf dem Hinweg, nicht auf dem Rückweg.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Vier kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p><p>Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Mit wem sind Sie unterwegs? (Mehrfachauswahl möglich)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Sind Sie mit schweren Taschen, einem Trolley oder einem Haustier unterwegs? (Mehrfachauswahl möglich)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Fünf kurze Fragen, bevor Sie mit der Aufzeichnung beginnen.</p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p><p>Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p>"
     },
     "tr": {
       "code": "tr",
@@ -456,7 +474,6 @@
       "#Taking or picking someone up": "Birini bırakmak veya almak",
       "#Doctor or health appointment": "Doktor veya sağlık randevusu",
       "#Leisure or visiting people": "Boş zaman veya ziyaret",
-      "#Who or what are you travelling with? (Select all that apply)": "Kiminle veya neyle yolculuk ediyorsunuz? (Uygun olanların tümünü seçin)",
       "#Alone": "Yalnız",
       "#With other adults": "Diğer yetişkinlerle",
       "#With heavy bags or a trolley": "Ağır çantalar veya pazar arabası ile",
@@ -480,7 +497,9 @@
       "#Van or work vehicle": "Kamyonet veya iş aracı",
       "#Public office or paperwork (e.g. registry office, post office)": "Resmî daire veya işlemler (örn. nüfus müdürlüğü, postane)",
       "#Count only stops on the way there, not on the way back.": "Yalnızca gidiş yolundaki duraklamaları sayın, dönüşü değil.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p><p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Kiminle yolculuk yapıyorsunuz? (Birden fazla seçenek seçebilirsiniz)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Ağır çantalar, bir taşıma arabası veya bir evcil hayvanla mı yolculuk yapıyorsunuz? (Birden fazla seçenek seçebilirsiniz)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Yolculuğa başlamadan önce dört kısa soru.</p><p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p>"
     },
     "fa": {
       "code": "fa",
@@ -507,7 +526,6 @@
       "#Taking or picking someone up": "رساندن یا آوردن کسی",
       "#Doctor or health appointment": "نوبت پزشک یا درمانی",
       "#Leisure or visiting people": "تفریح یا دیدار با دیگران",
-      "#Who or what are you travelling with? (Select all that apply)": "با چه کسی یا با چه چیزی سفر می‌کنید؟ (همه موارد مربوط را انتخاب کنید)",
       "#Alone": "تنها",
       "#With other adults": "با بزرگسالان دیگر",
       "#With heavy bags or a trolley": "با کیف‌های سنگین یا چرخ‌دستی",
@@ -531,7 +549,9 @@
       "#Van or work vehicle": "ون یا خودروی کاری",
       "#Public office or paperwork (e.g. registry office, post office)": "اداره دولتی یا کارهای اداری (مثلاً ثبت احوال، اداره پست)",
       "#Count only stops on the way there, not on the way back.": "فقط توقف‌های مسیر رفت را حساب کنید، نه برگشت.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>چهار پرسش کوتاه پیش از شروع ضبط.</p><p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p><p>آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p>"
+      "#Who are you travelling with? (Select all that apply)": "با چه کسی سفر می‌کنید؟ (می‌توانید چند گزینه انتخاب کنید)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "آیا با کیف‌های سنگین، چرخ خرید یا حیوان خانگی سفر می‌کنید؟ (می‌توانید چند گزینه انتخاب کنید)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>پنج پرسش کوتاه پیش از شروع ضبط.</p><p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p><p>آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p>"
     },
     "hu": {
       "code": "hu",
@@ -558,7 +578,6 @@
       "#Taking or picking someone up": "Valakit elkísérni vagy érte menni",
       "#Doctor or health appointment": "Orvosi vagy egészségügyi időpont",
       "#Leisure or visiting people": "Szabadidő vagy látogatás",
-      "#Who or what are you travelling with? (Select all that apply)": "Kivel vagy mivel közlekedik? (Jelölje meg az összes megfelelőt)",
       "#Alone": "Egyedül",
       "#With other adults": "Más felnőttekkel",
       "#With heavy bags or a trolley": "Nehéz táskákkal vagy bevásárlókocsival",
@@ -582,7 +601,9 @@
       "#Van or work vehicle": "Kisteherautó vagy munkajármű",
       "#Public office or paperwork (e.g. registry office, post office)": "Hivatali ügyintézés (pl. okmányiroda, posta)",
       "#Count only stops on the way there, not on the way back.": "Csak az odaúton tett megállásokat számolja, a visszautat nem.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Négy gyors kérdés, mielőtt elindítja a rögzítést.</p><p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p><p>Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p>"
+      "#Who are you travelling with? (Select all that apply)": "Kivel utazik? (Több választ is megjelölhet)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "Nehéz táskákkal, húzható kocsival vagy háziállattal utazik? (Több választ is megjelölhet)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>Öt gyors kérdés, mielőtt elindítja a rögzítést.</p><p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p><p>Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p>"
     },
     "ar": {
       "code": "ar",
@@ -609,7 +630,6 @@
       "#Taking or picking someone up": "توصيل شخص أو اصطحابه",
       "#Doctor or health appointment": "موعد طبي أو صحي",
       "#Leisure or visiting people": "الترفيه أو زيارة الأشخاص",
-      "#Who or what are you travelling with? (Select all that apply)": "من أو ما الذي يرافقك في هذه الرحلة؟ (يمكن اختيار كل ما ينطبق)",
       "#Alone": "بمفردي",
       "#With other adults": "مع أشخاص بالغين آخرين",
       "#With heavy bags or a trolley": "بحقائب ثقيلة أو عربة تسوق",
@@ -633,7 +653,9 @@
       "#Van or work vehicle": "شاحنة صغيرة أو مركبة عمل",
       "#Public office or paperwork (e.g. registry office, post office)": "مكتب حكومي أو معاملات إدارية (مثل السجل المدني، مكتب البريد)",
       "#Count only stops on the way there, not on the way back.": "احسب التوقفات في طريق الذهاب فقط، لا في طريق العودة.",
-      "#<p>Four quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>أربعة أسئلة سريعة قبل بدء التسجيل.</p><p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p>"
+      "#Who are you travelling with? (Select all that apply)": "مع من تسافر؟ (يمكنك اختيار أكثر من إجابة)",
+      "#Are you travelling with heavy bags, a trolley or a pet? (Select all that apply)": "هل تسافر مع حقائب ثقيلة أو عربة أو حيوان أليف؟ (يمكنك اختيار أكثر من إجابة)",
+      "#<p>Five quick questions before you start recording.</p><p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p>": "<p>خمسة أسئلة سريعة قبل بدء التسجيل.</p><p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p>"
     }
   },
   "id": "smarturbanity_pre_trip",
