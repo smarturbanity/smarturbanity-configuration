@@ -69,6 +69,35 @@ checks pass. Walking comfort advances to 2.2.0, wayfinding to 1.2.0 and its acti
 bundle to 1.2.0. No new question is added, only one answer option. No whole
 historical cumulative report is closed through this slice.
 
+## Approved topics 11–13
+
+11. **#406, accessibility uncertainty:** the habitual walking anxiety-cause
+    question now includes uncertainty about whether the route or destination is
+    accessible. Keep habitual experience distinct from the selected individual
+    pre/post trip. Road accidents and assault/harassment are already separate;
+    the effort comparison already offers having no alternative. These source
+    corrections do not establish that people no longer perceive repetition.
+12. **#407, public transport barriers:** replace the combined ramp/space answer
+    with two independent selectable answers: ramp broken/not deployed when needed,
+    and wheelchair space occupied. The full-vehicle answer remains distinct.
+    The retired social-status question is absent from the current comfort form;
+    reaching a stop is explicitly separate from boarding in the current forms.
+    Current comprehension, translations and coverage still need acceptance.
+13. **#409, cycling:** retain confidence in city traffic separately from reaction
+    speed to sudden events. The reflex question now explicitly asks respondents
+    to think about reaction speed, illustrated by a suddenly opening car door.
+    Keep the existing answers, conditions and optional status. Perceived overlap
+    and actual completion burden still need a targeted new test.
+
+All three changes include eight languages and rebuilt active bundles. No new
+questions are added. The public-transport answer contract changes directly,
+without a legacy value alias or migration, as Lory confirmed no old app data.
+Walking experience is 1.6.0 (anxiety causes 2.2.0), public-transport road safety
+and barriers are 3.0.0, cycling road safety is 2.3.1 (reflex item 3.0.1).
+Active bundles are respectively 1.3.0, 2.0.0 and 1.1.1.
+Record these as partially verified historical reports with explicit technical
+subclaims. None of #406, #407 or #409 is fully resolved through source checks.
+
 ## Location-form version and integration
 
 Both location forms advance from 4.1.0 to 5.0.0. `journey_context` advances from
