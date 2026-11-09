@@ -33,7 +33,7 @@ Verified against the Access Together development checkout. The six questionnaire
 regressions and all twenty SVG validations also pass.
 
 This is a configuration candidate, not a deployment. It requires the corresponding
-app and spatial-server reader/defaults release. There is no old-layout fallback.
+app and spatial-server reader/defaults release. The coordinated app reader retains explicit support for both layouts; this source candidate uses the split layout. A broken selected source never silently falls back to another format.
 The previously tested runtime branch and its dev publication remain separate.
 
 ## Subsequent questionnaire request
@@ -72,3 +72,18 @@ preload preserve this addition; all other technical settings still match main.
 Verified actual merge/preload, 444 calendar cases over 37 catalogue forms, exact
 mode mappings, 16 bundles/258 questions, six regression tests and 19 SVGs. Forms
 and definitions remain identical to 5a04c0c. This integration is not an app release.
+
+## Pilot presentation and identity
+
+The pilot owns `pilot_identity.city`, its public place description and the initial
+views of its applications. Rome values reproduce the existing app defaults.
+Legacy clients keep their current source revision and the compatible application
+reader retains the legacy contract; removing old support is outside this change.
+
+Layer presentation overrides live under `presentation.layers`, `layer_fields`,
+`visualizations` and per-view `hub_layers`. Objects remain sparse and arrays replace.
+The modeler can choose visibility, order, opacity, line width, labels, fields,
+available map themes and the initial theme. Sources, formulae, data bindings,
+permissions and semantic evidence styles remain owned by application code.
+Campaigns and the existing Access Together technical settings are unchanged.
+Application browser acceptance is recorded in its coordinated PR, not inferred here.

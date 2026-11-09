@@ -35,3 +35,15 @@ metadata, source-owned block states and code-owned debug behavior. Actual loader
 verification now permits only this explicitly requested technical-document addition
 and checks its effective merged values. All focused checks pass; questionnaires
 and definitions unchanged. No deployment claimed.
+
+## Pilot identity and dual-reader coordination
+
+Rome now declares its search city, public territory description and per-application
+initial cameras in pilot_identity. Values reproduce the current app defaults; no
+questionnaire, campaign, service or Access Together technical setting changes.
+The coordinated application retains the explicit legacy-manifest contract alongside
+the split-source contract. Invalid chosen sources fail instead of falling back.
+The new source layout requires the compatible app and existing spatial-server
+branch first; old clients retain their old immutable configuration revision.
+Actual merge/preload preservation checks pass. Browser acceptance and final
+aggregate remain with the coordinated application candidate; no deployment claimed.

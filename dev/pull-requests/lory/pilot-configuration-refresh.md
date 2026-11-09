@@ -11,7 +11,7 @@ service subtypes survive the new layout. Six questionnaire regressions and twent
 SVG validations pass.
 
 Requires the corresponding CityMaaS and spatial-server readers with code-owned
-defaults. This branch does not deploy consumers or provide old-layout fallback.
+defaults. This branch does not deploy consumers. The coordinated app retains both explicit source formats.
 
 
 ## Current-main integration (2026-11-09)
@@ -40,3 +40,15 @@ Actual loader/preload and preservation checks pass with this explicit source
 addition, plus 444 calendar cases, 16 bundles/258 questions, six regressions and
 19 SVGs. Questionnaire schemas and translations remain unchanged. Consumer
 integration and application deployment remain separate.
+
+## Pilot identity and dual-reader coordination
+
+Rome now declares its search city, public territory description and per-application
+initial cameras in pilot_identity. Values reproduce the current app defaults; no
+questionnaire, campaign, service or Access Together technical setting changes.
+The coordinated application retains the explicit legacy-manifest contract alongside
+the split-source contract. Invalid chosen sources fail instead of falling back.
+The new source layout requires the compatible app and existing spatial-server
+branch first; old clients retain their old immutable configuration revision.
+Actual merge/preload preservation checks pass. Browser acceptance and final
+aggregate remain with the coordinated application candidate; no deployment claimed.
