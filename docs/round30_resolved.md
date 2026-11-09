@@ -1,7 +1,8 @@
 # round30: completed corrections
 
-Local `round30` candidates collect this chat's changes in their owning repositories.
-They preserve unrelated branches and historical persona results.
+This historical record describes the corrections verified for round 30. Later
+questionnaire changes are listed in the [documentation index](README.md).
+Historical persona results remain unchanged.
 
 | Area | Completed behavior | Verification | Remaining limit |
 | --- | --- | --- | --- |
@@ -13,12 +14,7 @@ They preserve unrelated branches and historical persona results.
 The candidate also retains Claude's rounds 28-29 work and the questionnaire splits
 already in its history. This is not a claim that every historical issue is resolved.
 
-## Local candidates
-
-- Configuration: `round30`, based on `bf12c659414acd9863d8e8d7a7dc6c7aa750f4fc`.
-- CityMaaS app and tests: `round30`, `bdbca7e43a01f23c9ec65f0da2ec79e18cc1ca8b`.
-- Wemo Experiments dashboard: `round30`, `c40a12f1fbf36918f41a638b406240d10b911ccc`.
-- Results library: `round30`, `09ec0c895f7d944f846f90f024375999c0150701`.
+## Historical evidence
 
 The local dashboard's technical-check record
 `round30-matrix-questionnaire-dashboard-20261109` lists the matrix, the corrected

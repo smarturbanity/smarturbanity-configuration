@@ -261,7 +261,7 @@ Every form is self-standing: it asks its own context questions (point of view, h
 
 ### Minimum and details
 
-The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), for a street crossing how it is controlled (`crossing_kind`) and who it is for (`crossing_users`), the use difficulty and the perceived traffic risk for the selected mode, and the personal safety (harassment or assault, also in the evening) for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition. `crossing_kind` and `crossing_users` declare `prefill_from`, so with a known element attribute they cost one confirmation each.
+The street connection and street segment assessments start with a short minimum that every response collects: the point of view, how often the person uses the element, its type (`connection_form`; `walk_facility` or `bike_facility`), for a street crossing how it is controlled (`crossing_kind`) and who it is for (`crossing_users`), the use difficulty and the perceived traffic risk for the selected mode, and personal security separately during the day and after dark for every place. These are the indicators the infrastructure view uses. Minimum questions and `continue_audit` carry `"required": true` and every detail question `"required": false`, so the viewer (review mode) and the guided chat treat them alike. The minimum ends with `continue_audit`; every later question carries `"show_if": {"continue_audit": "yes_audit", ...}`, so a person who stops there sends a complete minimum response. Keep new detail questions behind that condition. `crossing_kind` and `crossing_users` declare `prefill_from`, so with a known element attribute they cost one confirmation each.
 
 For street-level connections the minimum also asks what happens at a traffic light
 (`traffic_control`, for `crossing_kind=signal`) and whether a refuge island is present
@@ -269,6 +269,10 @@ For street-level connections the minimum also asks what happens at a traffic lig
 varies with the selected modes and connection type; clients derive it from the
 applicable questions. Signal-call, audible-signal, waiting-time and green-time details
 are behind `continue_audit=yes_audit`.
+
+Version 4.0.0 groups the minimum by place, getting through, road safety and personal security, matching the mode questionnaires. New keys `pedestrian_use_difficult` / `cyclist_use_difficult` use yes/no/cannot_get_through; `pedestrian_traffic_unsafe` / `cyclist_traffic_unsafe` and `personal_day_unsafe` / `personal_evening_unsafe` use yes/no/not_applicable. Unknown remains explicit; personal security also allows prefer not to say. These replace the former difficulty, perceived-risk and combined personal-safety questions. No historical responses exist for this change (owner confirmation); no migration is introduced.
+
+On a broken or switched-off traffic light, ask driver yielding instead of green duration or waiting for green. Waiting before crossing and stopping to rest are separate optional questions: only the former is restricted to street-level crossings. Technical inventories and frequency questions keep their distinct purpose and answer formats. The map reads the selected walking/cycling perspective and treats unknown/not-applicable answers as missing, not as a positive or negative assessment.
 
 ### Prefill from element attributes
 

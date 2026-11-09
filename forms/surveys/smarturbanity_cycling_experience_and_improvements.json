@@ -1,0 +1,1256 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Cycling – Experience and improvements",
+    "questionnaire_id": "smarturbanity_cycling_experience_and_improvements",
+    "questionnaire_version": "1.0.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 4,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Cycling – Experience and improvements",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_cycling_experience_and_improvements.svg",
+      "image_alt": "#Cycling – Experience and improvements",
+      "description": "<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Cycling – Experience and improvements",
+    "sections": [
+      {
+        "title": "Cycling – How the trip feels",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how stressed or relaxed do you usually feel?",
+            "answer_key": "bike_emotional_state",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very stressed",
+                "value": "very_stressed"
+              },
+              {
+                "text": "A little stressed",
+                "value": "somewhat_stressed"
+              },
+              {
+                "text": "Neither stressed nor relaxed",
+                "value": "neutral"
+              },
+              {
+                "text": "A little relaxed",
+                "value": "somewhat_relaxed"
+              },
+              {
+                "text": "Very relaxed",
+                "value": "very_relaxed"
+              }
+            ],
+            "question_id": "bike_emotional_state",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "special_category_health",
+            "text": "When you cycle, how often do you feel anxious or overwhelmed?",
+            "answer_key": "bike_anxiety_frequency",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "frequently"
+              },
+              {
+                "text": "All the time",
+                "value": "constantly"
+              }
+            ],
+            "question_id": "bike_anxiety_frequency",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "special_category_health",
+            "text": "When you cycle, what makes you feel anxious or overwhelmed?",
+            "answer_key": "bike_anxiety_causes",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "show_if": {
+              "bike_anxiety_frequency": {
+                "not": [
+                  "never"
+                ]
+              }
+            },
+            "options": [
+              {
+                "text": "Heavy traffic or traffic jams",
+                "value": "heavy_traffic_or_congestion"
+              },
+              {
+                "text": "Aggressive or careless drivers, riders or pedestrians",
+                "value": "aggressive_or_unsafe_behavior_from_other"
+              },
+              {
+                "text": "Routes that are complicated or new to me",
+                "value": "complex_or_unfamiliar_routes"
+              },
+              {
+                "text": "Noise, crowds or too much going on around me",
+                "value": "noise_crowding_or_other_sensory_overload"
+              },
+              {
+                "text": "Being in a hurry or afraid of being late",
+                "value": "time_pressure_or_risk_of_being_late"
+              },
+              {
+                "text": "Feeling alone or isolated on the way",
+                "value": "feeling_isolated_or_alone_while_travelin"
+              },
+              {
+                "text": "Fear of road accidents",
+                "value": "safety_and_security_concerns_e_g_acciden"
+              },
+              {
+                "text": "Fear of assault or harassment",
+                "value": "fear_of_assault_or_harassment"
+              },
+              {
+                "text": "Fear of falling",
+                "value": "fear_of_falling"
+              },
+              {
+                "text": "Health problems on the way (pain, breathlessness, dizziness)",
+                "value": "physical_health_concerns_pain_breathless"
+              },
+              {
+                "text": "Nothing in particular",
+                "value": "i_don_t_usually_feel_anxious_or_overwhel",
+                "exclusive": true
+              }
+            ],
+            "question_id": "bike_anxiety_causes",
+            "question_version": "2.0.3"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how do you feel on streets with lots of people, shops and activity?",
+            "answer_key": "bike_route_liveliness_effect",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "I prefer them: I feel safer or more at ease",
+                "value": "very_positively_lively_environments_make"
+              },
+              {
+                "text": "I like them: they make the trip nicer",
+                "value": "somewhat_positively_lively_environments"
+              },
+              {
+                "text": "It makes no difference to me",
+                "value": "neutral_the_level_of_activity_does_not_a"
+              },
+              {
+                "text": "They are sometimes a bit too much for me",
+                "value": "busy_bit_much"
+              },
+              {
+                "text": "Crowds stress me or make it hard to get through",
+                "value": "very_negatively_overly_busy_or_crowded_a"
+              }
+            ],
+            "question_id": "bike_route_liveliness_effect",
+            "question_version": "1.0.2"
+          }
+        ]
+      },
+      {
+        "title": "Cycling – Effort and satisfaction",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how tired do you usually feel when you arrive?",
+            "answer_key": "bike_tiredness",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all tired",
+                "value": "not_tired"
+              },
+              {
+                "text": "A little tired",
+                "value": "slightly"
+              },
+              {
+                "text": "Quite tired",
+                "value": "moderately"
+              },
+              {
+                "text": "Very tired",
+                "value": "very"
+              },
+              {
+                "text": "Exhausted",
+                "value": "exhausted"
+              }
+            ],
+            "question_id": "bike_tiredness",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, what tires you most?",
+            "answer_key": "bike_tiredness_cause",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "bike_tiredness": {
+                "not": [
+                  "not_tired"
+                ]
+              }
+            },
+            "options": [
+              {
+                "text": "Physical effort (pedalling, carrying bags)",
+                "value": "physical_effort_e_g_walking_cycling_carr"
+              },
+              {
+                "text": "Slopes, stairs and changes in level",
+                "value": "slopes_and_stairs"
+              },
+              {
+                "text": "Carrying children, a pushchair or shopping",
+                "value": "carrying_children_or_shopping"
+              },
+              {
+                "text": "Stress (traffic, finding the way, being late, feeling unsafe)",
+                "value": "mental_stress_e_g_traffic_navigation_tim"
+              },
+              {
+                "text": "Heat, noise or bad air",
+                "value": "environmental_discomfort_e_g_heat_noise"
+              },
+              {
+                "text": "Waiting or standing (at traffic lights, in queues)",
+                "value": "waiting_and_standing_e_g_at_stops_in_que"
+              },
+              {
+                "text": "I rarely feel tired after my trips",
+                "value": "i_usually_do_not_feel_tired_after_my_tri"
+              }
+            ],
+            "question_id": "bike_tiredness_cause",
+            "question_version": "1.1.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how demanding is it compared with other ways you could travel?",
+            "help": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
+            "answer_key": "bike_effort_vs_alternatives",
+            "question_type": "single_option",
+            "required": false,
+            "add_i_dont_know": true,
+            "options": [
+              {
+                "text": "Much easier than the others",
+                "value": "my_current_mode_is_significantly_easier"
+              },
+              {
+                "text": "A bit easier",
+                "value": "this_is_a_bit_easier_than_other_ways_i_c"
+              },
+              {
+                "text": "About the same",
+                "value": "regardless_of_the_mode_the_effort_feels"
+              },
+              {
+                "text": "A bit more demanding",
+                "value": "this_takes_a_bit_more_out_of_me_than_oth"
+              },
+              {
+                "text": "Much more demanding",
+                "value": "far_more_demanding_than_alternatives_phy"
+              },
+              {
+                "text": "I have no other way to travel",
+                "value": "no_alternative"
+              }
+            ],
+            "question_id": "bike_effort_vs_alternatives",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how often do you arrive in the time you planned?",
+            "answer_key": "bike_time_vs_expected",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ],
+            "question_id": "bike_time_vs_expected",
+            "question_version": "2.0.0"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, how satisfied are you overall?",
+            "answer_key": "bike_satisfaction",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very dissatisfied",
+                "value": "very_dissatisfied"
+              },
+              {
+                "text": "Dissatisfied",
+                "value": "dissatisfied"
+              },
+              {
+                "text": "Neither satisfied nor dissatisfied",
+                "value": "neutral"
+              },
+              {
+                "text": "Satisfied",
+                "value": "satisfied"
+              },
+              {
+                "text": "Very satisfied",
+                "value": "very_satisfied"
+              }
+            ],
+            "question_id": "bike_satisfaction",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you cycle, what are you least happy with?",
+            "answer_key": "bike_dissatisfied",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 3,
+            "add_other": true,
+            "show_if": {
+              "bike_satisfaction": [
+                "very_dissatisfied",
+                "dissatisfied",
+                "neutral"
+              ]
+            },
+            "options": [
+              {
+                "text": "Travel time",
+                "value": "travel_time_speed"
+              },
+              {
+                "text": "Cost",
+                "value": "cost_value_for_money"
+              },
+              {
+                "text": "It's not reliable or predictable",
+                "value": "reliability_predictability"
+              },
+              {
+                "text": "Comfort",
+                "value": "comfort"
+              },
+              {
+                "text": "Safety from traffic or crime",
+                "value": "safety_security"
+              },
+              {
+                "text": "It's hard to reach or use",
+                "value": "accessibility_convenience"
+              },
+              {
+                "text": "Crowding or lack of space",
+                "value": "crowding_availability_of_space"
+              },
+              {
+                "text": "It's not flexible",
+                "value": "lack_of_flexibility"
+              }
+            ],
+            "question_id": "bike_dissatisfied",
+            "question_version": "1.0.1"
+          }
+        ]
+      },
+      {
+        "title": "Cycling – What would help",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "What would make you cycle more often or further?",
+            "answer_key": "bike_improvements",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "options": [
+              {
+                "text": "More cycle lanes separated from traffic",
+                "value": "more_dedicated_and_physically_separated"
+              },
+              {
+                "text": "Better road surfaces on bike routes",
+                "value": "better_road_surface_quality_on_cycling_r"
+              },
+              {
+                "text": "More safe bike parking where I go",
+                "value": "more_secure_bicycle_parking_at_destinati"
+              },
+              {
+                "text": "Safe bike storage near home",
+                "value": "more_secure_bicycle_storage_near_home"
+              },
+              {
+                "text": "Slower traffic in residential streets",
+                "value": "reduced_vehicle_speeds_in_residential_ar"
+              },
+              {
+                "text": "Safer junctions and crossings for bikes",
+                "value": "better_cycle_friendly_junctions_and_cros"
+              },
+              {
+                "text": "More trees and shade",
+                "value": "more_trees_and_shade_along_cycling_route"
+              },
+              {
+                "text": "Better street lighting",
+                "value": "better_street_lighting_on_cycling_routes"
+              },
+              {
+                "text": "Cycling lessons or courses",
+                "value": "access_to_cycle_training_or_skills_cours"
+              },
+              {
+                "text": "Money help (e.g. bonus to buy a bike, employer allowance)",
+                "value": "financial_incentives_e_g_employer_cyclin"
+              },
+              {
+                "text": "Continuous cycle routes connecting neighbourhoods",
+                "value": "continuous_routes_between_neighbourhoods"
+              },
+              {
+                "text": "Being able to take a bicycle or e-scooter on buses, trams, the metro or trains",
+                "value": "bike_on_public_transport"
+              },
+              {
+                "text": "Nothing: I'm happy as things are",
+                "value": "nothing_i_am_satisfied_with_current_cond",
+                "exclusive": true
+              }
+            ],
+            "question_id": "bike_improvements",
+            "question_version": "1.2.3"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "When you cycle, how stressed or relaxed do you usually feel?",
+      "#Very stressed": "Very stressed",
+      "#A little stressed": "A little stressed",
+      "#Neither stressed nor relaxed": "Neither stressed nor relaxed",
+      "#A little relaxed": "A little relaxed",
+      "#Very relaxed": "Very relaxed",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "When you cycle, how often do you feel anxious or overwhelmed?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#All the time": "All the time",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "When you cycle, what makes you feel anxious or overwhelmed?",
+      "#Heavy traffic or traffic jams": "Heavy traffic or traffic jams",
+      "#Aggressive or careless drivers, riders or pedestrians": "Aggressive or careless drivers, riders or pedestrians",
+      "#Routes that are complicated or new to me": "Routes that are complicated or new to me",
+      "#Noise, crowds or too much going on around me": "Noise, crowds or too much going on around me",
+      "#Being in a hurry or afraid of being late": "Being in a hurry or afraid of being late",
+      "#Feeling alone or isolated on the way": "Feeling alone or isolated on the way",
+      "#Fear of road accidents": "Fear of road accidents",
+      "#Fear of assault or harassment": "Fear of assault or harassment",
+      "#Fear of falling": "Fear of falling",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Health problems on the way (pain, breathlessness, dizziness)",
+      "#Nothing in particular": "Nothing in particular",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "When you cycle, how do you feel on streets with lots of people, shops and activity?",
+      "#I prefer them: I feel safer or more at ease": "I prefer them: I feel safer or more at ease",
+      "#I like them: they make the trip nicer": "I like them: they make the trip nicer",
+      "#It makes no difference to me": "It makes no difference to me",
+      "#They are sometimes a bit too much for me": "They are sometimes a bit too much for me",
+      "#Crowds stress me or make it hard to get through": "Crowds stress me or make it hard to get through",
+      "#Cycling – How the trip feels": "Cycling – How the trip feels",
+      "#When you cycle, how tired do you usually feel when you arrive?": "When you cycle, how tired do you usually feel when you arrive?",
+      "#Not at all tired": "Not at all tired",
+      "#A little tired": "A little tired",
+      "#Quite tired": "Quite tired",
+      "#Very tired": "Very tired",
+      "#Exhausted": "Exhausted",
+      "#When you cycle, what tires you most?": "When you cycle, what tires you most?",
+      "#Slopes, stairs and changes in level": "Slopes, stairs and changes in level",
+      "#Carrying children, a pushchair or shopping": "Carrying children, a pushchair or shopping",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffic, finding the way, being late, feeling unsafe)",
+      "#Heat, noise or bad air": "Heat, noise or bad air",
+      "#I rarely feel tired after my trips": "I rarely feel tired after my trips",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "When you cycle, how demanding is it compared with other ways you could travel?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
+      "#Much easier than the others": "Much easier than the others",
+      "#A bit easier": "A bit easier",
+      "#About the same": "About the same",
+      "#A bit more demanding": "A bit more demanding",
+      "#Much more demanding": "Much more demanding",
+      "#I have no other way to travel": "I have no other way to travel",
+      "#When you cycle, how often do you arrive in the time you planned?": "When you cycle, how often do you arrive in the time you planned?",
+      "#When you cycle, how satisfied are you overall?": "When you cycle, how satisfied are you overall?",
+      "#When you cycle, what are you least happy with?": "When you cycle, what are you least happy with?",
+      "#Very dissatisfied": "Very dissatisfied",
+      "#Dissatisfied": "Dissatisfied",
+      "#Neither satisfied nor dissatisfied": "Neither satisfied nor dissatisfied",
+      "#Satisfied": "Satisfied",
+      "#Very satisfied": "Very satisfied",
+      "#Travel time": "Travel time",
+      "#Cost": "Cost",
+      "#It's not reliable or predictable": "It's not reliable or predictable",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Safety from traffic or crime",
+      "#It's hard to reach or use": "It's hard to reach or use",
+      "#Crowding or lack of space": "Crowding or lack of space",
+      "#It's not flexible": "It's not flexible",
+      "#Always": "Always",
+      "#Physical effort (pedalling, carrying bags)": "Physical effort (pedalling, carrying bags)",
+      "#Waiting or standing (at traffic lights, in queues)": "Waiting or standing (at traffic lights, in queues)",
+      "#Cycling – Effort and satisfaction": "Cycling – Effort and satisfaction",
+      "#What would make you cycle more often or further?": "What would make you cycle more often or further?",
+      "#More cycle lanes separated from traffic": "More cycle lanes separated from traffic",
+      "#Better road surfaces on bike routes": "Better road surfaces on bike routes",
+      "#More safe bike parking where I go": "More safe bike parking where I go",
+      "#Safe bike storage near home": "Safe bike storage near home",
+      "#Slower traffic in residential streets": "Slower traffic in residential streets",
+      "#Safer junctions and crossings for bikes": "Safer junctions and crossings for bikes",
+      "#More trees and shade": "More trees and shade",
+      "#Better street lighting": "Better street lighting",
+      "#Cycling lessons or courses": "Cycling lessons or courses",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Money help (e.g. bonus to buy a bike, employer allowance)",
+      "#Continuous cycle routes connecting neighbourhoods": "Continuous cycle routes connecting neighbourhoods",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Being able to take a bicycle or e-scooter on buses, trams, the metro or trains",
+      "#Nothing: I'm happy as things are": "Nothing: I'm happy as things are",
+      "#Cycling – What would help": "Cycling – What would help",
+      "#Cycling – Experience and improvements": "Cycling – Experience and improvements",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Cycling – Experience and improvements",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#Bicycle and a route between two points": "Bicycle and a route between two points"
+    },
+    "it": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "Quando vai in bici, di solito provi più tensione o più tranquillità?",
+      "#Very stressed": "Molto stress",
+      "#A little stressed": "Un po' di stress",
+      "#Neither stressed nor relaxed": "Né stress né tranquillità",
+      "#A little relaxed": "Un po' di tranquillità",
+      "#Very relaxed": "Molta tranquillità",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "Quando vai in bici, quanto spesso provi ansia o agitazione?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#All the time": "Sempre",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "Quando vai in bici, cosa ti provoca ansia o agitazione?",
+      "#Heavy traffic or traffic jams": "Traffico intenso o code",
+      "#Aggressive or careless drivers, riders or pedestrians": "Persone alla guida, in sella o a piedi che si comportano in modo aggressivo o distratto",
+      "#Routes that are complicated or new to me": "Percorsi complicati o nuovi per me",
+      "#Noise, crowds or too much going on around me": "Rumore, folla o troppa confusione intorno a me",
+      "#Being in a hurry or afraid of being late": "Avere fretta o paura di fare tardi",
+      "#Feeling alone or isolated on the way": "La solitudine o l’isolamento lungo la strada",
+      "#Fear of road accidents": "Paura di incidenti stradali",
+      "#Fear of assault or harassment": "Paura di aggressioni o molestie",
+      "#Fear of falling": "Paura di cadere",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Problemi di salute lungo la strada (dolore, fiato corto, vertigini)",
+      "#Nothing in particular": "Niente in particolare",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "Quando vai in bici, come ti senti nelle strade con tanta gente, negozi e attività?",
+      "#I prefer them: I feel safer or more at ease": "Le preferisco: mi sento più al sicuro o a mio agio",
+      "#I like them: they make the trip nicer": "Mi piacciono: rendono il viaggio più bello",
+      "#It makes no difference to me": "Per me non fa differenza",
+      "#They are sometimes a bit too much for me": "A volte sono un po' troppo per me",
+      "#Crowds stress me or make it hard to get through": "La folla mi stressa o mi rende difficile passare",
+      "#Cycling – How the trip feels": "In bici – Come vivi lo spostamento",
+      "#When you cycle, how tired do you usually feel when you arrive?": "Quando vai in bici, quanta stanchezza senti di solito quando arrivi?",
+      "#Not at all tired": "Nessuna stanchezza",
+      "#A little tired": "Poca stanchezza",
+      "#Quite tired": "Moderata stanchezza",
+      "#Very tired": "Molta stanchezza",
+      "#Exhausted": "Sfinimento",
+      "#When you cycle, what tires you most?": "Quando vai in bici, cosa ti stanca di più?",
+      "#Slopes, stairs and changes in level": "Salite, scale e dislivelli",
+      "#Carrying children, a pushchair or shopping": "Portare bambini, passeggino o spesa",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffico, trovare la strada, fare tardi, non sentirsi al sicuro)",
+      "#Heat, noise or bad air": "Caldo, rumore o aria cattiva",
+      "#I rarely feel tired after my trips": "Raramente mi stanco dopo i miei spostamenti",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "Quando vai in bici, quanto è impegnativo rispetto ad altri modi di spostarsi?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Pensa sia allo sforzo fisico sia a quello mentale. Gli altri modi possono essere camminare, guidare o i mezzi pubblici.",
+      "#Much easier than the others": "Molto più facile degli altri",
+      "#A bit easier": "Un po' più facile",
+      "#About the same": "Più o meno uguale",
+      "#A bit more demanding": "Un po' più impegnativo",
+      "#Much more demanding": "Molto più impegnativo",
+      "#I have no other way to travel": "Non ho altri modi per spostarmi",
+      "#When you cycle, how often do you arrive in the time you planned?": "Quando vai in bici, quanto spesso arrivi nel tempo che avevi previsto?",
+      "#When you cycle, how satisfied are you overall?": "Quando vai in bici, qual è nel complesso il tuo livello di soddisfazione?",
+      "#When you cycle, what are you least happy with?": "Quando vai in bici, cosa ti piace di meno?",
+      "#Very dissatisfied": "Molto basso",
+      "#Dissatisfied": "Basso",
+      "#Neither satisfied nor dissatisfied": "Né alto né basso",
+      "#Satisfied": "Alto",
+      "#Very satisfied": "Molto alto",
+      "#Travel time": "Tempo di viaggio",
+      "#Cost": "Costo",
+      "#It's not reliable or predictable": "Non è affidabile o prevedibile",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Sicurezza rispetto al traffico o alla criminalità",
+      "#It's hard to reach or use": "È difficile da raggiungere o da usare",
+      "#Crowding or lack of space": "Affollamento o mancanza di spazio",
+      "#It's not flexible": "Non è flessibile",
+      "#Always": "Sempre",
+      "#Physical effort (pedalling, carrying bags)": "Fatica fisica (pedalare, portare borse)",
+      "#Waiting or standing (at traffic lights, in queues)": "Aspettare o stare in piedi (ai semafori, in coda)",
+      "#Cycling – Effort and satisfaction": "In bici – Fatica e soddisfazione",
+      "#What would make you cycle more often or further?": "Cosa ti farebbe andare in bici più spesso o più lontano?",
+      "#More cycle lanes separated from traffic": "Più piste ciclabili separate dal traffico",
+      "#Better road surfaces on bike routes": "Fondo stradale migliore sui percorsi ciclabili",
+      "#More safe bike parking where I go": "Più parcheggi sicuri per le bici dove vado",
+      "#Safe bike storage near home": "Un posto sicuro per tenere la bici vicino a casa",
+      "#Slower traffic in residential streets": "Traffico più lento nelle strade residenziali",
+      "#Safer junctions and crossings for bikes": "Incroci e attraversamenti più sicuri per le bici",
+      "#More trees and shade": "Più alberi e ombra",
+      "#Better street lighting": "Illuminazione stradale migliore",
+      "#Cycling lessons or courses": "Lezioni o corsi di bicicletta",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Un aiuto economico (ad es. bonus per comprare una bici, contributo del datore di lavoro)",
+      "#Continuous cycle routes connecting neighbourhoods": "Percorsi ciclabili continui che collegano i quartieri",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Poter portare la bicicletta o il monopattino su autobus, tram, metro o treni",
+      "#Nothing: I'm happy as things are": "Niente: mi va bene così",
+      "#Cycling – What would help": "In bici – Cosa ti aiuterebbe",
+      "#Cycling – Experience and improvements": "Andare in bicicletta – Esperienza e miglioramenti",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Andare in bicicletta – Esperienza e miglioramenti",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>Come ti senti <b>quando vai in bici</b>: umore e preoccupazioni.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In bici – Come vivi lo spostamento</li><li>In bici – Fatica e soddisfazione</li><li>In bici – Cosa ti aiuterebbe</li></ul>",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#Bicycle and a route between two points": "Bicicletta e un percorso tra due punti"
+    },
+    "fr": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "Lorsque vous faites du vélo, ressentez-vous en général plutôt du stress ou de la détente ?",
+      "#Very stressed": "Stress très fort",
+      "#A little stressed": "Un peu de stress",
+      "#Neither stressed nor relaxed": "Ni stress ni détente",
+      "#A little relaxed": "Un peu de détente",
+      "#Very relaxed": "Grande détente",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "Lorsque vous faites du vélo, à quelle fréquence ressentez-vous de l’anxiété ou un sentiment de débordement ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#All the time": "Tout le temps",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "Lorsque vous faites du vélo, qu’est-ce qui vous cause de l’anxiété ou un sentiment de débordement ?",
+      "#Heavy traffic or traffic jams": "Circulation dense ou embouteillages",
+      "#Aggressive or careless drivers, riders or pedestrians": "Conducteurs, cyclistes ou piétons agressifs ou imprudents",
+      "#Routes that are complicated or new to me": "Des itinéraires compliqués ou nouveaux pour moi",
+      "#Noise, crowds or too much going on around me": "Du bruit, de la foule ou trop d'agitation autour de moi",
+      "#Being in a hurry or afraid of being late": "Être pressé ou avoir peur d'être en retard",
+      "#Feeling alone or isolated on the way": "Un sentiment de solitude ou d'isolement en chemin",
+      "#Fear of road accidents": "Peur des accidents de la route",
+      "#Fear of assault or harassment": "Peur d’agression ou de harcèlement",
+      "#Fear of falling": "Peur de tomber",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Problèmes de santé en chemin (douleur, essoufflement, vertiges)",
+      "#Nothing in particular": "Rien en particulier",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "Lorsque vous faites du vélo, que ressentez-vous dans les rues avec beaucoup de monde, de commerces et d’animation ?",
+      "#I prefer them: I feel safer or more at ease": "Je les préfère : je me sens plus en sécurité ou plus à l'aise",
+      "#I like them: they make the trip nicer": "Je les aime : elles rendent le trajet plus agréable",
+      "#It makes no difference to me": "Cela ne fait aucune différence pour moi",
+      "#They are sometimes a bit too much for me": "Elles sont parfois un peu trop pour moi",
+      "#Crowds stress me or make it hard to get through": "La foule me stresse ou m'empêche de passer",
+      "#Cycling – How the trip feels": "Vélo – Ressenti du trajet",
+      "#When you cycle, how tired do you usually feel when you arrive?": "Lorsque vous faites du vélo, quel niveau de fatigue ressentez-vous en général à l’arrivée ?",
+      "#Not at all tired": "Aucune fatigue",
+      "#A little tired": "Un peu fatigué",
+      "#Quite tired": "Assez fatigué",
+      "#Very tired": "Grande fatigue",
+      "#Exhausted": "Épuisement",
+      "#When you cycle, what tires you most?": "Lorsque vous faites du vélo, qu’est-ce qui vous fatigue le plus ?",
+      "#Slopes, stairs and changes in level": "Montées, escaliers et dénivelés",
+      "#Carrying children, a pushchair or shopping": "Porter des enfants, une poussette ou des courses",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (circulation, trouver son chemin, être en retard, se sentir en danger)",
+      "#Heat, noise or bad air": "Chaleur, bruit ou mauvaise qualité de l'air",
+      "#I rarely feel tired after my trips": "Je me sens rarement fatigué après mes trajets",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "Lorsque vous faites du vélo, dans quelle mesure est-ce exigeant par rapport aux autres moyens de se déplacer ?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Pensez à l'effort physique comme mental. Les autres façons peuvent être la marche, la conduite ou les transports en commun.",
+      "#Much easier than the others": "Beaucoup plus facile que les autres",
+      "#A bit easier": "Un peu plus facile",
+      "#About the same": "À peu près pareil",
+      "#A bit more demanding": "Un peu plus exigeant",
+      "#Much more demanding": "Beaucoup plus exigeant",
+      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
+      "#When you cycle, how often do you arrive in the time you planned?": "Lorsque vous faites du vélo, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
+      "#When you cycle, how satisfied are you overall?": "Lorsque vous faites du vélo, quel est votre niveau de satisfaction global ?",
+      "#When you cycle, what are you least happy with?": "Lorsque vous faites du vélo, qu’est-ce qui vous plaît le moins ?",
+      "#Very dissatisfied": "Très faible",
+      "#Dissatisfied": "Faible",
+      "#Neither satisfied nor dissatisfied": "Ni faible ni élevé",
+      "#Satisfied": "Élevé",
+      "#Very satisfied": "Très élevé",
+      "#Travel time": "Durée du trajet",
+      "#Cost": "Coût",
+      "#It's not reliable or predictable": "Ce n'est pas fiable ni prévisible",
+      "#Comfort": "Confort",
+      "#Safety from traffic or crime": "Sécurité face à la circulation ou à la délinquance",
+      "#It's hard to reach or use": "C'est difficile d'accès ou d'utilisation",
+      "#Crowding or lack of space": "Foule ou manque de place",
+      "#It's not flexible": "Ce n'est pas flexible",
+      "#Always": "Toujours",
+      "#Physical effort (pedalling, carrying bags)": "Effort physique (pédaler, porter des sacs)",
+      "#Waiting or standing (at traffic lights, in queues)": "Attendre ou rester debout (aux feux, dans les files)",
+      "#Cycling – Effort and satisfaction": "Vélo – Effort et satisfaction",
+      "#What would make you cycle more often or further?": "Qu'est-ce qui vous ferait faire du vélo plus souvent ou plus loin ?",
+      "#More cycle lanes separated from traffic": "Plus de pistes cyclables séparées de la circulation",
+      "#Better road surfaces on bike routes": "De meilleurs revêtements sur les itinéraires cyclables",
+      "#More safe bike parking where I go": "Plus de stationnement sûr pour les vélos là où je vais",
+      "#Safe bike storage near home": "Un endroit sûr pour garder mon vélo près de chez moi",
+      "#Slower traffic in residential streets": "Une circulation plus lente dans les rues résidentielles",
+      "#Safer junctions and crossings for bikes": "Des carrefours et des passages plus sûrs pour les vélos",
+      "#More trees and shade": "Plus d'arbres et d'ombre",
+      "#Better street lighting": "Un meilleur éclairage des rues",
+      "#Cycling lessons or courses": "Des cours ou des formations de vélo",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Une aide financière (par ex. prime pour acheter un vélo, aide de l'employeur)",
+      "#Continuous cycle routes connecting neighbourhoods": "Des itinéraires cyclables continus reliant les quartiers",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Pouvoir emporter son vélo ou sa trottinette dans les bus, tramways, métros ou trains",
+      "#Nothing: I'm happy as things are": "Rien : cela me convient ainsi",
+      "#Cycling – What would help": "Vélo – Ce qui vous aiderait",
+      "#Cycling – Experience and improvements": "Vélo – Expérience et améliorations",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Vélo – Expérience et améliorations",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>Ce que vous ressentez <b>lorsque vous faites du vélo</b> : humeur et inquiétudes.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Vélo – Ressenti du trajet</li><li>Vélo – Effort et satisfaction</li><li>Vélo – Ce qui vous aiderait</li></ul>",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#Bicycle and a route between two points": "Vélo et un itinéraire entre deux points"
+    },
+    "de": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "Wie gestresst oder entspannt fühlen Sie sich beim Radfahren normalerweise?",
+      "#Very stressed": "Sehr gestresst",
+      "#A little stressed": "Ein wenig gestresst",
+      "#Neither stressed nor relaxed": "Weder gestresst noch entspannt",
+      "#A little relaxed": "Ein wenig entspannt",
+      "#Very relaxed": "Sehr entspannt",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "Wie oft fühlen Sie sich beim Radfahren ängstlich oder überfordert?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#All the time": "Die ganze Zeit",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "Was führt beim Radfahren dazu, dass Sie sich ängstlich oder überfordert fühlen?",
+      "#Heavy traffic or traffic jams": "Starker Verkehr oder Stau",
+      "#Aggressive or careless drivers, riders or pedestrians": "Aggressive oder unachtsame Fahrer, Fahrerinnen oder Fußgänger",
+      "#Routes that are complicated or new to me": "Strecken, die kompliziert oder neu für mich sind",
+      "#Noise, crowds or too much going on around me": "Lärm, Menschenmengen oder zu viel Trubel um mich herum",
+      "#Being in a hurry or afraid of being late": "In Eile zu sein oder Angst vor Verspätung",
+      "#Feeling alone or isolated on the way": "Mich unterwegs allein oder isoliert zu fühlen",
+      "#Fear of road accidents": "Angst vor Verkehrsunfällen",
+      "#Fear of assault or harassment": "Angst vor Übergriffen oder Belästigung",
+      "#Fear of falling": "Angst zu stürzen",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Gesundheitliche Probleme unterwegs (Schmerzen, Atemnot, Schwindel)",
+      "#Nothing in particular": "Nichts Besonderes",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "Wie fühlen Sie sich beim Radfahren auf Straßen mit vielen Menschen, Geschäften und Aktivitäten?",
+      "#I prefer them: I feel safer or more at ease": "Ich bevorzuge sie: Ich fühle mich sicherer oder wohler",
+      "#I like them: they make the trip nicer": "Ich mag sie: Sie machen den Weg schöner",
+      "#It makes no difference to me": "Für mich macht es keinen Unterschied",
+      "#They are sometimes a bit too much for me": "Sie sind mir manchmal ein bisschen zu viel",
+      "#Crowds stress me or make it hard to get through": "Menschenmengen stressen mich oder machen das Durchkommen schwer",
+      "#Cycling – How the trip feels": "Radfahren – Wie sich der Weg anfühlt",
+      "#When you cycle, how tired do you usually feel when you arrive?": "Wie müde fühlen Sie sich beim Radfahren normalerweise, wenn Sie ankommen?",
+      "#Not at all tired": "Gar nicht müde",
+      "#A little tired": "Ein wenig müde",
+      "#Quite tired": "Ziemlich müde",
+      "#Very tired": "Sehr müde",
+      "#Exhausted": "Erschöpft",
+      "#When you cycle, what tires you most?": "Was ermüdet Sie beim Radfahren am meisten?",
+      "#Slopes, stairs and changes in level": "Steigungen, Treppen und Höhenunterschiede",
+      "#Carrying children, a pushchair or shopping": "Kinder, Kinderwagen oder Einkäufe tragen bzw. schieben",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (Verkehr, Weg finden, Verspätung, Unsicherheit)",
+      "#Heat, noise or bad air": "Hitze, Lärm oder schlechte Luft",
+      "#I rarely feel tired after my trips": "Nach meinen Wegen bin ich selten müde",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "Wie anstrengend ist das Radfahren im Vergleich zu anderen Fortbewegungsarten, die Sie nutzen könnten?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Denken Sie an körperliche und geistige Anstrengung. Andere Möglichkeiten wären Gehen, Autofahren oder öffentlicher Verkehr.",
+      "#Much easier than the others": "Viel leichter als die anderen",
+      "#A bit easier": "Etwas leichter",
+      "#About the same": "Ungefähr gleich",
+      "#A bit more demanding": "Etwas anstrengender",
+      "#Much more demanding": "Viel anstrengender",
+      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
+      "#When you cycle, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem Rad in der Zeit an, die Sie eingeplant haben?",
+      "#When you cycle, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt, wenn Sie Rad fahren?",
+      "#When you cycle, what are you least happy with?": "Was gefällt Ihnen beim Radfahren am wenigsten?",
+      "#Very dissatisfied": "Sehr unzufrieden",
+      "#Dissatisfied": "Unzufrieden",
+      "#Neither satisfied nor dissatisfied": "Weder zufrieden noch unzufrieden",
+      "#Satisfied": "Zufrieden",
+      "#Very satisfied": "Sehr zufrieden",
+      "#Travel time": "Reisezeit",
+      "#Cost": "Kosten",
+      "#It's not reliable or predictable": "Es ist nicht verlässlich oder planbar",
+      "#Comfort": "Komfort",
+      "#Safety from traffic or crime": "Sicherheit vor Verkehr oder Kriminalität",
+      "#It's hard to reach or use": "Es ist schwer zu erreichen oder zu nutzen",
+      "#Crowding or lack of space": "Gedränge oder Platzmangel",
+      "#It's not flexible": "Es ist nicht flexibel",
+      "#Always": "Immer",
+      "#Physical effort (pedalling, carrying bags)": "Körperliche Anstrengung (Radfahren, Taschen tragen)",
+      "#Waiting or standing (at traffic lights, in queues)": "Warten oder Stehen (an Ampeln, in Schlangen)",
+      "#Cycling – Effort and satisfaction": "Radfahren – Aufwand und Zufriedenheit",
+      "#What would make you cycle more often or further?": "Was würde Sie dazu bringen, öfter oder weiter Rad zu fahren?",
+      "#More cycle lanes separated from traffic": "Mehr vom Verkehr getrennte Radwege",
+      "#Better road surfaces on bike routes": "Bessere Fahrbahnbeläge auf Radrouten",
+      "#More safe bike parking where I go": "Mehr sichere Fahrradabstellplätze dort, wo ich hinfahre",
+      "#Safe bike storage near home": "Sichere Fahrradaufbewahrung in der Nähe meiner Wohnung",
+      "#Slower traffic in residential streets": "Langsamerer Verkehr in Wohnstraßen",
+      "#Safer junctions and crossings for bikes": "Sicherere Kreuzungen und Übergänge für Fahrräder",
+      "#More trees and shade": "Mehr Bäume und Schatten",
+      "#Better street lighting": "Bessere Straßenbeleuchtung",
+      "#Cycling lessons or courses": "Radfahrkurse oder -unterricht",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Finanzielle Hilfe (z. B. Zuschuss zum Fahrradkauf, Zuschuss vom Arbeitgeber)",
+      "#Continuous cycle routes connecting neighbourhoods": "Durchgehende Radrouten, die Stadtviertel verbinden",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Fahrrad oder E-Scooter in Bussen, Straßenbahnen, U-Bahnen oder Zügen mitnehmen können",
+      "#Nothing: I'm happy as things are": "Nichts: Ich bin zufrieden, wie es ist",
+      "#Cycling – What would help": "Radfahren – Was helfen würde",
+      "#Cycling – Experience and improvements": "Radfahren – Erlebnis und Verbesserungen",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Radfahren – Erlebnis und Verbesserungen",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>Wie Sie sich fühlen, <b>wenn Sie Rad fahren</b>: Stimmung und Sorgen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Radfahren – Wie sich der Weg anfühlt</li><li>Radfahren – Aufwand und Zufriedenheit</li><li>Radfahren – Was helfen würde</li></ul>",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#Bicycle and a route between two points": "Fahrrad und eine Route zwischen zwei Punkten"
+    },
+    "tr": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "Bisiklet sürerken genellikle ne kadar stresli veya rahat hissediyorsunuz?",
+      "#Very stressed": "Çok stresli",
+      "#A little stressed": "Biraz stresli",
+      "#Neither stressed nor relaxed": "Ne stresli ne rahat",
+      "#A little relaxed": "Biraz rahat",
+      "#Very relaxed": "Çok rahat",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "Bisiklet sürerken ne sıklıkla kaygılı veya bunalmış hissediyorsunuz?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#All the time": "Her zaman",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "Bisiklet sürerken sizi kaygılı veya bunalmış hissettiren nedir?",
+      "#Heavy traffic or traffic jams": "Yoğun trafik veya trafik sıkışıklığı",
+      "#Aggressive or careless drivers, riders or pedestrians": "Agresif veya dikkatsiz sürücüler, bisikletliler ya da yayalar",
+      "#Routes that are complicated or new to me": "Karmaşık veya benim için yeni güzergâhlar",
+      "#Noise, crowds or too much going on around me": "Gürültü, kalabalık veya etrafımda çok fazla hareketlilik",
+      "#Being in a hurry or afraid of being late": "Acele etmek veya geç kalma korkusu",
+      "#Feeling alone or isolated on the way": "Yolda kendimi yalnız veya tecrit edilmiş hissetmek",
+      "#Fear of road accidents": "Trafik kazası korkusu",
+      "#Fear of assault or harassment": "Saldırıya veya tacize uğrama korkusu",
+      "#Fear of falling": "Düşme korkusu",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Yolda sağlık sorunları (ağrı, nefes darlığı, baş dönmesi)",
+      "#Nothing in particular": "Özellikle hiçbir şey",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "Bisiklet sürerken çok insanın, dükkânın ve hareketin olduğu sokaklarda kendinizi nasıl hissediyorsunuz?",
+      "#I prefer them: I feel safer or more at ease": "Onları tercih ederim: Kendimi daha güvende veya rahat hissederim",
+      "#I like them: they make the trip nicer": "Hoşuma gider: Yolculuğu daha güzel yapar",
+      "#It makes no difference to me": "Benim için fark etmez",
+      "#They are sometimes a bit too much for me": "Bazen benim için biraz fazla gelirler",
+      "#Crowds stress me or make it hard to get through": "Kalabalık beni strese sokar veya geçmeyi zorlaştırır",
+      "#Cycling – How the trip feels": "Bisiklet – Yolculuk nasıl hissettiriyor",
+      "#When you cycle, how tired do you usually feel when you arrive?": "Bisiklet sürerken vardığınızda genellikle ne kadar yorgun hissediyorsunuz?",
+      "#Not at all tired": "Hiç yorgun değilim",
+      "#A little tired": "Biraz yorgun",
+      "#Quite tired": "Oldukça yorgun",
+      "#Very tired": "Çok yorgunum",
+      "#Exhausted": "Çok bitkinim",
+      "#When you cycle, what tires you most?": "Bisiklet sürerken sizi en çok ne yorar?",
+      "#Slopes, stairs and changes in level": "Yokuşlar, merdivenler ve seviye farkları",
+      "#Carrying children, a pushchair or shopping": "Çocuk, bebek arabası veya alışveriş taşımak",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stres (trafik, yolu bulmak, geç kalmak, kendini güvensiz hissetmek)",
+      "#Heat, noise or bad air": "Sıcak, gürültü veya kötü hava kalitesi",
+      "#I rarely feel tired after my trips": "Yolculuklarımdan sonra nadiren yorgun hissederim",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "Bisiklet sürerken gidebileceğiniz diğer yollara kıyasla bu ne kadar zahmetli?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Hem fiziksel hem de zihinsel eforu düşünün. Diğer yollar yürümek, otomobil kullanmak veya toplu taşıma olabilir.",
+      "#Much easier than the others": "Diğerlerinden çok daha kolay",
+      "#A bit easier": "Biraz daha kolay",
+      "#About the same": "Yaklaşık aynı",
+      "#A bit more demanding": "Biraz daha zorlayıcı",
+      "#Much more demanding": "Çok daha zorlayıcı",
+      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
+      "#When you cycle, how often do you arrive in the time you planned?": "Bisiklet sürerken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
+      "#When you cycle, how satisfied are you overall?": "Bisiklet sürerken genel olarak ne kadar memnunsunuz?",
+      "#When you cycle, what are you least happy with?": "Bisiklet sürerken en az neyden memnunsunuz?",
+      "#Very dissatisfied": "Hiç memnun değilim",
+      "#Dissatisfied": "Memnun değilim",
+      "#Neither satisfied nor dissatisfied": "Ne memnunum ne de memnun değilim",
+      "#Satisfied": "Memnunum",
+      "#Very satisfied": "Çok memnunum",
+      "#Travel time": "Yolculuk süresi",
+      "#Cost": "Maliyet",
+      "#It's not reliable or predictable": "Güvenilir veya öngörülebilir değil",
+      "#Comfort": "Konfor",
+      "#Safety from traffic or crime": "Trafiğe veya suça karşı güvenlik",
+      "#It's hard to reach or use": "Ulaşması veya kullanması zor",
+      "#Crowding or lack of space": "Kalabalık veya yer yetersizliği",
+      "#It's not flexible": "Esnek değil",
+      "#Always": "Her zaman",
+      "#Physical effort (pedalling, carrying bags)": "Fiziksel efor (pedal çevirmek, çanta taşımak)",
+      "#Waiting or standing (at traffic lights, in queues)": "Beklemek veya ayakta durmak (trafik ışıklarında, kuyruklarda)",
+      "#Cycling – Effort and satisfaction": "Bisiklet – Çaba ve memnuniyet",
+      "#What would make you cycle more often or further?": "Sizi daha sık veya daha uzağa bisiklet sürmeye ne teşvik ederdi?",
+      "#More cycle lanes separated from traffic": "Trafikten ayrılmış daha fazla bisiklet yolu",
+      "#Better road surfaces on bike routes": "Bisiklet güzergâhlarında daha iyi yol yüzeyleri",
+      "#More safe bike parking where I go": "Gittiğim yerlerde daha fazla güvenli bisiklet park yeri",
+      "#Safe bike storage near home": "Evimin yakınında güvenli bisiklet saklama yeri",
+      "#Slower traffic in residential streets": "Yerleşim sokaklarında daha yavaş trafik",
+      "#Safer junctions and crossings for bikes": "Bisikletler için daha güvenli kavşaklar ve geçitler",
+      "#More trees and shade": "Daha fazla ağaç ve gölge",
+      "#Better street lighting": "Daha iyi sokak aydınlatması",
+      "#Cycling lessons or courses": "Bisiklet dersleri veya kursları",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Maddi destek (örn. bisiklet almak için bonus, işveren desteği)",
+      "#Continuous cycle routes connecting neighbourhoods": "Mahalleleri birbirine bağlayan kesintisiz bisiklet güzergâhları",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Bisikleti veya elektrikli scooterı otobüs, tramvay, metro veya trene alabilmek",
+      "#Nothing: I'm happy as things are": "Hiçbir şey: Mevcut durumdan memnunum",
+      "#Cycling – What would help": "Bisiklet – Ne işe yarardı",
+      "#Cycling – Experience and improvements": "Bisiklet – Deneyim ve iyileştirmeler",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Bisiklet – Deneyim ve iyileştirmeler",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p><b>Bisiklet sürerken</b> kendinizi nasıl hissettiğiniz: ruh hâli ve kaygılar.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Bisiklet – Yolculuk nasıl hissettiriyor</li><li>Bisiklet – Çaba ve memnuniyet</li><li>Bisiklet – Ne işe yarardı</li></ul>",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#Bicycle and a route between two points": "Bisiklet ve iki nokta arasında bir güzergâh"
+    },
+    "fa": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "هنگام دوچرخه‌سواری، معمولاً چقدر احساس تنش یا آرامش می‌کنید؟",
+      "#Very stressed": "خیلی استرس دارم",
+      "#A little stressed": "کمی استرس دارم",
+      "#Neither stressed nor relaxed": "نه استرس دارم، نه آرام هستم",
+      "#A little relaxed": "کمی آرام هستم",
+      "#Very relaxed": "خیلی آرام هستم",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "هنگام دوچرخه‌سواری، چند وقت یک بار احساس نگرانی یا فشار زیاد می‌کنید؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#All the time": "همیشه",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "هنگام دوچرخه‌سواری، چه چیزی باعث نگرانی یا احساس فشار زیاد در شما می‌شود؟",
+      "#Heavy traffic or traffic jams": "ترافیک سنگین یا راهبندان",
+      "#Aggressive or careless drivers, riders or pedestrians": "رانندگان، موتورسواران و دوچرخه‌سواران یا عابران پیادهٔ پرخاشگر یا بی‌احتیاط",
+      "#Routes that are complicated or new to me": "مسیرهای پیچیده یا ناآشنا برای من",
+      "#Noise, crowds or too much going on around me": "سر و صدا، شلوغی یا هیاهوی زیاد در اطراف",
+      "#Being in a hurry or afraid of being late": "عجله داشتن یا ترس از دیر رسیدن",
+      "#Feeling alone or isolated on the way": "احساس تنهایی یا انزوا در مسیر",
+      "#Fear of road accidents": "ترس از تصادف رانندگی",
+      "#Fear of assault or harassment": "ترس از حمله یا آزار",
+      "#Fear of falling": "ترس از زمین خوردن",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "مشکلات سلامتی در مسیر (درد، تنگی نفس، سرگیجه)",
+      "#Nothing in particular": "هیچ مورد خاصی",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "هنگام دوچرخه‌سواری، در خیابان‌هایی با رفت‌وآمد، مغازه و فعالیت زیاد چه احساسی دارید؟",
+      "#I prefer them: I feel safer or more at ease": "ترجیحشان می‌دهم: احساس امنیت یا آرامش بیشتری دارم",
+      "#I like them: they make the trip nicer": "دوستشان دارم: سفر را دلپذیرتر می‌کنند",
+      "#It makes no difference to me": "برایم فرقی نمی‌کند",
+      "#They are sometimes a bit too much for me": "گاهی کمی زیادی برایم هستند",
+      "#Crowds stress me or make it hard to get through": "شلوغی مرا مضطرب می‌کند یا عبور را سخت می‌کند",
+      "#Cycling – How the trip feels": "دوچرخه‌سواری – حال و هوای سفر",
+      "#When you cycle, how tired do you usually feel when you arrive?": "هنگام دوچرخه‌سواری، معمولاً هنگام رسیدن چقدر احساس خستگی می‌کنید؟",
+      "#Not at all tired": "اصلاً خسته نیستم",
+      "#A little tired": "کمی خسته‌ام",
+      "#Quite tired": "نسبتاً خسته‌ام",
+      "#Very tired": "خیلی خسته‌ام",
+      "#Exhausted": "کاملاً خسته‌ام",
+      "#When you cycle, what tires you most?": "هنگام دوچرخه‌سواری، چه چیزی بیشتر از همه شما را خسته می‌کند؟",
+      "#Slopes, stairs and changes in level": "سربالایی‌ها، پله‌ها و اختلاف سطح‌ها",
+      "#Carrying children, a pushchair or shopping": "حمل کودک، کالسکه یا خرید",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "استرس (ترافیک، پیدا کردن راه، دیر رسیدن، احساس ناامنی)",
+      "#Heat, noise or bad air": "گرما، سر و صدا یا هوای آلوده",
+      "#I rarely feel tired after my trips": "به‌ندرت بعد از سفرهایم احساس خستگی می‌کنم",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "هنگام دوچرخه‌سواری، در مقایسه با روش‌های دیگر رفت‌وآمد، چقدر سخت و پرزحمت است؟",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "هم تلاش جسمی و هم ذهنی را در نظر بگیرید. روش‌های دیگر می‌تواند پیاده‌روی، رانندگی یا حمل‌ونقل عمومی باشد.",
+      "#Much easier than the others": "خیلی راحت‌تر از بقیه",
+      "#A bit easier": "کمی راحت‌تر",
+      "#About the same": "تقریباً یکسان",
+      "#A bit more demanding": "کمی سخت‌تر",
+      "#Much more demanding": "خیلی سخت‌تر",
+      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
+      "#When you cycle, how often do you arrive in the time you planned?": "هنگام دوچرخه‌سواری، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
+      "#When you cycle, how satisfied are you overall?": "هنگام دوچرخه‌سواری، در مجموع چقدر راضی هستید؟",
+      "#When you cycle, what are you least happy with?": "هنگام دوچرخه‌سواری، از چه چیزی کمتر از همه راضی هستید؟",
+      "#Very dissatisfied": "بسیار ناراضی",
+      "#Dissatisfied": "ناراضی",
+      "#Neither satisfied nor dissatisfied": "نه راضی و نه ناراضی",
+      "#Satisfied": "راضی",
+      "#Very satisfied": "بسیار راضی",
+      "#Travel time": "زمان سفر",
+      "#Cost": "هزینه",
+      "#It's not reliable or predictable": "قابل‌اعتماد یا قابل‌پیش‌بینی نیست",
+      "#Comfort": "راحتی",
+      "#Safety from traffic or crime": "ایمنی در ترافیک یا امنیت در برابر جرم",
+      "#It's hard to reach or use": "رسیدن به آن یا استفاده از آن سخت است",
+      "#Crowding or lack of space": "شلوغی یا کمبود جا",
+      "#It's not flexible": "انعطاف‌پذیر نیست",
+      "#Always": "همیشه",
+      "#Physical effort (pedalling, carrying bags)": "تلاش بدنی (رکاب زدن، حمل کیسه)",
+      "#Waiting or standing (at traffic lights, in queues)": "انتظار یا ایستادن (پشت چراغ قرمز، در صف)",
+      "#Cycling – Effort and satisfaction": "دوچرخه‌سواری – تلاش و رضایت",
+      "#What would make you cycle more often or further?": "چه چیزی باعث می‌شود بیشتر یا دورتر دوچرخه‌سواری کنید؟",
+      "#More cycle lanes separated from traffic": "مسیرهای دوچرخه بیشتر، جدا از ترافیک",
+      "#Better road surfaces on bike routes": "سطح جاده بهتر در مسیرهای دوچرخه",
+      "#More safe bike parking where I go": "جای امن بیشتر برای دوچرخه در جاهایی که می‌روم",
+      "#Safe bike storage near home": "جای امن نگهداری دوچرخه نزدیک خانه",
+      "#Slower traffic in residential streets": "ترافیک آهسته‌تر در خیابان‌های مسکونی",
+      "#Safer junctions and crossings for bikes": "چهارراه‌ها و گذرگاه‌های امن‌تر برای دوچرخه",
+      "#More trees and shade": "درخت و سایه بیشتر",
+      "#Better street lighting": "روشنایی بهتر خیابان",
+      "#Cycling lessons or courses": "درس یا دوره دوچرخه‌سواری",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "کمک مالی (مثلاً بن خرید دوچرخه، کمک‌هزینه از کارفرما)",
+      "#Continuous cycle routes connecting neighbourhoods": "مسیرهای پیوستهٔ دوچرخه که محله‌ها را به هم وصل کنند",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "امکان بردن دوچرخه یا اسکوتر برقی در اتوبوس، تراموا، مترو یا قطار",
+      "#Nothing: I'm happy as things are": "هیچ چیز: وضعیت فعلی برایم خوب است",
+      "#Cycling – What would help": "دوچرخه‌سواری – چه چیزی کمک می‌کند",
+      "#Cycling – Experience and improvements": "دوچرخه‌سواری – تجربه و بهبودها",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - دوچرخه‌سواری – تجربه و بهبودها",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>چه احساسی دارید <b>هنگام دوچرخه‌سواری</b>: حال و نگرانی‌ها.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>دوچرخه‌سواری – حال و هوای سفر</li><li>دوچرخه‌سواری – تلاش و رضایت</li><li>دوچرخه‌سواری – چه چیزی کمک می‌کند</li></ul>",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#Bicycle and a route between two points": "دوچرخه و مسیری میان دو نقطه"
+    },
+    "hu": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "Kerékpározás közben általában mennyire érzi magát feszültnek vagy nyugodtnak?",
+      "#Very stressed": "Nagyon feszült vagyok",
+      "#A little stressed": "Kissé feszült vagyok",
+      "#Neither stressed nor relaxed": "Nem vagyok sem feszült, sem nyugodt",
+      "#A little relaxed": "Kissé nyugodt vagyok",
+      "#Very relaxed": "Nagyon nyugodt vagyok",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "Kerékpározás közben milyen gyakran érzi magát szorongónak vagy túlterheltnek?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#All the time": "Mindig",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "Kerékpározás közben mi miatt érzi magát szorongónak vagy túlterheltnek?",
+      "#Heavy traffic or traffic jams": "Sűrű forgalom vagy dugók",
+      "#Aggressive or careless drivers, riders or pedestrians": "Agresszív vagy figyelmetlen járművezetők, kerékpárosok, motorosok vagy gyalogosok",
+      "#Routes that are complicated or new to me": "Bonyolult vagy számomra ismeretlen útvonalak",
+      "#Noise, crowds or too much going on around me": "Zaj, tömeg vagy túl sok minden történik körülöttem",
+      "#Being in a hurry or afraid of being late": "Sietség vagy félelem a késéstől",
+      "#Feeling alone or isolated on the way": "Magányosnak vagy elszigeteltnek érzem magam az úton",
+      "#Fear of road accidents": "Közlekedési balesettől való félelem",
+      "#Fear of assault or harassment": "Támadástól vagy zaklatástól való félelem",
+      "#Fear of falling": "Eséstől való félelem",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Egészségügyi problémák az úton (fájdalom, légszomj, szédülés)",
+      "#Nothing in particular": "Semmi különös",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "Kerékpározás közben hogyan érzi magát olyan utcákon, ahol sok ember, üzlet és nyüzsgés van?",
+      "#I prefer them: I feel safer or more at ease": "Szívesebben közlekedem ilyen utcákon: nagyobb biztonságban érzem magam, vagy nyugodtabb vagyok",
+      "#I like them: they make the trip nicer": "Szeretem őket: kellemesebbé teszik az utat",
+      "#It makes no difference to me": "Nekem mindegy",
+      "#They are sometimes a bit too much for me": "Néha egy kicsit sok nekem",
+      "#Crowds stress me or make it hard to get through": "A tömeg stresszel, vagy megnehezíti az átjutást",
+      "#Cycling – How the trip feels": "Kerékpározás – Az utazás élménye",
+      "#When you cycle, how tired do you usually feel when you arrive?": "Kerékpározás közben általában mennyire érzi magát fáradtnak, amikor megérkezik?",
+      "#Not at all tired": "Egyáltalán nem vagyok fáradt",
+      "#A little tired": "Kissé fáradt vagyok",
+      "#Quite tired": "Meglehetősen fáradt vagyok",
+      "#Very tired": "Nagyon fáradt vagyok",
+      "#Exhausted": "Kimerült vagyok",
+      "#When you cycle, what tires you most?": "Kerékpározás közben mi fárasztja ki a legjobban?",
+      "#Slopes, stairs and changes in level": "Emelkedők, lépcsők és szintkülönbségek",
+      "#Carrying children, a pushchair or shopping": "Gyermek, babakocsi vagy bevásárlás cipelése",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stressz (forgalom, eligazodás, késés, a biztonság hiányának érzése)",
+      "#Heat, noise or bad air": "Hőség, zaj vagy rossz levegő",
+      "#I rarely feel tired after my trips": "Ritkán fáradok el az utak után",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "Kerékpározás közben mennyire megterhelő ez a többi lehetőséghez képest, amellyel utazhatna?",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "Gondoljon a testi és a szellemi megterhelésre is. Más módok lehetnek a gyaloglás, az autózás vagy a tömegközlekedés.",
+      "#Much easier than the others": "Sokkal könnyebb, mint a többi",
+      "#A bit easier": "Kicsit könnyebb",
+      "#About the same": "Nagyjából ugyanolyan",
+      "#A bit more demanding": "Kicsit megterhelőbb",
+      "#Much more demanding": "Sokkal megterhelőbb",
+      "#I have no other way to travel": "Nincs más módom az utazásra",
+      "#When you cycle, how often do you arrive in the time you planned?": "Kerékpározás közben milyen gyakran ér célba a tervezett idő alatt?",
+      "#When you cycle, how satisfied are you overall?": "Kerékpározás közben összességében mennyire elégedett?",
+      "#When you cycle, what are you least happy with?": "Kerékpározás közben mivel a legkevésbé elégedett?",
+      "#Very dissatisfied": "Nagyon elégedetlen",
+      "#Dissatisfied": "Elégedetlen",
+      "#Neither satisfied nor dissatisfied": "Sem elégedett, sem elégedetlen",
+      "#Satisfied": "Elégedett",
+      "#Very satisfied": "Nagyon elégedett",
+      "#Travel time": "Utazási idő",
+      "#Cost": "Költség",
+      "#It's not reliable or predictable": "Nem megbízható, és nem kiszámítható",
+      "#Comfort": "Kényelem",
+      "#Safety from traffic or crime": "Biztonság a forgalomtól vagy a bűnözéstől",
+      "#It's hard to reach or use": "Nehéz elérni vagy használni",
+      "#Crowding or lack of space": "Zsúfoltság vagy helyhiány",
+      "#It's not flexible": "Nem rugalmas",
+      "#Always": "Mindig",
+      "#Physical effort (pedalling, carrying bags)": "Fizikai megterhelés (tekerés, szatyrok cipelése)",
+      "#Waiting or standing (at traffic lights, in queues)": "Várakozás vagy állás (a lámpánál, sorban)",
+      "#Cycling – Effort and satisfaction": "Kerékpározás – Erőfeszítés és elégedettség",
+      "#What would make you cycle more often or further?": "Mi késztetné arra, hogy gyakrabban vagy messzebb biciklizzen?",
+      "#More cycle lanes separated from traffic": "Több, a forgalomtól elválasztott kerékpársáv",
+      "#Better road surfaces on bike routes": "Jobb útburkolat a kerékpáros útvonalakon",
+      "#More safe bike parking where I go": "Több biztonságos kerékpártároló ott, ahová járok",
+      "#Safe bike storage near home": "Biztonságos kerékpártárolás a lakásom közelében",
+      "#Slower traffic in residential streets": "Lassabb forgalom a lakóutcákban",
+      "#Safer junctions and crossings for bikes": "Biztonságosabb kereszteződések és átkelők a kerékpárosoknak",
+      "#More trees and shade": "Több fa és árnyék",
+      "#Better street lighting": "Jobb utcai világítás",
+      "#Cycling lessons or courses": "Kerékpáros oktatás vagy tanfolyam",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "Anyagi támogatás (pl. kerékpárvásárlási támogatás, munkáltatói juttatás)",
+      "#Continuous cycle routes connecting neighbourhoods": "A városrészeket összekötő, összefüggő kerékpáros útvonalak",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "Lehetőség a kerékpár vagy az elektromos roller szállítására buszon, villamoson, metrón vagy vonaton",
+      "#Nothing: I'm happy as things are": "Semmi: megfelel a jelenlegi helyzet",
+      "#Cycling – What would help": "Kerékpározás – Mi segítene",
+      "#Cycling – Experience and improvements": "Kerékpározás – Élmény és fejlesztések",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - Kerékpározás – Élmény és fejlesztések",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>Hogyan érzi magát <b>kerékpározás közben</b>: hangulat és aggodalmak.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Kerékpározás – Az utazás élménye</li><li>Kerékpározás – Erőfeszítés és elégedettség</li><li>Kerékpározás – Mi segítene</li></ul>",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#Bicycle and a route between two points": "Kerékpár és egy útvonal két pont között"
+    },
+    "ar": {
+      "#When you cycle, how stressed or relaxed do you usually feel?": "عند ركوب الدراجة، ما مدى شعورك عادةً بالتوتر أو بالاسترخاء؟",
+      "#Very stressed": "توتر شديد",
+      "#A little stressed": "بعض التوتر",
+      "#Neither stressed nor relaxed": "لا توتر ولا ارتياح",
+      "#A little relaxed": "بعض الارتياح",
+      "#Very relaxed": "ارتياح كبير",
+      "#When you cycle, how often do you feel anxious or overwhelmed?": "عند ركوب الدراجة، كم مرة ينتابك القلق أو الإرهاق الشديد؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#All the time": "طوال الوقت",
+      "#When you cycle, what makes you feel anxious or overwhelmed?": "عند ركوب الدراجة، ما الذي يسبب لك القلق أو الإرهاق الشديد؟",
+      "#Heavy traffic or traffic jams": "حركة مرور كثيفة أو ازدحامات",
+      "#Aggressive or careless drivers, riders or pedestrians": "سائقون أو راكبو دراجات أو مشاة عدوانيون أو غير منتبهين",
+      "#Routes that are complicated or new to me": "طرق معقّدة أو غير مألوفة بالنسبة إليّ",
+      "#Noise, crowds or too much going on around me": "ضجيج أو زحام أو أشياء كثيرة جدًا حولي",
+      "#Being in a hurry or afraid of being late": "الاستعجال أو الخوف من التأخر",
+      "#Feeling alone or isolated on the way": "الشعور بالوحدة أو العزلة في الطريق",
+      "#Fear of road accidents": "الخوف من حوادث الطرق",
+      "#Fear of assault or harassment": "الخوف من الاعتداء أو التحرش",
+      "#Fear of falling": "الخوف من السقوط",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "مشكلات صحية في الطريق (ألم، ضيق نفس، دوخة)",
+      "#Nothing in particular": "لا شيء بعينه",
+      "#When you cycle, how do you feel on streets with lots of people, shops and activity?": "عند ركوب الدراجة، ما شعورك في الشوارع التي فيها كثير من الناس والمحال والنشاط؟",
+      "#I prefer them: I feel safer or more at ease": "أفضّلها: أشعر فيها بأمان أو راحة أكبر",
+      "#I like them: they make the trip nicer": "أحبها: تجعل الرحلة أجمل",
+      "#It makes no difference to me": "لا فرق عندي",
+      "#They are sometimes a bit too much for me": "تكون أحيانًا أكثر مما أحتمل",
+      "#Crowds stress me or make it hard to get through": "الزحام يوترني أو يصعّب عليّ المرور",
+      "#Cycling – How the trip feels": "ركوب الدراجة – شعورك أثناء الرحلة",
+      "#When you cycle, how tired do you usually feel when you arrive?": "عند ركوب الدراجة، ما مدى شعورك عادةً بالتعب عند الوصول؟",
+      "#Not at all tired": "لا تعب إطلاقًا",
+      "#A little tired": "تعب خفيف",
+      "#Quite tired": "تعب متوسط",
+      "#Very tired": "تعب شديد",
+      "#Exhausted": "إرهاق تام",
+      "#When you cycle, what tires you most?": "عند ركوب الدراجة، ما الذي يرهقك أكثر؟",
+      "#Slopes, stairs and changes in level": "المنحدرات والدرج وفروق المستوى",
+      "#Carrying children, a pushchair or shopping": "حمل الأطفال أو عربة الأطفال أو المشتريات",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "التوتر (حركة المرور، معرفة الطريق، التأخر، الشعور بعدم الأمان)",
+      "#Heat, noise or bad air": "الحر أو الضجيج أو الهواء السيئ",
+      "#I rarely feel tired after my trips": "نادرًا ما أشعر بالتعب بعد رحلاتي",
+      "#When you cycle, how demanding is it compared with other ways you could travel?": "عند ركوب الدراجة، ما مدى صعوبة ذلك مقارنةً بوسائل التنقل الأخرى المتاحة لك؟",
+      "#Think of both physical and mental effort. Other ways could be walking, driving or public transport.": "المقصود الجهد البدني والذهني معًا. ومن الوسائل الأخرى المشي أو القيادة أو النقل العام.",
+      "#Much easier than the others": "أسهل بكثير من غيرها",
+      "#A bit easier": "أسهل قليلًا",
+      "#About the same": "بالقدر نفسه تقريبًا",
+      "#A bit more demanding": "أصعب قليلًا",
+      "#Much more demanding": "أصعب بكثير",
+      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
+      "#When you cycle, how often do you arrive in the time you planned?": "عند ركوب الدراجة، كم مرة يكون وصولك في الوقت الذي خططت له؟",
+      "#When you cycle, how satisfied are you overall?": "عند ركوب الدراجة، ما مدى رضاك بشكل عام؟",
+      "#When you cycle, what are you least happy with?": "عند ركوب الدراجة، ما أكثر ما لا يعجبك؟",
+      "#Very dissatisfied": "عدم رضا شديد",
+      "#Dissatisfied": "عدم رضا",
+      "#Neither satisfied nor dissatisfied": "لا رضا ولا عدم رضا",
+      "#Satisfied": "رضا",
+      "#Very satisfied": "رضا كبير",
+      "#Travel time": "مدة الرحلة",
+      "#Cost": "التكلفة",
+      "#It's not reliable or predictable": "لا يمكن الاعتماد عليه أو توقّع أدائه",
+      "#Comfort": "الراحة",
+      "#Safety from traffic or crime": "الأمان من حركة المرور أو الجريمة",
+      "#It's hard to reach or use": "يصعب الوصول إليه أو استخدامه",
+      "#Crowding or lack of space": "الازدحام أو قلة المساحة",
+      "#It's not flexible": "غير مرن",
+      "#Always": "دائمًا",
+      "#Physical effort (pedalling, carrying bags)": "الجهد البدني (ركوب الدراجة، حمل الأكياس)",
+      "#Waiting or standing (at traffic lights, in queues)": "الانتظار أو الوقوف (عند إشارات المرور أو في الطوابير)",
+      "#Cycling – Effort and satisfaction": "ركوب الدراجة – الجهد والرضا",
+      "#What would make you cycle more often or further?": "ما الذي يجعلك تركب الدراجة أكثر أو لمسافات أبعد؟",
+      "#More cycle lanes separated from traffic": "مزيد من مسارات الدراجات المفصولة عن حركة المرور",
+      "#Better road surfaces on bike routes": "أسطح طرق أفضل على مسارات الدراجات",
+      "#More safe bike parking where I go": "مزيد من مواقف الدراجات الآمنة في الأماكن التي أذهب إليها",
+      "#Safe bike storage near home": "مكان آمن لحفظ الدراجة قرب المنزل",
+      "#Slower traffic in residential streets": "حركة مرور أبطأ في الشوارع السكنية",
+      "#Safer junctions and crossings for bikes": "تقاطعات ومعابر أكثر أمانًا للدراجات",
+      "#More trees and shade": "مزيد من الأشجار والظل",
+      "#Better street lighting": "إنارة شوارع أفضل",
+      "#Cycling lessons or courses": "دروس أو دورات في ركوب الدراجة",
+      "#Money help (e.g. bonus to buy a bike, employer allowance)": "مساعدة مالية (مثل منحة لشراء دراجة أو بدل من صاحب العمل)",
+      "#Continuous cycle routes connecting neighbourhoods": "مسارات دراجات متصلة تربط بين الأحياء",
+      "#Being able to take a bicycle or e-scooter on buses, trams, the metro or trains": "إمكانية اصطحاب الدراجة أو السكوتر الكهربائي في الحافلات أو الترام أو المترو أو القطارات",
+      "#Nothing: I'm happy as things are": "لا شيء: الوضع الحالي مناسب لي",
+      "#Cycling – What would help": "ركوب الدراجة – ما الذي قد يساعد",
+      "#Cycling – Experience and improvements": "ركوب الدراجة – التجربة والتحسينات",
+      "#SmartUrbanity - Cycling – Experience and improvements": "SmartUrbanity - ركوب الدراجة – التجربة والتحسينات",
+      "#<p>How you feel <b>when you cycle</b>: mood and worries.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Cycling – How the trip feels</li><li>Cycling – Effort and satisfaction</li><li>Cycling – What would help</li></ul>": "<p>شعورك <b>عند ركوب الدراجة</b>: المزاج والقلق.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>ركوب الدراجة – شعورك أثناء الرحلة</li><li>ركوب الدراجة – الجهد والرضا</li><li>ركوب الدراجة – ما الذي قد يساعد</li></ul>",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#Bicycle and a route between two points": "دراجة هوائية ومسار بين نقطتين"
+    }
+  }
+}

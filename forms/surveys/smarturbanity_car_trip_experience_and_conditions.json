@@ -1,0 +1,2300 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Car – Trip experience and conditions",
+    "questionnaire_id": "smarturbanity_car_trip_experience_and_conditions",
+    "questionnaire_version": "1.1.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 5,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Car – Trip experience and conditions",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car_trip_experience_and_conditions.svg",
+      "image_alt": "#Car – Trip experience and conditions",
+      "description": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Car – Trip experience and conditions",
+    "sections": [
+      {
+        "title": "Car – Personal security",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
+            "answer_key": "car_day_insecure",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "car_day_insecure",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?",
+            "answer_key": "car_evening_insecure",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "car_evening_insecure",
+            "question_version": "1.1.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "When you feel unsafe in the evening, what do you change?",
+            "help": "You can choose more than one answer.",
+            "answer_key": "car_evening_insecure_changes",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "I change my route",
+                "value": "change_route"
+              },
+              {
+                "text": "I change the time",
+                "value": "change_time"
+              },
+              {
+                "text": "I share my location with someone",
+                "value": "share_location"
+              },
+              {
+                "text": "I ask someone to come with me",
+                "value": "accompanied"
+              },
+              {
+                "text": "I use a different means of transport",
+                "value": "other_mode"
+              },
+              {
+                "text": "I give up going out",
+                "value": "stay_home"
+              },
+              {
+                "text": "Nothing",
+                "value": "nothing",
+                "exclusive": true
+              },
+              {
+                "text": "Prefer not to say",
+                "value": "prefer_not_to_say",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "show_if": {
+              "car_evening_insecure": [
+                "yes"
+              ]
+            },
+            "question_id": "car_evening_insecure_changes",
+            "question_version": "1.0.0",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
+            "answer_key": "car_insecurity_factors",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Places with few people around (isolated or deserted areas)",
+                "value": "isolated_areas"
+              },
+              {
+                "text": "People behaving aggressively or in an intimidating way",
+                "value": "aggressive_behaviour"
+              },
+              {
+                "text": "Blind corners or obstructed views",
+                "value": "blind_corners"
+              },
+              {
+                "text": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+                "value": "poor_maintenance"
+              },
+              {
+                "text": "No surveillance or security measures (e.g. no cameras, no staff)",
+                "value": "no_surveillance"
+              },
+              {
+                "text": "Incidents that happened to me or were reported in the area",
+                "value": "past_incidents"
+              },
+              {
+                "text": "Overcrowded or chaotic places",
+                "value": "overcrowding"
+              },
+              {
+                "text": "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)",
+                "value": "no_orientation_cues"
+              }
+            ],
+            "required": false,
+            "question_id": "car_insecurity_factors",
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_none": true
+          },
+          {
+            "text": "When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
+            "answer_key": "car_identity_harassment",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Doesn't apply to me",
+                "value": "not_applicable"
+              }
+            ],
+            "required": false,
+            "question_id": "car_identity_harassment",
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      },
+      {
+        "title": "Car – Comfort",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Compared with other ways of getting around, how comfortable is the car for you?",
+            "answer_key": "car_comfort",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Much less comfortable",
+                "value": "much_less"
+              },
+              {
+                "text": "Less comfortable",
+                "value": "less"
+              },
+              {
+                "text": "About the same",
+                "value": "same"
+              },
+              {
+                "text": "More comfortable",
+                "value": "more"
+              },
+              {
+                "text": "Much more comfortable",
+                "value": "much_more"
+              }
+            ],
+            "question_id": "car_comfort",
+            "question_version": "1.1.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you are held up on a car trip, how stressed do you feel?",
+            "help": "For example traffic jams, crashes or roadworks.",
+            "answer_key": "car_delay_stress",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_stressful_at_all"
+              },
+              {
+                "text": "A little",
+                "value": "slightly_stressful"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately_stressful"
+              },
+              {
+                "text": "Very",
+                "value": "very_stressful"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely_stressful"
+              }
+            ],
+            "question_id": "car_delay_stress",
+            "question_version": "1.1.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do traffic jams make you change your route or the time you leave?",
+            "answer_key": "car_congestion_adapt",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, never",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Now and then",
+                "value": "slightly_occasionally_adjust_route_or_ti"
+              },
+              {
+                "text": "Sometimes",
+                "value": "moderately_sometimes_change_route_or_dep"
+              },
+              {
+                "text": "Often",
+                "value": "strongly_frequently_change_route_or_time"
+              },
+              {
+                "text": "Always: I plan my trips to avoid them",
+                "value": "always_plan_trips_specifically_to_avoid"
+              }
+            ],
+            "question_id": "car_congestion_adapt",
+            "question_version": "1.1.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "How hard is it to find a parking space where you go?",
+            "help": "Think of the places you drive to most often.",
+            "answer_key": "car_parking_issue",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not a problem",
+                "value": "not_an_issue"
+              },
+              {
+                "text": "A small problem",
+                "value": "minor_issue"
+              },
+              {
+                "text": "A real problem",
+                "value": "significant_issue"
+              },
+              {
+                "text": "A big problem",
+                "value": "major_issue"
+              },
+              {
+                "text": "A very big problem",
+                "value": "critical_issue"
+              },
+              {
+                "text": "Not for me: I don't drive",
+                "value": "not_driver"
+              }
+            ],
+            "question_id": "car_parking_issue",
+            "question_version": "1.1.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When parking is hard, what do you usually do?",
+            "answer_key": "car_parking_decisions",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "car_parking_issue": [
+                "minor_issue",
+                "significant_issue",
+                "major_issue",
+                "critical_issue"
+              ]
+            },
+            "options": [
+              {
+                "text": "It doesn't change my plans",
+                "value": "they_do_not_affect_my_travel_decisions"
+              },
+              {
+                "text": "I still go, but it's slower or more stressful",
+                "value": "they_make_my_journey_less_convenient_or"
+              },
+              {
+                "text": "I change my route or where I go",
+                "value": "they_make_me_change_my_route_or_destinat"
+              },
+              {
+                "text": "I put off, avoid or cancel some trips",
+                "value": "they_make_me_postpone_avoid_or_cancel_so"
+              },
+              {
+                "text": "I go another way instead (e.g. bus, on foot)",
+                "value": "they_make_me_choose_another_mode_of_tran"
+              }
+            ],
+            "question_id": "car_parking_decisions",
+            "question_version": "1.1.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "How much do charging points affect whether you use an electric car?",
+            "answer_key": "car_charging",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all_influential"
+              },
+              {
+                "text": "A little",
+                "value": "slightly_influential"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately_influential"
+              },
+              {
+                "text": "A lot",
+                "value": "very_influential"
+              },
+              {
+                "text": "Very much",
+                "value": "extremely_influential"
+              },
+              {
+                "text": "Not for me: my vehicle isn't electric",
+                "value": "i_don_t_have_an_electric_vehicle_so_this"
+              }
+            ],
+            "question_id": "car_charging",
+            "question_version": "1.0.1"
+          }
+        ]
+      },
+      {
+        "title": "Car – Your surroundings",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you travel by car, how much does traffic noise bother or annoy you?",
+            "answer_key": "car_noise_bother",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_at_all"
+              },
+              {
+                "text": "Slightly",
+                "value": "slightly"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "Very",
+                "value": "very"
+              },
+              {
+                "text": "Extremely",
+                "value": "extremely"
+              }
+            ],
+            "question_id": "car_noise_bother",
+            "question_version": "1.0.0"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?",
+            "answer_key": "car_air_quality_effect",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Nothing, it doesn't affect me",
+                "value": "no_effect_at_all"
+              },
+              {
+                "text": "I notice it, but I don't change anything",
+                "value": "i_notice_it_but_it_doesn_t_change_my_beh"
+              },
+              {
+                "text": "I protect myself, e.g. by closing the windows",
+                "value": "it_makes_me_adjust_how_i_travel_e_g_mask"
+              },
+              {
+                "text": "I take another route or travel at another time",
+                "value": "it_makes_me_change_my_route_or_travel_at"
+              },
+              {
+                "text": "I travel another way (e.g. by metro instead of by car)",
+                "value": "it_makes_me_switch_to_a_different_mode_o"
+              }
+            ],
+            "question_id": "car_air_quality_effect",
+            "question_version": "1.0.4"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?",
+            "answer_key": "car_adverse_weather_travel_effect",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Nothing changes, I travel as usual",
+                "value": "no_effect_at_all"
+              },
+              {
+                "text": "It's less pleasant, but I travel the same way",
+                "value": "it_makes_my_journey_less_comfortable_but"
+              },
+              {
+                "text": "I prepare differently or change route (e.g. clothes, umbrella)",
+                "value": "it_makes_me_adjust_how_i_travel_e_g_clot"
+              },
+              {
+                "text": "I put off or skip some trips",
+                "value": "it_makes_me_postpone_or_avoid_some_trips"
+              },
+              {
+                "text": "I travel another way (e.g. by taxi or metro)",
+                "value": "it_makes_me_switch_to_a_different_mode_o"
+              }
+            ],
+            "question_id": "car_adverse_weather_travel_effect",
+            "question_version": "1.0.3"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?",
+            "answer_key": "car_cleanliness_effect",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "It doesn't affect me",
+                "value": "no_effect_on_how_i_travel"
+              },
+              {
+                "text": "I notice it, but carry on as usual",
+                "value": "i_notice_it_but_carry_on_as_usual"
+              },
+              {
+                "text": "It's unpleasant, but I still go that way",
+                "value": "it_makes_the_journey_unpleasant_but_i_st"
+              },
+              {
+                "text": "I avoid some streets or car parks",
+                "value": "it_makes_me_avoid_certain_stops_or_secti"
+              },
+              {
+                "text": "I stop using that route altogether",
+                "value": "it_puts_me_off_using_this_route_entirely"
+              }
+            ],
+            "question_id": "car_cleanliness_effect",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you travel by car, do pleasant or unpleasant surroundings affect how you feel?",
+            "help": "For example buildings, squares, how cared-for a place is and its general feel.",
+            "answer_key": "car_visual_quality",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, I don't pay attention to them",
+                "value": "not_at_all_i_do_not_pay_attention_to_the"
+              },
+              {
+                "text": "I notice them, but they rarely make a difference",
+                "value": "slightly_i_notice_the_surroundings_but_t"
+              },
+              {
+                "text": "Sometimes they affect my mood",
+                "value": "moderately_pleasant_or_unpleasant_surrou"
+              },
+              {
+                "text": "They affect a lot how I feel on the way",
+                "value": "strongly_the_visual_environment_signific"
+              },
+              {
+                "text": "I sometimes choose a route because it's nicer or more interesting",
+                "value": "very_strongly_i_sometimes_choose_routes"
+              }
+            ],
+            "question_id": "car_visual_quality",
+            "question_version": "1.0.0"
+          }
+        ]
+      },
+      {
+        "title": "Car – How the trip feels",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how stressed or relaxed do you usually feel?",
+            "answer_key": "car_emotional_state",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very stressed",
+                "value": "very_stressed"
+              },
+              {
+                "text": "A little stressed",
+                "value": "somewhat_stressed"
+              },
+              {
+                "text": "Neither stressed nor relaxed",
+                "value": "neutral"
+              },
+              {
+                "text": "A little relaxed",
+                "value": "somewhat_relaxed"
+              },
+              {
+                "text": "Very relaxed",
+                "value": "very_relaxed"
+              }
+            ],
+            "question_id": "car_emotional_state",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "special_category_health",
+            "text": "When you travel by car, how often do you feel anxious or overwhelmed?",
+            "answer_key": "car_anxiety_frequency",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "frequently"
+              },
+              {
+                "text": "All the time",
+                "value": "constantly"
+              }
+            ],
+            "question_id": "car_anxiety_frequency",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "special_category_health",
+            "text": "When you travel by car, what makes you feel anxious or overwhelmed?",
+            "answer_key": "car_anxiety_causes",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "show_if": {
+              "car_anxiety_frequency": {
+                "not": [
+                  "never"
+                ]
+              }
+            },
+            "options": [
+              {
+                "text": "Heavy traffic or traffic jams",
+                "value": "heavy_traffic_or_congestion"
+              },
+              {
+                "text": "Aggressive or careless drivers, riders or pedestrians",
+                "value": "aggressive_or_unsafe_behavior_from_other"
+              },
+              {
+                "text": "Routes that are complicated or new to me",
+                "value": "complex_or_unfamiliar_routes"
+              },
+              {
+                "text": "Noise, crowds or too much going on around me",
+                "value": "noise_crowding_or_other_sensory_overload"
+              },
+              {
+                "text": "Being in a hurry or afraid of being late",
+                "value": "time_pressure_or_risk_of_being_late"
+              },
+              {
+                "text": "Feeling alone or isolated on the way",
+                "value": "feeling_isolated_or_alone_while_travelin"
+              },
+              {
+                "text": "Fear of road accidents",
+                "value": "safety_and_security_concerns_e_g_acciden"
+              },
+              {
+                "text": "Fear of assault or harassment",
+                "value": "fear_of_assault_or_harassment"
+              },
+              {
+                "text": "Health problems on the way (pain, breathlessness, dizziness)",
+                "value": "physical_health_concerns_pain_breathless"
+              },
+              {
+                "text": "Nothing in particular",
+                "value": "i_don_t_usually_feel_anxious_or_overwhel",
+                "exclusive": true
+              }
+            ],
+            "question_id": "car_anxiety_causes",
+            "question_version": "2.0.3"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how do you feel on streets with lots of people, shops and activity?",
+            "answer_key": "car_route_liveliness_effect",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "I prefer them: I feel safer or more at ease",
+                "value": "very_positively_lively_environments_make"
+              },
+              {
+                "text": "I like them: they make the trip nicer",
+                "value": "somewhat_positively_lively_environments"
+              },
+              {
+                "text": "It makes no difference to me",
+                "value": "neutral_the_level_of_activity_does_not_a"
+              },
+              {
+                "text": "They are sometimes a bit too much for me",
+                "value": "busy_bit_much"
+              },
+              {
+                "text": "Crowds stress me or make it hard to get through",
+                "value": "very_negatively_overly_busy_or_crowded_a"
+              }
+            ],
+            "question_id": "car_route_liveliness_effect",
+            "question_version": "1.0.2"
+          }
+        ]
+      },
+      {
+        "title": "Car – Effort and satisfaction",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how tired do you usually feel when you arrive?",
+            "answer_key": "car_tiredness",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all tired",
+                "value": "not_tired"
+              },
+              {
+                "text": "A little tired",
+                "value": "slightly"
+              },
+              {
+                "text": "Quite tired",
+                "value": "moderately"
+              },
+              {
+                "text": "Very tired",
+                "value": "very"
+              },
+              {
+                "text": "Exhausted",
+                "value": "exhausted"
+              }
+            ],
+            "question_id": "car_tiredness",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, what tires you most?",
+            "answer_key": "car_tiredness_cause",
+            "question_type": "single_option",
+            "required": false,
+            "show_if": {
+              "car_tiredness": {
+                "not": [
+                  "not_tired"
+                ]
+              }
+            },
+            "options": [
+              {
+                "text": "Physical effort (loading and carrying bags)",
+                "value": "physical_effort_e_g_walking_cycling_carr"
+              },
+              {
+                "text": "Carrying children, a pushchair or shopping",
+                "value": "carrying_children_or_shopping"
+              },
+              {
+                "text": "Stress (traffic, finding the way, being late, feeling unsafe)",
+                "value": "mental_stress_e_g_traffic_navigation_tim"
+              },
+              {
+                "text": "Heat, noise or bad air",
+                "value": "environmental_discomfort_e_g_heat_noise"
+              },
+              {
+                "text": "Waiting (in traffic, looking for parking)",
+                "value": "waiting_and_standing_e_g_at_stops_in_que"
+              },
+              {
+                "text": "I rarely feel tired after my trips",
+                "value": "i_usually_do_not_feel_tired_after_my_tri"
+              }
+            ],
+            "question_id": "car_tiredness_cause",
+            "question_version": "1.1.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how demanding is it compared with other ways you could travel?",
+            "help": "Think of both physical and mental effort. Other ways could be walking, cycling or public transport.",
+            "answer_key": "car_effort_vs_alternatives",
+            "question_type": "single_option",
+            "required": false,
+            "add_i_dont_know": true,
+            "options": [
+              {
+                "text": "Much easier than the others",
+                "value": "my_current_mode_is_significantly_easier"
+              },
+              {
+                "text": "A bit easier",
+                "value": "this_is_a_bit_easier_than_other_ways_i_c"
+              },
+              {
+                "text": "About the same",
+                "value": "regardless_of_the_mode_the_effort_feels"
+              },
+              {
+                "text": "A bit more demanding",
+                "value": "this_takes_a_bit_more_out_of_me_than_oth"
+              },
+              {
+                "text": "Much more demanding",
+                "value": "far_more_demanding_than_alternatives_phy"
+              },
+              {
+                "text": "I have no other way to travel",
+                "value": "no_alternative"
+              }
+            ],
+            "question_id": "car_effort_vs_alternatives",
+            "question_version": "1.0.2"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how often do you arrive in the time you planned?",
+            "answer_key": "car_time_vs_expected",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ],
+            "question_id": "car_time_vs_expected",
+            "question_version": "2.0.0"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, how satisfied are you overall?",
+            "answer_key": "car_satisfaction",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Very dissatisfied",
+                "value": "very_dissatisfied"
+              },
+              {
+                "text": "Dissatisfied",
+                "value": "dissatisfied"
+              },
+              {
+                "text": "Neither satisfied nor dissatisfied",
+                "value": "neutral"
+              },
+              {
+                "text": "Satisfied",
+                "value": "satisfied"
+              },
+              {
+                "text": "Very satisfied",
+                "value": "very_satisfied"
+              }
+            ],
+            "question_id": "car_satisfaction",
+            "question_version": "1.0.1"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "When you travel by car, what are you least happy with?",
+            "answer_key": "car_dissatisfied",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 3,
+            "add_other": true,
+            "show_if": {
+              "car_satisfaction": [
+                "very_dissatisfied",
+                "dissatisfied",
+                "neutral"
+              ]
+            },
+            "options": [
+              {
+                "text": "Travel time",
+                "value": "travel_time_speed"
+              },
+              {
+                "text": "Cost",
+                "value": "cost_value_for_money"
+              },
+              {
+                "text": "It's not reliable or predictable",
+                "value": "reliability_predictability"
+              },
+              {
+                "text": "Comfort",
+                "value": "comfort"
+              },
+              {
+                "text": "Safety from traffic or crime",
+                "value": "safety_security"
+              },
+              {
+                "text": "It's hard to reach or use",
+                "value": "accessibility_convenience"
+              },
+              {
+                "text": "Crowding or lack of space",
+                "value": "crowding_availability_of_space"
+              },
+              {
+                "text": "Its impact on the environment",
+                "value": "environmental_impact"
+              },
+              {
+                "text": "It's not flexible",
+                "value": "lack_of_flexibility"
+              }
+            ],
+            "question_id": "car_dissatisfied",
+            "question_version": "1.0.1"
+          }
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Doesn't apply to me": "Doesn't apply to me",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?",
+      "#Car – Personal security": "Car – Personal security",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)",
+      "#Places with few people around (isolated or deserted areas)": "Places with few people around (isolated or deserted areas)",
+      "#People behaving aggressively or in an intimidating way": "People behaving aggressively or in an intimidating way",
+      "#Blind corners or obstructed views": "Blind corners or obstructed views",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "No surveillance or security measures (e.g. no cameras, no staff)",
+      "#Incidents that happened to me or were reported in the area": "Incidents that happened to me or were reported in the area",
+      "#Overcrowded or chaotic places": "Overcrowded or chaotic places",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)",
+      "#When you feel unsafe in the evening, what do you change?": "When you feel unsafe in the evening, what do you change?",
+      "#You can choose more than one answer.": "You can choose more than one answer.",
+      "#I change my route": "I change my route",
+      "#I change the time": "I change the time",
+      "#I share my location with someone": "I share my location with someone",
+      "#I ask someone to come with me": "I ask someone to come with me",
+      "#I use a different means of transport": "I use a different means of transport",
+      "#I give up going out": "I give up going out",
+      "#Nothing": "Nothing",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "Compared with other ways of getting around, how comfortable is the car for you?",
+      "#Much less comfortable": "Much less comfortable",
+      "#Less comfortable": "Less comfortable",
+      "#About the same": "About the same",
+      "#More comfortable": "More comfortable",
+      "#Much more comfortable": "Much more comfortable",
+      "#When you are held up on a car trip, how stressed do you feel?": "When you are held up on a car trip, how stressed do you feel?",
+      "#For example traffic jams, crashes or roadworks.": "For example traffic jams, crashes or roadworks.",
+      "#Not at all": "Not at all",
+      "#A little": "A little",
+      "#Moderately": "Moderately",
+      "#Very": "Very",
+      "#Extremely": "Extremely",
+      "#A lot": "A lot",
+      "#Do traffic jams make you change your route or the time you leave?": "Do traffic jams make you change your route or the time you leave?",
+      "#No, never": "No, never",
+      "#Now and then": "Now and then",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always: I plan my trips to avoid them": "Always: I plan my trips to avoid them",
+      "#How hard is it to find a parking space where you go?": "How hard is it to find a parking space where you go?",
+      "#Think of the places you drive to most often.": "Think of the places you drive to most often.",
+      "#Not a problem": "Not a problem",
+      "#A small problem": "A small problem",
+      "#A real problem": "A real problem",
+      "#A big problem": "A big problem",
+      "#A very big problem": "A very big problem",
+      "#Not for me: I don't drive": "Not for me: I don't drive",
+      "#When parking is hard, what do you usually do?": "When parking is hard, what do you usually do?",
+      "#It doesn't change my plans": "It doesn't change my plans",
+      "#I still go, but it's slower or more stressful": "I still go, but it's slower or more stressful",
+      "#I change my route or where I go": "I change my route or where I go",
+      "#I put off, avoid or cancel some trips": "I put off, avoid or cancel some trips",
+      "#I go another way instead (e.g. bus, on foot)": "I go another way instead (e.g. bus, on foot)",
+      "#How much do charging points affect whether you use an electric car?": "How much do charging points affect whether you use an electric car?",
+      "#Very much": "Very much",
+      "#Not for me: my vehicle isn't electric": "Not for me: my vehicle isn't electric",
+      "#Car – Comfort": "Car – Comfort",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "When you travel by car, how much does traffic noise bother or annoy you?",
+      "#Slightly": "Slightly",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?",
+      "#Nothing, it doesn't affect me": "Nothing, it doesn't affect me",
+      "#I notice it, but I don't change anything": "I notice it, but I don't change anything",
+      "#I take another route or travel at another time": "I take another route or travel at another time",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?",
+      "#Nothing changes, I travel as usual": "Nothing changes, I travel as usual",
+      "#It's less pleasant, but I travel the same way": "It's less pleasant, but I travel the same way",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "I prepare differently or change route (e.g. clothes, umbrella)",
+      "#I put off or skip some trips": "I put off or skip some trips",
+      "#It doesn't affect me": "It doesn't affect me",
+      "#I notice it, but carry on as usual": "I notice it, but carry on as usual",
+      "#It's unpleasant, but I still go that way": "It's unpleasant, but I still go that way",
+      "#I stop using that route altogether": "I stop using that route altogether",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "When you travel by car, do pleasant or unpleasant surroundings affect how you feel?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "For example buildings, squares, how cared-for a place is and its general feel.",
+      "#No, I don't pay attention to them": "No, I don't pay attention to them",
+      "#I notice them, but they rarely make a difference": "I notice them, but they rarely make a difference",
+      "#Sometimes they affect my mood": "Sometimes they affect my mood",
+      "#They affect a lot how I feel on the way": "They affect a lot how I feel on the way",
+      "#I sometimes choose a route because it's nicer or more interesting": "I sometimes choose a route because it's nicer or more interesting",
+      "#I protect myself, e.g. by closing the windows": "I protect myself, e.g. by closing the windows",
+      "#I travel another way (e.g. by metro instead of by car)": "I travel another way (e.g. by metro instead of by car)",
+      "#I travel another way (e.g. by taxi or metro)": "I travel another way (e.g. by taxi or metro)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?",
+      "#I avoid some streets or car parks": "I avoid some streets or car parks",
+      "#Car – Your surroundings": "Car – Your surroundings",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "When you travel by car, how stressed or relaxed do you usually feel?",
+      "#Very stressed": "Very stressed",
+      "#A little stressed": "A little stressed",
+      "#Neither stressed nor relaxed": "Neither stressed nor relaxed",
+      "#A little relaxed": "A little relaxed",
+      "#Very relaxed": "Very relaxed",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "When you travel by car, how often do you feel anxious or overwhelmed?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#All the time": "All the time",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "When you travel by car, what makes you feel anxious or overwhelmed?",
+      "#Heavy traffic or traffic jams": "Heavy traffic or traffic jams",
+      "#Aggressive or careless drivers, riders or pedestrians": "Aggressive or careless drivers, riders or pedestrians",
+      "#Routes that are complicated or new to me": "Routes that are complicated or new to me",
+      "#Noise, crowds or too much going on around me": "Noise, crowds or too much going on around me",
+      "#Being in a hurry or afraid of being late": "Being in a hurry or afraid of being late",
+      "#Feeling alone or isolated on the way": "Feeling alone or isolated on the way",
+      "#Fear of road accidents": "Fear of road accidents",
+      "#Fear of assault or harassment": "Fear of assault or harassment",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Health problems on the way (pain, breathlessness, dizziness)",
+      "#Nothing in particular": "Nothing in particular",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "When you travel by car, how do you feel on streets with lots of people, shops and activity?",
+      "#I prefer them: I feel safer or more at ease": "I prefer them: I feel safer or more at ease",
+      "#I like them: they make the trip nicer": "I like them: they make the trip nicer",
+      "#It makes no difference to me": "It makes no difference to me",
+      "#They are sometimes a bit too much for me": "They are sometimes a bit too much for me",
+      "#Crowds stress me or make it hard to get through": "Crowds stress me or make it hard to get through",
+      "#Car – How the trip feels": "Car – How the trip feels",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "When you travel by car, how tired do you usually feel when you arrive?",
+      "#Not at all tired": "Not at all tired",
+      "#A little tired": "A little tired",
+      "#Quite tired": "Quite tired",
+      "#Very tired": "Very tired",
+      "#Exhausted": "Exhausted",
+      "#When you travel by car, what tires you most?": "When you travel by car, what tires you most?",
+      "#Carrying children, a pushchair or shopping": "Carrying children, a pushchair or shopping",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffic, finding the way, being late, feeling unsafe)",
+      "#Heat, noise or bad air": "Heat, noise or bad air",
+      "#I rarely feel tired after my trips": "I rarely feel tired after my trips",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "When you travel by car, how demanding is it compared with other ways you could travel?",
+      "#Much easier than the others": "Much easier than the others",
+      "#A bit easier": "A bit easier",
+      "#A bit more demanding": "A bit more demanding",
+      "#Much more demanding": "Much more demanding",
+      "#I have no other way to travel": "I have no other way to travel",
+      "#When you travel by car, how often do you arrive in the time you planned?": "When you travel by car, how often do you arrive in the time you planned?",
+      "#When you travel by car, how satisfied are you overall?": "When you travel by car, how satisfied are you overall?",
+      "#When you travel by car, what are you least happy with?": "When you travel by car, what are you least happy with?",
+      "#Very dissatisfied": "Very dissatisfied",
+      "#Dissatisfied": "Dissatisfied",
+      "#Neither satisfied nor dissatisfied": "Neither satisfied nor dissatisfied",
+      "#Satisfied": "Satisfied",
+      "#Very satisfied": "Very satisfied",
+      "#Travel time": "Travel time",
+      "#Cost": "Cost",
+      "#It's not reliable or predictable": "It's not reliable or predictable",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Safety from traffic or crime",
+      "#It's hard to reach or use": "It's hard to reach or use",
+      "#Crowding or lack of space": "Crowding or lack of space",
+      "#Its impact on the environment": "Its impact on the environment",
+      "#It's not flexible": "It's not flexible",
+      "#Always": "Always",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Think of both physical and mental effort. Other ways could be walking, cycling or public transport.",
+      "#Physical effort (loading and carrying bags)": "Physical effort (loading and carrying bags)",
+      "#Waiting (in traffic, looking for parking)": "Waiting (in traffic, looking for parking)",
+      "#Car – Effort and satisfaction": "Car – Effort and satisfaction",
+      "#Car – Trip experience and conditions": "Car – Trip experience and conditions",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Car – Trip experience and conditions",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#Car on a street": "Car on a street"
+    },
+    "it": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Durante il giorno, ti capita di non sentirti al sicuro da reati o molestie quando viaggi in auto? (Le molestie includono commenti indesiderati, pedinamenti, contatti fisici o comportamenti intimidatori.)",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Doesn't apply to me": "Non mi riguarda",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "La sera o dopo il tramonto, ti capita di non sentirti al sicuro da reati o molestie quando viaggi in auto?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Quando viaggi in auto, hai subito o temi molestie per chi sei o per come appari (es. genere, aspetto, origine, età)?",
+      "#Car – Personal security": "In auto – Sicurezza personale",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Quando viaggi in auto, cosa ti fa sentire meno al sicuro da reati o molestie? (Seleziona tutte le opzioni applicabili)",
+      "#Places with few people around (isolated or deserted areas)": "Luoghi con poca gente (zone isolate o deserte)",
+      "#People behaving aggressively or in an intimidating way": "Persone che si comportano in modo aggressivo o intimidatorio",
+      "#Blind corners or obstructed views": "Angoli ciechi o visuale ostruita",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Scarsa manutenzione (es. edifici abbandonati, graffiti, infrastrutture rotte)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Mancanza di sorveglianza o di misure di sicurezza (es. niente telecamere, niente personale)",
+      "#Incidents that happened to me or were reported in the area": "Episodi accaduti a me o segnalati nella zona",
+      "#Overcrowded or chaotic places": "Luoghi sovraffollati o caotici",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Pochi riferimenti per orientarmi senza vista (es. niente percorsi tattili o annunci sonori)",
+      "#When you feel unsafe in the evening, what do you change?": "Quando la sera non ti senti al sicuro, cosa cambi?",
+      "#You can choose more than one answer.": "Puoi scegliere più di una risposta.",
+      "#I change my route": "Cambio strada",
+      "#I change the time": "Cambio orario",
+      "#I share my location with someone": "Condivido la mia posizione con qualcuno",
+      "#I ask someone to come with me": "Mi faccio accompagnare",
+      "#I use a different means of transport": "Prendo un altro mezzo",
+      "#I give up going out": "Rinuncio a uscire",
+      "#Nothing": "Niente",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "Rispetto agli altri modi di spostarsi, quanto è comoda per te l'auto?",
+      "#Much less comfortable": "Molto meno confortevole",
+      "#Less comfortable": "Meno confortevole",
+      "#About the same": "Più o meno uguale",
+      "#More comfortable": "Più confortevole",
+      "#Much more comfortable": "Molto più confortevole",
+      "#When you are held up on a car trip, how stressed do you feel?": "Quando un viaggio in auto subisce blocchi o ritardi, quanto stress provi?",
+      "#For example traffic jams, crashes or roadworks.": "Per esempio code, scontri o lavori in corso.",
+      "#Not at all": "Per niente",
+      "#A little": "Un po'",
+      "#Moderately": "Abbastanza",
+      "#Very": "Molto",
+      "#Extremely": "Moltissimo",
+      "#A lot": "Molto",
+      "#Do traffic jams make you change your route or the time you leave?": "Le code ti fanno cambiare percorso o orario di partenza?",
+      "#No, never": "No, mai",
+      "#Now and then": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always: I plan my trips to avoid them": "Sempre: organizzo gli spostamenti per evitarle",
+      "#How hard is it to find a parking space where you go?": "Quanto è difficile trovare parcheggio nei posti dove vai?",
+      "#Think of the places you drive to most often.": "Pensa ai posti dove vai più spesso in auto.",
+      "#Not a problem": "Nessun problema",
+      "#A small problem": "Un piccolo problema",
+      "#A real problem": "Un problema medio",
+      "#A big problem": "Un grosso problema",
+      "#A very big problem": "Un problema molto grosso",
+      "#Not for me: I don't drive": "Non mi riguarda: non guido",
+      "#When parking is hard, what do you usually do?": "Quando è difficile parcheggiare, cosa fai di solito?",
+      "#It doesn't change my plans": "Non cambia i miei programmi",
+      "#I still go, but it's slower or more stressful": "Ci vado lo stesso, ma è più lento o più stressante",
+      "#I change my route or where I go": "Cambio percorso o destinazione",
+      "#I put off, avoid or cancel some trips": "Rimando, evito o annullo alcuni spostamenti",
+      "#I go another way instead (e.g. bus, on foot)": "Mi sposto in un altro modo (ad es. autobus, a piedi)",
+      "#How much do charging points affect whether you use an electric car?": "Quanto contano i punti di ricarica nella scelta di usare un’auto elettrica?",
+      "#Very much": "Moltissimo",
+      "#Not for me: my vehicle isn't electric": "Non mi riguarda: il mio veicolo non è elettrico",
+      "#Car – Comfort": "In auto – Comfort",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "Quando viaggi in auto, quanto ti disturba o ti infastidisce il rumore del traffico?",
+      "#Slightly": "Poco",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Quando viaggi in auto, cosa fai quando l’aria è cattiva (gas di scarico, polvere, cattivi odori)?",
+      "#Nothing, it doesn't affect me": "Niente, non mi riguarda",
+      "#I notice it, but I don't change anything": "Me ne accorgo, ma non cambio nulla",
+      "#I take another route or travel at another time": "Prendo un altro percorso o mi sposto in un altro orario",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Quando viaggi in auto, cosa fai di solito quando il tempo è brutto (pioggia, vento, freddo o gran caldo)?",
+      "#Nothing changes, I travel as usual": "Non cambia niente, mi sposto come sempre",
+      "#It's less pleasant, but I travel the same way": "È meno piacevole, ma mi sposto allo stesso modo",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "Mi preparo in modo diverso o cambio percorso (ad es. vestiti, ombrello)",
+      "#I put off or skip some trips": "Rimando o salto alcuni spostamenti",
+      "#It doesn't affect me": "Non mi dà problemi",
+      "#I notice it, but carry on as usual": "Me ne accorgo, ma vado avanti come sempre",
+      "#It's unpleasant, but I still go that way": "È spiacevole, ma passo lo stesso da lì",
+      "#I stop using that route altogether": "Smetto del tutto di usare quel percorso",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "Quando viaggi in auto, l’ambiente intorno, piacevole o sgradevole, influisce su come ti senti?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "Per esempio edifici, piazze, quanto un luogo è curato e la sua atmosfera in generale.",
+      "#No, I don't pay attention to them": "No, non ci faccio caso",
+      "#I notice them, but they rarely make a difference": "Ci faccio caso, ma raramente fanno differenza",
+      "#Sometimes they affect my mood": "A volte influiscono sul mio umore",
+      "#They affect a lot how I feel on the way": "Influiscono molto su come mi sento lungo la strada",
+      "#I sometimes choose a route because it's nicer or more interesting": "A volte scelgo un percorso perché è più bello o più interessante",
+      "#I protect myself, e.g. by closing the windows": "Mi proteggo, ad es. chiudendo i finestrini",
+      "#I travel another way (e.g. by metro instead of by car)": "Mi sposto in un altro modo (ad es. in metro invece che in auto)",
+      "#I travel another way (e.g. by taxi or metro)": "Mi sposto in un altro modo (ad es. in taxi o in metro)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "Quando viaggi in auto, cosa fai quando strade o parcheggi sono sporchi o mal tenuti (rifiuti, cattivi odori, vetri rotti)?",
+      "#I avoid some streets or car parks": "Evito alcune strade o alcuni parcheggi",
+      "#Car – Your surroundings": "In auto – Il posto in cui ti muovi",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "Quando viaggi in auto, di solito provi più tensione o più tranquillità?",
+      "#Very stressed": "Molto stress",
+      "#A little stressed": "Un po' di stress",
+      "#Neither stressed nor relaxed": "Né stress né tranquillità",
+      "#A little relaxed": "Un po' di tranquillità",
+      "#Very relaxed": "Molta tranquillità",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "Quando viaggi in auto, quanto spesso provi ansia o agitazione?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#All the time": "Sempre",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "Quando viaggi in auto, cosa ti provoca ansia o agitazione?",
+      "#Heavy traffic or traffic jams": "Traffico intenso o code",
+      "#Aggressive or careless drivers, riders or pedestrians": "Persone alla guida, in sella o a piedi che si comportano in modo aggressivo o distratto",
+      "#Routes that are complicated or new to me": "Percorsi complicati o nuovi per me",
+      "#Noise, crowds or too much going on around me": "Rumore, folla o troppa confusione intorno a me",
+      "#Being in a hurry or afraid of being late": "Avere fretta o paura di fare tardi",
+      "#Feeling alone or isolated on the way": "La solitudine o l’isolamento lungo la strada",
+      "#Fear of road accidents": "Paura di incidenti stradali",
+      "#Fear of assault or harassment": "Paura di aggressioni o molestie",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Problemi di salute lungo la strada (dolore, fiato corto, vertigini)",
+      "#Nothing in particular": "Niente in particolare",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "Quando viaggi in auto, come ti senti nelle strade con tanta gente, negozi e attività?",
+      "#I prefer them: I feel safer or more at ease": "Le preferisco: mi sento più al sicuro o a mio agio",
+      "#I like them: they make the trip nicer": "Mi piacciono: rendono il viaggio più bello",
+      "#It makes no difference to me": "Per me non fa differenza",
+      "#They are sometimes a bit too much for me": "A volte sono un po' troppo per me",
+      "#Crowds stress me or make it hard to get through": "La folla mi stressa o mi rende difficile passare",
+      "#Car – How the trip feels": "In auto – Come vivi lo spostamento",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "Quando viaggi in auto, quanta stanchezza senti di solito quando arrivi?",
+      "#Not at all tired": "Nessuna stanchezza",
+      "#A little tired": "Poca stanchezza",
+      "#Quite tired": "Moderata stanchezza",
+      "#Very tired": "Molta stanchezza",
+      "#Exhausted": "Sfinimento",
+      "#When you travel by car, what tires you most?": "Quando viaggi in auto, cosa ti stanca di più?",
+      "#Carrying children, a pushchair or shopping": "Portare bambini, passeggino o spesa",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (traffico, trovare la strada, fare tardi, non sentirsi al sicuro)",
+      "#Heat, noise or bad air": "Caldo, rumore o aria cattiva",
+      "#I rarely feel tired after my trips": "Raramente mi stanco dopo i miei spostamenti",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "Quando viaggi in auto, quanto è impegnativo rispetto ad altri modi di spostarsi?",
+      "#Much easier than the others": "Molto più facile degli altri",
+      "#A bit easier": "Un po' più facile",
+      "#A bit more demanding": "Un po' più impegnativo",
+      "#Much more demanding": "Molto più impegnativo",
+      "#I have no other way to travel": "Non ho altri modi per spostarmi",
+      "#When you travel by car, how often do you arrive in the time you planned?": "Quando viaggi in auto, quanto spesso arrivi nel tempo che avevi previsto?",
+      "#When you travel by car, how satisfied are you overall?": "Quando viaggi in auto, qual è nel complesso il tuo livello di soddisfazione?",
+      "#When you travel by car, what are you least happy with?": "Quando viaggi in auto, cosa ti piace di meno?",
+      "#Very dissatisfied": "Molto basso",
+      "#Dissatisfied": "Basso",
+      "#Neither satisfied nor dissatisfied": "Né alto né basso",
+      "#Satisfied": "Alto",
+      "#Very satisfied": "Molto alto",
+      "#Travel time": "Tempo di viaggio",
+      "#Cost": "Costo",
+      "#It's not reliable or predictable": "Non è affidabile o prevedibile",
+      "#Comfort": "Comfort",
+      "#Safety from traffic or crime": "Sicurezza rispetto al traffico o alla criminalità",
+      "#It's hard to reach or use": "È difficile da raggiungere o da usare",
+      "#Crowding or lack of space": "Affollamento o mancanza di spazio",
+      "#Its impact on the environment": "Il suo impatto sull'ambiente",
+      "#It's not flexible": "Non è flessibile",
+      "#Always": "Sempre",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Pensa sia allo sforzo fisico sia a quello mentale. Gli altri modi possono essere camminare, andare in bici o i mezzi pubblici.",
+      "#Physical effort (loading and carrying bags)": "Fatica fisica (caricare e portare borse)",
+      "#Waiting (in traffic, looking for parking)": "Aspettare (nel traffico, cercando parcheggio)",
+      "#Car – Effort and satisfaction": "In auto – Fatica e soddisfazione",
+      "#Car – Trip experience and conditions": "Auto – Esperienza e condizioni del viaggio",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Auto – Esperienza e condizioni del viaggio",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>Quanto ti senti al sicuro da reati o molestie <b>quando viaggi in auto</b>. Alla maggior parte delle domande si risponde con Sì o No.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In auto – Sicurezza personale</li><li>In auto – Comfort</li><li>In auto – Il posto in cui ti muovi</li><li>In auto – Come vivi lo spostamento</li><li>In auto – Fatica e soddisfazione</li></ul>",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#Car on a street": "Auto su una strada"
+    },
+    "fr": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Pendant la journée, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous vous déplacez en voiture ? (Le harcèlement comprend les commentaires non désirés, le fait que quelqu’un vous suive, les attouchements ou les comportements intimidants à votre égard.)",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Doesn't apply to me": "Ne me concerne pas",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Le soir ou après la tombée de la nuit, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous vous déplacez en voiture ?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Lorsque vous vous déplacez en voiture, avez-vous subi ou redoutez-vous du harcèlement en raison de qui vous êtes ou de votre aspect (par ex. genre, apparence, origine, âge) ?",
+      "#Car – Personal security": "Voiture – Sécurité personnelle",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous fait vous sentir moins à l’abri de la criminalité ou du harcèlement ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Places with few people around (isolated or deserted areas)": "Les lieux où il y a peu de monde (zones isolées ou désertes)",
+      "#People behaving aggressively or in an intimidating way": "Des personnes qui se comportent de façon agressive ou intimidante",
+      "#Blind corners or obstructed views": "Les angles morts ou les vues obstruées",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Un mauvais entretien (par ex. bâtiments abandonnés, graffitis, infrastructures dégradées)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "L’absence de surveillance ou de mesures de sécurité (par ex. pas de caméras, pas de personnel)",
+      "#Incidents that happened to me or were reported in the area": "Des incidents qui me sont arrivés ou qui ont été signalés dans le quartier",
+      "#Overcrowded or chaotic places": "Les lieux bondés ou chaotiques",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Peu de repères pour m’orienter sans la vue (par ex. pas de bandes podotactiles ni d’annonces sonores)",
+      "#When you feel unsafe in the evening, what do you change?": "Quand vous ne vous sentez pas en sécurité le soir, que changez-vous ?",
+      "#You can choose more than one answer.": "Vous pouvez choisir plusieurs réponses.",
+      "#I change my route": "Je change d’itinéraire",
+      "#I change the time": "Je change d’horaire",
+      "#I share my location with someone": "Je partage ma position avec quelqu’un",
+      "#I ask someone to come with me": "Je me fais accompagner",
+      "#I use a different means of transport": "Je prends un autre moyen de transport",
+      "#I give up going out": "Je renonce à sortir",
+      "#Nothing": "Rien",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "À quel point la voiture est-elle confortable pour vous, par rapport aux autres moyens de se déplacer ?",
+      "#Much less comfortable": "Beaucoup moins confortables",
+      "#Less comfortable": "Moins confortables",
+      "#About the same": "À peu près pareil",
+      "#More comfortable": "Plus confortables",
+      "#Much more comfortable": "Beaucoup plus confortables",
+      "#When you are held up on a car trip, how stressed do you feel?": "Quand un trajet en voiture prend du retard, quel stress ressentez-vous ?",
+      "#For example traffic jams, crashes or roadworks.": "Par exemple des embouteillages, des collisions ou des travaux.",
+      "#Not at all": "Pas du tout",
+      "#A little": "Un peu",
+      "#Moderately": "Modérément",
+      "#Very": "Très",
+      "#Extremely": "Énormément",
+      "#A lot": "Beaucoup",
+      "#Do traffic jams make you change your route or the time you leave?": "Les embouteillages vous font-ils changer d'itinéraire ou d'heure de départ ?",
+      "#No, never": "Non, jamais",
+      "#Now and then": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#Always: I plan my trips to avoid them": "Toujours : je planifie mes trajets pour les éviter",
+      "#How hard is it to find a parking space where you go?": "À quel point est-il difficile de trouver une place de stationnement là où vous allez ?",
+      "#Think of the places you drive to most often.": "Pensez aux endroits où vous allez le plus souvent en voiture.",
+      "#Not a problem": "Pas un problème",
+      "#A small problem": "Un petit problème",
+      "#A real problem": "Un problème moyen",
+      "#A big problem": "Un gros problème",
+      "#A very big problem": "Un très gros problème",
+      "#Not for me: I don't drive": "Cela ne me concerne pas : je ne conduis pas",
+      "#When parking is hard, what do you usually do?": "Quand il est difficile de se garer, que faites-vous habituellement ?",
+      "#It doesn't change my plans": "Cela ne change pas mes projets",
+      "#I still go, but it's slower or more stressful": "J'y vais quand même, mais c'est plus long ou plus stressant",
+      "#I change my route or where I go": "Je change d'itinéraire ou de destination",
+      "#I put off, avoid or cancel some trips": "Je reporte, j'évite ou j'annule certains trajets",
+      "#I go another way instead (e.g. bus, on foot)": "Je me déplace autrement (par ex. en bus, à pied)",
+      "#How much do charging points affect whether you use an electric car?": "Dans quelle mesure les bornes de recharge influencent-elles votre choix d’utiliser une voiture électrique ?",
+      "#Very much": "Énormément",
+      "#Not for me: my vehicle isn't electric": "Cela ne me concerne pas : mon véhicule n'est pas électrique",
+      "#Car – Comfort": "Voiture – Confort",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "Lorsque vous vous déplacez en voiture, dans quelle mesure le bruit de la circulation vous dérange-t-il ?",
+      "#Slightly": "Un peu",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Lorsque vous vous déplacez en voiture, que faites-vous quand l’air est mauvais (gaz d’échappement, poussière, mauvaises odeurs) ?",
+      "#Nothing, it doesn't affect me": "Rien, cela ne m'affecte pas",
+      "#I notice it, but I don't change anything": "Je le remarque, mais je ne change rien",
+      "#I take another route or travel at another time": "Je prends un autre itinéraire ou je me déplace à un autre moment",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Lorsque vous vous déplacez en voiture, que faites-vous habituellement quand le temps est mauvais (pluie, vent, froid ou grande chaleur) ?",
+      "#Nothing changes, I travel as usual": "Rien ne change, je me déplace comme d'habitude",
+      "#It's less pleasant, but I travel the same way": "C'est moins agréable, mais je me déplace de la même façon",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "Je me prépare autrement ou je change d'itinéraire (par ex. vêtements, parapluie)",
+      "#I put off or skip some trips": "Je reporte ou je saute certains trajets",
+      "#It doesn't affect me": "Cela ne me gêne pas",
+      "#I notice it, but carry on as usual": "Je le remarque, mais je continue comme d'habitude",
+      "#It's unpleasant, but I still go that way": "C'est désagréable, mais je passe quand même par là",
+      "#I stop using that route altogether": "J'arrête complètement d'utiliser ce trajet",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "Lorsque vous vous déplacez en voiture, un cadre agréable ou désagréable influence-t-il ce que vous ressentez ?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "Par exemple les bâtiments, les places, l'entretien d'un lieu et son atmosphère générale.",
+      "#No, I don't pay attention to them": "Non, je n'y fais pas attention",
+      "#I notice them, but they rarely make a difference": "Je les remarque, mais elles font rarement une différence",
+      "#Sometimes they affect my mood": "Elles influencent parfois mon humeur",
+      "#They affect a lot how I feel on the way": "Elles influencent beaucoup ce que je ressens en chemin",
+      "#I sometimes choose a route because it's nicer or more interesting": "Je choisis parfois un itinéraire parce qu'il est plus agréable ou plus intéressant",
+      "#I protect myself, e.g. by closing the windows": "Je me protège, par ex. en fermant les vitres",
+      "#I travel another way (e.g. by metro instead of by car)": "Je me déplace autrement (par ex. en métro plutôt qu'en voiture)",
+      "#I travel another way (e.g. by taxi or metro)": "Je me déplace autrement (par ex. en taxi ou en métro)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "Lorsque vous vous déplacez en voiture, que faites-vous quand les rues ou les parkings sont sales ou mal entretenus (déchets, odeurs, verre brisé) ?",
+      "#I avoid some streets or car parks": "J'évite certaines rues ou certains parkings",
+      "#Car – Your surroundings": "Voiture – Votre environnement",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "Lorsque vous vous déplacez en voiture, ressentez-vous en général plutôt du stress ou de la détente ?",
+      "#Very stressed": "Stress très fort",
+      "#A little stressed": "Un peu de stress",
+      "#Neither stressed nor relaxed": "Ni stress ni détente",
+      "#A little relaxed": "Un peu de détente",
+      "#Very relaxed": "Grande détente",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "Lorsque vous vous déplacez en voiture, à quelle fréquence ressentez-vous de l’anxiété ou un sentiment de débordement ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#All the time": "Tout le temps",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous cause de l’anxiété ou un sentiment de débordement ?",
+      "#Heavy traffic or traffic jams": "Circulation dense ou embouteillages",
+      "#Aggressive or careless drivers, riders or pedestrians": "Conducteurs, cyclistes ou piétons agressifs ou imprudents",
+      "#Routes that are complicated or new to me": "Des itinéraires compliqués ou nouveaux pour moi",
+      "#Noise, crowds or too much going on around me": "Du bruit, de la foule ou trop d'agitation autour de moi",
+      "#Being in a hurry or afraid of being late": "Être pressé ou avoir peur d'être en retard",
+      "#Feeling alone or isolated on the way": "Un sentiment de solitude ou d'isolement en chemin",
+      "#Fear of road accidents": "Peur des accidents de la route",
+      "#Fear of assault or harassment": "Peur d’agression ou de harcèlement",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Problèmes de santé en chemin (douleur, essoufflement, vertiges)",
+      "#Nothing in particular": "Rien en particulier",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "Lorsque vous vous déplacez en voiture, que ressentez-vous dans les rues avec beaucoup de monde, de commerces et d’animation ?",
+      "#I prefer them: I feel safer or more at ease": "Je les préfère : je me sens plus en sécurité ou plus à l'aise",
+      "#I like them: they make the trip nicer": "Je les aime : elles rendent le trajet plus agréable",
+      "#It makes no difference to me": "Cela ne fait aucune différence pour moi",
+      "#They are sometimes a bit too much for me": "Elles sont parfois un peu trop pour moi",
+      "#Crowds stress me or make it hard to get through": "La foule me stresse ou m'empêche de passer",
+      "#Car – How the trip feels": "Voiture – Ressenti du trajet",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "Lorsque vous vous déplacez en voiture, quel niveau de fatigue ressentez-vous en général à l’arrivée ?",
+      "#Not at all tired": "Aucune fatigue",
+      "#A little tired": "Un peu fatigué",
+      "#Quite tired": "Assez fatigué",
+      "#Very tired": "Grande fatigue",
+      "#Exhausted": "Épuisement",
+      "#When you travel by car, what tires you most?": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous fatigue le plus ?",
+      "#Carrying children, a pushchair or shopping": "Porter des enfants, une poussette ou des courses",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (circulation, trouver son chemin, être en retard, se sentir en danger)",
+      "#Heat, noise or bad air": "Chaleur, bruit ou mauvaise qualité de l'air",
+      "#I rarely feel tired after my trips": "Je me sens rarement fatigué après mes trajets",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "Lorsque vous vous déplacez en voiture, dans quelle mesure est-ce exigeant par rapport aux autres moyens de se déplacer ?",
+      "#Much easier than the others": "Beaucoup plus facile que les autres",
+      "#A bit easier": "Un peu plus facile",
+      "#A bit more demanding": "Un peu plus exigeant",
+      "#Much more demanding": "Beaucoup plus exigeant",
+      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
+      "#When you travel by car, how often do you arrive in the time you planned?": "Lorsque vous vous déplacez en voiture, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
+      "#When you travel by car, how satisfied are you overall?": "Lorsque vous vous déplacez en voiture, quel est votre niveau de satisfaction global ?",
+      "#When you travel by car, what are you least happy with?": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous plaît le moins ?",
+      "#Very dissatisfied": "Très faible",
+      "#Dissatisfied": "Faible",
+      "#Neither satisfied nor dissatisfied": "Ni faible ni élevé",
+      "#Satisfied": "Élevé",
+      "#Very satisfied": "Très élevé",
+      "#Travel time": "Durée du trajet",
+      "#Cost": "Coût",
+      "#It's not reliable or predictable": "Ce n'est pas fiable ni prévisible",
+      "#Comfort": "Confort",
+      "#Safety from traffic or crime": "Sécurité face à la circulation ou à la délinquance",
+      "#It's hard to reach or use": "C'est difficile d'accès ou d'utilisation",
+      "#Crowding or lack of space": "Foule ou manque de place",
+      "#Its impact on the environment": "Son impact sur l'environnement",
+      "#It's not flexible": "Ce n'est pas flexible",
+      "#Always": "Toujours",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Pensez à l'effort physique comme mental. Les autres façons peuvent être la marche, le vélo ou les transports en commun.",
+      "#Physical effort (loading and carrying bags)": "Effort physique (charger et porter des sacs)",
+      "#Waiting (in traffic, looking for parking)": "Attendre (dans les embouteillages, en cherchant une place)",
+      "#Car – Effort and satisfaction": "Voiture – Effort et satisfaction",
+      "#Car – Trip experience and conditions": "Voiture – Expérience et conditions du déplacement",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Voiture – Expérience et conditions du déplacement",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>À quel point vous vous sentez à l’abri de la criminalité ou du harcèlement <b>lorsque vous vous déplacez en voiture</b>. On répond à la plupart des questions par Oui ou Non.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Voiture – Sécurité personnelle</li><li>Voiture – Confort</li><li>Voiture – Votre environnement</li><li>Voiture – Ressenti du trajet</li><li>Voiture – Effort et satisfaction</li></ul>",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#Car on a street": "Voiture dans une rue"
+    },
+    "de": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Fühlen Sie sich tagsüber bei Autofahrten manchmal nicht sicher vor Kriminalität oder Belästigung? (Belästigung umfasst unerwünschte Kommentare, Verfolgen, Berührungen oder einschüchterndes Verhalten Ihnen gegenüber.)",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Doesn't apply to me": "Trifft auf mich nicht zu",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Fühlen Sie sich abends oder nach Einbruch der Dunkelheit bei Autofahrten manchmal nicht sicher vor Kriminalität oder Belästigung?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Haben Sie bei Autofahrten Belästigung wegen Ihrer Person oder Ihres Aussehens (z. B. Geschlecht, Aussehen, Herkunft, Alter) erlebt oder befürchten Sie sie?",
+      "#Car – Personal security": "Auto – Persönliche Sicherheit",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Was gibt Ihnen bei Autofahrten ein geringeres Sicherheitsgefühl vor Kriminalität oder Belästigung? (Wählen Sie alles Zutreffende aus)",
+      "#Places with few people around (isolated or deserted areas)": "Orte, an denen wenige Menschen sind (abgelegene oder menschenleere Gegenden)",
+      "#People behaving aggressively or in an intimidating way": "Menschen, die sich aggressiv oder einschüchternd verhalten",
+      "#Blind corners or obstructed views": "Unübersichtliche Ecken oder verdeckte Sicht",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Schlechte Instandhaltung (z. B. verlassene Gebäude, Graffiti, kaputte Infrastruktur)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Fehlende Überwachung oder Sicherheitsmaßnahmen (z. B. keine Kameras, kein Personal)",
+      "#Incidents that happened to me or were reported in the area": "Vorfälle, die mir passiert sind oder in der Gegend gemeldet wurden",
+      "#Overcrowded or chaotic places": "Überfüllte oder chaotische Orte",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Wenig Orientierungshilfen ohne Sehen (z. B. keine Blindenleitsysteme oder Durchsagen)",
+      "#When you feel unsafe in the evening, what do you change?": "Wenn Sie sich abends nicht sicher fühlen, was ändern Sie?",
+      "#You can choose more than one answer.": "Sie können mehrere Antworten auswählen.",
+      "#I change my route": "Ich ändere meinen Weg",
+      "#I change the time": "Ich ändere die Uhrzeit",
+      "#I share my location with someone": "Ich teile meinen Standort mit jemandem",
+      "#I ask someone to come with me": "Ich lasse mich begleiten",
+      "#I use a different means of transport": "Ich nehme ein anderes Verkehrsmittel",
+      "#I give up going out": "Ich verzichte darauf, hinauszugehen",
+      "#Nothing": "Nichts",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "Wie bequem ist das Auto für Sie im Vergleich zu anderen Fortbewegungsarten?",
+      "#Much less comfortable": "Viel weniger komfortabel",
+      "#Less comfortable": "Weniger komfortabel",
+      "#About the same": "Etwa gleich",
+      "#More comfortable": "Komfortabler",
+      "#Much more comfortable": "Viel komfortabler",
+      "#When you are held up on a car trip, how stressed do you feel?": "Wie gestresst fühlen Sie sich, wenn Sie auf einer Autofahrt aufgehalten werden?",
+      "#For example traffic jams, crashes or roadworks.": "Zum Beispiel Stau, Zusammenstöße oder Baustellen.",
+      "#Not at all": "Gar nicht",
+      "#A little": "Ein wenig",
+      "#Moderately": "Mittel",
+      "#Very": "Sehr",
+      "#Extremely": "Äußerst",
+      "#A lot": "Stark",
+      "#Do traffic jams make you change your route or the time you leave?": "Ändern Staus Ihre Route oder die Zeit, zu der Sie losfahren?",
+      "#No, never": "Nein, nie",
+      "#Now and then": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#Always: I plan my trips to avoid them": "Immer: Ich plane meine Fahrten so, dass ich sie vermeide",
+      "#How hard is it to find a parking space where you go?": "Wie schwierig ist es, dort, wo Sie hinfahren, einen Parkplatz zu finden?",
+      "#Think of the places you drive to most often.": "Denken Sie an die Orte, zu denen Sie am häufigsten fahren.",
+      "#Not a problem": "Kein Problem",
+      "#A small problem": "Ein kleines Problem",
+      "#A real problem": "Ein mittleres Problem",
+      "#A big problem": "Ein großes Problem",
+      "#A very big problem": "Ein sehr großes Problem",
+      "#Not for me: I don't drive": "Trifft auf mich nicht zu: Ich fahre nicht selbst",
+      "#When parking is hard, what do you usually do?": "Was tun Sie in der Regel, wenn das Parken schwierig ist?",
+      "#It doesn't change my plans": "Es ändert nichts an meinen Plänen",
+      "#I still go, but it's slower or more stressful": "Ich fahre trotzdem hin, aber es dauert länger oder ist stressiger",
+      "#I change my route or where I go": "Ich ändere meine Route oder mein Ziel",
+      "#I put off, avoid or cancel some trips": "Ich verschiebe, vermeide oder streiche manche Fahrten",
+      "#I go another way instead (e.g. bus, on foot)": "Ich nehme stattdessen ein anderes Verkehrsmittel (z. B. Bus, zu Fuß)",
+      "#How much do charging points affect whether you use an electric car?": "Wie sehr beeinflussen Ladepunkte, ob Sie ein Elektroauto nutzen?",
+      "#Very much": "Sehr stark",
+      "#Not for me: my vehicle isn't electric": "Trifft auf mich nicht zu: Mein Fahrzeug ist nicht elektrisch",
+      "#Car – Comfort": "Auto – Komfort",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "Wie sehr stört oder ärgert Sie Verkehrslärm bei Autofahrten?",
+      "#Slightly": "Etwas",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Was tun Sie bei Autofahrten, wenn die Luft schlecht ist (Abgase, Staub, schlechte Gerüche)?",
+      "#Nothing, it doesn't affect me": "Nichts, es betrifft mich nicht",
+      "#I notice it, but I don't change anything": "Ich merke es, ändere aber nichts",
+      "#I take another route or travel at another time": "Ich nehme eine andere Route oder fahre zu einer anderen Zeit",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Was tun Sie bei Autofahrten normalerweise, wenn das Wetter schlecht ist (Regen, Wind, Kälte oder große Hitze)?",
+      "#Nothing changes, I travel as usual": "Nichts ändert sich, ich bin wie gewohnt unterwegs",
+      "#It's less pleasant, but I travel the same way": "Es ist weniger angenehm, aber ich bin auf dieselbe Weise unterwegs",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "Ich bereite mich anders vor oder ändere die Route (z. B. Kleidung, Regenschirm)",
+      "#I put off or skip some trips": "Ich verschiebe oder streiche manche Wege",
+      "#It doesn't affect me": "Es stört mich nicht",
+      "#I notice it, but carry on as usual": "Ich merke es, mache aber wie gewohnt weiter",
+      "#It's unpleasant, but I still go that way": "Es ist unangenehm, aber ich gehe trotzdem diesen Weg",
+      "#I stop using that route altogether": "Ich nutze diese Strecke gar nicht mehr",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "Beeinflusst eine angenehme oder unangenehme Umgebung bei Autofahrten, wie Sie sich fühlen?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "Zum Beispiel Gebäude, Plätze, wie gepflegt ein Ort ist und wie er insgesamt wirkt.",
+      "#No, I don't pay attention to them": "Nein, ich achte nicht darauf",
+      "#I notice them, but they rarely make a difference": "Ich merke es, aber es macht selten einen Unterschied",
+      "#Sometimes they affect my mood": "Manchmal beeinflussen sie meine Stimmung",
+      "#They affect a lot how I feel on the way": "Sie beeinflussen stark, wie ich mich unterwegs fühle",
+      "#I sometimes choose a route because it's nicer or more interesting": "Manchmal wähle ich eine Strecke, weil sie schöner oder interessanter ist",
+      "#I protect myself, e.g. by closing the windows": "Ich schütze mich, z. B. mit geschlossenen Fenstern",
+      "#I travel another way (e.g. by metro instead of by car)": "Ich nutze ein anderes Verkehrsmittel (z. B. U-Bahn statt Auto)",
+      "#I travel another way (e.g. by taxi or metro)": "Ich nutze ein anderes Verkehrsmittel (z. B. Taxi oder U-Bahn)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "Was tun Sie bei Autofahrten, wenn Straßen oder Parkplätze schmutzig oder schlecht gepflegt sind (Müll, Gerüche, Glasscherben)?",
+      "#I avoid some streets or car parks": "Ich meide manche Straßen oder Parkplätze",
+      "#Car – Your surroundings": "Auto – Ihre Umgebung",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "Wie gestresst oder entspannt fühlen Sie sich bei Autofahrten normalerweise?",
+      "#Very stressed": "Sehr gestresst",
+      "#A little stressed": "Ein wenig gestresst",
+      "#Neither stressed nor relaxed": "Weder gestresst noch entspannt",
+      "#A little relaxed": "Ein wenig entspannt",
+      "#Very relaxed": "Sehr entspannt",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "Wie oft fühlen Sie sich bei Autofahrten ängstlich oder überfordert?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#All the time": "Die ganze Zeit",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "Was führt bei Autofahrten dazu, dass Sie sich ängstlich oder überfordert fühlen?",
+      "#Heavy traffic or traffic jams": "Starker Verkehr oder Stau",
+      "#Aggressive or careless drivers, riders or pedestrians": "Aggressive oder unachtsame Fahrer, Fahrerinnen oder Fußgänger",
+      "#Routes that are complicated or new to me": "Strecken, die kompliziert oder neu für mich sind",
+      "#Noise, crowds or too much going on around me": "Lärm, Menschenmengen oder zu viel Trubel um mich herum",
+      "#Being in a hurry or afraid of being late": "In Eile zu sein oder Angst vor Verspätung",
+      "#Feeling alone or isolated on the way": "Mich unterwegs allein oder isoliert zu fühlen",
+      "#Fear of road accidents": "Angst vor Verkehrsunfällen",
+      "#Fear of assault or harassment": "Angst vor Übergriffen oder Belästigung",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Gesundheitliche Probleme unterwegs (Schmerzen, Atemnot, Schwindel)",
+      "#Nothing in particular": "Nichts Besonderes",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "Wie fühlen Sie sich bei Autofahrten auf Straßen mit vielen Menschen, Geschäften und Aktivitäten?",
+      "#I prefer them: I feel safer or more at ease": "Ich bevorzuge sie: Ich fühle mich sicherer oder wohler",
+      "#I like them: they make the trip nicer": "Ich mag sie: Sie machen den Weg schöner",
+      "#It makes no difference to me": "Für mich macht es keinen Unterschied",
+      "#They are sometimes a bit too much for me": "Sie sind mir manchmal ein bisschen zu viel",
+      "#Crowds stress me or make it hard to get through": "Menschenmengen stressen mich oder machen das Durchkommen schwer",
+      "#Car – How the trip feels": "Auto – Wie sich der Weg anfühlt",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "Wie müde fühlen Sie sich bei Autofahrten normalerweise, wenn Sie ankommen?",
+      "#Not at all tired": "Gar nicht müde",
+      "#A little tired": "Ein wenig müde",
+      "#Quite tired": "Ziemlich müde",
+      "#Very tired": "Sehr müde",
+      "#Exhausted": "Erschöpft",
+      "#When you travel by car, what tires you most?": "Was ermüdet Sie bei Autofahrten am meisten?",
+      "#Carrying children, a pushchair or shopping": "Kinder, Kinderwagen oder Einkäufe tragen bzw. schieben",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stress (Verkehr, Weg finden, Verspätung, Unsicherheit)",
+      "#Heat, noise or bad air": "Hitze, Lärm oder schlechte Luft",
+      "#I rarely feel tired after my trips": "Nach meinen Wegen bin ich selten müde",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "Wie anstrengend ist das Fahren mit dem Auto im Vergleich zu anderen Fortbewegungsarten, die Sie nutzen könnten?",
+      "#Much easier than the others": "Viel leichter als die anderen",
+      "#A bit easier": "Etwas leichter",
+      "#A bit more demanding": "Etwas anstrengender",
+      "#Much more demanding": "Viel anstrengender",
+      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
+      "#When you travel by car, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem Auto in der Zeit an, die Sie eingeplant haben?",
+      "#When you travel by car, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt mit Autofahrten?",
+      "#When you travel by car, what are you least happy with?": "Was gefällt Ihnen bei Autofahrten am wenigsten?",
+      "#Very dissatisfied": "Sehr unzufrieden",
+      "#Dissatisfied": "Unzufrieden",
+      "#Neither satisfied nor dissatisfied": "Weder zufrieden noch unzufrieden",
+      "#Satisfied": "Zufrieden",
+      "#Very satisfied": "Sehr zufrieden",
+      "#Travel time": "Reisezeit",
+      "#Cost": "Kosten",
+      "#It's not reliable or predictable": "Es ist nicht verlässlich oder planbar",
+      "#Comfort": "Komfort",
+      "#Safety from traffic or crime": "Sicherheit vor Verkehr oder Kriminalität",
+      "#It's hard to reach or use": "Es ist schwer zu erreichen oder zu nutzen",
+      "#Crowding or lack of space": "Gedränge oder Platzmangel",
+      "#Its impact on the environment": "Die Auswirkungen auf die Umwelt",
+      "#It's not flexible": "Es ist nicht flexibel",
+      "#Always": "Immer",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Denken Sie an körperliche und geistige Anstrengung. Andere Möglichkeiten wären Gehen, Radfahren oder öffentlicher Verkehr.",
+      "#Physical effort (loading and carrying bags)": "Körperliche Anstrengung (Taschen einladen und tragen)",
+      "#Waiting (in traffic, looking for parking)": "Warten (im Stau, bei der Parkplatzsuche)",
+      "#Car – Effort and satisfaction": "Auto – Aufwand und Zufriedenheit",
+      "#Car – Trip experience and conditions": "Auto – Reiseerlebnis und Bedingungen",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Auto – Reiseerlebnis und Bedingungen",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>Wie sicher Sie sich vor Kriminalität oder Belästigung fühlen, <b>wenn Sie mit dem Auto unterwegs sind</b>. Die meisten Fragen beantworten Sie mit Ja oder Nein.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Auto – Persönliche Sicherheit</li><li>Auto – Komfort</li><li>Auto – Ihre Umgebung</li><li>Auto – Wie sich der Weg anfühlt</li><li>Auto – Aufwand und Zufriedenheit</li></ul>",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#Car on a street": "Auto auf einer Straße"
+    },
+    "tr": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Gündüz arabayla yolculuk ederken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu? (Taciz; size yönelik istenmeyen yorumları, takip edilmeyi, dokunmayı veya yıldırıcı davranışları kapsar.)",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Doesn't apply to me": "Benim için geçerli değil",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Akşam veya hava karardıktan sonra arabayla yolculuk ederken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Arabayla yolculuk ederken kim olduğunuz ya da nasıl göründüğünüz nedeniyle (örn. cinsiyet, görünüş, köken, yaş) taciz yaşadınız mı ya da bundan korkuyor musunuz?",
+      "#Car – Personal security": "Araba – Kişisel güvenlik",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Arabayla yolculuk ederken neler kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Places with few people around (isolated or deserted areas)": "Etrafta az insan olan yerler (ıssız veya tenha alanlar)",
+      "#People behaving aggressively or in an intimidating way": "Saldırgan veya gözdağı verici davranan insanlar",
+      "#Blind corners or obstructed views": "Kör köşeler veya kapalı görüş alanları",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Bakımsızlık (örn. terk edilmiş binalar, grafitiler, bozuk altyapı)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "Gözetim veya güvenlik önlemlerinin eksikliği (örn. kamera yok, görevli yok)",
+      "#Incidents that happened to me or were reported in the area": "Başıma gelen veya bölgede bildirilen olaylar",
+      "#Overcrowded or chaotic places": "Aşırı kalabalık veya karmaşık yerler",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Görmeden yolumu bulmak için az ipucu olması (örn. hissedilebilir yüzey veya sesli anons yok)",
+      "#When you feel unsafe in the evening, what do you change?": "Akşamları kendinizi güvende hissetmediğinizde neyi değiştiriyorsunuz?",
+      "#You can choose more than one answer.": "Birden fazla yanıt seçebilirsiniz.",
+      "#I change my route": "Güzergâhımı değiştiririm",
+      "#I change the time": "Saatimi değiştiririm",
+      "#I share my location with someone": "Konumumu biriyle paylaşırım",
+      "#I ask someone to come with me": "Birinin bana eşlik etmesini isterim",
+      "#I use a different means of transport": "Başka bir ulaşım aracı kullanırım",
+      "#I give up going out": "Dışarı çıkmaktan vazgeçerim",
+      "#Nothing": "Hiçbir şey",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "Diğer ulaşım yollarına kıyasla otomobil sizin için ne kadar rahat?",
+      "#Much less comfortable": "Çok daha az konforlu",
+      "#Less comfortable": "Daha az konforlu",
+      "#About the same": "Yaklaşık aynı",
+      "#More comfortable": "Daha konforlu",
+      "#Much more comfortable": "Çok daha konforlu",
+      "#When you are held up on a car trip, how stressed do you feel?": "Araba yolculuğunda gecikmeye uğradığınızda ne kadar stres yaşıyorsunuz?",
+      "#For example traffic jams, crashes or roadworks.": "Örneğin trafik sıkışıklığı, çarpışmalar veya yol çalışmaları.",
+      "#Not at all": "Hiç",
+      "#A little": "Biraz",
+      "#Moderately": "Orta derecede",
+      "#Very": "Çok",
+      "#Extremely": "Son derece",
+      "#A lot": "Çok",
+      "#Do traffic jams make you change your route or the time you leave?": "Trafik sıkışıklığı güzergâhınızı veya yola çıkma saatinizi değiştirtiyor mu?",
+      "#No, never": "Hayır, hiçbir zaman",
+      "#Now and then": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#Always: I plan my trips to avoid them": "Her zaman: yolculuklarımı onlardan kaçınacak şekilde planlarım",
+      "#How hard is it to find a parking space where you go?": "Gittiğiniz yerlerde park yeri bulmak ne kadar zor?",
+      "#Think of the places you drive to most often.": "En sık otomobille gittiğiniz yerleri düşünün.",
+      "#Not a problem": "Sorun değil",
+      "#A small problem": "Küçük bir sorun",
+      "#A real problem": "Orta düzeyde bir sorun",
+      "#A big problem": "Büyük bir sorun",
+      "#A very big problem": "Çok büyük bir sorun",
+      "#Not for me: I don't drive": "Bu soru benim için geçerli değil: Araç kullanmıyorum",
+      "#When parking is hard, what do you usually do?": "Park etmek zor olduğunda genellikle ne yaparsınız?",
+      "#It doesn't change my plans": "Planlarımı değiştirmez",
+      "#I still go, but it's slower or more stressful": "Yine de giderim ama daha yavaş veya daha stresli olur",
+      "#I change my route or where I go": "Güzergâhımı veya gittiğim yeri değiştiririm",
+      "#I put off, avoid or cancel some trips": "Bazı yolculukları ertelerim, yapmaktan kaçınırım veya iptal ederim",
+      "#I go another way instead (e.g. bus, on foot)": "Bunun yerine başka bir şekilde giderim (örn. otobüs, yürüyerek)",
+      "#How much do charging points affect whether you use an electric car?": "Şarj noktaları elektrikli araba kullanıp kullanmamanızı ne kadar etkiliyor?",
+      "#Very much": "Çok fazla",
+      "#Not for me: my vehicle isn't electric": "Bu soru benim için geçerli değil: Aracım elektrikli değil",
+      "#Car – Comfort": "Araba – Konfor",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "Arabayla yolculuk ederken trafik gürültüsü sizi ne kadar rahatsız eder veya sinirlendirir?",
+      "#Slightly": "Biraz",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Arabayla yolculuk ederken hava kötü olduğunda (egzoz dumanı, toz, kötü kokular) ne yaparsınız?",
+      "#Nothing, it doesn't affect me": "Hiçbir şey, beni etkilemez",
+      "#I notice it, but I don't change anything": "Fark ederim ama hiçbir şeyi değiştirmem",
+      "#I take another route or travel at another time": "Başka bir güzergâh seçerim veya başka bir saatte yolculuk ederim",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Arabayla yolculuk ederken hava koşulları kötü olduğunda (yağmur, rüzgâr, soğuk veya aşırı sıcak) genellikle ne yaparsınız?",
+      "#Nothing changes, I travel as usual": "Hiçbir şey değişmez, her zamanki gibi yolculuk ederim",
+      "#It's less pleasant, but I travel the same way": "Daha az keyifli ama aynı şekilde yolculuk ederim",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "Farklı hazırlanırım veya güzergâhı değiştiririm (örn. kıyafet, şemsiye)",
+      "#I put off or skip some trips": "Bazı yolculukları ertelerim veya yapmam",
+      "#It doesn't affect me": "Beni etkilemez",
+      "#I notice it, but carry on as usual": "Fark ederim ama her zamanki gibi devam ederim",
+      "#It's unpleasant, but I still go that way": "Hoş değil ama yine de oradan giderim",
+      "#I stop using that route altogether": "O güzergâhı tamamen kullanmayı bırakırım",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "Arabayla yolculuk ederken hoş veya hoş olmayan çevre kendinizi nasıl hissettiğinizi etkiliyor mu?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "Örneğin binalar, meydanlar, bir yerin ne kadar bakımlı olduğu ve genel havası.",
+      "#No, I don't pay attention to them": "Hayır, dikkat etmem",
+      "#I notice them, but they rarely make a difference": "Fark ederim ama nadiren bir fark yaratırlar",
+      "#Sometimes they affect my mood": "Bazen ruh hâlimi etkilerler",
+      "#They affect a lot how I feel on the way": "Yolda nasıl hissettiğimi çok etkilerler",
+      "#I sometimes choose a route because it's nicer or more interesting": "Bazen daha güzel veya ilginç olduğu için bir güzergâh seçerim",
+      "#I protect myself, e.g. by closing the windows": "Kendimi korurum, örn. camları kapatarak",
+      "#I travel another way (e.g. by metro instead of by car)": "Başka bir şekilde giderim (örn. otomobil yerine metroyla)",
+      "#I travel another way (e.g. by taxi or metro)": "Başka bir şekilde giderim (örn. taksiyle veya metroyla)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "Arabayla yolculuk ederken sokaklar veya otoparklar kirli ya da bakımsız olduğunda (çöp, kokular, kırık cam) ne yaparsınız?",
+      "#I avoid some streets or car parks": "Bazı sokaklardan veya otoparklardan kaçınırım",
+      "#Car – Your surroundings": "Araba – Çevreniz",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "Arabayla yolculuk ederken genellikle ne kadar stresli veya rahat hissediyorsunuz?",
+      "#Very stressed": "Çok stresli",
+      "#A little stressed": "Biraz stresli",
+      "#Neither stressed nor relaxed": "Ne stresli ne rahat",
+      "#A little relaxed": "Biraz rahat",
+      "#Very relaxed": "Çok rahat",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "Arabayla yolculuk ederken ne sıklıkla kaygılı veya bunalmış hissediyorsunuz?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#All the time": "Her zaman",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "Arabayla yolculuk ederken sizi kaygılı veya bunalmış hissettiren nedir?",
+      "#Heavy traffic or traffic jams": "Yoğun trafik veya trafik sıkışıklığı",
+      "#Aggressive or careless drivers, riders or pedestrians": "Agresif veya dikkatsiz sürücüler, bisikletliler ya da yayalar",
+      "#Routes that are complicated or new to me": "Karmaşık veya benim için yeni güzergâhlar",
+      "#Noise, crowds or too much going on around me": "Gürültü, kalabalık veya etrafımda çok fazla hareketlilik",
+      "#Being in a hurry or afraid of being late": "Acele etmek veya geç kalma korkusu",
+      "#Feeling alone or isolated on the way": "Yolda kendimi yalnız veya tecrit edilmiş hissetmek",
+      "#Fear of road accidents": "Trafik kazası korkusu",
+      "#Fear of assault or harassment": "Saldırıya veya tacize uğrama korkusu",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Yolda sağlık sorunları (ağrı, nefes darlığı, baş dönmesi)",
+      "#Nothing in particular": "Özellikle hiçbir şey",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "Arabayla yolculuk ederken çok insanın, dükkânın ve hareketin olduğu sokaklarda kendinizi nasıl hissediyorsunuz?",
+      "#I prefer them: I feel safer or more at ease": "Onları tercih ederim: Kendimi daha güvende veya rahat hissederim",
+      "#I like them: they make the trip nicer": "Hoşuma gider: Yolculuğu daha güzel yapar",
+      "#It makes no difference to me": "Benim için fark etmez",
+      "#They are sometimes a bit too much for me": "Bazen benim için biraz fazla gelirler",
+      "#Crowds stress me or make it hard to get through": "Kalabalık beni strese sokar veya geçmeyi zorlaştırır",
+      "#Car – How the trip feels": "Araba – Yolculuk nasıl hissettiriyor",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "Arabayla yolculuk ederken vardığınızda genellikle ne kadar yorgun hissediyorsunuz?",
+      "#Not at all tired": "Hiç yorgun değilim",
+      "#A little tired": "Biraz yorgun",
+      "#Quite tired": "Oldukça yorgun",
+      "#Very tired": "Çok yorgunum",
+      "#Exhausted": "Çok bitkinim",
+      "#When you travel by car, what tires you most?": "Arabayla yolculuk ederken sizi en çok ne yorar?",
+      "#Carrying children, a pushchair or shopping": "Çocuk, bebek arabası veya alışveriş taşımak",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stres (trafik, yolu bulmak, geç kalmak, kendini güvensiz hissetmek)",
+      "#Heat, noise or bad air": "Sıcak, gürültü veya kötü hava kalitesi",
+      "#I rarely feel tired after my trips": "Yolculuklarımdan sonra nadiren yorgun hissederim",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "Arabayla yolculuk ederken gidebileceğiniz diğer yollara kıyasla bu ne kadar zahmetli?",
+      "#Much easier than the others": "Diğerlerinden çok daha kolay",
+      "#A bit easier": "Biraz daha kolay",
+      "#A bit more demanding": "Biraz daha zorlayıcı",
+      "#Much more demanding": "Çok daha zorlayıcı",
+      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
+      "#When you travel by car, how often do you arrive in the time you planned?": "Arabayla yolculuk ederken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
+      "#When you travel by car, how satisfied are you overall?": "Arabayla yolculuk ederken genel olarak ne kadar memnunsunuz?",
+      "#When you travel by car, what are you least happy with?": "Arabayla yolculuk ederken en az neyden memnunsunuz?",
+      "#Very dissatisfied": "Hiç memnun değilim",
+      "#Dissatisfied": "Memnun değilim",
+      "#Neither satisfied nor dissatisfied": "Ne memnunum ne de memnun değilim",
+      "#Satisfied": "Memnunum",
+      "#Very satisfied": "Çok memnunum",
+      "#Travel time": "Yolculuk süresi",
+      "#Cost": "Maliyet",
+      "#It's not reliable or predictable": "Güvenilir veya öngörülebilir değil",
+      "#Comfort": "Konfor",
+      "#Safety from traffic or crime": "Trafiğe veya suça karşı güvenlik",
+      "#It's hard to reach or use": "Ulaşması veya kullanması zor",
+      "#Crowding or lack of space": "Kalabalık veya yer yetersizliği",
+      "#Its impact on the environment": "Çevreye etkisi",
+      "#It's not flexible": "Esnek değil",
+      "#Always": "Her zaman",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Hem fiziksel hem de zihinsel eforu düşünün. Diğer yollar yürümek, bisiklet sürmek veya toplu taşıma olabilir.",
+      "#Physical effort (loading and carrying bags)": "Fiziksel efor (çanta yüklemek ve taşımak)",
+      "#Waiting (in traffic, looking for parking)": "Beklemek (trafikte, park yeri ararken)",
+      "#Car – Effort and satisfaction": "Araba – Çaba ve memnuniyet",
+      "#Car – Trip experience and conditions": "Otomobil – Yolculuk deneyimi ve koşulları",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Otomobil – Yolculuk deneyimi ve koşulları",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p><b>Arabayla yolculuk ederken</b> kendinizi suça veya tacize karşı ne kadar güvende hissettiğiniz. Soruların çoğu Evet veya Hayır ile yanıtlanır.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Araba – Kişisel güvenlik</li><li>Araba – Konfor</li><li>Araba – Çevreniz</li><li>Araba – Yolculuk nasıl hissettiriyor</li><li>Araba – Çaba ve memnuniyet</li></ul>",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#Car on a street": "Sokakta bir araba"
+    },
+    "fa": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "در طول روز، آیا پیش می‌آید هنگام سفر با خودرو در برابر جرم یا آزار احساس امنیت نکنید؟ (آزار شامل اظهارنظرهای ناخواسته، تعقیب کردن، لمس کردن یا رفتار ارعاب‌آمیز نسبت به شما است.)",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Doesn't apply to me": "به من مربوط نمی‌شود",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "عصر یا پس از تاریک شدن هوا، آیا پیش می‌آید هنگام سفر با خودرو در برابر جرم یا آزار احساس امنیت نکنید؟",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "هنگام سفر با خودرو، آیا به دلیل ویژگی‌های شخصی یا ظاهرتان (مثلاً جنسیت، ظاهر، خاستگاه، سن) آزار دیده‌اید یا از آن می‌ترسید؟",
+      "#Car – Personal security": "خودرو – امنیت شخصی",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "هنگام سفر با خودرو، چه چیزهایی باعث می‌شوند در برابر جرم یا آزار کمتر احساس امنیت کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Places with few people around (isolated or deserted areas)": "مکان‌هایی با رفت‌وآمد کم (مناطق دورافتاده یا خلوت)",
+      "#People behaving aggressively or in an intimidating way": "افرادی که رفتار پرخاشگرانه یا ترساننده دارند",
+      "#Blind corners or obstructed views": "پیچ‌های کور یا دید مسدود",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "نگهداری ضعیف (مثلاً ساختمان‌های متروکه، گرافیتی، زیرساخت‌های خراب)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "نبود نظارت یا اقدامات امنیتی (مثلاً بدون دوربین، بدون کارکنان)",
+      "#Incidents that happened to me or were reported in the area": "حوادثی که برای من رخ داده یا در منطقه گزارش شده است",
+      "#Overcrowded or chaotic places": "مکان‌های بسیار شلوغ یا پرهرج‌ومرج",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "نشانه‌های کم برای مسیریابی بدون دیدن (مثلاً نبود مسیر لمسی یا اعلام صوتی)",
+      "#When you feel unsafe in the evening, what do you change?": "وقتی عصر احساس امنیت نمی‌کنید، چه چیزی را تغییر می‌دهید؟",
+      "#You can choose more than one answer.": "می‌توانید بیش از یک پاسخ انتخاب کنید.",
+      "#I change my route": "مسیرم را تغییر می‌دهم",
+      "#I change the time": "ساعت رفت‌وآمدم را تغییر می‌دهم",
+      "#I share my location with someone": "موقعیت مکانی‌ام را با کسی به اشتراک می‌گذارم",
+      "#I ask someone to come with me": "از کسی می‌خواهم همراهم بیاید",
+      "#I use a different means of transport": "از وسیله نقلیه دیگری استفاده می‌کنم",
+      "#I give up going out": "از بیرون رفتن صرف‌نظر می‌کنم",
+      "#Nothing": "هیچ چیز",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "در مقایسه با روش‌های دیگر رفت‌وآمد، خودرو برای شما چقدر راحت است؟",
+      "#Much less comfortable": "خیلی کمتر راحت",
+      "#Less comfortable": "کمتر راحت",
+      "#About the same": "تقریباً یکسان",
+      "#More comfortable": "راحت‌تر",
+      "#Much more comfortable": "خیلی راحت‌تر",
+      "#When you are held up on a car trip, how stressed do you feel?": "وقتی در سفر با خودرو معطل می‌شوید، چقدر احساس تنش می‌کنید؟",
+      "#For example traffic jams, crashes or roadworks.": "مثلاً ترافیک سنگین، برخورد خودروها یا کار در جاده.",
+      "#Not at all": "اصلاً",
+      "#A little": "کمی",
+      "#Moderately": "تا حدی",
+      "#Very": "بسیار",
+      "#Extremely": "به‌شدت",
+      "#A lot": "زیاد",
+      "#Do traffic jams make you change your route or the time you leave?": "آیا ترافیک سنگین باعث می‌شود مسیر یا زمان حرکت خود را تغییر دهید؟",
+      "#No, never": "نه، هرگز",
+      "#Now and then": "گاهی",
+      "#Sometimes": "بعضی وقت‌ها",
+      "#Often": "اغلب",
+      "#Always: I plan my trips to avoid them": "همیشه: سفرهایم را طوری برنامه‌ریزی می‌کنم که از آن دوری کنم",
+      "#How hard is it to find a parking space where you go?": "پیدا کردن جای پارک در جاهایی که می‌روید چقدر سخت است؟",
+      "#Think of the places you drive to most often.": "به جاهایی فکر کنید که بیشتر با خودرو به آن‌ها می‌روید.",
+      "#Not a problem": "مشکلی نیست",
+      "#A small problem": "مشکل کوچک",
+      "#A real problem": "مشکل جدی",
+      "#A big problem": "مشکل بزرگ",
+      "#A very big problem": "مشکل بسیار بزرگ",
+      "#Not for me: I don't drive": "مربوط به من نیست: رانندگی نمی‌کنم",
+      "#When parking is hard, what do you usually do?": "وقتی پیدا کردن جای پارک سخت است، معمولاً چه می‌کنید؟",
+      "#It doesn't change my plans": "برنامه من را تغییر نمی‌دهد",
+      "#I still go, but it's slower or more stressful": "باز هم می‌روم، اما کندتر یا با تنش بیشتر",
+      "#I change my route or where I go": "مسیر یا مقصد خود را تغییر می‌دهم",
+      "#I put off, avoid or cancel some trips": "بعضی سفرها را به تعویق می‌اندازم، از آن‌ها دوری می‌کنم یا لغو می‌کنم",
+      "#I go another way instead (e.g. bus, on foot)": "به جای آن با روش دیگری می‌روم (مثلاً اتوبوس، پیاده)",
+      "#How much do charging points affect whether you use an electric car?": "ایستگاه‌های شارژ چقدر بر استفاده شما از خودرو برقی اثر می‌گذارند؟",
+      "#Very much": "خیلی زیاد",
+      "#Not for me: my vehicle isn't electric": "مربوط به من نیست: وسیله من برقی نیست",
+      "#Car – Comfort": "خودرو – راحتی",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "هنگام سفر با خودرو، سروصدای ترافیک چقدر شما را اذیت یا آزرده می‌کند؟",
+      "#Slightly": "کمی",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "هنگام سفر با خودرو، وقتی هوا آلوده است (دود اگزوز، گردوغبار، بوی بد) چه می‌کنید؟",
+      "#Nothing, it doesn't affect me": "هیچ کاری، بر من اثری ندارد",
+      "#I notice it, but I don't change anything": "متوجه می‌شوم، اما چیزی را تغییر نمی‌دهم",
+      "#I take another route or travel at another time": "مسیر دیگری می‌روم یا در زمان دیگری سفر می‌کنم",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "هنگام سفر با خودرو، وقتی هوا بد است (باران، باد، سرما یا گرمای شدید) معمولاً چه می‌کنید؟",
+      "#Nothing changes, I travel as usual": "چیزی تغییر نمی‌کند، مثل همیشه سفر می‌کنم",
+      "#It's less pleasant, but I travel the same way": "کمتر دلپذیر است، اما به همان شکل سفر می‌کنم",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "طور دیگری آماده می‌شوم یا مسیرم را عوض می‌کنم (مثلاً لباس، چتر)",
+      "#I put off or skip some trips": "بعضی سفرها را به تعویق می‌اندازم یا انجام نمی‌دهم",
+      "#It doesn't affect me": "بر من اثری ندارد",
+      "#I notice it, but carry on as usual": "متوجه می‌شوم، اما مثل همیشه ادامه می‌دهم",
+      "#It's unpleasant, but I still go that way": "ناخوشایند است، اما باز هم از آنجا می‌روم",
+      "#I stop using that route altogether": "دیگر اصلاً از آن مسیر استفاده نمی‌کنم",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "هنگام سفر با خودرو، آیا محیط خوشایند یا ناخوشایند بر حال شما اثر می‌گذارد؟",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "مثلاً ساختمان‌ها، میدان‌ها، میزان رسیدگی به یک محل و حال‌وهوای کلی آن.",
+      "#No, I don't pay attention to them": "نه، به آن‌ها توجه نمی‌کنم",
+      "#I notice them, but they rarely make a difference": "متوجه آن‌ها می‌شوم، اما به‌ندرت فرقی ایجاد می‌کنند",
+      "#Sometimes they affect my mood": "گاهی بر حال من اثر می‌گذارند",
+      "#They affect a lot how I feel on the way": "خیلی بر حس من در مسیر اثر می‌گذارند",
+      "#I sometimes choose a route because it's nicer or more interesting": "گاهی مسیری را انتخاب می‌کنم چون زیباتر یا جالب‌تر است",
+      "#I protect myself, e.g. by closing the windows": "از خودم محافظت می‌کنم، مثلاً با بستن شیشه‌ها",
+      "#I travel another way (e.g. by metro instead of by car)": "با روش دیگری سفر می‌کنم (مثلاً با مترو به جای خودرو)",
+      "#I travel another way (e.g. by taxi or metro)": "با روش دیگری سفر می‌کنم (مثلاً با تاکسی یا مترو)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "هنگام سفر با خودرو، وقتی خیابان‌ها یا پارکینگ‌ها کثیف یا نگهداری‌نشده‌اند (زباله، بوی بد، شیشه شکسته) چه می‌کنید؟",
+      "#I avoid some streets or car parks": "از بعضی خیابان‌ها یا پارکینگ‌ها دوری می‌کنم",
+      "#Car – Your surroundings": "خودرو – محیط اطراف شما",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "هنگام سفر با خودرو، معمولاً چقدر احساس تنش یا آرامش می‌کنید؟",
+      "#Very stressed": "خیلی استرس دارم",
+      "#A little stressed": "کمی استرس دارم",
+      "#Neither stressed nor relaxed": "نه استرس دارم، نه آرام هستم",
+      "#A little relaxed": "کمی آرام هستم",
+      "#Very relaxed": "خیلی آرام هستم",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "هنگام سفر با خودرو، چند وقت یک بار احساس نگرانی یا فشار زیاد می‌کنید؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#All the time": "همیشه",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "هنگام سفر با خودرو، چه چیزی باعث نگرانی یا احساس فشار زیاد در شما می‌شود؟",
+      "#Heavy traffic or traffic jams": "ترافیک سنگین یا راهبندان",
+      "#Aggressive or careless drivers, riders or pedestrians": "رانندگان، موتورسواران و دوچرخه‌سواران یا عابران پیادهٔ پرخاشگر یا بی‌احتیاط",
+      "#Routes that are complicated or new to me": "مسیرهای پیچیده یا ناآشنا برای من",
+      "#Noise, crowds or too much going on around me": "سر و صدا، شلوغی یا هیاهوی زیاد در اطراف",
+      "#Being in a hurry or afraid of being late": "عجله داشتن یا ترس از دیر رسیدن",
+      "#Feeling alone or isolated on the way": "احساس تنهایی یا انزوا در مسیر",
+      "#Fear of road accidents": "ترس از تصادف رانندگی",
+      "#Fear of assault or harassment": "ترس از حمله یا آزار",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "مشکلات سلامتی در مسیر (درد، تنگی نفس، سرگیجه)",
+      "#Nothing in particular": "هیچ مورد خاصی",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "هنگام سفر با خودرو، در خیابان‌هایی با رفت‌وآمد، مغازه و فعالیت زیاد چه احساسی دارید؟",
+      "#I prefer them: I feel safer or more at ease": "ترجیحشان می‌دهم: احساس امنیت یا آرامش بیشتری دارم",
+      "#I like them: they make the trip nicer": "دوستشان دارم: سفر را دلپذیرتر می‌کنند",
+      "#It makes no difference to me": "برایم فرقی نمی‌کند",
+      "#They are sometimes a bit too much for me": "گاهی کمی زیادی برایم هستند",
+      "#Crowds stress me or make it hard to get through": "شلوغی مرا مضطرب می‌کند یا عبور را سخت می‌کند",
+      "#Car – How the trip feels": "خودرو – حال و هوای سفر",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "هنگام سفر با خودرو، معمولاً هنگام رسیدن چقدر احساس خستگی می‌کنید؟",
+      "#Not at all tired": "اصلاً خسته نیستم",
+      "#A little tired": "کمی خسته‌ام",
+      "#Quite tired": "نسبتاً خسته‌ام",
+      "#Very tired": "خیلی خسته‌ام",
+      "#Exhausted": "کاملاً خسته‌ام",
+      "#When you travel by car, what tires you most?": "هنگام سفر با خودرو، چه چیزی بیشتر از همه شما را خسته می‌کند؟",
+      "#Carrying children, a pushchair or shopping": "حمل کودک، کالسکه یا خرید",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "استرس (ترافیک، پیدا کردن راه، دیر رسیدن، احساس ناامنی)",
+      "#Heat, noise or bad air": "گرما، سر و صدا یا هوای آلوده",
+      "#I rarely feel tired after my trips": "به‌ندرت بعد از سفرهایم احساس خستگی می‌کنم",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "هنگام سفر با خودرو، در مقایسه با روش‌های دیگر رفت‌وآمد، چقدر سخت و پرزحمت است؟",
+      "#Much easier than the others": "خیلی راحت‌تر از بقیه",
+      "#A bit easier": "کمی راحت‌تر",
+      "#A bit more demanding": "کمی سخت‌تر",
+      "#Much more demanding": "خیلی سخت‌تر",
+      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
+      "#When you travel by car, how often do you arrive in the time you planned?": "هنگام سفر با خودرو، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
+      "#When you travel by car, how satisfied are you overall?": "هنگام سفر با خودرو، در مجموع چقدر راضی هستید؟",
+      "#When you travel by car, what are you least happy with?": "هنگام سفر با خودرو، از چه چیزی کمتر از همه راضی هستید؟",
+      "#Very dissatisfied": "بسیار ناراضی",
+      "#Dissatisfied": "ناراضی",
+      "#Neither satisfied nor dissatisfied": "نه راضی و نه ناراضی",
+      "#Satisfied": "راضی",
+      "#Very satisfied": "بسیار راضی",
+      "#Travel time": "زمان سفر",
+      "#Cost": "هزینه",
+      "#It's not reliable or predictable": "قابل‌اعتماد یا قابل‌پیش‌بینی نیست",
+      "#Comfort": "راحتی",
+      "#Safety from traffic or crime": "ایمنی در ترافیک یا امنیت در برابر جرم",
+      "#It's hard to reach or use": "رسیدن به آن یا استفاده از آن سخت است",
+      "#Crowding or lack of space": "شلوغی یا کمبود جا",
+      "#Its impact on the environment": "اثر آن بر محیط زیست",
+      "#It's not flexible": "انعطاف‌پذیر نیست",
+      "#Always": "همیشه",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "هم تلاش جسمی و هم ذهنی را در نظر بگیرید. روش‌های دیگر می‌تواند پیاده‌روی، دوچرخه‌سواری یا حمل‌ونقل عمومی باشد.",
+      "#Physical effort (loading and carrying bags)": "تلاش بدنی (بار زدن و حمل کیسه)",
+      "#Waiting (in traffic, looking for parking)": "انتظار (در ترافیک، هنگام جستجوی جای پارک)",
+      "#Car – Effort and satisfaction": "خودرو – تلاش و رضایت",
+      "#Car – Trip experience and conditions": "خودرو – تجربه و شرایط سفر",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - خودرو – تجربه و شرایط سفر",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>چقدر در برابر جرم یا آزار احساس امنیت می‌کنید <b>هنگام سفر با خودرو</b>. به بیشتر پرسش‌ها با بله یا خیر پاسخ می‌دهید.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>خودرو – امنیت شخصی</li><li>خودرو – راحتی</li><li>خودرو – محیط اطراف شما</li><li>خودرو – حال و هوای سفر</li><li>خودرو – تلاش و رضایت</li></ul>",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#Car on a street": "خودرو در خیابان"
+    },
+    "hu": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Napközben előfordul, hogy autós utazás közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Zaklatásnak számítanak az Önnek címzett kéretlen megjegyzések, a követés, az érintés vagy a megfélemlítő viselkedés.)",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Doesn't apply to me": "Rám nem vonatkozik",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "Este vagy sötétedés után előfordul, hogy autós utazás közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "Autós utazás közben élt át vagy tart zaklatástól amiatt, hogy ki Ön vagy hogyan néz ki (pl. nem, külső, származás, életkor)?",
+      "#Car – Personal security": "Autó – Személyes biztonság",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "Autós utazás közben mi miatt érzi magát kevésbé biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Jelölje meg az összes megfelelőt)",
+      "#Places with few people around (isolated or deserted areas)": "Olyan helyek, ahol kevés ember van (elhagyatott vagy néptelen helyek)",
+      "#People behaving aggressively or in an intimidating way": "Agresszíven vagy megfélemlítően viselkedő emberek",
+      "#Blind corners or obstructed views": "Beláthatatlan sarkok vagy takart kilátás",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "Rossz karbantartás (pl. elhagyott épületek, graffitik, tönkrement infrastruktúra)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "A felügyelet vagy a biztonsági intézkedések hiánya (pl. nincs kamera, nincs személyzet)",
+      "#Incidents that happened to me or were reported in the area": "Velem történt vagy a környéken bejelentett incidensek",
+      "#Overcrowded or chaotic places": "Túlzsúfolt vagy kaotikus helyek",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Kevés tájékozódási segítség látás nélkül (pl. nincs taktilis vezetősáv vagy hangos bemondás)",
+      "#When you feel unsafe in the evening, what do you change?": "Ha este nem érzi magát biztonságban, min változtat?",
+      "#You can choose more than one answer.": "Több választ is megjelölhet.",
+      "#I change my route": "Más útvonalat választok",
+      "#I change the time": "Más időpontban indulok",
+      "#I share my location with someone": "Megosztom a tartózkodási helyemet valakivel",
+      "#I ask someone to come with me": "Megkérek valakit, hogy kísérjen el",
+      "#I use a different means of transport": "Más közlekedési eszközt választok",
+      "#I give up going out": "Lemondok arról, hogy elinduljak",
+      "#Nothing": "Semmin",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "A közlekedés más módjaihoz képest mennyire kényelmes Önnek az autó?",
+      "#Much less comfortable": "Sokkal kevésbé kényelmes",
+      "#Less comfortable": "Kevésbé kényelmes",
+      "#About the same": "Nagyjából ugyanolyan",
+      "#More comfortable": "Kényelmesebb",
+      "#Much more comfortable": "Sokkal kényelmesebb",
+      "#When you are held up on a car trip, how stressed do you feel?": "Ha az autós úton feltartóztatják, mennyire érzi magát feszültnek?",
+      "#For example traffic jams, crashes or roadworks.": "Például dugó, ütközés vagy útépítés.",
+      "#Not at all": "Egyáltalán nem",
+      "#A little": "Kissé",
+      "#Moderately": "Közepesen",
+      "#Very": "Nagyon",
+      "#Extremely": "Rendkívül",
+      "#A lot": "Nagyon",
+      "#Do traffic jams make you change your route or the time you leave?": "A dugók miatt megváltoztatja az útvonalát vagy az indulási idejét?",
+      "#No, never": "Nem, soha",
+      "#Now and then": "Időnként",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#Always: I plan my trips to avoid them": "Mindig: úgy tervezem az utakat, hogy elkerüljem őket",
+      "#How hard is it to find a parking space where you go?": "Mennyire nehéz parkolóhelyet találni ott, ahová jár?",
+      "#Think of the places you drive to most often.": "Gondoljon azokra a helyekre, ahová a leggyakrabban autóval megy.",
+      "#Not a problem": "Nem probléma",
+      "#A small problem": "Kis probléma",
+      "#A real problem": "Komoly probléma",
+      "#A big problem": "Nagy probléma",
+      "#A very big problem": "Nagyon nagy probléma",
+      "#Not for me: I don't drive": "Rám nem vonatkozik: nem vezetek",
+      "#When parking is hard, what do you usually do?": "Ha nehéz parkolni, mit szokott tenni?",
+      "#It doesn't change my plans": "Nem változtat a terveimen",
+      "#I still go, but it's slower or more stressful": "Ettől még elmegyek, de lassabb vagy stresszesebb",
+      "#I change my route or where I go": "Megváltoztatom az útvonalat vagy az úti célt",
+      "#I put off, avoid or cancel some trips": "Néhány utat elhalasztok, elkerülök vagy lemondok",
+      "#I go another way instead (e.g. bus, on foot)": "Inkább más módon megyek (pl. busszal, gyalog)",
+      "#How much do charging points affect whether you use an electric car?": "Mennyire befolyásolják a töltőpontok, hogy használ-e elektromos autót?",
+      "#Very much": "Rendkívül",
+      "#Not for me: my vehicle isn't electric": "Rám nem vonatkozik: a járművem nem elektromos",
+      "#Car – Comfort": "Autó – Kényelem",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "Autós utazás közben mennyire zavarja vagy bosszantja a forgalom zaja?",
+      "#Slightly": "Kissé",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Autós utazás közben mit tesz, ha rossz a levegő (kipufogógáz, por, kellemetlen szagok)?",
+      "#Nothing, it doesn't affect me": "Semmit, nincs hatással rám",
+      "#I notice it, but I don't change anything": "Észreveszem, de nem változtatok semmit",
+      "#I take another route or travel at another time": "Más útvonalat választok, vagy más időpontban utazom",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Autós utazás közben mit szokott tenni, ha rossz az idő (eső, szél, hideg vagy nagy hőség)?",
+      "#Nothing changes, I travel as usual": "Semmi sem változik, ugyanúgy utazom",
+      "#It's less pleasant, but I travel the same way": "Kevésbé kellemes, de ugyanúgy utazom",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "Másképp készülök, vagy útvonalat váltok (pl. ruházat, esernyő)",
+      "#I put off or skip some trips": "Néhány utat elhalasztok vagy kihagyok",
+      "#It doesn't affect me": "Nincs hatással rám",
+      "#I notice it, but carry on as usual": "Észreveszem, de ugyanúgy folytatom",
+      "#It's unpleasant, but I still go that way": "Kellemetlen, de mégis arra megyek",
+      "#I stop using that route altogether": "Egyáltalán nem használom többé azt az útvonalat",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "Autós utazás közben befolyásolja a közérzetét, ha kellemes vagy kellemetlen a környezet?",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "Például az épületek, terek, egy hely gondozottsága és általános hangulata.",
+      "#No, I don't pay attention to them": "Nem, nem figyelek rájuk",
+      "#I notice them, but they rarely make a difference": "Észreveszem őket, de ritkán számítanak",
+      "#Sometimes they affect my mood": "Néha hatnak a hangulatomra",
+      "#They affect a lot how I feel on the way": "Nagyon befolyásolják, hogyan érzem magam az úton",
+      "#I sometimes choose a route because it's nicer or more interesting": "Néha azért választok útvonalat, mert szebb vagy érdekesebb",
+      "#I protect myself, e.g. by closing the windows": "Védekezem, például csukott ablakokkal",
+      "#I travel another way (e.g. by metro instead of by car)": "Más módon utazom (pl. metróval autó helyett)",
+      "#I travel another way (e.g. by taxi or metro)": "Más módon utazom (pl. taxival vagy metróval)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "Autós utazás közben mit tesz, ha az utcák vagy parkolók koszosak vagy elhanyagoltak (szemét, szagok, törött üveg)?",
+      "#I avoid some streets or car parks": "Néhány utcát vagy parkolót kerülök",
+      "#Car – Your surroundings": "Autó – A környezete",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "Autós utazás közben általában mennyire érzi magát feszültnek vagy nyugodtnak?",
+      "#Very stressed": "Nagyon feszült vagyok",
+      "#A little stressed": "Kissé feszült vagyok",
+      "#Neither stressed nor relaxed": "Nem vagyok sem feszült, sem nyugodt",
+      "#A little relaxed": "Kissé nyugodt vagyok",
+      "#Very relaxed": "Nagyon nyugodt vagyok",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "Autós utazás közben milyen gyakran érzi magát szorongónak vagy túlterheltnek?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#All the time": "Mindig",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "Autós utazás közben mi miatt érzi magát szorongónak vagy túlterheltnek?",
+      "#Heavy traffic or traffic jams": "Sűrű forgalom vagy dugók",
+      "#Aggressive or careless drivers, riders or pedestrians": "Agresszív vagy figyelmetlen járművezetők, kerékpárosok, motorosok vagy gyalogosok",
+      "#Routes that are complicated or new to me": "Bonyolult vagy számomra ismeretlen útvonalak",
+      "#Noise, crowds or too much going on around me": "Zaj, tömeg vagy túl sok minden történik körülöttem",
+      "#Being in a hurry or afraid of being late": "Sietség vagy félelem a késéstől",
+      "#Feeling alone or isolated on the way": "Magányosnak vagy elszigeteltnek érzem magam az úton",
+      "#Fear of road accidents": "Közlekedési balesettől való félelem",
+      "#Fear of assault or harassment": "Támadástól vagy zaklatástól való félelem",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "Egészségügyi problémák az úton (fájdalom, légszomj, szédülés)",
+      "#Nothing in particular": "Semmi különös",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "Autós utazás közben hogyan érzi magát olyan utcákon, ahol sok ember, üzlet és nyüzsgés van?",
+      "#I prefer them: I feel safer or more at ease": "Szívesebben közlekedem ilyen utcákon: nagyobb biztonságban érzem magam, vagy nyugodtabb vagyok",
+      "#I like them: they make the trip nicer": "Szeretem őket: kellemesebbé teszik az utat",
+      "#It makes no difference to me": "Nekem mindegy",
+      "#They are sometimes a bit too much for me": "Néha egy kicsit sok nekem",
+      "#Crowds stress me or make it hard to get through": "A tömeg stresszel, vagy megnehezíti az átjutást",
+      "#Car – How the trip feels": "Autó – Az utazás élménye",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "Autós utazás közben általában mennyire érzi magát fáradtnak, amikor megérkezik?",
+      "#Not at all tired": "Egyáltalán nem vagyok fáradt",
+      "#A little tired": "Kissé fáradt vagyok",
+      "#Quite tired": "Meglehetősen fáradt vagyok",
+      "#Very tired": "Nagyon fáradt vagyok",
+      "#Exhausted": "Kimerült vagyok",
+      "#When you travel by car, what tires you most?": "Autós utazás közben mi fárasztja ki a legjobban?",
+      "#Carrying children, a pushchair or shopping": "Gyermek, babakocsi vagy bevásárlás cipelése",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "Stressz (forgalom, eligazodás, késés, a biztonság hiányának érzése)",
+      "#Heat, noise or bad air": "Hőség, zaj vagy rossz levegő",
+      "#I rarely feel tired after my trips": "Ritkán fáradok el az utak után",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "Autós utazás közben mennyire megterhelő ez a többi lehetőséghez képest, amellyel utazhatna?",
+      "#Much easier than the others": "Sokkal könnyebb, mint a többi",
+      "#A bit easier": "Kicsit könnyebb",
+      "#A bit more demanding": "Kicsit megterhelőbb",
+      "#Much more demanding": "Sokkal megterhelőbb",
+      "#I have no other way to travel": "Nincs más módom az utazásra",
+      "#When you travel by car, how often do you arrive in the time you planned?": "Autós utazás közben milyen gyakran ér célba a tervezett idő alatt?",
+      "#When you travel by car, how satisfied are you overall?": "Autós utazás közben összességében mennyire elégedett?",
+      "#When you travel by car, what are you least happy with?": "Autós utazás közben mivel a legkevésbé elégedett?",
+      "#Very dissatisfied": "Nagyon elégedetlen",
+      "#Dissatisfied": "Elégedetlen",
+      "#Neither satisfied nor dissatisfied": "Sem elégedett, sem elégedetlen",
+      "#Satisfied": "Elégedett",
+      "#Very satisfied": "Nagyon elégedett",
+      "#Travel time": "Utazási idő",
+      "#Cost": "Költség",
+      "#It's not reliable or predictable": "Nem megbízható, és nem kiszámítható",
+      "#Comfort": "Kényelem",
+      "#Safety from traffic or crime": "Biztonság a forgalomtól vagy a bűnözéstől",
+      "#It's hard to reach or use": "Nehéz elérni vagy használni",
+      "#Crowding or lack of space": "Zsúfoltság vagy helyhiány",
+      "#Its impact on the environment": "A környezetre gyakorolt hatása",
+      "#It's not flexible": "Nem rugalmas",
+      "#Always": "Mindig",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "Gondoljon a testi és a szellemi megterhelésre is. Más módok lehetnek a gyaloglás, a kerékpározás vagy a tömegközlekedés.",
+      "#Physical effort (loading and carrying bags)": "Fizikai megterhelés (szatyrok bepakolása és cipelése)",
+      "#Waiting (in traffic, looking for parking)": "Várakozás (dugóban, parkolóhely-keresés közben)",
+      "#Car – Effort and satisfaction": "Autó – Erőfeszítés és elégedettség",
+      "#Car – Trip experience and conditions": "Autó – Utazási élmény és körülmények",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - Autó – Utazási élmény és körülmények",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>Mennyire érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben <b>autós utazás közben</b>. A legtöbb kérdésre Igen vagy Nem a válasz.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Autó – Személyes biztonság</li><li>Autó – Kényelem</li><li>Autó – A környezete</li><li>Autó – Az utazás élménye</li><li>Autó – Erőfeszítés és elégedettség</li></ul>",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#Car on a street": "Autó az utcán"
+    },
+    "ar": {
+      "#During the day, do you ever feel unsafe from crime or harassment when you travel by car? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "خلال النهار، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند التنقل بالسيارة؟ (يشمل التحرش التعليقات غير المرغوب فيها أو الملاحقة أو اللمس أو السلوك الترهيبي الموجّه إليك.)",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Doesn't apply to me": "لا ينطبق عليّ",
+      "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you travel by car?": "في المساء أو بعد حلول الظلام، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند التنقل بالسيارة؟",
+      "#When you travel by car, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age)?": "عند التنقل بالسيارة، هل سبق أن تعرضت للتحرش بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو السن)، أو هل يقلقك ذلك؟",
+      "#Car – Personal security": "السيارة – الأمان الشخصي",
+      "#When you travel by car, what makes you feel less secure from crime or harassment? (Select all that apply)": "عند التنقل بالسيارة، ما الذي يقلل شعورك بالأمان من الجريمة أو التحرش؟ (يمكن اختيار كل ما ينطبق)",
+      "#Places with few people around (isolated or deserted areas)": "أماكن يقل فيها المارة (مناطق معزولة أو مهجورة)",
+      "#People behaving aggressively or in an intimidating way": "أشخاص يتصرفون بعدوانية أو بطريقة مخيفة",
+      "#Blind corners or obstructed views": "زوايا عمياء أو رؤية محجوبة",
+      "#Poor maintenance (e.g. abandoned buildings, graffiti, broken infrastructure)": "سوء الصيانة (مثل المباني المهجورة والكتابات على الجدران والبنية التحتية المتضررة)",
+      "#No surveillance or security measures (e.g. no cameras, no staff)": "غياب المراقبة أو إجراءات الأمن (مثل عدم وجود كاميرات أو موظفين)",
+      "#Incidents that happened to me or were reported in the area": "حوادث وقعت لي أو تم الإبلاغ عنها في المنطقة",
+      "#Overcrowded or chaotic places": "أماكن مكتظة أو فوضوية",
+      "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "قلة العلامات التي تساعدني على معرفة طريقي من دون بصر (مثل غياب الممرات اللمسية أو الإعلانات الصوتية)",
+      "#When you feel unsafe in the evening, what do you change?": "عندما ينتابك شعور بعدم الأمان في المساء، ما الذي يتغيّر في طريقة تنقلك؟",
+      "#You can choose more than one answer.": "يمكن اختيار أكثر من إجابة.",
+      "#I change my route": "أغيّر طريقي",
+      "#I change the time": "أغيّر موعد تنقلي",
+      "#I share my location with someone": "أشارك موقعي مع شخص ما",
+      "#I ask someone to come with me": "أطلب من شخص أن يرافقني",
+      "#I use a different means of transport": "أستخدم وسيلة نقل أخرى",
+      "#I give up going out": "أمتنع عن الخروج",
+      "#Nothing": "لا شيء",
+      "#Compared with other ways of getting around, how comfortable is the car for you?": "مقارنةً بوسائل التنقل الأخرى، ما مدى راحتك في السيارة؟",
+      "#Much less comfortable": "أقل راحة بكثير",
+      "#Less comfortable": "أقل راحة",
+      "#About the same": "بالقدر نفسه تقريبًا",
+      "#More comfortable": "أكثر راحة",
+      "#Much more comfortable": "أكثر راحة بكثير",
+      "#When you are held up on a car trip, how stressed do you feel?": "عند التأخر في رحلة بالسيارة، ما مدى شعورك بالتوتر؟",
+      "#For example traffic jams, crashes or roadworks.": "مثل الازدحام المروري أو اصطدام السيارات أو أعمال الطرق.",
+      "#Not at all": "لا يؤثر إطلاقًا",
+      "#A little": "قليلًا",
+      "#Moderately": "بدرجة متوسطة",
+      "#Very": "كثيرًا",
+      "#Extremely": "للغاية",
+      "#A lot": "كثيرًا",
+      "#Do traffic jams make you change your route or the time you leave?": "هل تدفعك الازدحامات المرورية إلى تغيير طريقك أو وقت خروجك؟",
+      "#No, never": "لا، أبدًا",
+      "#Now and then": "من حين لآخر",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#Always: I plan my trips to avoid them": "دائمًا: أخطط رحلاتي لتجنبها",
+      "#How hard is it to find a parking space where you go?": "ما مدى صعوبة إيجاد موقف للسيارة في وجهاتك المعتادة؟",
+      "#Think of the places you drive to most often.": "المقصود الأماكن التي يكون الذهاب إليها بالسيارة في أغلب الأحيان.",
+      "#Not a problem": "ليست مشكلة",
+      "#A small problem": "مشكلة صغيرة",
+      "#A real problem": "مشكلة حقيقية",
+      "#A big problem": "مشكلة كبيرة",
+      "#A very big problem": "مشكلة كبيرة جدًا",
+      "#Not for me: I don't drive": "لا ينطبق عليّ: لا أقود السيارة",
+      "#When parking is hard, what do you usually do?": "عندما يصعب إيجاد موقف، ما تصرّفك عادةً؟",
+      "#It doesn't change my plans": "لا يغيّر خططي",
+      "#I still go, but it's slower or more stressful": "ما زلت أذهب، لكن الأمر يكون أبطأ أو أكثر إرهاقًا",
+      "#I change my route or where I go": "أغيّر طريقي أو المكان الذي أذهب إليه",
+      "#I put off, avoid or cancel some trips": "أؤجل بعض الرحلات أو أتجنبها أو ألغيها",
+      "#I go another way instead (e.g. bus, on foot)": "أذهب بوسيلة أخرى بدلًا من ذلك (مثل الحافلة أو مشيًا)",
+      "#How much do charging points affect whether you use an electric car?": "إلى أي مدى تؤثر نقاط الشحن في قرارك باستخدام سيارة كهربائية؟",
+      "#Very much": "كثيرًا جدًا",
+      "#Not for me: my vehicle isn't electric": "لا ينطبق عليّ: مركبتي ليست كهربائية",
+      "#Car – Comfort": "السيارة – الراحة",
+      "#When you travel by car, how much does traffic noise bother or annoy you?": "عند التنقل بالسيارة، ما مدى انزعاجك من ضجيج حركة المرور؟",
+      "#Slightly": "يزعجني قليلًا",
+      "#When you travel by car, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "عند التنقل بالسيارة، ما تصرّفك عندما يكون الهواء سيئًا (عوادم المركبات أو الغبار أو الروائح الكريهة)؟",
+      "#Nothing, it doesn't affect me": "لا شيء، لا يؤثر فيّ",
+      "#I notice it, but I don't change anything": "ألاحظ ذلك، لكنني لا أغيّر شيئًا",
+      "#I take another route or travel at another time": "أسلك طريقًا آخر أو أتنقل في وقت آخر",
+      "#When you travel by car, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "عند التنقل بالسيارة، ما تصرّفك عادةً عندما يكون الطقس سيئًا (مطر أو رياح أو برد أو حرّ شديد)؟",
+      "#Nothing changes, I travel as usual": "لا شيء يتغير، أتنقل كالمعتاد",
+      "#It's less pleasant, but I travel the same way": "الأمر أقل متعة، لكنني أتنقل بالطريقة نفسها",
+      "#I prepare differently or change route (e.g. clothes, umbrella)": "أستعد بشكل مختلف أو أغيّر طريقي (مثل الملابس أو المظلة)",
+      "#I put off or skip some trips": "أؤجل بعض الرحلات أو ألغيها",
+      "#It doesn't affect me": "لا يؤثر فيّ",
+      "#I notice it, but carry on as usual": "ألاحظ ذلك، لكنني أواصل كالمعتاد",
+      "#It's unpleasant, but I still go that way": "الأمر غير مريح، لكنني أمرّ من هناك مع ذلك",
+      "#I stop using that route altogether": "أتوقف تمامًا عن استخدام ذلك الطريق",
+      "#When you travel by car, do pleasant or unpleasant surroundings affect how you feel?": "عند التنقل بالسيارة، هل تؤثر البيئة المحيطة، الجميلة أو غير الجميلة، في شعورك؟",
+      "#For example buildings, squares, how cared-for a place is and its general feel.": "مثل المباني والساحات ومدى العناية بالمكان وجوّه العام.",
+      "#No, I don't pay attention to them": "لا، لا أنتبه إليها",
+      "#I notice them, but they rarely make a difference": "ألاحظها، لكنها نادرًا ما تُحدث فرقًا",
+      "#Sometimes they affect my mood": "تؤثر أحيانًا في مزاجي",
+      "#They affect a lot how I feel on the way": "تؤثر كثيرًا في شعوري أثناء الطريق",
+      "#I sometimes choose a route because it's nicer or more interesting": "أختار أحيانًا طريقًا لأنه أجمل أو أكثر إثارة للاهتمام",
+      "#I protect myself, e.g. by closing the windows": "أحمي نفسي، مثلًا بإغلاق النوافذ",
+      "#I travel another way (e.g. by metro instead of by car)": "أتنقل بطريقة أخرى (مثلًا بالمترو بدل السيارة)",
+      "#I travel another way (e.g. by taxi or metro)": "أتنقل بطريقة أخرى (مثلًا بسيارة الأجرة أو المترو)",
+      "#When you travel by car, what do you do when streets or car parks are dirty or badly kept (litter, smells, broken glass)?": "عند التنقل بالسيارة، ما تصرّفك عندما تكون الشوارع أو مواقف السيارات متسخة أو سيئة الصيانة (قمامة أو روائح أو زجاج مكسور)؟",
+      "#I avoid some streets or car parks": "أتجنب بعض الشوارع أو مواقف السيارات",
+      "#Car – Your surroundings": "السيارة – ما حولك",
+      "#When you travel by car, how stressed or relaxed do you usually feel?": "عند التنقل بالسيارة، ما مدى شعورك عادةً بالتوتر أو بالاسترخاء؟",
+      "#Very stressed": "توتر شديد",
+      "#A little stressed": "بعض التوتر",
+      "#Neither stressed nor relaxed": "لا توتر ولا ارتياح",
+      "#A little relaxed": "بعض الارتياح",
+      "#Very relaxed": "ارتياح كبير",
+      "#When you travel by car, how often do you feel anxious or overwhelmed?": "عند التنقل بالسيارة، كم مرة ينتابك القلق أو الإرهاق الشديد؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#All the time": "طوال الوقت",
+      "#When you travel by car, what makes you feel anxious or overwhelmed?": "عند التنقل بالسيارة، ما الذي يسبب لك القلق أو الإرهاق الشديد؟",
+      "#Heavy traffic or traffic jams": "حركة مرور كثيفة أو ازدحامات",
+      "#Aggressive or careless drivers, riders or pedestrians": "سائقون أو راكبو دراجات أو مشاة عدوانيون أو غير منتبهين",
+      "#Routes that are complicated or new to me": "طرق معقّدة أو غير مألوفة بالنسبة إليّ",
+      "#Noise, crowds or too much going on around me": "ضجيج أو زحام أو أشياء كثيرة جدًا حولي",
+      "#Being in a hurry or afraid of being late": "الاستعجال أو الخوف من التأخر",
+      "#Feeling alone or isolated on the way": "الشعور بالوحدة أو العزلة في الطريق",
+      "#Fear of road accidents": "الخوف من حوادث الطرق",
+      "#Fear of assault or harassment": "الخوف من الاعتداء أو التحرش",
+      "#Health problems on the way (pain, breathlessness, dizziness)": "مشكلات صحية في الطريق (ألم، ضيق نفس، دوخة)",
+      "#Nothing in particular": "لا شيء بعينه",
+      "#When you travel by car, how do you feel on streets with lots of people, shops and activity?": "عند التنقل بالسيارة، ما شعورك في الشوارع التي فيها كثير من الناس والمحال والنشاط؟",
+      "#I prefer them: I feel safer or more at ease": "أفضّلها: أشعر فيها بأمان أو راحة أكبر",
+      "#I like them: they make the trip nicer": "أحبها: تجعل الرحلة أجمل",
+      "#It makes no difference to me": "لا فرق عندي",
+      "#They are sometimes a bit too much for me": "تكون أحيانًا أكثر مما أحتمل",
+      "#Crowds stress me or make it hard to get through": "الزحام يوترني أو يصعّب عليّ المرور",
+      "#Car – How the trip feels": "السيارة – شعورك أثناء الرحلة",
+      "#When you travel by car, how tired do you usually feel when you arrive?": "عند التنقل بالسيارة، ما مدى شعورك عادةً بالتعب عند الوصول؟",
+      "#Not at all tired": "لا تعب إطلاقًا",
+      "#A little tired": "تعب خفيف",
+      "#Quite tired": "تعب متوسط",
+      "#Very tired": "تعب شديد",
+      "#Exhausted": "إرهاق تام",
+      "#When you travel by car, what tires you most?": "عند التنقل بالسيارة، ما الذي يرهقك أكثر؟",
+      "#Carrying children, a pushchair or shopping": "حمل الأطفال أو عربة الأطفال أو المشتريات",
+      "#Stress (traffic, finding the way, being late, feeling unsafe)": "التوتر (حركة المرور، معرفة الطريق، التأخر، الشعور بعدم الأمان)",
+      "#Heat, noise or bad air": "الحر أو الضجيج أو الهواء السيئ",
+      "#I rarely feel tired after my trips": "نادرًا ما أشعر بالتعب بعد رحلاتي",
+      "#When you travel by car, how demanding is it compared with other ways you could travel?": "عند التنقل بالسيارة، ما مدى صعوبة ذلك مقارنةً بوسائل التنقل الأخرى المتاحة لك؟",
+      "#Much easier than the others": "أسهل بكثير من غيرها",
+      "#A bit easier": "أسهل قليلًا",
+      "#A bit more demanding": "أصعب قليلًا",
+      "#Much more demanding": "أصعب بكثير",
+      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
+      "#When you travel by car, how often do you arrive in the time you planned?": "عند التنقل بالسيارة، كم مرة يكون وصولك في الوقت الذي خططت له؟",
+      "#When you travel by car, how satisfied are you overall?": "عند التنقل بالسيارة، ما مدى رضاك بشكل عام؟",
+      "#When you travel by car, what are you least happy with?": "عند التنقل بالسيارة، ما أكثر ما لا يعجبك؟",
+      "#Very dissatisfied": "عدم رضا شديد",
+      "#Dissatisfied": "عدم رضا",
+      "#Neither satisfied nor dissatisfied": "لا رضا ولا عدم رضا",
+      "#Satisfied": "رضا",
+      "#Very satisfied": "رضا كبير",
+      "#Travel time": "مدة الرحلة",
+      "#Cost": "التكلفة",
+      "#It's not reliable or predictable": "لا يمكن الاعتماد عليه أو توقّع أدائه",
+      "#Comfort": "الراحة",
+      "#Safety from traffic or crime": "الأمان من حركة المرور أو الجريمة",
+      "#It's hard to reach or use": "يصعب الوصول إليه أو استخدامه",
+      "#Crowding or lack of space": "الازدحام أو قلة المساحة",
+      "#Its impact on the environment": "تأثيرها في البيئة",
+      "#It's not flexible": "غير مرن",
+      "#Always": "دائمًا",
+      "#Think of both physical and mental effort. Other ways could be walking, cycling or public transport.": "المقصود الجهد البدني والذهني معًا. ومن الوسائل الأخرى المشي أو ركوب الدراجة أو النقل العام.",
+      "#Physical effort (loading and carrying bags)": "الجهد البدني (تحميل الأكياس وحملها)",
+      "#Waiting (in traffic, looking for parking)": "الانتظار (في الزحام، أثناء البحث عن موقف)",
+      "#Car – Effort and satisfaction": "السيارة – الجهد والرضا",
+      "#Car – Trip experience and conditions": "السيارة – تجربة التنقل وظروفه",
+      "#SmartUrbanity - Car – Trip experience and conditions": "SmartUrbanity - السيارة – تجربة التنقل وظروفه",
+      "#<p>How secure you feel from crime or harassment <b>when you travel by car</b>. Most questions are answered Yes or No.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Personal security</li><li>Car – Comfort</li><li>Car – Your surroundings</li><li>Car – How the trip feels</li><li>Car – Effort and satisfaction</li></ul>": "<p>مدى شعورك بالأمان من الجرائم أو التحرش <b>عند التنقل بالسيارة</b>. تتم الإجابة عن معظم الأسئلة بنعم أو لا.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>السيارة – الأمان الشخصي</li><li>السيارة – الراحة</li><li>السيارة – ما حولك</li><li>السيارة – شعورك أثناء الرحلة</li><li>السيارة – الجهد والرضا</li></ul>",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#Car on a street": "سيارة في شارع"
+    }
+  }
+}

@@ -1,0 +1,1766 @@
+{
+  "questionnaire": {
+    "name": "SmartUrbanity - Car – Travel choices and safety",
+    "questionnaire_id": "smarturbanity_car_choices_and_safety",
+    "questionnaire_version": "1.1.0",
+    "project": "SmartUrbanity",
+    "estimated_minutes": 5,
+    "options": {
+      "review_mode": true,
+      "save_user_id": true,
+      "ask_consent": true,
+      "ask_adult": true
+    },
+    "gdpr_link": "https://smarturbanity.github.io/smarturbanity-configuration/docs/privacy-smarturbanity.html",
+    "welcome_page": {
+      "title": "Car – Travel choices and safety",
+      "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_car_choices_and_safety.svg",
+      "image_alt": "#Car – Travel choices and safety",
+      "description": "<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>"
+    },
+    "final_page": {
+      "title": "Thank you!",
+      "description": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>"
+    },
+    "title": "Car – Travel choices and safety",
+    "sections": [
+      {
+        "title": "Car – Your trips",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you travel by car at least once a week?",
+            "help": "As the driver or as a passenger, also car sharing.",
+            "answer_key": "car_weekly",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "car_weekly",
+            "question_version": "1.2.1"
+          },
+          {
+            "text": "Why do you rarely travel by car? (Select all that apply)",
+            "answer_key": "not_car_reasons",
+            "question_type": "multiple_options",
+            "show_if": {
+              "car_weekly": [
+                "no"
+              ]
+            },
+            "options": [
+              {
+                "text": "I don't have a car or a driving licence",
+                "value": "no_car"
+              },
+              {
+                "text": "It costs too much (fuel, parking, tolls, insurance)",
+                "value": "cost"
+              },
+              {
+                "text": "Traffic and finding a parking space take too long",
+                "value": "time"
+              },
+              {
+                "text": "Driving is stressful or tiring for me",
+                "value": "stress"
+              },
+              {
+                "text": "I feel unsafe on the road by car",
+                "value": "unsafe"
+              },
+              {
+                "text": "I prefer other ways of getting around, for example for the environment",
+                "value": "other_ways"
+              },
+              {
+                "text": "Another reason",
+                "value": "another_reason"
+              }
+            ],
+            "required": false,
+            "question_id": "not_car_reasons",
+            "question_version": "1.0.1",
+            "privacy_classification": "personal_data"
+          },
+          {
+            "text": "In the same trip, do you usually combine the car with another way of travelling?",
+            "help": "For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.",
+            "answer_key": "car_combines",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "yes"
+              ]
+            },
+            "question_id": "car_combines",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+            "answer_key": "car_combined_modes",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+                "value": "walking_as_the_main_mode_for_most_of_the"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bus",
+                "value": "bus"
+              },
+              {
+                "text": "Tram",
+                "value": "tram"
+              },
+              {
+                "text": "Metro",
+                "value": "metro"
+              },
+              {
+                "text": "Regional or suburban train",
+                "value": "train"
+              },
+              {
+                "text": "Bicycle/e-bike (private)",
+                "value": "bicycle_e_bike_private"
+              },
+              {
+                "text": "Bicycle/e-bike (shared)",
+                "value": "bicycle_e_bike_shared"
+              },
+              {
+                "text": "e-scooter (private)",
+                "value": "e_scooter_private"
+              },
+              {
+                "text": "e-scooter (shared)",
+                "value": "e_scooter_shared"
+              },
+              {
+                "text": "Taxi or similar service (e.g. Uber, Bolt)",
+                "value": "taxi_or_similar_service_e_g_uber_bolt"
+              }
+            ],
+            "show_if": {
+              "car_weekly": [
+                "yes"
+              ],
+              "car_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "car_combined_modes",
+            "question_version": "2.0.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+            "answer_key": "car_combined_difficulties",
+            "question_type": "multiple_options",
+            "max_answers": 3,
+            "options": [
+              {
+                "text": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+                "value": "vehicles_are_too_crowded_e_g_no_space_fo"
+              },
+              {
+                "text": "Poor coordination between modes (long waiting times, missed connections)",
+                "value": "poor_coordination_between_modes_long_wai"
+              },
+              {
+                "text": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+                "value": "lack_of_infrastructure_e_g_no_bicycle_pa"
+              },
+              {
+                "text": "Complicated transfers (stations far apart, unclear routes)",
+                "value": "complicated_transfers_stations_far_apart"
+              },
+              {
+                "text": "Travel time becomes too long",
+                "value": "travel_time_becomes_too_long"
+              },
+              {
+                "text": "Cost is too high when combining modes",
+                "value": "cost_is_too_high_when_combining_modes"
+              },
+              {
+                "text": "Safety concerns (traffic, theft, unsafe areas)",
+                "value": "safety_concerns_traffic_theft_unsafe_are"
+              },
+              {
+                "text": "Services are infrequent or do not run in the evening",
+                "value": "infrequent_or_no_evening_service"
+              },
+              {
+                "text": "Lack of reliable information (schedules, delays)",
+                "value": "lack_of_reliable_information_schedules_d"
+              },
+              {
+                "text": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+                "value": "physical_effort_is_too_high_e_g_carrying"
+              },
+              {
+                "text": "Accessibility issues (stairs, no elevators, etc.)",
+                "value": "accessibility_issues_stairs_no_elevators"
+              },
+              {
+                "text": "Weather-related difficulties",
+                "value": "weather_related_difficulties"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "car_weekly": [
+                "yes"
+              ],
+              "car_combines": [
+                "yes"
+              ]
+            },
+            "question_id": "car_combined_difficulties",
+            "question_version": "1.1.2",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "text": "When you face these difficulties, how do you mostly respond?",
+            "answer_key": "car_combined_response",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
+                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
+              },
+              {
+                "text": "I switch to a single mode (e.g. only car, only public transport)",
+                "value": "i_switch_to_a_single_mode_e_g_only_car_o"
+              },
+              {
+                "text": "I change the time of travel (e.g. avoid peak hours)",
+                "value": "i_change_the_time_of_travel_e_g_avoid_pe"
+              },
+              {
+                "text": "I change the route or transfer point",
+                "value": "i_change_the_route_or_transfer_point"
+              },
+              {
+                "text": "I choose a different combination of modes",
+                "value": "i_choose_a_different_combination_of_mode"
+              },
+              {
+                "text": "I continue using the same combination despite difficulties",
+                "value": "i_continue_using_the_same_combination_de"
+              },
+              {
+                "text": "I reduce how often I make that trip",
+                "value": "i_reduce_how_often_i_make_that_trip"
+              },
+              {
+                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+                "value": "i_look_for_alternative_solutions_e_g_bik"
+              },
+              {
+                "text": "I avoid that trip entirely if possible",
+                "value": "i_avoid_that_trip_entirely_if_possible"
+              },
+              {
+                "text": "I do not experience significant difficulties",
+                "value": "i_do_not_experience_significant_difficul"
+              }
+            ],
+            "add_other": true,
+            "show_if": {
+              "car_weekly": [
+                "yes"
+              ],
+              "car_combines": [
+                "yes"
+              ],
+              "car_combined_difficulties": {
+                "not": [
+                  "i_do_not_experience_significant_difficul"
+                ]
+              }
+            },
+            "question_id": "car_combined_response",
+            "question_version": "1.0.2",
+            "privacy_classification": "heightened_personal"
+          }
+        ]
+      },
+      {
+        "title": "Car – When the car is hard to replace",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "text": "Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.",
+            "answer_key": "car_need_frequency_alternative",
+            "question_type": "matrix",
+            "row_source": "car_need_uses",
+            "columns": [
+              {
+                "key": "frequency",
+                "label": "How often?",
+                "type": "select",
+                "options": [
+                  {
+                    "value": "several_times_a_week",
+                    "label": "Several times a week"
+                  },
+                  {
+                    "value": "weekly",
+                    "label": "Weekly"
+                  },
+                  {
+                    "value": "monthly",
+                    "label": "Monthly"
+                  },
+                  {
+                    "value": "rarely",
+                    "label": "Rarely"
+                  }
+                ]
+              },
+              {
+                "key": "alternative",
+                "label": "What would let you leave the car for this?",
+                "type": "select",
+                "options": [
+                  {
+                    "value": "more_frequent_reliable_public_transport",
+                    "label": "More frequent and reliable public transport, also in the evening"
+                  },
+                  {
+                    "value": "accompanied_or_on_demand_transport",
+                    "label": "An accompanied or on-demand transport service"
+                  },
+                  {
+                    "value": "home_delivery",
+                    "label": "Home delivery"
+                  },
+                  {
+                    "value": "shared_van",
+                    "label": "A shared van"
+                  },
+                  {
+                    "value": "nothing",
+                    "label": "Nothing would"
+                  }
+                ]
+              }
+            ],
+            "required": false,
+            "question_id": "car_need_frequency_alternative",
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_none": true
+          }
+        ],
+        "show_if": {
+          "car_weekly": [
+            "yes"
+          ]
+        }
+      },
+      {
+        "title": "Car – Other ways to get around",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "What would help you choose an alternative to the car for some of your trips?",
+            "answer_key": "car_sustainable_motivation",
+            "question_type": "multiple_options",
+            "required": false,
+            "max_answers": 4,
+            "add_other": true,
+            "options": [
+              {
+                "text": "More frequent and reliable public transport, also in the evening",
+                "value": "more_frequent_reliable_public_transport"
+              },
+              {
+                "text": "Lower costs",
+                "value": "lower_travel_costs"
+              },
+              {
+                "text": "Quicker or more reliable journeys",
+                "value": "shorter_or_more_reliable_travel_times"
+              },
+              {
+                "text": "Safer streets and routes",
+                "value": "safer_routes_and_environments"
+              },
+              {
+                "text": "Better pavements and cycle lanes",
+                "value": "better_walking_cycling_or_micromobility"
+              },
+              {
+                "text": "More comfort and convenience",
+                "value": "greater_comfort_and_convenience"
+              },
+              {
+                "text": "Feeling more confident using them",
+                "value": "feeling_more_confident_or_secure_using_t"
+              },
+              {
+                "text": "More pleasant journeys",
+                "value": "more_enjoyable_travel_experiences"
+              },
+              {
+                "text": "Better weather (less heat or rain)",
+                "value": "better_weather_or_climate_conditions"
+              },
+              {
+                "text": "Knowing it's better for the environment",
+                "value": "environmental_concerns_or_sustainability"
+              },
+              {
+                "text": "I need the car for my situation (e.g., disability, children, loads, work shifts)",
+                "value": "i_need_the_car_for_my_situation"
+              },
+              {
+                "text": "Routes and vehicles that are accessible for my disability or health condition",
+                "value": "accessible_routes_and_vehicles"
+              },
+              {
+                "text": "Nothing: the car suits my trips",
+                "value": "i_am_not_interested_in_using_these_modes",
+                "exclusive": true
+              },
+              {
+                "text": "Not for me: I can't walk or cycle far (e.g. health, age, carrying things)",
+                "value": "not_possible",
+                "exclusive": true
+              }
+            ],
+            "question_id": "car_sustainable_motivation",
+            "question_version": "1.3.3",
+            "help": "Choose up to 4 answers."
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "If you could use a shared bike or e-scooter for free, would you try it?",
+            "answer_key": "car_free_shared_trial",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "Not sure",
+                "value": "not_sure"
+              },
+              {
+                "text": "Not for me: I can't ride one",
+                "value": "cant_ride"
+              }
+            ],
+            "question_id": "car_free_shared_trial",
+            "question_version": "1.1.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "If driving cost more (fuel, parking, tolls), would you use the car less?",
+            "answer_key": "car_cost_sensitivity",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, I'd use it the same",
+                "value": "no_change_in_usage"
+              },
+              {
+                "text": "A little less",
+                "value": "slight_reduction_in_car_use"
+              },
+              {
+                "text": "Somewhat less",
+                "value": "moderate_reduction_in_car_use"
+              },
+              {
+                "text": "Much less",
+                "value": "significant_reduction_in_car_use"
+              },
+              {
+                "text": "I'd stop using it for most trips",
+                "value": "would_stop_using_car_for_most_trips"
+              },
+              {
+                "text": "I could not reduce it: I have no alternative",
+                "value": "could_not_reduce_no_alternative"
+              },
+              {
+                "text": "Not for me: I don't pay these costs (e.g. company car, passenger)",
+                "value": "not_paying"
+              }
+            ],
+            "question_id": "car_cost_sensitivity",
+            "question_version": "1.2.1"
+          },
+          {
+            "privacy_classification": "personal_data",
+            "text": "Do you think about pollution from vehicles when you choose how to travel?",
+            "help": "Pollution means exhaust fumes and gases that harm the air and the climate.",
+            "answer_key": "car_emissions",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "No, it doesn't affect my choices",
+                "value": "not_at_all_emissions_concerns_do_not_inf"
+              },
+              {
+                "text": "I think about it now and then",
+                "value": "slightly_i_occasionally_think_about_emis"
+              },
+              {
+                "text": "It sometimes affects my choices",
+                "value": "moderately_emissions_concerns_sometimes"
+              },
+              {
+                "text": "It often affects how I travel",
+                "value": "strongly_emissions_concerns_regularly_af"
+              },
+              {
+                "text": "I try to use the car less because of it",
+                "value": "very_strongly_i_actively_try_to_reduce_c"
+              }
+            ],
+            "question_id": "car_emissions",
+            "question_version": "1.1.0"
+          }
+        ],
+        "show_if": {
+          "car_weekly": [
+            "yes"
+          ]
+        }
+      },
+      {
+        "title": "Car – Road safety",
+        "description": "",
+        "backgroundColor": "#f0f0f0",
+        "questions": [
+          {
+            "privacy_classification": "personal_data",
+            "text": "When you drive, how confident are you that you can avoid a crash when someone appears suddenly?",
+            "help": "For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.",
+            "answer_key": "car_hazard_confidence",
+            "question_type": "single_option",
+            "required": false,
+            "options": [
+              {
+                "text": "Not at all",
+                "value": "not_confident"
+              },
+              {
+                "text": "A little",
+                "value": "slightly_confident"
+              },
+              {
+                "text": "Moderately",
+                "value": "moderately_confident"
+              },
+              {
+                "text": "Quite",
+                "value": "very_confident"
+              },
+              {
+                "text": "Very",
+                "value": "extremely_confident"
+              }
+            ],
+            "question_id": "car_hazard_confidence",
+            "question_version": "1.0.3"
+          },
+          {
+            "text": "When you travel by car, who on the road makes you feel unsafe? (Select all that apply)",
+            "answer_key": "car_unsafe_road_users",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Other car drivers",
+                "value": "car_drivers"
+              },
+              {
+                "text": "Motorcycle or scooter riders",
+                "value": "motorcycle_riders"
+              },
+              {
+                "text": "Bus drivers",
+                "value": "bus_drivers"
+              },
+              {
+                "text": "Delivery vehicles (vans, cargo bikes, scooters)",
+                "value": "delivery_vehicles"
+              },
+              {
+                "text": "Taxi or ride-hailing drivers",
+                "value": "taxi_drivers"
+              },
+              {
+                "text": "Cyclists",
+                "value": "cyclists"
+              },
+              {
+                "text": "E-scooter riders",
+                "value": "e_scooter_riders"
+              },
+              {
+                "text": "Pedestrians",
+                "value": "pedestrians"
+              },
+              {
+                "text": "Nobody in particular",
+                "value": "nobody",
+                "exclusive": true
+              }
+            ],
+            "required": false,
+            "question_id": "car_unsafe_road_users",
+            "question_version": "1.0.3",
+            "privacy_classification": "personal_data",
+            "help": "Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group."
+          },
+          {
+            "text": "When you travel by car, which of these situations make you feel unsafe? (Select all that apply)",
+            "answer_key": "car_unsafe_situations",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Poor visibility or limited sightlines",
+                "value": "poor_visibility"
+              },
+              {
+                "text": "Unsafe behaviour from drivers, riders or pedestrians",
+                "value": "unsafe_behaviour"
+              },
+              {
+                "text": "Crowding",
+                "value": "crowding"
+              },
+              {
+                "text": "Conflicts with other road users",
+                "value": "conflicts_road_users"
+              },
+              {
+                "text": "Lack of safe or adequate roads, junctions, signs or lighting",
+                "value": "poor_infrastructure"
+              },
+              {
+                "text": "No emergency services nearby",
+                "value": "no_emergency_services"
+              }
+            ],
+            "required": false,
+            "question_id": "car_unsafe_situations",
+            "question_version": "3.0.0",
+            "privacy_classification": "personal_data",
+            "add_none": true
+          }
+        ],
+        "show_if": {
+          "car_weekly": [
+            "yes"
+          ]
+        }
+      }
+    ]
+  },
+  "languages": {
+    "en": {
+      "#Do you travel by car at least once a week?": "Do you travel by car at least once a week?",
+      "#As the driver or as a passenger, also car sharing.": "As the driver or as a passenger, also car sharing.",
+      "#Yes": "Yes",
+      "#No": "No",
+      "#Car – Your trips": "Car – Your trips",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "In the same trip, do you usually combine the car with another way of travelling?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
+      "#When you face these difficulties, how do you mostly respond?": "When you face these difficulties, how do you mostly respond?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Walking (as the main mode for most of the trip, not short access or transfer walking)",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#Bus": "Bus",
+      "#Tram": "Tram",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Regional or suburban train",
+      "#Bicycle/e-bike (private)": "Bicycle/e-bike (private)",
+      "#Bicycle/e-bike (shared)": "Bicycle/e-bike (shared)",
+      "#e-scooter (private)": "e-scooter (private)",
+      "#e-scooter (shared)": "e-scooter (shared)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi or similar service (e.g. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Vehicles are too crowded (e.g. no space for a bicycle or luggage)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Poor coordination between modes (long waiting times, missed connections)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Complicated transfers (stations far apart, unclear routes)",
+      "#Travel time becomes too long": "Travel time becomes too long",
+      "#Cost is too high when combining modes": "Cost is too high when combining modes",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Safety concerns (traffic, theft, unsafe areas)",
+      "#Services are infrequent or do not run in the evening": "Services are infrequent or do not run in the evening",
+      "#Lack of reliable information (schedules, delays)": "Lack of reliable information (schedules, delays)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Physical effort is too high (e.g. carrying a bicycle or walking long distances)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
+      "#Weather-related difficulties": "Weather-related difficulties",
+      "#I do not experience significant difficulties": "I do not experience significant difficulties",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "I stop using one of the modes (e.g. stop bringing my bike)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "I switch to a single mode (e.g. only car, only public transport)",
+      "#I change the time of travel (e.g. avoid peak hours)": "I change the time of travel (e.g. avoid peak hours)",
+      "#I change the route or transfer point": "I change the route or transfer point",
+      "#I choose a different combination of modes": "I choose a different combination of modes",
+      "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
+      "#I reduce how often I make that trip": "I reduce how often I make that trip",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
+      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
+      "#Why do you rarely travel by car? (Select all that apply)": "Why do you rarely travel by car? (Select all that apply)",
+      "#I don't have a car or a driving licence": "I don't have a car or a driving licence",
+      "#It costs too much (fuel, parking, tolls, insurance)": "It costs too much (fuel, parking, tolls, insurance)",
+      "#Traffic and finding a parking space take too long": "Traffic and finding a parking space take too long",
+      "#Driving is stressful or tiring for me": "Driving is stressful or tiring for me",
+      "#I feel unsafe on the road by car": "I feel unsafe on the road by car",
+      "#I prefer other ways of getting around, for example for the environment": "I prefer other ways of getting around, for example for the environment",
+      "#Another reason": "Another reason",
+      "#Car – When the car is hard to replace": "Car – When the car is hard to replace",
+      "#How often?": "How often?",
+      "#What would let you leave the car for this?": "What would let you leave the car for this?",
+      "#Several times a week": "Several times a week",
+      "#Weekly": "Weekly",
+      "#Monthly": "Monthly",
+      "#Rarely": "Rarely",
+      "#More frequent and reliable public transport, also in the evening": "More frequent and reliable public transport, also in the evening",
+      "#An accompanied or on-demand transport service": "An accompanied or on-demand transport service",
+      "#Home delivery": "Home delivery",
+      "#A shared van": "A shared van",
+      "#Nothing would": "Nothing would",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.",
+      "#Lower costs": "Lower costs",
+      "#Quicker or more reliable journeys": "Quicker or more reliable journeys",
+      "#Safer streets and routes": "Safer streets and routes",
+      "#Better pavements and cycle lanes": "Better pavements and cycle lanes",
+      "#More comfort and convenience": "More comfort and convenience",
+      "#Feeling more confident using them": "Feeling more confident using them",
+      "#More pleasant journeys": "More pleasant journeys",
+      "#Better weather (less heat or rain)": "Better weather (less heat or rain)",
+      "#Knowing it's better for the environment": "Knowing it's better for the environment",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "I need the car for my situation (e.g., disability, children, loads, work shifts)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "Routes and vehicles that are accessible for my disability or health condition",
+      "#Nothing: the car suits my trips": "Nothing: the car suits my trips",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Not for me: I can't walk or cycle far (e.g. health, age, carrying things)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "If you could use a shared bike or e-scooter for free, would you try it?",
+      "#Not sure": "Not sure",
+      "#Not for me: I can't ride one": "Not for me: I can't ride one",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "If driving cost more (fuel, parking, tolls), would you use the car less?",
+      "#No, I'd use it the same": "No, I'd use it the same",
+      "#A little less": "A little less",
+      "#Somewhat less": "Somewhat less",
+      "#Much less": "Much less",
+      "#I'd stop using it for most trips": "I'd stop using it for most trips",
+      "#I could not reduce it: I have no alternative": "I could not reduce it: I have no alternative",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Not for me: I don't pay these costs (e.g. company car, passenger)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Do you think about pollution from vehicles when you choose how to travel?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Pollution means exhaust fumes and gases that harm the air and the climate.",
+      "#No, it doesn't affect my choices": "No, it doesn't affect my choices",
+      "#I think about it now and then": "I think about it now and then",
+      "#It sometimes affects my choices": "It sometimes affects my choices",
+      "#It often affects how I travel": "It often affects how I travel",
+      "#I try to use the car less because of it": "I try to use the car less because of it",
+      "#Car – Other ways to get around": "Car – Other ways to get around",
+      "#Choose up to 4 answers.": "Choose up to 4 answers.",
+      "#What would help you choose an alternative to the car for some of your trips?": "What would help you choose an alternative to the car for some of your trips?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "When you drive, how confident are you that you can avoid a crash when someone appears suddenly?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.",
+      "#Not at all": "Not at all",
+      "#A little": "A little",
+      "#Moderately": "Moderately",
+      "#Quite": "Quite",
+      "#Very": "Very",
+      "#Car – Road safety": "Car – Road safety",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "When you travel by car, who on the road makes you feel unsafe? (Select all that apply)",
+      "#Other car drivers": "Other car drivers",
+      "#Motorcycle or scooter riders": "Motorcycle or scooter riders",
+      "#Bus drivers": "Bus drivers",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Delivery vehicles (vans, cargo bikes, scooters)",
+      "#Taxi or ride-hailing drivers": "Taxi or ride-hailing drivers",
+      "#Cyclists": "Cyclists",
+      "#E-scooter riders": "E-scooter riders",
+      "#Pedestrians": "Pedestrians",
+      "#Nobody in particular": "Nobody in particular",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "When you travel by car, which of these situations make you feel unsafe? (Select all that apply)",
+      "#Poor visibility or limited sightlines": "Poor visibility or limited sightlines",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsafe behaviour from drivers, riders or pedestrians",
+      "#Crowding": "Crowding",
+      "#Conflicts with other road users": "Conflicts with other road users",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Lack of safe or adequate roads, junctions, signs or lighting",
+      "#No emergency services nearby": "No emergency services nearby",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.",
+      "#Car – Travel choices and safety": "Car – Travel choices and safety",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Car – Travel choices and safety",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>",
+      "#Thank you!": "Thank you!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
+      "#Car on a street": "Car on a street"
+    },
+    "it": {
+      "#Do you travel by car at least once a week?": "Vai in auto almeno una volta a settimana?",
+      "#As the driver or as a passenger, also car sharing.": "Alla guida o come passeggero, anche con un'auto in condivisione (car sharing).",
+      "#Yes": "Sì",
+      "#No": "No",
+      "#Car – Your trips": "In auto – I tuoi spostamenti",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "Nello stesso spostamento, di solito oltre all’auto usi anche un altro modo di spostarti?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Per esempio bici e treno, oppure auto e metro. Un breve tratto a piedi fino alla fermata o al veicolo parcheggiato non conta.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quali altri modi di spostarti usi nello stesso spostamento? (Seleziona tutte le opzioni applicabili)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
+      "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "A piedi (come modalità principale per la maggior parte dello spostamento, esclusi brevi tratti di accesso o trasferimento)",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#Bus": "Autobus",
+      "#Tram": "Tram",
+      "#Metro": "Metropolitana",
+      "#Regional or suburban train": "Treno regionale o suburbano",
+      "#Bicycle/e-bike (private)": "Bicicletta o bici elettrica (privata)",
+      "#Bicycle/e-bike (shared)": "Bicicletta o bici elettrica (condivisa)",
+      "#e-scooter (private)": "Monopattino elettrico (privato)",
+      "#e-scooter (shared)": "Monopattino elettrico (condiviso)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi o auto con conducente (NCC, ad es. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "I mezzi sono troppo affollati (ad es. non c'è spazio per la bicicletta o i bagagli)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Scarso coordinamento tra i mezzi (lunghi tempi di attesa, coincidenze perse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Mancanza di infrastrutture (ad es. parcheggi per biciclette o accesso delle biciclette al trasporto pubblico)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Cambi complicati (stazioni distanti tra loro, percorsi poco chiari)",
+      "#Travel time becomes too long": "Il tempo di viaggio diventa troppo lungo",
+      "#Cost is too high when combining modes": "Il costo è troppo elevato quando si combinano più mezzi",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Preoccupazioni per la sicurezza (traffico, furti, zone poco sicure)",
+      "#Services are infrequent or do not run in the evening": "Le corse sono rare o assenti la sera",
+      "#Lack of reliable information (schedules, delays)": "Mancanza di informazioni affidabili (orari, ritardi)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Lo sforzo fisico è troppo elevato (ad es. trasportare una bicicletta o camminare per lunghe distanze)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
+      "#Weather-related difficulties": "Difficoltà legate alle condizioni meteorologiche",
+      "#I do not experience significant difficulties": "Non incontro difficoltà significative",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Smetto di utilizzare uno dei mezzi (ad es. non porto più la mia bicicletta)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Passo a un'unica modalità di trasporto (ad es. solo auto o solo trasporto pubblico)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Cambio l'orario dello spostamento (ad es. evito le ore di punta)",
+      "#I change the route or transfer point": "Cambio il percorso o il punto di interscambio",
+      "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
+      "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
+      "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bici in condivisione invece della mia bicicletta)",
+      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
+      "#Why do you rarely travel by car? (Select all that apply)": "Perché usi poco l’auto? (Seleziona tutte le opzioni applicabili)",
+      "#I don't have a car or a driving licence": "Non ho un’auto o la patente",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Costa troppo (carburante, parcheggio, pedaggi, assicurazione)",
+      "#Traffic and finding a parking space take too long": "Il traffico e la ricerca del parcheggio richiedono troppo tempo",
+      "#Driving is stressful or tiring for me": "Guidare è stressante o faticoso per me",
+      "#I feel unsafe on the road by car": "In auto non mi sento al sicuro sulla strada",
+      "#I prefer other ways of getting around, for example for the environment": "Preferisco altri modi di spostarmi, per esempio per l’ambiente",
+      "#Another reason": "Un altro motivo",
+      "#Car – When the car is hard to replace": "In auto – Quando l’auto è difficile da sostituire",
+      "#How often?": "Quanto spesso?",
+      "#What would let you leave the car for this?": "Cosa ti permetterebbe di lasciare l’auto per questo uso?",
+      "#Several times a week": "Più volte a settimana",
+      "#Weekly": "Ogni settimana",
+      "#Monthly": "Ogni mese",
+      "#Rarely": "Raramente",
+      "#More frequent and reliable public transport, also in the evening": "Un trasporto pubblico più frequente e affidabile, anche di sera",
+      "#An accompanied or on-demand transport service": "Un servizio di accompagnamento o di trasporto a chiamata",
+      "#Home delivery": "La consegna a casa",
+      "#A shared van": "Un furgone in condivisione",
+      "#Nothing would": "Niente",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Seleziona gli usi che ti riguardano. Per ogni uso selezionato, indica quanto spesso e cosa ti permetterebbe di lasciare l’auto. Se nessuno ti riguarda, seleziona Nessuna di queste.",
+      "#Lower costs": "Costi più bassi",
+      "#Quicker or more reliable journeys": "Spostamenti più rapidi o più affidabili",
+      "#Safer streets and routes": "Strade e percorsi più sicuri",
+      "#Better pavements and cycle lanes": "Marciapiedi e piste ciclabili migliori",
+      "#More comfort and convenience": "Più comodità e praticità",
+      "#Feeling more confident using them": "Sentirmi più a mio agio nell'usarli",
+      "#More pleasant journeys": "Spostamenti più piacevoli",
+      "#Better weather (less heat or rain)": "Tempo migliore (meno caldo o pioggia)",
+      "#Knowing it's better for the environment": "Sapere che fa meglio all'ambiente",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Per le mie esigenze l’auto è necessaria (es. disabilità, figli, assistenza ad altre persone, carichi, turni di lavoro)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "Percorsi e mezzi accessibili per la mia disabilità o condizione di salute",
+      "#Nothing: the car suits my trips": "Nessuna: per i miei spostamenti l’auto va bene",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Non mi riguarda: non posso camminare o pedalare a lungo (es. per motivi di salute o perché porto pesi)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "Se potessi usare gratis una bici o un monopattino elettrico in condivisione, lo proveresti?",
+      "#Not sure": "Non saprei",
+      "#Not for me: I can't ride one": "Non mi riguarda: non posso usarli",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "Se guidare costasse di più (carburante, parcheggio, pedaggi), useresti meno l'auto?",
+      "#No, I'd use it the same": "No, la userei come ora",
+      "#A little less": "Un po' meno",
+      "#Somewhat less": "Abbastanza meno",
+      "#Much less": "Molto meno",
+      "#I'd stop using it for most trips": "Smetterei di usarla per la maggior parte degli spostamenti",
+      "#I could not reduce it: I have no alternative": "Non potrei ridurlo: non ho alternative",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Non mi riguarda: non pago questi costi (ad es. auto aziendale, passeggero)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Quando scegli come spostarti, pensi all'inquinamento dei veicoli?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Per inquinamento si intendono i fumi di scarico e i gas che fanno male all'aria e al clima.",
+      "#No, it doesn't affect my choices": "No, non influisce sulle mie scelte",
+      "#I think about it now and then": "Ci penso ogni tanto",
+      "#It sometimes affects my choices": "A volte influisce sulle mie scelte",
+      "#It often affects how I travel": "Spesso influisce su come mi sposto",
+      "#I try to use the car less because of it": "Cerco di usare meno l'auto per questo motivo",
+      "#Car – Other ways to get around": "In auto – Altri modi di spostarsi",
+      "#Choose up to 4 answers.": "Scegli al massimo 4 risposte.",
+      "#What would help you choose an alternative to the car for some of your trips?": "Cosa ti aiuterebbe a scegliere un’alternativa all’auto per alcuni tuoi spostamenti?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Quando guidi, quanto ti senti in grado di evitare uno scontro se qualcuno compare all’improvviso?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Per esempio una persona che attraversa all’improvviso, una bici o un monopattino che ti taglia la strada, o una portiera che si apre.",
+      "#Not at all": "Per niente",
+      "#A little": "Un po'",
+      "#Moderately": "Abbastanza",
+      "#Quite": "Molto",
+      "#Very": "Moltissimo",
+      "#Car – Road safety": "In auto – Sicurezza stradale",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Quando viaggi in auto, chi ti fa sentire in pericolo sulla strada? (Seleziona tutte le opzioni applicabili)",
+      "#Other car drivers": "Chi guida un’altra auto",
+      "#Motorcycle or scooter riders": "Chi guida moto o scooter",
+      "#Bus drivers": "Chi guida l’autobus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Veicoli per le consegne (furgoni, cargo bike, scooter)",
+      "#Taxi or ride-hailing drivers": "Chi guida taxi o servizi di ride-hailing",
+      "#Cyclists": "Chi va in bicicletta",
+      "#E-scooter riders": "Chi va in monopattino elettrico",
+      "#Pedestrians": "Chi va a piedi",
+      "#Nobody in particular": "Nessuno in particolare",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Quando viaggi in auto, quali di queste situazioni ti fanno sentire in pericolo? (Seleziona tutte le opzioni applicabili)",
+      "#Poor visibility or limited sightlines": "Scarsa visibilità o visuale limitata",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Comportamenti pericolosi di chi guida, di chi pedala o di chi va a piedi",
+      "#Crowding": "Affollamento",
+      "#Conflicts with other road users": "Conflitti con altre persone in strada",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Mancanza di strade, incroci, segnaletica o illuminazione sicuri e adeguati",
+      "#No emergency services nearby": "Nessun servizio di emergenza nelle vicinanze",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Pensa a comportamenti specifici, come passare troppo vicino o non dare la precedenza, senza riferirti a tutte le persone di una categoria.",
+      "#Car – Travel choices and safety": "Auto – Scelte di viaggio e sicurezza",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Auto – Scelte di viaggio e sicurezza",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>Alcune domande sugli spostamenti in auto. Se usi poco l'auto, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In auto – I tuoi spostamenti</li><li>In auto – Quando l’auto è difficile da sostituire</li><li>In auto – Altri modi di spostarsi</li><li>In auto – Sicurezza stradale</li></ul>",
+      "#Thank you!": "Grazie!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
+      "#Car on a street": "Auto su una strada"
+    },
+    "fr": {
+      "#Do you travel by car at least once a week?": "Vous déplacez-vous en voiture au moins une fois par semaine ?",
+      "#As the driver or as a passenger, also car sharing.": "Comme conducteur ou comme passager, y compris en autopartage.",
+      "#Yes": "Oui",
+      "#No": "Non",
+      "#Car – Your trips": "Voiture – Vos trajets",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "Au cours d’un même trajet, combinez-vous généralement la voiture avec un autre mode de déplacement ?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Par exemple vélo et train, ou voiture et métro. Une courte marche jusqu’à un arrêt ou à un véhicule garé ne compte pas.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quels autres modes de déplacement utilisez-vous au cours du même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
+      "#When you face these difficulties, how do you mostly respond?": "Quand vous rencontrez ces difficultés, que faites-vous le plus souvent ?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Marche (comme mode principal sur la plus grande partie du trajet, pas seulement pour rejoindre un autre mode ou faire une correspondance)",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#Bus": "Bus",
+      "#Tram": "Tramway",
+      "#Metro": "Métro",
+      "#Regional or suburban train": "Train régional ou de banlieue",
+      "#Bicycle/e-bike (private)": "Vélo / vélo électrique (personnel)",
+      "#Bicycle/e-bike (shared)": "Vélo / vélo électrique (partagé)",
+      "#e-scooter (private)": "Trottinette électrique (personnelle)",
+      "#e-scooter (shared)": "Trottinette électrique (partagée)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi ou service similaire (par ex. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Les véhicules sont trop remplis (par ex. pas de place pour un vélo ou des bagages)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Mauvaise coordination entre les modes (longues attentes, correspondances manquées)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Manque d’infrastructures (par ex. pas de stationnement vélo ou vélo non autorisé dans les transports publics)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Correspondances compliquées (stations éloignées, itinéraires peu clairs)",
+      "#Travel time becomes too long": "Le temps de trajet devient trop long",
+      "#Cost is too high when combining modes": "Le coût est trop élevé quand plusieurs modes sont combinés",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Problèmes de sécurité (circulation, vol, zones peu sûres)",
+      "#Services are infrequent or do not run in the evening": "Les passages sont rares ou inexistants le soir",
+      "#Lack of reliable information (schedules, delays)": "Manque d’informations fiables (horaires, retards)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "L’effort physique est trop important (par ex. porter un vélo ou marcher longtemps)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
+      "#Weather-related difficulties": "Difficultés liées à la météo",
+      "#I do not experience significant difficulties": "Je ne rencontre pas de difficulté importante",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "J’arrête d’utiliser l’un des modes (par ex. je ne prends plus mon vélo)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Je passe à un seul mode de transport (par ex. uniquement la voiture ou uniquement les transports publics)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Je change mon heure de déplacement (par ex. j’évite les heures de pointe)",
+      "#I change the route or transfer point": "Je change d’itinéraire ou de lieu de correspondance",
+      "#I choose a different combination of modes": "Je choisis une autre combinaison de modes",
+      "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
+      "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
+      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
+      "#Why do you rarely travel by car? (Select all that apply)": "Pourquoi utilisez-vous rarement la voiture ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#I don't have a car or a driving licence": "Je n’ai pas de voiture ou de permis de conduire",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Elle coûte trop cher (carburant, stationnement, péages, assurance)",
+      "#Traffic and finding a parking space take too long": "Les embouteillages et la recherche d’une place prennent trop de temps",
+      "#Driving is stressful or tiring for me": "Conduire est stressant ou fatigant pour moi",
+      "#I feel unsafe on the road by car": "Je ne me sens pas en sécurité sur la route en voiture",
+      "#I prefer other ways of getting around, for example for the environment": "Je préfère d’autres façons de me déplacer, par exemple pour l’environnement",
+      "#Another reason": "Une autre raison",
+      "#Car – When the car is hard to replace": "Voiture – Quand la voiture est difficile à remplacer",
+      "#How often?": "À quelle fréquence ?",
+      "#What would let you leave the car for this?": "Qu’est-ce qui vous permettrait de laisser la voiture pour cet usage ?",
+      "#Several times a week": "Plusieurs fois par semaine",
+      "#Weekly": "Chaque semaine",
+      "#Monthly": "Chaque mois",
+      "#Rarely": "Rarement",
+      "#More frequent and reliable public transport, also in the evening": "Des transports en commun plus fréquents et plus fiables, y compris le soir",
+      "#An accompanied or on-demand transport service": "Un service de transport accompagné ou à la demande",
+      "#Home delivery": "La livraison à domicile",
+      "#A shared van": "Une camionnette partagée",
+      "#Nothing would": "Rien",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Sélectionnez les usages qui vous concernent. Pour chaque usage sélectionné, indiquez à quelle fréquence et ce qui vous permettrait de laisser la voiture. Si aucun ne vous concerne, sélectionnez Aucun de ces éléments.",
+      "#Lower costs": "Des coûts plus bas",
+      "#Quicker or more reliable journeys": "Des trajets plus rapides ou plus fiables",
+      "#Safer streets and routes": "Des rues et des itinéraires plus sûrs",
+      "#Better pavements and cycle lanes": "De meilleurs trottoirs et pistes cyclables",
+      "#More comfort and convenience": "Plus de confort et de praticité",
+      "#Feeling more confident using them": "Me sentir plus en confiance pour les utiliser",
+      "#More pleasant journeys": "Des trajets plus agréables",
+      "#Better weather (less heat or rain)": "Un meilleur temps (moins de chaleur ou de pluie)",
+      "#Knowing it's better for the environment": "Savoir que c'est mieux pour l'environnement",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "J'ai besoin de la voiture dans ma situation (par ex. handicap, enfants, charges, horaires de travail décalés)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "Des itinéraires et des véhicules accessibles compte tenu de mon handicap ou de mon état de santé",
+      "#Nothing: the car suits my trips": "Rien : la voiture convient à mes trajets",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Cela ne me concerne pas : je ne peux pas marcher ou pédaler longtemps (par ex. santé, âge, charges à porter)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "Si vous pouviez utiliser gratuitement un vélo ou une trottinette électrique en libre-service, l'essaieriez-vous ?",
+      "#Not sure": "Je ne sais pas",
+      "#Not for me: I can't ride one": "Cela ne me concerne pas : je ne peux pas en faire",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "Si conduire coûtait plus cher (carburant, stationnement, péages), utiliseriez-vous moins la voiture ?",
+      "#No, I'd use it the same": "Non, je l'utiliserais autant",
+      "#A little less": "Un peu moins",
+      "#Somewhat less": "Assez moins",
+      "#Much less": "Beaucoup moins",
+      "#I'd stop using it for most trips": "Je cesserais de l'utiliser pour la plupart des trajets",
+      "#I could not reduce it: I have no alternative": "Je ne pourrais pas la réduire : je n'ai pas d'alternative",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Cela ne me concerne pas : je ne paie pas ces frais (par ex. voiture de fonction, passager)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Pensez-vous à la pollution des véhicules quand vous choisissez comment vous déplacer ?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Par pollution, on entend les gaz d'échappement qui nuisent à l'air et au climat.",
+      "#No, it doesn't affect my choices": "Non, cela n'influence pas mes choix",
+      "#I think about it now and then": "J'y pense de temps en temps",
+      "#It sometimes affects my choices": "Cela influence parfois mes choix",
+      "#It often affects how I travel": "Cela influence souvent ma façon de me déplacer",
+      "#I try to use the car less because of it": "J'essaie de moins utiliser la voiture pour cette raison",
+      "#Car – Other ways to get around": "Voiture – Autres moyens de se déplacer",
+      "#Choose up to 4 answers.": "Choisissez jusqu’à 4 réponses.",
+      "#What would help you choose an alternative to the car for some of your trips?": "Qu’est-ce qui vous aiderait à choisir une alternative à la voiture pour certains de vos déplacements ?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Lorsque vous conduisez, dans quelle mesure avez-vous confiance en votre capacité à éviter une collision quand quelqu’un surgit soudainement ?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Par exemple une personne à pied qui s’avance, une personne à vélo ou en scooter qui vous coupe la route, ou une portière qui s’ouvre.",
+      "#Not at all": "Pas du tout",
+      "#A little": "Un peu",
+      "#Moderately": "Modérément",
+      "#Quite": "Assez",
+      "#Very": "Très",
+      "#Car – Road safety": "Voiture – Sécurité routière",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Lorsque vous vous déplacez en voiture, qui sur la route vous fait vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Other car drivers": "Les autres personnes qui conduisent une voiture",
+      "#Motorcycle or scooter riders": "Les personnes à moto ou en scooter",
+      "#Bus drivers": "Les personnes qui conduisent un bus",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Les véhicules de livraison (fourgonnettes, vélos cargo, scooters)",
+      "#Taxi or ride-hailing drivers": "Les personnes qui conduisent un taxi ou un VTC",
+      "#Cyclists": "Les cyclistes",
+      "#E-scooter riders": "Les personnes en trottinette électrique",
+      "#Pedestrians": "Les personnes à pied",
+      "#Nobody in particular": "Personne en particulier",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Lorsque vous vous déplacez en voiture, lesquelles de ces situations vous font vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#Poor visibility or limited sightlines": "Mauvaise visibilité ou champ de vision limité",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Les comportements dangereux de personnes qui conduisent, qui roulent ou qui marchent",
+      "#Crowding": "Forte affluence",
+      "#Conflicts with other road users": "Conflits avec d’autres personnes qui circulent",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Le manque de routes, de carrefours, de signalisation ou d’éclairage sûrs et adaptés",
+      "#No emergency services nearby": "Aucun service d’urgence à proximité",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Pensez à des comportements précis, comme passer trop près ou ne pas céder le passage, plutôt qu’à toutes les personnes d’un groupe.",
+      "#Car – Travel choices and safety": "Voiture – Choix de déplacement et sécurité",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Voiture – Choix de déplacement et sécurité",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>Quelques questions sur vos déplacements en voiture. Si vous utilisez rarement la voiture, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Voiture – Vos trajets</li><li>Voiture – Quand la voiture est difficile à remplacer</li><li>Voiture – Autres moyens de se déplacer</li><li>Voiture – Sécurité routière</li></ul>",
+      "#Thank you!": "Merci !",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
+      "#Car on a street": "Voiture dans une rue"
+    },
+    "de": {
+      "#Do you travel by car at least once a week?": "Fahren Sie mindestens einmal pro Woche Auto?",
+      "#As the driver or as a passenger, also car sharing.": "Als Fahrer oder Fahrerin oder als Mitfahrende, auch Carsharing.",
+      "#Yes": "Ja",
+      "#No": "Nein",
+      "#Car – Your trips": "Auto – Ihre Wege",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "Kombinieren Sie auf demselben Weg das Auto meist mit einer anderen Art der Fortbewegung?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Zum Beispiel Fahrrad und Zug oder Auto und U-Bahn. Ein kurzer Fußweg zur Haltestelle oder zum geparkten Fahrzeug zählt nicht.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Welche anderen Verkehrsmittel nutzen Sie auf demselben Weg? (Wählen Sie alles Zutreffende aus)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
+      "#When you face these difficulties, how do you mostly respond?": "Wie reagieren Sie normalerweise, wenn diese Schwierigkeiten auftreten?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Zu Fuß (als Hauptverkehrsmittel für den größten Teil des Weges, nicht nur für kurze Zuwege oder Umstiege)",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#Bus": "Bus",
+      "#Tram": "Straßenbahn",
+      "#Metro": "U-Bahn/Metro",
+      "#Regional or suburban train": "Regional- oder S-Bahn",
+      "#Bicycle/e-bike (private)": "Fahrrad / E-Bike (privat)",
+      "#Bicycle/e-bike (shared)": "Fahrrad / E-Bike (Sharing)",
+      "#e-scooter (private)": "E-Scooter (privat)",
+      "#e-scooter (shared)": "E-Scooter (Sharing)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi oder ähnlicher Fahrdienst (z. B. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Die Fahrzeuge sind zu voll (z. B. kein Platz für Fahrrad oder Gepäck)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Schlechte Abstimmung zwischen Verkehrsmitteln (lange Wartezeiten, verpasste Anschlüsse)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Fehlende Infrastruktur (z. B. keine Fahrradabstellplätze oder Fahrräder dürfen nicht mitgenommen werden)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Kompliziertes Umsteigen (Haltestellen weit auseinander, unklare Wege)",
+      "#Travel time becomes too long": "Die gesamte Fahrzeit wird zu lang",
+      "#Cost is too high when combining modes": "Die Kosten sind beim Kombinieren mehrerer Verkehrsmittel zu hoch",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Sicherheitsbedenken (Verkehr, Diebstahl, unsichere Bereiche)",
+      "#Services are infrequent or do not run in the evening": "Die Verbindungen sind selten oder fahren abends nicht",
+      "#Lack of reliable information (schedules, delays)": "Fehlende verlässliche Informationen (Fahrpläne, Verspätungen)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Der körperliche Aufwand ist zu hoch (z. B. Fahrrad tragen oder lange Strecken zu Fuß gehen)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
+      "#Weather-related difficulties": "Schwierigkeiten durch das Wetter",
+      "#I do not experience significant difficulties": "Ich habe keine größeren Schwierigkeiten",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ich nutze eines der Verkehrsmittel nicht mehr (z. B. nehme ich mein Fahrrad nicht mehr mit)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Ich wechsle zu nur einem Verkehrsmittel (z. B. nur Auto oder nur öffentlicher Verkehr)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Ich ändere meine Fahrzeit (z. B. vermeide ich Stoßzeiten)",
+      "#I change the route or transfer point": "Ich ändere Route oder Umsteigepunkt",
+      "#I choose a different combination of modes": "Ich wähle eine andere Kombination von Verkehrsmitteln",
+      "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
+      "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
+      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
+      "#Why do you rarely travel by car? (Select all that apply)": "Warum fahren Sie selten mit dem Auto? (Wählen Sie alles Zutreffende aus)",
+      "#I don't have a car or a driving licence": "Ich habe kein Auto oder keinen Führerschein",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Es ist zu teuer (Kraftstoff, Parken, Maut, Versicherung)",
+      "#Traffic and finding a parking space take too long": "Stau und Parkplatzsuche dauern zu lange",
+      "#Driving is stressful or tiring for me": "Autofahren ist für mich stressig oder anstrengend",
+      "#I feel unsafe on the road by car": "Ich fühle mich im Auto auf der Straße unsicher",
+      "#I prefer other ways of getting around, for example for the environment": "Ich bevorzuge andere Arten der Fortbewegung, zum Beispiel der Umwelt zuliebe",
+      "#Another reason": "Ein anderer Grund",
+      "#Car – When the car is hard to replace": "Auto – Wenn das Auto schwer zu ersetzen ist",
+      "#How often?": "Wie oft?",
+      "#What would let you leave the car for this?": "Was würde es Ihnen ermöglichen, das Auto dafür stehen zu lassen?",
+      "#Several times a week": "Mehrmals pro Woche",
+      "#Weekly": "Jede Woche",
+      "#Monthly": "Jeden Monat",
+      "#Rarely": "Selten",
+      "#More frequent and reliable public transport, also in the evening": "Häufigere und zuverlässigere öffentliche Verkehrsmittel, auch am Abend",
+      "#An accompanied or on-demand transport service": "Ein begleiteter Fahrdienst oder ein Fahrdienst auf Abruf",
+      "#Home delivery": "Lieferung nach Hause",
+      "#A shared van": "Ein gemeinsam genutzter Lieferwagen",
+      "#Nothing would": "Nichts",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Wählen Sie die Nutzungen aus, die auf Sie zutreffen. Geben Sie für jede ausgewählte Nutzung an, wie oft und was es Ihnen ermöglichen würde, das Auto stehen zu lassen. Wenn keine zutrifft, wählen Sie Keine davon.",
+      "#Lower costs": "Niedrigere Kosten",
+      "#Quicker or more reliable journeys": "Schnellere oder verlässlichere Wege",
+      "#Safer streets and routes": "Sicherere Straßen und Wege",
+      "#Better pavements and cycle lanes": "Bessere Gehwege und Radwege",
+      "#More comfort and convenience": "Mehr Komfort und Bequemlichkeit",
+      "#Feeling more confident using them": "Mehr Sicherheit im Umgang damit",
+      "#More pleasant journeys": "Angenehmere Wege",
+      "#Better weather (less heat or rain)": "Besseres Wetter (weniger Hitze oder Regen)",
+      "#Knowing it's better for the environment": "Zu wissen, dass es besser für die Umwelt ist",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Ich bin in meiner Situation auf das Auto angewiesen (z. B. Behinderung, Kinder, Lasten, Schichtarbeit)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "Wege und Fahrzeuge, die für meine Behinderung oder meinen Gesundheitszustand zugänglich sind",
+      "#Nothing: the car suits my trips": "Nichts: Das Auto passt zu meinen Wegen",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Trifft auf mich nicht zu: Ich kann nicht weit gehen oder Rad fahren (z. B. wegen Gesundheit, Alter, Tragen von Sachen)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "Würden Sie ein Leihfahrrad oder einen Leih-E-Scooter ausprobieren, wenn Sie es kostenlos nutzen könnten?",
+      "#Not sure": "Ich weiß es nicht",
+      "#Not for me: I can't ride one": "Trifft auf mich nicht zu: Ich kann so etwas nicht fahren",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "Würden Sie das Auto weniger nutzen, wenn Autofahren teurer wäre (Kraftstoff, Parken, Maut)?",
+      "#No, I'd use it the same": "Nein, ich würde es genauso nutzen",
+      "#A little less": "Etwas weniger",
+      "#Somewhat less": "Deutlich weniger",
+      "#Much less": "Viel weniger",
+      "#I'd stop using it for most trips": "Ich würde es für die meisten Wege nicht mehr nutzen",
+      "#I could not reduce it: I have no alternative": "Ich könnte sie nicht reduzieren: Ich habe keine Alternative",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Trifft auf mich nicht zu: Ich zahle diese Kosten nicht (z. B. Dienstwagen, Mitfahrende)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Denken Sie an die Luftverschmutzung durch Fahrzeuge, wenn Sie entscheiden, wie Sie unterwegs sind?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Gemeint sind Abgase, die der Luft und dem Klima schaden.",
+      "#No, it doesn't affect my choices": "Nein, es beeinflusst meine Entscheidungen nicht",
+      "#I think about it now and then": "Ich denke ab und zu daran",
+      "#It sometimes affects my choices": "Manchmal beeinflusst es meine Entscheidungen",
+      "#It often affects how I travel": "Es beeinflusst oft, wie ich unterwegs bin",
+      "#I try to use the car less because of it": "Ich versuche deshalb, weniger Auto zu fahren",
+      "#Car – Other ways to get around": "Auto – Andere Arten, unterwegs zu sein",
+      "#Choose up to 4 answers.": "Wählen Sie bis zu 4 Antworten.",
+      "#What would help you choose an alternative to the car for some of your trips?": "Was würde Ihnen helfen, für einige Ihrer Wege eine Alternative zum Auto zu wählen?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Wie sicher sind Sie beim Autofahren, einen Zusammenstoß zu vermeiden, wenn plötzlich jemand auftaucht?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Zum Beispiel eine Person, die zu Fuß auf die Fahrbahn tritt, ein Rad oder Roller, der Ihnen den Weg abschneidet, oder eine aufgehende Autotür.",
+      "#Not at all": "Gar nicht",
+      "#A little": "Ein wenig",
+      "#Moderately": "Mittel",
+      "#Quite": "Ziemlich",
+      "#Very": "Sehr",
+      "#Car – Road safety": "Auto – Verkehrssicherheit",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Wer im Straßenverkehr gibt Ihnen bei Autofahrten ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Other car drivers": "Andere Autofahrende",
+      "#Motorcycle or scooter riders": "Motorrad- oder Rollerfahrende",
+      "#Bus drivers": "Busfahrende",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Lieferfahrzeuge (Transporter, Lastenräder, Roller)",
+      "#Taxi or ride-hailing drivers": "Taxi- oder Fahrdienstfahrende",
+      "#Cyclists": "Radfahrende",
+      "#E-scooter riders": "E-Scooter-Fahrende",
+      "#Pedestrians": "Zu Fuß Gehende",
+      "#Nobody in particular": "Niemand Bestimmtes",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Welche dieser Situationen geben Ihnen bei Autofahrten ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
+      "#Poor visibility or limited sightlines": "Schlechte Sicht oder eingeschränkte Sichtweite",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Unsicheres Verhalten von Fahrenden oder zu Fuß Gehenden",
+      "#Crowding": "Überfüllung",
+      "#Conflicts with other road users": "Konflikte mit anderen Verkehrsteilnehmenden",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Fehlende sichere oder geeignete Straßen, Kreuzungen, Beschilderung oder Beleuchtung",
+      "#No emergency services nearby": "Keine Rettungsdienste in der Nähe",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Denken Sie an konkrete Verhaltensweisen, etwa zu dichtes Vorbeifahren oder Missachtung der Vorfahrt, nicht an alle Personen einer Gruppe.",
+      "#Car – Travel choices and safety": "Auto – Verkehrsmittelwahl und Sicherheit",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Auto – Verkehrsmittelwahl und Sicherheit",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>Einige Fragen zum Unterwegssein mit dem Auto. Wenn Sie selten mit dem Auto fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Auto – Ihre Wege</li><li>Auto – Wenn das Auto schwer zu ersetzen ist</li><li>Auto – Andere Arten, unterwegs zu sein</li><li>Auto – Verkehrssicherheit</li></ul>",
+      "#Thank you!": "Vielen Dank!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
+      "#Car on a street": "Auto auf einer Straße"
+    },
+    "tr": {
+      "#Do you travel by car at least once a week?": "Haftada en az bir kez otomobille yolculuk yapıyor musunuz?",
+      "#As the driver or as a passenger, also car sharing.": "Sürücü veya yolcu olarak, araç paylaşımı da dahil.",
+      "#Yes": "Evet",
+      "#No": "Hayır",
+      "#Car – Your trips": "Araba – Yolculuklarınız",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "Aynı yolculukta otomobili genellikle başka bir ulaşım şekliyle birleştiriyor musunuz?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Örneğin bisiklet ve tren ya da otomobil ve metro. Durağa veya park edilmiş araca kısa bir yürüyüş sayılmaz.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Aynı yolculukta başka hangi ulaşım şekillerini kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
+      "#When you face these difficulties, how do you mostly respond?": "Bu güçlüklerle karşılaştığınızda genellikle ne yaparsınız?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Yürüme (yolculuğun büyük bölümünde ana ulaşım şekli olarak; kısa erişim veya aktarma yürüyüşleri hariç)",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#Bus": "Otobüs",
+      "#Tram": "Tramvay",
+      "#Metro": "Metro",
+      "#Regional or suburban train": "Bölgesel veya banliyö treni",
+      "#Bicycle/e-bike (private)": "Bisiklet / elektrikli bisiklet (kişisel)",
+      "#Bicycle/e-bike (shared)": "Bisiklet / elektrikli bisiklet (paylaşımlı)",
+      "#e-scooter (private)": "E-scooter (kişisel)",
+      "#e-scooter (shared)": "E-scooter (paylaşımlı)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taksi veya benzeri hizmet (ör. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "Araçlar çok kalabalık (ör. bisiklet veya bagaj için yer yok)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Ulaşım seçenekleri arasında kötü koordinasyon var (uzun bekleme süreleri, kaçırılan bağlantılar)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Altyapı eksik (ör. bisiklet parkı yok veya toplu taşımaya bisikletle binilemiyor)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Aktarmalar karmaşık (istasyonlar birbirinden uzak, güzergâhlar belirsiz)",
+      "#Travel time becomes too long": "Toplam yolculuk süresi çok uzuyor",
+      "#Cost is too high when combining modes": "Farklı ulaşım seçeneklerini birleştirince maliyet çok yüksek oluyor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Güvenlikle ilgili kaygılar (trafik, hırsızlık, güvensiz bölgeler)",
+      "#Services are infrequent or do not run in the evening": "Seferler seyrek veya akşamları hiç yok",
+      "#Lack of reliable information (schedules, delays)": "Güvenilir bilgi eksikliği (sefer saatleri, gecikmeler)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Fiziksel çaba çok fazla (ör. bisikleti taşımak veya uzun mesafe yürümek)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
+      "#Weather-related difficulties": "Hava koşullarıyla ilgili güçlükler",
+      "#I do not experience significant difficulties": "Önemli bir güçlük yaşamıyorum",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ulaşım seçeneklerinden birini kullanmayı bırakırım (ör. bisikletimi yanımda götürmem)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Tek bir ulaşım seçeneğine geçerim (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Yolculuk saatimi değiştiririm (ör. yoğun saatlerden kaçınırım)",
+      "#I change the route or transfer point": "Güzergâhı veya aktarma noktasını değiştiririm",
+      "#I choose a different combination of modes": "Farklı bir ulaşım seçeneği kombinasyonu kullanırım",
+      "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
+      "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
+      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
+      "#Why do you rarely travel by car? (Select all that apply)": "Neden nadiren arabayla yolculuk ediyorsunuz? (Uygun olanların tümünü seçin)",
+      "#I don't have a car or a driving licence": "Arabam veya ehliyetim yok",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Çok pahalı (yakıt, otopark, geçiş ücretleri, sigorta)",
+      "#Traffic and finding a parking space take too long": "Trafik ve park yeri aramak çok uzun sürüyor",
+      "#Driving is stressful or tiring for me": "Araba kullanmak benim için stresli veya yorucu",
+      "#I feel unsafe on the road by car": "Arabayla yolda kendimi güvende hissetmiyorum",
+      "#I prefer other ways of getting around, for example for the environment": "Örneğin çevre için başka ulaşım yollarını tercih ediyorum",
+      "#Another reason": "Başka bir neden",
+      "#Car – When the car is hard to replace": "Araba – Arabanın yerini tutmanın zor olduğu durumlar",
+      "#How often?": "Ne sıklıkta?",
+      "#What would let you leave the car for this?": "Bu amaç için arabayı kullanmamanızı ne sağlar?",
+      "#Several times a week": "Haftada birkaç kez",
+      "#Weekly": "Her hafta",
+      "#Monthly": "Her ay",
+      "#Rarely": "Nadiren",
+      "#More frequent and reliable public transport, also in the evening": "Akşamları da dahil olmak üzere daha sık ve güvenilir toplu taşıma",
+      "#An accompanied or on-demand transport service": "Refakatli veya talep üzerine ulaşım hizmeti",
+      "#Home delivery": "Eve teslimat",
+      "#A shared van": "Paylaşımlı bir kamyonet",
+      "#Nothing would": "Hiçbir şey",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Size uygun kullanım amaçlarını seçin. Seçtiğiniz her amaç için ne sıklıkta olduğunu ve arabayı kullanmamanızı neyin sağlayacağını belirtin. Hiçbiri size uygun değilse Bunların hiçbiri seçeneğini seçin.",
+      "#Lower costs": "Daha düşük maliyet",
+      "#Quicker or more reliable journeys": "Daha hızlı veya daha güvenilir yolculuklar",
+      "#Safer streets and routes": "Daha güvenli sokaklar ve güzergâhlar",
+      "#Better pavements and cycle lanes": "Daha iyi kaldırımlar ve bisiklet yolları",
+      "#More comfort and convenience": "Daha fazla konfor ve kolaylık",
+      "#Feeling more confident using them": "Bunları kullanırken kendime daha çok güvenmek",
+      "#More pleasant journeys": "Daha keyifli yolculuklar",
+      "#Better weather (less heat or rain)": "Daha iyi hava (daha az sıcak veya yağmur)",
+      "#Knowing it's better for the environment": "Çevre için daha iyi olduğunu bilmek",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "Durumum gereği arabaya ihtiyacım var (ör. engellilik, çocuklar, yük taşıma, vardiyalı çalışma)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "Engelime veya sağlık durumuma uygun, erişilebilir güzergâhlar ve araçlar",
+      "#Nothing: the car suits my trips": "Hiçbir şey: otomobil yolculuklarıma uygun",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Bu soru benim için geçerli değil: Uzun yürüyemem veya bisiklet süremem (örn. sağlık, yaş, taşınacak eşyalar)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "Paylaşımlı bir bisikleti veya elektrikli scooter'ı ücretsiz kullanabilseydiniz denemek ister miydiniz?",
+      "#Not sure": "Emin değilim",
+      "#Not for me: I can't ride one": "Bu soru benim için geçerli değil: Kullanamam",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "Araba kullanmak daha pahalı olsaydı (yakıt, park, geçiş ücretleri) otomobili daha az kullanır mıydınız?",
+      "#No, I'd use it the same": "Hayır, aynı şekilde kullanırdım",
+      "#A little less": "Biraz daha az",
+      "#Somewhat less": "Epey daha az",
+      "#Much less": "Çok daha az",
+      "#I'd stop using it for most trips": "Yolculuklarımın çoğunda kullanmayı bırakırdım",
+      "#I could not reduce it: I have no alternative": "Azaltamazdım: başka seçeneğim yok",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Bu soru benim için geçerli değil: Bu masrafları ben ödemiyorum (örn. şirket aracı, yolcu)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Nasıl yolculuk edeceğinize karar verirken araçların neden olduğu kirliliği düşünüyor musunuz?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Kirlilik, havaya ve iklime zarar veren egzoz dumanları ve gazlar demektir.",
+      "#No, it doesn't affect my choices": "Hayır, seçimlerimi etkilemez",
+      "#I think about it now and then": "Arada bir düşünürüm",
+      "#It sometimes affects my choices": "Bazen seçimlerimi etkiler",
+      "#It often affects how I travel": "Nasıl yolculuk ettiğimi sık sık etkiler",
+      "#I try to use the car less because of it": "Bu yüzden otomobili daha az kullanmaya çalışırım",
+      "#Car – Other ways to get around": "Araba – Ulaşmanın diğer yolları",
+      "#Choose up to 4 answers.": "En fazla 4 yanıt seçin.",
+      "#What would help you choose an alternative to the car for some of your trips?": "Bazı yolculuklarınızda otomobil yerine başka bir ulaşım seçeneği seçmenize ne yardımcı olurdu?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Araba kullanırken, biri aniden karşınıza çıktığında kazadan kaçınabileceğinize ne kadar güveniyorsunuz?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Örneğin bir yayanın yola çıkması, bir bisikletlinin veya scooter sürücüsünün önünüzü kesmesi ya da bir araba kapısının açılması.",
+      "#Not at all": "Hiç",
+      "#A little": "Biraz",
+      "#Moderately": "Orta derecede",
+      "#Quite": "Oldukça",
+      "#Very": "Çok",
+      "#Car – Road safety": "Araba – Yol güvenliği",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Arabayla yolculuk ederken yolda kimler kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Other car drivers": "Diğer araba sürücüleri",
+      "#Motorcycle or scooter riders": "Motosiklet veya scooter sürücüleri",
+      "#Bus drivers": "Otobüs şoförleri",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Teslimat araçları (kamyonet, kargo bisikleti, scooter)",
+      "#Taxi or ride-hailing drivers": "Taksi veya uygulama üzerinden çağrılan araç sürücüleri",
+      "#Cyclists": "Bisikletliler",
+      "#E-scooter riders": "E-scooter kullanıcıları",
+      "#Pedestrians": "Yayalar",
+      "#Nobody in particular": "Özellikle kimse değil",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Arabayla yolculuk ederken bu durumlardan hangileri kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
+      "#Poor visibility or limited sightlines": "Kötü görüş veya sınırlı görüş mesafesi",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "Sürücülerin veya yayaların güvensiz davranışları",
+      "#Crowding": "Kalabalık",
+      "#Conflicts with other road users": "Diğer yol kullanıcılarıyla tartışma ya da sürtüşme",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "Güvenli veya yeterli yol, kavşak, tabela ya da aydınlatma eksikliği",
+      "#No emergency services nearby": "Yakınlarda acil durum hizmetlerinin olmaması",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Bir gruptaki herkes yerine, çok yakından geçmek veya yol vermemek gibi belirli davranışları düşünün.",
+      "#Car – Travel choices and safety": "Otomobil – Ulaşım tercihleri ve güvenlik",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Otomobil – Ulaşım tercihleri ve güvenlik",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>Arabayla ulaşım hakkında birkaç soru. Arabayı nadiren kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Araba – Yolculuklarınız</li><li>Araba – Arabanın yerini tutmanın zor olduğu durumlar</li><li>Araba – Ulaşmanın diğer yolları</li><li>Araba – Yol güvenliği</li></ul>",
+      "#Thank you!": "Teşekkür ederiz!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
+      "#Car on a street": "Sokakta bir araba"
+    },
+    "fa": {
+      "#Do you travel by car at least once a week?": "آیا حداقل هفته‌ای یک بار با خودرو سفر می‌کنید؟",
+      "#As the driver or as a passenger, also car sharing.": "چه راننده باشید چه سرنشین، و همچنین خودروی اشتراکی.",
+      "#Yes": "بله",
+      "#No": "خیر",
+      "#Car – Your trips": "خودرو – سفرهای شما",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "آیا معمولاً در یک سفر، خودرو را با روش دیگری از رفت‌وآمد ترکیب می‌کنید؟",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلاً دوچرخه و قطار، یا خودرو و مترو. پیاده‌روی کوتاه تا ایستگاه یا تا وسیلهٔ پارک‌شده حساب نمی‌شود.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "در همان سفر از کدام روش‌های دیگر رفت‌وآمد استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
+      "#When you face these difficulties, how do you mostly respond?": "وقتی با این مشکلات روبه‌رو می‌شوید معمولاً چه کار می‌کنید؟",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "پیاده‌روی (به‌عنوان روش اصلی در بیشتر مسیر، نه فقط پیاده‌روی کوتاه برای رسیدن به وسیلهٔ دیگر یا تعویض وسیله)",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#Bus": "اتوبوس",
+      "#Tram": "تراموا",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار منطقه‌ای یا حومه‌ای",
+      "#Bicycle/e-bike (private)": "دوچرخه / دوچرخه برقی (شخصی)",
+      "#Bicycle/e-bike (shared)": "دوچرخه / دوچرخه برقی (اشتراکی)",
+      "#e-scooter (private)": "اسکوتر برقی (شخصی)",
+      "#e-scooter (shared)": "اسکوتر برقی (اشتراکی)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "تاکسی یا خدمات مشابه (مثلاً Uber، Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "وسیله‌ها خیلی شلوغ هستند (مثلاً جا برای دوچرخه یا بار وجود ندارد)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "هماهنگی بین روش‌ها ضعیف است (انتظار طولانی، از دست دادن وسیله بعدی)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "زیرساخت کافی نیست (مثلاً پارک دوچرخه وجود ندارد یا بردن دوچرخه در حمل‌ونقل عمومی ممکن نیست)",
+      "#Complicated transfers (stations far apart, unclear routes)": "تعویض وسیله پیچیده است (ایستگاه‌ها از هم دورند، مسیرها نامشخص‌اند)",
+      "#Travel time becomes too long": "زمان کل سفر خیلی طولانی می‌شود",
+      "#Cost is too high when combining modes": "هزینه ترکیب چند روش خیلی زیاد است",
+      "#Safety concerns (traffic, theft, unsafe areas)": "نگرانی‌های ایمنی و امنیتی (ترافیک، سرقت، مناطق ناامن)",
+      "#Services are infrequent or do not run in the evening": "سرویس‌ها کم‌تعدادند یا عصرها و شب‌ها کار نمی‌کنند",
+      "#Lack of reliable information (schedules, delays)": "اطلاعات قابل‌اعتماد کافی نیست (زمان‌بندی، تأخیر)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "تلاش جسمی خیلی زیاد است (مثلاً حمل دوچرخه یا پیاده‌روی طولانی)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
+      "#Weather-related difficulties": "مشکلات مربوط به آب‌وهوا",
+      "#I do not experience significant difficulties": "مشکل قابل توجهی ندارم",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "استفاده از یکی از روش‌ها را کنار می‌گذارم (مثلاً دیگر دوچرخه‌ام را نمی‌برم)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
+      "#I change the time of travel (e.g. avoid peak hours)": "زمان سفر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم)",
+      "#I change the route or transfer point": "مسیر یا محل تعویض وسیله را تغییر می‌دهم",
+      "#I choose a different combination of modes": "ترکیب دیگری از روش‌های رفت‌وآمد را انتخاب می‌کنم",
+      "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
+      "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
+      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
+      "#Why do you rarely travel by car? (Select all that apply)": "چرا به‌ندرت با خودرو سفر می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#I don't have a car or a driving licence": "خودرو یا گواهینامه رانندگی ندارم",
+      "#It costs too much (fuel, parking, tolls, insurance)": "هزینه‌اش زیاد است (سوخت، پارکینگ، عوارض، بیمه)",
+      "#Traffic and finding a parking space take too long": "ترافیک و پیدا کردن جای پارک زمان زیادی می‌برد",
+      "#Driving is stressful or tiring for me": "رانندگی برای من استرس‌زا یا خسته‌کننده است",
+      "#I feel unsafe on the road by car": "هنگام رانندگی در خیابان احساس ناامنی می‌کنم",
+      "#I prefer other ways of getting around, for example for the environment": "ترجیح می‌دهم از راه‌های دیگری جابه‌جا شوم، مثلاً برای حفظ محیط زیست",
+      "#Another reason": "دلیل دیگر",
+      "#Car – When the car is hard to replace": "خودرو – وقتی جایگزین کردن خودرو سخت است",
+      "#How often?": "چند وقت یک‌بار؟",
+      "#What would let you leave the car for this?": "چه چیزی به شما امکان می‌دهد برای این کار از خودرو استفاده نکنید؟",
+      "#Several times a week": "چند بار در هفته",
+      "#Weekly": "هر هفته",
+      "#Monthly": "هر ماه",
+      "#Rarely": "به‌ندرت",
+      "#More frequent and reliable public transport, also in the evening": "حمل‌ونقل عمومی پرتکرارتر و قابل‌اعتمادتر، حتی در عصر و شب",
+      "#An accompanied or on-demand transport service": "خدمات حمل‌ونقل همراه با کمک یا بنا به درخواست",
+      "#Home delivery": "تحویل در منزل",
+      "#A shared van": "وانت اشتراکی",
+      "#Nothing would": "هیچ‌چیز",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "موارد استفاده‌ای را که درباره شما صدق می‌کند انتخاب کنید. برای هر مورد انتخاب‌شده، بگویید چند وقت یک‌بار و چه چیزی به شما امکان می‌دهد از خودرو استفاده نکنید. اگر هیچ‌کدام صدق نمی‌کند، گزینه هیچ‌کدام از این موارد را انتخاب کنید.",
+      "#Lower costs": "هزینه کمتر",
+      "#Quicker or more reliable journeys": "سفرهای سریع‌تر یا قابل‌اعتمادتر",
+      "#Safer streets and routes": "خیابان‌ها و مسیرهای امن‌تر",
+      "#Better pavements and cycle lanes": "پیاده‌روها و مسیرهای دوچرخه بهتر",
+      "#More comfort and convenience": "راحتی و سهولت بیشتر",
+      "#Feeling more confident using them": "احساس اطمینان بیشتر هنگام استفاده از آن‌ها",
+      "#More pleasant journeys": "سفرهای دلپذیرتر",
+      "#Better weather (less heat or rain)": "هوای بهتر (گرما یا باران کمتر)",
+      "#Knowing it's better for the environment": "دانستن اینکه برای محیط زیست بهتر است",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "با شرایطی که دارم به خودرو نیاز دارم (مثلاً معلولیت، کودکان، بار، شیفت کاری)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "مسیرها و وسایل نقلیه‌ای که برای معلولیت یا وضعیت سلامتی من قابل دسترسی باشند",
+      "#Nothing: the car suits my trips": "هیچ چیز: خودرو برای سفرهای من مناسب است",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "مربوط به من نیست: نمی‌توانم راه دور پیاده بروم یا دوچرخه‌سواری کنم (مثلاً به دلیل سلامتی، سن، حمل بار)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "اگر می‌توانستید از دوچرخه یا اسکوتر برقی اشتراکی رایگان استفاده کنید، آن را امتحان می‌کردید؟",
+      "#Not sure": "مطمئن نیستم",
+      "#Not for me: I can't ride one": "مربوط به من نیست: نمی‌توانم سوار آن شوم",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "اگر رانندگی هزینه بیشتری داشت (سوخت، پارکینگ، عوارض)، کمتر از خودرو استفاده می‌کردید؟",
+      "#No, I'd use it the same": "نه، به همان اندازه استفاده می‌کردم",
+      "#A little less": "کمی کمتر",
+      "#Somewhat less": "تا حدی کمتر",
+      "#Much less": "خیلی کمتر",
+      "#I'd stop using it for most trips": "برای بیشتر سفرها استفاده از آن را متوقف می‌کردم",
+      "#I could not reduce it: I have no alternative": "نمی‌توانستم آن را کم کنم: جایگزینی ندارم",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "مربوط به من نیست: این هزینه‌ها را من نمی‌پردازم (مثلاً خودروی شرکت، سرنشین)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "وقتی شیوه سفر را انتخاب می‌کنید، به آلودگی ناشی از وسایل نقلیه فکر می‌کنید؟",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "آلودگی یعنی دود و گازهای اگزوز که به هوا و اقلیم آسیب می‌زنند.",
+      "#No, it doesn't affect my choices": "نه، بر انتخاب‌های من تأثیری ندارد",
+      "#I think about it now and then": "گاهی به آن فکر می‌کنم",
+      "#It sometimes affects my choices": "گاهی بر انتخاب‌های من اثر می‌گذارد",
+      "#It often affects how I travel": "اغلب بر شیوه سفر من اثر می‌گذارد",
+      "#I try to use the car less because of it": "به همین دلیل سعی می‌کنم کمتر از خودرو استفاده کنم",
+      "#Car – Other ways to get around": "خودرو – روش‌های دیگر رفت‌وآمد",
+      "#Choose up to 4 answers.": "حداکثر ۴ پاسخ انتخاب کنید.",
+      "#What would help you choose an alternative to the car for some of your trips?": "چه چیزی به شما کمک می‌کند برای بعضی از رفت‌وآمدهایتان گزینه‌ای به‌جای خودرو انتخاب کنید؟",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "هنگام رانندگی، چقدر مطمئنید که وقتی کسی ناگهان ظاهر می‌شود می‌توانید از برخورد جلوگیری کنید؟",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "مثلاً عابری که ناگهان قدم به خیابان می‌گذارد، دوچرخه‌سوار یا اسکوتری که جلوی شما می‌پرد، یا بازشدن در یک خودرو.",
+      "#Not at all": "اصلاً",
+      "#A little": "کمی",
+      "#Moderately": "تا حدی",
+      "#Quite": "تا حد زیادی",
+      "#Very": "بسیار",
+      "#Car – Road safety": "خودرو – ایمنی راه",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "هنگام سفر با خودرو، چه کسانی در خیابان باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Other car drivers": "دیگر رانندگان خودرو",
+      "#Motorcycle or scooter riders": "موتورسواران یا اسکوترسواران",
+      "#Bus drivers": "رانندگان اتوبوس",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "وسایل نقلیهٔ تحویل کالا (ون، دوچرخهٔ باری، موتور)",
+      "#Taxi or ride-hailing drivers": "رانندگان تاکسی یا تاکسی اینترنتی",
+      "#Cyclists": "دوچرخه‌سواران",
+      "#E-scooter riders": "کاربران اسکوتر برقی",
+      "#Pedestrians": "عابران پیاده",
+      "#Nobody in particular": "هیچ‌کس به‌طور خاص",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "هنگام سفر با خودرو، کدام یک از این موقعیت‌ها باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#Poor visibility or limited sightlines": "دید ضعیف یا میدان دید محدود",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "رفتار ناایمن رانندگان، موتورسواران و دوچرخه‌سواران یا عابران پیاده",
+      "#Crowding": "شلوغی",
+      "#Conflicts with other road users": "برخورد و تعارض با سایر کاربران راه",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "نبود جاده، تقاطع، تابلو یا روشنایی ایمن و کافی",
+      "#No emergency services nearby": "نبود خدمات اورژانس در نزدیکی",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "به رفتارهای مشخصی مانند عبور از فاصله خیلی نزدیک یا رعایت نکردن حق تقدم فکر کنید، نه همه افراد یک گروه.",
+      "#Car – Travel choices and safety": "خودرو – انتخاب‌های سفر و ایمنی",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - خودرو – انتخاب‌های سفر و ایمنی",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>چند پرسش دربارهٔ رفت‌وآمد با خودرو. اگر کم با خودرو سفر می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>خودرو – سفرهای شما</li><li>خودرو – وقتی جایگزین کردن خودرو سخت است</li><li>خودرو – روش‌های دیگر رفت‌وآمد</li><li>خودرو – ایمنی راه</li></ul>",
+      "#Thank you!": "سپاسگزاریم!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
+      "#Car on a street": "خودرو در خیابان"
+    },
+    "hu": {
+      "#Do you travel by car at least once a week?": "Utazik autóval legalább hetente egyszer?",
+      "#As the driver or as a passenger, also car sharing.": "Vezetőként vagy utasként, az autómegosztás is számít.",
+      "#Yes": "Igen",
+      "#No": "Nem",
+      "#Car – Your trips": "Autó – Az Ön útjai",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "Ugyanazon az úton az autót általában más közlekedési móddal kombinálja?",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "Például kerékpár és vonat, vagy autó és metró. A megállóig vagy a parkoló járműig tartó rövid gyaloglás nem számít.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Milyen más közlekedési módokat használ ugyanazon az úton? (Jelölje meg az összes megfelelőt)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
+      "#When you face these difficulties, how do you mostly respond?": "Mit tesz általában, amikor ilyen nehézségekkel találkozik?",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "Gyaloglás (ez a fő közlekedési mód az út nagy részén, nem csak a megállóig vagy átszálláskor megtett rövid gyaloglás)",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#Bus": "Busz",
+      "#Tram": "Villamos",
+      "#Metro": "Metró",
+      "#Regional or suburban train": "Regionális vagy elővárosi vonat",
+      "#Bicycle/e-bike (private)": "Kerékpár / e-bike (saját)",
+      "#Bicycle/e-bike (shared)": "Kerékpár / e-bike (megosztott)",
+      "#e-scooter (private)": "Elektromos roller (saját)",
+      "#e-scooter (shared)": "Elektromos roller (megosztott)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "Taxi vagy hasonló szolgáltatás (pl. Uber, Bolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "A járművek túl zsúfoltak (pl. nincs hely kerékpárnak vagy csomagnak)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "Gyenge az összehangolás a közlekedési módok között (hosszú várakozás, lekésett csatlakozás)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "Hiányos az infrastruktúra (pl. nincs kerékpárparkoló, vagy nem lehet kerékpárt vinni a tömegközlekedési járművekre)",
+      "#Complicated transfers (stations far apart, unclear routes)": "Bonyolult az átszállás (az állomások messze vannak egymástól, az útvonalak nem egyértelműek)",
+      "#Travel time becomes too long": "Az utazási idő túl hosszú lesz",
+      "#Cost is too high when combining modes": "Túl magas a költség több közlekedési mód kombinálásakor",
+      "#Safety concerns (traffic, theft, unsafe areas)": "Biztonsági problémák (forgalom, lopás, nem biztonságos területek)",
+      "#Services are infrequent or do not run in the evening": "Ritkán járnak a járatok, vagy este nem közlekednek",
+      "#Lack of reliable information (schedules, delays)": "Nincs elég megbízható információ (menetrend, késés)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "Túl nagy a fizikai megterhelés (pl. kerékpár cipelése vagy hosszú gyaloglás)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
+      "#Weather-related difficulties": "Időjárással kapcsolatos nehézségek",
+      "#I do not experience significant difficulties": "Nem tapasztalok jelentős nehézséget",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "Abbahagyom az egyik közlekedési mód használatát (pl. nem viszem magammal a kerékpárt)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "Egyetlen közlekedési módra váltok (pl. csak autó vagy csak tömegközlekedés)",
+      "#I change the time of travel (e.g. avoid peak hours)": "Megváltoztatom az utazás időpontját (pl. kerülöm a csúcsidőt)",
+      "#I change the route or transfer point": "Megváltoztatom az útvonalat vagy az átszállási pontot",
+      "#I choose a different combination of modes": "Más közlekedési módokat kombinálok",
+      "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
+      "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett megosztott kerékpárt használok)",
+      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
+      "#Why do you rarely travel by car? (Select all that apply)": "Miért utazik ritkán autóval? (Jelölje meg az összes megfelelőt)",
+      "#I don't have a car or a driving licence": "Nincs autóm vagy jogosítványom",
+      "#It costs too much (fuel, parking, tolls, insurance)": "Túl drága (üzemanyag, parkolás, útdíj, biztosítás)",
+      "#Traffic and finding a parking space take too long": "A dugók és a parkolóhely keresése túl sokáig tart",
+      "#Driving is stressful or tiring for me": "A vezetés stresszes vagy fárasztó számomra",
+      "#I feel unsafe on the road by car": "Autóval nem érzem magam biztonságban az úton",
+      "#I prefer other ways of getting around, for example for the environment": "Más közlekedési módokat részesítek előnyben, például a környezet miatt",
+      "#Another reason": "Egyéb ok",
+      "#Car – When the car is hard to replace": "Autó – Amikor az autót nehéz kiváltani",
+      "#How often?": "Milyen gyakran?",
+      "#What would let you leave the car for this?": "Mi tenné lehetővé, hogy ehhez ne használjon autót?",
+      "#Several times a week": "Hetente többször",
+      "#Weekly": "Hetente",
+      "#Monthly": "Havonta",
+      "#Rarely": "Ritkán",
+      "#More frequent and reliable public transport, also in the evening": "Gyakoribb és megbízhatóbb tömegközlekedés, este is",
+      "#An accompanied or on-demand transport service": "Kísérővel biztosított vagy igény szerinti közlekedési szolgáltatás",
+      "#Home delivery": "Házhoz szállítás",
+      "#A shared van": "Közösségi kisteherautó",
+      "#Nothing would": "Semmi",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "Válassza ki az Önre vonatkozó felhasználási célokat. Minden kiválasztott célnál adja meg, milyen gyakran fordul elő, és mi tenné lehetővé, hogy ne autóval menjen. Ha egyik sem vonatkozik Önre, válassza az Egyik sem lehetőséget.",
+      "#Lower costs": "Alacsonyabb költségek",
+      "#Quicker or more reliable journeys": "Gyorsabb vagy megbízhatóbb utak",
+      "#Safer streets and routes": "Biztonságosabb utcák és útvonalak",
+      "#Better pavements and cycle lanes": "Jobb járdák és kerékpársávok",
+      "#More comfort and convenience": "Nagyobb kényelem és egyszerűség",
+      "#Feeling more confident using them": "Nagyobb magabiztosság a használatukkor",
+      "#More pleasant journeys": "Kellemesebb utak",
+      "#Better weather (less heat or rain)": "Jobb időjárás (kevesebb hőség vagy eső)",
+      "#Knowing it's better for the environment": "Annak tudata, hogy jobb a környezetnek",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "A helyzetem miatt szükségem van az autóra (pl. fogyatékosság, gyerekek, csomagok, műszakos munka)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "A fogyatékosságomnak vagy egészségi állapotomnak megfelelően akadálymentes útvonalak és járművek",
+      "#Nothing: the car suits my trips": "Semmi: az autó megfelel az utaimhoz",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "Rám nem vonatkozik: nem tudok messzire gyalogolni vagy biciklizni (pl. egészségi állapot, életkor, cipelnivaló miatt)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "Ha ingyen használhatna megosztott kerékpárt vagy elektromos rollert, kipróbálná?",
+      "#Not sure": "Nem vagyok biztos benne",
+      "#Not for me: I can't ride one": "Rám nem vonatkozik: nem tudok ilyet használni",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "Ha többe kerülne az autózás (üzemanyag, parkolás, útdíj), kevesebbet használná az autót?",
+      "#No, I'd use it the same": "Nem, ugyanúgy használnám",
+      "#A little less": "Egy kicsit kevesebbet",
+      "#Somewhat less": "Valamivel kevesebbet",
+      "#Much less": "Sokkal kevesebbet",
+      "#I'd stop using it for most trips": "A legtöbb úthoz nem használnám tovább",
+      "#I could not reduce it: I have no alternative": "Nem tudnám csökkenteni: nincs más lehetőségem",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "Rám nem vonatkozik: ezeket a költségeket nem én fizetem (pl. céges autó, utas)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "Gondol a járművek okozta szennyezésre, amikor kiválasztja, hogyan utazik?",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "A szennyezés a kipufogógázokat és más gázokat jelenti, amelyek ártanak a levegőnek és az éghajlatnak.",
+      "#No, it doesn't affect my choices": "Nem, nincs hatással a döntéseimre",
+      "#I think about it now and then": "Időnként gondolok rá",
+      "#It sometimes affects my choices": "Néha hatással van a döntéseimre",
+      "#It often affects how I travel": "Gyakran befolyásolja, hogyan utazom",
+      "#I try to use the car less because of it": "Emiatt igyekszem kevesebbet használni az autót",
+      "#Car – Other ways to get around": "Autó – Más közlekedési módok",
+      "#Choose up to 4 answers.": "Legfeljebb 4 választ jelöljön meg.",
+      "#What would help you choose an alternative to the car for some of your trips?": "Mi segítene abban, hogy egyes útjaihoz az autó helyett más közlekedési módot válasszon?",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "Vezetés közben mennyire biztos benne, hogy el tudja kerülni az ütközést, ha valaki hirtelen megjelenik?",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "Például egy lelépő gyalogos, Ön elé vágó kerékpáros vagy robogós, vagy kinyíló autóajtó.",
+      "#Not at all": "Egyáltalán nem",
+      "#A little": "Kissé",
+      "#Moderately": "Közepesen",
+      "#Quite": "Meglehetősen",
+      "#Very": "Nagyon",
+      "#Car – Road safety": "Autó – Közlekedésbiztonság",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "Autós utazás közben kik miatt érzi magát veszélyben az úton? (Jelölje meg az összes megfelelőt)",
+      "#Other car drivers": "Más autósok",
+      "#Motorcycle or scooter riders": "Motorosok vagy robogósok",
+      "#Bus drivers": "Buszvezetők",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "Áruszállító járművek (furgonok, teherkerékpárok, robogók)",
+      "#Taxi or ride-hailing drivers": "Taxisofőrök vagy személyszállító alkalmazások sofőrjei",
+      "#Cyclists": "Kerékpárosok",
+      "#E-scooter riders": "Elektromosroller-használók",
+      "#Pedestrians": "Gyalogosok",
+      "#Nobody in particular": "Különösebben senki",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "Autós utazás közben mely helyzetek miatt érzi magát veszélyben? (Jelölje meg az összes megfelelőt)",
+      "#Poor visibility or limited sightlines": "Rossz látási viszonyok vagy korlátozott beláthatóság",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "A járművezetők, kerékpárosok, motorosok vagy gyalogosok veszélyes viselkedése",
+      "#Crowding": "Zsúfoltság",
+      "#Conflicts with other road users": "Konfliktus más közlekedőkkel",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "A biztonságos vagy megfelelő utak, kereszteződések, táblák vagy világítás hiánya",
+      "#No emergency services nearby": "Nincs a közelben mentő- vagy sürgősségi szolgálat",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "Konkrét viselkedésekre gondoljon, például a túl közeli elhaladásra vagy az elsőbbség meg nem adására, ne egy csoport minden tagjára.",
+      "#Car – Travel choices and safety": "Autó – Utazási lehetőségek és biztonság",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - Autó – Utazási lehetőségek és biztonság",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>Néhány kérdés az autós közlekedésről. Ha ritkán utazik autóval, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Autó – Az Ön útjai</li><li>Autó – Amikor az autót nehéz kiváltani</li><li>Autó – Más közlekedési módok</li><li>Autó – Közlekedésbiztonság</li></ul>",
+      "#Thank you!": "Köszönjük!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
+      "#Car on a street": "Autó az utcán"
+    },
+    "ar": {
+      "#Do you travel by car at least once a week?": "هل تتنقل بالسيارة مرة واحدة على الأقل في الأسبوع؟",
+      "#As the driver or as a passenger, also car sharing.": "سواء كنت السائق أو راكبًا، وتشمل مشاركة السيارة.",
+      "#Yes": "نعم",
+      "#No": "لا",
+      "#Car – Your trips": "السيارة – رحلاتك",
+      "#In the same trip, do you usually combine the car with another way of travelling?": "هل تجمع عادةً بين السيارة ووسيلة تنقل أخرى في الرحلة نفسها؟",
+      "#For example bike and train, or car and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلًا الدراجة والقطار، أو السيارة والمترو. لا يُحتسب المشي القصير إلى المحطة أو إلى مركبة متوقفة.",
+      "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "ما وسائل التنقل الأخرى المستخدمة في الرحلة نفسها؟ (يمكن اختيار كل ما ينطبق)",
+      "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تظهر عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
+      "#When you face these difficulties, how do you mostly respond?": "ما الإجراء المعتاد عند ظهور هذه الصعوبات؟",
+      "#Walking (as the main mode for most of the trip, not short access or transfer walking)": "المشي (كوسيلة رئيسية لمعظم الرحلة، وليس فقط للمشي القصير للوصول إلى وسيلة أخرى أو للتبديل بينها)",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#Bus": "حافلة",
+      "#Tram": "ترام",
+      "#Metro": "مترو",
+      "#Regional or suburban train": "قطار إقليمي أو قطار ضواحي",
+      "#Bicycle/e-bike (private)": "الدراجة / الدراجة الكهربائية (خاصة)",
+      "#Bicycle/e-bike (shared)": "الدراجة / الدراجة الكهربائية (مشتركة)",
+      "#e-scooter (private)": "السكوتر الكهربائي (شخصي)",
+      "#e-scooter (shared)": "السكوتر الكهربائي (مشترك)",
+      "#Taxi or similar service (e.g. Uber, Bolt)": "سيارة أجرة أو خدمة مشابهة (مثل Uber وBolt)",
+      "#Vehicles are too crowded (e.g. no space for a bicycle or luggage)": "المركبات مزدحمة جدًا (مثل عدم وجود مساحة للدراجة أو الأمتعة)",
+      "#Poor coordination between modes (long waiting times, missed connections)": "ضعف التنسيق بين الوسائل (انتظار طويل، فقدان وسيلة الربط)",
+      "#Lack of infrastructure (e.g. no bicycle parking or no bicycle access on public transport)": "نقص البنية التحتية (مثل عدم وجود موقف للدراجات أو عدم السماح بالدراجة في النقل العام)",
+      "#Complicated transfers (stations far apart, unclear routes)": "التبديل بين الوسائل معقد (المحطات بعيدة عن بعضها، الطرق غير واضحة)",
+      "#Travel time becomes too long": "وقت الرحلة يصبح طويلًا جدًا",
+      "#Cost is too high when combining modes": "التكلفة مرتفعة جدًا عند الجمع بين عدة وسائل",
+      "#Safety concerns (traffic, theft, unsafe areas)": "مخاوف تتعلق بالأمان والسلامة (حركة المرور، السرقة، مناطق غير آمنة)",
+      "#Services are infrequent or do not run in the evening": "الرحلات قليلة أو لا تعمل في المساء",
+      "#Lack of reliable information (schedules, delays)": "نقص المعلومات الموثوقة (المواعيد، التأخير)",
+      "#Physical effort is too high (e.g. carrying a bicycle or walking long distances)": "الجهد البدني مرتفع جدًا (مثل حمل الدراجة أو المشي لمسافات طويلة)",
+      "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
+      "#Weather-related difficulties": "صعوبات بسبب الطقس",
+      "#I do not experience significant difficulties": "لا أواجه صعوبات كبيرة",
+      "#I stop using one of the modes (e.g. stop bringing my bike)": "أتوقف عن استخدام إحدى الوسائل (مثل عدم أخذ الدراجة معي)",
+      "#I switch to a single mode (e.g. only car, only public transport)": "أنتقل إلى وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
+      "#I change the time of travel (e.g. avoid peak hours)": "أغيّر وقت الرحلة (مثل تجنب ساعات الذروة)",
+      "#I change the route or transfer point": "أغيّر الطريق أو نقطة التبديل",
+      "#I choose a different combination of modes": "أختار مزيجًا مختلفًا من وسائل التنقل",
+      "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
+      "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
+      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
+      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
+      "#Why do you rarely travel by car? (Select all that apply)": "لماذا نادرًا ما تتنقل بالسيارة؟ (يمكن اختيار كل ما ينطبق)",
+      "#I don't have a car or a driving licence": "ليست لدي سيارة أو رخصة قيادة",
+      "#It costs too much (fuel, parking, tolls, insurance)": "تكلفتها مرتفعة جدًا (الوقود، موقف السيارات، رسوم الطرق، التأمين)",
+      "#Traffic and finding a parking space take too long": "الازدحام وإيجاد موقف للسيارة يستغرقان وقتًا طويلًا",
+      "#Driving is stressful or tiring for me": "القيادة تسبب لي التوتر أو التعب",
+      "#I feel unsafe on the road by car": "أشعر بعدم الأمان على الطريق بالسيارة",
+      "#I prefer other ways of getting around, for example for the environment": "أفضّل وسائل تنقل أخرى، مثلًا من أجل البيئة",
+      "#Another reason": "سبب آخر",
+      "#Car – When the car is hard to replace": "السيارة – عندما يصعب الاستغناء عنها",
+      "#How often?": "كم مرة؟",
+      "#What would let you leave the car for this?": "ما الذي يتيح لك الاستغناء عن السيارة لهذا الاستخدام؟",
+      "#Several times a week": "عدة مرات في الأسبوع",
+      "#Weekly": "كل أسبوع",
+      "#Monthly": "كل شهر",
+      "#Rarely": "نادرًا",
+      "#More frequent and reliable public transport, also in the evening": "نقل عام أكثر تواترًا وموثوقية، حتى في المساء",
+      "#An accompanied or on-demand transport service": "خدمة نقل مع مرافقة أو حسب الطلب",
+      "#Home delivery": "التوصيل إلى المنزل",
+      "#A shared van": "شاحنة صغيرة مشتركة",
+      "#Nothing would": "لا شيء",
+      "#Select the uses that apply to you. For each selected use, tell us how often and what would let you leave the car. If none apply, select None of these.": "يُرجى اختيار الاستخدامات التي تنطبق عليك. لكل استخدام تختاره، حدّد مدى تكراره وما الذي يتيح لك الاستغناء عن السيارة. إذا لم ينطبق أيّ منها، يُرجى اختيار لا شيء مما سبق.",
+      "#Lower costs": "تكاليف أقل",
+      "#Quicker or more reliable journeys": "رحلات أسرع أو أكثر موثوقية",
+      "#Safer streets and routes": "شوارع ومسارات أكثر أمانًا",
+      "#Better pavements and cycle lanes": "أرصفة ومسارات دراجات أفضل",
+      "#More comfort and convenience": "راحة وسهولة أكثر",
+      "#Feeling more confident using them": "شعور أكبر بالثقة عند استخدامها",
+      "#More pleasant journeys": "رحلات أكثر متعة",
+      "#Better weather (less heat or rain)": "طقس أفضل (حرارة أو أمطار أقل)",
+      "#Knowing it's better for the environment": "معرفة أنه أفضل للبيئة",
+      "#I need the car for my situation (e.g., disability, children, loads, work shifts)": "أحتاج إلى السيارة بسبب ظروفي (مثل الإعاقة أو الأطفال أو الأحمال أو نوبات العمل)",
+      "#Routes and vehicles that are accessible for my disability or health condition": "طرق ومركبات يسهل استخدامها مع إعاقتي أو حالتي الصحية",
+      "#Nothing: the car suits my trips": "لا شيء: السيارة تناسب رحلاتي",
+      "#Not for me: I can't walk or cycle far (e.g. health, age, carrying things)": "لا ينطبق عليّ: لا أستطيع المشي أو ركوب الدراجة لمسافة بعيدة (مثلًا بسبب الصحة أو السن أو حمل الأشياء)",
+      "#If you could use a shared bike or e-scooter for free, would you try it?": "لو استطعت استخدام دراجة أو سكوتر كهربائي مشترك مجانًا، هل كنت ستجربه؟",
+      "#Not sure": "لا يقين لدي",
+      "#Not for me: I can't ride one": "لا ينطبق عليّ: لا أستطيع ركوب أي منهما",
+      "#If driving cost more (fuel, parking, tolls), would you use the car less?": "لو ارتفعت تكلفة القيادة (الوقود، المواقف، الرسوم)، هل ستستخدم السيارة أقل؟",
+      "#No, I'd use it the same": "لا، سأستخدمها كما هي",
+      "#A little less": "أقل قليلًا",
+      "#Somewhat less": "أقل إلى حد ما",
+      "#Much less": "أقل بكثير",
+      "#I'd stop using it for most trips": "سأتوقف عن استخدامها في معظم الرحلات",
+      "#I could not reduce it: I have no alternative": "لن أستطيع تقليله: ليس لدي بديل",
+      "#Not for me: I don't pay these costs (e.g. company car, passenger)": "لا ينطبق عليّ: لا أدفع هذه التكاليف (مثل سيارة الشركة أو كراكب)",
+      "#Do you think about pollution from vehicles when you choose how to travel?": "هل تفكر في التلوث الناتج عن المركبات عند اختيار طريقة تنقلك؟",
+      "#Pollution means exhaust fumes and gases that harm the air and the climate.": "التلوث يعني عوادم المركبات والغازات التي تضر بالهواء والمناخ.",
+      "#No, it doesn't affect my choices": "لا، لا يؤثر في اختياراتي",
+      "#I think about it now and then": "أفكر في ذلك من حين لآخر",
+      "#It sometimes affects my choices": "يؤثر أحيانًا في اختياراتي",
+      "#It often affects how I travel": "يؤثر غالبًا في طريقة تنقلي",
+      "#I try to use the car less because of it": "أحاول استخدام السيارة أقل بسببه",
+      "#Car – Other ways to get around": "السيارة – وسائل تنقل أخرى",
+      "#Choose up to 4 answers.": "يمكن اختيار 4 إجابات كحد أقصى.",
+      "#What would help you choose an alternative to the car for some of your trips?": "ما الذي يساعدك على اختيار بديل للسيارة في بعض تنقلاتك؟",
+      "#When you drive, how confident are you that you can avoid a crash when someone appears suddenly?": "عند القيادة، ما مدى ثقتك بأنك تستطيع تجنب الاصطدام عندما يظهر شخص فجأة؟",
+      "#For example a pedestrian stepping out, a cyclist or scooter cutting across you, or a car door opening.": "مثل شخص يخرج إلى الطريق فجأة، أو راكب دراجة أو سكوتر يقطع طريقك، أو باب سيارة يُفتح.",
+      "#Not at all": "على الإطلاق",
+      "#A little": "قليلًا",
+      "#Moderately": "بدرجة متوسطة",
+      "#Quite": "إلى حد كبير",
+      "#Very": "كثيرًا",
+      "#Car – Road safety": "السيارة – السلامة على الطريق",
+      "#When you travel by car, who on the road makes you feel unsafe? (Select all that apply)": "عند التنقل بالسيارة، من على الطريق يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Other car drivers": "سائقو السيارات الآخرون",
+      "#Motorcycle or scooter riders": "راكبو الدراجات النارية أو السكوترات",
+      "#Bus drivers": "سائقو الحافلات",
+      "#Delivery vehicles (vans, cargo bikes, scooters)": "مركبات التوصيل (شاحنات صغيرة، دراجات الشحن، سكوترات)",
+      "#Taxi or ride-hailing drivers": "سائقو سيارات الأجرة أو خدمات النقل عبر التطبيقات",
+      "#Cyclists": "راكبو الدراجات الهوائية",
+      "#E-scooter riders": "مستخدمو السكوتر الكهربائي",
+      "#Pedestrians": "المشاة",
+      "#Nobody in particular": "لا أحد بعينه",
+      "#When you travel by car, which of these situations make you feel unsafe? (Select all that apply)": "عند التنقل بالسيارة، أي من هذه المواقف يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
+      "#Poor visibility or limited sightlines": "ضعف الرؤية أو محدودية مجال النظر",
+      "#Unsafe behaviour from drivers, riders or pedestrians": "سلوك غير آمن من السائقين أو الراكبين أو المشاة",
+      "#Crowding": "الازدحام",
+      "#Conflicts with other road users": "الاحتكاك بمستخدمي الطريق الآخرين",
+      "#Lack of safe or adequate roads, junctions, signs or lighting": "غياب طرق أو تقاطعات أو لافتات أو إضاءة آمنة وكافية",
+      "#No emergency services nearby": "عدم وجود خدمات طوارئ قريبة",
+      "#Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group.": "فكّر في سلوكيات محددة، مثل المرور قريبًا جدًا أو عدم إعطاء الأولوية، وليس في جميع أفراد فئة ما.",
+      "#Car – Travel choices and safety": "السيارة – خيارات التنقل والسلامة",
+      "#SmartUrbanity - Car – Travel choices and safety": "SmartUrbanity - السيارة – خيارات التنقل والسلامة",
+      "#<p>A few questions about getting around by car. If you rarely travel by car, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Car – Your trips</li><li>Car – When the car is hard to replace</li><li>Car – Other ways to get around</li><li>Car – Road safety</li></ul>": "<p>بعض الأسئلة عن التنقل بالسيارة. إذا كنت نادرًا ما تتنقل بالسيارة، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>السيارة – رحلاتك</li><li>السيارة – عندما يصعب الاستغناء عنها</li><li>السيارة – وسائل تنقل أخرى</li><li>السيارة – السلامة على الطريق</li></ul>",
+      "#Thank you!": "شكرًا لك!",
+      "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
+      "#Car on a street": "سيارة في شارع"
+    }
+  }
+}
