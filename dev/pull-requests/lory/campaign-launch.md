@@ -1,7 +1,7 @@
 # Open the profile and first walking questionnaire
 
 The previous profile campaign also opened Your travel, while all walking forms
-were disabled and debug mode could bypass the calendar. Open only the profile
+were disabled. Open only the profile
 and first walking questionnaire. Keep other scheduled forms closed and mark them
 Coming soon without inventing an opening date. Preserve questionnaire schemas,
 translations, follow-up relationships and stored-answer contracts.
@@ -17,3 +17,6 @@ the existing generic menu and direct-entry availability guard.
 Validation: 444 actual calendar cases over 37 forms, including debug/review and
 closed follow-up targets; bundle/language/asset validation; six regression tests
 passed. Application rendering/integration verification remains with the app owner.
+
+Debug visibility belongs to application code: omit show_all_in_debug from the
+pilot source. The calendar checks do not assert app debug/review access policy.

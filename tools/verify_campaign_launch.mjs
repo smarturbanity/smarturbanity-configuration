@@ -9,6 +9,7 @@ const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 assert.ok(process.argv[2], 'Pass the CityMaaS checkout');
 const source = fs.readFileSync(path.join(process.argv[2], 'CityMaasRoot/Questionnaires/QuestionnaireCampaigns.js'), 'utf8');
 const schedule = read('pilots/rome/survey_campaigns.json');
+assert.equal(Object.hasOwn(schedule.rules, 'show_all_in_debug'), false, 'Debug policy belongs to application code');
 const forms = read('forms/index.json').questionnaires.map(file => read('forms/' + file).questionnaire.questionnaire_id);
 const open = ['smarturbanity_walking_trips_and_safety', 'smarturbanity_your_profile'].sort();
 const assigned = new Set();
@@ -27,7 +28,6 @@ let cases = 0;
 for (const debug of [false, true]) for (const review of [false, true]) {
   const context = vm.createContext({app: {config: {debug: {review_mode: review}}}, isDebug: debug});
   vm.runInContext(source, context);
-  assert.equal(context.questionnaireScheduleShowsAll(schedule, review), false);
   for (const day of ['2026-11-09', '2026-11-14', '2027-05-01']) {
     const offered = forms.filter(id => context.questionnaireGetScheduleOffer(schedule, id, new Date(day + 'T12:00:00Z')).offered).sort();
     assert.deepEqual(offered, open, day);

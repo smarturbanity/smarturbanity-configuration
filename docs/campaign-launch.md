@@ -20,11 +20,12 @@ form belongs to exactly one campaign.
   it must not substitute the pilot start date or invent another date.
 - Missing publication metadata preserves existing campaign behavior. A disabled
   campaign without this metadata is not automatically a coming-soon campaign.
-- `rules.show_all_in_debug: false` keeps the same availability in normal, debug
-  and review modes. Profile and first walking remain open; later forms do not
-  become answerable just because review mode is enabled.
-- Follow-up mappings describe relationships, not permission to open another form.
-  A closed follow-up must not be offered after profile or first walking submission.
+- Debug visibility is application-code policy. The pilot must not carry a
+  `show_all_in_debug` option. Normal availability remains controlled by the
+  campaign calendar; the app owns its debug/review preview behavior and tests.
+- Follow-up mappings describe relationships, not permission to open another form
+  in normal use. A closed follow-up must not be offered after profile or first
+  walking submission outside the code-owned debug/review behavior.
 
 The current application adapter needs the generic coming-soon presentation
 support. Older consumers safely keep these disabled campaigns closed but may hide
