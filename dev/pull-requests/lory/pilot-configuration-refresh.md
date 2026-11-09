@@ -28,3 +28,15 @@ technical-document equality, campaign references, trip-company controls, sixteen
 bundles/37 catalogue forms, eight-language coverage, six regressions and nineteen
 SVGs. No deployment or new browser retest of this merged candidate is claimed;
 earlier d9fd browser evidence remains tied to its original revision.
+
+## Initial availability and filtering
+
+The calendar opens profile and first walking only in normal use. Other campaigns
+are coming soon without dates and declare their transport modes for existing app
+filters. Block availability comes from the pilot: services/connections open,
+experiences/streets closed. Debug preview behavior belongs to app code.
+
+Actual loader/preload and preservation checks pass with this explicit source
+addition, plus 444 calendar cases, 16 bundles/258 questions, six regressions and
+19 SVGs. Questionnaire schemas and translations remain unchanged. Consumer
+integration and application deployment remain separate.

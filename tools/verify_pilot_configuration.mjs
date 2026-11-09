@@ -35,7 +35,12 @@ assert.equal(application.settings.default_language, read('index.json').pilots[0]
 assert.equal(pilot.application_config, './pilots/rome/application.json');
 assert.deepEqual(pilot.content.dataset_files, ['./pilots/rome/survey_campaigns.json']);
 assert.deepEqual(pilot.content.form_workflows, original.content.form_workflows);
-assert.deepEqual(application, JSON.parse(execFileSync('git', ['show', '5a04c0c:pilots/rome/application.json'], {cwd: root, encoding: 'utf8'})));
+const originalApplication = JSON.parse(execFileSync('git', ['show', '5a04c0c:pilots/rome/application.json'], {cwd: root, encoding: 'utf8'}));
+const unchangedApplication = structuredClone(application);
+delete unchangedApplication.settings.applications.smart_urbanity_access_together.accessTogether.contentsAvailability;
+assert.deepEqual(unchangedApplication, originalApplication, 'Technical settings preserved apart from explicit block availability');
+assert.deepEqual(effective.applications.smart_urbanity_access_together.accessTogether.contentsAvailability,
+  {services: true, connections: true, experiences: false, streets: false}, 'Block availability survives actual merge');
 assert.equal(application.settings.applications.smart_urbanity_access_together.flow.landing.avatars.length, 14);
 const schedule = read('pilots/rome/survey_campaigns.json');
 for (const container of Object.values(schedule.containers)) {

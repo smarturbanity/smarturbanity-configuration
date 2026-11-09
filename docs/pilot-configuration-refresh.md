@@ -58,3 +58,17 @@ technical-document equality, campaign references, trip-company controls, sixteen
 bundles/37 catalogue forms, eight-language coverage, six regressions and nineteen
 SVGs. No deployment or new browser retest of this merged candidate is claimed;
 earlier d9fd browser evidence remains tied to its original revision.
+
+## Campaign and block integration (2026-11-09)
+
+Integrated campaign-launch 2c78b8d without rewriting history. Normal questionnaire
+availability opens only profile and first walking; other campaigns explicitly
+remain coming soon without dates. Campaigns declare transport_modes using existing
+app group IDs. Debug visibility is code-owned, with no pilot switch.
+The pilot technical document explicitly preserves services/connections open and
+experiences/streets closed through contentsAvailability. The actual app merge and
+preload preserve this addition; all other technical settings still match main.
+
+Verified actual merge/preload, 444 calendar cases over 37 catalogue forms, exact
+mode mappings, 16 bundles/258 questions, six regression tests and 19 SVGs. Forms
+and definitions remain identical to 5a04c0c. This integration is not an app release.

@@ -29,3 +29,9 @@ technical-document equality, campaign references, trip-company controls, sixteen
 bundles/37 catalogue forms, eight-language coverage, six regressions and nineteen
 SVGs. No deployment or new browser retest of this merged candidate is claimed;
 earlier d9fd browser evidence remains tied to its original revision.
+
+Integrated campaign-launch 2c78b8d: explicit questionnaire availability, mode
+metadata, source-owned block states and code-owned debug behavior. Actual loader
+verification now permits only this explicitly requested technical-document addition
+and checks its effective merged values. All focused checks pass; questionnaires
+and definitions unchanged. No deployment claimed.
