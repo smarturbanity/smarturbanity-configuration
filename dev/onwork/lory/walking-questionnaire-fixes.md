@@ -95,3 +95,8 @@ Lory approved shortening both Italian child-accompaniment answers to "bambini o
 adolescenti", with "a scuola, allo sport o ad altre attività" in the daily answer.
 Translation-only patches: carer 2.2.1, household 1.0.2. Structural comparison
 confirms all other content, answer values, settings and languages are preserved.
+
+Lory approved the French future-questionnaires wording "Répondriez-vous aux
+prochains questionnaires, qui seront publiés chaque semaine ?". Feedback form
+1.1.2; structural comparison confirms only that French translation and the form
+patch version changed. All answers, settings and other languages are preserved.
