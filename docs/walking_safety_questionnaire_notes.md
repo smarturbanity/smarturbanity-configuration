@@ -439,8 +439,9 @@ match.
 
 The duration is metadata only, with no data impact; `post_trip` moves to 4.8.1, the others already move up on this branch.
 
-The privacy notice and how long answers are kept belong to the website notice (`pilot/rome/privacy.json`), which the
-applications read before the form's `gdpr_link`; the forms add no retention text.
+At this stage, the privacy notice and retention period were provided by the website notice
+(`pilot/rome/privacy.json`), which applications read before the form's `gdpr_link`, without retention text
+inside the forms. The approved 9 November clarification below later adds a short retention statement to the forms.
 
 Each changed form moves up one version against `main`: minor when questions or options are added or removed,
 patch for wording only.
@@ -545,3 +546,140 @@ The car-need form 3.2.0 replaces `car_need_uses` and the generic
 The local round30 candidates pass the matrix browser checks, all five questionnaire
 scenarios and the app's aggregate PR verification. The two earlier test failures
 are fixed. See [the completion inventory](round30_resolved.md) for scope and limits.
+
+### Earlier wording history imported from main
+
+The definitive round30 dispositions supersede conflicting earlier welcome/privacy guidance below; the confirmed retention policy itself is unchanged.
+
+## Walking improvements and retention clarification — 9 November 2026
+
+Lory approved explicitly including wheelchair travel and easier journeys in the
+walking-improvements question and introduction. Three additive options cover
+benches/rest places, ramps/dropped kerbs and paths clear of vehicles and other
+obstacles; all eleven existing options and response keys are preserved. The
+multiple-answer instruction moves into a separate help line. The question is
+1.2.0 and its questionnaire is 3.2.0, following the additive-option rule above.
+
+Lory confirmed the 36-month research retention period. All 54 survey introductions
+and the questionnaire-feedback introduction state the period, then deletion or
+anonymisation, in the eight languages. They identify the research team as readers,
+as the questionnaire-feedback form already did. Other questionnaire versions move
+by a patch. This addresses the retention concerns reported against welcome pages;
+the feedback recommendations question is unchanged. No existing answers are
+migrated and no browser retest or deployment is implied by this wording change.
+
+Lory also approved shortening the car-alternatives motivation question to ask what
+would help choose an alternative to the car for some trips. Unlike the old list of
+walking/cycling/shared modes, this includes the public transport answers already
+offered. Eight languages, question 1.4.0, questionnaire 1.3.0; all answer keys,
+options and limits are preserved.
+
+Lory approved the Italian age-band label "85 o più" for consistency with the
+other numeric bands. This translation-only patch is age_group 1.1.1 and profile
+1.21.2; no age-band value or other language changes.
+
+Lory approved the Italian travel-company question "Nei tuoi spostamenti abituali,
+viaggi soprattutto per conto tuo o con altre persone?" and answer "Soprattutto
+per conto mio". Translation-only patches: frequent_trip_company 2.0.3, your_travel
+1.0.2. Response values, other answers and other languages are preserved.
+
+Lory approved adding "Annunci o informazioni sul viaggio che non potevo sentire
+o leggere" to post-trip incidents, translated in all eight languages. The new
+response value is `inaccessible_travel_information`; trip_incidents 2.7.0,
+post-trip 4.9.0. Existing answers and exclusive none remain unchanged.
+Both trip welcome pages now state the confirmed 36-month research retention
+period followed by deletion or anonymisation, reusing the approved feedback-form
+translations; pre-trip 4.6.1. Structural comparison verifies only these additions,
+their translations and version changes; no browser/persona retest is implied.
+Lory approved the neutral Italian economic-status explanation: "Lo chiediamo per
+capire come le possibilità economiche influiscono sugli spostamenti."
+Translation-only patches: economic_status 2.2.1, profile 1.21.3. Structural
+comparison confirms that all other content, settings and languages are preserved.
+
+Lory approved explaining tactile paving in Italian as "Percorsi riconoscibili
+con i piedi o il bastone, per chi non vede o vede poco". Translation-only
+patches: walk_want_changes 1.2.1, walking improvements 3.2.1. Structural comparison
+confirms all response values, settings, other content and languages are preserved.
+
+Lory approved the Italian option "Spazi per chi va a piedi o in sedia a rotelle, separati da biciclette e monopattini elettrici".
+Translation-only patches: walk_want_changes 1.2.2, walking improvements 3.2.2.
+Structural comparison confirms all answer values, settings, other content and
+languages are preserved. No browser or persona retest is claimed.
+
+Lory approved the Italian title "A piedi o in sedia a rotelle – Cosa ti
+aiuterebbe", including its SmartUrbanity-prefixed form. Walking improvements
+3.2.3; structural comparison confirms only both title translations and the form
+patch version changed. All question definitions and other languages are preserved.
+
+Lory approved adding "disabilità" to the Italian examples in the walking
+identity-harassment question. Translation-only patches: walk_identity_harassment
+1.3.2, walking security 3.1.2. Structural comparison confirms all answer values,
+settings, other content and languages are preserved. No browser/persona retest.
+
+Lory approved "Angoli nascosti o visuale ostacolata" for the Italian walking
+insecurity factor. Translation-only patches: walk_insecurity_factors 3.2.1,
+walking security 3.1.3. Structural comparison confirms all other content, answer
+values, settings and languages are preserved. No browser/persona retest.
+
+Lory approved shortening both Italian child-accompaniment answers to "bambini o
+adolescenti", with "a scuola, allo sport o ad altre attività" in the daily answer.
+Translation-only patches: carer 2.2.1, household 1.0.2. Structural comparison
+confirms all other content, answer values, settings and languages are preserved.
+
+Lory approved the French future-questionnaires wording "Répondriez-vous aux
+prochains questionnaires, qui seront publiés chaque semaine ?". Feedback form
+1.1.2; structural comparison confirms only that French translation and the form
+patch version changed. All answers, settings and other languages are preserved.
+
+Lory approved the French usefulness question "Dans quelle mesure trouvez-vous
+utile de répondre aux questionnaires ?", asking directly about the experience.
+Feedback form 1.1.3; structural comparison confirms only that French translation
+and the form patch version changed. Answers, settings and other languages remain.
+
+Lory approved simplifying the French welcome phrase to "les pages SmartUrbanity
+qui vous posent des questions sur vous, vos déplacements et les lieux que vous
+fréquentez". Feedback form 1.1.4; structural comparison confirms only that phrase
+and the form patch version changed. Privacy, confirmed 36-month retention,
+questions, answers, settings and other languages are preserved.
+
+## Complete round30 language review — 2026-11-09
+
+Lory authorised fixing the remaining language findings together. Reviewed all 64
+language reports in the 58 retest response files, including duplicate reports and
+wording already superseded by the preceding approved changes. This is a review
+of reported language issues against current configuration, not a fresh user test
+or a claim that every possible wording issue in the full catalogue is absent.
+
+Remaining corrections:
+- Car alternatives: complete Italian introduction; simpler long-distance walking
+  exclusion without attributing limitations to age; dependent-adult care included
+  in examples; clearer negative motivation. Its negative answers were already
+  exclusive, so no selection behaviour changes. Form 1.3.1, motivation 1.4.1.
+- Walking and public-transport security: replace the uncommon Italian term for
+  following someone with a plain explanation. Public transport also uses the
+  approved hidden-corners wording and includes disability among harassment
+  examples, consistently with walking.
+- Add two distinct hearing-accessibility answers, translated into all eight
+  languages: difficulty hearing people/vehicles approaching from behind when
+  walking; missing written/visual travel information on transport or at stops.
+  Preserve the sight-orientation answer and every prior response value. Both
+  security forms 3.2.0; walking factors 3.3.0, transit factors 1.2.0; affected
+  Italian-only day questions patch versions, transit harassment 1.1.1.
+- Feedback: explicit separate opening/understanding and answering/sending problem
+  prompts in all eight languages; natural Turkish weekly-publication wording;
+  shorter Turkish/Persian welcome; direct German usefulness question; natural
+  Hungarian title. Form 1.2.0. Previous French corrections are preserved.
+
+Judgment on remaining suggestions: retain consistent Italian informal address
+rather than switching register based on age; retain the gender question whose
+additional answers are supplied by the app; retain lighting questions with the
+existing not-applicable answer; retain explicit wheelchair wording because people
+walking with a cane are already included. No extra question or forced disability
+disclosure is introduced for those stylistic suggestions. Do not adopt claims
+about aggregate-only use that are not established by current policy.
+
+Validation: all questionnaire JSON parses. Structural comparisons preserve stable
+answer keys, every existing option/value/exclusivity, required/show-if settings,
+privacy and the confirmed 36-month retention. New prompt/option keys have all
+eight translations. No application deployment or new browser/persona retest is
+claimed; consumers must adopt the new versioned configuration through release.

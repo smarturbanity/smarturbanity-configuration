@@ -22,3 +22,9 @@ corrected and the full questionnaire suite passes.
 
 See [the completion inventory](../../docs/round30_resolved.md). Historical
 persona outcomes are unchanged. No push, pin change or remote deployment.
+
+## Main merge conflict resolution
+
+The nine conflicts retain the definitive round30 question definitions: they already incorporate selected approved language corrections from a889101 and add newer product decisions. Both documentation histories remain, with the newer dispositions taking precedence. Incoming changes to unrelated forms, including confirmed 36-month text in pre/post-trip forms, remain. No response values, conditions or accepted accessibility options are lost.
+
+Fresh checks: all form JSON parses; the eight conflicted questionnaire definitions preserve question inventory, types, required/conditional settings, option values and exclusivity; all visible strings have entries in all eight languages; no conflict markers or whitespace errors remain. Previous browser checks were not rerun for this conflict resolution. No application deployment or remote push.
