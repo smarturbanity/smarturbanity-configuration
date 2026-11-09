@@ -42,3 +42,19 @@ After the isolated refactoring commit, Lory requested a pre-trip company correct
 That separate change is described in [the trip-survey comparison](trip-survey-comparison.md).
 The original byte-preservation statement above applies to the refactoring itself;
 the subsequent pre-trip revision is an intentional, separately tested exception.
+
+
+## Current-main integration (2026-11-09)
+
+Merged main 5a04c0c without rewriting the refactoring history. All forms and
+definitions match that baseline byte for byte, including the unified profile,
+minor wording refinements and pre-trip company correction. Preserved all fourteen
+Flowi avatars, current report workflows and catalogue. Retained sparse modeler
+settings, embedded services and separate technical settings/calendar. Runtime
+export no longer requires the retired base.json.
+
+Validation passes: actual CityMaaS merge/preload, current pilot-value preservation,
+technical-document equality, campaign references, trip-company controls, sixteen
+bundles/37 catalogue forms, eight-language coverage, six regressions and nineteen
+SVGs. No deployment or new browser retest of this merged candidate is claimed;
+earlier d9fd browser evidence remains tied to its original revision.

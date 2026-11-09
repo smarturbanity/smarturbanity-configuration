@@ -82,3 +82,17 @@ sections, answers and dictionaries are unchanged. Old unreferenced illustrations
 are removed. The separate section inventory is also removed at Lory's request;
 the verifier reads the active catalogue and forms directly. SVG checks and visual
 contact-sheet review pass; no new app-flow or participant acceptance is claimed.
+
+Approved follow-up (2026-11-09): the optional mobility-support question now
+includes powered wheelchair or mobility scooter alongside manual wheelchair.
+Existing eight-language labels and stable values are reused; versions are 2.1.0.
+Language and conditional bundle checks pass with the actual app consumers.
+Browser verification passes for six profile paths and twelve explicit response
+serialization cases. Ten comfort questions clarify walking versus waiting/onboard
+public-transport contexts in eight languages; all ten Italian helps render in the
+actual browser editor. Six regression tests and location-contract checks pass.
+No new participant acceptance, remote backend or app deployment is claimed;
+historical issues are not declared resolved by these technical checks.
+The context distinction is streets/pavements versus waiting/onboard public
+transport. Transit help applies to everyone without an additional wheelchair
+qualification, as requested by the user.

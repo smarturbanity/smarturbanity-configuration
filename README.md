@@ -6,7 +6,7 @@ The repository provides version-controlled, machine-readable configuration share
 
 ## Configuration principles
 
-The repository follows three main principles:
+The repository follows these principles:
 
 1. **Code defaults** provide the shared runtime baseline in CityMaaS.
 2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
@@ -63,11 +63,7 @@ smarturbanity-configuration/
 │   └── usabilityTests/
 │
 ├── pilots/
-│   ├── rome/
-│   ├── karlsruhe/
-│   ├── izmir/
-│   ├── lyon/
-│   └── zurich/
+│   └── rome/
 │
 └── README.md
 ```
@@ -101,6 +97,9 @@ receive the same code-owned defaults separately from this repository. This branc
 does not update or deploy either consumer.
 
 See [the migration and verification record](docs/pilot-configuration-refresh.md).
+
+See [delivery notes](docs/questionnaire-runtime-refresh.md) to export configuration,
+questionnaires and assets together from one commit for bundled app delivery.
 
 ## Shared definitions
 

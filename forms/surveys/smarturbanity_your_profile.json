@@ -2,9 +2,9 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Profile",
     "questionnaire_id": "smarturbanity_your_profile",
-    "questionnaire_version": "1.22.2",
+    "questionnaire_version": "2.1.0",
     "project": "SmartUrbanity",
-    "estimated_minutes": 2,
+    "estimated_minutes": 5,
     "options": {
       "review_mode": false,
       "save_user_id": true,
@@ -16,7 +16,7 @@
       "title": "Welcome to Your Profile",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_your_profile.svg",
       "image_alt": "#Your Profile",
-      "description": "<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
+      "description": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -424,6 +424,449 @@
             ]
           }
         ]
+      },
+      {
+        "title": "Home and work",
+        "backgroundColor": "#f0f0f0",
+        "description": "<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>",
+        "questions": [
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How many adults (aged 18 or older), including yourself, live in your home?",
+            "answer_key": "household_adults",
+            "question_id": "household_adults",
+            "question_version": "1.1.0",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "1 (only myself)",
+                "value": "1"
+              },
+              {
+                "text": "2",
+                "value": "2"
+              },
+              {
+                "text": "3",
+                "value": "3"
+              },
+              {
+                "text": "4",
+                "value": "4"
+              },
+              {
+                "text": "5 or more",
+                "value": "5_plus"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "How many children (aged under 18) live in your home?",
+            "answer_key": "household_children_under_18",
+            "question_id": "household_children_under_18",
+            "question_version": "1.0.0",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "None",
+                "value": "0"
+              },
+              {
+                "text": "1",
+                "value": "1"
+              },
+              {
+                "text": "2",
+                "value": "2"
+              },
+              {
+                "text": "3 or more",
+                "value": "3_plus"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.",
+            "answer_key": "carer",
+            "question_id": "carer",
+            "question_version": "2.2.2",
+            "question_type": "multiple_options",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)",
+                "value": "escorts_minors_daily"
+              },
+              {
+                "text": "Yes, I accompany children or teenagers at least once a week",
+                "value": "escorts_minors_weekly"
+              },
+              {
+                "text": "Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)",
+                "value": "yes_lives_with_me"
+              },
+              {
+                "text": "Yes, I help an adult who does not live with me",
+                "value": "yes_lives_elsewhere"
+              },
+              {
+                "text": "No",
+                "value": "no",
+                "exclusive": true
+              }
+            ]
+          },
+          {
+            "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
+            "answer_key": "dog_walks",
+            "required": false,
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "pet_walks",
+            "question_version": "1.0.1",
+            "privacy_classification": "heightened_personal"
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Which of the following vehicles are available in your household? ",
+            "answer_key": "household_vehicles",
+            "question_id": "household_vehicles",
+            "question_version": "2.1.4",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bicycle/e-bike",
+                "value": "bicycle_e_bike"
+              },
+              {
+                "text": "E-scooter",
+                "value": "e_scooter"
+              },
+              {
+                "text": "Powered wheelchair or mobility scooter",
+                "value": "powered_wheelchair"
+              },
+              {
+                "text": "No vehicle available",
+                "value": "no_vehicle_available",
+                "exclusive": true
+              }
+            ]
+          },
+          {
+            "text": "Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)",
+            "answer_key": "mobility_support_used",
+            "question_id": "mobility_support_used",
+            "question_version": "2.1.0",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "add_prefer_not_to_say": true,
+            "privacy_classification": "special_category_health",
+            "options": [
+              {
+                "text": "Pushchair or pram",
+                "value": "pushchair"
+              },
+              {
+                "text": "Manual wheelchair",
+                "value": "manual_wheelchair"
+              },
+              {
+                "text": "Powered wheelchair or mobility scooter",
+                "value": "powered_wheelchair"
+              },
+              {
+                "text": "Walking stick, crutches or walking frame",
+                "value": "walking_aid"
+              }
+            ],
+            "add_none": true
+          },
+          {
+            "text": "Which of the following do you personally use regularly? (Select all that apply)",
+            "answer_key": "vehicles_used",
+            "question_type": "multiple_options",
+            "options": [
+              {
+                "text": "Car",
+                "value": "car"
+              },
+              {
+                "text": "Motorcycle, scooter or moped",
+                "value": "motorcycle"
+              },
+              {
+                "text": "Bicycle/e-bike",
+                "value": "bicycle_e_bike"
+              },
+              {
+                "text": "E-scooter",
+                "value": "e_scooter"
+              },
+              {
+                "text": "Powered wheelchair or mobility scooter",
+                "value": "powered_wheelchair"
+              },
+              {
+                "text": "On foot or in a wheelchair",
+                "value": "walking"
+              },
+              {
+                "text": "Public transport",
+                "value": "public_transport"
+              },
+              {
+                "text": "Shared bikes, e-scooters or cars",
+                "value": "shared_vehicles"
+              },
+              {
+                "text": "None",
+                "value": "none",
+                "exclusive": true
+              }
+            ],
+            "add_other": true,
+            "question_id": "vehicles_used",
+            "question_version": "1.2.1",
+            "privacy_classification": "heightened_personal",
+            "required": false
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you hold a valid driving license? (Car, motorcycle or both)",
+            "answer_key": "driving_licence",
+            "question_id": "driving_licence",
+            "question_version": "2.0.0",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, but I do not drive",
+                "value": "yes_no_longer_drives"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "If there is a car in your household, how easy is it for you to use it when you need it?",
+            "answer_key": "vehicle_ease",
+            "question_id": "vehicle_ease",
+            "question_version": "2.1.3",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": {
+              "household_vehicles": "car",
+              "driving_licence": "yes"
+            },
+            "options": [
+              {
+                "text": "Very difficult (rarely available)",
+                "value": "very_difficult"
+              },
+              {
+                "text": "Difficult (often unavailable or shared)",
+                "value": "difficult"
+              },
+              {
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy (usually available)",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy (almost always available)",
+                "value": "very_easy"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.",
+            "answer_key": "employment",
+            "question_id": "employment",
+            "question_version": "2.2.4",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "Employed full-time",
+                "value": "employed_full_time"
+              },
+              {
+                "text": "Employed part-time",
+                "value": "employed_part_time"
+              },
+              {
+                "text": "Occasional or on-call work",
+                "value": "occasionally_employed"
+              },
+              {
+                "text": "Self-employed or freelance (full-time)",
+                "value": "self_employed_full_time"
+              },
+              {
+                "text": "Self-employed or freelance (part-time)",
+                "value": "self_employed_part_time"
+              },
+              {
+                "text": "Business owner or entrepreneur",
+                "value": "business_owner"
+              },
+              {
+                "text": "Work through an app or platform (e.g. delivery rider, ride-hailing driver)",
+                "value": "platform_work"
+              },
+              {
+                "text": "Student (school, university or training)",
+                "value": "student"
+              },
+              {
+                "text": "Homemaker",
+                "value": "homemaker"
+              },
+              {
+                "text": "Caring full-time for a family member",
+                "value": "family_carer"
+              },
+              {
+                "text": "Retired",
+                "value": "retired"
+              },
+              {
+                "text": "Unemployed looking for work",
+                "value": "unemployed_looking"
+              },
+              {
+                "text": "Unemployed not looking for work",
+                "value": "unemployed_not_looking"
+              },
+              {
+                "text": "Not working for health reasons",
+                "value": "unable_to_work_health"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
+            "answer_key": "flexible_hours",
+            "question_id": "flexible_hours",
+            "question_version": "2.0.0",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": {
+              "employment": [
+                "employed_full_time",
+                "employed_part_time",
+                "occasionally_employed",
+                "self_employed_full_time",
+                "self_employed_part_time",
+                "business_owner",
+                "platform_work"
+              ]
+            },
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Somewhat (within a 1-2 hour window)",
+                "value": "somewhat"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I am not currently employed",
+                "value": "not_employed"
+              }
+            ]
+          },
+          {
+            "privacy_classification": "heightened_personal",
+            "text": "Do you currently work remotely (partly or fully)?",
+            "answer_key": "remote_work",
+            "question_id": "remote_work",
+            "question_version": "2.0.0",
+            "question_type": "single_option",
+            "required": false,
+            "checks_inline": false,
+            "show_if": {
+              "employment": [
+                "employed_full_time",
+                "employed_part_time",
+                "occasionally_employed",
+                "self_employed_full_time",
+                "self_employed_part_time",
+                "business_owner",
+                "platform_work"
+              ]
+            },
+            "options": [
+              {
+                "text": "Yes (3 days or more in a week)",
+                "value": "yes_3_plus_days"
+              },
+              {
+                "text": "Yes, occasionally (1-2 days in a week)",
+                "value": "yes_1_2_days"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I am not currently employed",
+                "value": "not_employed"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -517,8 +960,73 @@
       "#We ask because money can limit how people get around.": "We ask because money can limit how people get around.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>",
       "#Choose up to 3 main reasons.": "Choose up to 3 main reasons.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "How many adults (aged 18 or older), including yourself, live in your home?",
+      "#1 (only myself)": "1 (only myself)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 or more",
+      "#How many children (aged under 18) live in your home?": "How many children (aged under 18) live in your home?",
+      "#None": "None",
+      "#Shared bikes, e-scooters or cars": "Shared bikes, e-scooters or cars",
+      "#1": "1",
+      "#3 or more": "3 or more",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)",
+      "#Yes, I accompany children or teenagers at least once a week": "Yes, I accompany children or teenagers at least once a week",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)",
+      "#Yes, I help an adult who does not live with me": "Yes, I help an adult who does not live with me",
+      "#Which of the following vehicles are available in your household? ": "Which of the following vehicles are available in your household? ",
+      "#Car": "Car",
+      "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
+      "#Bicycle/e-bike": "Bicycle/e-bike",
+      "#E-scooter": "E-scooter",
+      "#Powered wheelchair or mobility scooter": "Powered wheelchair or mobility scooter",
+      "#No vehicle available": "No vehicle available",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Do you hold a valid driving license? (Car, motorcycle or both)",
+      "#Yes": "Yes",
+      "#Yes, but I do not drive": "Yes, but I do not drive",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "If there is a car in your household, how easy is it for you to use it when you need it?",
+      "#Very difficult (rarely available)": "Very difficult (rarely available)",
+      "#Difficult (often unavailable or shared)": "Difficult (often unavailable or shared)",
+      "#Neither easy nor difficult": "Neither easy nor difficult",
+      "#Easy (usually available)": "Easy (usually available)",
+      "#Very easy (almost always available)": "Very easy (almost always available)",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.",
+      "#Employed full-time": "Employed full-time",
+      "#Employed part-time": "Employed part-time",
+      "#Occasional or on-call work": "Occasional or on-call work",
+      "#Self-employed or freelance (full-time)": "Self-employed or freelance (full-time)",
+      "#Self-employed or freelance (part-time)": "Self-employed or freelance (part-time)",
+      "#Business owner or entrepreneur": "Business owner or entrepreneur",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Work through an app or platform (e.g. delivery rider, ride-hailing driver)",
+      "#Student (school, university or training)": "Student (school, university or training)",
+      "#Homemaker": "Homemaker",
+      "#Caring full-time for a family member": "Caring full-time for a family member",
+      "#Retired": "Retired",
+      "#Unemployed looking for work": "Unemployed looking for work",
+      "#Unemployed not looking for work": "Unemployed not looking for work",
+      "#Not working for health reasons": "Not working for health reasons",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
+      "#Somewhat (within a 1-2 hour window)": "Somewhat (within a 1-2 hour window)",
+      "#I am not currently employed": "I am not currently employed",
+      "#Do you currently work remotely (partly or fully)?": "Do you currently work remotely (partly or fully)?",
+      "#Yes (3 days or more in a week)": "Yes (3 days or more in a week)",
+      "#Yes, occasionally (1-2 days in a week)": "Yes, occasionally (1-2 days in a week)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Which of the following do you personally use regularly? (Select all that apply)",
+      "#On foot or in a wheelchair": "On foot or in a wheelchair",
+      "#Public transport": "Public transport",
+      "#Home and work": "Home and work",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Home and work",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)",
+      "#Pushchair or pram": "Pushchair or pram",
+      "#Manual wheelchair": "Manual wheelchair",
+      "#Walking stick, crutches or walking frame": "Walking stick, crutches or walking frame",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
     },
     "it": {
       "#Thank you!": "Grazie!",
@@ -609,8 +1117,73 @@
       "#We ask because money can limit how people get around.": "Lo chiediamo perché il denaro può limitare il modo in cui le persone si spostano.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Alcune domande su di te. Ci aiutano a capire quanto è facile per persone diverse muoversi e raggiungere i luoghi di cui hanno bisogno.</p>",
       "#Choose up to 3 main reasons.": "Scegli al massimo 3 motivi principali.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Alcune domande su di te e sul luogo in cui vivi.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Prima di partecipare, leggi l’informativa privacy: spiega chi può accedere alle tue risposte e per quanto tempo vengono conservate.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "La domanda riguarda te, non le persone che aiuti. Esempi: cammino, vista, udito, attenzione, dolore o ausili per muoversi."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "La domanda riguarda te, non le persone che aiuti. Esempi: cammino, vista, udito, attenzione, dolore o ausili per muoversi.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "Se in casa tua c'è un'automobile, quanto è facile per te usarla quando ne hai bisogno?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Quante persone adulte (di 18 anni o più) vivono nella tua casa, contando anche te?",
+      "#1 (only myself)": "1 (solo io)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 o più",
+      "#How many children (aged under 18) live in your home?": "Quante persone con meno di 18 anni vivono nella tua casa?",
+      "#3 or more": "3 o più",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Accompagni regolarmente bambini o ragazzi, oppure aiuti un adulto a spostarsi o nelle attività quotidiane? Puoi scegliere più risposte.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Sì, accompagno bambini o adolescenti quasi ogni giorno (es. a scuola, allo sport o ad altre attività)",
+      "#Yes, I accompany children or teenagers at least once a week": "Sì, accompagno bambini o adolescenti almeno una volta alla settimana",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Sì, aiuto una persona adulta che vive con me e ha bisogno di assistenza (per esempio per demenza o disabilità)",
+      "#Yes, I help an adult who does not live with me": "Sì, aiuto una persona adulta che non vive con me",
+      "#Which of the following vehicles are available in your household? ": "Quali tra questi veicoli sono disponibili a casa tua?",
+      "#Car": "Auto",
+      "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
+      "#Bicycle/e-bike": "Bicicletta o bici elettrica",
+      "#E-scooter": "Monopattino elettrico",
+      "#Powered wheelchair or mobility scooter": "Sedia a rotelle motorizzata o scooter per la mobilità",
+      "#No vehicle available": "Nessun veicolo disponibile",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Possiedi una patente di guida valida? (Auto, moto o entrambe)",
+      "#Yes, but I do not drive": "Sì, ma non guido",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Quale di queste descrive meglio la tua attuale situazione lavorativa o di studio? Se studi e lavori, puoi scegliere due risposte.",
+      "#Employed full-time": "Lavoro dipendente a tempo pieno",
+      "#Employed part-time": "Lavoro dipendente a tempo parziale",
+      "#Occasional or on-call work": "Lavoro occasionale o a chiamata",
+      "#Self-employed or freelance (full-time)": "Lavoro autonomo o libera professione (tempo pieno)",
+      "#Self-employed or freelance (part-time)": "Lavoro autonomo o libera professione (part-time)",
+      "#Student (school, university or training)": "Studio (scuola, università o formazione)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Alcune domande su di te e su chi vive con te. Ci aiutano a capire quanto è facile per persone diverse muoversi e raggiungere i luoghi di cui hanno bisogno.</p>",
+      "#Homemaker": "Mi occupo della casa",
+      "#Caring full-time for a family member": "Mi occupo a tempo pieno di una persona della mia famiglia",
+      "#Business owner or entrepreneur": "Ho un'impresa o un'attività in proprio",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Lavoro tramite app o piattaforma (es. rider per consegne, autista di auto con conducente tramite app)",
+      "#None": "Nessuna",
+      "#Shared bikes, e-scooters or cars": "Bici, monopattini o auto in condivisione",
+      "#Retired": "In pensione",
+      "#Unemployed looking for work": "Senza lavoro, in cerca di occupazione",
+      "#Unemployed not looking for work": "Senza lavoro, non in cerca di occupazione",
+      "#Not working for health reasons": "Non lavoro per motivi di salute",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Hai un orario di lavoro flessibile, cioè puoi scegliere o modificare l’orario di inizio e fine?",
+      "#Yes": "Sì",
+      "#Somewhat (within a 1-2 hour window)": "Parzialmente (entro una fascia di 1-2 ore)",
+      "#I am not currently employed": "Attualmente non lavoro",
+      "#1": "1",
+      "#Very difficult (rarely available)": "Molto difficile (raramente disponibile)",
+      "#Difficult (often unavailable or shared)": "Difficile (spesso non disponibile o condivisa)",
+      "#Neither easy nor difficult": "Né facile né difficile",
+      "#Easy (usually available)": "Facile (solitamente disponibile)",
+      "#Very easy (almost always available)": "Molto facile (quasi sempre disponibile)",
+      "#Do you currently work remotely (partly or fully)?": "Attualmente lavori da remoto, parzialmente o completamente?",
+      "#Yes (3 days or more in a week)": "Sì (3 o più giorni alla settimana)",
+      "#Yes, occasionally (1-2 days in a week)": "Sì, occasionalmente (1-2 giorni alla settimana)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Hai un animale domestico che può comportare ulteriori spostamenti a piedi (ad es. un cane)?",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Quali tra questi modi di spostarti usi personalmente con regolarità? (Seleziona tutte le opzioni applicabili)",
+      "#On foot or in a wheelchair": "A piedi o in sedia a rotelle",
+      "#Public transport": "Trasporto pubblico",
+      "#Home and work": "Casa e lavoro",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Casa e lavoro",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande su chi vive con te, sui veicoli e sul lavoro.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Quali di questi usi per spostarti, per te o per una persona che accompagni? (Puoi scegliere più risposte)",
+      "#Pushchair or pram": "Passeggino o carrozzina per bambini",
+      "#Manual wheelchair": "Sedia a rotelle manuale",
+      "#Walking stick, crutches or walking frame": "Bastone, stampelle o deambulatore",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Alcune domande su di te, sul luogo in cui vivi, su chi vive con te, sui mezzi e sul lavoro.</p><ol><li>Su di te</li><li>Casa e lavoro</li></ol><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Prima di partecipare, leggi l’informativa privacy: spiega chi può accedere alle tue risposte e per quanto tempo vengono conservate.</p>"
     },
     "fr": {
       "#Thank you!": "Merci !",
@@ -701,8 +1274,73 @@
       "#We ask because money can limit how people get around.": "Nous posons cette question parce que l’argent peut limiter la façon dont les personnes se déplacent.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Quelques questions sur vous. Elles nous aident à comprendre dans quelle mesure il est facile, pour différentes personnes, de se déplacer et de rejoindre les lieux dont elles ont besoin.</p>",
       "#Choose up to 3 main reasons.": "Choisissez jusqu’à 3 raisons principales.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Quelques questions sur vous et l’endroit où vous habitez.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Avant de participer, lisez la notice de confidentialité : elle explique qui peut accéder à vos réponses et combien de temps elles sont conservées.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Cette question vous concerne, pas les personnes que vous aidez. Exemples : marche, vue, audition, attention, douleur ou aides à la mobilité."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Cette question vous concerne, pas les personnes que vous aidez. Exemples : marche, vue, audition, attention, douleur ou aides à la mobilité.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "S’il y a une voiture dans votre foyer, dans quelle mesure vous est-il facile de l’utiliser quand vous en avez besoin ?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Combien de personnes adultes (de 18 ans ou plus), y compris vous, vivent dans votre logement ?",
+      "#1 (only myself)": "1 (moi uniquement)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 ou plus",
+      "#How many children (aged under 18) live in your home?": "Combien d’enfants (de moins de 18 ans) vivent dans votre logement ?",
+      "#3 or more": "3 ou plus",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Accompagnez-vous ou aidez-vous régulièrement une personne qui a besoin de votre aide pour se déplacer ou dans la vie quotidienne ? Vous pouvez choisir plusieurs réponses.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Oui, j’accompagne des enfants ou des jeunes presque tous les jours (par ex. à l’école, au sport ou à d’autres activités)",
+      "#Yes, I accompany children or teenagers at least once a week": "Oui, j’accompagne des enfants ou des jeunes au moins une fois par semaine",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Oui, j’aide une personne adulte qui vit avec moi (par ex. une personne âgée de ma famille, une personne atteinte de démence ou en situation de handicap)",
+      "#Yes, I help an adult who does not live with me": "Oui, j’aide une personne adulte qui ne vit pas avec moi",
+      "#Which of the following vehicles are available in your household? ": "Lesquels des véhicules suivants sont disponibles dans votre foyer ?",
+      "#Car": "Voiture",
+      "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
+      "#Bicycle/e-bike": "Vélo / vélo électrique",
+      "#E-scooter": "Trottinette électrique",
+      "#Powered wheelchair or mobility scooter": "Fauteuil roulant électrique ou scooter de mobilité",
+      "#No vehicle available": "Aucun véhicule disponible",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Avez-vous un permis de conduire valide ? (Voiture, moto ou les deux)",
+      "#Yes, but I do not drive": "Oui, mais je ne conduis pas",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Laquelle de ces situations décrit le mieux votre activité professionnelle ou vos études actuelles ? Si vous étudiez et travaillez, vous pouvez choisir deux réponses.",
+      "#Employed full-time": "Emploi salarié à temps plein",
+      "#Employed part-time": "Emploi salarié à temps partiel",
+      "#Occasional or on-call work": "Travail occasionnel ou sur appel",
+      "#Self-employed or freelance (full-time)": "Travail indépendant ou en freelance (temps plein)",
+      "#Self-employed or freelance (part-time)": "Travail indépendant ou en freelance (temps partiel)",
+      "#Student (school, university or training)": "En études (école, université ou formation)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Quelques questions sur vous et votre foyer. Elles nous aident à comprendre dans quelle mesure il est facile, pour différentes personnes, de se déplacer et de rejoindre les lieux dont elles ont besoin.</p>",
+      "#Homemaker": "Personne au foyer",
+      "#Caring full-time for a family member": "Soins à temps plein à une personne de la famille",
+      "#Business owner or entrepreneur": "Propriétaire d’entreprise ou activité entrepreneuriale",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Travail via une application ou une plateforme (par ex. livraisons à domicile, transport de personnes en VTC)",
+      "#None": "Aucun",
+      "#Shared bikes, e-scooters or cars": "Vélos, trottinettes ou voitures en partage",
+      "#Retired": "À la retraite",
+      "#Unemployed looking for work": "Sans emploi et à la recherche d’un emploi",
+      "#Unemployed not looking for work": "Sans emploi et ne recherchant pas d’emploi",
+      "#Not working for health reasons": "Sans activité professionnelle pour raison de santé",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Avez-vous des horaires de travail flexibles, c’est-à-dire pouvez-vous choisir ou modifier vos heures de début et de fin ?",
+      "#Yes": "Oui",
+      "#Somewhat (within a 1-2 hour window)": "En partie (avec une marge de 1 à 2 heures)",
+      "#I am not currently employed": "Je ne travaille pas actuellement",
+      "#1": "1",
+      "#Very difficult (rarely available)": "Très difficile (rarement disponible)",
+      "#Difficult (often unavailable or shared)": "Difficile (souvent indisponible ou partagé)",
+      "#Neither easy nor difficult": "Ni facile ni difficile",
+      "#Easy (usually available)": "Facile (généralement disponible)",
+      "#Very easy (almost always available)": "Très facile (presque toujours disponible)",
+      "#Do you currently work remotely (partly or fully)?": "Travaillez-vous actuellement à distance, en partie ou entièrement ?",
+      "#Yes (3 days or more in a week)": "Oui (3 jours ou plus par semaine)",
+      "#Yes, occasionally (1-2 days in a week)": "Oui, occasionnellement (1 à 2 jours par semaine)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Avez-vous un animal domestique qui peut entraîner des déplacements supplémentaires à pied, par exemple un chien ?",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Parmi les modes suivants, lesquels utilisez-vous personnellement de façon régulière ? (Sélectionnez toutes les réponses qui s’appliquent)",
+      "#On foot or in a wheelchair": "À pied ou en fauteuil roulant",
+      "#Public transport": "Transports publics",
+      "#Home and work": "Foyer et travail",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Foyer et travail",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur votre foyer, vos véhicules et votre travail.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Lesquels utilisez-vous pour vous déplacer, pour vous-même ou une personne que vous accompagnez ? (Plusieurs réponses possibles)",
+      "#Pushchair or pram": "Poussette ou landau",
+      "#Manual wheelchair": "Fauteuil roulant manuel",
+      "#Walking stick, crutches or walking frame": "Canne, béquilles ou déambulateur",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Quelques questions sur vous, votre lieu de vie, votre foyer, vos véhicules et votre travail.</p><ol><li>À propos de vous</li><li>Foyer et travail</li></ol><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Avant de participer, lisez la notice de confidentialité : elle explique qui peut accéder à vos réponses et combien de temps elles sont conservées.</p>"
     },
     "de": {
       "#Thank you!": "Vielen Dank!",
@@ -793,8 +1431,73 @@
       "#We ask because money can limit how people get around.": "Wir fragen, weil Geld einschränken kann, wie Menschen unterwegs sind.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Einige Fragen zu Ihrer Person. Sie helfen uns zu verstehen, wie leicht es für verschiedene Menschen ist, unterwegs zu sein und die Orte zu erreichen, die sie brauchen.</p>",
       "#Choose up to 3 main reasons.": "Wählen Sie bis zu 3 Hauptgründe.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Einige Fragen zu Ihrer Person und dem Ort, an dem Sie wohnen.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Lesen Sie vor der Teilnahme die Datenschutzhinweise: Dort steht, wer auf Ihre Antworten zugreifen kann und wie lange sie gespeichert werden.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Diese Frage betrifft Sie selbst, nicht Personen, denen Sie helfen. Beispiele: Gehen, Sehen, Hören, Aufmerksamkeit, Schmerzen oder Mobilitätshilfen."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Diese Frage betrifft Sie selbst, nicht Personen, denen Sie helfen. Beispiele: Gehen, Sehen, Hören, Aufmerksamkeit, Schmerzen oder Mobilitätshilfen.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "Falls es in Ihrem Haushalt ein Auto gibt: Wie leicht können Sie es nutzen, wenn Sie es brauchen?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Wie viele Erwachsene (ab 18 Jahren), Sie selbst eingeschlossen, leben in Ihrem Haushalt?",
+      "#1 (only myself)": "1 (nur ich)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 oder mehr",
+      "#How many children (aged under 18) live in your home?": "Wie viele Kinder (unter 18 Jahren) leben in Ihrem Haushalt?",
+      "#3 or more": "3 oder mehr",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Begleiten oder unterstützen Sie regelmäßig eine Person, die Ihre Hilfe braucht, um unterwegs zu sein oder den Alltag zu bewältigen? Sie können mehrere Antworten auswählen.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Ja, ich begleite fast täglich Kinder oder Jugendliche (z. B. zur Schule, zum Sport oder zu anderen Aktivitäten)",
+      "#Yes, I accompany children or teenagers at least once a week": "Ja, ich begleite mindestens einmal pro Woche Kinder oder Jugendliche",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Ja, ich helfe einer erwachsenen Person, die mit mir lebt (z. B. einem älteren Familienmitglied, einer Person mit Demenz oder mit Behinderung)",
+      "#Yes, I help an adult who does not live with me": "Ja, ich helfe einer erwachsenen Person, die nicht mit mir zusammenlebt",
+      "#Which of the following vehicles are available in your household? ": "Welche der folgenden Fahrzeuge stehen Ihrem Haushalt zur Verfügung?",
+      "#Car": "Auto",
+      "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
+      "#Bicycle/e-bike": "Fahrrad / E-Bike",
+      "#E-scooter": "E-Scooter",
+      "#Powered wheelchair or mobility scooter": "Elektrorollstuhl oder Elektromobil",
+      "#No vehicle available": "Kein Fahrzeug verfügbar",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Haben Sie einen gültigen Führerschein? (Auto, Motorrad oder beides)",
+      "#Yes, but I do not drive": "Ja, aber ich fahre nicht selbst",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Welche dieser Angaben beschreibt Ihre aktuelle Arbeits- oder Ausbildungssituation am besten? Wenn Sie sowohl lernen oder studieren als auch arbeiten, können Sie zwei Antworten auswählen.",
+      "#Employed full-time": "Vollzeit beschäftigt",
+      "#Employed part-time": "Teilzeit beschäftigt",
+      "#Occasional or on-call work": "Gelegenheitsarbeit oder Arbeit auf Abruf",
+      "#Self-employed or freelance (full-time)": "Selbstständig oder freiberuflich tätig (Vollzeit)",
+      "#Self-employed or freelance (part-time)": "Selbstständig oder freiberuflich tätig (Teilzeit)",
+      "#Student (school, university or training)": "In Schule, Studium oder Ausbildung",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Einige Fragen zu Ihrer Person und Ihrem Haushalt. Sie helfen uns zu verstehen, wie leicht es für verschiedene Menschen ist, unterwegs zu sein und die Orte zu erreichen, die sie brauchen.</p>",
+      "#Homemaker": "Im Haushalt tätig",
+      "#Caring full-time for a family member": "Pflege oder Betreuung eines Familienmitglieds in Vollzeit",
+      "#Business owner or entrepreneur": "Unternehmerisch tätig (eigenes Unternehmen)",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Arbeit über eine App oder Plattform (z. B. Essenslieferungen, Fahrdienste über eine App)",
+      "#None": "Keine",
+      "#Shared bikes, e-scooters or cars": "Sharing-Fahrräder, -E-Scooter oder -Autos",
+      "#Retired": "Im Ruhestand",
+      "#Unemployed looking for work": "Arbeitslos und auf Arbeitssuche",
+      "#Unemployed not looking for work": "Arbeitslos und nicht auf Arbeitssuche",
+      "#Not working for health reasons": "Nicht berufstätig aus gesundheitlichen Gründen",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Haben Sie flexible Arbeitszeiten, also können Sie Beginn und Ende Ihrer Arbeitszeit selbst wählen oder anpassen?",
+      "#Yes": "Ja",
+      "#Somewhat (within a 1-2 hour window)": "Teilweise (innerhalb eines Zeitfensters von 1-2 Stunden)",
+      "#I am not currently employed": "Ich bin derzeit nicht berufstätig",
+      "#1": "1",
+      "#Very difficult (rarely available)": "Sehr schwierig (selten verfügbar)",
+      "#Difficult (often unavailable or shared)": "Schwierig (oft nicht verfügbar oder wird geteilt)",
+      "#Neither easy nor difficult": "Weder leicht noch schwierig",
+      "#Easy (usually available)": "Leicht (meist verfügbar)",
+      "#Very easy (almost always available)": "Sehr leicht (fast immer verfügbar)",
+      "#Do you currently work remotely (partly or fully)?": "Arbeiten Sie derzeit teilweise oder vollständig von zu Hause oder einem anderen Ort aus?",
+      "#Yes (3 days or more in a week)": "Ja (3 Tage oder mehr pro Woche)",
+      "#Yes, occasionally (1-2 days in a week)": "Ja, gelegentlich (1-2 Tage pro Woche)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Haben Sie ein Haustier, das zusätzliche Wege zu Fuß verursachen kann, zum Beispiel einen Hund?",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Welche der folgenden Möglichkeiten nutzen Sie persönlich regelmäßig? (Wählen Sie alles Zutreffende aus)",
+      "#On foot or in a wheelchair": "Zu Fuß oder im Rollstuhl",
+      "#Public transport": "Öffentliche Verkehrsmittel",
+      "#Home and work": "Haushalt und Arbeit",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Haushalt und Arbeit",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zu Ihrem Haushalt, Ihren Fahrzeugen und Ihrer Arbeit.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Was davon nutzen Sie unterwegs für sich oder eine Person, die Sie begleiten? (Mehrere Antworten möglich)",
+      "#Pushchair or pram": "Kinderwagen oder Buggy",
+      "#Manual wheelchair": "Manueller Rollstuhl",
+      "#Walking stick, crutches or walking frame": "Gehstock, Krücken oder Rollator",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Einige Fragen zu dir, deinem Wohnort, deinem Haushalt, deinen Fahrzeugen und deiner Arbeit.</p><ol><li>Über Sie</li><li>Haushalt und Arbeit</li></ol><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Lesen Sie vor der Teilnahme die Datenschutzhinweise: Dort steht, wer auf Ihre Antworten zugreifen kann und wie lange sie gespeichert werden.</p>"
     },
     "tr": {
       "#Thank you!": "Teşekkürler!",
@@ -885,8 +1588,73 @@
       "#We ask because money can limit how people get around.": "Bunu soruyoruz çünkü para, insanların nasıl yolculuk ettiğini sınırlayabilir.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Sizin hakkınızda birkaç soru. Bu sorular, farklı kişilerin şehirde dolaşmasının ve ihtiyaç duydukları yerlere ulaşmasının ne kadar kolay olduğunu anlamamıza yardımcı olur.</p>",
       "#Choose up to 3 main reasons.": "En fazla 3 ana neden seçin.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Siz ve yaşadığınız yer hakkında birkaç soru.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılmadan önce gizlilik bildirimini okuyun: yanıtlarınıza kimlerin erişebileceğini ve ne kadar süre saklandıklarını açıklar.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Bu soru sizinle ilgili, yardım ettiğiniz kişilerle değil. Örnekler: yürüme, görme, işitme, dikkat, ağrı veya hareket etmeye yardımcı araçlar."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "Bu soru sizinle ilgili, yardım ettiğiniz kişilerle değil. Örnekler: yürüme, görme, işitme, dikkat, ağrı veya hareket etmeye yardımcı araçlar.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "Hanenizde bir otomobil varsa, ihtiyaç duyduğunuzda onu kullanmanız ne kadar kolay?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Siz dahil, evinizde kaç yetişkin (18 yaş ve üzeri) yaşıyor?",
+      "#1 (only myself)": "1 (yalnızca ben)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 veya daha fazla",
+      "#How many children (aged under 18) live in your home?": "Evinizde kaç çocuk (18 yaş altı) yaşıyor?",
+      "#3 or more": "3 veya daha fazla",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Ulaşımda veya günlük yaşamda yardımınıza ihtiyaç duyan birine düzenli olarak eşlik ediyor ya da bakıyor musunuz? Birden fazla yanıt seçebilirsiniz.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Evet, neredeyse her gün çocuklara veya gençlere eşlik ediyorum (ör. okula, spora veya diğer etkinliklere)",
+      "#Yes, I accompany children or teenagers at least once a week": "Evet, en az haftada bir kez çocuklara veya gençlere eşlik ediyorum",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Evet, benimle yaşayan bir yetişkine yardım ediyorum (örn. yaşlı bir akraba, demansı olan veya engelli bir kişi)",
+      "#Yes, I help an adult who does not live with me": "Evet, benimle birlikte yaşamayan bir yetişkine yardım ediyorum",
+      "#Which of the following vehicles are available in your household? ": "Hanenizde aşağıdaki araçlardan hangileri mevcut?",
+      "#Car": "Otomobil",
+      "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
+      "#Bicycle/e-bike": "Bisiklet / elektrikli bisiklet",
+      "#E-scooter": "E-scooter",
+      "#Powered wheelchair or mobility scooter": "Akülü tekerlekli sandalye veya mobilite skuteri",
+      "#No vehicle available": "Mevcut araç yok",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Geçerli bir sürücü belgeniz var mı? (Otomobil, motosiklet veya her ikisi)",
+      "#Yes, but I do not drive": "Evet, ama araç kullanmıyorum",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Aşağıdakilerden hangisi şu anki çalışma veya öğrenim durumunuzu en iyi tanımlar? Hem okuyor hem çalışıyorsanız iki yanıt seçebilirsiniz.",
+      "#Employed full-time": "Tam zamanlı çalışıyorum",
+      "#Employed part-time": "Yarı zamanlı çalışıyorum",
+      "#Occasional or on-call work": "Ara sıra veya çağrı üzerine çalışıyorum",
+      "#Self-employed or freelance (full-time)": "Kendi hesabıma veya serbest çalışıyorum (tam zamanlı)",
+      "#Self-employed or freelance (part-time)": "Kendi hesabıma veya serbest çalışıyorum (yarı zamanlı)",
+      "#Student (school, university or training)": "Öğrenciyim (okul, üniversite veya mesleki eğitim)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Siz ve haneniz hakkında birkaç soru. Bu sorular, farklı kişilerin şehirde dolaşmasının ve ihtiyaç duydukları yerlere ulaşmasının ne kadar kolay olduğunu anlamamıza yardımcı olur.</p>",
+      "#Homemaker": "Ev işleriyle ilgileniyorum",
+      "#Caring full-time for a family member": "Tam zamanlı olarak bir aile üyesine bakıyorum",
+      "#Business owner or entrepreneur": "İşletme sahibiyim veya girişimciyim",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Bir uygulama veya platform üzerinden çalışıyorum (ör. kurye, araç çağırma uygulaması sürücüsü)",
+      "#None": "Hiçbiri",
+      "#Shared bikes, e-scooters or cars": "Paylaşımlı bisiklet, scooter veya otomobil",
+      "#Retired": "Emekliyim",
+      "#Unemployed looking for work": "İşsizim ve iş arıyorum",
+      "#Unemployed not looking for work": "İşsizim ve iş aramıyorum",
+      "#Not working for health reasons": "Sağlık nedenleriyle çalışmıyorum",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Esnek çalışma saatleriniz var mı? Yani işe başlama ve bitiş saatlerinizi seçebiliyor veya değiştirebiliyor musunuz?",
+      "#Yes": "Evet",
+      "#Somewhat (within a 1-2 hour window)": "Kısmen (1-2 saatlik bir esneklik içinde)",
+      "#I am not currently employed": "Şu anda çalışmıyorum",
+      "#1": "1",
+      "#Very difficult (rarely available)": "Çok zor (nadiren kullanılabilir)",
+      "#Difficult (often unavailable or shared)": "Zor (sık sık kullanılamıyor veya başkalarıyla paylaşılıyor)",
+      "#Neither easy nor difficult": "Ne kolay ne zor",
+      "#Easy (usually available)": "Kolay (genellikle kullanılabilir)",
+      "#Very easy (almost always available)": "Çok kolay (neredeyse her zaman kullanılabilir)",
+      "#Do you currently work remotely (partly or fully)?": "Şu anda kısmen veya tamamen uzaktan çalışıyor musunuz?",
+      "#Yes (3 days or more in a week)": "Evet (haftada 3 gün veya daha fazla)",
+      "#Yes, occasionally (1-2 days in a week)": "Evet, ara sıra (haftada 1-2 gün)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Evde ek yürüme ihtiyacı doğurabilecek bir evcil hayvanınız var mı? Örneğin bir köpek.",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Aşağıdakilerden hangilerini düzenli olarak kendiniz kullanıyorsunuz? (Uygun olanların tümünü seçin)",
+      "#On foot or in a wheelchair": "Yürüyerek veya tekerlekli sandalyeyle",
+      "#Public transport": "Toplu taşıma",
+      "#Home and work": "Hane ve iş",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Hane ve iş",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haneniz, araçlarınız ve işiniz hakkında birkaç soru.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Ulaşım sırasında kendiniz veya eşlik ettiğiniz biri için hangilerini kullanıyorsunuz? (Birden fazla yanıt seçebilirsiniz)",
+      "#Pushchair or pram": "Bebek arabası",
+      "#Manual wheelchair": "Manuel tekerlekli sandalye",
+      "#Walking stick, crutches or walking frame": "Baston, koltuk değneği veya yürüteç",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Sizin, yaşadığınız yerin, hanenizin, araçlarınızın ve işinizin hakkında birkaç soru.</p><ol><li>Sizin hakkınızda</li><li>Hane ve iş</li></ol><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılmadan önce gizlilik bildirimini okuyun: yanıtlarınıza kimlerin erişebileceğini ve ne kadar süre saklandıklarını açıklar.</p>"
     },
     "fa": {
       "#Thank you!": "سپاسگزاریم!",
@@ -977,8 +1745,73 @@
       "#We ask because money can limit how people get around.": "این را می‌پرسیم چون پول می‌تواند نحوه جابه‌جایی افراد را محدود کند.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>چند پرسش درباره شما. این پرسش‌ها به ما کمک می‌کنند بفهمیم رفت‌وآمد و رسیدن به مکان‌های مورد نیاز برای افراد مختلف چقدر آسان است.</p>",
       "#Choose up to 3 main reasons.": "حداکثر ۳ دلیل اصلی انتخاب کنید.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>چند پرسش درباره شما و محیط زندگی‌تان.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>پیش از شرکت، اطلاعیه حریم خصوصی را بخوانید: توضیح می‌دهد چه کسانی به پاسخ‌های شما دسترسی دارند و پاسخ‌ها تا چه زمانی نگهداری می‌شوند.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "این سؤال درباره خود شماست، نه افرادی که به آن‌ها کمک می‌کنید. نمونه‌ها: راه رفتن، دیدن، شنیدن، توجه، درد یا وسایل کمکی برای جابه‌جایی."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "این سؤال درباره خود شماست، نه افرادی که به آن‌ها کمک می‌کنید. نمونه‌ها: راه رفتن، دیدن، شنیدن، توجه، درد یا وسایل کمکی برای جابه‌جایی.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "اگر در خانواده شما خودرو وجود دارد، استفاده از آن هنگام نیاز برای شما چقدر آسان است؟",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "چند بزرگسال (۱۸ سال یا بیشتر)، از جمله خودتان، در خانه شما زندگی می‌کنند؟",
+      "#1 (only myself)": "۱ (فقط خودم)",
+      "#2": "۲",
+      "#3": "۳",
+      "#4": "۴",
+      "#5 or more": "۵ نفر یا بیشتر",
+      "#How many children (aged under 18) live in your home?": "چند کودک (زیر ۱۸ سال) در خانه شما زندگی می‌کنند؟",
+      "#3 or more": "۳ یا بیشتر",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "آیا به طور منظم کسی را که برای جابه‌جایی یا در زندگی روزمره به کمک شما نیاز دارد همراهی می‌کنید یا از او مراقبت می‌کنید؟ می‌توانید بیش از یک پاسخ انتخاب کنید.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "بله، تقریباً هر روز کودکان یا نوجوانان را همراهی می‌کنم (مثلاً به مدرسه، ورزش یا فعالیت‌های دیگر)",
+      "#Yes, I accompany children or teenagers at least once a week": "بله، حداقل هفته‌ای یک بار کودکان یا نوجوانان را همراهی می‌کنم",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "بله، به بزرگسالی که با من زندگی می‌کند کمک می‌کنم (مثلاً یکی از بستگان سالمند، فردی مبتلا به زوال عقل یا دارای معلولیت)",
+      "#Yes, I help an adult who does not live with me": "بله، به بزرگسالی که با من زندگی نمی‌کند کمک می‌کنم",
+      "#Which of the following vehicles are available in your household? ": "کدام یک از وسایل نقلیه زیر در خانواده شما در دسترس است؟",
+      "#Car": "خودرو",
+      "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
+      "#Bicycle/e-bike": "دوچرخه / دوچرخه برقی",
+      "#E-scooter": "اسکوتر برقی",
+      "#Powered wheelchair or mobility scooter": "ویلچر برقی یا اسکوتر ویژه افراد دارای محدودیت حرکتی",
+      "#No vehicle available": "هیچ وسیله‌ای در دسترس نیست",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "آیا گواهینامه رانندگی معتبر دارید؟ (خودرو، موتورسیکلت یا هر دو)",
+      "#Yes, but I do not drive": "بله، اما رانندگی نمی‌کنم",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "کدام یک از این گزینه‌ها وضعیت فعلی کار یا تحصیل شما را بهتر توصیف می‌کند؟ اگر هم تحصیل می‌کنید و هم کار، می‌توانید دو پاسخ انتخاب کنید.",
+      "#Employed full-time": "شاغل تمام‌وقت",
+      "#Employed part-time": "شاغل پاره‌وقت",
+      "#Occasional or on-call work": "کار گاه‌به‌گاه یا آنکال",
+      "#Self-employed or freelance (full-time)": "خوداشتغال یا کار آزاد (تمام‌وقت)",
+      "#Self-employed or freelance (part-time)": "خوداشتغال یا کار آزاد (پاره‌وقت)",
+      "#Student (school, university or training)": "در حال تحصیل (مدرسه، دانشگاه یا دوره آموزشی)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>چند پرسش درباره شما و خانواده‌تان. این پرسش‌ها به ما کمک می‌کنند بفهمیم رفت‌وآمد و رسیدن به مکان‌های مورد نیاز برای افراد مختلف چقدر آسان است.</p>",
+      "#Homemaker": "خانه‌دار",
+      "#Caring full-time for a family member": "مراقبت تمام‌وقت از یکی از اعضای خانواده",
+      "#Business owner or entrepreneur": "صاحب کسب‌وکار یا کارآفرین",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "کار از طریق اپلیکیشن یا پلتفرم (مثلاً پیک تحویل سفارش، رانندگی در تاکسی اینترنتی)",
+      "#None": "هیچ‌کدام",
+      "#Shared bikes, e-scooters or cars": "دوچرخه، اسکوتر یا خودروی اشتراکی",
+      "#Retired": "بازنشسته",
+      "#Unemployed looking for work": "بیکار و در جست‌وجوی کار",
+      "#Unemployed not looking for work": "بیکار و در حال حاضر جویای کار نیستم",
+      "#Not working for health reasons": "به دلیل مسائل سلامتی کار نمی‌کنم",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "آیا ساعت کاری انعطاف‌پذیر دارید، یعنی می‌توانید زمان شروع و پایان کار را انتخاب یا تنظیم کنید؟",
+      "#Yes": "بله",
+      "#Somewhat (within a 1-2 hour window)": "تا حدی (در بازه ۱ تا ۲ ساعت)",
+      "#I am not currently employed": "در حال حاضر شاغل نیستم",
+      "#1": "۱",
+      "#Very difficult (rarely available)": "بسیار دشوار (به ندرت در دسترس است)",
+      "#Difficult (often unavailable or shared)": "دشوار (اغلب در دسترس نیست یا مشترک است)",
+      "#Neither easy nor difficult": "نه آسان و نه دشوار",
+      "#Easy (usually available)": "آسان (معمولاً در دسترس است)",
+      "#Very easy (almost always available)": "بسیار آسان (تقریباً همیشه در دسترس است)",
+      "#Do you currently work remotely (partly or fully)?": "آیا در حال حاضر بخشی یا تمام کار خود را از راه دور انجام می‌دهید؟",
+      "#Yes (3 days or more in a week)": "بله (۳ روز یا بیشتر در هفته)",
+      "#Yes, occasionally (1-2 days in a week)": "بله، گاهی (۱ تا ۲ روز در هفته)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "آیا حیوان خانگی دارید که باعث شود بیشتر پیاده‌روی کنید، مثلاً سگ؟",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "کدام یک از گزینه‌های زیر را خودتان به طور منظم استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
+      "#On foot or in a wheelchair": "پیاده یا با ویلچر",
+      "#Public transport": "حمل‌ونقل عمومی",
+      "#Home and work": "خانه و کار",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - خانه و کار",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش درباره خانواده، وسایل نقلیه و کار شما.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "هنگام رفت‌وآمد، برای خودتان یا کسی که همراهی می‌کنید از کدام موارد استفاده می‌کنید؟ (می‌توانید چند پاسخ انتخاب کنید)",
+      "#Pushchair or pram": "کالسکه کودک",
+      "#Manual wheelchair": "ویلچر دستی",
+      "#Walking stick, crutches or walking frame": "عصا، عصای زیر بغل یا واکر",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>چند پرسش درباره شما، محل زندگی، خانوار، وسایل نقلیه و کارتان.</p><ol><li>درباره شما</li><li>خانه و کار</li></ol><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>پیش از شرکت، اطلاعیه حریم خصوصی را بخوانید: توضیح می‌دهد چه کسانی به پاسخ‌های شما دسترسی دارند و پاسخ‌ها تا چه زمانی نگهداری می‌شوند.</p>"
     },
     "hu": {
       "#Thank you!": "Köszönjük!",
@@ -1069,8 +1902,73 @@
       "#We ask because money can limit how people get around.": "Azért kérdezzük, mert az anyagi helyzet korlátozhatja, hogyan közlekednek az emberek.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Néhány kérdés Önről. Segítenek megérteni, mennyire könnyű a különböző emberek számára a közlekedés és a szükséges helyek elérése.</p>",
       "#Choose up to 3 main reasons.": "Legfeljebb 3 fő okot jelöljön meg.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Néhány kérdés Önről és arról, hogy hol él.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Részvétel előtt olvassa el az adatkezelési tájékoztatót: megtudhatja, ki férhet hozzá a válaszaihoz és meddig őrzik meg azokat.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "A kérdés Önre vonatkozik, nem azokra, akiknek segít. Példák: járás, látás, hallás, figyelem, fájdalom vagy közlekedést segítő eszközök."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "A kérdés Önre vonatkozik, nem azokra, akiknek segít. Példák: járás, látás, hallás, figyelem, fájdalom vagy közlekedést segítő eszközök.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "Ha van autó a háztartásában, mennyire könnyű Önnek használni, amikor szüksége van rá?",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "Hány felnőtt (18 éves vagy idősebb) él az otthonában, Önt is beleértve?",
+      "#1 (only myself)": "1 (csak én)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 vagy több",
+      "#How many children (aged under 18) live in your home?": "Hány gyermek (18 év alatti) él az otthonában?",
+      "#3 or more": "3 vagy több",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Rendszeresen kísér vagy gondoz valakit, akinek szüksége van az Ön segítségére a közlekedésben vagy a mindennapi életben? Több választ is megjelölhet.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Igen, szinte minden nap kísérek gyermekeket vagy kamaszokat (pl. iskolába, sportolni vagy más programokra)",
+      "#Yes, I accompany children or teenagers at least once a week": "Igen, legalább hetente egyszer kísérek gyermekeket vagy kamaszokat",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Igen, segítek egy velem élő felnőttnek (pl. idős rokonnak, demenciával vagy fogyatékossággal élő személynek)",
+      "#Yes, I help an adult who does not live with me": "Igen, segítek egy nem velem élő felnőttnek",
+      "#Which of the following vehicles are available in your household? ": "Az alábbi járművek közül melyek állnak a háztartása rendelkezésére?",
+      "#Car": "Autó",
+      "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
+      "#Bicycle/e-bike": "Kerékpár / e-bike",
+      "#E-scooter": "Elektromos roller",
+      "#Powered wheelchair or mobility scooter": "Elektromos kerekesszék vagy mozgássegítő robogó",
+      "#No vehicle available": "Nincs elérhető jármű",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "Van érvényes vezetői engedélye? (Autóra, motorkerékpárra vagy mindkettőre)",
+      "#Yes, but I do not drive": "Igen, de nem vezetek",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "Melyik írja le legjobban jelenlegi munka- vagy tanulmányi helyzetét? Ha tanul és dolgozik is, két választ is megjelölhet.",
+      "#Employed full-time": "Teljes munkaidőben dolgozom",
+      "#Employed part-time": "Részmunkaidőben dolgozom",
+      "#Occasional or on-call work": "Alkalmi munkát végzek, vagy hívásra dolgozom",
+      "#Self-employed or freelance (full-time)": "Önálló vállalkozó vagy szabadúszó vagyok (teljes munkaidőben)",
+      "#Self-employed or freelance (part-time)": "Önálló vállalkozó vagy szabadúszó vagyok (részmunkaidőben)",
+      "#Student (school, university or training)": "Tanuló vagy hallgató vagyok (iskola, egyetem vagy képzés)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>Néhány kérdés Önről és a háztartásáról. Segítenek megérteni, mennyire könnyű a különböző emberek számára a közlekedés és a szükséges helyek elérése.</p>",
+      "#Homemaker": "Háztartásbeli vagyok",
+      "#Caring full-time for a family member": "Teljes időben egy családtagomat gondozom",
+      "#Business owner or entrepreneur": "Cégtulajdonos vagy vállalkozó vagyok",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "Alkalmazáson vagy platformon keresztül dolgozom (pl. futárként vagy személyszállító alkalmazás sofőrjeként)",
+      "#None": "Nincs",
+      "#Shared bikes, e-scooters or cars": "Megosztott kerékpár, roller vagy autó",
+      "#Retired": "Nyugdíjas vagyok",
+      "#Unemployed looking for work": "Munkanélküli vagyok és munkát keresek",
+      "#Unemployed not looking for work": "Munkanélküli vagyok és jelenleg nem keresek munkát",
+      "#Not working for health reasons": "Egészségi okból nem dolgozom",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "Rugalmas a munkaideje, vagyis megválaszthatja vagy módosíthatja a munkakezdés és a munka befejezésének idejét?",
+      "#Yes": "Igen",
+      "#Somewhat (within a 1-2 hour window)": "Részben (1-2 órás mozgástérrel)",
+      "#I am not currently employed": "Jelenleg nem dolgozom",
+      "#1": "1",
+      "#Very difficult (rarely available)": "Nagyon nehéz (ritkán elérhető)",
+      "#Difficult (often unavailable or shared)": "Nehéz (gyakran nem elérhető vagy meg kell osztani)",
+      "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
+      "#Easy (usually available)": "Könnyű (általában elérhető)",
+      "#Very easy (almost always available)": "Nagyon könnyű (szinte mindig elérhető)",
+      "#Do you currently work remotely (partly or fully)?": "Dolgozik jelenleg részben vagy teljesen távolról?",
+      "#Yes (3 days or more in a week)": "Igen (heti 3 nap vagy több)",
+      "#Yes, occasionally (1-2 days in a week)": "Igen, alkalmanként (heti 1-2 nap)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "Van olyan háziállata, amely miatt többet kell gyalogolnia, például kutya?",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "Az alábbiak közül melyeket használja személyesen rendszeresen? (Jelölje meg az összes megfelelőt)",
+      "#On foot or in a wheelchair": "Gyalog vagy kerekesszékkel",
+      "#Public transport": "Tömegközlekedés",
+      "#Home and work": "Háztartás és munka",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - Háztartás és munka",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a háztartásáról, a járműveiről és a munkájáról.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Ezek közül melyeket használja közlekedéskor saját maga vagy az Ön által kísért személy számára? (Több válasz is megjelölhető)",
+      "#Pushchair or pram": "Babakocsi",
+      "#Manual wheelchair": "Kézi hajtású kerekesszék",
+      "#Walking stick, crutches or walking frame": "Bot, mankó vagy járókeret",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Néhány kérdés rólad, a lakóhelyedről, a háztartásodról, a járműveidről és a munkádról.</p><ol><li>Önről</li><li>Háztartás és munka</li></ol><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Részvétel előtt olvassa el az adatkezelési tájékoztatót: megtudhatja, ki férhet hozzá a válaszaihoz és meddig őrzik meg azokat.</p>"
     },
     "ar": {
       "#Thank you!": "شكرًا لك!",
@@ -1161,8 +2059,73 @@
       "#We ask because money can limit how people get around.": "نسأل لأن المال قد يحدّ من طريقة تنقّل الناس.",
       "#<p>A few questions about you. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>بعض الأسئلة عنك. تساعدنا على فهم مدى سهولة التنقل والوصول إلى الأماكن المطلوبة بالنسبة لأشخاص مختلفين.</p>",
       "#Choose up to 3 main reasons.": "يمكن اختيار 3 أسباب رئيسية كحد أقصى.",
-      "#<p>A few questions about you and where you live.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>بعض الأسئلة عنك وعن مكان سكنك.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>قبل المشاركة، يُرجى قراءة إشعار الخصوصية الذي يوضح من يمكنه الوصول إلى الإجابات ومدة الاحتفاظ بها.</p>",
-      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "هذا السؤال عنك، وليس عن الأشخاص الذين تساعدهم. أمثلة: المشي أو البصر أو السمع أو الانتباه أو الألم أو وسائل المساعدة على التنقل."
+      "#This question is about you, not people you help. Examples: walking, sight, hearing, attention, pain or mobility aids.": "هذا السؤال عنك، وليس عن الأشخاص الذين تساعدهم. أمثلة: المشي أو البصر أو السمع أو الانتباه أو الألم أو وسائل المساعدة على التنقل.",
+      "#If there is a car in your household, how easy is it for you to use it when you need it?": "إذا كانت في أسرتك سيارة، فما مدى سهولة استخدامها عند حاجتك إليها؟",
+      "#How many adults (aged 18 or older), including yourself, live in your home?": "كم عدد الأشخاص البالغين (18 سنة أو أكثر) الذين يعيشون في منزلك، بما في ذلك أنت؟",
+      "#1 (only myself)": "1 (أنا فقط)",
+      "#2": "2",
+      "#3": "3",
+      "#4": "4",
+      "#5 or more": "5 أو أكثر",
+      "#How many children (aged under 18) live in your home?": "كم عدد الأطفال (دون 18 سنة) الذين يعيشون في منزلك؟",
+      "#3 or more": "3 أو أكثر",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "هل يعتمد عليك بانتظام شخص يحتاج إلى مساعدتك في التنقل أو في الحياة اليومية، كالمرافقة أو الرعاية؟ يمكنك اختيار أكثر من إجابة.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "نعم، أرافق أطفالًا أو أشخاصًا في سن المراهقة كل يوم تقريبًا (مثلًا إلى المدرسة أو الرياضة أو أنشطة أخرى)",
+      "#Yes, I accompany children or teenagers at least once a week": "نعم، أرافق أطفالًا أو أشخاصًا في سن المراهقة مرة واحدة على الأقل في الأسبوع",
+      "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "نعم، أساعد شخصًا بالغًا يعيش معي (مثل قريب مسن أو شخص مصاب بالخرف أو من ذوي الإعاقة)",
+      "#Yes, I help an adult who does not live with me": "نعم، أساعد شخصًا بالغًا لا يعيش معي",
+      "#Which of the following vehicles are available in your household? ": "أي من المركبات التالية متاحة في أسرتك؟",
+      "#Car": "السيارة",
+      "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
+      "#Bicycle/e-bike": "دراجة / دراجة كهربائية",
+      "#E-scooter": "سكوتر كهربائي",
+      "#Powered wheelchair or mobility scooter": "كرسي متحرك كهربائي أو سكوتر تنقل",
+      "#No vehicle available": "لا توجد مركبة متاحة",
+      "#Do you hold a valid driving license? (Car, motorcycle or both)": "هل لديك رخصة قيادة سارية؟ (للسيارة أو الدراجة النارية أو كليهما)",
+      "#Yes, but I do not drive": "نعم، لكنني لا أقود",
+      "#Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.": "أي من هذه الخيارات يصف وضعك الحالي في العمل أو الدراسة بشكل أفضل؟ في حال الجمع بين الدراسة والعمل، يمكنك اختيار إجابتين.",
+      "#Employed full-time": "أعمل بدوام كامل",
+      "#Employed part-time": "أعمل بدوام جزئي",
+      "#Occasional or on-call work": "عمل عرضي أو عند الطلب",
+      "#Self-employed or freelance (full-time)": "أعمل لحسابي الخاص أو بشكل حر (بدوام كامل)",
+      "#Self-employed or freelance (part-time)": "أعمل لحسابي الخاص أو بشكل حر (بدوام جزئي)",
+      "#Student (school, university or training)": "أدرس (في المدرسة أو الجامعة أو في تدريب)",
+      "#<p>A few questions about you and your household. They help us understand how easy it is for different people to get around and reach the places they need.</p>": "<p>بعض الأسئلة عنك وعن أسرتك. تساعدنا على فهم مدى سهولة التنقل والوصول إلى الأماكن المطلوبة بالنسبة لأشخاص مختلفين.</p>",
+      "#Homemaker": "أتولى شؤون المنزل",
+      "#Caring full-time for a family member": "أعتني بدوام كامل بأحد أفراد العائلة",
+      "#Business owner or entrepreneur": "أملك نشاطًا تجاريًا أو أدير مشروعًا خاصًا",
+      "#Work through an app or platform (e.g. delivery rider, ride-hailing driver)": "أعمل عبر تطبيق أو منصة (مثل توصيل الطلبات أو خدمات النقل عبر التطبيقات)",
+      "#None": "لا أحد",
+      "#Shared bikes, e-scooters or cars": "دراجات أو سكوترات أو سيارات مشتركة",
+      "#Retired": "في التقاعد",
+      "#Unemployed looking for work": "لا أعمل وأبحث عن عمل",
+      "#Unemployed not looking for work": "لا أعمل ولا أبحث عن عمل حاليًا",
+      "#Not working for health reasons": "لا أعمل لأسباب صحية",
+      "#Do you have flexible working hours (the ability to choose or adjust your start and finish times)?": "هل لديك ساعات عمل مرنة، أي يمكنك اختيار أو تعديل وقت بدء العمل وانتهائه؟",
+      "#Yes": "نعم",
+      "#Somewhat (within a 1-2 hour window)": "إلى حد ما (ضمن هامش 1-2 ساعة)",
+      "#I am not currently employed": "لا أعمل حاليًا",
+      "#1": "1",
+      "#Very difficult (rarely available)": "صعب جدًا (نادراً ما تكون متاحة)",
+      "#Difficult (often unavailable or shared)": "صعب (غالبًا غير متاحة أو مشتركة مع شخص آخر)",
+      "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
+      "#Easy (usually available)": "سهل (متاحة عادةً)",
+      "#Very easy (almost always available)": "سهل جدًا (متاحة تقريبًا دائمًا)",
+      "#Do you currently work remotely (partly or fully)?": "هل عملك حاليًا عن بُعد، جزئيًا أو بالكامل؟",
+      "#Yes (3 days or more in a week)": "نعم (3 أيام أو أكثر في الأسبوع)",
+      "#Yes, occasionally (1-2 days in a week)": "نعم، أحيانًا (1-2 يوم في الأسبوع)",
+      "#Do you have a pet at home that may generate additional walking trips (e.g. a dog)?": "هل لديك حيوان أليف قد يدفعك إلى مزيد من المشي، مثل الكلب؟",
+      "#Which of the following do you personally use regularly? (Select all that apply)": "ما الخيارات التالية المستخدمة شخصيًا بشكل منتظم؟ (يمكن اختيار كل ما ينطبق)",
+      "#On foot or in a wheelchair": "سيرًا على الأقدام أو بالكرسي المتحرك",
+      "#Public transport": "النقل العام",
+      "#Home and work": "المنزل والعمل",
+      "#SmartUrbanity - Home and work": "SmartUrbanity - المنزل والعمل",
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن أسرتك ومركباتك وعملك.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "أي مما يلي تستخدمه أثناء التنقل لنفسك أو لشخص ترافقه؟ (يمكن اختيار أكثر من إجابة)",
+      "#Pushchair or pram": "عربة أطفال",
+      "#Manual wheelchair": "كرسي متحرك يدوي",
+      "#Walking stick, crutches or walking frame": "عصا أو عكازات أو مشاية",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>بعض الأسئلة عنك وعن مكان إقامتك وأسرتك ووسائل النقل وعملك.</p><ol><li>معلومات عنك</li><li>المنزل والعمل</li></ol><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>قبل المشاركة، يُرجى قراءة إشعار الخصوصية الذي يوضح من يمكنه الوصول إلى الإجابات ومدة الاحتفاظ بها.</p>"
     }
   },
   "id": "smarturbanity_your_profile",

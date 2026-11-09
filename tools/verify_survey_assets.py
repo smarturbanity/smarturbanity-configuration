@@ -40,6 +40,6 @@ for file in (root / 'forms/surveys').rglob('*.json'):
     alternative = welcome['image_alt']
     assert alternative == '#' + form['title'], name
     assert all(table.get(alternative) for table in data['languages'].values()), name
-assert len(used) == 20
+assert len(used) == 19
 assert used == {file.name for file in assets.glob('*.svg')}, 'Unreferenced survey SVG assets'
-print('PASS: 20 distinct SVGs, valid XML, translated alternatives, no external resources or animation.')
+print('PASS: 19 distinct SVGs, valid XML, translated alternatives, no external resources or animation.')

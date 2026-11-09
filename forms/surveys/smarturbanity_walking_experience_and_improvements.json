@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Comfort, experience and improvements",
     "questionnaire_id": "smarturbanity_walking_experience_and_improvements",
-    "questionnaire_version": "1.3.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -260,7 +260,8 @@
               }
             ],
             "question_id": "walk_noise_bother",
-            "question_version": "1.1.0"
+            "question_version": "1.1.2",
+            "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair."
           },
           {
             "privacy_classification": "personal_data",
@@ -282,8 +283,12 @@
                 "value": "it_makes_me_adjust_how_i_travel_e_g_mask"
               },
               {
-                "text": "I take another route or travel at another time",
-                "value": "it_makes_me_change_my_route_or_travel_at"
+                "text": "I take another route",
+                "value": "change_route"
+              },
+              {
+                "text": "I travel at another time",
+                "value": "change_travel_time"
               },
               {
                 "text": "I travel another way (e.g. by bus instead of on foot)",
@@ -291,7 +296,8 @@
               }
             ],
             "question_id": "walk_air_quality_effect",
-            "question_version": "1.1.1"
+            "question_version": "2.0.0",
+            "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often."
           },
           {
             "privacy_classification": "personal_data",
@@ -309,8 +315,12 @@
                 "value": "it_makes_my_journey_less_comfortable_but"
               },
               {
-                "text": "I prepare differently or change route (e.g. clothes, umbrella)",
-                "value": "it_makes_me_adjust_how_i_travel_e_g_clot"
+                "text": "I prepare differently (e.g. clothes, umbrella)",
+                "value": "prepare_differently"
+              },
+              {
+                "text": "I take another route",
+                "value": "change_route"
               },
               {
                 "text": "I put off or skip some trips",
@@ -322,7 +332,8 @@
               }
             ],
             "question_id": "walk_adverse_weather_travel_effect",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often."
           },
           {
             "privacy_classification": "personal_data",
@@ -353,12 +364,13 @@
               }
             ],
             "question_id": "walk_cleanliness_effect",
-            "question_version": "1.1.0"
+            "question_version": "1.1.2",
+            "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair."
           },
           {
             "privacy_classification": "personal_data",
             "text": "When you walk or use a wheelchair, do pleasant or unpleasant surroundings affect how you feel?",
-            "help": "For example buildings, squares, how cared-for a place is and its general feel.",
+            "help": "For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.",
             "answer_key": "walk_visual_quality",
             "question_type": "single_option",
             "required": false,
@@ -382,10 +394,14 @@
               {
                 "text": "I sometimes choose a route because it's nicer or more interesting",
                 "value": "very_strongly_i_sometimes_choose_routes"
+              },
+              {
+                "text": "I cannot assess this",
+                "value": "cannot_assess"
               }
             ],
             "question_id": "walk_visual_quality",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0"
           }
         ]
       },
@@ -909,12 +925,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?",
       "#Nothing, it doesn't affect me": "Nothing, it doesn't affect me",
       "#I notice it, but I don't change anything": "I notice it, but I don't change anything",
-      "#I take another route or travel at another time": "I take another route or travel at another time",
       "#I travel another way (e.g. by bus instead of on foot)": "I travel another way (e.g. by bus instead of on foot)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?",
       "#Nothing changes, I travel as usual": "Nothing changes, I travel as usual",
       "#It's less pleasant, but I travel the same way": "It's less pleasant, but I travel the same way",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "I prepare differently or change route (e.g. clothes, umbrella)",
       "#I put off or skip some trips": "I put off or skip some trips",
       "#I travel another way (e.g. by car or bus)": "I travel another way (e.g. by car or bus)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?",
@@ -1022,7 +1036,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#Person walking and a route between two points": "Person walking and a route between two points"
+      "#Person walking and a route between two points": "Person walking and a route between two points",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Think about the parts of your journeys you make on foot or in a wheelchair.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.",
+      "#I take another route": "I take another route",
+      "#I travel at another time": "I travel at another time",
+      "#I prepare differently (e.g. clothes, umbrella)": "I prepare differently (e.g. clothes, umbrella)",
+      "#I cannot assess this": "I cannot assess this"
     },
     "it": {
       "#Do slopes or hills on your way make walking harder for you?": "Le salite lungo la tua strada ti rendono più difficile muoverti?",
@@ -1074,12 +1097,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Quando ti sposti a piedi o in sedia a rotelle, cosa fai quando l’aria è cattiva (gas di scarico, polvere, cattivi odori)?",
       "#Nothing, it doesn't affect me": "Niente, non mi riguarda",
       "#I notice it, but I don't change anything": "Me ne accorgo, ma non cambio nulla",
-      "#I take another route or travel at another time": "Prendo un altro percorso o mi sposto in un altro orario",
       "#I travel another way (e.g. by bus instead of on foot)": "Mi sposto in un altro modo (ad es. in autobus invece che a piedi)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Quando ti sposti a piedi o in sedia a rotelle, cosa fai di solito quando il tempo è brutto (pioggia, vento, freddo o gran caldo)?",
       "#Nothing changes, I travel as usual": "Non cambia niente, mi sposto come sempre",
       "#It's less pleasant, but I travel the same way": "È meno piacevole, ma mi sposto allo stesso modo",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "Mi preparo in modo diverso o cambio percorso (ad es. vestiti, ombrello)",
       "#I put off or skip some trips": "Rimando o salto alcuni spostamenti",
       "#I travel another way (e.g. by car or bus)": "Mi sposto in un altro modo (ad es. in auto o autobus)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "Quando ti sposti a piedi o in sedia a rotelle, cosa fai quando strade, fermate o percorsi sono sporchi o mal tenuti (rifiuti, cattivi odori, vetri rotti)?",
@@ -1187,7 +1208,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Pendenze, panchine, segnaletica e verde <b>quando cammini</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>A piedi – Comfort</li><li>A piedi – Il posto in cui ti muovi</li><li>A piedi – Come vivi lo spostamento</li><li>A piedi – Fatica e soddisfazione</li><li>A piedi o in sedia a rotelle – Cosa ti aiuterebbe</li></ul>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti"
+      "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Pensa ai tratti dei tuoi spostamenti che fai a piedi o in sedia a rotelle.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "Per esempio edifici, piazze, quanto un luogo è curato e la sua atmosfera in generale. Pensa ai tratti dei tuoi spostamenti che fai a piedi o in sedia a rotelle.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Pensa ai tratti che percorri lungo la strada o sul marciapiede, a piedi o in carrozzina.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Per esempio edifici, piazze, quanto un luogo è curato e la sua atmosfera in generale. Pensa ai tratti che percorri lungo la strada o sul marciapiede, a piedi o in carrozzina.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Pensa ai tratti che percorri lungo la strada o sul marciapiede, a piedi o in carrozzina. Se fai più di una di queste cose, scegli quella che fai più spesso.",
+      "#I take another route": "Cambio percorso",
+      "#I travel at another time": "Mi sposto in un altro orario",
+      "#I prepare differently (e.g. clothes, umbrella)": "Mi preparo in modo diverso (ad es. vestiti, ombrello)",
+      "#I cannot assess this": "Non posso valutarlo"
     },
     "fr": {
       "#Do slopes or hills on your way make walking harder for you?": "Les pentes ou les côtes sur votre trajet vous compliquent-elles le déplacement ?",
@@ -1239,12 +1269,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, que faites-vous quand l’air est mauvais (gaz d’échappement, poussière, mauvaises odeurs) ?",
       "#Nothing, it doesn't affect me": "Rien, cela ne m'affecte pas",
       "#I notice it, but I don't change anything": "Je le remarque, mais je ne change rien",
-      "#I take another route or travel at another time": "Je prends un autre itinéraire ou je me déplace à un autre moment",
       "#I travel another way (e.g. by bus instead of on foot)": "Je me déplace autrement (par ex. en bus plutôt qu'à pied)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, que faites-vous habituellement quand le temps est mauvais (pluie, vent, froid ou grande chaleur) ?",
       "#Nothing changes, I travel as usual": "Rien ne change, je me déplace comme d'habitude",
       "#It's less pleasant, but I travel the same way": "C'est moins agréable, mais je me déplace de la même façon",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "Je me prépare autrement ou je change d'itinéraire (par ex. vêtements, parapluie)",
       "#I put off or skip some trips": "Je reporte ou je saute certains trajets",
       "#I travel another way (e.g. by car or bus)": "Je me déplace autrement (par ex. en voiture ou en bus)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, que faites-vous quand les rues, les arrêts ou les chemins sont sales ou mal entretenus (déchets, odeurs, verre brisé) ?",
@@ -1352,7 +1380,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Les pentes, les bancs, la signalisation et la verdure <b>lorsque vous marchez</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>À pied – Confort</li><li>À pied – Votre environnement</li><li>À pied – Ressenti du trajet</li><li>À pied – Effort et satisfaction</li><li>À pied et en fauteuil roulant – Ce qui aiderait</li></ul>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points"
+      "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Pensez aux parties de vos déplacements effectuées à pied ou en fauteuil roulant.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "Par exemple les bâtiments, les places, l'entretien d'un lieu et son atmosphère générale. Pensez aux parties de vos déplacements effectuées à pied ou en fauteuil roulant.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Pensez aux parties du trajet que vous parcourez dans la rue ou sur le trottoir, à pied ou en fauteuil roulant.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Par exemple les bâtiments, les places, l'entretien d'un lieu et son atmosphère générale. Pensez aux parties du trajet que vous parcourez dans la rue ou sur le trottoir, à pied ou en fauteuil roulant.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Pensez aux parties du trajet que vous parcourez dans la rue ou sur le trottoir, à pied ou en fauteuil roulant. Si vous faites plusieurs de ces choses, choisissez celle que vous faites le plus souvent.",
+      "#I take another route": "Je change d’itinéraire",
+      "#I travel at another time": "Je me déplace à un autre horaire",
+      "#I prepare differently (e.g. clothes, umbrella)": "Je m’équipe autrement (par exemple vêtements, parapluie)",
+      "#I cannot assess this": "Je ne peux pas l’évaluer"
     },
     "de": {
       "#Do slopes or hills on your way make walking harder for you?": "Machen Steigungen oder Hügel auf Ihrem Weg das Vorankommen für Sie schwerer?",
@@ -1404,12 +1441,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Was tun Sie beim Gehen oder Fahren im Rollstuhl, wenn die Luft schlecht ist (Abgase, Staub, schlechte Gerüche)?",
       "#Nothing, it doesn't affect me": "Nichts, es betrifft mich nicht",
       "#I notice it, but I don't change anything": "Ich merke es, ändere aber nichts",
-      "#I take another route or travel at another time": "Ich nehme eine andere Route oder fahre zu einer anderen Zeit",
       "#I travel another way (e.g. by bus instead of on foot)": "Ich nutze ein anderes Verkehrsmittel (z. B. Bus statt zu Fuß)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Was tun Sie beim Gehen oder Fahren im Rollstuhl normalerweise, wenn das Wetter schlecht ist (Regen, Wind, Kälte oder große Hitze)?",
       "#Nothing changes, I travel as usual": "Nichts ändert sich, ich bin wie gewohnt unterwegs",
       "#It's less pleasant, but I travel the same way": "Es ist weniger angenehm, aber ich bin auf dieselbe Weise unterwegs",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "Ich bereite mich anders vor oder ändere die Route (z. B. Kleidung, Regenschirm)",
       "#I put off or skip some trips": "Ich verschiebe oder streiche manche Wege",
       "#I travel another way (e.g. by car or bus)": "Ich nutze ein anderes Verkehrsmittel (z. B. Auto oder Bus)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "Was tun Sie beim Gehen oder Fahren im Rollstuhl, wenn Straßen, Haltestellen oder Wege schmutzig oder schlecht gepflegt sind (Müll, Gerüche, Glasscherben)?",
@@ -1517,7 +1552,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Steigungen, Bänke, Schilder und Grün, <b>wenn Sie zu Fuß unterwegs sind</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Zu Fuß – Komfort</li><li>Zu Fuß – Ihre Umgebung</li><li>Zu Fuß – Wie sich der Weg anfühlt</li><li>Zu Fuß – Aufwand und Zufriedenheit</li><li>Zu Fuß und im Rollstuhl – Was helfen würde</li></ul>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten"
+      "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Denken Sie an die Abschnitte Ihrer Wege, die Sie zu Fuß oder im Rollstuhl zurücklegen.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "Zum Beispiel Gebäude, Plätze, wie gepflegt ein Ort ist und wie er insgesamt wirkt. Denken Sie an die Abschnitte Ihrer Wege, die Sie zu Fuß oder im Rollstuhl zurücklegen.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Denken Sie an die Wegabschnitte, die Sie auf Straßen oder Gehwegen zu Fuß oder im Rollstuhl zurücklegen.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Zum Beispiel Gebäude, Plätze, wie gepflegt ein Ort ist und wie er insgesamt wirkt. Denken Sie an die Wegabschnitte, die Sie auf Straßen oder Gehwegen zu Fuß oder im Rollstuhl zurücklegen.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Denken Sie an die Wegabschnitte, die Sie auf Straßen oder Gehwegen zu Fuß oder im Rollstuhl zurücklegen. Wenn Sie mehrere dieser Dinge tun, wählen Sie das aus, was Sie am häufigsten tun.",
+      "#I take another route": "Ich nehme eine andere Route",
+      "#I travel at another time": "Ich fahre oder gehe zu einer anderen Zeit los",
+      "#I prepare differently (e.g. clothes, umbrella)": "Ich bereite mich anders vor (z. B. Kleidung, Regenschirm)",
+      "#I cannot assess this": "Das kann ich nicht beurteilen"
     },
     "tr": {
       "#Do slopes or hills on your way make walking harder for you?": "Yolunuzdaki eğimler veya yokuşlar ilerlemenizi zorlaştırıyor mu?",
@@ -1569,12 +1613,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Yürürken veya tekerlekli sandalyeyle ilerlerken hava kötü olduğunda (egzoz dumanı, toz, kötü kokular) ne yaparsınız?",
       "#Nothing, it doesn't affect me": "Hiçbir şey, beni etkilemez",
       "#I notice it, but I don't change anything": "Fark ederim ama hiçbir şeyi değiştirmem",
-      "#I take another route or travel at another time": "Başka bir güzergâh seçerim veya başka bir saatte yolculuk ederim",
       "#I travel another way (e.g. by bus instead of on foot)": "Başka bir şekilde giderim (örn. yürümek yerine otobüsle)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Yürürken veya tekerlekli sandalyeyle ilerlerken hava koşulları kötü olduğunda (yağmur, rüzgâr, soğuk veya aşırı sıcak) genellikle ne yaparsınız?",
       "#Nothing changes, I travel as usual": "Hiçbir şey değişmez, her zamanki gibi yolculuk ederim",
       "#It's less pleasant, but I travel the same way": "Daha az keyifli ama aynı şekilde yolculuk ederim",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "Farklı hazırlanırım veya güzergâhı değiştiririm (örn. kıyafet, şemsiye)",
       "#I put off or skip some trips": "Bazı yolculukları ertelerim veya yapmam",
       "#I travel another way (e.g. by car or bus)": "Başka bir şekilde giderim (örn. otomobille veya otobüsle)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "Yürürken veya tekerlekli sandalyeyle ilerlerken sokaklar, duraklar veya yollar kirli ya da bakımsız olduğunda (çöp, kokular, kırık cam) ne yaparsınız?",
@@ -1682,7 +1724,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p><b>Yürürken</b> eğimler, banklar, tabelalar ve yeşillik.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Yürüyüş – Konfor</li><li>Yürüyüş – Çevreniz</li><li>Yürüyüş – Yolculuk nasıl hissettiriyor</li><li>Yürüyüş – Çaba ve memnuniyet</li><li>Yürüyerek ve tekerlekli sandalyeyle ulaşım – Neler yardımcı olur</li></ul>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh"
+      "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Yolculuklarınızın yürüyerek veya tekerlekli sandalyeyle yaptığınız bölümlerini düşünün.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "Örneğin binalar, meydanlar, bir yerin ne kadar bakımlı olduğu ve genel havası. Yolculuklarınızın yürüyerek veya tekerlekli sandalyeyle yaptığınız bölümlerini düşünün.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Yolculuğunuzun sokaklarda veya kaldırımlarda yürüyerek ya da tekerlekli sandalyeyle yaptığınız bölümlerini düşünün.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Örneğin binalar, meydanlar, bir yerin ne kadar bakımlı olduğu ve genel havası. Yolculuğunuzun sokaklarda veya kaldırımlarda yürüyerek ya da tekerlekli sandalyeyle yaptığınız bölümlerini düşünün.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Yolculuğunuzun sokaklarda veya kaldırımlarda yürüyerek ya da tekerlekli sandalyeyle yaptığınız bölümlerini düşünün. Bunlardan birden fazlasını yapıyorsanız en sık yaptığınızı seçin.",
+      "#I take another route": "Başka bir güzergâh seçerim",
+      "#I travel at another time": "Başka bir saatte yola çıkarım",
+      "#I prepare differently (e.g. clothes, umbrella)": "Farklı hazırlanırım (ör. kıyafet, şemsiye)",
+      "#I cannot assess this": "Bunu değerlendiremiyorum"
     },
     "fa": {
       "#Do slopes or hills on your way make walking harder for you?": "آیا شیب یا سربالایی در مسیرتان راه رفتن را برای شما سخت‌تر می‌کند؟",
@@ -1734,12 +1785,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "هنگام پیاده‌روی یا حرکت با ویلچر، وقتی هوا آلوده است (دود اگزوز، گردوغبار، بوی بد) چه می‌کنید؟",
       "#Nothing, it doesn't affect me": "هیچ کاری، بر من اثری ندارد",
       "#I notice it, but I don't change anything": "متوجه می‌شوم، اما چیزی را تغییر نمی‌دهم",
-      "#I take another route or travel at another time": "مسیر دیگری می‌روم یا در زمان دیگری سفر می‌کنم",
       "#I travel another way (e.g. by bus instead of on foot)": "با روش دیگری سفر می‌کنم (مثلاً با اتوبوس به جای پیاده)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "هنگام پیاده‌روی یا حرکت با ویلچر، وقتی هوا بد است (باران، باد، سرما یا گرمای شدید) معمولاً چه می‌کنید؟",
       "#Nothing changes, I travel as usual": "چیزی تغییر نمی‌کند، مثل همیشه سفر می‌کنم",
       "#It's less pleasant, but I travel the same way": "کمتر دلپذیر است، اما به همان شکل سفر می‌کنم",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "طور دیگری آماده می‌شوم یا مسیرم را عوض می‌کنم (مثلاً لباس، چتر)",
       "#I put off or skip some trips": "بعضی سفرها را به تعویق می‌اندازم یا انجام نمی‌دهم",
       "#I travel another way (e.g. by car or bus)": "با روش دیگری سفر می‌کنم (مثلاً با خودرو یا اتوبوس)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "هنگام پیاده‌روی یا حرکت با ویلچر، وقتی خیابان‌ها، ایستگاه‌ها یا مسیرها کثیف یا نگهداری‌نشده‌اند (زباله، بوی بد، شیشه شکسته) چه می‌کنید؟",
@@ -1847,7 +1896,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>شیب، نیمکت، تابلو و فضای سبز <b>هنگام پیاده‌روی</b>.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>پیاده‌روی – راحتی</li><li>پیاده‌روی – محیط اطراف شما</li><li>پیاده‌روی – حال و هوای سفر</li><li>پیاده‌روی – تلاش و رضایت</li><li>رفت‌وآمد پیاده و با ویلچر – چه چیزی کمک می‌کند</li></ul>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه"
+      "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "بخش‌هایی از سفر خود را در نظر بگیرید که پیاده یا با ویلچر طی می‌کنید.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "مثلاً ساختمان‌ها، میدان‌ها، میزان رسیدگی به یک محل و حال‌وهوای کلی آن. بخش‌هایی از سفر خود را در نظر بگیرید که پیاده یا با ویلچر طی می‌کنید.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "بخش‌هایی از سفر را در نظر بگیرید که در خیابان یا پیاده‌رو، پیاده یا با ویلچر طی می‌کنید.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "مثلاً ساختمان‌ها، میدان‌ها، میزان رسیدگی به یک محل و حال‌وهوای کلی آن. بخش‌هایی از سفر را در نظر بگیرید که در خیابان یا پیاده‌رو، پیاده یا با ویلچر طی می‌کنید.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "بخش‌هایی از سفر را در نظر بگیرید که در خیابان یا پیاده‌رو، پیاده یا با ویلچر طی می‌کنید. اگر بیش از یکی از این کارها را انجام می‌دهید، کاری را انتخاب کنید که بیشتر انجام می‌دهید.",
+      "#I take another route": "مسیر دیگری را انتخاب می‌کنم",
+      "#I travel at another time": "در زمان دیگری رفت‌وآمد می‌کنم",
+      "#I prepare differently (e.g. clothes, umbrella)": "به شکل دیگری آماده می‌شوم (مثلاً لباس، چتر)",
+      "#I cannot assess this": "نمی‌توانم این را ارزیابی کنم"
     },
     "hu": {
       "#Do slopes or hills on your way make walking harder for you?": "A lejtők vagy emelkedők az útvonalán megnehezítik Önnek a gyaloglást?",
@@ -1899,12 +1957,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "Gyaloglás vagy kerekesszékes közlekedés közben mit tesz, ha rossz a levegő (kipufogógáz, por, kellemetlen szagok)?",
       "#Nothing, it doesn't affect me": "Semmit, nincs hatással rám",
       "#I notice it, but I don't change anything": "Észreveszem, de nem változtatok semmit",
-      "#I take another route or travel at another time": "Más útvonalat választok, vagy más időpontban utazom",
       "#I travel another way (e.g. by bus instead of on foot)": "Más módon utazom (pl. busszal gyalog helyett)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "Gyaloglás vagy kerekesszékes közlekedés közben mit szokott tenni, ha rossz az idő (eső, szél, hideg vagy nagy hőség)?",
       "#Nothing changes, I travel as usual": "Semmi sem változik, ugyanúgy utazom",
       "#It's less pleasant, but I travel the same way": "Kevésbé kellemes, de ugyanúgy utazom",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "Másképp készülök, vagy útvonalat váltok (pl. ruházat, esernyő)",
       "#I put off or skip some trips": "Néhány utat elhalasztok vagy kihagyok",
       "#I travel another way (e.g. by car or bus)": "Más módon utazom (pl. autóval vagy busszal)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "Gyaloglás vagy kerekesszékes közlekedés közben mit tesz, ha az utcák, megállók vagy utak koszosak vagy elhanyagoltak (szemét, szagok, törött üveg)?",
@@ -2012,7 +2068,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Lejtők, padok, táblák és zöldterületek <b>gyaloglás közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Gyaloglás – Kényelem</li><li>Gyaloglás – A környezete</li><li>Gyaloglás – Az utazás élménye</li><li>Gyaloglás – Erőfeszítés és elégedettség</li><li>Gyalogosan és kerekesszékkel – Mi segítene</li></ul>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között"
+      "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "Gondoljon az utazásai azon szakaszaira, amelyeket gyalog vagy kerekesszékkel tesz meg.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "Például az épületek, terek, egy hely gondozottsága és általános hangulata. Gondoljon az utazásai azon szakaszaira, amelyeket gyalog vagy kerekesszékkel tesz meg.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Gondoljon az utazás azon szakaszaira, amelyeket az utcán vagy a járdán gyalog vagy kerekesszékkel tesz meg.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "Például az épületek, terek, egy hely gondozottsága és általános hangulata. Gondoljon az utazás azon szakaszaira, amelyeket az utcán vagy a járdán gyalog vagy kerekesszékkel tesz meg.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "Gondoljon az utazás azon szakaszaira, amelyeket az utcán vagy a járdán gyalog vagy kerekesszékkel tesz meg. Ha ezek közül többet is tesz, válassza azt, amit a leggyakrabban tesz.",
+      "#I take another route": "Másik útvonalat választok",
+      "#I travel at another time": "Más időpontban indulok",
+      "#I prepare differently (e.g. clothes, umbrella)": "Másképp készülök fel (például ruházat, esernyő)",
+      "#I cannot assess this": "Ezt nem tudom megítélni"
     },
     "ar": {
       "#Do slopes or hills on your way make walking harder for you?": "هل تجعل المنحدرات أو المرتفعات في طريقك المشي أصعب عليك؟",
@@ -2064,12 +2129,10 @@
       "#When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?": "عند المشي أو التنقل بكرسي متحرك، ما تصرّفك عندما يكون الهواء سيئًا (عوادم المركبات أو الغبار أو الروائح الكريهة)؟",
       "#Nothing, it doesn't affect me": "لا شيء، لا يؤثر فيّ",
       "#I notice it, but I don't change anything": "ألاحظ ذلك، لكنني لا أغيّر شيئًا",
-      "#I take another route or travel at another time": "أسلك طريقًا آخر أو أتنقل في وقت آخر",
       "#I travel another way (e.g. by bus instead of on foot)": "أتنقل بطريقة أخرى (مثلًا بالحافلة بدل المشي)",
       "#When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?": "عند المشي أو التنقل بكرسي متحرك، ما تصرّفك عادةً عندما يكون الطقس سيئًا (مطر أو رياح أو برد أو حرّ شديد)؟",
       "#Nothing changes, I travel as usual": "لا شيء يتغير، أتنقل كالمعتاد",
       "#It's less pleasant, but I travel the same way": "الأمر أقل متعة، لكنني أتنقل بالطريقة نفسها",
-      "#I prepare differently or change route (e.g. clothes, umbrella)": "أستعد بشكل مختلف أو أغيّر طريقي (مثل الملابس أو المظلة)",
       "#I put off or skip some trips": "أؤجل بعض الرحلات أو ألغيها",
       "#I travel another way (e.g. by car or bus)": "أتنقل بطريقة أخرى (مثلًا بالسيارة أو الحافلة)",
       "#When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?": "عند المشي أو التنقل بكرسي متحرك، ما تصرّفك عندما تكون الشوارع أو المحطات أو الممرات متسخة أو سيئة الصيانة (قمامة أو روائح أو زجاج مكسور)؟",
@@ -2177,7 +2240,16 @@
       "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>المنحدرات والمقاعد واللافتات والمساحات الخضراء <b>عند المشي</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>المشي – الراحة</li><li>المشي – ما حولك</li><li>المشي – شعورك أثناء الرحلة</li><li>المشي – الجهد والرضا</li><li>سيرًا على الأقدام وبالكرسي المتحرك – ما الذي يساعد</li></ul>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين"
+      "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
+      "#Think about the parts of your journeys you make on foot or in a wheelchair.": "فكّر في أجزاء تنقّلاتك التي تقوم بها مشيًا أو باستخدام كرسي متحرك.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of your journeys you make on foot or in a wheelchair.": "مثل المباني والساحات ومدى العناية بالمكان وجوّه العام. فكّر في أجزاء تنقّلاتك التي تقوم بها مشيًا أو باستخدام كرسي متحرك.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "فكّر في أجزاء الرحلة التي تقطعها في الشارع أو على الرصيف، مشيًا أو باستخدام كرسي متحرك.",
+      "#For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.": "مثل المباني والساحات ومدى العناية بالمكان وجوّه العام. فكّر في أجزاء الرحلة التي تقطعها في الشارع أو على الرصيف، مشيًا أو باستخدام كرسي متحرك.",
+      "#Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often.": "فكّر في أجزاء الرحلة التي تقطعها في الشارع أو على الرصيف، مشيًا أو باستخدام كرسي متحرك. إذا كنت تفعل أكثر من أمر من هذه الأمور، فاختر ما تفعله غالبًا.",
+      "#I take another route": "أسلك طريقًا آخر",
+      "#I travel at another time": "أتنقل في وقت آخر",
+      "#I prepare differently (e.g. clothes, umbrella)": "أستعد بطريقة مختلفة (مثل الملابس أو المظلة)",
+      "#I cannot assess this": "لا أستطيع تقييم ذلك"
     }
   }
 }

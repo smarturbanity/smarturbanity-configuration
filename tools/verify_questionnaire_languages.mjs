@@ -28,5 +28,5 @@ for (const name of fs.readdirSync(path.join(root, 'forms/surveys'), {recursive: 
   }
   questionnaires++;
 }
-assert.equal(questionnaires, 20);
+assert.equal(questionnaires, 19);
 console.log(JSON.stringify({result: 'PASS', questionnaires, checks: ['actual app text tags', 'standard choices owned by framework dictionaries']}));

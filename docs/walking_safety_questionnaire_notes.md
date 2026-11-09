@@ -471,8 +471,9 @@ cycling 1.4.0, e-scooter 1.2.0, public transport, car and motorcycle 1.4.0).
 | `*_comfort` | 2 (public transport 3) | 1 + 1 surroundings (public transport 2 + 1) |
 | `*_experience` | 2 (cycling, e-scooter, public transport, motorcycle 3) | 1 + effort 1 (cycling, e-scooter, public transport, motorcycle 1 + 2) |
 
-The CityMaaS guided flow asks only `smarturbanity_your_profile` as its profile form (`profileForms`); the other two
-profile pieces reach people through "Continue" in the surveys gallery.
+The original split described above is historical. On 9 November 2026, Lory chose
+to reunite Your Profile and Home and work in one profile with two sections;
+Your Travel remains separate. See [the decision and browser checks](profile-unification.md).
 
 ## Question IDs
 
