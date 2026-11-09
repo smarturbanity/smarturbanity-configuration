@@ -8,7 +8,7 @@ The repository provides version-controlled, machine-readable configuration share
 
 The repository follows three main principles:
 
-1. **Base configuration** provides the complete shared SmartUrbanity runtime baseline.
+1. **Code defaults** provide the shared runtime baseline in CityMaaS.
 2. **Shared definitions** describe common SmartUrbanity concepts and vocabularies.
 3. **Pilot configurations** contain only pilot-specific additions or overrides.
 4. **Forms** are reusable definitions whose applicability can depend on the pilot, mobility mode, campaign or other runtime context.
@@ -62,10 +62,6 @@ smarturbanity-configuration/
 │   ├── locationReports/
 │   └── usabilityTests/
 │
-├── manifests/
-│   ├── smarturbanity.json
-│   └── smarturbanity_surveys.json
-│
 ├── pilots/
 │   ├── rome/
 │   ├── karlsruhe/
@@ -76,29 +72,35 @@ smarturbanity-configuration/
 └── README.md
 ```
 
-Directory `index.json` files enumerate their direct children. A consumer loads
-the root `base.json`, then applies the selected pilot JSON with a deep merge;
-pilot files must not repeat unchanged base values. `pilots/rome/service_subtypes.json`
-is a separately indexed Rome dataset, not a property duplicated in `rome.json`.
+Shared-content indexes enumerate their direct children. CityMaaS owns the common
+defaults at `CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json`.
+The configuration loader combines those defaults, the selected pilot's technical
+settings, and the pilot document. Objects merge recursively; arrays replace.
+Explicit null, false, zero and empty arrays remain explicit.
 
-The root `index.json` lists each pilot as `{id, name, language}`. Applications read it before
-any pilot file: they offer the pilots by `name` when several are available and open in the
-pilot's `language` from their first screen. Keep `language` equal to the pilot's
-`default_language`.
+Each pilot has three separate documents:
 
-The structure may evolve as additional SmartUrbanity configuration domains are introduced.
+- `pilots/rome/rome.json`: modeler data, presentation overrides and embedded
+  pilot-specific datasets, including service subtypes.
+- `pilots/rome/application.json`: technical integration, language, consent and
+  application settings. The modeler document references it through `application_config`.
+- `pilots/rome/survey_campaigns.json`: the current calendar, form choices and
+  container associations, referenced through `content.dataset_files`.
 
-## CityMaaS manifests
+The root index lists pilot IDs, names and initial languages. Its language must match
+`application.json`'s `settings.default_language`. Shared definitions and forms
+remain independent content. There is no external base, application manifest,
+per-pilot index or separate service-subtype copy.
 
-`manifests/smarturbanity.json` configures the Access Lab and citizen installations;
-`manifests/smarturbanity_surveys.json` configures the Surveys and Admin installations.
-CityMaaS loads these manifests from this repository; their nested source URLs are
-relative to the manifest. The `fallbackPath` values refer to the local debug checkout,
-when present; they do not cause that checkout to be included in a deployment.
-Each manifest also declares the compatible `forms/` catalog. Manifests declare no
-privacy notice: their `questionnaires.consent` is the installation layer, which
-would override the notice of the loaded pilot. A deployed installation requires the online sources because it
-does not bundle this repository as a fallback.
+## Application and server configuration
+
+Adopt this revision with the CityMaaS reader that supports `application_config`,
+embedded `datasets` and code-owned defaults. Readers that expect the former
+`base.json` or `manifests/` cannot consume this layout. The spatial server must
+receive the same code-owned defaults separately from this repository. This branch
+does not update or deploy either consumer.
+
+See [the migration and verification record](docs/pilot-configuration-refresh.md).
 
 ## Shared definitions
 
@@ -340,7 +342,7 @@ The configured destination currently points to the spatial server mock at
 `/api/v1/participant-codes`. Application and service support is required before
 using this configuration in a running pilot.
 
-The consent text in `base.json` is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
+The consent text in the code-owned defaults is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
 ## Survey schedule and campaigns
 
