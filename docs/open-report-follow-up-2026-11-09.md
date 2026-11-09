@@ -33,13 +33,14 @@
 
 Both location forms advance from 4.1.0 to 5.0.0. `journey_context` advances from
 3.0.0 to 4.0.0 because two answer values move to a new answer key; the new question
-starts at 1.0.0. Historical answers keep their original questionnaire versions
-and must not be silently reinterpreted or migrated. The moved option values and
+starts at 1.0.0. Lory confirmed that there are no old application data: update the
+app directly to this contract without fallback, dual reading or migration code.
+Historical study evidence remains unchanged. The moved option values and
 their existing translations remain unchanged. The generic questionnaire engine
 uses the new key without special handling. The Access Together profile configuration
 does explicitly reference `journey_context` for support-based ordering: its owner
-has been notified to update profile questions, lead selection and saved-profile
-compatibility together. Do not activate these new forms with the old app profile
+has been notified to update profile questions and lead selection together,
+without backward compatibility. Do not activate these new forms with the old app profile
 configuration or claim application readiness until that integration is verified.
 
 ## Verification and remaining acceptance
