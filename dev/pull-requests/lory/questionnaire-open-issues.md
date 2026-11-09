@@ -15,3 +15,9 @@ unchanged options, values, conditions and required flags; git diff --check.
 
 Not included: profile repetition/scheduling implementation (decision 1A), new
 persona acceptance, deployment and results-library import.
+
+Decisions 12A–16A: add an explicit missing audible-crossing-signal option; explain
+that road-user answers concern concrete behaviour; clarify public-transport-only
+transfers; simplify Italian economic-situation wording. Preserve distinct current
+measurements and existing answer values. Seven further forms pass JSON, option,
+condition and eight-language addition checks.

@@ -55,6 +55,35 @@ This record does not rewrite frozen persona results or mark acceptance tests pas
 - The result-library sidecar and live dashboard have not been reclassified by this
   commit. No fresh persona study, browser run, deployment or public release.
 
+## Decisions 12A–16A
+
+- 12A: simplify the Italian economic-situation question by replacing `nucleo
+  familiare` with `vostra situazione economica`. Earlier wording fixes are documented
+  in walking_safety_questionnaire_notes.md; German `Ziemlich` remains as previously
+  approved. This is source review, not native-language acceptance.
+- 13A: retain separate measurements of road danger, route accessibility, security
+  and consequences. The old general Safety form and Daily Travel form were
+  replaced by the mode chains; do not remove useful current questions on the basis
+  of an overlap with a retired form. Existing removals/splits remain unchanged.
+- 14A: add the missing explicit option `pedestrian_lights_no_audio` to walking
+  route barriers, with eight translations. Distinct from lights that are out of
+  order. Existing dropped kerbs, narrow paths, tactile paving, power-wheelchair
+  distance answer and assistance/company answers remain available.
+- 15A: add a short eight-language instruction to the five road-user questions:
+  judge concrete behaviour such as close passing or not giving way, not everyone
+  in a category. Keep category values because they measure a different thing from
+  unsafe situations. Italian help uses neutral wording.
+- 16A: clarify that the public-transport combination question counts another mode
+  such as a bicycle/car, while bus/tram/metro/train transfers alone remain public
+  transport and a short access walk is excluded. This follows the existing answer
+  categories rather than inventing an unrecordable answer. Existing mode-specific
+  satisfaction and company options, and relocation of future app questions,
+  remain unchanged. Do not resurrect the retired cumulative Daily Travel form.
+
+Seven forms changed in this second slice. JSON parses, existing answers and
+conditions are preserved, every added help/option has eight translations, and
+`git diff --check` passes. No new persona or browser acceptance is claimed.
+
 ## Verification
 
 Four modified JSON files parse. Eight-language dictionaries introduce no new
