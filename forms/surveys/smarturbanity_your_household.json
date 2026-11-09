@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Home and work",
     "questionnaire_id": "smarturbanity_your_household",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "1.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "options": {
@@ -94,7 +94,7 @@
             "text": "Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.",
             "answer_key": "carer",
             "question_id": "carer",
-            "question_version": "2.2.0",
+            "question_version": "2.2.1",
             "question_type": "multiple_options",
             "required": false,
             "checks_inline": false,
@@ -174,6 +174,36 @@
               {
                 "text": "No vehicle available",
                 "value": "no_vehicle_available",
+                "exclusive": true
+              }
+            ]
+          },
+          {
+            "text": "Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)",
+            "answer_key": "mobility_support_used",
+            "question_id": "mobility_support_used",
+            "question_version": "1.0.0",
+            "question_type": "multiple_options",
+            "required": false,
+            "add_other": true,
+            "add_prefer_not_to_say": true,
+            "privacy_classification": "special_category_health",
+            "options": [
+              {
+                "text": "Pushchair or pram",
+                "value": "pushchair"
+              },
+              {
+                "text": "Manual wheelchair",
+                "value": "manual_wheelchair"
+              },
+              {
+                "text": "Walking stick, crutches or walking frame",
+                "value": "walking_aid"
+              },
+              {
+                "text": "None of these",
+                "value": "none",
                 "exclusive": true
               }
             ]
@@ -503,7 +533,12 @@
       "#Public transport": "Public transport",
       "#Home and work": "Home and work",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Home and work",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)",
+      "#Pushchair or pram": "Pushchair or pram",
+      "#Manual wheelchair": "Manual wheelchair",
+      "#Walking stick, crutches or walking frame": "Walking stick, crutches or walking frame",
+      "#None of these": "None of these"
     },
     "it": {
       "#Thank you!": "Grazie!",
@@ -517,9 +552,9 @@
       "#5 or more": "5 o più",
       "#How many children (aged under 18) live in your home?": "Quante persone con meno di 18 anni vivono nella tua casa?",
       "#3 or more": "3 o più",
-      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Accompagni o assisti regolarmente qualcuno che ha bisogno del tuo aiuto per spostarsi o nella vita quotidiana? Puoi scegliere più di una risposta.",
-      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Sì, accompagno bambine, bambini o adolescenti quasi ogni giorno (es. a scuola, sport o altre attività)",
-      "#Yes, I accompany children or teenagers at least once a week": "Sì, accompagno bambine, bambini o adolescenti almeno una volta alla settimana",
+      "#Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.": "Accompagni regolarmente bambini o ragazzi, oppure aiuti un adulto a spostarsi o nelle attività quotidiane? Puoi scegliere più risposte.",
+      "#Yes, I accompany children or teenagers almost every day (e.g. to school, sports or other activities)": "Sì, accompagno bambini o adolescenti quasi ogni giorno (es. a scuola, allo sport o ad altre attività)",
+      "#Yes, I accompany children or teenagers at least once a week": "Sì, accompagno bambini o adolescenti almeno una volta alla settimana",
       "#Yes, I help an adult who lives with me (e.g. an older relative, a person with dementia or with disabilities)": "Sì, aiuto una persona adulta che vive con me (es. una persona anziana della famiglia, una persona con demenza o con disabilità)",
       "#Yes, I help an adult who does not live with me": "Sì, aiuto una persona adulta che non vive con me",
       "#Which of the following vehicles are available in your household? ": "Quali tra questi veicoli sono disponibili a casa tua?",
@@ -570,7 +605,12 @@
       "#Public transport": "Trasporto pubblico",
       "#Home and work": "Casa e lavoro",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Casa e lavoro",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande su chi vive con te, sui veicoli e sul lavoro.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Alcune domande su chi vive con te, sui veicoli e sul lavoro.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Quali di questi usi per spostarti, per te o per una persona che accompagni? (Puoi scegliere più risposte)",
+      "#Pushchair or pram": "Passeggino o carrozzina per bambini",
+      "#Manual wheelchair": "Sedia a rotelle manuale",
+      "#Walking stick, crutches or walking frame": "Bastone, stampelle o deambulatore",
+      "#None of these": "Nessuno di questi"
     },
     "fr": {
       "#Thank you!": "Merci !",
@@ -637,7 +677,12 @@
       "#Public transport": "Transports publics",
       "#Home and work": "Foyer et travail",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Foyer et travail",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur votre foyer, vos véhicules et votre travail.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Quelques questions sur votre foyer, vos véhicules et votre travail.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Lesquels utilisez-vous pour vous déplacer, pour vous-même ou une personne que vous accompagnez ? (Plusieurs réponses possibles)",
+      "#Pushchair or pram": "Poussette ou landau",
+      "#Manual wheelchair": "Fauteuil roulant manuel",
+      "#Walking stick, crutches or walking frame": "Canne, béquilles ou déambulateur",
+      "#None of these": "Aucun de ces éléments"
     },
     "de": {
       "#Thank you!": "Vielen Dank!",
@@ -704,7 +749,12 @@
       "#Public transport": "Öffentliche Verkehrsmittel",
       "#Home and work": "Haushalt und Arbeit",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Haushalt und Arbeit",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zu Ihrem Haushalt, Ihren Fahrzeugen und Ihrer Arbeit.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Einige Fragen zu Ihrem Haushalt, Ihren Fahrzeugen und Ihrer Arbeit.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Was davon nutzen Sie unterwegs für sich oder eine Person, die Sie begleiten? (Mehrere Antworten möglich)",
+      "#Pushchair or pram": "Kinderwagen oder Buggy",
+      "#Manual wheelchair": "Manueller Rollstuhl",
+      "#Walking stick, crutches or walking frame": "Gehstock, Krücken oder Rollator",
+      "#None of these": "Nichts davon"
     },
     "tr": {
       "#Thank you!": "Teşekkürler!",
@@ -771,7 +821,12 @@
       "#Public transport": "Toplu taşıma",
       "#Home and work": "Hane ve iş",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Hane ve iş",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haneniz, araçlarınız ve işiniz hakkında birkaç soru.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haneniz, araçlarınız ve işiniz hakkında birkaç soru.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Ulaşım sırasında kendiniz veya eşlik ettiğiniz biri için hangilerini kullanıyorsunuz? (Birden fazla yanıt seçebilirsiniz)",
+      "#Pushchair or pram": "Bebek arabası",
+      "#Manual wheelchair": "Manuel tekerlekli sandalye",
+      "#Walking stick, crutches or walking frame": "Baston, koltuk değneği veya yürüteç",
+      "#None of these": "Bunların hiçbiri"
     },
     "fa": {
       "#Thank you!": "سپاسگزاریم!",
@@ -838,7 +893,12 @@
       "#Public transport": "حمل‌ونقل عمومی",
       "#Home and work": "خانه و کار",
       "#SmartUrbanity - Home and work": "SmartUrbanity - خانه و کار",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش درباره خانواده، وسایل نقلیه و کار شما.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>چند پرسش درباره خانواده، وسایل نقلیه و کار شما.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "هنگام رفت‌وآمد، برای خودتان یا کسی که همراهی می‌کنید از کدام موارد استفاده می‌کنید؟ (می‌توانید چند پاسخ انتخاب کنید)",
+      "#Pushchair or pram": "کالسکه کودک",
+      "#Manual wheelchair": "ویلچر دستی",
+      "#Walking stick, crutches or walking frame": "عصا، عصای زیر بغل یا واکر",
+      "#None of these": "هیچ‌کدام"
     },
     "hu": {
       "#Thank you!": "Köszönjük!",
@@ -905,7 +965,12 @@
       "#Public transport": "Tömegközlekedés",
       "#Home and work": "Háztartás és munka",
       "#SmartUrbanity - Home and work": "SmartUrbanity - Háztartás és munka",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a háztartásáról, a járműveiről és a munkájáról.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Néhány kérdés a háztartásáról, a járműveiről és a munkájáról.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "Ezek közül melyeket használja közlekedéskor saját maga vagy az Ön által kísért személy számára? (Több válasz is megjelölhető)",
+      "#Pushchair or pram": "Babakocsi",
+      "#Manual wheelchair": "Kézi hajtású kerekesszék",
+      "#Walking stick, crutches or walking frame": "Bot, mankó vagy járókeret",
+      "#None of these": "Egyik sem"
     },
     "ar": {
       "#Thank you!": "شكرًا لك!",
@@ -972,7 +1037,12 @@
       "#Public transport": "النقل العام",
       "#Home and work": "المنزل والعمل",
       "#SmartUrbanity - Home and work": "SmartUrbanity - المنزل والعمل",
-      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن أسرتك ومركباتك وعملك.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>"
+      "#<p>A few questions about your household, vehicles and work.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>بعض الأسئلة عن أسرتك ومركباتك وعملك.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p>",
+      "#Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)": "أي مما يلي تستخدمه أثناء التنقل لنفسك أو لشخص ترافقه؟ (يمكن اختيار أكثر من إجابة)",
+      "#Pushchair or pram": "عربة أطفال",
+      "#Manual wheelchair": "كرسي متحرك يدوي",
+      "#Walking stick, crutches or walking frame": "عصا أو عكازات أو مشاية",
+      "#None of these": "لا شيء مما سبق"
     }
   },
   "id": "smarturbanity_your_household",

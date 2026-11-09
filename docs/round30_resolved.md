@@ -27,3 +27,11 @@ hashes. It does not change historical issue states.
 
 These are technical verifications, not new persona acceptance. No push, pin change
 or remote publication is part of this consolidation.
+
+## Remaining questionnaire findings addressed
+
+The follow-up candidate changes eight forms using Lory's decisions 1A, 2A, 3A,
+4B and 5A. It addresses 31 of the 39 frozen findings with configuration changes,
+checks enlargement for one, and records why seven existing behaviors remain.
+See [the complete per-finding disposition](round30_issue_dispositions.md) for
+versions, verification and limits. Historical persona outcomes remain unchanged.
