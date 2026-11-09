@@ -510,7 +510,12 @@ names, but its `QuestionnaireBanks` test expects the walking keys `benches_impor
 `prefer_pleasant`, so that test must change to `walk_benches_importance`, `walk_wayfinding` and `walk_prefer_pleasant`
 when the pin moves to this configuration.
 
-## Not yet covered
+## Historical integration follow-ups
+
+These notes describe dependencies identified at the time of the questionnaire
+split. They are not a current open-issue list; use the
+[acceptance record](questionnaire-retest-readiness.md) for verified outcomes and
+remaining checks.
 
 - CityMaaS Access Together still lists `smarturbanity_about_you` in its "About you" menu (`aboutYouForms`); it
   must point to `smarturbanity_your_profile` before this configuration is used there.
@@ -534,7 +539,8 @@ The car-need form 3.2.0 replaces `car_need_uses` and the generic
   transport, also in the evening / an accompanied or on-demand transport service /
   home delivery / a shared van / nothing would. The public transport option reuses
   the existing car-alternatives wording and value.
-- "None of these" remains an explicit exclusive choice. It clears selected uses,
+- "None of these" is supplied by the application's `add_none` flag (see the
+  [current migration](questionnaire-updates/2026-11-09-add-none.md)). It clears selected uses,
   shows no columns and stores `{"none": true}`. Selecting a use clears this choice.
   This requires the CityMaaS matrix renderer with exclusive-row support. Leaving
   every row unselected means skipping the question; a completely empty questionnaire
