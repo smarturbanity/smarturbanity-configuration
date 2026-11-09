@@ -27,7 +27,7 @@ const config = path.resolve(__dirname, '..');
  });
  await page.goto(process.argv[3]);
  await startFromLanding(page);
- assert.equal(await page.evaluate(()=>app.colls.questionnaires.smarturbanity_your_profile?.questionnaire?.questionnaire_version), '2.0.0');
+ assert.equal(await page.evaluate(()=>app.colls.questionnaires.smarturbanity_your_profile?.questionnaire?.questionnaire_version), '2.1.0');
  await page.evaluate(async () => {
    const sheet=getGuidedFlowPage();
    const base=createAccessTogetherFlowDeps(ACCESS_TOGETHER_CONTAINERS.webApp);

@@ -66,7 +66,7 @@ async function main() {
       await expect.poll(() => page.evaluate(() => gateSubmissions.length)).toBe(1);
       const submission = await page.evaluate(() => gateSubmissions[0]);
       assert.ok(JSON.stringify(submission).includes('smarturbanity_your_profile'));
-      assert.ok(JSON.stringify(submission).includes('2.0.0'));
+      assert.ok(JSON.stringify(submission).includes('2.1.0'));
       assert.ok(JSON.stringify(submission).includes('employment'));
       assert.deepEqual(errors, []);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'No horizontal overflow');
