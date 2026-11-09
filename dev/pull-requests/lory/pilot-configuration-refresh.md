@@ -43,8 +43,8 @@ integration and application deployment remain separate.
 
 ## Pilot identity and dual-reader coordination
 
-Rome now declares its search city, public territory description and per-application
-initial cameras in pilot_identity. Values reproduce the current app defaults; no
+Rome now declares its search city and public territory description in pilot_identity,
+and one shared initial camera in map.initial_view. No
 questionnaire, campaign, service or Access Together technical setting changes.
 The coordinated application retains the explicit legacy-manifest contract alongside
 the split-source contract. Invalid chosen sources fail instead of falling back.
@@ -52,3 +52,8 @@ The new source layout requires the compatible app and existing spatial-server
 branch first; old clients retain their old immutable configuration revision.
 Actual merge/preload preservation checks pass. Browser acceptance and final
 aggregate remain with the coordinated application candidate; no deployment claimed.
+
+The current Access Together minimum zoom (14) is explicit in map.zoom_limits;
+maximum zoom remains derived from the selected basemap unless a lower limit is
+configured. Source forms and translations are unchanged, including literal answer
+options: no redundant English entry is added for “Prefer not to say”.

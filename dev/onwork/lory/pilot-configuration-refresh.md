@@ -47,3 +47,10 @@ The new source layout requires the compatible app and existing spatial-server
 branch first; old clients retain their old immutable configuration revision.
 Actual merge/preload preservation checks pass. Browser acceptance and final
 aggregate remain with the coordinated application candidate; no deployment claimed.
+# Layer coordination completion — 2026-11-09
+
+Use map.initial_view as the sole pilot center; removed redundant per-app cameras.
+Access Together min zoom 14 follows the current UI owner's reviewed checkpoint;
+max stays basemap-derived unless an explicit lower limit is supplied. App keeps
+the legacy and split readers. No form or translation changes from this slice.
+Actual preload/preservation and 444 campaign cases pass against the app candidate.
