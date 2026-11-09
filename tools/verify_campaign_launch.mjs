@@ -13,6 +13,16 @@ assert.equal(Object.hasOwn(schedule.rules, 'show_all_in_debug'), false, 'Debug p
 const forms = read('forms/index.json').questionnaires.map(file => read('forms/' + file).questionnaire.questionnaire_id);
 const open = ['smarturbanity_walking_trips_and_safety', 'smarturbanity_your_profile'].sort();
 const assigned = new Set();
+const modeByCampaign = {
+  rome_profile: [], rome_future: [], rome_walking_surveys: ['walk'],
+  rome_walking_experience: ['walk'], rome_cycling_surveys: ['bike'],
+  rome_e_scooter_surveys: ['e_scooter'], rome_public_transport_surveys: ['transit'],
+  rome_car_surveys: ['car'], rome_motorcycle_surveys: ['motorcycle']
+};
+assert.deepEqual(Object.keys(schedule.campaigns).sort(), Object.keys(modeByCampaign).sort());
+for (const [id, expected] of Object.entries(modeByCampaign)) {
+  assert.deepEqual(schedule.campaigns[id].transport_modes, expected, 'Mode metadata: ' + id);
+}
 for (const campaign of Object.values(schedule.campaigns)) {
   for (const id of campaign.questionnaires) {
     assert.ok(forms.includes(id), id);

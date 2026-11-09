@@ -12,6 +12,13 @@ form belongs to exactly one campaign.
 
 ## Rendering contract
 
+- Each campaign declares `transport_modes`, an array of stable mode IDs:
+  `walk`, `bike`, `e_scooter`, `transit`, `car`, `motorcycle`, reusing the
+  application's existing campaign-group IDs.
+  An empty array means a general campaign, not an unknown mode. Filters use this
+  metadata, never campaign names or questionnaire-ID prefixes. This does not
+  change availability or automatically hide general campaigns when filtering.
+
 - `enabled: false` continues to deny starting a form, including through direct
   links or follow-up offers. `publication_state: "coming-soon"` on a disabled
   campaign explicitly requests the label **Coming soon**, without an opening date.

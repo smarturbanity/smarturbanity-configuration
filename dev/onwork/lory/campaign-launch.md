@@ -26,3 +26,7 @@ User correction: remove show_all_in_debug from the pilot entirely. Showing all
 forms in debug is owned by application code; source verification checks calendar
 offers independently and must not assert a disabled debug override. App owner
 implements and verifies the code-owned behavior.
+
+Campaign transport_modes now explicitly identifies filter membership for all
+nine campaigns; profile/future are general ([]). No inference from display names
+or IDs is needed. Calendar availability and questionnaire contents are unchanged.

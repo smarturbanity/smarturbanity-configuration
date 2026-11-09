@@ -20,3 +20,8 @@ passed. Application rendering/integration verification remains with the app owne
 
 Debug visibility belongs to application code: omit show_all_in_debug from the
 pilot source. The calendar checks do not assert app debug/review access policy.
+
+Declare transport_modes on each campaign so app filters consume source metadata
+instead of guessing from names. Both walking campaigns target walking; general
+profile/future campaigns have no mode restriction. Verified exact mapping for all
+nine campaigns in addition to the unchanged 444 calendar checks.
