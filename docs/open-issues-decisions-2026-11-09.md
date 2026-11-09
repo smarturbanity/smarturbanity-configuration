@@ -4,6 +4,20 @@ Source: the 46 active findings in the Access Easy residents ledger, ordered by
 their source round. Decision numbers below are review numbers, not finding IDs.
 This record does not rewrite frozen persona results or mark acceptance tests passed.
 
+## Definitive decision: no previous response data
+
+Lory confirmed on 9 November 2026 that there are no existing questionnaire
+responses or saved profiles to preserve. Update the application, questionnaires
+and their tests directly to the current format. Do not add old-format fallbacks,
+dual reads, migration code or compatibility branches for previous answers or
+profiles. In particular, use `trip_mobility_support` directly for mobility aids
+and strollers, keeping `journey_context` for its remaining journey context.
+
+This decision supersedes earlier instructions to preserve previous response or
+profile formats. It is definitive: do not propose that compatibility again.
+Historical source revisions, change manifests and test evidence remain records;
+their existence does not imply that old participant data needs support.
+
 ## Implemented here
 
 - 2B: keep gender options, Other and Prefer not to say unchanged. Replace the two

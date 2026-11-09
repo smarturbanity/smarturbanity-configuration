@@ -2,6 +2,10 @@
 
 ## Current reference
 
+Lory confirmed there are no previous responses or saved profiles to preserve.
+Update app and questionnaires directly to the current format, without old-format
+compatibility or migrations. This is a [definitive decision](open-issues-decisions-2026-11-09.md#definitive-decision-no-previous-response-data), not an open question.
+
 - [Approved decisions](open-issues-decisions-2026-11-09.md): decisions and their source checks. Definitive decisions must not be proposed again.
 - [Acceptance and remaining checks](questionnaire-retest-readiness.md): distinguish source verification, browser checks and human acceptance. Historical failures retain their original tested versions; later evidence supersedes only the checks it actually repeats.
 - [Sectioned questionnaires](sectioned-surveys.md): current composition, source forms, rebuild and verification commands.
