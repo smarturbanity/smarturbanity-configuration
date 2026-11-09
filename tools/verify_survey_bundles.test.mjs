@@ -13,12 +13,29 @@ const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'sectioned-surveys-'));
 fs.cpSync(path.join(root, 'forms'), path.join(sandbox, 'forms'), {recursive: true});
 fs.mkdirSync(path.join(sandbox, 'tools'));
 fs.mkdirSync(path.join(sandbox, 'pilots/rome'), {recursive: true});
-for (const file of ['tools/verify_survey_bundles.mjs', 'pilots/rome/survey_campaigns.json']) {
+for (const file of ['tools/verify_survey_bundles.mjs', 'tools/verify_questionnaire_languages.mjs', 'pilots/rome/survey_campaigns.json']) {
   fs.copyFileSync(path.join(root, file), path.join(sandbox, file));
 }
 const verify = () => spawnSync(process.execPath, [path.join(sandbox, 'tools/verify_survey_bundles.mjs'), consumer], {encoding: 'utf8'});
 const file = path.join(sandbox, 'forms/surveys/smarturbanity_walking_trips_and_safety.json');
 const original = fs.readFileSync(file, 'utf8');
+const verifyLanguages = () => spawnSync(process.execPath, [path.join(sandbox, 'tools/verify_questionnaire_languages.mjs'),
+  path.join(path.dirname(consumer), 'QuestionnaireRevision.js')], {encoding: 'utf8'});
+
+test('questionnaire dictionaries cover the actual app texts', () => {
+  const result = verifyLanguages();
+  assert.equal(result.status, 0, result.stderr);
+});
+test('rejects missing generated None and Other translations', () => {
+  for (const tag of ['#None of these', '#Other']) {
+    const form = JSON.parse(original);
+    assert.ok(form.languages.it[tag]);
+    delete form.languages.it[tag];
+    fs.writeFileSync(file, JSON.stringify(form));
+    assert.notEqual(verifyLanguages().status, 0, tag);
+  }
+  fs.writeFileSync(file, original);
+});
 
 test('current questionnaires validate without retired sources', () => {
   const result = verify();

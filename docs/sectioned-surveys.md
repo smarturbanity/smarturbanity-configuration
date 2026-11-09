@@ -86,3 +86,14 @@ Run `python tools/verify_survey_assets.py` to check all 20 image links, distinct
 drawings, valid SVG XML and translated alternatives. It also rejects unused SVGs,
 scripts, external image references and animation. The 19 old shared illustrations
 were removed after checking that no current form references them.
+
+## Generated option translations
+
+Generated choices such as None of these and Other must be present in each form's
+own dictionary even though their text is not repeated in the question schema.
+The follow-up dictionary correction adds missing standard labels from the app's
+existing translations, without changing any question or answer value.
+Run `node tools/verify_questionnaire_languages.mjs <path-to-QuestionnaireRevision.js>`
+with the actual app consumer. It checks English text coverage using
+`questionnaireTextTags` and generated option labels in every declared language.
+The regression suite also rejects missing None and Other translations.
