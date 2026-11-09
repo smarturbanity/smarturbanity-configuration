@@ -8,13 +8,15 @@ compatibility or migrations. This is a [definitive decision](open-issues-decisio
 
 - [Approved decisions](open-issues-decisions-2026-11-09.md): decisions and their source checks. Definitive decisions must not be proposed again.
 - [Acceptance and remaining checks](questionnaire-retest-readiness.md): distinguish source verification, browser checks and human acceptance. Historical failures retain their original tested versions; later evidence supersedes only the checks it actually repeats.
-- [Sectioned questionnaires](sectioned-surveys.md): current composition, source forms, rebuild and verification commands.
+- [Sectioned questionnaires](sectioned-surveys.md): current composition, direct editing and verification commands.
 - [Connection and segment reports](connection_questionnaire_verification.md): report structure, conditions and verification limits.
 - [Standard None of these and exact exports](questionnaire-updates/2026-11-09-add-none.md): shared option flag and the consistent runtime JSON format.
 
-The composition files under `tools/survey-bundles/` are maintained build inputs,
-not disposable reports. They declare which source sections form each questionnaire;
-the application loads the resulting files under `forms/`.
+The 16 sectioned mode questionnaires under `forms/surveys/` are the sole source
+of their questions and translations. Small source forms, composition specifications
+and their builder have been removed. Edit the active files directly and run the
+sectioned-survey verifier. `tools/sectioned-surveys.json` stores only coverage and
+order expectations for that check; it is not an app input.
 
 ## Decision and change history
 

@@ -1,9 +1,9 @@
 # Sectioned mode surveys
 
-The active catalogue replaces 51 short mode forms with 16 sectioned questionnaires.
-Each former form becomes one section, preserving all 258 question definitions,
-IDs, answer values, versions and optional flags. Original source files remain for
-version history and existing links; they are no longer listed as separate cards.
+The 16 sectioned mode questionnaires under `forms/surveys/` are the only maintained
+source of their questions and translations. The 51 small questionnaires have been
+removed after verifying that all 258 questions are retained. Git preserves history;
+there are no previous responses requiring compatibility, old links or migrations.
 Profile, household, general travel, pre/post-trip, location reports and feedback
 remain separate. Estimates below sum the existing declared minutes, not measured
 completion times. No questions were added to reach an arbitrary minimum duration.
@@ -37,23 +37,27 @@ Campaigns now reference the sectioned questionnaires, grouped by mode. They rema
 disabled and unscheduled as before; profile availability and non-mode campaigns
 are unchanged. This change does not activate a pilot campaign or deploy the app.
 
-## Rebuild and verify
+## Edit and verify
 
-`python tools/build_survey_bundles.py` rebuilds from the six specifications and
-unchanged source forms, then updates catalogue, campaign links and provenance.
+Edit the current sectioned JSON files directly. There is no composition builder or
+second set of source forms. `tools/sectioned-surveys.json` records section titles and
+question IDs for coverage and order checks; it contains no question definitions or
+translations and is not used by the app. Update it only for deliberate structure changes.
+
 `node tools/verify_survey_bundles.mjs <path-to-QuestionnaireConditions.js>` checks
-the actual consumer's conditional behavior, order, definitions, translations,
-privacy, exact coverage and catalogue/campaign links. Pass the maintained
+the actual consumer's conditions, question order and coverage, distinct translated
+option labels, privacy text, catalogue/campaign links and follow-up cycles. It also
+rejects extra mode questionnaire files outside the 16 current forms. Pass the maintained
 CityMaaS `CityMaasRoot/Questionnaires/QuestionnaireConditions.js`.
 
-Source SHA-256 values use UTF-8 text with LF line endings. The builder and verifier
-normalize Windows CRLF before hashing, so a Git checkout cannot invalidate source
-provenance solely by changing line endings. Generated files use LF.
+`node tools/verify_survey_bundles.test.mjs <path-to-QuestionnaireConditions.js>`
+runs isolated regression checks for a valid catalogue, a reintroduced small form,
+a lost question and a broken screening gate.
 
-Verification passes for 51 source forms, 16 questionnaires, 258 retained questions,
-38 total active catalogue forms and eight languages. Three independent delegated
-reviews cover the six modes. Browser navigation, completion times and perceived
-burden remain acceptance checks for the next test.
+Cleanup verification: all 16 active files remain byte-identical, with 51 sections,
+258 questions, 38 total catalogue forms and eight languages. Profile, household,
+general travel and future surveys remain separate. Browser navigation, measured
+completion time and human comprehension are separate acceptance checks.
 
 ## Next study scope
 
