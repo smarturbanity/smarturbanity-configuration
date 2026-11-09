@@ -31,6 +31,46 @@
 
 ## Version and compatibility
 
+## Approved topics 6–10
+
+6. **#424, welcomes:** separate model review read the complete Hungarian and
+   Persian introductions and titles in walking habits and both active walking
+   bundles. They are comprehensible, retain voluntary participation, skipping,
+   privacy paragraphs and 36 months. No old email/code explanation remains;
+   `$pilot_page` is a link placeholder. No further shortening applied. This is
+   a language-model review, not human native-language acceptance.
+7. **#402, overlap with retired Safety:** the active catalogue offers mode
+   bundles, not the old standalone Safety form. Its old cross-form overlap is
+   superseded. Current questions distinguish travelling along traffic from
+   crossing a road; preserve both. Remaining perceived overlap between current
+   questions is a separate acceptance item; the cumulative report stays open.
+8. **#403, inaccessible directions:** add `signs_not_accessible`, “The available
+   signs are not accessible to me” (Italian: “Le indicazioni disponibili non sono
+   accessibili per me”), separately from choosing not to use signs. Eight
+   translations are present. Existing answer values, text, optional status,
+   conditions and all existing translations are unchanged. Rebuilt the active
+   walking experience/improvements bundle. Other inclusion concerns in #403
+   remain separate and do not inherit a resolved status.
+9. **#404, road-user judgments:** retain the existing eight-language instruction
+   to consider concrete behaviour. The current question has no three-answer cap.
+   The old three-choice complaint is superseded technically. Whether people
+   still perceive blame or gender exclusion needs targeted acceptance; do not
+   remove the measurement merely because the earlier wording caused a problem.
+10. **#405, old Daily Travel:** mark its old 16-question composition as
+    superseded. The current travel form has five questions; accompanying children
+    or people cared for is distinct from being accompanied by a helper. Record
+    those old omissions as technically addressed. Remaining questions about
+    understanding combinations, shared services and mode-specific satisfaction
+    belong to their current forms, not a redesign of this five-question form.
+
+Source audit verifies unchanged existing wayfinding options/translations and
+exact source-to-bundle composition. Both maintained model/condition and bundle
+checks pass. Walking comfort advances to 2.2.0, wayfinding to 1.2.0 and its active
+bundle to 1.2.0. No new question is added, only one answer option. No whole
+historical cumulative report is closed through this slice.
+
+## Location-form version and integration
+
 Both location forms advance from 4.1.0 to 5.0.0. `journey_context` advances from
 3.0.0 to 4.0.0 because two answer values move to a new answer key; the new question
 starts at 1.0.0. Lory confirmed that there are no old application data: update the

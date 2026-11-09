@@ -1,5 +1,12 @@
 # Questionnaire open issues
 
+Approved topics 6A–10A: add a distinct inaccessible-directions answer in eight
+languages, rebuild the walking bundle and retain its other answer contracts.
+Read-only model review found no necessary HU/FA welcome edits. Separate retired
+Safety/Daily Travel complaints from current acceptance; retain neutral behaviour
+instructions and the five-question travel form. Source audit, bundle verifier,
+location model regression and diff checks pass. No push or app-ready claim.
+
 9 November, open-report review: separate optional mobility support from journey
 context in both location forms (major version 5.0.0). Actual consumer checks
 confirm refusal options and broken-light branching. Mode-specific comfort and

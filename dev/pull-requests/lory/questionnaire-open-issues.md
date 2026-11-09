@@ -1,5 +1,12 @@
 # Simplify questionnaires and separate optional mobility support
 
+Walking directions now offer a distinct answer when the available signs are not
+accessible, instead of requiring the person to say they do not use signs. The
+source and composed questionnaire include eight translations; existing answers
+and conditions are preserved. Hungarian/Persian welcome review required no text
+change. Obsolete Safety/Daily Travel subclaims are separated from unresolved
+current acceptance in the follow-up record. Bundle/model regressions pass.
+
 Location reports now ask about mobility aids and strollers separately from the
 journey context. The support question is optional and includes a refusal option;
 the two form versions advance to 5.0.0 to preserve the meaning of historical
