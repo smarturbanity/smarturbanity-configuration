@@ -4,7 +4,7 @@ The 16 sectioned mode questionnaires under `forms/surveys/` are the only maintai
 source of their questions and translations. The 51 small questionnaires have been
 removed after verifying that all 258 questions are retained. Git preserves history;
 there are no previous responses requiring compatibility, old links or migrations.
-Profile, household, general travel, pre/post-trip, location reports and feedback
+The unified profile, general travel, pre/post-trip, location reports and feedback
 remain separate. Estimates below sum the existing declared minutes, not measured
 completion times. No questions were added to reach an arbitrary minimum duration.
 
@@ -72,7 +72,7 @@ scenarios rather than treating 47/44 configured questions as all shown at once.
 
 ## Questionnaire illustrations
 
-Each of the 20 current survey files (16 mode questionnaires, profile, household,
+Each of the 19 current survey files (16 mode questionnaires, unified profile,
 travel and future travel choices) has its own SVG under `forms/surveys/assets/`,
 named after its questionnaire ID. The illustration combines the mode or subject
 with two topics from its actual questions. Shared colours and a fixed 800×450
@@ -80,9 +80,9 @@ canvas keep the gallery consistent. There is no text embedded in the drawing;
 the image alternative reuses the questionnaire's translated title. No scripts,
 external resources or animation are included. Questions and answer values are
 unchanged. The later illustration update changes only welcome image links and
-image alternatives in the 20 survey JSON files.
+image alternatives in the survey JSON files.
 
-Run `python tools/verify_survey_assets.py` to check all 20 image links, distinct
+Run `python tools/verify_survey_assets.py` to check all 19 image links, distinct
 drawings, valid SVG XML and translated alternatives. It also rejects unused SVGs,
 scripts, external image references and animation. The 19 old shared illustrations
 were removed after checking that no current form references them.
