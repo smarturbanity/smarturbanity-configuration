@@ -622,3 +622,8 @@ Lory approved the French future-questionnaires wording "Répondriez-vous aux
 prochains questionnaires, qui seront publiés chaque semaine ?". Feedback form
 1.1.2; structural comparison confirms only that French translation and the form
 patch version changed. All answers, settings and other languages are preserved.
+
+Lory approved the French usefulness question "Dans quelle mesure trouvez-vous
+utile de répondre aux questionnaires ?", asking directly about the experience.
+Feedback form 1.1.3; structural comparison confirms only that French translation
+and the form patch version changed. Answers, settings and other languages remain.
