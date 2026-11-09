@@ -89,7 +89,7 @@ external contribution writes are blocked.
   “Molto”. Each last radio can be focused and selected with Space. Automated
   Axe WCAG A/AA checks find no violations in this question. This bypasses the
   catalogue integration gap below and does not prove normal availability.
-- FAIL, enlarged presentation: visual inspection of the actual 390px screenshots
+- Historical failure outside the agreed release limit: visual inspection of the actual 390px screenshots
   at CSS zoom 200% shows confidence text escaping the two-column choice borders,
   overlapping header controls and overlapping bottom navigation. Italian and
   Arabic both show the failure. A visible radio and no document-wide horizontal
@@ -109,6 +109,16 @@ external contribution writes are blocked.
 
 Historical comprehension reports stay open. No native-speaker or real
 screen-reader acceptance is claimed from these browser tests.
+
+### Confirmed enlargement acceptance limit
+
+Lory set 150% as the enlargement acceptance limit for this release. Verify that
+questions, answer labels and navigation remain readable and usable up to 150%.
+The earlier 200% CSS-zoom findings remain historical observations outside this
+release gate; do not present them again as release blockers or reopen the limit
+as an undecided issue. This decision does not establish a passing result at
+150%: the browser enlargement check at that limit remains to be performed.
+Keep native-speaker and real assistive-technology checks separate.
 
 ## Completion boundary
 
