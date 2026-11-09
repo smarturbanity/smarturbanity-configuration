@@ -90,3 +90,8 @@ Lory approved "Angoli nascosti o visuale ostacolata" for the Italian walking
 insecurity factor. Translation-only patches: walk_insecurity_factors 3.2.1,
 walking security 3.1.3. Structural comparison confirms all other content, answer
 values, settings and languages are preserved. No browser/persona retest.
+
+Lory approved shortening both Italian child-accompaniment answers to "bambini o
+adolescenti", with "a scuola, allo sport o ad altre attività" in the daily answer.
+Translation-only patches: carer 2.2.1, household 1.0.2. Structural comparison
+confirms all other content, answer values, settings and languages are preserved.
