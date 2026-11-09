@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "4.0.0",
+    "questionnaire_version": "4.0.1",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -79,8 +79,9 @@
             "show_if": {},
             "required": true,
             "question_id": "journey_context",
-            "question_version": "2.0.1",
-            "privacy_classification": "special_category_health"
+            "question_version": "2.1.0",
+            "privacy_classification": "special_category_health",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do you use this place?",
@@ -769,13 +770,21 @@
             ],
             "show_if": {
               "continue_audit": "yes_audit",
+              "connection_form": [
+                "street_level"
+              ],
               "crossing_kind": [
                 "signal"
+              ],
+              "traffic_control": [
+                "protected_signal",
+                "permissive_signal_with_turning_conflict",
+                "unclear_signal_priority"
               ]
             },
             "required": false,
             "question_id": "signal_call",
-            "question_version": "2.0.0",
+            "question_version": "2.0.1",
             "privacy_classification": "heightened_personal"
           },
           {
