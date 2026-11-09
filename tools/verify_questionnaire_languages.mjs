@@ -14,13 +14,15 @@ let questionnaires = 0;
 for (const name of fs.readdirSync(path.join(root, 'forms/surveys'), {recursive: true}).filter(file => file.endsWith('.json'))) {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'forms/surveys', name), 'utf8'));
   if (!data.questionnaire) continue;
-  for (const tag of context.questionnaireTextTags(data.questionnaire)) {
-    if (!shared.has(tag)) assert.ok(data.languages.en[tag], name + '/en: missing questionnaire text ' + tag);
+  const authored = context.questionnaireTextTags(data.questionnaire);
+  for (const tag of authored) {
+    assert.ok(data.languages.en[tag], name + '/en: missing questionnaire text ' + tag);
   }
   for (const [language, table] of Object.entries(data.languages)) {
     const framework = JSON.parse(fs.readFileSync(path.join(path.dirname(revisionFile), 'Configuration/languages', language + '.json'), 'utf8'));
     for (const tag of shared) {
-      assert.ok(!Object.hasOwn(table, tag), name + '/' + language + ': framework label duplicated ' + tag);
+      if (authored.has(tag)) assert.ok(table[tag], name + '/' + language + ': missing authored answer ' + tag);
+      else assert.ok(!Object.hasOwn(table, tag), name + '/' + language + ': framework label duplicated ' + tag);
       assert.ok(framework[tag], language + ': missing framework label ' + tag);
     }
   }
