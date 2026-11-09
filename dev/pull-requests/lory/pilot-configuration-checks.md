@@ -1,5 +1,13 @@
 # Separate pilot data, technical settings and schedule
 
+Source: `lory/pilot-configuration-checks` → `main`.
+
+This is the single configuration PR candidate. It includes the complete history
+of `lory/pilot-configuration-refresh`, `lory/campaign-launch` and current `main`.
+The consolidation changes no runtime JSON, forms or shared definitions relative
+to the reviewed configuration revision `02333d3`. Existing application pins to
+that immutable ancestor remain valid; future pilot changes belong on this branch.
+
 The configuration currently repeats the application baseline in external base and
 manifest files and mixes technical settings into the modeler document. Load the
 baseline from CityMaaS and separate Rome's modeler data, technical settings and

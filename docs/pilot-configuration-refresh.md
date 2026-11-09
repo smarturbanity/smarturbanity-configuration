@@ -1,5 +1,10 @@
 # Pilot configuration refactoring from the current main
 
+The active consolidated candidate is now `lory/pilot-configuration-checks`,
+targeting `main`. Its single [PR description](../dev/pull-requests/lory/pilot-configuration-checks.md)
+includes the complete refactoring and campaign history. The sections below record
+the original implementation and checks; consolidation changes no runtime files.
+
 This branch starts at `655bbc8` and reapplies the configuration design from
 `lory/pilot-configuration-defaults`, without merging its older questionnaires.
 

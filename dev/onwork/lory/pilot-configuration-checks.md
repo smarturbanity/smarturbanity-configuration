@@ -1,5 +1,20 @@
 # Pilot configuration refresh
 
+## Single configuration candidate — 2026-11-10
+
+Lory selected `.worktrees/pilot-configuration-checks` as the sole working area
+and PR source for this configuration repository. Merged current main and the
+remaining campaign branch without rewriting history. The candidate contains both
+configuration branches; its runtime tree remains identical to `02333d3`.
+Moved the active PR description and work note to match this branch. Other branch
+references remain intact; no deletions or application deployment are included.
+
+Verification after consolidation passes: actual application merge/preload and
+preservation, 444 campaign calendar cases, sixteen bundles/258 questions,
+six negative regressions and actual pre-trip company controls. Git ancestry
+confirms both task branches and main are included; pilots, forms, definitions and
+the runtime index are byte-identical to the reviewed immutable source `02333d3`.
+
 Start: current main `655bbc8`. Rebuild the pilot configuration refactoring on a new
 branch, preserving current questionnaire content. Keep the prior runtime candidate
 available for its separate development publication.
