@@ -53,8 +53,6 @@ travel. Other topic campaigns are disabled with no dated weekly windows. Debug
 visibility is not an active campaign. A full-chain text simulation can cover the
 catalogue, but must not claim those campaigns are available in the live app.
 
-## Completion boundary
-
 ## Motorcycle confidence correction (9 November 2026)
 
 The composed motorcycle safety/comfort form now uses contextual confidence text
@@ -67,6 +65,50 @@ into identical translated labels. Independent review confirmed deterministic
 composition and 51 sources, 16 bundles, 258 questions and eight languages.
 This correction does not close historical native-language or accessibility
 acceptance reports; browser evidence belongs to the application gate above.
+
+### Browser acceptance slice (9 November 2026)
+
+Application tested: CityMaaS `c2eef36a3e1ad5889aef2d22ba9463eaef170706`.
+Configuration tested: `c9b12c33ac500ab023a918a7266c0b37b9071f28` (the scale
+correction above; later documentation-only commits do not change its JSON).
+All participants, account dependencies and delivery outcomes are synthetic;
+external contribution writes are blocked.
+
+- PASS: the existing five questionnaire browser suites cover consent, invalid
+  email, a second survey, logout, mobile introductions/back/reload, twelve
+  scenarios, answer preservation, scrolling at 375/1100px, campaign availability,
+  account-gated trips, location gates and question-pool decisions.
+- PASS: the actual local profile screen saves choices, reopens for a voluntary
+  change, and proposes the changed choices after a real document reload. This
+  uses the configured profile questions with synthetic account dependencies and
+  a sender that throws if called. It proves device-local profile editing, not a
+  submitted profiling questionnaire, cross-device persistence or backend access.
+- PASS, isolated renderer: explicitly loading the corrected motorcycle JSON in
+  the actual answer sheet presents all five distinct confidence options in all
+  eight languages. Italian ends in “Molto” / “Moltissimo”, while comfort retains
+  “Molto”. Each last radio can be focused and selected with Space. Automated
+  Axe WCAG A/AA checks find no violations in this question. This bypasses the
+  catalogue integration gap below and does not prove normal availability.
+- FAIL, enlarged presentation: visual inspection of the actual 390px screenshots
+  at CSS zoom 200% shows confidence text escaping the two-column choice borders,
+  overlapping header controls and overlapping bottom navigation. Italian and
+  Arabic both show the failure. A visible radio and no document-wide horizontal
+  overflow are insufficient acceptance checks. Native browser zoom and real
+  assistive technology remain separate, unverified tests. The Access owner has
+  both screenshots and the reproduction.
+- FAIL / integration follow-up: both existing pre/post-trip reload scenarios
+  (`sent` and `rejected`) restore the partial pre-trip answers but stop after
+  Send: the second form is unavailable and `state.form` is null. They do not
+  establish paired delivery or rejection recovery with this candidate.
+- Confirmed integration gap: the application catalogue omits the composed
+  motorcycle form. `listQuestionnaireCatalogPaths` discards root `questionnaires`
+  paths containing `/` whenever child directories exist, assuming mirror paths.
+  Here the root paths are the new composed catalogue, while the child indexes
+  still list the separate source forms. The Access application owner has the
+  exact reproduction; do not call this configuration fully integrated.
+
+Historical comprehension reports stay open. No native-speaker or real
+screen-reader acceptance is claimed from these browser tests.
 
 ## Completion boundary
 
