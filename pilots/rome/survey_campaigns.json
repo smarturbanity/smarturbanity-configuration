@@ -1,6 +1,6 @@
 {
   "config_type": "smarturbanity_survey_campaigns",
-  "config_version": "0.6.0",
+  "config_version": "0.7.0",
   "pilot_id": "rome",
   "pilot_period": {
     "start_date": "2026-11-14",
@@ -8,7 +8,7 @@
     "timezone": "Europe/Rome"
   },
   "rules": {
-    "show_all_in_debug": true,
+    "show_all_in_debug": false,
     "offer_tool_feedback": true
   },
   "campaigns": {
@@ -26,8 +26,7 @@
       "area": null,
       "exclusive": false,
       "questionnaires": [
-        "smarturbanity_your_profile",
-        "smarturbanity_your_travel"
+        "smarturbanity_your_profile"
       ]
     },
     "rome_future": {
@@ -44,10 +43,29 @@
       "area": null,
       "exclusive": false,
       "questionnaires": [
+        "smarturbanity_your_travel",
         "smarturbanity_travel_choices"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_walking_surveys": {
+      "name": "Walking",
+      "enabled": true,
+      "priority": 0,
+      "window": {
+        "from_week": null,
+        "until_week": null,
+        "valid_from": "2026-11-09",
+        "valid_until": null,
+        "extended_until": null
+      },
+      "area": null,
+      "exclusive": false,
+      "questionnaires": [
+        "smarturbanity_walking_trips_and_safety"
+      ]
+    },
+    "rome_walking_experience": {
       "name": "Walking",
       "enabled": false,
       "priority": 0,
@@ -61,9 +79,9 @@
       "area": null,
       "exclusive": false,
       "questionnaires": [
-        "smarturbanity_walking_trips_and_safety",
         "smarturbanity_walking_experience_and_improvements"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_cycling_surveys": {
       "name": "Cycling",
@@ -82,7 +100,8 @@
         "smarturbanity_cycling_trips_and_road_safety",
         "smarturbanity_cycling_security_and_comfort",
         "smarturbanity_cycling_experience_and_improvements"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_e_scooter_surveys": {
       "name": "E-scooter",
@@ -101,7 +120,8 @@
         "smarturbanity_e_scooter_trips_comfort_and_improvements",
         "smarturbanity_e_scooter_road_and_personal_safety",
         "smarturbanity_e_scooter_experience_and_effort"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_public_transport_surveys": {
       "name": "Public transport",
@@ -120,7 +140,8 @@
         "smarturbanity_public_transport_trips_and_improvements",
         "smarturbanity_public_transport_safety_and_comfort",
         "smarturbanity_public_transport_experience_and_effort"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_car_surveys": {
       "name": "Car",
@@ -138,7 +159,8 @@
       "questionnaires": [
         "smarturbanity_car_choices_and_safety",
         "smarturbanity_car_trip_experience_and_conditions"
-      ]
+      ],
+      "publication_state": "coming-soon"
     },
     "rome_motorcycle_surveys": {
       "name": "Motorcycle and scooter",
@@ -157,7 +179,8 @@
         "smarturbanity_motorcycle_use_and_possible_changes",
         "smarturbanity_motorcycle_safety_and_comfort",
         "smarturbanity_motorcycle_trip_experience_and_surroundings"
-      ]
+      ],
+      "publication_state": "coming-soon"
     }
   },
   "surveys_gallery": {

@@ -69,7 +69,9 @@ assert.equal(screens, 51);
 assert.equal(questions, 258);
 for (const c of Object.values(campaigns.campaigns)) {
   for (const id of c.questionnaires) assert.ok(catalogue.has(id), 'Missing campaign target ' + id);
-  if (c.questionnaires.some(id => modeIds.has(id))) assert.equal(c.enabled, false);
+  for (const id of c.questionnaires.filter(id => modeIds.has(id))) {
+    assert.equal(c.enabled, id === 'smarturbanity_walking_trips_and_safety', 'Mode rollout: ' + id);
+  }
 }
 for (const [from, to] of Object.entries(campaigns.surveys_gallery.follow_ups)) {
   assert.ok(catalogue.has(from) && catalogue.has(to));
