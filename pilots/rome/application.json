@@ -28,7 +28,7 @@
     },
     "questionnaires": {
       "consent": {
-        "version": "2.0.0-draft",
+        "version": "1.0.0",
         "withdrawal_contact": "amministrazione@movesion.com",
         "adult": {
           "enabled": true,
@@ -51,10 +51,64 @@
             "streets": false
           },
           "place": {
-            "defaultCity": "Roma"
+            "defaultCity": "Roma",
+            "suggestedPlaces": [
+              {
+                "address": "Largo Alessandrina Ravizza, Roma",
+                "latitude": 41.871874,
+                "longitude": 12.4509774
+              }
+            ],
+            "studyArea": {
+              "label": "#the 2 km square around Largo Ravizza, Roma",
+              "latitude": 41.871874,
+              "longitude": 12.4509774,
+              "sideM": 2000,
+              "greyBandM": 500
+            }
           }
         },
         "flow": {
+          "flow": {
+            "campaignGroups": [
+              {
+                "id": "walk",
+                "text": "#Walking",
+                "bi_class": "bi-person-walking"
+              },
+              {
+                "id": "bike",
+                "text": "#Cycling",
+                "bi_class": "bi-bicycle"
+              },
+              {
+                "id": "transit",
+                "text": "#Public transport",
+                "bi_class": "bi-bus-front"
+              },
+              {
+                "id": "e_scooter",
+                "text": "#E-scooter",
+                "image": "/Projects/SmartUrbanity/AccessTogether/Assets/e-scooter.svg"
+              },
+              {
+                "id": "car",
+                "text": "#Car",
+                "bi_class": "bi-car-front"
+              },
+              {
+                "id": "motorcycle",
+                "text": "#Motorcycle",
+                "image": "/Projects/SmartUrbanity/AccessTogether/Assets/motorcycle.svg"
+              },
+              {
+                "id": "other",
+                "text": "#Other questionnaires",
+                "bi_class": "bi-grid",
+                "remaining": true
+              }
+            ]
+          },
           "landing": {
             "avatars": [
               {
@@ -106,17 +160,7 @@
                 "id": "flowi-si-muove-piedi",
                 "src": "./pilots/rome/assets/avatars/flowi-si-muove-piedi.svg",
                 "alt": "Flowi a piedi",
-                "default": true,
-                "legacyIndices": [
-                  0,
-                  1,
-                  2
-                ],
-                "legacySources": [
-                  "Projects/SmartUrbanity/AccessTogether/Assets/flowi.svg",
-                  "Projects/SmartUrbanity/AccessTogether/Assets/flowi-smile.svg",
-                  "Projects/SmartUrbanity/AccessTogether/Assets/flowi-wink.svg"
-                ]
+                "default": true
               },
               {
                 "id": "flowi-si-muove-skate",

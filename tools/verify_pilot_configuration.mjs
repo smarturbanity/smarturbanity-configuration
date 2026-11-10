@@ -44,6 +44,21 @@ assert.equal(romeFlow.profile.questions.length, 3);
 assert.equal(romeFlow.reports.routes.length, 6);
 delete romeFlow.profile;
 romeFlow.reports = {officeLanguage: romeFlow.reports.officeLanguage};
+// Rome campaign groups, suggested place and study area moved here from the Access Together installation.
+assert.deepEqual(romeFlow.flow.campaignGroups.map(group => group.id), ['walk', 'bike', 'transit', 'e_scooter', 'car', 'motorcycle', 'other']);
+delete romeFlow.flow;
+const romePlace = unchangedApplication.settings.applications.smart_urbanity_access_together.accessTogether.place;
+assert.ok(romePlace.suggestedPlaces.length && romePlace.studyArea);
+delete romePlace.suggestedPlaces;
+delete romePlace.studyArea;
+// The consent names the published notice version; the former Flowi choices fall back to the default avatar.
+assert.equal(application.settings.questionnaires.consent.version, '1.0.0');
+unchangedApplication.settings.questionnaires.consent.version = originalApplication.settings.questionnaires.consent.version;
+(function dropLegacy(node) {
+  if (!node || typeof node !== 'object') return;
+  if (!Array.isArray(node) && ('legacySources' in node || 'legacyIndices' in node)) { delete node.legacySources; delete node.legacyIndices; }
+  Object.values(node).forEach(dropLegacy);
+})(originalApplication);
 assert.deepEqual(unchangedApplication, originalApplication, 'Technical settings preserved apart from explicit block availability');
 assert.deepEqual(effective.applications.smart_urbanity_access_together.accessTogether.contentsAvailability,
   {services: true, connections: true, experiences: false, streets: false}, 'Block availability survives actual merge');

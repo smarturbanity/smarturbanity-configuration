@@ -10,10 +10,8 @@ selected immutable revision, not from the application document's directory.
 Arrays replace the inherited catalogue. Other pilots declare their own catalogue
 or explicitly inherit a shared one; Rome's images are not application defaults.
 
-Only the selected ID is stored. `legacySources` lists exact former source values;
-`legacyIndices` lists former numeric choices. Both map to the declaring entry and
-must be unambiguous across the catalogue. Removed selections use the default.
-The three former Flowi choices migrate to the walking avatar.
+Only the selected ID is stored. A saved choice that names no catalogue entry, such as
+one of the former Flowi images, uses the default.
 
 These 14 user-supplied Flowi assets keep their drawing; only the background around
 the figure is transparent, so each avatar sits on any card or top-bar colour. They
