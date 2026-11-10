@@ -54,12 +54,9 @@ delete romePlace.studyArea;
 // The consent names the published notice version; the former Flowi choices fall back to the default avatar.
 assert.equal(application.settings.questionnaires.consent.version, '1.0.0');
 unchangedApplication.settings.questionnaires.consent.version = originalApplication.settings.questionnaires.consent.version;
-// The external service addresses moved from the application code into the pilot, one per runtime environment.
-for (const key of ['smarturbanity_spatial_address', 'smarturbanity_participant_code_address']) {
-  for (const environment of ['prod', 'test', 'dev']) assert.match(application.settings.servers[key][environment], /^https:\/\//);
-}
-assert.equal(application.settings.servers.smarturbanity_spatial_address.test, 'https://su-spatialdb.ctlup.com');
-delete unchangedApplication.settings.servers;
+// The Movesion API addresses do not depend on the pilot: the applications hold them.
+assert.equal(application.settings.movesion.base_urls, undefined);
+delete originalApplication.settings.movesion.base_urls;
 // The Rome model preparation values moved from the application settings into the pilot.
 const preparation = pilot.data_model.preparation;
 assert.equal(preparation.parameters.model_id, 'smarturbanity_rome');

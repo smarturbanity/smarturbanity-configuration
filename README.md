@@ -172,20 +172,12 @@ Pilot configuration may progressively include other domains such as:
 user chooses another one; Rome opens in Italian. Without it, each application keeps its
 own default.
 
-`movesion` holds the pilot's Movesion client for each runtime environment (`prod`,
-`test`, `dev`): `pilot_codes` names the client and `base_urls` the Movesion API that
-serves it. Rome uses `smartrome` on `https://api.mobilitycompany.it` in production and
-`smartromedev` on `https://api.dev.mobilitycompany.it`, Movesion dev, which the dev and
-test installations use. The applications select the entry of their environment for
-sign-in and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion
-user belongs to exactly one of these clients.
-
-`servers` names the external services the applications call for that pilot, per runtime
-environment: `smarturbanity_spatial_address` is the spatial server (Rome: CTLup's server in
-production and test, the team's spatial mock in dev) and
-`smarturbanity_participant_code_address` the participant-code service that turns an email
-into the pseudonymous participant code (Rome: Movesion's `https://id.smarturbanity.com`).
-An address the installation's runtime file sets, or the local data-source choice, still wins.
+`movesion.pilot_codes` names the pilot's Movesion client for each runtime environment (`prod`,
+`test`, `dev`): Rome uses `smartrome` in production and `smartromedev`, on Movesion dev, in the
+dev and test installations. The applications select the entry of their environment for sign-in
+and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion user belongs to
+exactly one of these clients. The Movesion API address of each environment does not depend on the
+pilot and stays in the applications.
 
 `answers_firestore` is the Firebase web configuration of the database that receives the
 pilot's participant answers, per runtime environment. In production it is the pilot's
