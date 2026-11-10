@@ -65,6 +65,7 @@ smarturbanity-configuration/
 ├── pilots/
 │   └── rome/
 │
+├── versions.json
 └── README.md
 ```
 
@@ -467,7 +468,7 @@ Individual configuration objects may additionally expose explicit schema or conf
 
 Changes affecting identifiers, schemas or application behaviour should be treated as compatibility-sensitive changes.
 
-Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. Releases are Git tags; applications should load the configuration from a tag rather than from `main`, so that a change on `main` reaches an application only when the application moves to the new tag.
+Applications check the `questionnaire_version` of each form they load against the version they expect. Changes to stored answer keys, question structure, options or application behaviour need a new form version and a matching application update. Adding `privacy_classification` metadata alone does not change the response contract and retains the form version. `versions.json` on `main` names the enabled commit of each repository; `repositories.smarturbanity-configuration` is the configuration revision. Applications read only this file from `main` and every other configuration file at that revision, so a change on `main` reaches them when `versions.json` names a newer commit, without an application code change.
 
 ## Scope
 
