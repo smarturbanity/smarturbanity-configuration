@@ -318,8 +318,8 @@ A missing crossing or connection uses `missing_connection_report`; a missing wal
 
 Every form starts with one common eligibility screen: data-processing consent, an
 optional age declaration and an optional email. Forms do not repeat it. The
-application ships the default consent; `base.json` overrides it for SmartUrbanity
-under `questionnaires.consent` and a pilot may override single values, for example
+application's code-owned defaults carry the SmartUrbanity consent under
+`questionnaires.consent`, and a pilot may override single values, for example
 the age declaration and its minimum age. The age declaration is enabled per pilot:
 
 ```json
@@ -331,16 +331,17 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 This repository holds no privacy documents or notice links. Each pilot's notices, in
 the pilot's languages, their versions and the privacy guidelines live on the
 SmartUrbanity website, which lists each pilot's notices in `pilot/<pilot>/privacy.json`;
-there is no common notice. `base.json` names the website once, as the top-level
+there is no common notice. The code-owned defaults name the website once, as the top-level
 `website_url`, `www.smarturbanity.com` in every runtime environment; the applications read
 the lists from there for the loaded `pilot_id`.
 
-`participant_code_destination` describes the service that returns the pseudonymous
-participant code. The client sends the participant identifier or an account token
-to that service; it does not compute the code from a salt in this configuration.
-The configured destination currently points to the spatial server mock at
-`/api/v1/participant-codes`. Application and service support is required before
-using this configuration in a running pilot.
+`participant_code_destination`, in the code-owned defaults, names the service that
+turns the participant's email into the pseudonymous participant code: Movesion's
+participant-code service, `POST /v1/participant-code` on the
+`smarturbanity_participant_code_address` server, the same service in every runtime
+environment. Local runs and browser tests send that request to the spatial server
+mock instead, so no test email reaches Movesion. The client does not compute the
+code from a salt, and this repository does not configure the destination.
 
 The consent text in the code-owned defaults is a draft (`version: "1.0.0-draft"`) until Movesion supplies the final text; the final text must come with a new `version`, so earlier acceptances are not reused. `questionnaires.consent.languages` carries the SmartUrbanity consent text in every language, keyed by language and `#` tag; the other gate texts come from the application dictionary.
 
