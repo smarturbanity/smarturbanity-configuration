@@ -50,6 +50,6 @@ for (const debug of [false, true]) for (const review of [false, true]) {
     assert.equal(context.questionnaireGetScheduleOffer(schedule, next, new Date('2026-11-14T12:00:00Z')).offered, false);
   }
 }
-assert.deepEqual(read('pilots/rome/application.json').settings.applications.smart_urbanity_access_together.accessTogether.contentsAvailability,
+assert.deepEqual(read('pilots/rome/app_look.json').settings.applications.smart_urbanity_access_together.accessTogether.contentsAvailability,
   {services: true, connections: true, experiences: false, streets: false});
 console.log(JSON.stringify({result: 'PASS', forms: forms.length, calendarCases: cases, open, blocks: 4, consumer: 'actual QuestionnaireCampaigns.js'}));

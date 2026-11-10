@@ -9,11 +9,21 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const app = process.argv[2];
 assert.ok(app, 'Pass the CityMaaS checkout that owns the defaults and loader');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
-const context = vm.createContext({URL, window: {location: {href: 'https://configuration.test/'}}});
+const context = vm.createContext({URL, structuredClone, window: {location: {href: 'https://configuration.test/'}}});
 vm.runInContext(fs.readFileSync(path.join(app, 'CityMaasRoot/Utilities/DataSources/ConfigurationDataSource.js'), 'utf8'), context);
 const defaults = JSON.parse(fs.readFileSync(path.join(app, 'CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json'), 'utf8'));
-const pilot = read('pilots/rome/rome.json');
-const application = read('pilots/rome/application.json');
+// Each document is read as the app reads it: the file joined with the topic files its "parts" list.
+const readWhole = file => {
+  const document = read(file);
+  return context.composeConfigurationParts(document, (document.parts ?? []).map(part => read(part.replace(/^\.\//, ''))));
+};
+const pilotFile = read('pilots/rome/rome.json');
+const applicationFile = read('pilots/rome/application.json');
+assert.deepEqual(pilotFile.parts, ['./pilots/rome/map.json', './pilots/rome/data_model.json', './pilots/rome/services.json', './pilots/rome/contribution_forms.json']);
+assert.deepEqual(applicationFile.parts, ['./pilots/rome/app_look.json', './pilots/rome/reports.json']);
+const pilot = JSON.parse(JSON.stringify(readWhole('pilots/rome/rome.json')));
+const application = JSON.parse(JSON.stringify(readWhole('pilots/rome/application.json')));
+assert.throws(() => context.composeConfigurationParts(pilotFile, [{map: {}}, {map: {initial_view: null}}, {map: {initial_view: {}}}]), /set in two files: map.initial_view/);
 const effective = JSON.parse(JSON.stringify(context.mergePilotConfigurationDocuments(defaults, pilot, application)));
 const original = JSON.parse(execFileSync('git', ['show', '5a04c0c:pilots/rome/rome.json'], {cwd: root, encoding: 'utf8'}));
 function preserves(previous, current, prefix = '') {
@@ -96,7 +106,7 @@ context.loadConfigurationSourceJson = async (source, options = {}) => {
   const file = url.hostname === 'app.test' ? path.join(app, url.pathname) : path.join(root, url.pathname);
   if (!fs.existsSync(file)) return null;
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-  return options.snapshot ? {data, source} : data;
+  return options.snapshot ? {data, source: url.href} : data;
 };
 const loaded = await context.preloadConfigurationDataSource({
   defaultsPath: 'https://app.test/CityMaasRoot/Projects/SmartUrbanity/Configuration/defaults.json',
@@ -106,9 +116,13 @@ const loaded = await context.preloadConfigurationDataSource({
 assert.equal(loaded.loaded, true, loaded.error);
 assert.ok(registry.some(entry => entry.dataset.config_type === 'service_subtypes'));
 assert.ok(registry.some(entry => entry.dataset.config_type === 'smarturbanity_survey_campaigns'));
+assert.equal(loaded.snapshots.pilot.parts.length, 4);
+assert.equal(loaded.snapshots.application.parts.length, 2);
+assert.deepEqual(JSON.parse(JSON.stringify(loaded.snapshots.pilot.data)), pilot, 'The app joins the pilot parts as this check does');
+assert.deepEqual(JSON.parse(JSON.stringify(loaded.snapshots.application.data)), application, 'The app joins the technical parts as this check does');
 assert.equal(loaded.file.application_config, 'https://configuration.test/pilots/rome/application.json');
 const invalid = structuredClone(pilot);
 invalid.movesion = {};
 assert.throws(() => context.mergePilotConfigurationDocuments(defaults, invalid, application), /technical file/);
 assert.throws(() => context.mergePilotConfigurationDocuments(defaults, pilot, {...application, pilot_id: 'other'}), /Invalid pilot/);
-console.log('PASS: actual preload resolves technical document and registers both datasets; invalid ownership and identity rejected');
+console.log('PASS: actual preload resolves technical document and registers both datasets; topic files joined; invalid ownership and identity rejected');

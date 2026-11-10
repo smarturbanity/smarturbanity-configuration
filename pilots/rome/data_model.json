@@ -1,0 +1,201 @@
+{
+  "data_model": {
+    "study_area": {
+      "name": "Municipio XII",
+      "area_group_id": "study_areas",
+      "selector": {
+        "property": "municipio",
+        "values": [
+          "XII"
+        ]
+      },
+      "membership": {
+        "area_group_id": "neighbourhoods",
+        "name_property": "denominazi"
+      }
+    },
+    "data_bbox_buffer_meters": 1000,
+    "data_bbox": [
+      12.22488438786681,
+      41.82752843573868,
+      12.487301122135545,
+      41.91741902904128
+    ],
+    "connections": {
+      "source_collections": [
+        "nodes"
+      ],
+      "source_selectors": [
+        {
+          "property": "osm.highway",
+          "values": [
+            "crossing"
+          ]
+        }
+      ],
+      "exclude_selectors": [
+        {
+          "property": "osm.crossing",
+          "values": [
+            "no"
+          ]
+        }
+      ],
+      "type": "crossing",
+      "id_prefix": "osm-node:",
+      "mode_access": {
+        "walk": {
+          "default": true,
+          "property": "osm.foot"
+        },
+        "bike": {
+          "property": "osm.bicycle"
+        }
+      }
+    },
+    "package_properties": {
+      "segments": {
+        "omit_null": true,
+        "properties": [
+          "name",
+          "sped",
+          "segment_type",
+          "access",
+          "infrastructure",
+          "access_rules.walk.allowed",
+          "access_rules.walk.forward.allowed",
+          "access_rules.walk.backward.allowed",
+          "access_rules.bike.allowed",
+          "access_rules.bike.forward.allowed",
+          "access_rules.bike.backward.allowed",
+          "access_rules.car.allowed",
+          "access_rules.car.forward.allowed",
+          "access_rules.car.backward.allowed",
+          "physical_infrastructure.layer",
+          "physical_infrastructure.level",
+          "physical_infrastructure.bridge",
+          "physical_infrastructure.tunnel",
+          "physical_infrastructure.barrier",
+          "physical_infrastructure.width_m",
+          "osm.id",
+          "osm.segment",
+          "osm.direction",
+          "osm.oneway",
+          "osm.oneway:foot",
+          "osm.oneway:bicycle",
+          "osm.cycleway",
+          "osm.cycleway:left",
+          "osm.cycleway:right",
+          "osm.cycleway:both",
+          "osm.foot:forward",
+          "osm.foot:backward",
+          "osm.bicycle:forward",
+          "osm.bicycle:backward",
+          "osm.junction",
+          "osm.crossing",
+          "osm.tunnel",
+          "osm.bridge",
+          "osm.layer",
+          "osm.level",
+          "osm.barrier",
+          "osm.node_controls",
+          "osm.alt_name"
+        ]
+      },
+      "areas": {
+        "omit_null": true,
+        "properties": [
+          "source_area_id",
+          "source_layer_id",
+          "inside_study_area",
+          "name",
+          "denominazi",
+          "tipo",
+          "municipio",
+          "classe_fun",
+          "habitants_total",
+          "habitants_students",
+          "habitants_workers",
+          "habitants_retired",
+          "buildings_total",
+          "buildings_residential",
+          "buildings_commercial"
+        ]
+      },
+      "nodes": {
+        "properties": []
+      },
+      "connections": {
+        "properties": [
+          "address",
+          "walk_access",
+          "bike_access",
+          "crossing_kind",
+          "crossing_users"
+        ]
+      }
+    },
+    "area_groups": {
+      "neighbourhoods": {
+        "name": "Quartieri"
+      },
+      "study_areas": {
+        "name": "Municipio XII"
+      },
+      "census": {
+        "name": "Sezioni censuarie",
+        "order": 30,
+        "view": "access_inspector",
+        "icon": "bi-grid-3x3-gap",
+        "source": "server",
+        "source_layers": [
+          "cells"
+        ]
+      },
+      "h3": {
+        "name": "Celle H3"
+      }
+    },
+    "preparation": {
+      "procedure_sources": "/Models/smarturbanity_rome/procedure-sources.json",
+      "parameters": {
+        "model_id": "smarturbanity_rome",
+        "model_name": "SmartUrbanity Rome",
+        "service_property_name": "servizi_count",
+        "area_property_name": "quartieri_list",
+        "areas": {
+          "sources": "municipio_01,municipio_08,municipio_11,municipio_12,municipio_13"
+        },
+        "study_areas": {
+          "sources": "municipio_12"
+        },
+        "education": {
+          "sources": "schools"
+        },
+        "leisure": {
+          "sources": "sport_centers,green_areas,cultural_services"
+        },
+        "administration": {
+          "sources": "registry_services,security_services"
+        },
+        "special_needs": {
+          "sources": "senior_centers,youth_centers,community_places"
+        },
+        "report_conversion": {
+          "provider_fields": [
+            "name",
+            "Name",
+            "nome",
+            "Nome"
+          ],
+          "address_fields": [
+            "address",
+            "Indirizzo"
+          ],
+          "access_point_label": "Ingresso principale",
+          "pilot_campaign": "pre_test"
+        }
+      }
+    }
+  }
+}

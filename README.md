@@ -75,17 +75,34 @@ The configuration loader combines those defaults, the selected pilot's technical
 settings, and the pilot document. Objects merge recursively; arrays replace.
 Explicit null, false, zero and empty arrays remain explicit.
 
-Each pilot has three separate documents:
+Each pilot has three documents. The first two are split into topic files, so that each
+subject can be read and edited on its own:
 
-- `pilots/rome/rome.json`: modeler data, presentation overrides and embedded
-  pilot-specific datasets, including service subtypes.
-- `pilots/rome/application.json`: technical integration, language, consent and
-  application settings. The modeler document references it through `application_config`.
-  Access Together reads the pilot's profile questions and report menu (report types,
-  fault categories per form, follow-up form and offices) from
-  `applications.smart_urbanity_access_together.flow`; the code defaults leave them empty.
-- `pilots/rome/survey_campaigns.json`: the current calendar, form choices and
-  container associations, referenced through `content.dataset_files`.
+| File | What it holds |
+| --- | --- |
+| `pilots/rome/rome.json` | Pilot identity (`pilot_id`, `pilot_identity`), mode selection, questionnaire catalogue, and the links to the other files: `application_config`, `content.dataset_files` and its `parts`. |
+| `pilots/rome/map.json` | Map look: initial view and zoom limits (`map`). |
+| `pilots/rome/data_model.json` | Data model and its preparation: area groups, package properties, model preparation parameters (`data_model`). |
+| `pilots/rome/services.json` | Embedded dataset of the pilot's service subtypes (`datasets.service_subtypes`). |
+| `pilots/rome/contribution_forms.json` | Which form opens for each kind of contribution (`content.form_workflows`). |
+| `pilots/rome/application.json` | Technical settings: language, Movesion, answer storage, consent and questionnaires, and its `parts`. `rome.json` references it through `application_config`. |
+| `pilots/rome/app_look.json` | Access Together look and flow: available content blocks, suggested places and study area, campaign groups, landing avatars. |
+| `pilots/rome/reports.json` | Access Together reports and profile: report types, fault categories per form, follow-up form, offices, profile questions. |
+| `pilots/rome/survey_campaigns.json` | Campaign calendar, form choices and container associations, referenced through `content.dataset_files`. |
+
+How the topic files join. `rome.json` and `application.json` each list their topic
+files in `parts`; the application reads every document already joined with its parts:
+
+- each part is an object of the same shape as its document, holding only its topic;
+- objects combine, key by key, at any depth;
+- any other value (text, number, list, null) may be set by one file only; setting it in
+  two files is an error, so the order of the files never matters;
+- a part cannot list further parts, and paths are relative to the repository root.
+
+Access Together reads the pilot's profile questions and report menu from
+`applications.smart_urbanity_access_together.flow` in `reports.json`; the code defaults
+leave them empty. The joined documents need the CityMaaS reader that supports `parts`;
+an older reader ignores them and would load the pilot without its topic files.
 
 The root index lists pilot IDs, names and initial languages. Its language must match
 `application.json`'s `settings.default_language`. Shared definitions and forms
@@ -94,7 +111,7 @@ per-pilot index or separate service-subtype copy.
 
 ## Application and server configuration
 
-Adopt this revision with the CityMaaS reader that supports `application_config`,
+Adopt this revision with the CityMaaS reader that supports `application_config`, `parts`,
 embedded `datasets` and code-owned defaults. Readers that expect the former
 `base.json` or `manifests/` cannot consume this layout. The spatial server must
 receive the same code-owned defaults separately from this repository. This branch
@@ -138,9 +155,15 @@ For example:
 ```text
 pilots/
 └── rome/
-    ├── pilot.json
-    ├── modes.json
-    └── ...
+    ├── rome.json                 identity and links
+    ├── map.json                  map look
+    ├── data_model.json           data model and preparation
+    ├── services.json             service subtypes
+    ├── contribution_forms.json   forms per contribution
+    ├── application.json          technical settings
+    ├── app_look.json             Access Together look and flow
+    ├── reports.json              reports and profile
+    └── survey_campaigns.json     campaign calendar
 ```
 
 A pilot configuration describes the capabilities and settings available in that pilot.
