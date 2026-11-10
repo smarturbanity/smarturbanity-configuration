@@ -65,6 +65,7 @@ const preparation = pilot.data_model.preparation;
 assert.equal(preparation.parameters.model_id, 'smarturbanity_rome');
 assert.equal(preparation.parameters.study_areas.sources, 'municipio_12');
 assert.equal(preparation.parameters.report_conversion.pilot_campaign, 'pre_test');
+assert.equal(pilot.pilot_identity.service_campaign, 'rome_urban_services_accessibility_mapping');
 assert.equal(effective.data_model.preparation.procedure_sources, '/Models/smarturbanity_rome/procedure-sources.json');
 (function dropLegacy(node) {
   if (!node || typeof node !== 'object') return;

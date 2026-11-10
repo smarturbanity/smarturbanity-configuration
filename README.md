@@ -228,6 +228,10 @@ the source layers of each area and service group, the source fields that count s
 list areas, and for `report_conversion` the provider and address fields, the entrance label and
 the campaign the reports belong to. Without them the application uses neutral defaults.
 
+`pilot_identity` names the city that address searches assume and, in `service_campaign`, the
+campaign that the Access Hub service contributions belong to. Without them searches name no city
+and contributions carry no campaign.
+
 ## Extensions and overrides
 
 Some SmartUrbanity definitions are shared across pilots, while others may require local adaptation.
