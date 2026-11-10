@@ -60,6 +60,12 @@ for (const key of ['smarturbanity_spatial_address', 'smarturbanity_participant_c
 }
 assert.equal(application.settings.servers.smarturbanity_spatial_address.test, 'https://su-spatialdb.ctlup.com');
 delete unchangedApplication.settings.servers;
+// The Rome model preparation values moved from the application settings into the pilot.
+const preparation = pilot.data_model.preparation;
+assert.equal(preparation.parameters.model_id, 'smarturbanity_rome');
+assert.equal(preparation.parameters.study_areas.sources, 'municipio_12');
+assert.equal(preparation.parameters.report_conversion.pilot_campaign, 'pre_test');
+assert.equal(effective.data_model.preparation.procedure_sources, '/Models/smarturbanity_rome/procedure-sources.json');
 (function dropLegacy(node) {
   if (!node || typeof node !== 'object') return;
   if (!Array.isArray(node) && ('legacySources' in node || 'legacyIndices' in node)) { delete node.legacySources; delete node.legacyIndices; }

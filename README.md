@@ -221,6 +221,13 @@ database exposes to applications. Rome's connections expose `walk_access`,
 `bike_access` and the derived attributes `crossing_kind` and `crossing_users` that
 forms may use to prefill a question (see [Prefill from element attributes](#prefill-from-element-attributes)).
 
+`data_model.preparation` holds what the Admin Portal needs to build the pilot's model and its
+service reports: `procedure_sources` names the manifest of the source layers, and `parameters`
+adds the pilot's values to the application's model preparation settings: the model id and name,
+the source layers of each area and service group, the source fields that count services and
+list areas, and for `report_conversion` the provider and address fields, the entrance label and
+the campaign the reports belong to. Without them the application uses neutral defaults.
+
 ## Extensions and overrides
 
 Some SmartUrbanity definitions are shared across pilots, while others may require local adaptation.
