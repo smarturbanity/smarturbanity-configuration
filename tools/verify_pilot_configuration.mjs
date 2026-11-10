@@ -54,6 +54,12 @@ delete romePlace.studyArea;
 // The consent names the published notice version; the former Flowi choices fall back to the default avatar.
 assert.equal(application.settings.questionnaires.consent.version, '1.0.0');
 unchangedApplication.settings.questionnaires.consent.version = originalApplication.settings.questionnaires.consent.version;
+// The external service addresses moved from the application code into the pilot, one per runtime environment.
+for (const key of ['smarturbanity_spatial_address', 'smarturbanity_participant_code_address']) {
+  for (const environment of ['prod', 'test', 'dev']) assert.match(application.settings.servers[key][environment], /^https:\/\//);
+}
+assert.equal(application.settings.servers.smarturbanity_spatial_address.test, 'https://su-spatialdb.ctlup.com');
+delete unchangedApplication.settings.servers;
 (function dropLegacy(node) {
   if (!node || typeof node !== 'object') return;
   if (!Array.isArray(node) && ('legacySources' in node || 'legacyIndices' in node)) { delete node.legacySources; delete node.legacyIndices; }
