@@ -38,6 +38,12 @@ assert.deepEqual(pilot.content.form_workflows, original.content.form_workflows);
 const originalApplication = JSON.parse(execFileSync('git', ['show', '5a04c0c:pilots/rome/application.json'], {cwd: root, encoding: 'utf8'}));
 const unchangedApplication = structuredClone(application);
 delete unchangedApplication.settings.applications.smart_urbanity_access_together.accessTogether.contentsAvailability;
+// Rome profile questions and report menu moved here from the code defaults, which no longer name pilot questionnaires.
+const romeFlow = unchangedApplication.settings.applications.smart_urbanity_access_together.flow;
+assert.equal(romeFlow.profile.questions.length, 3);
+assert.equal(romeFlow.reports.routes.length, 6);
+delete romeFlow.profile;
+romeFlow.reports = {officeLanguage: romeFlow.reports.officeLanguage};
 assert.deepEqual(unchangedApplication, originalApplication, 'Technical settings preserved apart from explicit block availability');
 assert.deepEqual(effective.applications.smart_urbanity_access_together.accessTogether.contentsAvailability,
   {services: true, connections: true, experiences: false, streets: false}, 'Block availability survives actual merge');

@@ -141,7 +141,279 @@
             ]
           },
           "reports": {
-            "officeLanguage": "it"
+            "officeLanguage": "it",
+            "routes": [
+              {
+                "id": "fault",
+                "text": "#A fault to repair",
+                "description": "#Traffic light, pothole, street lamp: a few questions, then the package for the office",
+                "icon": "🔧",
+                "bi_class": "bi-tools",
+                "fault": true
+              },
+              {
+                "id": "closed",
+                "text": "#A passage or stairs closed",
+                "description": "#You could pass here, now you cannot",
+                "icon": "🚧",
+                "bi_class": "bi-cone-striped",
+                "form": "smarturbanity_missing_connection_report",
+                "preset": {
+                  "needed_connection_form": "exists_closed"
+                }
+              },
+              {
+                "id": "seat",
+                "text": "#Nowhere to sit",
+                "description": "#Benches, shade, water: how this place makes you feel",
+                "icon": "🪑",
+                "bi_class": "bi-tree",
+                "form": "smarturbanity_geolocated_perception_report"
+              },
+              {
+                "id": "missing",
+                "text": "#A missing connection or path",
+                "description": "#A crossing, a stretch to walk or cycle",
+                "icon": "➕",
+                "bi_class": "bi-signpost-2",
+                "routes": [
+                  {
+                    "id": "missing_connection",
+                    "text": "#A crossing or a passage",
+                    "form": "smarturbanity_missing_connection_report"
+                  },
+                  {
+                    "id": "missing_path",
+                    "text": "#A path to walk or cycle",
+                    "form": "smarturbanity_missing_path_report"
+                  }
+                ]
+              },
+              {
+                "id": "service",
+                "text": "#A service is wrong",
+                "description": "#Gone, moved, listed twice or with wrong details",
+                "icon": "🏪",
+                "bi_class": "bi-shop",
+                "check": true
+              },
+              {
+                "id": "idea",
+                "text": "#An idea to improve",
+                "description": "#An improvement proposal",
+                "icon": "💡",
+                "bi_class": "bi-lightbulb",
+                "form": "smarturbanity_improvement_proposal"
+              }
+            ],
+            "faultCategoriesByForm": {
+              "street_connection_assessment": [
+                "traffic_light",
+                "pothole",
+                {
+                  "id": "crossing_markings",
+                  "text": "#Crossing markings are worn or missing",
+                  "bi_class": "bi-sign-intersection"
+                },
+                {
+                  "id": "curb_ramp_missing",
+                  "text": "#The curb ramp is missing",
+                  "bi_class": "bi-person-wheelchair"
+                },
+                {
+                  "id": "curb_ramp_blocked",
+                  "text": "#The curb ramp is blocked",
+                  "bi_class": "bi-person-wheelchair"
+                },
+                {
+                  "id": "curb_ramp_damaged",
+                  "text": "#The curb ramp is damaged",
+                  "bi_class": "bi-person-wheelchair"
+                },
+                {
+                  "id": "crossing_button",
+                  "text": "#The crossing button does not work",
+                  "bi_class": "bi-stoplights"
+                },
+                {
+                  "id": "crossing_button_missing",
+                  "text": "#The crossing button is missing",
+                  "bi_class": "bi-stoplights"
+                },
+                {
+                  "id": "crossing_sound",
+                  "text": "#The audible crossing signal does not work",
+                  "bi_class": "bi-volume-mute"
+                },
+                {
+                  "id": "crossing_sound_missing",
+                  "text": "#The audible crossing signal is missing",
+                  "bi_class": "bi-volume-mute"
+                },
+                {
+                  "id": "bins_hide_crossing",
+                  "text": "#Bins hide the crossing from view",
+                  "bi_class": "bi-trash"
+                },
+                {
+                  "id": "outdoor_seating_hides_crossing",
+                  "text": "#Outdoor seating hides the crossing from view",
+                  "bi_class": "bi-cup-hot"
+                },
+                {
+                  "id": "cycling_priority_ignored",
+                  "text": "#Drivers do not give way to cyclists",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "cycle_path_interrupted",
+                  "text": "#The cycle path is interrupted",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "cycle_path_unprotected",
+                  "text": "#The cycle path is not protected from traffic",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "vehicles_on_cycle_path",
+                  "text": "#Vehicles occupy the cycle path",
+                  "bi_class": "bi-car-front"
+                },
+                {
+                  "id": "vehicle_on_crossing",
+                  "text": "#A vehicle blocks the crossing",
+                  "bi_class": "bi-car-front"
+                },
+                {
+                  "id": "short_green",
+                  "text": "#The green signal is too short to cross",
+                  "bi_class": "bi-stopwatch"
+                },
+                "other"
+              ],
+              "street_segment_assessment": [
+                "pothole",
+                "street_light",
+                {
+                  "id": "uneven_cobblestones",
+                  "text": "#Uneven cobblestones make the path difficult",
+                  "bi_class": "bi-bricks"
+                },
+                {
+                  "id": "bins_on_path",
+                  "text": "#Bins block the path",
+                  "bi_class": "bi-trash"
+                },
+                {
+                  "id": "outdoor_seating_on_path",
+                  "text": "#Outdoor seating blocks the path",
+                  "bi_class": "bi-cup-hot"
+                },
+                {
+                  "id": "tram_tracks_cycling",
+                  "text": "#Tram tracks make cycling difficult",
+                  "bi_class": "bi-train-front"
+                },
+                {
+                  "id": "motorcycles_on_sidewalk",
+                  "text": "#Motorcycles block the sidewalk",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "cycle_path_blocked",
+                  "text": "#The cycle path is blocked",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "cycle_path_surface",
+                  "text": "#The cycle path surface is damaged",
+                  "bi_class": "bi-bricks"
+                },
+                {
+                  "id": "cycle_path_interrupted",
+                  "text": "#The cycle path is interrupted",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "cycle_path_unprotected",
+                  "text": "#The cycle path is not protected from traffic",
+                  "bi_class": "bi-bicycle"
+                },
+                {
+                  "id": "vehicles_on_cycle_path",
+                  "text": "#Vehicles occupy the cycle path",
+                  "bi_class": "bi-car-front"
+                },
+                {
+                  "id": "cycling_priority_ignored",
+                  "text": "#Drivers do not give way to cyclists",
+                  "bi_class": "bi-bicycle"
+                },
+                "other"
+              ]
+            },
+            "followUp": {
+              "street_connection_assessment": "street_segment_assessment",
+              "street_segment_assessment": "street_connection_assessment"
+            },
+            "offices": [
+              {
+                "elementTypes": [
+                  "network_connection",
+                  "missing_connection",
+                  "nonexistent_connection"
+                ],
+                "area": null,
+                "name": null,
+                "email": null
+              },
+              {
+                "elementTypes": [
+                  "network_link",
+                  "missing_link",
+                  "nonexistent_link"
+                ],
+                "area": null,
+                "name": null,
+                "email": null
+              },
+              {
+                "elementTypes": [
+                  "geolocated_observation",
+                  "place"
+                ],
+                "area": null,
+                "name": null,
+                "email": null
+              }
+            ]
+          },
+          "profile": {
+            "questions": [
+              {
+                "questionnaireId": "street_connection_assessment",
+                "answerKey": "assessment_perspective",
+                "question": "#How do you usually get around?"
+              },
+              {
+                "questionnaireId": "street_connection_assessment",
+                "answerKey": "journey_context",
+                "question": "#Which situations usually apply to your journeys?"
+              },
+              {
+                "questionnaireId": "street_connection_assessment",
+                "answerKey": "trip_mobility_support",
+                "question": "#Do you usually use a mobility aid or a stroller? (Optional)"
+              }
+            ],
+            "lead": {
+              "answerKey": "trip_mobility_support",
+              "values": [
+                "mobility_aid",
+                "stroller"
+              ]
+            }
           }
         }
       }

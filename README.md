@@ -81,6 +81,9 @@ Each pilot has three separate documents:
   pilot-specific datasets, including service subtypes.
 - `pilots/rome/application.json`: technical integration, language, consent and
   application settings. The modeler document references it through `application_config`.
+  Access Together reads the pilot's profile questions and report menu (report types,
+  fault categories per form, follow-up form and offices) from
+  `applications.smart_urbanity_access_together.flow`; the code defaults leave them empty.
 - `pilots/rome/survey_campaigns.json`: the current calendar, form choices and
   container associations, referenced through `content.dataset_files`.
 
