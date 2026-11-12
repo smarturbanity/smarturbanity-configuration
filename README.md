@@ -362,6 +362,15 @@ the age declaration and its minimum age. The age declaration is enabled per pilo
 {"questionnaires": {"consent": {"adult": {"enabled": true, "min_age": 18}}}}
 ```
 
+Forms carry no notice link (`gdpr_link`) and do not repeat the consent choices of the
+pilot: `options.ask_consent`, `options.ask_adult` and `options.ask_email` appear in a
+form only when that form differs from its pilot, for example a report that asks no
+consent (`"ask_consent": false`) or a form without the email (`"ask_email": false`).
+These keys are read when the form is opened and are not part of the stored answers, so
+removing a value that repeats the pilot's keeps the form version. Whether the
+participant code is saved follows from the email in the consent screen, so forms carry
+no `save_user_id`.
+
 #### Privacy notices
 
 This repository holds no privacy documents or notice links. Each pilot's notices, in
