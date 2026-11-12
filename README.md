@@ -195,6 +195,9 @@ Pilot configuration may progressively include other domains such as:
 user chooses another one; Rome opens in Italian. Without it, each application keeps its
 own default.
 
+`languages` lists the languages citizens can choose in Access Together; Rome offers English
+and Italian, like the pilot's mobile app. Without it, every application language is offered.
+
 `movesion.pilot_codes` names the pilot's Movesion client for each runtime environment (`prod`,
 `test`, `dev`): Rome uses `smartrome` in production and `smartromedev`, on Movesion dev, in the
 dev and test installations. The applications select the entry of their environment for sign-in
