@@ -690,3 +690,11 @@ answer keys, every existing option/value/exclusivity, required/show-if settings,
 privacy and the confirmed 36-month retention. New prompt/option keys have all
 eight translations. No application deployment or new browser/persona retest is
 claimed; consumers must adopt the new versioned configuration through release.
+
+Lory replaced the household-income question (`economic_status`) with
+`travel_given_up_cost` 1.0.0: "In the last month, did you give up a trip because
+it cost too much?" (never, sometimes, often, prefer not to say). When the answer
+is sometimes or often, `travel_given_up_purposes` 1.0.0 asks which trips (work or
+study, health, shopping and errands, visiting people, leisure; several answers).
+Profile 2.2.0. Earlier `economic_status` answers stay stored and are not compared
+with the new ones. Eight translations; no browser/persona retest is claimed.
