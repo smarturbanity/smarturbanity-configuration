@@ -16,6 +16,6 @@ fields. The unavailable car-use row catalogue is explicitly identified.
 
 Validation: six bundle regressions; language ownership; actual trip-company and
 location-context consumers; structural policy/diff checks; 473-row HTML with working
-search/group/privacy filters. The application support for text and matrix refusal
+search/group/questionnaire/privacy filters. The application support for text and matrix refusal
 is delivered separately in the coordinated CityMaaS candidate. Deployment and
 protected-base integration remain human operations.

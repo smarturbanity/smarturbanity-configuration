@@ -199,7 +199,7 @@ def export():
         if row['Massimo risposte']:
             displayed['Tipo'] += '\nMassimo: ' + str(row['Massimo risposte'])
         cells = ''.join('<td>' + html.escape(str(displayed[key])).replace('\n', '<br>') + '</td>' for key in headers)
-        table_rows.append('<tr data-group="' + row['Gruppo'] + '" data-privacy="' + row['Flag privacy'] + '"><td>' + str(index) + '</td>' + cells + '</tr>')
+        table_rows.append('<tr data-group="' + row['Gruppo'] + '" data-questionnaire="' + html.escape(row['Riferimento'].split('#')[0], quote=True) + '" data-privacy="' + row['Flag privacy'] + '"><td>' + str(index) + '</td>' + cells + '</tr>')
     stats = collections.Counter(row['Flag privacy'] for row in rows)
     page = '''<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartUrbanity — Domande, risposte e privacy</title><style>
@@ -211,13 +211,14 @@ body{font:15px system-ui,sans-serif;margin:24px;color:#172b3a;background:#f6f8fb
     page += '<p>“Preferisco non rispondere” è previsto per le classi elevate e salute, con una sola eccezione confermata: per creare un servizio occorre dichiarare almeno un’attività disponibile. Restano anche le opzioni di rifiuto già presenti sulle altre domande. Per testo libero e tabelle occorre il supporto applicativo coordinato con questa modifica. Le condizioni negate sono riportate come dichiarate: il trattamento di risposte mancanti o rifiutate dipende dal motore dell’app.</p>'
     page += '<p><a href="questionnaire-response-summary.csv">Scarica la tabella CSV completa con versioni e riferimenti</a></p>'
     page += '<details><summary>Prosecuzione tra questionari nella galleria di Roma</summary><ul>' + ''.join('<li>' + html.escape(note) + '</li>' for note in flow_notes) + '</ul></details>'
-    page += '<div class="filters"><label>Cerca <input id="search" type="search" placeholder="Domanda, risposta o dipendenza"></label><label>Gruppo <select id="group"><option value="">Tutti</option>' + ''.join('<option>' + folder + '</option>' for folder in FOLDERS) + '</select></label><label>Privacy <select id="privacy"><option value="">Tutte</option>' + ''.join('<option value="' + k + '">' + v + '</option>' for k, v in PRIVACY.items()) + '</select></label><output id="count"></output></div>'
+    questionnaire_options = {row['Riferimento'].split('#')[0]: row['Questionario'] for row in rows}
+    page += '<div class="filters"><label>Cerca <input id="search" type="search" placeholder="Domanda, risposta o dipendenza"></label><label>Gruppo <select id="group"><option value="">Tutti</option>' + ''.join('<option>' + folder + '</option>' for folder in FOLDERS) + '</select></label><label>Questionario <select id="questionnaire"><option value="">Tutti</option>' + ''.join('<option value="' + html.escape(key, quote=True) + '">' + html.escape(value) + '</option>' for key, value in sorted(questionnaire_options.items(), key=lambda item: item[1])) + '</select></label><label>Privacy <select id="privacy"><option value="">Tutte</option>' + ''.join('<option value="' + k + '">' + v + '</option>' for k, v in PRIVACY.items()) + '</select></label><output id="count"></output></div>'
     page += '<div class="scroll"><table><thead><tr><th>N.</th>' + ''.join('<th>' + html.escape(key) + '</th>' for key in headers) + '</tr></thead><tbody>' + ''.join(table_rows) + '</tbody></table></div>'
     page += '''<script>
 const rows = [...document.querySelectorAll('tbody tr')];
-const search = document.getElementById('search'), group = document.getElementById('group'), privacy = document.getElementById('privacy');
-function filter(){let shown=0;const text=search.value.toLocaleLowerCase('it');for(const row of rows){row.hidden=!!((group.value&&row.dataset.group!==group.value)||(privacy.value&&row.dataset.privacy!==privacy.value)||!row.textContent.toLocaleLowerCase('it').includes(text));if(!row.hidden)shown++;}document.getElementById('count').textContent=shown+' domande';}
-for(const control of [search,group,privacy])control.addEventListener('input',filter);filter();
+const search = document.getElementById('search'), group = document.getElementById('group'), questionnaire = document.getElementById('questionnaire'), privacy = document.getElementById('privacy');
+function filter(){let shown=0;const text=search.value.toLocaleLowerCase('it');for(const row of rows){row.hidden=!!((group.value&&row.dataset.group!==group.value)||(questionnaire.value&&row.dataset.questionnaire!==questionnaire.value)||(privacy.value&&row.dataset.privacy!==privacy.value)||!row.textContent.toLocaleLowerCase('it').includes(text));if(!row.hidden)shown++;}document.getElementById('count').textContent=shown+' domande';}
+for(const control of [search,group,questionnaire,privacy])control.addEventListener('input',filter);filter();
 </script></html>'''
     OUTPUT.with_suffix('.html').write_text(page, encoding='utf-8')
     print(json.dumps({'forms': len({r['Riferimento'].split('#')[0] for r in rows}), 'questions': len(rows),

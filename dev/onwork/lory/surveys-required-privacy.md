@@ -28,7 +28,8 @@ The six survey-bundle regressions, framework language ownership, trip-company
 selection and location-context conditions pass against the actual CityMaaS code.
 A structural comparison confirms retained privacy, ordinary options, keys and
 conditions, required flags, refusal coverage with the agreed exception, and all
-473 summary rows. The HTML opens in Chrome; group, privacy and text filters pass.
+473 summary rows. The HTML opens in Chrome; group, individual questionnaire,
+privacy and text filters pass independently and in combination.
 
 Existing test expectations that declared travel load and mobility support optional
 were deliberately updated to mandatory with explicit refusal, matching the new
