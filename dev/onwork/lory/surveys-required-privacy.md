@@ -30,6 +30,10 @@ A structural comparison confirms retained privacy, ordinary options, keys and
 conditions, required flags, refusal coverage with the agreed exception, and all
 473 summary rows. The HTML opens in Chrome; group, individual questionnaire,
 privacy and text filters pass independently and in combination.
+The self-contained HTML includes Italian and English content from the existing
+language dictionaries and source texts. Switching language preserves the filters;
+both language directions, translated headings/answers and English search pass
+in Chrome. Separate Italian and English CSV files are generated.
 
 Existing test expectations that declared travel load and mobility support optional
 were deliberately updated to mandatory with explicit refusal, matching the new

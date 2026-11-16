@@ -34,7 +34,10 @@ text and matrix refusal; the flags alone do not implement those controls.
 
 The [question summary](docs/questionnaire-response-summary.html) and its
 [CSV export](docs/questionnaire-response-summary.csv) list questions, choices,
-conditions and privacy flags. Regenerate both with
+conditions and privacy flags. The self-contained HTML switches between Italian
+and English, including questionnaire contents, and preserves the active filters.
+An [English CSV export](docs/questionnaire-response-summary-en.csv) is also included.
+Regenerate all three files with
 `python tools/export_questionnaire_summary.py`.
 
 Forms can declare `questionnaire.privacy_classification`. Questions in the three
