@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Your trips and safety",
     "questionnaire_id": "smarturbanity_walking_trips_and_safety",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "1.2.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -12,7 +12,7 @@
       "title": "Walking – Your trips and safety",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_walking_trips_and_safety.svg",
       "image_alt": "#Walking – Your trips and safety",
-      "description": "<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>"
+      "description": "<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -82,17 +82,18 @@
                 "value": "another_reason"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "not_walk_reasons",
-            "question_version": "2.0.0",
-            "privacy_classification": "special_category_health"
+            "question_version": "2.1.0",
+            "privacy_classification": "special_category_health",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How far can you walk, or go in your wheelchair, without a long rest?",
             "help": "A long rest means stopping for more than about 5 minutes. A rough idea is enough.",
             "answer_key": "walk_distance",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "I rarely or never walk",
@@ -128,20 +129,21 @@
               }
             ],
             "question_id": "walk_distance",
-            "question_version": "1.3.0",
+            "question_version": "1.4.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
                 "yes"
               ]
-            }
+            },
+            "add_prefer_not_to_say": true
           },
           {
             "text": "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?",
             "help": "Count every kind of walk: to get somewhere, for leisure or for exercise.",
             "answer_key": "walk_active_days",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "None",
@@ -165,20 +167,21 @@
               }
             ],
             "question_id": "walk_active_days",
-            "question_version": "1.0.1",
+            "question_version": "1.1.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
                 "yes"
               ]
-            }
+            },
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?",
             "help": "Think of strength, stamina and general health.",
             "answer_key": "walk_fitness",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Very low (I tire easily)",
@@ -202,13 +205,14 @@
               }
             ],
             "question_id": "walk_fitness",
-            "question_version": "1.0.1",
+            "question_version": "1.1.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
                 "yes"
               ]
-            }
+            },
+            "add_prefer_not_to_say": true
           },
           {
             "text": "In the same trip, do you usually combine walking with another way of travelling?",
@@ -231,8 +235,10 @@
               ]
             },
             "question_id": "walk_combines",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
@@ -297,8 +303,10 @@
               ]
             },
             "question_id": "walk_combined_modes",
-            "question_version": "2.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
@@ -369,8 +377,10 @@
               ]
             },
             "question_id": "walk_combined_difficulties",
-            "question_version": "1.1.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.2.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
@@ -433,8 +443,10 @@
               }
             },
             "question_id": "walk_combined_response",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -461,9 +473,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_fast_traffic_along_unsafe",
-            "question_version": "1.2.0",
+            "question_version": "1.3.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -484,9 +496,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_fast_traffic_crossing_unsafe",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -507,9 +519,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_unsafe_crossings",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -530,9 +542,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_crossing_rushed_unsure",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -553,9 +565,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_cyclists_scooters_unsafe",
-            "question_version": "1.2.0",
+            "question_version": "1.3.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -576,9 +588,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_poor_sidewalk_unsafe",
-            "question_version": "1.2.0",
+            "question_version": "1.3.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -599,9 +611,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_obstacles_near_traffic",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -622,9 +634,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_obstacles_change_path",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -670,9 +682,9 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_unsafe_road_users",
-            "question_version": "1.1.1",
+            "question_version": "1.2.0",
             "privacy_classification": "personal_data",
             "help": "Think of specific behaviour, such as passing too close or not giving way, rather than everyone in a group."
           },
@@ -706,9 +718,9 @@
                 "value": "no_emergency_services"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_unsafe_situations",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           },
@@ -754,9 +766,9 @@
                 "value": "pedestrian_lights_no_audio"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_route_barriers",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           }
@@ -790,10 +802,10 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "question_id": "walk_day_insecure",
-            "question_version": "1.3.1",
+            "question_version": "1.4.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -814,10 +826,10 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "question_id": "walk_evening_insecure",
-            "question_version": "1.3.1",
+            "question_version": "1.4.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -861,14 +873,14 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "show_if": {
               "walk_evening_insecure": [
                 "yes"
               ]
             },
             "question_id": "walk_evening_insecure_changes",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -889,9 +901,9 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_dark_lighting_change",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "privacy_classification": "personal_data"
           },
           {
@@ -936,9 +948,9 @@
                 "value": "cannot_hear_approaching"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_insecurity_factors",
-            "question_version": "4.0.0",
+            "question_version": "4.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           },
@@ -960,10 +972,10 @@
                 "value": "not_applicable"
               }
             ],
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "question_id": "walk_identity_harassment",
-            "question_version": "1.3.2",
+            "question_version": "1.4.0",
             "privacy_classification": "heightened_personal"
           }
         ],
@@ -1118,10 +1130,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?",
       "#Walking – Your trips and safety": "Walking – Your trips and safety",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Walking – Your trips and safety",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#Person walking and a route between two points": "Person walking and a route between two points"
+      "#Person walking and a route between two points": "Person walking and a route between two points",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>"
     },
     "it": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "In una settimana normale, fai almeno uno spostamento in cui vai a piedi o in sedia a rotelle per la maggior parte del tragitto?",
@@ -1265,10 +1277,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Quando ti sposti a piedi o in sedia a rotelle, hai subito o temi molestie per chi sei o per come appari (es. genere, aspetto, origine, età, disabilità)?",
       "#Walking – Your trips and safety": "Camminare – Spostamenti e sicurezza",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Camminare – Spostamenti e sicurezza",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Alcune domande sul camminare, anche con un passeggino, un bastone o un altro ausilio, o in sedia a rotelle. Se cammini poco, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>A piedi – I tuoi spostamenti</li><li>A piedi – Sicurezza stradale</li><li>A piedi – Sicurezza personale</li></ul>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti"
+      "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Alcune domande sul camminare, anche con un passeggino, un bastone o un altro ausilio, o in sedia a rotelle. Se cammini poco, ti chiediamo solo perché.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>A piedi – I tuoi spostamenti</li><li>A piedi – Sicurezza stradale</li><li>A piedi – Sicurezza personale</li></ul>"
     },
     "fr": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "Pendant une semaine habituelle, faites-vous au moins un trajet où vous marchez ou roulez en fauteuil roulant la plupart du temps ?",
@@ -1412,10 +1424,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Quand vous vous déplacez à pied ou en fauteuil roulant, avez-vous subi ou craignez-vous du harcèlement lié à votre identité ou à votre apparence (par exemple genre, apparence, origine, âge, handicap) ?",
       "#Walking – Your trips and safety": "Marche – Vos déplacements et votre sécurité",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Marche – Vos déplacements et votre sécurité",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Quelques questions sur la marche, y compris avec une poussette, une canne ou une autre aide, ou en fauteuil roulant. Si vous marchez rarement, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>À pied – Vos trajets</li><li>À pied – Sécurité routière</li><li>À pied – Sécurité personnelle</li></ul>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points"
+      "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Quelques questions sur la marche, y compris avec une poussette, une canne ou une autre aide, ou en fauteuil roulant. Si vous marchez rarement, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>À pied – Vos trajets</li><li>À pied – Sécurité routière</li><li>À pied – Sécurité personnelle</li></ul>"
     },
     "de": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "Machen Sie in einer typischen Woche mindestens einen Weg, den Sie größtenteils zu Fuß oder im Rollstuhl zurücklegen?",
@@ -1559,10 +1571,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Haben Sie zu Fuß oder im Rollstuhl Belästigung wegen Ihrer Identität oder Ihres Aussehens erlebt oder befürchten Sie diese (z. B. wegen Geschlecht, Aussehen, Herkunft, Alter oder Behinderung)?",
       "#Walking – Your trips and safety": "Zu Fuß unterwegs – Wege und Sicherheit",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Zu Fuß unterwegs – Wege und Sicherheit",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Einige Fragen zum Gehen, auch mit Kinderwagen, Gehstock oder einem anderen Hilfsmittel oder im Rollstuhl. Wenn Sie selten zu Fuß gehen, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Zu Fuß – Ihre Wege</li><li>Zu Fuß – Verkehrssicherheit</li><li>Zu Fuß – Persönliche Sicherheit</li></ul>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten"
+      "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Einige Fragen zum Gehen, auch mit Kinderwagen, Gehstock oder einem anderen Hilfsmittel oder im Rollstuhl. Wenn Sie selten zu Fuß gehen, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Zu Fuß – Ihre Wege</li><li>Zu Fuß – Verkehrssicherheit</li><li>Zu Fuß – Persönliche Sicherheit</li></ul>"
     },
     "tr": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "Tipik bir haftada, yolun çoğunu yürüyerek veya tekerlekli sandalyeyle yaptığınız en az bir yolculuk yapıyor musunuz?",
@@ -1706,10 +1718,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Yürürken veya tekerlekli sandalye kullanırken kimliğiniz ya da görünüşünüz nedeniyle tacize uğradınız mı veya bundan korkuyor musunuz (ör. cinsiyet, görünüş, köken, yaş, engellilik)?",
       "#Walking – Your trips and safety": "Yürüyüş – Yolculuklarınız ve güvenliğiniz",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Yürüyüş – Yolculuklarınız ve güvenliğiniz",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Bebek arabası, baston veya başka bir yardımcı araçla ya da tekerlekli sandalyeyle yürümek dahil, yürümeyle ilgili birkaç soru. Nadiren yürüyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Yürüyüş – Yolculuklarınız</li><li>Yürüyüş – Yol güvenliği</li><li>Yürüyüş – Kişisel güvenlik</li></ul>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh"
+      "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Bebek arabası, baston veya başka bir yardımcı araçla ya da tekerlekli sandalyeyle yürümek dahil, yürümeyle ilgili birkaç soru. Nadiren yürüyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Yürüyüş – Yolculuklarınız</li><li>Yürüyüş – Yol güvenliği</li><li>Yürüyüş – Kişisel güvenlik</li></ul>"
     },
     "fa": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "آیا در یک هفته معمولی حداقل یک سفر دارید که بیشتر مسیر آن را پیاده یا با ویلچر بروید؟",
@@ -1853,10 +1865,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "هنگام رفت‌وآمد پیاده یا با ویلچر، آیا به دلیل هویت یا ظاهرتان آزار دیده‌اید یا از آن می‌ترسید (مثلاً جنسیت، ظاهر، خاستگاه، سن یا معلولیت)؟",
       "#Walking – Your trips and safety": "پیاده‌روی – رفت‌وآمد و ایمنی شما",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - پیاده‌روی – رفت‌وآمد و ایمنی شما",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>چند پرسش دربارهٔ پیاده‌روی، از جمله با کالسکه، عصا یا وسیلهٔ کمکی دیگر یا با ویلچر. اگر کم پیاده‌روی می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>پیاده‌روی – سفرهای شما</li><li>پیاده‌روی – ایمنی راه</li><li>پیاده‌روی – امنیت شخصی</li></ul>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه"
+      "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>چند پرسش دربارهٔ پیاده‌روی، از جمله با کالسکه، عصا یا وسیلهٔ کمکی دیگر یا با ویلچر. اگر کم پیاده‌روی می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>پیاده‌روی – سفرهای شما</li><li>پیاده‌روی – ایمنی راه</li><li>پیاده‌روی – امنیت شخصی</li></ul>"
     },
     "hu": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "Egy átlagos héten legalább egy olyan útja van, amelynek nagy részét gyalog vagy kerekesszékkel teszi meg?",
@@ -2000,10 +2012,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Gyalogos vagy kerekesszékes közlekedés közben érte már zaklatás, vagy tart ettől az identitása vagy megjelenése miatt (például nem, külső, származás, életkor, fogyatékosság)?",
       "#Walking – Your trips and safety": "Gyaloglás – Utazásai és biztonsága",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Gyaloglás – Utazásai és biztonsága",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Néhány kérdés a gyaloglásról, babakocsival, bottal vagy más segédeszközzel, illetve kerekesszékkel is. Ha ritkán jár gyalog, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Gyaloglás – Az Ön útjai</li><li>Gyaloglás – Közlekedésbiztonság</li><li>Gyaloglás – Személyes biztonság</li></ul>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között"
+      "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>Néhány kérdés a gyaloglásról, babakocsival, bottal vagy más segédeszközzel, illetve kerekesszékkel is. Ha ritkán jár gyalog, csak az okát kérdezzük.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Gyaloglás – Az Ön útjai</li><li>Gyaloglás – Közlekedésbiztonság</li><li>Gyaloglás – Személyes biztonság</li></ul>"
     },
     "ar": {
       "#In a typical week, do you make at least one trip where you walk or use a wheelchair most of the way?": "هل تقوم في أسبوع عادي برحلة واحدة على الأقل تمشي فيها أو تستخدم كرسيًا متحركًا في معظم الطريق؟",
@@ -2147,10 +2159,10 @@
       "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "عند التنقل سيرًا على الأقدام أو بالكرسي المتحرك، هل سبق أن تعرضت لمضايقات أو تخشى التعرض لها بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو العمر أو الإعاقة)؟",
       "#Walking – Your trips and safety": "المشي – تنقلاتك وسلامتك",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - المشي – تنقلاتك وسلامتك",
-      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>بعض الأسئلة عن المشي، بما في ذلك مع عربة أطفال أو عصا أو وسيلة مساعدة أخرى أو على كرسي متحرك. إذا كنت تمشي قليلًا، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>المشي – رحلاتك</li><li>المشي – السلامة على الطريق</li><li>المشي – الأمان الشخصي</li></ul>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين"
+      "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
+      "#<p>A few questions about walking, also with a pushchair, a cane or another aid, or in a wheelchair. If you rarely walk, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Your trips</li><li>Walking – Road safety</li><li>Walking – Personal security</li></ul>": "<p>بعض الأسئلة عن المشي، بما في ذلك مع عربة أطفال أو عصا أو وسيلة مساعدة أخرى أو على كرسي متحرك. إذا كنت تمشي قليلًا، فنسألك فقط عن السبب.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>المشي – رحلاتك</li><li>المشي – السلامة على الطريق</li><li>المشي – الأمان الشخصي</li></ul>"
     }
   }
 }

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Comfort, experience and improvements",
     "questionnaire_id": "smarturbanity_walking_experience_and_improvements",
-    "questionnaire_version": "2.0.0",
+    "questionnaire_version": "2.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -12,7 +12,7 @@
       "title": "Walking – Comfort, experience and improvements",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_walking_experience_and_improvements.svg",
       "image_alt": "#Walking – Comfort, experience and improvements",
-      "description": "<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>"
+      "description": "<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -30,7 +30,7 @@
             "text": "Do slopes or hills on your way make walking harder for you?",
             "answer_key": "walk_slope_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, slopes don't bother me",
@@ -58,14 +58,14 @@
               }
             ],
             "question_id": "walk_slope_effect",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0"
           },
           {
             "privacy_classification": "special_category_health",
             "text": "Do you need benches or places to rest on your way?",
             "answer_key": "walk_benches_importance",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, I don't need them",
@@ -89,7 +89,8 @@
               }
             ],
             "question_id": "walk_benches_importance",
-            "question_version": "2.0.2"
+            "question_version": "2.1.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "personal_data",
@@ -97,7 +98,7 @@
             "help": "Signs include street names, maps and directions, and also audible or tactile information for blind and low-vision people.",
             "answer_key": "walk_wayfinding",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "I don't use signs, so they make no difference to me",
@@ -125,14 +126,14 @@
               }
             ],
             "question_id": "walk_wayfinding",
-            "question_version": "1.2.0"
+            "question_version": "1.3.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "Do trees, parks or green spaces change the way you choose to walk?",
             "answer_key": "walk_prefer_pleasant",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, they make no difference to my route",
@@ -156,14 +157,14 @@
               }
             ],
             "question_id": "walk_prefer_pleasant",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "On hot days, what do you do when you need to walk?",
             "answer_key": "walk_heat_shade_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Nothing changes, the heat doesn't affect me",
@@ -187,14 +188,14 @@
               }
             ],
             "question_id": "walk_heat_shade_effect",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "When you walk or use a wheelchair, how do you feel on crowded sidewalks?",
             "answer_key": "walk_crowding_comfort",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Very uncomfortable",
@@ -218,7 +219,7 @@
               }
             ],
             "question_id": "walk_crowding_comfort",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0"
           }
         ]
       },
@@ -232,7 +233,7 @@
             "text": "When you walk or use a wheelchair, how much does traffic noise bother or annoy you?",
             "answer_key": "walk_noise_bother",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Not at all",
@@ -256,7 +257,7 @@
               }
             ],
             "question_id": "walk_noise_bother",
-            "question_version": "1.1.2",
+            "question_version": "1.2.0",
             "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair."
           },
           {
@@ -264,7 +265,7 @@
             "text": "When you walk or use a wheelchair, what do you do when the air is bad (exhaust fumes, dust, bad smells)?",
             "answer_key": "walk_air_quality_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Nothing, it doesn't affect me",
@@ -292,7 +293,7 @@
               }
             ],
             "question_id": "walk_air_quality_effect",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often."
           },
           {
@@ -300,7 +301,7 @@
             "text": "When you walk or use a wheelchair, what do you usually do when the weather is bad (rain, wind, cold or great heat)?",
             "answer_key": "walk_adverse_weather_travel_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Nothing changes, I travel as usual",
@@ -328,7 +329,7 @@
               }
             ],
             "question_id": "walk_adverse_weather_travel_effect",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair. If you do more than one of these, choose what you do most often."
           },
           {
@@ -336,7 +337,7 @@
             "text": "When you walk or use a wheelchair, what do you do when streets, stops or paths are dirty or badly kept (litter, smells, broken glass)?",
             "answer_key": "walk_cleanliness_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "It doesn't affect me",
@@ -360,7 +361,7 @@
               }
             ],
             "question_id": "walk_cleanliness_effect",
-            "question_version": "1.1.2",
+            "question_version": "1.2.0",
             "help": "Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair."
           },
           {
@@ -369,7 +370,7 @@
             "help": "For example buildings, squares, how cared-for a place is and its general feel. Think about the parts of a journey you make along streets or pavements, on foot or using a wheelchair.",
             "answer_key": "walk_visual_quality",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, I don't pay attention to them",
@@ -397,7 +398,7 @@
               }
             ],
             "question_id": "walk_visual_quality",
-            "question_version": "2.0.0"
+            "question_version": "2.1.0"
           }
         ]
       },
@@ -411,7 +412,7 @@
             "text": "When you walk or use a wheelchair, how stressed or relaxed do you usually feel?",
             "answer_key": "walk_emotional_state",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Very stressed",
@@ -435,14 +436,15 @@
               }
             ],
             "question_id": "walk_emotional_state",
-            "question_version": "1.1.1"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you walk or use a wheelchair, how often do you feel anxious or overwhelmed?",
             "answer_key": "walk_anxiety_frequency",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Never",
@@ -466,14 +468,15 @@
               }
             ],
             "question_id": "walk_anxiety_frequency",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you walk or use a wheelchair, what makes you feel anxious or overwhelmed?",
             "answer_key": "walk_anxiety_causes",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "max_answers": 4,
             "add_other": true,
             "show_if": {
@@ -535,14 +538,15 @@
               }
             ],
             "question_id": "walk_anxiety_causes",
-            "question_version": "2.2.0"
+            "question_version": "2.3.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you walk or use a wheelchair, how do you feel on streets with lots of people, shops and activity?",
             "answer_key": "walk_route_liveliness_effect",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "I prefer them: I feel safer or more at ease",
@@ -566,7 +570,8 @@
               }
             ],
             "question_id": "walk_route_liveliness_effect",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -580,7 +585,7 @@
             "text": "When you walk or use a wheelchair, how tired do you usually feel when you arrive?",
             "answer_key": "walk_tiredness",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Not at all tired",
@@ -604,14 +609,15 @@
               }
             ],
             "question_id": "walk_tiredness",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you walk or use a wheelchair, what tires you most?",
             "answer_key": "walk_tiredness_cause",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "walk_tiredness": {
                 "not": [
@@ -650,7 +656,8 @@
               }
             ],
             "question_id": "walk_tiredness_cause",
-            "question_version": "1.2.1"
+            "question_version": "1.3.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -658,7 +665,7 @@
             "help": "Think of both physical and mental effort. Other ways could be cycling, driving or public transport.",
             "answer_key": "walk_effort_vs_alternatives",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_i_dont_know": true,
             "options": [
               {
@@ -687,14 +694,15 @@
               }
             ],
             "question_id": "walk_effort_vs_alternatives",
-            "question_version": "1.1.1"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you walk or use a wheelchair, how often do you arrive in the time you planned?",
             "answer_key": "walk_time_vs_expected",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Never",
@@ -718,14 +726,15 @@
               }
             ],
             "question_id": "walk_time_vs_expected",
-            "question_version": "2.0.0"
+            "question_version": "2.1.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you walk or use a wheelchair, how satisfied are you overall?",
             "answer_key": "walk_satisfaction",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Very dissatisfied",
@@ -749,14 +758,15 @@
               }
             ],
             "question_id": "walk_satisfaction",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you walk or use a wheelchair, what are you least happy with?",
             "answer_key": "walk_dissatisfied",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "max_answers": 3,
             "add_other": true,
             "show_if": {
@@ -793,7 +803,8 @@
               }
             ],
             "question_id": "walk_dissatisfied",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -860,9 +871,9 @@
                 "value": "clear_paths"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walk_want_changes",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           }
@@ -1029,7 +1040,6 @@
       "#Walking and wheelchair use – What would help": "Walking and wheelchair use – What would help",
       "#Walking – Comfort, experience and improvements": "Walking – Comfort, experience and improvements",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Walking – Comfort, experience and improvements",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
       "#Person walking and a route between two points": "Person walking and a route between two points",
@@ -1041,7 +1051,8 @@
       "#I take another route": "I take another route",
       "#I travel at another time": "I travel at another time",
       "#I prepare differently (e.g. clothes, umbrella)": "I prepare differently (e.g. clothes, umbrella)",
-      "#I cannot assess this": "I cannot assess this"
+      "#I cannot assess this": "I cannot assess this",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>"
     },
     "it": {
       "#Do slopes or hills on your way make walking harder for you?": "Le salite lungo la tua strada ti rendono più difficile muoverti?",
@@ -1201,7 +1212,6 @@
       "#Walking and wheelchair use – What would help": "A piedi o in sedia a rotelle – Cosa ti aiuterebbe",
       "#Walking – Comfort, experience and improvements": "Camminare – Comfort, esperienza e miglioramenti",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Camminare – Comfort, esperienza e miglioramenti",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Pendenze, panchine, segnaletica e verde <b>quando cammini</b>.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>A piedi – Comfort</li><li>A piedi – Il posto in cui ti muovi</li><li>A piedi – Come vivi lo spostamento</li><li>A piedi – Fatica e soddisfazione</li><li>A piedi o in sedia a rotelle – Cosa ti aiuterebbe</li></ul>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
       "#Person walking and a route between two points": "Persona che cammina e un percorso tra due punti",
@@ -1213,7 +1223,8 @@
       "#I take another route": "Cambio percorso",
       "#I travel at another time": "Mi sposto in un altro orario",
       "#I prepare differently (e.g. clothes, umbrella)": "Mi preparo in modo diverso (ad es. vestiti, ombrello)",
-      "#I cannot assess this": "Non posso valutarlo"
+      "#I cannot assess this": "Non posso valutarlo",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Pendenze, panchine, segnaletica e verde <b>quando cammini</b>.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>A piedi – Comfort</li><li>A piedi – Il posto in cui ti muovi</li><li>A piedi – Come vivi lo spostamento</li><li>A piedi – Fatica e soddisfazione</li><li>A piedi o in sedia a rotelle – Cosa ti aiuterebbe</li></ul>"
     },
     "fr": {
       "#Do slopes or hills on your way make walking harder for you?": "Les pentes ou les côtes sur votre trajet vous compliquent-elles le déplacement ?",
@@ -1373,7 +1384,6 @@
       "#Walking and wheelchair use – What would help": "À pied et en fauteuil roulant – Ce qui aiderait",
       "#Walking – Comfort, experience and improvements": "Marche – Confort, expérience et améliorations",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Marche – Confort, expérience et améliorations",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Les pentes, les bancs, la signalisation et la verdure <b>lorsque vous marchez</b>.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>À pied – Confort</li><li>À pied – Votre environnement</li><li>À pied – Ressenti du trajet</li><li>À pied – Effort et satisfaction</li><li>À pied et en fauteuil roulant – Ce qui aiderait</li></ul>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
       "#Person walking and a route between two points": "Personne à pied et un itinéraire entre deux points",
@@ -1385,7 +1395,8 @@
       "#I take another route": "Je change d’itinéraire",
       "#I travel at another time": "Je me déplace à un autre horaire",
       "#I prepare differently (e.g. clothes, umbrella)": "Je m’équipe autrement (par exemple vêtements, parapluie)",
-      "#I cannot assess this": "Je ne peux pas l’évaluer"
+      "#I cannot assess this": "Je ne peux pas l’évaluer",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Les pentes, les bancs, la signalisation et la verdure <b>lorsque vous marchez</b>.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>À pied – Confort</li><li>À pied – Votre environnement</li><li>À pied – Ressenti du trajet</li><li>À pied – Effort et satisfaction</li><li>À pied et en fauteuil roulant – Ce qui aiderait</li></ul>"
     },
     "de": {
       "#Do slopes or hills on your way make walking harder for you?": "Machen Steigungen oder Hügel auf Ihrem Weg das Vorankommen für Sie schwerer?",
@@ -1545,7 +1556,6 @@
       "#Walking and wheelchair use – What would help": "Zu Fuß und im Rollstuhl – Was helfen würde",
       "#Walking – Comfort, experience and improvements": "Zu Fuß unterwegs – Komfort, Erlebnis und Verbesserungen",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Zu Fuß unterwegs – Komfort, Erlebnis und Verbesserungen",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Steigungen, Bänke, Schilder und Grün, <b>wenn Sie zu Fuß unterwegs sind</b>.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Zu Fuß – Komfort</li><li>Zu Fuß – Ihre Umgebung</li><li>Zu Fuß – Wie sich der Weg anfühlt</li><li>Zu Fuß – Aufwand und Zufriedenheit</li><li>Zu Fuß und im Rollstuhl – Was helfen würde</li></ul>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
       "#Person walking and a route between two points": "Gehende Person und eine Route zwischen zwei Punkten",
@@ -1557,7 +1567,8 @@
       "#I take another route": "Ich nehme eine andere Route",
       "#I travel at another time": "Ich fahre oder gehe zu einer anderen Zeit los",
       "#I prepare differently (e.g. clothes, umbrella)": "Ich bereite mich anders vor (z. B. Kleidung, Regenschirm)",
-      "#I cannot assess this": "Das kann ich nicht beurteilen"
+      "#I cannot assess this": "Das kann ich nicht beurteilen",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Steigungen, Bänke, Schilder und Grün, <b>wenn Sie zu Fuß unterwegs sind</b>.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Zu Fuß – Komfort</li><li>Zu Fuß – Ihre Umgebung</li><li>Zu Fuß – Wie sich der Weg anfühlt</li><li>Zu Fuß – Aufwand und Zufriedenheit</li><li>Zu Fuß und im Rollstuhl – Was helfen würde</li></ul>"
     },
     "tr": {
       "#Do slopes or hills on your way make walking harder for you?": "Yolunuzdaki eğimler veya yokuşlar ilerlemenizi zorlaştırıyor mu?",
@@ -1717,7 +1728,6 @@
       "#Walking and wheelchair use – What would help": "Yürüyerek ve tekerlekli sandalyeyle ulaşım – Neler yardımcı olur",
       "#Walking – Comfort, experience and improvements": "Yürüyüş – Konfor, deneyim ve iyileştirmeler",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Yürüyüş – Konfor, deneyim ve iyileştirmeler",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p><b>Yürürken</b> eğimler, banklar, tabelalar ve yeşillik.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Yürüyüş – Konfor</li><li>Yürüyüş – Çevreniz</li><li>Yürüyüş – Yolculuk nasıl hissettiriyor</li><li>Yürüyüş – Çaba ve memnuniyet</li><li>Yürüyerek ve tekerlekli sandalyeyle ulaşım – Neler yardımcı olur</li></ul>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
       "#Person walking and a route between two points": "Yürüyen kişi ve iki nokta arasında bir güzergâh",
@@ -1729,7 +1739,8 @@
       "#I take another route": "Başka bir güzergâh seçerim",
       "#I travel at another time": "Başka bir saatte yola çıkarım",
       "#I prepare differently (e.g. clothes, umbrella)": "Farklı hazırlanırım (ör. kıyafet, şemsiye)",
-      "#I cannot assess this": "Bunu değerlendiremiyorum"
+      "#I cannot assess this": "Bunu değerlendiremiyorum",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p><b>Yürürken</b> eğimler, banklar, tabelalar ve yeşillik.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Yürüyüş – Konfor</li><li>Yürüyüş – Çevreniz</li><li>Yürüyüş – Yolculuk nasıl hissettiriyor</li><li>Yürüyüş – Çaba ve memnuniyet</li><li>Yürüyerek ve tekerlekli sandalyeyle ulaşım – Neler yardımcı olur</li></ul>"
     },
     "fa": {
       "#Do slopes or hills on your way make walking harder for you?": "آیا شیب یا سربالایی در مسیرتان راه رفتن را برای شما سخت‌تر می‌کند؟",
@@ -1889,7 +1900,6 @@
       "#Walking and wheelchair use – What would help": "رفت‌وآمد پیاده و با ویلچر – چه چیزی کمک می‌کند",
       "#Walking – Comfort, experience and improvements": "پیاده‌روی – آسایش، تجربه و بهبودها",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - پیاده‌روی – آسایش، تجربه و بهبودها",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>شیب، نیمکت، تابلو و فضای سبز <b>هنگام پیاده‌روی</b>.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>پیاده‌روی – راحتی</li><li>پیاده‌روی – محیط اطراف شما</li><li>پیاده‌روی – حال و هوای سفر</li><li>پیاده‌روی – تلاش و رضایت</li><li>رفت‌وآمد پیاده و با ویلچر – چه چیزی کمک می‌کند</li></ul>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
       "#Person walking and a route between two points": "فرد پیاده و مسیری میان دو نقطه",
@@ -1901,7 +1911,8 @@
       "#I take another route": "مسیر دیگری را انتخاب می‌کنم",
       "#I travel at another time": "در زمان دیگری رفت‌وآمد می‌کنم",
       "#I prepare differently (e.g. clothes, umbrella)": "به شکل دیگری آماده می‌شوم (مثلاً لباس، چتر)",
-      "#I cannot assess this": "نمی‌توانم این را ارزیابی کنم"
+      "#I cannot assess this": "نمی‌توانم این را ارزیابی کنم",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>شیب، نیمکت، تابلو و فضای سبز <b>هنگام پیاده‌روی</b>.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>پیاده‌روی – راحتی</li><li>پیاده‌روی – محیط اطراف شما</li><li>پیاده‌روی – حال و هوای سفر</li><li>پیاده‌روی – تلاش و رضایت</li><li>رفت‌وآمد پیاده و با ویلچر – چه چیزی کمک می‌کند</li></ul>"
     },
     "hu": {
       "#Do slopes or hills on your way make walking harder for you?": "A lejtők vagy emelkedők az útvonalán megnehezítik Önnek a gyaloglást?",
@@ -2061,7 +2072,6 @@
       "#Walking and wheelchair use – What would help": "Gyalogosan és kerekesszékkel – Mi segítene",
       "#Walking – Comfort, experience and improvements": "Gyaloglás – Kényelem, élmény és fejlesztések",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - Gyaloglás – Kényelem, élmény és fejlesztések",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Lejtők, padok, táblák és zöldterületek <b>gyaloglás közben</b>.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Gyaloglás – Kényelem</li><li>Gyaloglás – A környezete</li><li>Gyaloglás – Az utazás élménye</li><li>Gyaloglás – Erőfeszítés és elégedettség</li><li>Gyalogosan és kerekesszékkel – Mi segítene</li></ul>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
       "#Person walking and a route between two points": "Gyalogló személy és egy útvonal két pont között",
@@ -2073,7 +2083,8 @@
       "#I take another route": "Másik útvonalat választok",
       "#I travel at another time": "Más időpontban indulok",
       "#I prepare differently (e.g. clothes, umbrella)": "Másképp készülök fel (például ruházat, esernyő)",
-      "#I cannot assess this": "Ezt nem tudom megítélni"
+      "#I cannot assess this": "Ezt nem tudom megítélni",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>Lejtők, padok, táblák és zöldterületek <b>gyaloglás közben</b>.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Gyaloglás – Kényelem</li><li>Gyaloglás – A környezete</li><li>Gyaloglás – Az utazás élménye</li><li>Gyaloglás – Erőfeszítés és elégedettség</li><li>Gyalogosan és kerekesszékkel – Mi segítene</li></ul>"
     },
     "ar": {
       "#Do slopes or hills on your way make walking harder for you?": "هل تجعل المنحدرات أو المرتفعات في طريقك المشي أصعب عليك؟",
@@ -2233,7 +2244,6 @@
       "#Walking and wheelchair use – What would help": "سيرًا على الأقدام وبالكرسي المتحرك – ما الذي يساعد",
       "#Walking – Comfort, experience and improvements": "المشي – الراحة والتجربة والتحسينات",
       "#SmartUrbanity - Walking – Comfort, experience and improvements": "SmartUrbanity - المشي – الراحة والتجربة والتحسينات",
-      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>المنحدرات والمقاعد واللافتات والمساحات الخضراء <b>عند المشي</b>.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>المشي – الراحة</li><li>المشي – ما حولك</li><li>المشي – شعورك أثناء الرحلة</li><li>المشي – الجهد والرضا</li><li>سيرًا على الأقدام وبالكرسي المتحرك – ما الذي يساعد</li></ul>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
       "#Person walking and a route between two points": "شخص يمشي ومسار بين نقطتين",
@@ -2245,7 +2255,8 @@
       "#I take another route": "أسلك طريقًا آخر",
       "#I travel at another time": "أتنقل في وقت آخر",
       "#I prepare differently (e.g. clothes, umbrella)": "أستعد بطريقة مختلفة (مثل الملابس أو المظلة)",
-      "#I cannot assess this": "لا أستطيع تقييم ذلك"
+      "#I cannot assess this": "لا أستطيع تقييم ذلك",
+      "#<p>Slopes, benches, signs and greenery <b>when you walk</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Walking – Comfort</li><li>Walking – Your surroundings</li><li>Walking – How the trip feels</li><li>Walking – Effort and satisfaction</li><li>Walking and wheelchair use – What would help</li></ul>": "<p>المنحدرات والمقاعد واللافتات والمساحات الخضراء <b>عند المشي</b>.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>المشي – الراحة</li><li>المشي – ما حولك</li><li>المشي – شعورك أثناء الرحلة</li><li>المشي – الجهد والرضا</li><li>سيرًا على الأقدام وبالكرسي المتحرك – ما الذي يساعد</li></ul>"
     }
   }
 }

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Your Profile",
     "questionnaire_id": "smarturbanity_your_profile",
-    "questionnaire_version": "2.3.0",
+    "questionnaire_version": "2.4.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -12,7 +12,7 @@
       "title": "Welcome to Your Profile",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_your_profile.svg",
       "image_alt": "#Your Profile",
-      "description": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
+      "description": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -30,9 +30,9 @@
             "text": "What is your age group?",
             "answer_key": "age_group",
             "question_id": "age_group",
-            "question_version": "1.1.1",
+            "question_version": "1.2.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -75,9 +75,9 @@
             "text": "What is your gender?",
             "answer_key": "gender",
             "question_id": "gender",
-            "question_version": "1.1.1",
+            "question_version": "1.2.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "add_other": true,
             "checks_inline": false,
@@ -98,9 +98,9 @@
             "help": "If you are still studying, choose the last level you completed. If you studied abroad, choose the closest equivalent.",
             "answer_key": "education",
             "question_id": "education",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -135,16 +135,17 @@
                 "text": "Doctorate degree",
                 "value": "doctorate"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Which of the following best describes your relationship to Municipio XII?",
             "answer_key": "residence",
             "question_id": "residence",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -167,7 +168,8 @@
                 "text": "I'm visiting or staying for a short time (e.g. tourism, family)",
                 "value": "visit"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -175,9 +177,9 @@
             "help": "If you use another name, choose the official neighbourhood closest to your home, or Other.",
             "answer_key": "home_neighbourhood",
             "question_id": "home_neighbourhood",
-            "question_version": "2.6.2",
+            "question_version": "2.7.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "add_other": true,
             "show_if": {
@@ -260,16 +262,17 @@
                 "text": "Villa Troili",
                 "value": "villa_troili"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "How strongly do you feel connected to the people in your neighbourhood?",
             "answer_key": "community_attachment",
             "question_id": "community_attachment",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "residence": "live"
             },
@@ -295,7 +298,8 @@
                 "text": "Very connected",
                 "value": "very_connected"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "text": "If you travel outside your neighborhood, what are the main reasons?",
@@ -353,11 +357,12 @@
               }
             ],
             "add_other": true,
-            "required": false,
+            "required": true,
             "question_id": "reasons_outside",
-            "question_version": "1.0.1",
+            "question_version": "1.1.0",
             "privacy_classification": "special_category_health",
-            "help": "Choose up to 3 main reasons."
+            "help": "Choose up to 3 main reasons.",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -365,9 +370,9 @@
             "help": "We ask because the cost of tickets, fuel or taxis can limit where you can go.",
             "answer_key": "travel_given_up_cost",
             "question_id": "travel_given_up_cost",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -390,7 +395,7 @@
             "text": "Which trips?",
             "answer_key": "travel_given_up_purposes",
             "question_id": "travel_given_up_purposes",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "question_type": "multiple_options",
             "show_if": {
               "travel_given_up_cost": [
@@ -398,7 +403,7 @@
                 "often"
               ]
             },
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -430,9 +435,9 @@
             "help": "Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.",
             "answer_key": "mobility_limitation",
             "question_id": "mobility_limitation",
-            "question_version": "2.6.0",
+            "question_version": "2.7.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_prefer_not_to_say": true,
             "checks_inline": false,
             "options": [
@@ -462,9 +467,9 @@
             "text": "How many adults (aged 18 or older), including yourself, live in your home?",
             "answer_key": "household_adults",
             "question_id": "household_adults",
-            "question_version": "1.1.0",
+            "question_version": "1.2.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -487,16 +492,17 @@
                 "text": "5 or more",
                 "value": "5_plus"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "How many children (aged under 18) live in your home?",
             "answer_key": "household_children_under_18",
             "question_id": "household_children_under_18",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -515,16 +521,17 @@
                 "text": "3 or more",
                 "value": "3_plus"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Do you regularly accompany or look after someone who needs your help to get around or in daily life? You can choose more than one answer.",
             "answer_key": "carer",
             "question_id": "carer",
-            "question_version": "2.2.2",
+            "question_version": "2.3.0",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -548,12 +555,13 @@
                 "value": "no",
                 "exclusive": true
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Do you have a pet at home that may generate additional walking trips (e.g. a dog)?",
             "answer_key": "dog_walks",
-            "required": false,
+            "required": true,
             "question_type": "single_option",
             "options": [
               {
@@ -566,17 +574,18 @@
               }
             ],
             "question_id": "pet_walks",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Which of the following vehicles are available in your household? ",
             "answer_key": "household_vehicles",
             "question_id": "household_vehicles",
-            "question_version": "2.1.4",
+            "question_version": "2.2.0",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "add_other": true,
             "checks_inline": false,
             "options": [
@@ -605,15 +614,16 @@
                 "value": "no_vehicle_available",
                 "exclusive": true
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which of these do you use when getting around, for yourself or someone you accompany? (Select all that apply)",
             "answer_key": "mobility_support_used",
             "question_id": "mobility_support_used",
-            "question_version": "2.1.0",
+            "question_version": "2.2.0",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "add_other": true,
             "add_prefer_not_to_say": true,
             "privacy_classification": "special_category_health",
@@ -682,18 +692,19 @@
             ],
             "add_other": true,
             "question_id": "vehicles_used",
-            "question_version": "1.2.1",
+            "question_version": "1.3.0",
             "privacy_classification": "heightened_personal",
-            "required": false
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Do you hold a valid driving license? (Car, motorcycle or both)",
             "answer_key": "driving_licence",
             "question_id": "driving_licence",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -708,16 +719,17 @@
                 "text": "No",
                 "value": "no"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "If there is a car in your household, how easy is it for you to use it when you need it?",
             "answer_key": "vehicle_ease",
             "question_id": "vehicle_ease",
-            "question_version": "2.1.3",
+            "question_version": "2.2.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "show_if": {
               "household_vehicles": "car",
@@ -744,16 +756,17 @@
                 "text": "Very easy (almost always available)",
                 "value": "very_easy"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Which of these best describe your current work or study situation? If you both study and work, you can choose two answers.",
             "answer_key": "employment",
             "question_id": "employment",
-            "question_version": "2.2.4",
+            "question_version": "2.3.0",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "add_other": true,
             "checks_inline": false,
             "options": [
@@ -813,16 +826,17 @@
                 "text": "Not working for health reasons",
                 "value": "unable_to_work_health"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Do you have flexible working hours (the ability to choose or adjust your start and finish times)?",
             "answer_key": "flexible_hours",
             "question_id": "flexible_hours",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "show_if": {
               "employment": [
@@ -852,16 +866,17 @@
                 "text": "I am not currently employed",
                 "value": "not_employed"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "Do you currently work remotely (partly or fully)?",
             "answer_key": "remote_work",
             "question_id": "remote_work",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "show_if": {
               "employment": [
@@ -891,7 +906,8 @@
                 "text": "I am not currently employed",
                 "value": "not_employed"
               }
-            ]
+            ],
+            "add_prefer_not_to_say": true
           }
         ]
       }
@@ -1055,9 +1071,9 @@
       "#Pushchair or pram": "Pushchair or pram",
       "#Manual wheelchair": "Manual wheelchair",
       "#Walking stick, crutches or walking frame": "Walking stick, crutches or walking frame",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Does a disability, health condition or limitation make it harder for you to get around independently?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>"
     },
     "it": {
       "#Thank you!": "Grazie!",
@@ -1216,9 +1232,9 @@
       "#Pushchair or pram": "Passeggino o carrozzina per bambini",
       "#Manual wheelchair": "Sedia a rotelle manuale",
       "#Walking stick, crutches or walking frame": "Bastone, stampelle o deambulatore",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Alcune domande su di te, sul luogo in cui vivi, su chi vive con te, sui mezzi e sul lavoro.</p><ol><li>Su di te</li><li>Casa e lavoro</li></ol><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Prima di partecipare, leggi l’informativa privacy: spiega chi può accedere alle tue risposte e per quanto tempo vengono conservate.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Una disabilità, un problema di salute o una limitazione ti rende più difficile spostarti in autonomia?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Considera anche difficoltà lievi o temporanee, per esempio nel camminare, vedere, sentire o orientarti. La domanda riguarda te, non le persone che aiuti."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Considera anche difficoltà lievi o temporanee, per esempio nel camminare, vedere, sentire o orientarti. La domanda riguarda te, non le persone che aiuti.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Alcune domande su di te, sul luogo in cui vivi, su chi vive con te, sui mezzi e sul lavoro.</p><ol><li>Su di te</li><li>Casa e lavoro</li></ol><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Prima di partecipare, leggi l’informativa privacy: spiega chi può accedere alle tue risposte e per quanto tempo vengono conservate.</p>"
     },
     "fr": {
       "#Thank you!": "Merci !",
@@ -1377,9 +1393,9 @@
       "#Pushchair or pram": "Poussette ou landau",
       "#Manual wheelchair": "Fauteuil roulant manuel",
       "#Walking stick, crutches or walking frame": "Canne, béquilles ou déambulateur",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Quelques questions sur vous, votre lieu de vie, votre foyer, vos véhicules et votre travail.</p><ol><li>À propos de vous</li><li>Foyer et travail</li></ol><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Avant de participer, lisez la notice de confidentialité : elle explique qui peut accéder à vos réponses et combien de temps elles sont conservées.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Un handicap, un problème de santé ou une limitation rend-il vos déplacements en autonomie plus difficiles ?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Pensez aussi aux difficultés légères ou temporaires, par exemple pour marcher, voir, entendre ou vous orienter. Cette question vous concerne, pas les personnes que vous aidez."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Pensez aussi aux difficultés légères ou temporaires, par exemple pour marcher, voir, entendre ou vous orienter. Cette question vous concerne, pas les personnes que vous aidez.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Quelques questions sur vous, votre lieu de vie, votre foyer, vos véhicules et votre travail.</p><ol><li>À propos de vous</li><li>Foyer et travail</li></ol><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Avant de participer, lisez la notice de confidentialité : elle explique qui peut accéder à vos réponses et combien de temps elles sont conservées.</p>"
     },
     "de": {
       "#Thank you!": "Vielen Dank!",
@@ -1538,9 +1554,9 @@
       "#Pushchair or pram": "Kinderwagen oder Buggy",
       "#Manual wheelchair": "Manueller Rollstuhl",
       "#Walking stick, crutches or walking frame": "Gehstock, Krücken oder Rollator",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Einige Fragen zu dir, deinem Wohnort, deinem Haushalt, deinen Fahrzeugen und deiner Arbeit.</p><ol><li>Über Sie</li><li>Haushalt und Arbeit</li></ol><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Lesen Sie vor der Teilnahme die Datenschutzhinweise: Dort steht, wer auf Ihre Antworten zugreifen kann und wie lange sie gespeichert werden.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Erschwert Ihnen eine Behinderung, ein gesundheitliches Problem oder eine Einschränkung, selbstständig unterwegs zu sein?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Berücksichtigen Sie auch leichte oder vorübergehende Schwierigkeiten, zum Beispiel beim Gehen, Sehen, Hören oder bei der Orientierung. Die Frage betrifft Sie selbst, nicht die Menschen, denen Sie helfen."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Berücksichtigen Sie auch leichte oder vorübergehende Schwierigkeiten, zum Beispiel beim Gehen, Sehen, Hören oder bei der Orientierung. Die Frage betrifft Sie selbst, nicht die Menschen, denen Sie helfen.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Einige Fragen zu dir, deinem Wohnort, deinem Haushalt, deinen Fahrzeugen und deiner Arbeit.</p><ol><li>Über Sie</li><li>Haushalt und Arbeit</li></ol><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Lesen Sie vor der Teilnahme die Datenschutzhinweise: Dort steht, wer auf Ihre Antworten zugreifen kann und wie lange sie gespeichert werden.</p>"
     },
     "tr": {
       "#Thank you!": "Teşekkürler!",
@@ -1699,9 +1715,9 @@
       "#Pushchair or pram": "Bebek arabası",
       "#Manual wheelchair": "Manuel tekerlekli sandalye",
       "#Walking stick, crutches or walking frame": "Baston, koltuk değneği veya yürüteç",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Sizin, yaşadığınız yerin, hanenizin, araçlarınızın ve işinizin hakkında birkaç soru.</p><ol><li>Sizin hakkınızda</li><li>Hane ve iş</li></ol><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılmadan önce gizlilik bildirimini okuyun: yanıtlarınıza kimlerin erişebileceğini ve ne kadar süre saklandıklarını açıklar.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Bir engel, sağlık sorunu veya kısıtlılık, bağımsız olarak bir yerden bir yere gitmenizi zorlaştırıyor mu?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Yürüme, görme, duyma veya yön bulma gibi hafif ya da geçici güçlükleri de düşünün. Bu soru yardım ettiğiniz kişilerle değil, sizinle ilgilidir."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Yürüme, görme, duyma veya yön bulma gibi hafif ya da geçici güçlükleri de düşünün. Bu soru yardım ettiğiniz kişilerle değil, sizinle ilgilidir.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Sizin, yaşadığınız yerin, hanenizin, araçlarınızın ve işinizin hakkında birkaç soru.</p><ol><li>Sizin hakkınızda</li><li>Hane ve iş</li></ol><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılmadan önce gizlilik bildirimini okuyun: yanıtlarınıza kimlerin erişebileceğini ve ne kadar süre saklandıklarını açıklar.</p>"
     },
     "fa": {
       "#Thank you!": "سپاسگزاریم!",
@@ -1860,9 +1876,9 @@
       "#Pushchair or pram": "کالسکه کودک",
       "#Manual wheelchair": "ویلچر دستی",
       "#Walking stick, crutches or walking frame": "عصا، عصای زیر بغل یا واکر",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>چند پرسش درباره شما، محل زندگی، خانوار، وسایل نقلیه و کارتان.</p><ol><li>درباره شما</li><li>خانه و کار</li></ol><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>پیش از شرکت، اطلاعیه حریم خصوصی را بخوانید: توضیح می‌دهد چه کسانی به پاسخ‌های شما دسترسی دارند و پاسخ‌ها تا چه زمانی نگهداری می‌شوند.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "آیا معلولیت، مشکل سلامتی یا محدودیتی، رفت‌وآمد مستقل را برایتان دشوارتر می‌کند؟",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "دشواری‌های خفیف یا موقت را هم در نظر بگیرید، مثلاً در راه رفتن، دیدن، شنیدن یا پیدا کردن مسیر. این سؤال درباره خود شماست، نه افرادی که به آن‌ها کمک می‌کنید."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "دشواری‌های خفیف یا موقت را هم در نظر بگیرید، مثلاً در راه رفتن، دیدن، شنیدن یا پیدا کردن مسیر. این سؤال درباره خود شماست، نه افرادی که به آن‌ها کمک می‌کنید.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>چند پرسش درباره شما، محل زندگی، خانوار، وسایل نقلیه و کارتان.</p><ol><li>درباره شما</li><li>خانه و کار</li></ol><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>پیش از شرکت، اطلاعیه حریم خصوصی را بخوانید: توضیح می‌دهد چه کسانی به پاسخ‌های شما دسترسی دارند و پاسخ‌ها تا چه زمانی نگهداری می‌شوند.</p>"
     },
     "hu": {
       "#Thank you!": "Köszönjük!",
@@ -2021,9 +2037,9 @@
       "#Pushchair or pram": "Babakocsi",
       "#Manual wheelchair": "Kézi hajtású kerekesszék",
       "#Walking stick, crutches or walking frame": "Bot, mankó vagy járókeret",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Néhány kérdés rólad, a lakóhelyedről, a háztartásodról, a járműveidről és a munkádról.</p><ol><li>Önről</li><li>Háztartás és munka</li></ol><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Részvétel előtt olvassa el az adatkezelési tájékoztatót: megtudhatja, ki férhet hozzá a válaszaihoz és meddig őrzik meg azokat.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "Egy fogyatékosság, egészségi probléma vagy korlátozottság megnehezíti az önálló közlekedését?",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Enyhe vagy átmeneti nehézségekre is gondoljon, például járás, látás, hallás vagy tájékozódás során. A kérdés Önről szól, nem azokról, akiknek segít."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "Enyhe vagy átmeneti nehézségekre is gondoljon, például járás, látás, hallás vagy tájékozódás során. A kérdés Önről szól, nem azokról, akiknek segít.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>Néhány kérdés rólad, a lakóhelyedről, a háztartásodról, a járműveidről és a munkádról.</p><ol><li>Önről</li><li>Háztartás és munka</li></ol><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Részvétel előtt olvassa el az adatkezelési tájékoztatót: megtudhatja, ki férhet hozzá a válaszaihoz és meddig őrzik meg azokat.</p>"
     },
     "ar": {
       "#Thank you!": "شكرًا لك!",
@@ -2182,9 +2198,9 @@
       "#Pushchair or pram": "عربة أطفال",
       "#Manual wheelchair": "كرسي متحرك يدوي",
       "#Walking stick, crutches or walking frame": "عصا أو عكازات أو مشاية",
-      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>بعض الأسئلة عنك وعن مكان إقامتك وأسرتك ووسائل النقل وعملك.</p><ol><li>معلومات عنك</li><li>المنزل والعمل</li></ol><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>قبل المشاركة، يُرجى قراءة إشعار الخصوصية الذي يوضح من يمكنه الوصول إلى الإجابات ومدة الاحتفاظ بها.</p>",
       "#Does a disability, health condition or limitation make it harder for you to get around independently?": "هل تجعل إعاقة أو مشكلة صحية أو قيد ما التنقل باستقلالية أكثر صعوبة بالنسبة لك؟",
-      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "فكّر أيضًا في الصعوبات البسيطة أو المؤقتة، مثل المشي أو الرؤية أو السمع أو معرفة الطريق. السؤال عنك أنت، وليس عن الأشخاص الذين تساعدهم."
+      "#Include mild or temporary difficulties, for example with walking, seeing, hearing or finding your way. This question is about you, not people you help.": "فكّر أيضًا في الصعوبات البسيطة أو المؤقتة، مثل المشي أو الرؤية أو السمع أو معرفة الطريق. السؤال عنك أنت، وليس عن الأشخاص الذين تساعدهم.",
+      "#<p>A few questions about you, where you live, your household, vehicles and work.</p><ol><li>About You</li><li>Home and work</li></ol><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Read the privacy notice before taking part: it explains who can access your answers and how long they are kept.</p>": "<p>بعض الأسئلة عنك وعن مكان إقامتك وأسرتك ووسائل النقل وعملك.</p><ol><li>معلومات عنك</li><li>المنزل والعمل</li></ol><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>قبل المشاركة، يُرجى قراءة إشعار الخصوصية الذي يوضح من يمكنه الوصول إلى الإجابات ومدة الاحتفاظ بها.</p>"
     }
   },
   "id": "smarturbanity_your_profile",

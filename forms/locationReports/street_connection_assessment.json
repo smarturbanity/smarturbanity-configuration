@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Connection Assessment – User Friendly",
     "questionnaire_id": "street_connection_assessment",
-    "questionnaire_version": "5.1.0",
+    "questionnaire_version": "5.2.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_connection_assessment.svg",
     "image_alt": "#Crossroads with zebra crossings and a check mark",
@@ -34,8 +34,9 @@
             "show_if": {},
             "required": true,
             "question_id": "assessment_perspective",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which of these situations apply to your trip today?",
@@ -73,7 +74,7 @@
             "add_none": true
           },
           {
-            "text": "Are you using any of these on this trip? (Optional)",
+            "text": "Are you using any of these on this trip?",
             "answer_key": "trip_mobility_support",
             "question_type": "multiple_options",
             "checks_inline": false,
@@ -88,9 +89,9 @@
               }
             ],
             "show_if": {},
-            "required": false,
+            "required": true,
             "question_id": "trip_mobility_support",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "special_category_health",
             "add_prefer_not_to_say": true,
             "add_none": true
@@ -128,8 +129,9 @@
             ],
             "required": true,
             "question_id": "connection_use_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -167,8 +169,9 @@
             ],
             "required": true,
             "question_id": "connection_form",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How is this crossing controlled?",
@@ -196,8 +199,9 @@
             },
             "required": true,
             "question_id": "crossing_kind",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Who is this crossing for?",
@@ -229,8 +233,9 @@
             },
             "required": true,
             "question_id": "crossing_users",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What happens at the traffic light when you cross?",
@@ -267,8 +272,9 @@
             "add_i_dont_know": true,
             "required": true,
             "question_id": "traffic_control",
-            "question_version": "3.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "3.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is there a refuge island where people can stop between traffic lanes?",
@@ -291,8 +297,9 @@
             },
             "required": true,
             "question_id": "refuge_island",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -326,8 +333,9 @@
             },
             "required": true,
             "question_id": "pedestrian_use_difficult",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is it difficult for you to get through here by bicycle or e-scooter?",
@@ -356,8 +364,9 @@
             },
             "required": true,
             "question_id": "cyclist_use_difficult",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -391,8 +400,9 @@
             },
             "required": true,
             "question_id": "pedestrian_traffic_unsafe",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
@@ -421,8 +431,9 @@
             },
             "required": true,
             "question_id": "cyclist_traffic_unsafe",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -507,8 +518,9 @@
             ],
             "required": true,
             "question_id": "continue_audit",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -551,10 +563,11 @@
                 "pedestrian"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "pedestrian_access",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Can people pass through this place by bicycle or e-scooter?",
@@ -594,10 +607,11 @@
                 "cyclist"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "bicycle_access",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "By bicycle or e-scooter, what problems do you find at this crossing?",
@@ -649,10 +663,11 @@
                 "street_level"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "cyclist_crossing_problems",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which elements are part of this place?",
@@ -693,10 +708,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "connection_elements",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Today, is the elevator working?",
@@ -724,10 +740,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "elevator_working",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Today, is the escalator working?",
@@ -755,10 +772,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "escalator_working",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How do you get the green light to cross?",
@@ -794,10 +812,11 @@
                 "unclear_signal_priority"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "signal_call",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Does the traffic light have a sound signal for people who cannot see?",
@@ -825,10 +844,11 @@
                 "signal"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "audible_signal_status",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How many traffic lanes must people cross here?",
@@ -863,10 +883,11 @@
               "continue_audit": "yes_audit",
               "connection_form": "street_level"
             },
-            "required": false,
+            "required": true,
             "question_id": "lanes_crossed",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Before crossing, can you clearly see approaching vehicles or bicycles, also at the height of a child or a wheelchair user?",
@@ -892,10 +913,11 @@
               "connection_form": "street_level"
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "street_level_visibility",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What blocks the view?",
@@ -949,10 +971,11 @@
                 "3_poor"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "visibility_obstacles",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Can people clearly see the path and the exit?",
@@ -983,10 +1006,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "spatial_visibility",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1026,10 +1050,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "connection_clarity",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Why is it difficult to understand?",
@@ -1071,10 +1096,11 @@
                 "5_very_difficult"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "connection_clarity_problems",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is there enough safe space to wait before crossing?",
@@ -1102,10 +1128,11 @@
                 "street_level"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "crossing_waiting_space",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is there a safe place to stop and rest here?",
@@ -1130,10 +1157,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "connection_rest_space",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Who might find it hard or impossible to use this place?",
@@ -1179,10 +1207,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "users_with_difficulty",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1251,11 +1280,12 @@
               "continue_audit": "yes_audit"
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "safety_features",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "heightened_personal",
-            "add_none": true
+            "add_none": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What problems do you see at this crossing?",
@@ -1310,10 +1340,11 @@
               "continue_audit": "yes_audit",
               "connection_form": "street_level"
             },
-            "required": false,
+            "required": true,
             "question_id": "street_crossing_problems",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What problems do you see in this underpass?",
@@ -1356,10 +1387,11 @@
               "continue_audit": "yes_audit",
               "connection_form": "under_road"
             },
-            "required": false,
+            "required": true,
             "question_id": "tunnel_problems",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is this bridge covered?",
@@ -1390,10 +1422,11 @@
               "continue_audit": "yes_audit",
               "connection_form": "over_road"
             },
-            "required": false,
+            "required": true,
             "question_id": "bridge_cover",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "For stairs, what helps people use them?",
@@ -1433,11 +1466,12 @@
                 "stairs"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "stairs_features",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "heightened_personal",
-            "add_none": true
+            "add_none": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What problems do the stairs have?",
@@ -1475,10 +1509,11 @@
             },
             "add_other": true,
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "stairs_problems",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How many steps are there?",
@@ -1506,10 +1541,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "walking_stairs_extent",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "For a ramp, what helps people use it?",
@@ -1544,11 +1580,12 @@
                 "ramp"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "ramp_features",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "heightened_personal",
-            "add_none": true
+            "add_none": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is the ramp too steep for a wheelchair or stroller?",
@@ -1572,10 +1609,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "ramp_too_steep",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1637,10 +1675,11 @@
                 }
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "driver_yielding",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "At the traffic light, how long do you usually wait for green?",
@@ -1684,10 +1723,11 @@
                 "unclear_signal_priority"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "signal_wait_time",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Does the green light last long enough to cross calmly?",
@@ -1723,10 +1763,11 @@
               ]
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "green_time_sufficient",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do you see dangerous behaviour here by people walking, cycling or driving?",
@@ -1759,10 +1800,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "unsafe_use_observed",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which situations do you observe?",
@@ -1817,10 +1859,11 @@
                 "5_very_often"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "unsafe_use_type",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1860,10 +1903,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "connection_improvement_importance",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What would improve this place most?",
@@ -1938,10 +1982,11 @@
               "continue_audit": "yes_audit"
             },
             "max_answers": 3,
-            "required": false,
+            "required": true,
             "question_id": "main_improvements_needed",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Anything else you want to add?",
@@ -1952,10 +1997,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "additional_comments",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       }
@@ -2269,8 +2315,8 @@
       "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
       "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
       "#Doesn't apply to me": "Doesn't apply to me",
-      "#Are you using any of these on this trip? (Optional)": "Are you using any of these on this trip? (Optional)",
-      "#Going to or from a parked motorcycle or motor scooter": "Going to or from a parked motorcycle or motor scooter"
+      "#Going to or from a parked motorcycle or motor scooter": "Going to or from a parked motorcycle or motor scooter",
+      "#Are you using any of these on this trip?": "Are you using any of these on this trip?"
     },
     "it": {
       "#Crossroads with zebra crossings and a check mark": "Incrocio con strisce pedonali e un segno di spunta",
@@ -2579,8 +2625,8 @@
       "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
       "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
       "#Doesn't apply to me": "Non mi riguarda",
-      "#Are you using any of these on this trip? (Optional)": "In questo spostamento usi uno di questi ausili o un passeggino? (Facoltativo)",
-      "#Going to or from a parked motorcycle or motor scooter": "Vado o torno da una moto o uno scooter parcheggiato"
+      "#Going to or from a parked motorcycle or motor scooter": "Vado o torno da una moto o uno scooter parcheggiato",
+      "#Are you using any of these on this trip?": "In questo spostamento usi uno di questi ausili o un passeggino?"
     },
     "fr": {
       "#Street Connection Assessment – User Friendly": "Évaluer une traversée",
@@ -2889,8 +2935,8 @@
       "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
       "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
       "#Doesn't apply to me": "Ne me concerne pas",
-      "#Are you using any of these on this trip? (Optional)": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ? (Facultatif)",
-      "#Going to or from a parked motorcycle or motor scooter": "Je vais à une moto ou un scooter garé, ou j’en reviens"
+      "#Going to or from a parked motorcycle or motor scooter": "Je vais à une moto ou un scooter garé, ou j’en reviens",
+      "#Are you using any of these on this trip?": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ?"
     },
     "de": {
       "#Street Connection Assessment – User Friendly": "Eine Querung bewerten",
@@ -3199,8 +3245,8 @@
       "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
       "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
       "#Doesn't apply to me": "Trifft auf mich nicht zu",
-      "#Are you using any of these on this trip? (Optional)": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen? (Freiwillig)",
-      "#Going to or from a parked motorcycle or motor scooter": "Ich gehe zu einem geparkten Motorrad oder Motorroller oder komme von dort"
+      "#Going to or from a parked motorcycle or motor scooter": "Ich gehe zu einem geparkten Motorrad oder Motorroller oder komme von dort",
+      "#Are you using any of these on this trip?": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen?"
     },
     "tr": {
       "#Street Connection Assessment – User Friendly": "Bir geçidi değerlendirin",
@@ -3509,8 +3555,8 @@
       "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
       "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
       "#Doesn't apply to me": "Benim için geçerli değil",
-      "#Are you using any of these on this trip? (Optional)": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz? (İsteğe bağlı)",
-      "#Going to or from a parked motorcycle or motor scooter": "Park edilmiş bir motosiklete veya motorlu skutere gidiyorum ya da oradan dönüyorum"
+      "#Going to or from a parked motorcycle or motor scooter": "Park edilmiş bir motosiklete veya motorlu skutere gidiyorum ya da oradan dönüyorum",
+      "#Are you using any of these on this trip?": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz?"
     },
     "fa": {
       "#Street Connection Assessment – User Friendly": "ارزیابی یک گذرگاه",
@@ -3819,8 +3865,8 @@
       "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
       "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
       "#Doesn't apply to me": "به من مربوط نمی‌شود",
-      "#Are you using any of these on this trip? (Optional)": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟ (اختیاری)",
-      "#Going to or from a parked motorcycle or motor scooter": "به یک موتورسیکلت یا اسکوتر موتوریِ پارک‌شده می‌روم یا از آن برمی‌گردم"
+      "#Going to or from a parked motorcycle or motor scooter": "به یک موتورسیکلت یا اسکوتر موتوریِ پارک‌شده می‌روم یا از آن برمی‌گردم",
+      "#Are you using any of these on this trip?": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟"
     },
     "hu": {
       "#Street Connection Assessment – User Friendly": "Egy átkelőhely értékelése",
@@ -4129,8 +4175,8 @@
       "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
       "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
       "#Doesn't apply to me": "Rám nem vonatkozik",
-      "#Are you using any of these on this trip? (Optional)": "Használ ezen az úton ilyen segédeszközt vagy babakocsit? (Nem kötelező)",
-      "#Going to or from a parked motorcycle or motor scooter": "Parkoló motorkerékpárhoz vagy robogóhoz megyek, vagy onnan jövök"
+      "#Going to or from a parked motorcycle or motor scooter": "Parkoló motorkerékpárhoz vagy robogóhoz megyek, vagy onnan jövök",
+      "#Are you using any of these on this trip?": "Használ ezen az úton ilyen segédeszközt vagy babakocsit?"
     },
     "ar": {
       "#Street Connection Assessment – User Friendly": "تقييم معبر",
@@ -4439,8 +4485,8 @@
       "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
       "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
       "#Doesn't apply to me": "لا ينطبق عليّ",
-      "#Are you using any of these on this trip? (Optional)": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟ (اختياري)",
-      "#Going to or from a parked motorcycle or motor scooter": "أذهب إلى دراجة نارية أو سكوتر بمحرك متوقف أو أعود منها"
+      "#Going to or from a parked motorcycle or motor scooter": "أذهب إلى دراجة نارية أو سكوتر بمحرك متوقف أو أعود منها",
+      "#Are you using any of these on this trip?": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟"
     }
   },
   "id": "Street Connection",

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Segment Assessment",
     "questionnaire_id": "street_segment_assessment",
-    "questionnaire_version": "5.1.0",
+    "questionnaire_version": "5.2.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
     "image_alt": "#Street section with a magnifying glass",
@@ -34,8 +34,9 @@
             "show_if": {},
             "required": true,
             "question_id": "assessment_perspective",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which of these situations apply to your trip today?",
@@ -73,7 +74,7 @@
             "add_none": true
           },
           {
-            "text": "Are you using any of these on this trip? (Optional)",
+            "text": "Are you using any of these on this trip?",
             "answer_key": "trip_mobility_support",
             "question_type": "multiple_options",
             "checks_inline": false,
@@ -88,9 +89,9 @@
               }
             ],
             "show_if": {},
-            "required": false,
+            "required": true,
             "question_id": "trip_mobility_support",
-            "question_version": "1.0.0",
+            "question_version": "1.1.0",
             "privacy_classification": "special_category_health",
             "add_prefer_not_to_say": true,
             "add_none": true
@@ -128,8 +129,9 @@
             ],
             "required": true,
             "question_id": "segment_use_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -183,8 +185,9 @@
             ],
             "required": true,
             "question_id": "walk_facility",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is there a space for cycling on this street?",
@@ -222,8 +225,9 @@
             ],
             "required": true,
             "question_id": "bike_facility",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -257,8 +261,9 @@
             },
             "required": true,
             "question_id": "pedestrian_use_difficult",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is it difficult for you to get through here by bicycle or e-scooter?",
@@ -287,8 +292,9 @@
             },
             "required": true,
             "question_id": "cyclist_use_difficult",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -322,8 +328,9 @@
             },
             "required": true,
             "question_id": "pedestrian_traffic_unsafe",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
@@ -352,8 +359,9 @@
             },
             "required": true,
             "question_id": "cyclist_traffic_unsafe",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -438,8 +446,9 @@
             ],
             "required": true,
             "question_id": "continue_audit",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -491,10 +500,11 @@
                 "value": "5_very_wide"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_width_passability",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "If there is a raised sidewalk, how is it protected from traffic?",
@@ -537,10 +547,11 @@
                 "value": "parked_cars"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "raised_sidewalk_protection",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "If the walking area is at road level, how is it separated from traffic?",
@@ -580,10 +591,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "level_walking_separation",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which accessibility features are available?",
@@ -625,11 +637,12 @@
                 "value": "good_lighting"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_accessibility_features",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "heightened_personal",
-            "add_none": true
+            "add_none": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Are there steps or stairs along this path?",
@@ -662,10 +675,11 @@
                 "value": "yes"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_stairs_present",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How many steps are there?",
@@ -694,10 +708,11 @@
                 "value": "3_more_than_20_steps"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_stairs_extent",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "For stairs, what helps people use them?",
@@ -738,11 +753,12 @@
                 "pedestrian"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "stairs_features",
-            "question_version": "3.0.0",
+            "question_version": "3.1.0",
             "privacy_classification": "heightened_personal",
-            "add_none": true
+            "add_none": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What problems do the stairs have?",
@@ -781,10 +797,11 @@
             },
             "add_other": true,
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "stairs_problems",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -832,10 +849,11 @@
                 "value": "different_level_from_pedestrians"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_separation",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is the cycling infrastructure one-way or two-way?",
@@ -863,10 +881,11 @@
                 "value": "two_way"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_direction",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What surface does the cycling infrastructure have?",
@@ -911,10 +930,11 @@
                 "value": "mixed"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_surface_type",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How many places are there where motor vehicles cross or enter the cycling space?",
@@ -946,10 +966,11 @@
                 "value": "3_many"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_vehicle_conflict_points",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Who else commonly uses the cycling space?",
@@ -991,10 +1012,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_intrusion_users",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do other vehicles or people occupy the cycling space?",
@@ -1037,10 +1059,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_intrusion_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1084,10 +1107,11 @@
                 "value": "no_vehicles"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "traffic_speed_feeling",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What makes things difficult with traffic here?",
@@ -1147,10 +1171,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "traffic_interaction_problems",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How steep is the climb on this stretch?",
@@ -1179,10 +1204,11 @@
               "continue_audit": "yes_audit"
             },
             "add_i_dont_know": true,
-            "required": false,
+            "required": true,
             "question_id": "segment_slope",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1252,10 +1278,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_surface_problems",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do surface problems slow you down or make you change path while walking?",
@@ -1304,10 +1331,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "pedestrian_surface_problem_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What obstacles reduce the walking space?",
@@ -1373,10 +1401,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "walking_obstacles",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do obstacles block or reduce your space while walking?",
@@ -1426,10 +1455,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "pedestrian_obstacle_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often does this segment feel too crowded?",
@@ -1465,10 +1495,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "crowding_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do motor vehicles pass too close while you are walking?",
@@ -1504,10 +1535,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "pedestrian_close_passing_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1572,10 +1604,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_surface_problems",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do surface problems slow you down or make you change path on a bicycle or e-scooter?",
@@ -1623,10 +1656,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "cyclist_surface_problem_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What obstacles make it difficult to ride a bicycle or e-scooter here?",
@@ -1692,10 +1726,11 @@
                 "exclusive": true
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "bike_obstacles",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do obstacles block or reduce your space on a bicycle or e-scooter?",
@@ -1745,10 +1780,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "cyclist_obstacle_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do motor vehicles pass too close while you ride a bicycle or e-scooter?",
@@ -1784,10 +1820,11 @@
                 "value": "5_very_often"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "cyclist_close_passing_frequency",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -1835,10 +1872,11 @@
                 "value": "5_yes"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "desired_walking_path",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Should a continuous cycle lane or path be added here?",
@@ -1878,10 +1916,11 @@
                 "value": "5_yes"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "desired_bike_facility",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How urgent is it to improve this street segment?",
@@ -1914,10 +1953,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "segment_improvement_importance",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What would improve this street segment most?",
@@ -1993,10 +2033,11 @@
               "continue_audit": "yes_audit"
             },
             "max_answers": 3,
-            "required": false,
+            "required": true,
             "question_id": "main_segment_improvements_needed",
-            "question_version": "2.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Anything else you want to add?",
@@ -2006,10 +2047,11 @@
             "show_if": {
               "continue_audit": "yes_audit"
             },
-            "required": false,
+            "required": true,
             "question_id": "additional_comments",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       }
@@ -2279,8 +2321,8 @@
       "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
       "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
       "#Doesn't apply to me": "Doesn't apply to me",
-      "#Are you using any of these on this trip? (Optional)": "Are you using any of these on this trip? (Optional)",
-      "#Going to or from a parked motorcycle or motor scooter": "Going to or from a parked motorcycle or motor scooter"
+      "#Going to or from a parked motorcycle or motor scooter": "Going to or from a parked motorcycle or motor scooter",
+      "#Are you using any of these on this trip?": "Are you using any of these on this trip?"
     },
     "it": {
       "#Street Segment Assessment": "Valutazione di un tratto di strada",
@@ -2545,8 +2587,8 @@
       "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
       "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
       "#Doesn't apply to me": "Non mi riguarda",
-      "#Are you using any of these on this trip? (Optional)": "In questo spostamento usi uno di questi ausili o un passeggino? (Facoltativo)",
-      "#Going to or from a parked motorcycle or motor scooter": "Vado o torno da una moto o uno scooter parcheggiato"
+      "#Going to or from a parked motorcycle or motor scooter": "Vado o torno da una moto o uno scooter parcheggiato",
+      "#Are you using any of these on this trip?": "In questo spostamento usi uno di questi ausili o un passeggino?"
     },
     "fr": {
       "#Street Segment Assessment": "Évaluer un tronçon de rue",
@@ -2811,8 +2853,8 @@
       "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
       "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
       "#Doesn't apply to me": "Ne me concerne pas",
-      "#Are you using any of these on this trip? (Optional)": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ? (Facultatif)",
-      "#Going to or from a parked motorcycle or motor scooter": "Je vais à une moto ou un scooter garé, ou j’en reviens"
+      "#Going to or from a parked motorcycle or motor scooter": "Je vais à une moto ou un scooter garé, ou j’en reviens",
+      "#Are you using any of these on this trip?": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ?"
     },
     "de": {
       "#Street Segment Assessment": "Einen Straßenabschnitt bewerten",
@@ -3077,8 +3119,8 @@
       "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
       "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
       "#Doesn't apply to me": "Trifft auf mich nicht zu",
-      "#Are you using any of these on this trip? (Optional)": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen? (Freiwillig)",
-      "#Going to or from a parked motorcycle or motor scooter": "Ich gehe zu einem geparkten Motorrad oder Motorroller oder komme von dort"
+      "#Going to or from a parked motorcycle or motor scooter": "Ich gehe zu einem geparkten Motorrad oder Motorroller oder komme von dort",
+      "#Are you using any of these on this trip?": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen?"
     },
     "tr": {
       "#Street Segment Assessment": "Bir sokak bölümünü değerlendirin",
@@ -3343,8 +3385,8 @@
       "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
       "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
       "#Doesn't apply to me": "Benim için geçerli değil",
-      "#Are you using any of these on this trip? (Optional)": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz? (İsteğe bağlı)",
-      "#Going to or from a parked motorcycle or motor scooter": "Park edilmiş bir motosiklete veya motorlu skutere gidiyorum ya da oradan dönüyorum"
+      "#Going to or from a parked motorcycle or motor scooter": "Park edilmiş bir motosiklete veya motorlu skutere gidiyorum ya da oradan dönüyorum",
+      "#Are you using any of these on this trip?": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz?"
     },
     "fa": {
       "#Street Segment Assessment": "ارزیابی یک بخش از خیابان",
@@ -3609,8 +3651,8 @@
       "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
       "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
       "#Doesn't apply to me": "به من مربوط نمی‌شود",
-      "#Are you using any of these on this trip? (Optional)": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟ (اختیاری)",
-      "#Going to or from a parked motorcycle or motor scooter": "به یک موتورسیکلت یا اسکوتر موتوریِ پارک‌شده می‌روم یا از آن برمی‌گردم"
+      "#Going to or from a parked motorcycle or motor scooter": "به یک موتورسیکلت یا اسکوتر موتوریِ پارک‌شده می‌روم یا از آن برمی‌گردم",
+      "#Are you using any of these on this trip?": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟"
     },
     "hu": {
       "#Street Segment Assessment": "Egy utcaszakasz értékelése",
@@ -3875,8 +3917,8 @@
       "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
       "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
       "#Doesn't apply to me": "Rám nem vonatkozik",
-      "#Are you using any of these on this trip? (Optional)": "Használ ezen az úton ilyen segédeszközt vagy babakocsit? (Nem kötelező)",
-      "#Going to or from a parked motorcycle or motor scooter": "Parkoló motorkerékpárhoz vagy robogóhoz megyek, vagy onnan jövök"
+      "#Going to or from a parked motorcycle or motor scooter": "Parkoló motorkerékpárhoz vagy robogóhoz megyek, vagy onnan jövök",
+      "#Are you using any of these on this trip?": "Használ ezen az úton ilyen segédeszközt vagy babakocsit?"
     },
     "ar": {
       "#Street Segment Assessment": "تقييم جزء من الشارع",
@@ -4141,8 +4183,8 @@
       "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
       "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
       "#Doesn't apply to me": "لا ينطبق عليّ",
-      "#Are you using any of these on this trip? (Optional)": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟ (اختياري)",
-      "#Going to or from a parked motorcycle or motor scooter": "أذهب إلى دراجة نارية أو سكوتر بمحرك متوقف أو أعود منها"
+      "#Going to or from a parked motorcycle or motor scooter": "أذهب إلى دراجة نارية أو سكوتر بمحرك متوقف أو أعود منها",
+      "#Are you using any of these on this trip?": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟"
     }
   },
   "id": "street_segment_assessment",

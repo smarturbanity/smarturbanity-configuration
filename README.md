@@ -25,8 +25,21 @@ Only `forms/surveys/` is the survey review scope for Marzieh. Pre Trip and Post 
 
 ## Questionnaire privacy labels
 
-Every form declares `questionnaire.privacy_classification`. A question or an
-individual option can carry a more specific label:
+All questions in `forms/surveys`, `forms/tripSurveys` and `forms/locationReports`
+require an answer when visible. Heightened personal and health questions offer
+an explicit refusal, except the service-creation activity matrix, which still
+requires at least one available activity. Existing ordinary-personal refusal
+choices are retained. This policy needs the coordinated application support for
+text and matrix refusal; the flags alone do not implement those controls.
+
+The [question summary](docs/questionnaire-response-summary.html) and its
+[CSV export](docs/questionnaire-response-summary.csv) list questions, choices,
+conditions and privacy flags. Regenerate both with
+`python tools/export_questionnaire_summary.py`.
+
+Forms can declare `questionnaire.privacy_classification`. Questions in the three
+folders above carry explicit labels; an individual option can also carry a more
+specific label:
 
 - `personal_data`: the response is linked to a participant record;
 - `heightened_personal`: the response warrants additional handling, for example
