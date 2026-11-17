@@ -19,11 +19,11 @@ for (const name of ['street_connection_assessment', 'street_segment_assessment']
   assert.equal(context.questionnaireShowIfOrderErrors(data.questionnaire).length, 0);
   const trip = byId.journey_context, support = byId.trip_mobility_support;
   assert.equal(trip.privacy_classification, 'heightened_personal');
-  assert.equal(support.required, false);
+  assert.equal(support.required, true);
   assert.equal(support.privacy_classification, 'special_category_health');
   assert.deepEqual(support.options.map(o => o.value), ['mobility_aid', 'stroller']);
   assert.ok(!trip.options.some(o => ['mobility_aid', 'stroller'].includes(o.value)));
-  assert.equal(Object.keys(support.show_if).length, 0, 'Optional support cannot gate the report');
+  assert.equal(Object.keys(support.show_if).length, 0, 'Support is asked independently and can be refused');
   for (const q of [trip, support]) {
     assert.equal(q.add_none, true);
     assert.equal(q.add_prefer_not_to_say, true);
@@ -41,4 +41,4 @@ for (const name of ['street_connection_assessment', 'street_segment_assessment']
     assert.equal(context.questionnaireMatchesShowIf(byId.signal_call, {...answers,continue_audit:'no',traffic_control:'protected_signal'}), false);
   }
 }
-console.log(JSON.stringify({result:'PASS',forms:2,languages:8,checks:['optional separate support','refusal distinct from none','actual consumer conditional paths','question ordering'],limitations:['Source and actual model/condition checks; browser submission and native-language acceptance not exercised.']}));
+console.log(JSON.stringify({result:'PASS',forms:2,languages:8,checks:['required separate support with refusal','refusal distinct from none','actual consumer conditional paths','question ordering'],limitations:['Source and actual model/condition checks; browser submission and native-language acceptance not exercised.']}));

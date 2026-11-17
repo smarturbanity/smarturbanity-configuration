@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Public transport – Your trips and improvements",
     "questionnaire_id": "smarturbanity_public_transport_trips_and_improvements",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "1.2.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -12,7 +12,7 @@
       "title": "Public transport – Your trips and improvements",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_public_transport_trips_and_improvements.svg",
       "image_alt": "#Public transport – Your trips and improvements",
-      "description": "<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>"
+      "description": "<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -80,10 +80,11 @@
                 "value": "another_reason"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "not_put_reasons",
-            "question_version": "1.0.1",
-            "privacy_classification": "special_category_health"
+            "question_version": "1.1.0",
+            "privacy_classification": "special_category_health",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "personal_data",
@@ -91,7 +92,7 @@
             "help": "Think of steps, ramps and space to wait, get on and get off.",
             "answer_key": "put_stop_ease",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "add_i_dont_know": true,
             "show_if": {
               "put_weekly": "yes"
@@ -119,14 +120,14 @@
               }
             ],
             "question_id": "put_stop_ease",
-            "question_version": "1.2.1"
+            "question_version": "1.3.0"
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When lifts, ramps or step-free paths are missing or broken, can you still reach the stop?",
             "answer_key": "put_step_free_need",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "put_weekly": "yes"
             },
@@ -153,14 +154,15 @@
               }
             ],
             "question_id": "put_step_free_need",
-            "question_version": "1.1.1"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "How comfortable are you using apps to buy or validate bus, tram or metro tickets?",
             "answer_key": "app_pt_tickets",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "put_weekly": "yes"
             },
@@ -191,7 +193,8 @@
               }
             ],
             "question_id": "app_put_tickets",
-            "question_version": "1.1.0"
+            "question_version": "1.2.0",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "In the same trip, do you usually combine public transport with another way of travelling?",
@@ -214,8 +217,10 @@
               ]
             },
             "question_id": "put_combines",
-            "question_version": "1.0.1",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
@@ -268,8 +273,10 @@
               ]
             },
             "question_id": "put_combined_modes",
-            "question_version": "1.1.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.2.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
@@ -340,8 +347,10 @@
               ]
             },
             "question_id": "put_combined_difficulties",
-            "question_version": "1.1.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.2.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
@@ -404,8 +413,10 @@
               }
             },
             "question_id": "put_combined_response",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -513,9 +524,9 @@
                 "value": "unplanned_trips"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "put_no_car_hard",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           }
@@ -565,9 +576,9 @@
                 "value": "sheltered_stops"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "put_want_changes",
-            "question_version": "2.0.0",
+            "question_version": "2.1.0",
             "privacy_classification": "personal_data",
             "add_none": true
           }
@@ -682,10 +693,10 @@
       "#Stops with seats and shelter from sun and rain": "Stops with seats and shelter from sun and rain",
       "#Public transport – Your trips and improvements": "Public transport – Your trips and improvements",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Public transport – Your trips and improvements",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#Bus with a clock": "Bus with a clock"
+      "#Bus with a clock": "Bus with a clock",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>"
     },
     "it": {
       "#Do you use public transport at least once a week?": "Usi i mezzi pubblici almeno una volta a settimana?",
@@ -788,10 +799,10 @@
       "#Stops with seats and shelter from sun and rain": "Fermate con sedili e riparo da sole e pioggia",
       "#Public transport – Your trips and improvements": "Trasporto pubblico – I tuoi viaggi e cosa potrebbe aiutarti",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Trasporto pubblico – I tuoi viaggi e cosa potrebbe aiutarti",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Alcune domande sull'uso di autobus, tram, metro e treni. Se li usi poco, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>Trasporto pubblico – I tuoi spostamenti</li><li>Trasporto pubblico – Spostamenti senza auto</li><li>Trasporto pubblico – Cosa ti aiuterebbe</li></ul>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#Bus with a clock": "Autobus con un orologio"
+      "#Bus with a clock": "Autobus con un orologio",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Alcune domande sull'uso di autobus, tram, metro e treni. Se li usi poco, ti chiediamo solo perché.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>Trasporto pubblico – I tuoi spostamenti</li><li>Trasporto pubblico – Spostamenti senza auto</li><li>Trasporto pubblico – Cosa ti aiuterebbe</li></ul>"
     },
     "fr": {
       "#Do you use public transport at least once a week?": "Utilisez-vous les transports en commun au moins une fois par semaine ?",
@@ -894,10 +905,10 @@
       "#Stops with seats and shelter from sun and rain": "Des arrêts avec des places assises et un abri contre le soleil et la pluie",
       "#Public transport – Your trips and improvements": "Transports en commun – Vos trajets et les améliorations souhaitées",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Transports en commun – Vos trajets et les améliorations souhaitées",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Quelques questions sur l'utilisation des bus, tramways, métros et trains. Si vous les utilisez rarement, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Transports en commun – Vos trajets</li><li>Transports en commun – Trajets sans voiture</li><li>Transports en commun – Ce qui vous aiderait</li></ul>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#Bus with a clock": "Bus avec une horloge"
+      "#Bus with a clock": "Bus avec une horloge",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Quelques questions sur l'utilisation des bus, tramways, métros et trains. Si vous les utilisez rarement, nous vous demandons seulement pourquoi.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Transports en commun – Vos trajets</li><li>Transports en commun – Trajets sans voiture</li><li>Transports en commun – Ce qui vous aiderait</li></ul>"
     },
     "de": {
       "#Do you use public transport at least once a week?": "Nutzen Sie mindestens einmal pro Woche den öffentlichen Verkehr?",
@@ -1000,10 +1011,10 @@
       "#Stops with seats and shelter from sun and rain": "Haltestellen mit Sitzplätzen und Schutz vor Sonne und Regen",
       "#Public transport – Your trips and improvements": "Öffentlicher Verkehr – Ihre Wege und gewünschte Verbesserungen",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Öffentlicher Verkehr – Ihre Wege und gewünschte Verbesserungen",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Einige Fragen zur Nutzung von Bussen, Straßenbahnen, U-Bahn und Zügen. Wenn Sie sie selten nutzen, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Öffentliche Verkehrsmittel – Ihre Wege</li><li>Öffentliche Verkehrsmittel – Wege ohne Auto</li><li>Öffentliche Verkehrsmittel – Was helfen würde</li></ul>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#Bus with a clock": "Bus mit einer Uhr"
+      "#Bus with a clock": "Bus mit einer Uhr",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Einige Fragen zur Nutzung von Bussen, Straßenbahnen, U-Bahn und Zügen. Wenn Sie sie selten nutzen, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Öffentliche Verkehrsmittel – Ihre Wege</li><li>Öffentliche Verkehrsmittel – Wege ohne Auto</li><li>Öffentliche Verkehrsmittel – Was helfen würde</li></ul>"
     },
     "tr": {
       "#Do you use public transport at least once a week?": "Haftada en az bir kez toplu taşıma kullanıyor musunuz?",
@@ -1106,10 +1117,10 @@
       "#Stops with seats and shelter from sun and rain": "Oturacak yeri olan, güneşten ve yağmurdan korunaklı duraklar",
       "#Public transport – Your trips and improvements": "Toplu taşıma – Yolculuklarınız ve istediğiniz iyileştirmeler",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Toplu taşıma – Yolculuklarınız ve istediğiniz iyileştirmeler",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Otobüs, tramvay, metro ve tren kullanımı hakkında birkaç soru. Bunları nadiren kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Toplu taşıma – Yolculuklarınız</li><li>Toplu taşıma – Arabasız yolculuklar</li><li>Toplu taşıma – Ne işe yarardı</li></ul>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#Bus with a clock": "Saatli otobüs"
+      "#Bus with a clock": "Saatli otobüs",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Otobüs, tramvay, metro ve tren kullanımı hakkında birkaç soru. Bunları nadiren kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Toplu taşıma – Yolculuklarınız</li><li>Toplu taşıma – Arabasız yolculuklar</li><li>Toplu taşıma – Ne işe yarardı</li></ul>"
     },
     "fa": {
       "#Do you use public transport at least once a week?": "آیا حداقل هفته‌ای یک بار از حمل‌ونقل عمومی استفاده می‌کنید؟",
@@ -1212,10 +1223,10 @@
       "#Stops with seats and shelter from sun and rain": "ایستگاه‌هایی با صندلی و پناهگاه در برابر آفتاب و باران",
       "#Public transport – Your trips and improvements": "حمل‌ونقل عمومی – سفرهای شما و بهبودهای موردنظر",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - حمل‌ونقل عمومی – سفرهای شما و بهبودهای موردنظر",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>چند پرسش دربارهٔ استفاده از اتوبوس، تراموا، مترو و قطار. اگر کم از آن‌ها استفاده می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>حمل‌ونقل عمومی – سفرهای شما</li><li>حمل‌ونقل عمومی – سفر بدون خودرو</li><li>حمل‌ونقل عمومی – چه چیزی کمک می‌کند</li></ul>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#Bus with a clock": "اتوبوس با ساعت"
+      "#Bus with a clock": "اتوبوس با ساعت",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>چند پرسش دربارهٔ استفاده از اتوبوس، تراموا، مترو و قطار. اگر کم از آن‌ها استفاده می‌کنید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>حمل‌ونقل عمومی – سفرهای شما</li><li>حمل‌ونقل عمومی – سفر بدون خودرو</li><li>حمل‌ونقل عمومی – چه چیزی کمک می‌کند</li></ul>"
     },
     "hu": {
       "#Do you use public transport at least once a week?": "Használ tömegközlekedést legalább hetente egyszer?",
@@ -1318,10 +1329,10 @@
       "#Stops with seats and shelter from sun and rain": "Ülőhelyek, valamint nap és eső elleni védelem a megállókban",
       "#Public transport – Your trips and improvements": "Tömegközlekedés – Utazásai és a kívánt fejlesztések",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - Tömegközlekedés – Utazásai és a kívánt fejlesztések",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Néhány kérdés a buszok, villamosok, metró és vonatok használatáról. Ha ritkán használja őket, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Tömegközlekedés – Az Ön útjai</li><li>Tömegközlekedés – Utak autó nélkül</li><li>Tömegközlekedés – Mi segítene</li></ul>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#Bus with a clock": "Busz órával"
+      "#Bus with a clock": "Busz órával",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>Néhány kérdés a buszok, villamosok, metró és vonatok használatáról. Ha ritkán használja őket, csak az okát kérdezzük.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Tömegközlekedés – Az Ön útjai</li><li>Tömegközlekedés – Utak autó nélkül</li><li>Tömegközlekedés – Mi segítene</li></ul>"
     },
     "ar": {
       "#Do you use public transport at least once a week?": "هل تستخدم النقل العام مرة واحدة على الأقل في الأسبوع؟",
@@ -1424,10 +1435,10 @@
       "#Stops with seats and shelter from sun and rain": "محطات فيها مقاعد ومظلات تقي من الشمس والمطر",
       "#Public transport – Your trips and improvements": "النقل العام – رحلاتك والتحسينات التي ترغب فيها",
       "#SmartUrbanity - Public transport – Your trips and improvements": "SmartUrbanity - النقل العام – رحلاتك والتحسينات التي ترغب فيها",
-      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>بعض الأسئلة عن استخدام الحافلات والترام والمترو والقطارات. إذا كنت نادرًا ما تستخدمها، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>النقل العام – رحلاتك</li><li>النقل العام – الرحلات بدون سيارة</li><li>النقل العام – ما الذي قد يساعد</li></ul>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#Bus with a clock": "حافلة مع ساعة"
+      "#Bus with a clock": "حافلة مع ساعة",
+      "#<p>A few questions about using buses, trams, the metro and trains. If you rarely use them, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your trips</li><li>Public transport – Trips without a car</li><li>Public transport – What would help</li></ul>": "<p>بعض الأسئلة عن استخدام الحافلات والترام والمترو والقطارات. إذا كنت نادرًا ما تستخدمها، فنسألك فقط عن السبب.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>النقل العام – رحلاتك</li><li>النقل العام – الرحلات بدون سيارة</li><li>النقل العام – ما الذي قد يساعد</li></ul>"
     }
   }
 }

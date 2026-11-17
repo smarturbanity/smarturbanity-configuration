@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Service Correction Report",
     "questionnaire_id": "smarturbanity_service_correction_report",
-    "questionnaire_version": "3.0.0",
+    "questionnaire_version": "3.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -22,7 +22,8 @@
               "text": "Tell us what is wrong",
               "answer_key": "correction_reason_other",
               "type": "text",
-              "required": true
+              "required": true,
+              "add_prefer_not_to_say": true
             },
             "checks_inline": false,
             "required": true,
@@ -53,8 +54,9 @@
               }
             ],
             "question_id": "correction_reason",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -92,8 +94,9 @@
               }
             ],
             "question_id": "closed_when",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How did you find out?",
@@ -129,8 +132,9 @@
               }
             ],
             "question_id": "closed_source",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Is there another business or activity in its place now?",
@@ -141,10 +145,11 @@
                 "no_longer_exists"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "replaced_by",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Do you know until when it is closed?",
@@ -155,10 +160,11 @@
                 "temporarily_closed"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "closed_until",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How far is it from the marked place?",
@@ -190,8 +196,9 @@
               }
             ],
             "question_id": "location_distance",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Where is it really?",
@@ -202,11 +209,12 @@
                 "wrong_location"
               ]
             },
-            "required": false,
+            "required": true,
             "placeholder": "Address or a short description",
             "question_id": "real_location",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which other point on the map shows the same service?",
@@ -217,11 +225,12 @@
                 "duplicate_entry"
               ]
             },
-            "required": false,
+            "required": true,
             "placeholder": "Name or address",
             "question_id": "duplicate_of",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which of the two points on the map is the right one?",
@@ -250,8 +259,9 @@
               }
             ],
             "question_id": "duplicate_keep",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What makes it hard to get in?",
@@ -263,7 +273,7 @@
               ]
             },
             "checks_inline": false,
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Steps at the entrance",
@@ -291,8 +301,9 @@
               }
             ],
             "question_id": "access_barriers",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What else makes it hard to get in?",
@@ -305,8 +316,9 @@
             },
             "required": true,
             "question_id": "access_barriers_other",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which information is wrong?",
@@ -346,8 +358,9 @@
               }
             ],
             "question_id": "wrong_fields",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What is the correct information?",
@@ -358,26 +371,28 @@
                 "wrong_information"
               ]
             },
-            "required": false,
+            "required": true,
             "question_id": "correct_information",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Anything else we should know?",
             "answer_key": "correction_details",
             "question_type": "text",
-            "required": false,
+            "required": true,
             "question_id": "correction_details",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       }
     ],
     "welcome_page": {
       "title": "Fix this service",
-      "description": "<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -391,7 +406,6 @@
       "code": "en",
       "#Service Correction Report": "Service Correction Report",
       "#Fix this service": "Fix this service",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>",
       "#Tell us what is wrong so we can correct the map.": "Tell us what is wrong so we can correct the map.",
@@ -447,13 +461,13 @@
       "#Position of the entrance": "Position of the entrance",
       "#What is the correct information?": "What is the correct information?",
       "#Anything else we should know?": "Anything else we should know?",
-      "#Shop front with a map pin and a pencil": "Shop front with a map pin and a pencil"
+      "#Shop front with a map pin and a pencil": "Shop front with a map pin and a pencil",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "it": {
       "code": "it",
       "#Service Correction Report": "Segnalazione di correzione di un servizio",
       "#Fix this service": "Correggi questo servizio",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dicci cosa non va in questo servizio sulla mappa. Richiede circa 1 minuto.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il servizio che correggi viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity e aiutano a correggere la mappa.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Grazie, le tue risposte sono state salvate. Restano nella ricerca SmartUrbanity e aiutano a correggere la mappa.</p>",
       "#Tell us what is wrong so we can correct the map.": "Dicci cosa non va, così possiamo correggere la mappa.",
@@ -509,13 +523,13 @@
       "#Position of the entrance": "Posizione dell'ingresso",
       "#What is the correct information?": "Qual è l'informazione corretta?",
       "#Anything else we should know?": "C'è altro che dovremmo sapere?",
-      "#Shop front with a map pin and a pencil": "Facciata di un negozio con un segnaposto e una matita"
+      "#Shop front with a map pin and a pencil": "Facciata di un negozio con un segnaposto e una matita",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Dicci cosa non va in questo servizio sulla mappa. Richiede circa 1 minuto.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il servizio che correggi viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity e aiutano a correggere la mappa.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”.</p>"
     },
     "fr": {
       "code": "fr",
       "#Service Correction Report": "Signalement de correction d’un service",
       "#Fix this service": "Corriger ce service",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Dites-nous ce qui ne va pas avec ce service sur la carte. Cela prend environ 1 minute.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le service que vous corrigez est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity et aident à corriger la carte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Merci, vos réponses ont été enregistrées. Elles restent dans la recherche SmartUrbanity et aident à corriger la carte.</p>",
       "#Tell us what is wrong so we can correct the map.": "Dites-nous ce qui ne va pas afin que nous puissions corriger la carte.",
@@ -571,13 +585,13 @@
       "#Position of the entrance": "Emplacement de l’entrée",
       "#What is the correct information?": "Quelle est l’information correcte ?",
       "#Anything else we should know?": "Y a-t-il autre chose que nous devrions savoir ?",
-      "#Shop front with a map pin and a pencil": "Devanture de magasin avec un repère de carte et un crayon"
+      "#Shop front with a map pin and a pencil": "Devanture de magasin avec un repère de carte et un crayon",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Dites-nous ce qui ne va pas avec ce service sur la carte. Cela prend environ 1 minute.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le service que vous corrigez est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity et aident à corriger la carte.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ».</p>"
     },
     "de": {
       "code": "de",
       "#Service Correction Report": "Korrekturmeldung zu einem Dienst",
       "#Fix this service": "Diesen Dienst korrigieren",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Sagen Sie uns, was an diesem Dienst auf der Karte nicht stimmt. Es dauert etwa 1 Minute.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Dienst, den Sie korrigieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung und helfen, die Karte zu korrigieren.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Vielen Dank, Ihre Antworten wurden gespeichert. Sie bleiben in der SmartUrbanity-Forschung und helfen, die Karte zu korrigieren.</p>",
       "#Tell us what is wrong so we can correct the map.": "Sagen Sie uns, was nicht stimmt, damit wir die Karte korrigieren können.",
@@ -633,13 +647,13 @@
       "#Position of the entrance": "Lage des Eingangs",
       "#What is the correct information?": "Was ist die richtige Angabe?",
       "#Anything else we should know?": "Gibt es noch etwas, das wir wissen sollten?",
-      "#Shop front with a map pin and a pencil": "Ladenfront mit einer Kartenmarkierung und einem Bleistift"
+      "#Shop front with a map pin and a pencil": "Ladenfront mit einer Kartenmarkierung und einem Bleistift",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Sagen Sie uns, was an diesem Dienst auf der Karte nicht stimmt. Es dauert etwa 1 Minute.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Dienst, den Sie korrigieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung und helfen, die Karte zu korrigieren.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen.</p>"
     },
     "tr": {
       "code": "tr",
       "#Service Correction Report": "Hizmet düzeltme bildirimi",
       "#Fix this service": "Bu hizmeti düzelt",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Haritadaki bu hizmetle ilgili neyin yanlış olduğunu bize söyleyin. Yaklaşık 1 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Düzelttiğiniz hizmet, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır ve haritanın düzeltilmesine yardımcı olur.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkürler!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Teşekkürler, yanıtlarınız kaydedildi. SmartUrbanity araştırmasında kalır ve haritanın düzeltilmesine yardımcı olur.</p>",
       "#Tell us what is wrong so we can correct the map.": "Haritayı düzeltebilmemiz için neyin yanlış olduğunu bize söyleyin.",
@@ -695,13 +709,13 @@
       "#Position of the entrance": "Girişin konumu",
       "#What is the correct information?": "Doğru bilgi nedir?",
       "#Anything else we should know?": "Bilmemiz gereken başka bir şey var mı?",
-      "#Shop front with a map pin and a pencil": "Harita işareti ve kalem bulunan bir dükkan cephesi"
+      "#Shop front with a map pin and a pencil": "Harita işareti ve kalem bulunan bir dükkan cephesi",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Haritadaki bu hizmetle ilgili neyin yanlış olduğunu bize söyleyin. Yaklaşık 1 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Düzelttiğiniz hizmet, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır ve haritanın düzeltilmesine yardımcı olur.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz.</p>"
     },
     "fa": {
       "code": "fa",
       "#Service Correction Report": "گزارش اصلاح خدمت",
       "#Fix this service": "اصلاح این خدمت",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>به ما بگویید چه چیزی درباره این خدمت روی نقشه نادرست است. حدود ۱ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. خدمتی که اصلاح می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند و به اصلاح نقشه کمک می‌کنند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>سپاس، پاسخ‌های شما ذخیره شد. این پاسخ‌ها در پژوهش SmartUrbanity باقی می‌مانند و به اصلاح نقشه کمک می‌کنند.</p>",
       "#Tell us what is wrong so we can correct the map.": "به ما بگویید چه چیزی نادرست است تا بتوانیم نقشه را اصلاح کنیم.",
@@ -757,13 +771,13 @@
       "#Position of the entrance": "محل ورودی",
       "#What is the correct information?": "اطلاعات درست چیست؟",
       "#Anything else we should know?": "چیز دیگری هست که باید بدانیم؟",
-      "#Shop front with a map pin and a pencil": "نمای یک مغازه با نشانگر نقشه و یک مداد"
+      "#Shop front with a map pin and a pencil": "نمای یک مغازه با نشانگر نقشه و یک مداد",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>به ما بگویید چه چیزی درباره این خدمت روی نقشه نادرست است. حدود ۱ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. خدمتی که اصلاح می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند و به اصلاح نقشه کمک می‌کنند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید.</p>"
     },
     "hu": {
       "code": "hu",
       "#Service Correction Report": "Szolgáltatás javítására vonatkozó bejelentés",
       "#Fix this service": "A szolgáltatás javítása",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mondja el nekünk, mi a hiba ezzel a szolgáltatással a térképen. Körülbelül 1 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A javított szolgáltatást a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak, és segítenek kijavítani a térképet.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>Köszönjük, válaszait mentettük. A SmartUrbanity kutatásban maradnak, és segítenek kijavítani a térképet.</p>",
       "#Tell us what is wrong so we can correct the map.": "Mondja el, mi a hiba, hogy kijavíthassuk a térképet.",
@@ -819,13 +833,13 @@
       "#Position of the entrance": "A bejárat helye",
       "#What is the correct information?": "Mi a helyes adat?",
       "#Anything else we should know?": "Van még valami, amit tudnunk kellene?",
-      "#Shop front with a map pin and a pencil": "Üzlethomlokzat térképjelölővel és ceruzával"
+      "#Shop front with a map pin and a pencil": "Üzlethomlokzat térképjelölővel és ceruzával",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Mondja el nekünk, mi a hiba ezzel a szolgáltatással a térképen. Körülbelül 1 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A javított szolgáltatást a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak, és segítenek kijavítani a térképet.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget.</p>"
     },
     "ar": {
       "code": "ar",
       "#Service Correction Report": "بلاغ تصحيح خدمة",
       "#Fix this service": "تصحيح هذه الخدمة",
-      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يُرجى إخبارنا بما هو خطأ في هذه الخدمة على الخريطة. يستغرق الأمر نحو دقيقة واحدة.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. تُحفظ الخدمة المصحَّحة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity وتساعد في تصحيح الخريطة.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Thank you, your answers have been saved. They stay in the SmartUrbanity research and help correct the map.</p>": "<p>شكرًا لك، تم حفظ إجاباتك. وهي تبقى ضمن بحث SmartUrbanity وتساعد في تصحيح الخريطة.</p>",
       "#Tell us what is wrong so we can correct the map.": "يُرجى إخبارنا بما هو خطأ لنتمكن من تصحيح الخريطة.",
@@ -881,7 +895,8 @@
       "#Position of the entrance": "موقع المدخل",
       "#What is the correct information?": "ما المعلومة الصحيحة؟",
       "#Anything else we should know?": "هل هناك شيء آخر ينبغي أن نعرفه؟",
-      "#Shop front with a map pin and a pencil": "واجهة متجر مع علامة خريطة وقلم رصاص"
+      "#Shop front with a map pin and a pencil": "واجهة متجر مع علامة خريطة وقلم رصاص",
+      "#<p>Tell us what is wrong with this service on the map. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The service you correct is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research and help correct the map.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>يُرجى إخبارنا بما هو خطأ في هذه الخدمة على الخريطة. يستغرق الأمر نحو دقيقة واحدة.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. تُحفظ الخدمة المصحَّحة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity وتساعد في تصحيح الخريطة.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة».</p>"
     }
   },
   "id": "smarturbanity_service_correction_report",

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - E-scooter – Your trips, comfort and improvements",
     "questionnaire_id": "smarturbanity_e_scooter_trips_comfort_and_improvements",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "1.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -12,7 +12,7 @@
       "title": "E-scooter – Your trips, comfort and improvements",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/surveys/assets/smarturbanity_e_scooter_trips_comfort_and_improvements.svg",
       "image_alt": "#E-scooter – Your trips, comfort and improvements",
-      "description": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>"
+      "description": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -80,17 +80,18 @@
                 "value": "another_reason"
               }
             ],
-            "required": false,
+            "required": true,
             "question_id": "not_escooter_reasons",
-            "question_version": "1.0.1",
-            "privacy_classification": "special_category_health"
+            "question_version": "1.1.0",
+            "privacy_classification": "special_category_health",
+            "add_prefer_not_to_say": true
           },
           {
             "privacy_classification": "personal_data",
             "text": "Which e-scooter do you use most often?",
             "answer_key": "escooter_type",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "escooter_weekly": [
                 "yes"
@@ -107,14 +108,14 @@
               }
             ],
             "question_id": "escooter_type",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "How confident do you feel riding an e-scooter in city traffic?",
             "answer_key": "escooter_confidence",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "show_if": {
               "escooter_weekly": [
                 "yes"
@@ -147,7 +148,7 @@
               }
             ],
             "question_id": "escooter_confidence",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           },
           {
             "text": "In the same trip, do you usually combine the e-scooter with another way of travelling?",
@@ -170,8 +171,10 @@
               ]
             },
             "question_id": "escooter_combines",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
@@ -232,8 +235,10 @@
               ]
             },
             "question_id": "escooter_combined_modes",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
@@ -304,8 +309,10 @@
               ]
             },
             "question_id": "escooter_combined_difficulties",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "When you face these difficulties, how do you mostly respond?",
@@ -368,8 +375,10 @@
               }
             },
             "question_id": "escooter_combined_response",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -383,7 +392,7 @@
             "text": "Do hills and slopes change how you ride your e-scooter?",
             "answer_key": "escooter_avoid_slopes",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, they don't affect me",
@@ -407,14 +416,14 @@
               }
             ],
             "question_id": "escooter_avoid_slopes",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "When you ride an e-scooter, do signs for cyclists help you find your way?",
             "answer_key": "escooter_wayfinding",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "I find my way easily, with or without signs",
@@ -438,7 +447,7 @@
               }
             ],
             "question_id": "escooter_wayfinding",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           },
           {
             "privacy_classification": "personal_data",
@@ -446,7 +455,7 @@
             "help": "For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.",
             "answer_key": "escooter_parking_destination",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "No, there is nowhere safe to leave it",
@@ -470,14 +479,14 @@
               }
             ],
             "question_id": "escooter_parking_destination",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           },
           {
             "privacy_classification": "personal_data",
             "text": "Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?",
             "answer_key": "escooter_parking_changed_plans",
             "question_type": "single_option",
-            "required": false,
+            "required": true,
             "options": [
               {
                 "text": "Never",
@@ -501,7 +510,7 @@
               }
             ],
             "question_id": "escooter_parking_changed_plans",
-            "question_version": "1.0.1"
+            "question_version": "1.1.0"
           }
         ],
         "show_if": {
@@ -520,7 +529,7 @@
             "text": "What would make you ride an e-scooter more often or further?",
             "answer_key": "escooter_improvements",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "max_answers": 4,
             "add_other": true,
             "options": [
@@ -587,7 +596,7 @@
               }
             ],
             "question_id": "escooter_improvements",
-            "question_version": "1.0.2"
+            "question_version": "1.1.0"
           }
         ],
         "show_if": {
@@ -705,10 +714,10 @@
       "#Nothing: I'm happy as things are": "Nothing: I'm happy as things are",
       "#E-scooter – Your trips, comfort and improvements": "E-scooter – Your trips, comfort and improvements",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - E-scooter – Your trips, comfort and improvements",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>",
       "#Thank you!": "Thank you!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>",
-      "#E-scooter on a street": "E-scooter on a street"
+      "#E-scooter on a street": "E-scooter on a street",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>"
     },
     "it": {
       "#E-scooter – Your trips": "In monopattino – I tuoi spostamenti",
@@ -816,10 +825,10 @@
       "#Nothing: I'm happy as things are": "Niente: mi va bene così",
       "#E-scooter – Your trips, comfort and improvements": "Monopattino elettrico – I tuoi viaggi, il comfort e i miglioramenti desiderati",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Monopattino elettrico – I tuoi viaggi, il comfort e i miglioramenti desiderati",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Qualche domanda su come ti sposti in monopattino elettrico, tuo o in condivisione. Se ne usi uno raramente, ti chiediamo solo perché.</p><p>La partecipazione è volontaria e puoi saltare qualsiasi domanda. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In monopattino – I tuoi spostamenti</li><li>In monopattino – Comfort</li><li>In monopattino – Cosa ti aiuterebbe</li></ul>",
       "#Thank you!": "Grazie!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>La tua risposta è stata registrata. Grazie per il tempo dedicato alla compilazione del questionario.</p>",
-      "#E-scooter on a street": "Monopattino elettrico su una strada"
+      "#E-scooter on a street": "Monopattino elettrico su una strada",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Qualche domanda su come ti sposti in monopattino elettrico, tuo o in condivisione. Se ne usi uno raramente, ti chiediamo solo perché.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>In monopattino – I tuoi spostamenti</li><li>In monopattino – Comfort</li><li>In monopattino – Cosa ti aiuterebbe</li></ul>"
     },
     "fr": {
       "#E-scooter – Your trips": "Trottinette électrique – Vos déplacements",
@@ -927,10 +936,10 @@
       "#Nothing: I'm happy as things are": "Rien : cela me convient ainsi",
       "#E-scooter – Your trips, comfort and improvements": "Trottinette électrique – Vos trajets, le confort et les améliorations souhaitées",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Trottinette électrique – Vos trajets, le confort et les améliorations souhaitées",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Quelques questions sur vos déplacements en trottinette électrique, la vôtre ou en libre-service. Si vous en utilisez rarement une, nous demandons seulement pourquoi.</p><p>La participation est volontaire et vous pouvez passer n’importe quelle question. Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Trottinette électrique – Vos déplacements</li><li>Trottinette électrique – Confort</li><li>Trottinette électrique – Ce qui aiderait</li></ul>",
       "#Thank you!": "Merci !",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Votre réponse a bien été enregistrée. Merci d’avoir pris le temps de remplir ce questionnaire.</p>",
-      "#E-scooter on a street": "Trottinette électrique dans une rue"
+      "#E-scooter on a street": "Trottinette électrique dans une rue",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Quelques questions sur vos déplacements en trottinette électrique, la vôtre ou en libre-service. Si vous en utilisez rarement une, nous demandons seulement pourquoi.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Trottinette électrique – Vos déplacements</li><li>Trottinette électrique – Confort</li><li>Trottinette électrique – Ce qui aiderait</li></ul>"
     },
     "de": {
       "#E-scooter – Your trips": "E-Scooter – Ihre Wege",
@@ -1038,10 +1047,10 @@
       "#Nothing: I'm happy as things are": "Nichts: Ich bin zufrieden, wie es ist",
       "#E-scooter – Your trips, comfort and improvements": "E-Scooter – Ihre Fahrten, Komfort und gewünschte Verbesserungen",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - E-Scooter – Ihre Fahrten, Komfort und gewünschte Verbesserungen",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Ein paar Fragen dazu, wie Sie mit dem E-Scooter unterwegs sind, mit einem eigenen oder einem geliehenen. Wenn Sie selten E-Scooter fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig und Sie können jede Frage überspringen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>E-Scooter – Ihre Wege</li><li>E-Scooter – Komfort</li><li>E-Scooter – Was helfen würde</li></ul>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Ihre Antwort wurde gespeichert. Vielen Dank, dass Sie sich Zeit für diesen Fragebogen genommen haben.</p>",
-      "#E-scooter on a street": "E-Scooter auf einer Straße"
+      "#E-scooter on a street": "E-Scooter auf einer Straße",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Ein paar Fragen dazu, wie Sie mit dem E-Scooter unterwegs sind, mit einem eigenen oder einem geliehenen. Wenn Sie selten E-Scooter fahren, fragen wir nur nach dem Grund.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>E-Scooter – Ihre Wege</li><li>E-Scooter – Komfort</li><li>E-Scooter – Was helfen würde</li></ul>"
     },
     "tr": {
       "#E-scooter – Your trips": "Elektrikli scooter – Yolculuklarınız",
@@ -1149,10 +1158,10 @@
       "#Nothing: I'm happy as things are": "Hiçbir şey: Mevcut durumdan memnunum",
       "#E-scooter – Your trips, comfort and improvements": "Elektrikli scooter – Yolculuklarınız, konfor ve istediğiniz iyileştirmeler",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Elektrikli scooter – Yolculuklarınız, konfor ve istediğiniz iyileştirmeler",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Kendi elektrikli scooter'ınız veya paylaşımlı bir elektrikli scooter ile ulaşım hakkında birkaç soru. Nadiren elektrikli scooter kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür ve istediğiniz soruyu atlayabilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Elektrikli scooter – Yolculuklarınız</li><li>Elektrikli scooter – Konfor</li><li>Elektrikli scooter – Ne yardımcı olur</li></ul>",
       "#Thank you!": "Teşekkür ederiz!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Yanıtınız kaydedildi. Bu anketi doldurmak için zaman ayırdığınız için teşekkür ederiz.</p>",
-      "#E-scooter on a street": "Sokakta bir elektrikli scooter"
+      "#E-scooter on a street": "Sokakta bir elektrikli scooter",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Kendi elektrikli scooter'ınız veya paylaşımlı bir elektrikli scooter ile ulaşım hakkında birkaç soru. Nadiren elektrikli scooter kullanıyorsanız yalnızca nedenini soruyoruz.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Elektrikli scooter – Yolculuklarınız</li><li>Elektrikli scooter – Konfor</li><li>Elektrikli scooter – Ne yardımcı olur</li></ul>"
     },
     "fa": {
       "#E-scooter – Your trips": "اسکوتر برقی – سفرهای شما",
@@ -1260,10 +1269,10 @@
       "#Nothing: I'm happy as things are": "هیچ چیز: وضعیت فعلی برایم خوب است",
       "#E-scooter – Your trips, comfort and improvements": "اسکوتر برقی – سفرهای شما، آسایش و بهبودهای موردنظر",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - اسکوتر برقی – سفرهای شما، آسایش و بهبودهای موردنظر",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>چند پرسش دربارهٔ رفت‌وآمد با اسکوتر برقی، چه شخصی و چه اشتراکی. اگر کم با اسکوتر برقی می‌روید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است و می‌توانید به هر پرسشی پاسخ ندهید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>اسکوتر برقی – سفرهای شما</li><li>اسکوتر برقی – راحتی</li><li>اسکوتر برقی – چه چیزی کمک می‌کند</li></ul>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>پاسخ شما ثبت شد. از وقتی که برای تکمیل این پرسشنامه گذاشتید سپاسگزاریم.</p>",
-      "#E-scooter on a street": "اسکوتر برقی در خیابان"
+      "#E-scooter on a street": "اسکوتر برقی در خیابان",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>چند پرسش دربارهٔ رفت‌وآمد با اسکوتر برقی، چه شخصی و چه اشتراکی. اگر کم با اسکوتر برقی می‌روید، فقط علتش را می‌پرسیم.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>اسکوتر برقی – سفرهای شما</li><li>اسکوتر برقی – راحتی</li><li>اسکوتر برقی – چه چیزی کمک می‌کند</li></ul>"
     },
     "hu": {
       "#E-scooter – Your trips": "Elektromos roller – Az Ön útjai",
@@ -1371,10 +1380,10 @@
       "#Nothing: I'm happy as things are": "Semmi: megfelel a jelenlegi helyzet",
       "#E-scooter – Your trips, comfort and improvements": "Elektromos roller – Utazásai, kényelem és a kívánt fejlesztések",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - Elektromos roller – Utazásai, kényelem és a kívánt fejlesztések",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Néhány kérdés arról, hogyan közlekedik elektromos rollerrel – akár a sajátjával, akár megosztottal. Ha ritkán rollerezik, csak az okát kérdezzük.</p><p>A részvétel önkéntes, és bármelyik kérdést kihagyhatja. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Elektromos roller – Az Ön útjai</li><li>Elektromos roller – Kényelem</li><li>Elektromos roller – Mi segítene</li></ul>",
       "#Thank you!": "Köszönjük!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>Válaszát rögzítettük. Köszönjük, hogy időt szánt a kérdőív kitöltésére.</p>",
-      "#E-scooter on a street": "Elektromos roller az utcán"
+      "#E-scooter on a street": "Elektromos roller az utcán",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>Néhány kérdés arról, hogyan közlekedik elektromos rollerrel – akár a sajátjával, akár megosztottal. Ha ritkán rollerezik, csak az okát kérdezzük.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Elektromos roller – Az Ön útjai</li><li>Elektromos roller – Kényelem</li><li>Elektromos roller – Mi segítene</li></ul>"
     },
     "ar": {
       "#E-scooter – Your trips": "السكوتر الكهربائي – رحلاتك",
@@ -1482,10 +1491,10 @@
       "#Nothing: I'm happy as things are": "لا شيء: الوضع الحالي مناسب لي",
       "#E-scooter – Your trips, comfort and improvements": "السكوتر الكهربائي – رحلاتك والراحة والتحسينات التي ترغب فيها",
       "#SmartUrbanity - E-scooter – Your trips, comfort and improvements": "SmartUrbanity - السكوتر الكهربائي – رحلاتك والراحة والتحسينات التي ترغب فيها",
-      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary and you can skip any question. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>بعض الأسئلة عن التنقل بالسكوتر الكهربائي، الخاص أو المشترك. إذا كنت نادرًا ما تركبه، فنسألك فقط عن السبب.</p><p>المشاركة طوعية ويمكنك تخطي أي سؤال. لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>السكوتر الكهربائي – رحلاتك</li><li>السكوتر الكهربائي – الراحة</li><li>السكوتر الكهربائي – ما الذي قد يساعد</li></ul>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Your submission has been recorded. Thank you for taking the time to complete the questionnaire.</p>": "<p>تم تسجيل إجابتك. شكرًا لوقتك في إكمال هذا الاستبيان.</p>",
-      "#E-scooter on a street": "سكوتر كهربائي في شارع"
+      "#E-scooter on a street": "سكوتر كهربائي في شارع",
+      "#<p>A few questions about getting around by e-scooter, your own or a shared one. If you rarely ride one, we only ask why.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>E-scooter – Your trips</li><li>E-scooter – Comfort</li><li>E-scooter – What would help</li></ul>": "<p>بعض الأسئلة عن التنقل بالسكوتر الكهربائي، الخاص أو المشترك. إذا كنت نادرًا ما تركبه، فنسألك فقط عن السبب.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>السكوتر الكهربائي – رحلاتك</li><li>السكوتر الكهربائي – الراحة</li><li>السكوتر الكهربائي – ما الذي قد يساعد</li></ul>"
     }
   }
 }

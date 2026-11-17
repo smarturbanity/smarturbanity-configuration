@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - How this place feels",
     "questionnaire_id": "smarturbanity_geolocated_perception_report",
-    "questionnaire_version": "3.0.1",
+    "questionnaire_version": "3.1.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -12,7 +12,7 @@
       "title": "How this place feels",
       "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_geolocated_perception_report.svg",
       "image_alt": "#Map pin with an eye symbol",
-      "description": "<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -74,8 +74,9 @@
               }
             ],
             "question_id": "report_perspective",
-            "question_version": "1.0.0",
-            "privacy_classification": "special_category_health"
+            "question_version": "1.1.0",
+            "privacy_classification": "special_category_health",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "When does your answer apply? (Select all that apply)",
@@ -108,8 +109,9 @@
               }
             ],
             "question_id": "report_when",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How often do you come here or pass by?",
@@ -140,8 +142,9 @@
               }
             ],
             "question_id": "place_use_frequency",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How safe from traffic do you feel here?",
@@ -173,8 +176,9 @@
               }
             ],
             "question_id": "place_traffic_safety",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How safe from theft, assault or harassment do you feel here?",
@@ -240,8 +244,10 @@
               }
             ],
             "question_id": "place_pleasantness",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Overall, how positive or negative is your experience of this place?",
@@ -273,8 +279,9 @@
               }
             ],
             "question_id": "place_overall",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Do you avoid this place?",
@@ -309,8 +316,9 @@
               }
             ],
             "question_id": "place_avoidance",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What influenced your answers most, for better or worse?",
@@ -322,7 +330,8 @@
               "text": "What else influenced your answers?",
               "answer_key": "place_factors_other",
               "type": "text",
-              "required": true
+              "required": true,
+              "add_prefer_not_to_say": true
             },
             "checks_inline": false,
             "options": [
@@ -397,8 +406,10 @@
               }
             ],
             "question_id": "place_factors",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Would you like to add a few more details? (About 1 minute)",
@@ -417,8 +428,10 @@
               }
             ],
             "question_id": "place_more_details",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           }
         ]
       },
@@ -461,8 +474,10 @@
               }
             ],
             "question_id": "place_moving_ease",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What is it like here on hot days?",
@@ -498,8 +513,10 @@
               }
             ],
             "question_id": "place_heat_shade",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How noisy is it here?",
@@ -535,8 +552,10 @@
               }
             ],
             "question_id": "place_noise",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How is the air here?",
@@ -572,8 +591,10 @@
               }
             ],
             "question_id": "place_air",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How clean and well maintained is this place?",
@@ -609,8 +630,10 @@
               }
             ],
             "question_id": "place_cleanliness",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How many people are usually around at that time?",
@@ -646,8 +669,10 @@
               }
             ],
             "question_id": "place_people",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What would improve this place most?",
@@ -664,7 +689,8 @@
               "text": "What else would improve this place?",
               "answer_key": "place_improvements_other",
               "type": "text",
-              "required": true
+              "required": true,
+              "add_prefer_not_to_say": true
             },
             "checks_inline": false,
             "options": [
@@ -731,8 +757,10 @@
               }
             ],
             "question_id": "place_improvements",
-            "question_version": "1.0.2",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Anything else you want to tell us about this place?",
@@ -746,8 +774,10 @@
             },
             "checks_inline": false,
             "question_id": "place_comment",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           }
         ]
       }
@@ -759,7 +789,6 @@
       "#SmartUrbanity - How this place feels": "SmartUrbanity - How this place feels",
       "#How this place feels": "How this place feels",
       "#Map pin with an eye symbol": "Map pin with an eye symbol",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>",
       "#Your experience here": "Your experience here",
@@ -890,14 +919,14 @@
       "#More shops or activities": "More shops or activities",
       "#What else would improve this place?": "What else would improve this place?",
       "#Anything else you want to tell us about this place?": "Anything else you want to tell us about this place?",
-      "#Please do not write names or personal details of other people.": "Please do not write names or personal details of other people."
+      "#Please do not write names or personal details of other people.": "Please do not write names or personal details of other people.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "it": {
       "code": "it",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - Come ti fa sentire questo luogo",
       "#How this place feels": "Come ti fa sentire questo luogo",
       "#Map pin with an eye symbol": "Segnaposto con il simbolo di un occhio",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Segnalaci i luoghi dove ti senti bene e quelli dove non ti senti a tuo agio. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il punto che segni sulla mappa viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity. Poi, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Grazie, le tue risposte sono state salvate e restano nella ricerca SmartUrbanity. Ora, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p>",
       "#Your experience here": "La tua esperienza qui",
@@ -1028,14 +1057,14 @@
       "#More shops or activities": "Più negozi o attività",
       "#What else would improve this place?": "Cos'altro migliorerebbe questo luogo?",
       "#Anything else you want to tell us about this place?": "Vuoi dirci altro su questo luogo?",
-      "#Please do not write names or personal details of other people.": "Per favore, non scrivere nomi o dati personali di altre persone."
+      "#Please do not write names or personal details of other people.": "Per favore, non scrivere nomi o dati personali di altre persone.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Segnalaci i luoghi dove ti senti bene e quelli dove non ti senti a tuo agio. Richiede circa 2 minuti.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il punto che segni sulla mappa viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity. Poi, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”.</p>"
     },
     "fr": {
       "code": "fr",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - Comment vous vous sentez dans ce lieu",
       "#How this place feels": "Comment vous vous sentez dans ce lieu",
       "#Map pin with an eye symbol": "Repère de carte avec un symbole d'œil",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Parlez-nous des endroits où vous vous sentez bien et de ceux où ce n’est pas le cas. Cela prend environ 2 minutes.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le lieu que vous indiquez sur la carte est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity. Ensuite, depuis l’application, vous pouvez préparer un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Merci, vos réponses ont été enregistrées et restent dans la recherche SmartUrbanity. Vous pouvez maintenant préparer depuis l’application un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p>",
       "#Your experience here": "Votre expérience ici",
@@ -1166,14 +1195,14 @@
       "#More shops or activities": "Plus de commerces ou d’activités",
       "#What else would improve this place?": "Qu’est-ce qui améliorerait encore ce lieu ?",
       "#Anything else you want to tell us about this place?": "Souhaitez-vous nous dire autre chose sur cet endroit ?",
-      "#Please do not write names or personal details of other people.": "Merci de ne pas écrire de noms ni de données personnelles d’autres personnes."
+      "#Please do not write names or personal details of other people.": "Merci de ne pas écrire de noms ni de données personnelles d’autres personnes.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Parlez-nous des endroits où vous vous sentez bien et de ceux où ce n’est pas le cas. Cela prend environ 2 minutes.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le lieu que vous indiquez sur la carte est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity. Ensuite, depuis l’application, vous pouvez préparer un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ».</p>"
     },
     "de": {
       "code": "de",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - Wie sich dieser Ort anfühlt",
       "#How this place feels": "Wie sich dieser Ort anfühlt",
       "#Map pin with an eye symbol": "Kartenmarkierung mit einem Augensymbol",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Erzählen Sie uns von Orten, an denen Sie sich wohlfühlen, und von Orten, an denen das nicht der Fall ist. Es dauert etwa 2 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Ort, den Sie auf der Karte markieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung. Anschließend können Sie in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Vielen Dank, Ihre Antworten wurden gespeichert und bleiben in der SmartUrbanity-Forschung. Sie können jetzt in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p>",
       "#Your experience here": "Ihre Erfahrung hier",
@@ -1304,14 +1333,14 @@
       "#More shops or activities": "Mehr Geschäfte oder Aktivitäten",
       "#What else would improve this place?": "Was würde diesen Ort sonst noch verbessern?",
       "#Anything else you want to tell us about this place?": "Möchten Sie uns noch etwas zu diesem Ort mitteilen?",
-      "#Please do not write names or personal details of other people.": "Bitte schreiben Sie keine Namen oder persönlichen Daten anderer Personen."
+      "#Please do not write names or personal details of other people.": "Bitte schreiben Sie keine Namen oder persönlichen Daten anderer Personen.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Erzählen Sie uns von Orten, an denen Sie sich wohlfühlen, und von Orten, an denen das nicht der Fall ist. Es dauert etwa 2 Minuten.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Ort, den Sie auf der Karte markieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung. Anschließend können Sie in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen.</p>"
     },
     "tr": {
       "code": "tr",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - Bu yer size nasıl hissettiriyor",
       "#How this place feels": "Bu yer size nasıl hissettiriyor",
       "#Map pin with an eye symbol": "Göz simgeli harita işaretçisi",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Kendinizi iyi hissettiğiniz ve hissetmediğiniz yerleri bize anlatın. Yaklaşık 2 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Haritada işaretlediğiniz yer, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır. Ardından uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkürler!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Teşekkürler, yanıtlarınız kaydedildi ve SmartUrbanity araştırmasında kalır. Şimdi uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p>",
       "#Your experience here": "Buradaki deneyiminiz",
@@ -1442,14 +1471,14 @@
       "#More shops or activities": "Daha fazla dükkân veya etkinlik",
       "#What else would improve this place?": "Bu yeri başka ne iyileştirir?",
       "#Anything else you want to tell us about this place?": "Bu yer hakkında bize söylemek istediğiniz başka bir şey var mı?",
-      "#Please do not write names or personal details of other people.": "Lütfen başka kişilerin adlarını veya kişisel bilgilerini yazmayın."
+      "#Please do not write names or personal details of other people.": "Lütfen başka kişilerin adlarını veya kişisel bilgilerini yazmayın.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Kendinizi iyi hissettiğiniz ve hissetmediğiniz yerleri bize anlatın. Yaklaşık 2 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Haritada işaretlediğiniz yer, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır. Ardından uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz.</p>"
     },
     "fa": {
       "code": "fa",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - این مکان چه حسی به شما می‌دهد",
       "#How this place feels": "این مکان چه حسی به شما می‌دهد",
       "#Map pin with an eye symbol": "نشانگر نقشه با نماد چشم",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>درباره مکان‌هایی که در آن‌ها احساس خوبی دارید و مکان‌هایی که ندارید به ما بگویید. حدود ۲ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. مکانی که روی نقشه مشخص می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند. سپس می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>سپاس، پاسخ‌های شما ذخیره شد و در پژوهش SmartUrbanity باقی می‌ماند. اکنون می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p>",
       "#Your experience here": "تجربه شما در اینجا",
@@ -1580,14 +1609,14 @@
       "#More shops or activities": "مغازه‌ها یا فعالیت‌های بیشتر",
       "#What else would improve this place?": "چه چیز دیگری این مکان را بهتر می‌کند؟",
       "#Anything else you want to tell us about this place?": "آیا چیز دیگری درباره این مکان هست که بخواهید به ما بگویید؟",
-      "#Please do not write names or personal details of other people.": "لطفاً نام یا اطلاعات شخصی افراد دیگر را ننویسید."
+      "#Please do not write names or personal details of other people.": "لطفاً نام یا اطلاعات شخصی افراد دیگر را ننویسید.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>درباره مکان‌هایی که در آن‌ها احساس خوبی دارید و مکان‌هایی که ندارید به ما بگویید. حدود ۲ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. مکانی که روی نقشه مشخص می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند. سپس می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید.</p>"
     },
     "hu": {
       "code": "hu",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - Milyen érzést kelt ez a hely",
       "#How this place feels": "Milyen érzést kelt ez a hely",
       "#Map pin with an eye symbol": "Térképjelölő szem szimbólummal",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Mondja el nekünk, mely helyeken érzi jól magát, és melyeken nem. Körülbelül 2 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A térképen megjelölt helyet a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak. Ezután az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Köszönjük, válaszait mentettük, és azok a SmartUrbanity kutatásban maradnak. Most az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p>",
       "#Your experience here": "Az Ön tapasztalata ezen a helyen",
@@ -1718,14 +1747,14 @@
       "#More shops or activities": "Több üzlet vagy tevékenység",
       "#What else would improve this place?": "Mi más tenné jobbá ezt a helyet?",
       "#Anything else you want to tell us about this place?": "Szeretne még valamit elmondani nekünk erről a helyről?",
-      "#Please do not write names or personal details of other people.": "Kérjük, ne írjon le más személyek nevét vagy személyes adatait."
+      "#Please do not write names or personal details of other people.": "Kérjük, ne írjon le más személyek nevét vagy személyes adatait.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Mondja el nekünk, mely helyeken érzi jól magát, és melyeken nem. Körülbelül 2 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A térképen megjelölt helyet a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak. Ezután az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget.</p>"
     },
     "ar": {
       "code": "ar",
       "#SmartUrbanity - How this place feels": "SmartUrbanity - ما شعورك في هذا المكان",
       "#How this place feels": "ما شعورك في هذا المكان",
       "#Map pin with an eye symbol": "دبوس خريطة مع رمز عين",
-      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يُرجى إخبارنا عن الأماكن التي تبعث على الراحة والأماكن التي لا تبعث عليها. يستغرق الأمر نحو دقيقتين.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. يُحفظ المكان المحدد على الخريطة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity. بعد ذلك، يمكنك من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>شكرًا لك، تم حفظ إجاباتك وهي تبقى ضمن بحث SmartUrbanity. يمكنك الآن من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p>",
       "#Your experience here": "تجربتك هنا",
@@ -1856,7 +1885,8 @@
       "#More shops or activities": "مزيد من المتاجر أو الأنشطة",
       "#What else would improve this place?": "ما الذي قد يحسّن هذا المكان أيضًا؟",
       "#Anything else you want to tell us about this place?": "هل هناك شيء آخر يمكن إخبارنا به عن هذا المكان؟",
-      "#Please do not write names or personal details of other people.": "يُرجى عدم كتابة أسماء أشخاص آخرين أو بياناتهم الشخصية."
+      "#Please do not write names or personal details of other people.": "يُرجى عدم كتابة أسماء أشخاص آخرين أو بياناتهم الشخصية.",
+      "#<p>Tell us about places where you feel good and places where you don't. It takes about 2 minutes.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>يُرجى إخبارنا عن الأماكن التي تبعث على الراحة والأماكن التي لا تبعث عليها. يستغرق الأمر نحو دقيقتين.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. يُحفظ المكان المحدد على الخريطة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity. بعد ذلك، يمكنك من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة».</p>"
     }
   },
   "id": "smarturbanity_geolocated_perception_report",

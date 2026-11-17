@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Missing Connection Report",
     "questionnaire_id": "smarturbanity_missing_connection_report",
-    "questionnaire_version": "3.0.0",
+    "questionnaire_version": "3.1.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/smarturbanity_missing_network_element_report.svg",
     "image_alt": "#Street with a missing section and a plus sign",
@@ -53,8 +53,10 @@
               }
             ],
             "question_id": "needed_connection_form",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What other type of connection is needed?",
@@ -67,8 +69,9 @@
             },
             "required": true,
             "question_id": "needed_connection_form_other",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What is needed to make it usable? (Select all that apply)",
@@ -79,13 +82,14 @@
                 "exists_closed"
               ]
             },
-            "required": false,
+            "required": true,
             "add_other": true,
             "other_input": {
               "text": "What else is needed?",
               "answer_key": "closed_connection_intervention_other",
               "type": "text",
-              "required": true
+              "required": true,
+              "add_prefer_not_to_say": true
             },
             "add_i_dont_know": true,
             "checks_inline": false,
@@ -104,8 +108,9 @@
               }
             ],
             "question_id": "closed_connection_intervention",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "How urgent is it to act on this connection?",
@@ -136,8 +141,10 @@
               }
             ],
             "question_id": "missing_element_urgency",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Who would it help most? (Select all that apply)",
@@ -185,14 +192,16 @@
               }
             ],
             "question_id": "proposal_beneficiaries",
-            "question_version": "2.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.1.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
           },
           {
             "text": "Where would it help you get to? (Select all that apply)",
             "answer_key": "missing_element_destination",
             "question_type": "multiple_options",
-            "required": false,
+            "required": true,
             "checks_inline": false,
             "options": [
               {
@@ -225,24 +234,26 @@
               }
             ],
             "question_id": "missing_element_destination",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           },
           {
             "text": "What should the research team know about this place?",
             "answer_key": "observation_details",
             "question_type": "textarea",
-            "required": false,
+            "required": true,
             "question_id": "observation_details",
-            "question_version": "1.0.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "1.1.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
           }
         ]
       }
     ],
     "welcome_page": {
       "title": "Missing Connection Report",
-      "description": "<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>"
+      "description": "<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "final_page": {
       "title": "Thank you!",
@@ -254,7 +265,6 @@
       "code": "en",
       "#Missing Connection Report": "Missing Connection Report",
       "#Street with a missing section and a plus sign": "Street with a missing section and a plus sign",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>",
       "#Thank you!": "Thank you!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>",
       "#Missing connection": "Missing connection",
@@ -298,13 +308,13 @@
       "#Home": "Home",
       "#To work": "To work",
       "#Somewhere else": "Somewhere else",
-      "#What should the research team know about this place?": "What should the research team know about this place?"
+      "#What should the research team know about this place?": "What should the research team know about this place?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
     },
     "it": {
       "code": "it",
       "#Missing Connection Report": "Segnalazione di collegamento mancante",
       "#Street with a missing section and a plus sign": "Strada con un tratto mancante e un segno più",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Segnalaci un attraversamento o un passaggio che manca qui. Richiede circa 1 minuto.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il punto che segni sulla mappa viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity. Poi, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p>",
       "#Thank you!": "Grazie!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Grazie, le tue risposte sono state salvate e restano nella ricerca SmartUrbanity. Ora, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p>",
       "#Missing connection": "Collegamento mancante",
@@ -348,13 +358,13 @@
       "#Home": "A casa",
       "#To work": "Al lavoro",
       "#Somewhere else": "Altrove",
-      "#What should the research team know about this place?": "Cosa dovrebbe sapere il gruppo di ricerca su questo luogo?"
+      "#What should the research team know about this place?": "Cosa dovrebbe sapere il gruppo di ricerca su questo luogo?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Segnalaci un attraversamento o un passaggio che manca qui. Richiede circa 1 minuto.</p><p>La partecipazione è volontaria. Le tue risposte non contengono il tuo nome. Inserisci il tuo indirizzo email quando accedi, ma non viene mai salvato: nelle analisi è sostituito da un codice che non rivela chi sei, così che le tue risposte ai diversi questionari SmartUrbanity possano essere analizzate insieme. Il punto che segni sulla mappa viene salvato insieme alle tue risposte.</p><p>Dopo l'invio, le tue risposte restano nella ricerca SmartUrbanity. Poi, dall'app, puoi preparare un fascicolo, cioè un documento con la tua segnalazione e il punto che hai segnato, da inviare all'ufficio responsabile di questo luogo.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”.</p>"
     },
     "fr": {
       "code": "fr",
       "#Missing Connection Report": "Signalement de liaison manquante",
       "#Street with a missing section and a plus sign": "Rue avec un tronçon manquant et un signe plus",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Signalez-nous une traversée ou un passage qui manque ici. Cela prend environ 1 minute.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le lieu que vous indiquez sur la carte est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity. Ensuite, depuis l’application, vous pouvez préparer un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p>",
       "#Thank you!": "Merci !",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Merci, vos réponses ont été enregistrées et restent dans la recherche SmartUrbanity. Vous pouvez maintenant préparer depuis l’application un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p>",
       "#Missing connection": "Liaison manquante",
@@ -398,13 +408,13 @@
       "#Home": "Chez moi",
       "#To work": "Au travail",
       "#Somewhere else": "Ailleurs",
-      "#What should the research team know about this place?": "Que devrait savoir l’équipe de recherche sur ce lieu ?"
+      "#What should the research team know about this place?": "Que devrait savoir l’équipe de recherche sur ce lieu ?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Signalez-nous une traversée ou un passage qui manque ici. Cela prend environ 1 minute.</p><p>La participation est volontaire. Vos réponses ne contiennent pas votre nom. Vous indiquez votre adresse e-mail lorsque vous vous connectez, mais elle n’est jamais enregistrée : dans les analyses, elle est remplacée par un code qui ne révèle pas qui vous êtes, afin que vos réponses aux différents questionnaires SmartUrbanity puissent être analysées ensemble. Le lieu que vous indiquez sur la carte est enregistré avec vos réponses.</p><p>Après l’envoi, vos réponses restent dans la recherche SmartUrbanity. Ensuite, depuis l’application, vous pouvez préparer un dossier, c’est-à-dire un document avec votre signalement et le lieu indiqué, à envoyer au service responsable de ce lieu.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ».</p>"
     },
     "de": {
       "code": "de",
       "#Missing Connection Report": "Meldung einer fehlenden Verbindung",
       "#Street with a missing section and a plus sign": "Straße mit einem fehlenden Abschnitt und einem Pluszeichen",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Melden Sie uns einen Übergang oder Durchgang, der hier fehlt. Es dauert etwa 1 Minute.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Ort, den Sie auf der Karte markieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung. Anschließend können Sie in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p>",
       "#Thank you!": "Vielen Dank!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Vielen Dank, Ihre Antworten wurden gespeichert und bleiben in der SmartUrbanity-Forschung. Sie können jetzt in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p>",
       "#Missing connection": "Fehlende Verbindung",
@@ -448,13 +458,13 @@
       "#Home": "Nach Hause",
       "#To work": "Zur Arbeit",
       "#Somewhere else": "Woandershin",
-      "#What should the research team know about this place?": "Was sollte das Forschungsteam über diesen Ort wissen?"
+      "#What should the research team know about this place?": "Was sollte das Forschungsteam über diesen Ort wissen?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Melden Sie uns einen Übergang oder Durchgang, der hier fehlt. Es dauert etwa 1 Minute.</p><p>Die Teilnahme ist freiwillig. Ihre Antworten enthalten Ihren Namen nicht. Sie geben Ihre E-Mail-Adresse bei der Anmeldung an, sie wird jedoch nie gespeichert: In den Auswertungen wird sie durch einen Code ersetzt, der nicht verrät, wer Sie sind, damit Ihre Antworten auf verschiedene SmartUrbanity-Fragebögen gemeinsam ausgewertet werden können. Der Ort, den Sie auf der Karte markieren, wird mit Ihren Antworten gespeichert.</p><p>Nach dem Absenden bleiben Ihre Antworten in der SmartUrbanity-Forschung. Anschließend können Sie in der App ein Nachweispaket vorbereiten, also ein Dokument mit Ihrer Meldung und dem markierten Ort, das Sie an die für diesen Ort zuständige Stelle senden können.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen.</p>"
     },
     "tr": {
       "code": "tr",
       "#Missing Connection Report": "Eksik Bağlantı Bildirimi",
       "#Street with a missing section and a plus sign": "Eksik bir bölümü ve artı işareti olan sokak",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Burada eksik olan bir geçidi veya bağlantıyı bize bildirin. Yaklaşık 1 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Haritada işaretlediğiniz yer, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır. Ardından uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p>",
       "#Thank you!": "Teşekkürler!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Teşekkürler, yanıtlarınız kaydedildi ve SmartUrbanity araştırmasında kalır. Şimdi uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p>",
       "#Missing connection": "Eksik bağlantı",
@@ -498,13 +508,13 @@
       "#Home": "Eve",
       "#To work": "İşe",
       "#Somewhere else": "Başka bir yere",
-      "#What should the research team know about this place?": "Araştırma ekibi bu yer hakkında neyi bilmeli?"
+      "#What should the research team know about this place?": "Araştırma ekibi bu yer hakkında neyi bilmeli?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Burada eksik olan bir geçidi veya bağlantıyı bize bildirin. Yaklaşık 1 dakika sürer.</p><p>Katılım gönüllüdür. Yanıtlarınız adınızı içermez. Giriş yaparken e-posta adresinizi verirsiniz, ancak bu adres hiçbir zaman saklanmaz: analizlerde kim olduğunuzu göstermeyen bir kodla değiştirilir; böylece farklı SmartUrbanity anketlerine verdiğiniz yanıtlar birlikte analiz edilebilir. Haritada işaretlediğiniz yer, yanıtlarınızla birlikte kaydedilir.</p><p>Gönderdikten sonra yanıtlarınız SmartUrbanity araştırmasında kalır. Ardından uygulamadan, bildiriminizi ve işaretlediğiniz yeri içeren bir belge olan kanıt dosyasını hazırlayıp bu yerden sorumlu birime gönderebilirsiniz.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz.</p>"
     },
     "fa": {
       "code": "fa",
       "#Missing Connection Report": "گزارش ارتباط گمشده",
       "#Street with a missing section and a plus sign": "خیابانی با یک بخش ناقص و علامت به‌علاوه",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>گذرگاه یا راه عبوری را که اینجا وجود ندارد به ما گزارش دهید. حدود ۱ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. مکانی که روی نقشه مشخص می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند. سپس می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p>",
       "#Thank you!": "سپاسگزاریم!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>سپاس، پاسخ‌های شما ذخیره شد و در پژوهش SmartUrbanity باقی می‌ماند. اکنون می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p>",
       "#Missing connection": "ارتباط گمشده",
@@ -548,13 +558,13 @@
       "#Home": "به خانه",
       "#To work": "به محل کار",
       "#Somewhere else": "جای دیگری",
-      "#What should the research team know about this place?": "تیم پژوهش درباره این مکان چه چیزی باید بداند؟"
+      "#What should the research team know about this place?": "تیم پژوهش درباره این مکان چه چیزی باید بداند؟",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>گذرگاه یا راه عبوری را که اینجا وجود ندارد به ما گزارش دهید. حدود ۱ دقیقه زمان می‌برد.</p><p>مشارکت داوطلبانه است. پاسخ‌های شما نام شما را در بر ندارند. هنگام ورود، نشانی ایمیل خود را وارد می‌کنید، اما هرگز ذخیره نمی‌شود: در تحلیل‌ها با کدی جایگزین می‌شود که هویت شما را آشکار نمی‌کند، تا پاسخ‌های شما به پرسشنامه‌های مختلف SmartUrbanity بتوانند با هم تحلیل شوند. مکانی که روی نقشه مشخص می‌کنید همراه با پاسخ‌های شما ذخیره می‌شود.</p><p>پس از ارسال، پاسخ‌های شما در پژوهش SmartUrbanity باقی می‌مانند. سپس می‌توانید از طریق برنامه، پرونده‌ای از مستندات، یعنی سندی شامل گزارش شما و مکانی که مشخص کرده‌اید، آماده کنید تا برای اداره‌ی مسئول این مکان بفرستید.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید.</p>"
     },
     "hu": {
       "code": "hu",
       "#Missing Connection Report": "Hiányzó kapcsolat bejelentése",
       "#Street with a missing section and a plus sign": "Utca egy hiányzó szakasszal és egy pluszjellel",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>Jelezze nekünk, ha itt hiányzik egy átkelő vagy átjáró. Körülbelül 1 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A térképen megjelölt helyet a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak. Ezután az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p>",
       "#Thank you!": "Köszönjük!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>Köszönjük, válaszait mentettük, és azok a SmartUrbanity kutatásban maradnak. Most az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p>",
       "#Missing connection": "Hiányzó kapcsolat",
@@ -598,13 +608,13 @@
       "#Home": "Haza",
       "#To work": "Munkába",
       "#Somewhere else": "Máshová",
-      "#What should the research team know about this place?": "Mit kellene tudnia a kutatócsoportnak erről a helyről?"
+      "#What should the research team know about this place?": "Mit kellene tudnia a kutatócsoportnak erről a helyről?",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Jelezze nekünk, ha itt hiányzik egy átkelő vagy átjáró. Körülbelül 1 percet vesz igénybe.</p><p>A részvétel önkéntes. Válaszai nem tartalmazzák a nevét. Bejelentkezéskor megadja e-mail-címét, de azt soha nem tároljuk: az elemzésekben egy olyan kód helyettesíti, amely nem fedi fel, ki Ön, így a különböző SmartUrbanity kérdőívekre adott válaszait együtt lehet elemezni. A térképen megjelölt helyet a válaszaival együtt mentjük.</p><p>Elküldés után válaszai a SmartUrbanity kutatásban maradnak. Ezután az alkalmazásban összeállíthat egy dokumentációs csomagot, vagyis egy dokumentumot a bejelentésével és a megjelölt hellyel, amelyet elküldhet a helyért felelős hivatalnak.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Tudjon meg többet a SmartUrbanity projektről</a></p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget.</p>"
     },
     "ar": {
       "code": "ar",
       "#Missing Connection Report": "بلاغ عن رابط مفقود",
       "#Street with a missing section and a plus sign": "شارع به جزء مفقود وعلامة زائد",
-      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p>": "<p>يُرجى إخبارنا عن معبر أو ممر مفقود هنا. يستغرق الأمر نحو دقيقة واحدة.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. يُحفظ المكان المحدد على الخريطة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity. بعد ذلك، يمكنك من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p>",
       "#Thank you!": "شكرًا لك!",
       "#<p>Thank you, your answers have been saved and stay in the SmartUrbanity research. You can now prepare from the app an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p>": "<p>شكرًا لك، تم حفظ إجاباتك وهي تبقى ضمن بحث SmartUrbanity. يمكنك الآن من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p>",
       "#Missing connection": "رابط مفقود",
@@ -648,7 +658,8 @@
       "#Home": "إلى المنزل",
       "#To work": "إلى العمل",
       "#Somewhere else": "إلى مكان آخر",
-      "#What should the research team know about this place?": "ما الذي ينبغي أن يعرفه فريق البحث عن هذا المكان؟"
+      "#What should the research team know about this place?": "ما الذي ينبغي أن يعرفه فريق البحث عن هذا المكان؟",
+      "#<p>Tell us about a crossing or a passage that is missing here. It takes about 1 minute.</p><p>Participation is voluntary. Your answers do not contain your name. You give your email address when you sign in, but it is never stored: in the analyses it is replaced by a code that does not reveal who you are, so that your answers to different SmartUrbanity questionnaires can be analysed together. The place you mark on the map is saved with your answers.</p><p>After you send them, your answers stay in the SmartUrbanity research. Then, from the app, you can prepare an evidence package, a document with your report and the place you marked, to send to the office responsible for this place.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>يُرجى إخبارنا عن معبر أو ممر مفقود هنا. يستغرق الأمر نحو دقيقة واحدة.</p><p>المشاركة طوعية. لا تتضمن إجاباتك اسمك. يُدخَل عنوان بريدك الإلكتروني عند تسجيل الدخول، لكنه لا يُحفظ أبدًا: ففي التحليلات يُستبدل برمز لا يكشف هويتك، بحيث يمكن تحليل إجاباتك على استبيانات SmartUrbanity المختلفة معًا. يُحفظ المكان المحدد على الخريطة مع إجاباتك.</p><p>بعد الإرسال، تبقى إجاباتك ضمن بحث SmartUrbanity. بعد ذلك، يمكنك من التطبيق إعداد ملف أدلة، أي مستند يتضمن بلاغك والمكان المحدد، لإرساله إلى الجهة المسؤولة عن هذا المكان.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">المزيد من المعلومات عن SmartUrbanity</a></p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة».</p>"
     }
   }
 }

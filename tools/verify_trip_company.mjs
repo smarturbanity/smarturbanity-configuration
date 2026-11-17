@@ -26,7 +26,8 @@ for (const option of company.options.filter(option => option !== alone)) {
 }
 assert.equal(context.guidedFlowToggleOption(company, ['With other adults'], 'With children or teenagers (on foot or in the car)').selected.length, 2);
 assert.deepEqual(load.options.map(option => option.value), ['heavy_bags', 'pet']);
-assert.equal(load.required, false);
+assert.equal(load.required, true);
+assert.equal(load.add_prefer_not_to_say, true, 'Required personal context offers an explicit refusal');
 for (const selected of company.options) {
  const checks = company.options.map(schema => ({schema, input: {checked: true}, setInput(value) {this.input.checked = value;}}));
  const target = checks.find(check => check.schema === selected);
