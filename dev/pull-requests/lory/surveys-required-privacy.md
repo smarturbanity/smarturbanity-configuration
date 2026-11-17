@@ -10,17 +10,16 @@ at least one available activity. Ordinary answer values, privacy classes, condit
 and campaign activation are unchanged.
 
 Introductions and optional-field labels match the new interaction contract; semantic
-versions advance. A filterable HTML table and CSV list every question, answer,
-dependency and privacy flag, including current service catalogues and generated
-fields. The HTML switches between Italian and English in one self-contained file,
-preserving active filters; CSV exports are available in both languages.
-The unavailable car-use row catalogue is explicitly identified.
+versions advance. The README documents the required-answer policy, explicit
+refusal and privacy metadata.
 
 Validation: six bundle regressions; language ownership; actual trip-company and
-location-context consumers; structural policy/diff checks; 473-row HTML with working
-search/group/questionnaire/privacy filters and both language-switch directions.
-Fresh regeneration leaves all three exports unchanged. The 19 SVG assets validate;
-independent review found no blocking issue in the configuration or exporter.
+location-context consumers; structural policy/diff checks for all 32 forms and
+473 fields. The 19 SVG assets validate; independent review found no blocking
+configuration issue. Reference and diff checks cover the final documentation
+cleanup, which preserves form JSON and maintained verifiers byte for byte.
+The historical pilot-migration verifier fails against its outdated consumer call
+and migration baseline; it was not weakened or reported as passing.
 The application support for text and matrix refusal
 is delivered separately in `lory/app-ritocchi-dev-release`; configuration publication
 requires that coordinated application support. These checks do not replace full
