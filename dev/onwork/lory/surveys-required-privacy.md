@@ -42,7 +42,32 @@ user requirement; their exclusivity and conditional checks remain intact.
 ## Coordinated application change
 
 Text, textarea, generated Other and matrix refusal require the coordinated CityMaaS
-candidate `lory/questionnaire-refusal-fields`. Configuration-only publication cannot
-claim those interactions are ready in an older application. Application verification
-and independent review are being completed by the coordinator. No deployment or
-change to the protected base is part of this task.
+candidate `lory/app-ritocchi-dev-release`, which includes the application support.
+Configuration-only publication cannot claim those interactions are ready in an
+older application. No deployment or change to the protected base is part of this task.
+
+## Independent readiness review (2026-11-17)
+
+Review of the three task commits through `06fae5d` found no concrete defect requiring
+a code change. An independent read-only review confirmed the required/refusal
+policy, the service-creation exception and the summary exporter boundaries.
+
+Checks against the coordinated application consumer passed: all six survey-bundle
+regressions, framework language ownership, trip-company selection and location
+context. The 19 survey SVG assets passed their maintained validation. A fresh
+structural check confirmed 32 forms, 469 required authored questions and four
+required generated Other fields. Sensitive questions offer refusal apart from the
+approved service-creation activity matrix.
+
+Regenerating the HTML and both CSV files left the tracked tree unchanged. Both
+exports contain 473 rows, including 318 refusal-capable fields. A local Playwright
+check passed combined group/questionnaire/privacy filters, unmatched search,
+switching in both language directions and preservation of active selections and
+search, with no browser errors. These are configuration and summary checks, not a
+new full application E2E acceptance run or a legal review of privacy handling.
+
+The historical pilot-migration verifier is not a general gate for this branch:
+it invokes the current consumer without its required application config type and
+permits only one form change relative to its historical migration baseline.
+That check fails and was not weakened or presented as passing. The relevant
+questionnaire, language, asset and summary checks above pass.

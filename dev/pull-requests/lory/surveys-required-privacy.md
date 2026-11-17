@@ -19,6 +19,10 @@ The unavailable car-use row catalogue is explicitly identified.
 Validation: six bundle regressions; language ownership; actual trip-company and
 location-context consumers; structural policy/diff checks; 473-row HTML with working
 search/group/questionnaire/privacy filters and both language-switch directions.
+Fresh regeneration leaves all three exports unchanged. The 19 SVG assets validate;
+independent review found no blocking issue in the configuration or exporter.
 The application support for text and matrix refusal
-is delivered separately in the coordinated CityMaaS candidate. Deployment and
+is delivered separately in `lory/app-ritocchi-dev-release`; configuration publication
+requires that coordinated application support. These checks do not replace full
+application acceptance or legal review of privacy handling. Deployment and
 protected-base integration remain human operations.
