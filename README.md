@@ -117,6 +117,17 @@ The root index lists pilot IDs, names and initial languages. Its language must m
 remain independent content. There is no external base, application manifest,
 per-pilot index or separate service-subtype copy.
 
+A pilot marked `"status": "draft"` in the root index is a draft: CityMaaS offers it only in
+development and test, never in production. Karlsruhe, İzmir, Lyon and the Greater Zurich Area
+are drafts with only their identity, language, map centre and the shared consent and
+publication rules; each grows its own topic files as its pilot is prepared.
+
+Two shared files are parts of every pilot, so that each pilot reads them from this repository
+without copies: `definitions/research_consent.json` holds the research consent wording, its
+languages and the participant-code service (each pilot's `application.json` keeps only the
+consent version, withdrawal contact and age limit), and `definitions/perception_publication.json`
+holds the rules for publishing place perceptions, which the DPO approves.
+
 ## Application and server configuration
 
 Adopt this revision with the CityMaaS reader that supports `application_config`, `parts`,

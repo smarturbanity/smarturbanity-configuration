@@ -1,0 +1,95 @@
+{
+  "content": {
+    "perception_publication": {
+      "policy_id": "access_hub_perception_publication",
+      "policy_version": "0.1.0",
+      "status": "provisional_default",
+      "approval": "Provisional conservative default; Sapienza (WP2) and CTLup decide the thresholds, approved by the DPO.",
+      "minimum_contributor_count": 5,
+      "minimum_evidence_count": 10,
+      "time_window_days": 365,
+      "included_evidence": [
+        "moderated",
+        "validated"
+      ],
+      "maximum_missing_share": 0.5,
+      "accepted_aggregation_versions": [
+        "perception_aspects_v1"
+      ],
+      "aspects": [
+        {
+          "id": "traffic_safety",
+          "label": "#Safety from traffic",
+          "bi_class": "bi-shield-check",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_traffic_safety",
+          "scale": [
+            "not_safe",
+            "slightly_safe",
+            "moderately_safe",
+            "very_safe",
+            "completely_safe"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "personal_security",
+          "label": "#Personal security",
+          "bi_class": "bi-person-check",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_personal_security",
+          "scale": [
+            "not_safe",
+            "slightly_safe",
+            "moderately_safe",
+            "very_safe",
+            "completely_safe"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "pleasantness",
+          "label": "#Pleasantness",
+          "bi_class": "bi-emoji-smile",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_pleasantness",
+          "scale": [
+            "very_unpleasant",
+            "unpleasant",
+            "neutral",
+            "pleasant",
+            "very_pleasant"
+          ],
+          "rating_direction": "higher_is_better"
+        },
+        {
+          "id": "overall_impression",
+          "label": "#Overall impression",
+          "bi_class": "bi-eye",
+          "questionnaire_id": "smarturbanity_geolocated_perception_report",
+          "questionnaire_versions": [
+            "0.2.2"
+          ],
+          "answer_key": "place_overall",
+          "scale": [
+            "very_negative",
+            "negative",
+            "neutral",
+            "positive",
+            "very_positive"
+          ],
+          "rating_direction": "higher_is_better"
+        }
+      ]
+    }
+  }
+}
