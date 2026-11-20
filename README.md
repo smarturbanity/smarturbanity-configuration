@@ -206,20 +206,11 @@ own default.
 `languages` lists the languages citizens can choose in Access Together; Rome offers English
 and Italian, like the pilot's mobile app. Without it, every application language is offered.
 
-`movesion.pilot_codes` names the pilot's Movesion client for each runtime environment (`prod`,
-`test`, `dev`): Rome uses `smartrome` in production and `smartromedev`, on Movesion dev, in the
-dev and test installations. The applications select the entry of their environment for sign-in
-and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion user belongs to
-exactly one of these clients. The Movesion API address of each environment does not depend on the
-pilot and stays in the applications.
-
-`answers_firestore` is the Firebase web configuration of the database that receives the
-pilot's participant answers, per runtime environment. In production it is the pilot's
-named database in Movesion's `smart-urbanity` project (Rome: `rome-db`), which only
-receives answers: the team never reads them from there, Movesion exports them on request.
-An environment without an entry keeps the installation's own database, the team's
-`smarturbanity-admin` project in dev and test. The values are public client settings,
-as in any web application; the database rules protect the data.
+The pilot's connections are not configured here: its Movesion sign-in client for each
+runtime environment and the database that receives its participant answers (Rome's
+production answers go to `rome-db` in Movesion's `smart-urbanity` project) ship with the
+applications' code. This repository holds only content and interface; the applications
+ignore `movesion` and `answers_firestore` if an older technical file still lists them.
 
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete
