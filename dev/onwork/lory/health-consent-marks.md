@@ -32,7 +32,8 @@ After merging the follow-up, the six survey-bundle regressions, language
 ownership, trip-company and location-context checks pass against the CityMaaS
 `main` consumers. With the marks, the health-consent validator accepts all 37
 forms, survey bundles pass (16 questionnaires, 258 questions) and language
-ownership passes (19 questionnaires). The architecture-migration layout moved the files those
+ownership passes (19 questionnaires); trip-company, location-context and the
+bundle regressions pass again. The architecture-migration layout moved the files those
 verifiers read, so they run against the `main` checkout.
 
 The option marks need the CityMaaS editor and validator support delivered
