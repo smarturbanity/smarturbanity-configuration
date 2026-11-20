@@ -514,10 +514,12 @@ review notes belong to the authoring pool, while questionnaire composition histo
 retained in Git. Sections do not require an `id`. Service sections declare their
 existing `hub_feature` role for application behavior.
 
-Privacy metadata belongs only to each question, using `privacy_classification` with
+Privacy metadata belongs to each question, using `privacy_classification` with
 one of `personal_data`, `heightened_personal`, or `special_category_health`.
 These values describe handling needs for review; they do not establish a legal basis
-or constitute approval. Options and questionnaire-level objects do not repeat them.
+or constitute approval. An option carries only `special_category_health`, when
+choosing it reveals health or disability while the question as a whole does not;
+questionnaire-level objects do not repeat them.
 
 Configuration files should be version controlled through Git.
 
