@@ -171,6 +171,9 @@ Lory (2026-11-08): a dog area is both a service and an opportunity.
 | `definitions/mappings/social_function_opportunity_mapping.json` 4.0.0 → 4.1.0 | `OP_47` in `SP_06`, with `OP_22` |
 | `pilots/rome/service_subtypes.json` | `ST_61`: "Area cani", "Area di sgambamento cani" |
 
+The `definitions/types` and `definitions/mappings` files above now ship with CityMaaS
+(`Projects/SmartUrbanity/Configuration/definitions/`); Rome's subtypes are in `pilots/rome/services.json`.
+
 Texts are translated in all eight languages. Only this branch changes; the service report matrix gains the new row
 through the mapping.
 

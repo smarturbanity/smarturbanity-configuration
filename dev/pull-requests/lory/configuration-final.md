@@ -13,7 +13,16 @@ configuration work still open:
   pilots, with the research consent and place perception publication rules shared by
   every pilot.
 
-The pilot check now expects the two shared parts every pilot lists. The other branches
+The base SmartUrbanity catalogue (`definitions/types`, `definitions/mappings`) and the
+research consent wording move to CityMaaS, which shows them when a pilot has no override;
+Rome keeps its service subtypes and its consent version, contact and age limit here. The
+pilot list (`index.json` pilots) and the retired delivery package tool are removed: CityMaaS
+ships the list of cities. Rome's e-scooter questionnaire tab uses the Bootstrap scooter icon,
+like the other modes. Enable this revision in `versions.json` only after the CityMaaS release that
+ships the catalogue and the consent is deployed.
+
+The pilot check now expects the perception publication part every pilot lists and reads
+the base catalogue from the CityMaaS checkout. The other branches
 (`lory/health-consent-marks`, `lory/surveys-required-privacy`) are already in `main`; the
 October local branches and the 14 November Rome campaign branch are superseded by `main`.
 

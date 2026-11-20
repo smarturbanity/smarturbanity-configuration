@@ -60,8 +60,6 @@ The intended structure is:
 smarturbanity-configuration/
 │
 ├── definitions/
-│   ├── types/
-│   ├── mappings/
 │   └── ...
 │
 ├── forms/
@@ -123,11 +121,11 @@ development and test, never in production. Karlsruhe, İzmir, Lyon and the Great
 are drafts with only their identity, language, map centre and the shared consent and
 publication rules; each grows its own topic files as its pilot is prepared.
 
-Two shared files are parts of every pilot, so that each pilot reads them from this repository
-without copies: `definitions/research_consent.json` holds the research consent wording, its
-languages and the participant-code service (each pilot's `application.json` keeps only the
-consent version, withdrawal contact and age limit), and `definitions/perception_publication.json`
-holds the rules for publishing place perceptions, which the DPO approves.
+`definitions/perception_publication.json` is a part of every pilot, so that each pilot reads the
+rules for publishing place perceptions, which the DPO approves, from this repository without copies.
+The research consent wording, its languages and the participant-code service ship with CityMaaS
+(`Projects/SmartUrbanity/Configuration/defaults.json`); each pilot's `application.json` keeps only
+the consent version, withdrawal contact and age limit.
 
 ## Application and server configuration
 
@@ -143,18 +141,11 @@ See [the migration and verification record](docs/pilot-configuration-refresh.md)
 
 `definitions/` contains configuration that belongs to the common SmartUrbanity model rather than to a specific pilot.
 
-Examples include:
-
-- service types and subtypes;
-- access point types;
-- supporting element types;
-- opportunity types;
-- mobility mode definitions;
-- mappings between SmartUrbanity concepts.
-
-Shared definitions provide stable identifiers and common semantics across applications and pilots.
-
-Pilot-specific variations should normally extend, restrict or override these definitions rather than duplicate the complete shared catalogue.
+The base SmartUrbanity catalogue (service, access point, supporting element, opportunity and
+social function types, mobility modes, user types and the mappings between them) ships with
+CityMaaS in `Projects/SmartUrbanity/Configuration/definitions/`, so the applications show it even
+without this repository. A pilot changes it only through its own dataset files, as Rome does with
+`pilots/rome/services.json` for its service subtypes, rather than duplicating the catalogue.
 
 `definitions/question_review_tags.json` holds the tags reviewers give each question in the CityMaaS Admin Portal Question review, besides status and priority:
 

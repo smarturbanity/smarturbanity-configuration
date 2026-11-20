@@ -19,7 +19,7 @@ const readWhole = file => {
 const pilotFile = read('pilots/rome/rome.json');
 const applicationFile = read('pilots/rome/application.json');
 assert.deepEqual(pilotFile.parts, ['./pilots/rome/map.json', './pilots/rome/data_model.json', './pilots/rome/services.json', './pilots/rome/contribution_forms.json', './definitions/perception_publication.json']);
-assert.deepEqual(applicationFile.parts, ['./pilots/rome/app_look.json', './pilots/rome/reports.json', './definitions/research_consent.json']);
+assert.deepEqual(applicationFile.parts, ['./pilots/rome/app_look.json', './pilots/rome/reports.json']);
 const pilot = JSON.parse(JSON.stringify(readWhole('pilots/rome/rome.json')));
 const application = JSON.parse(JSON.stringify(readWhole('pilots/rome/application.json')));
 assert.throws(() => context.composeConfigurationParts(pilotFile, [{map: {}}, {map: {initial_view: null}}, {map: {initial_view: {}}}]), /set in two files: map.initial_view/);
@@ -61,7 +61,8 @@ context.resolveConfigurationSourcePath = (source, pilotId) => typeof source === 
 context.registerConfigurationRegistryEntry = (dataset, id) => registry.push({dataset, id});
 context.loadConfigurationSourceJson = async (source, options = {}) => {
   const selected = Array.isArray(source) ? source[0] : source;
-  const url = new URL(typeof selected === 'string' ? selected : selected.url);
+  // A path without a host ships with CityMaaS, as the app reads it next to its page.
+  const url = new URL(typeof selected === 'string' ? selected : selected.url, 'https://app.test/CityMaasRoot/');
   const file = url.hostname === 'app.test' ? path.join(app, url.pathname) : path.join(root, url.pathname);
   if (!fs.existsSync(file)) return null;
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
