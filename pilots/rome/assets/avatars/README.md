@@ -18,7 +18,6 @@ the figure is transparent, so each avatar sits on any card or top-bar colour. Th
 contain an inline PNG image in an SVG wrapper, with no external image references or
 script. Their total size is 19,442,956 bytes (about 18.5 MiB); loading every choice
 has that transfer cost before caching/compression. The chooser requests native lazy loading.
-The runtime materializer includes the complete `pilots` directory, including SVGs.
 
 An avatar is a visual preference only. It does not select travel mode, mobility
 profile, permissions or the application brand.

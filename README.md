@@ -112,12 +112,13 @@ Access Together reads the pilot's profile questions and report menu from
 leave them empty. The joined documents need the CityMaaS reader that supports `parts`;
 an older reader ignores them and would load the pilot without its topic files.
 
-The root index lists pilot IDs, names and initial languages. Its language must match
-`application.json`'s `settings.default_language`. Shared definitions and forms
-remain independent content. There is no external base, application manifest,
+The list of pilots, with their names and initial languages, ships with the CityMaaS code
+(`Projects/SmartUrbanity/Configuration/pilots.json`); a pilot's language there must match
+`application.json`'s `settings.default_language`. The root index lists only the shared
+directories. Shared definitions and forms remain independent content. There is no external base, application manifest,
 per-pilot index or separate service-subtype copy.
 
-A pilot marked `"status": "draft"` in the root index is a draft: CityMaaS offers it only in
+A pilot marked `"status": "draft"` in the CityMaaS pilot list is a draft: CityMaaS offers it only in
 development and test, never in production. Karlsruhe, İzmir, Lyon and the Greater Zurich Area
 are drafts with only their identity, language, map centre and the shared consent and
 publication rules; each grows its own topic files as its pilot is prepared.
@@ -137,9 +138,6 @@ receive the same code-owned defaults separately from this repository. This branc
 does not update or deploy either consumer.
 
 See [the migration and verification record](docs/pilot-configuration-refresh.md).
-
-See [delivery notes](docs/questionnaire-runtime-refresh.md) to export configuration,
-questionnaires and assets together from one commit for bundled app delivery.
 
 ## Shared definitions
 
@@ -405,7 +403,7 @@ The consent text in the code-owned defaults is a draft (`version: "1.0.0-draft"`
 
 ## Survey schedule and campaigns
 
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
+When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot document's `content.dataset_files`.
 
 ```json
 {
