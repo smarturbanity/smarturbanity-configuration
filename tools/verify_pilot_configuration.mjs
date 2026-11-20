@@ -18,8 +18,8 @@ const readWhole = file => {
 };
 const pilotFile = read('pilots/rome/rome.json');
 const applicationFile = read('pilots/rome/application.json');
-assert.deepEqual(pilotFile.parts, ['./pilots/rome/map.json', './pilots/rome/data_model.json', './pilots/rome/services.json', './pilots/rome/contribution_forms.json']);
-assert.deepEqual(applicationFile.parts, ['./pilots/rome/app_look.json', './pilots/rome/reports.json']);
+assert.deepEqual(pilotFile.parts, ['./pilots/rome/map.json', './pilots/rome/data_model.json', './pilots/rome/services.json', './pilots/rome/contribution_forms.json', './definitions/perception_publication.json']);
+assert.deepEqual(applicationFile.parts, ['./pilots/rome/app_look.json', './pilots/rome/reports.json', './definitions/research_consent.json']);
 const pilot = JSON.parse(JSON.stringify(readWhole('pilots/rome/rome.json')));
 const application = JSON.parse(JSON.stringify(readWhole('pilots/rome/application.json')));
 assert.throws(() => context.composeConfigurationParts(pilotFile, [{map: {}}, {map: {initial_view: null}}, {map: {initial_view: {}}}]), /set in two files: map.initial_view/);
@@ -73,8 +73,8 @@ const loaded = await context.preloadConfigurationDataSource({
 assert.equal(loaded.loaded, true, loaded.error);
 assert.ok(registry.some(entry => entry.dataset.config_type === 'service_subtypes'));
 assert.ok(registry.some(entry => entry.dataset.config_type === 'smarturbanity_survey_campaigns'));
-assert.equal(loaded.snapshots.pilot.parts.length, 4);
-assert.equal(loaded.snapshots.application.parts.length, 2);
+assert.equal(loaded.snapshots.pilot.parts.length, pilotFile.parts.length);
+assert.equal(loaded.snapshots.application.parts.length, applicationFile.parts.length);
 assert.deepEqual(JSON.parse(JSON.stringify(loaded.snapshots.pilot.data)), pilot, 'The app joins the pilot parts as this check does');
 assert.deepEqual(JSON.parse(JSON.stringify(loaded.snapshots.application.data)), application, 'The app joins the technical parts as this check does');
 assert.equal(loaded.file.application_config, 'https://configuration.test/pilots/rome/application.json');
