@@ -60,8 +60,6 @@ The intended structure is:
 smarturbanity-configuration/
 │
 ├── definitions/
-│   ├── types/
-│   ├── mappings/
 │   └── ...
 │
 ├── forms/
@@ -112,10 +110,22 @@ Access Together reads the pilot's profile questions and report menu from
 leave them empty. The joined documents need the CityMaaS reader that supports `parts`;
 an older reader ignores them and would load the pilot without its topic files.
 
-The root index lists pilot IDs, names and initial languages. Its language must match
-`application.json`'s `settings.default_language`. Shared definitions and forms
-remain independent content. There is no external base, application manifest,
+The list of pilots, with their names and initial languages, ships with the CityMaaS code
+(`Projects/SmartUrbanity/Configuration/pilots.json`); a pilot's language there must match
+`application.json`'s `settings.default_language`. The root index lists only the forms
+directory; the files in `definitions/` are read by their own paths. There is no external base, application manifest,
 per-pilot index or separate service-subtype copy.
+
+A pilot marked `"status": "draft"` in the CityMaaS pilot list is a draft: CityMaaS offers it only in
+development and test, never in production. Karlsruhe, İzmir, Lyon and the Greater Zurich Area
+are drafts with only their identity, language, map centre and the shared consent and
+publication rules; each grows its own topic files as its pilot is prepared.
+
+`definitions/perception_publication.json` is a part of every pilot, so that each pilot reads the
+rules for publishing place perceptions, which the DPO approves, from this repository without copies.
+The research consent wording, its languages and the participant-code service ship with CityMaaS
+(`Projects/SmartUrbanity/Configuration/defaults.json`); each pilot's `application.json` keeps only
+the consent version, withdrawal contact and age limit.
 
 ## Application and server configuration
 
@@ -127,25 +137,15 @@ does not update or deploy either consumer.
 
 See [the migration and verification record](docs/pilot-configuration-refresh.md).
 
-See [delivery notes](docs/questionnaire-runtime-refresh.md) to export configuration,
-questionnaires and assets together from one commit for bundled app delivery.
-
 ## Shared definitions
 
 `definitions/` contains configuration that belongs to the common SmartUrbanity model rather than to a specific pilot.
 
-Examples include:
-
-- service types and subtypes;
-- access point types;
-- supporting element types;
-- opportunity types;
-- mobility mode definitions;
-- mappings between SmartUrbanity concepts.
-
-Shared definitions provide stable identifiers and common semantics across applications and pilots.
-
-Pilot-specific variations should normally extend, restrict or override these definitions rather than duplicate the complete shared catalogue.
+The base SmartUrbanity catalogue (service, access point, supporting element, opportunity and
+social function types, mobility modes, user types and the mappings between them) ships with
+CityMaaS in `Projects/SmartUrbanity/Configuration/definitions/`, so the applications show it even
+without this repository. A pilot changes it only through its own dataset files, as Rome does with
+`pilots/rome/services.json` for its service subtypes, rather than duplicating the catalogue.
 
 `definitions/question_review_tags.json` holds the tags reviewers give each question in the CityMaaS Admin Portal Question review, besides status and priority:
 
@@ -206,20 +206,11 @@ own default.
 `languages` lists the languages citizens can choose in Access Together; Rome offers English
 and Italian, like the pilot's mobile app. Without it, every application language is offered.
 
-`movesion.pilot_codes` names the pilot's Movesion client for each runtime environment (`prod`,
-`test`, `dev`): Rome uses `smartrome` in production and `smartromedev`, on Movesion dev, in the
-dev and test installations. The applications select the entry of their environment for sign-in
-and for the handoff landing page `/auth/handoff/<pilot code>`; each Movesion user belongs to
-exactly one of these clients. The Movesion API address of each environment does not depend on the
-pilot and stays in the applications.
-
-`answers_firestore` is the Firebase web configuration of the database that receives the
-pilot's participant answers, per runtime environment. In production it is the pilot's
-named database in Movesion's `smart-urbanity` project (Rome: `rome-db`), which only
-receives answers: the team never reads them from there, Movesion exports them on request.
-An environment without an entry keeps the installation's own database, the team's
-`smarturbanity-admin` project in dev and test. The values are public client settings,
-as in any web application; the database rules protect the data.
+The pilot's connections are not configured here: its Movesion sign-in client for each
+runtime environment and the database that receives its participant answers (Rome's
+production answers go to `rome-db` in Movesion's `smart-urbanity` project) ship with the
+applications' code. This repository holds only content and interface; the applications
+ignore `movesion` and `answers_firestore` if an older technical file still lists them.
 
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete
@@ -403,7 +394,7 @@ The consent text in the code-owned defaults is a draft (`version: "1.0.0-draft"`
 
 ## Survey schedule and campaigns
 
-When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot `index.json`.
+When a form is offered is pilot configuration, not part of the form. Each pilot declares it in its own dataset `pilots/<pilot>/survey_campaigns.json` (`config_type: smarturbanity_survey_campaigns`), listed in the pilot document's `content.dataset_files`.
 
 ```json
 {

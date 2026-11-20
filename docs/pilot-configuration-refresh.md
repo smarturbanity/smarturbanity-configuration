@@ -30,9 +30,11 @@ preserved; empty container associations retain the ordinary offer.
 
 Run `node tools/verify_pilot_configuration.mjs <CityMaaS-checkout>` against a
 checkout with the new reader and its code-owned defaults. The verifier executes
-the actual merge and preload functions using local file transport, checks every
-current pilot value, preserves service subtypes and questionnaire files, and
-rejects mixed technical ownership and mismatched pilot identities.
+the actual merge and preload functions using local file transport, checks that the
+technical file names no pilot connection (those ship with the applications), that
+campaigns reference existing ones and retired sources are gone, and rejects mixed
+technical ownership and mismatched pilot identities. It no longer compares with the
+pre-migration snapshot, since forms and pilot values have changed on purpose since.
 
 Verified against the Access Together development checkout. The six questionnaire
 regressions and all twenty SVG validations also pass.
