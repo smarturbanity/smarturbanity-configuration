@@ -106,8 +106,9 @@ files in `parts`; the application reads every document already joined with its p
 - a part cannot list further parts, and paths are relative to the repository root.
 
 Access Together reads the pilot's profile questions and report menu from
-`applications.smart_urbanity_access_together.flow` in `reports.json`; the code defaults
-leave them empty. The joined documents need the CityMaaS reader that supports `parts`;
+`applications.smart_urbanity_access_together.customization` in `reports.json`; the code defaults
+leave them empty. `customization` was called `flow` before; it needs a CityMaaS release that
+reads the new name, and that release still reads `flow`. The joined documents need the CityMaaS reader that supports `parts`;
 an older reader ignores them and would load the pilot without its topic files.
 
 The list of pilots, with their names and initial languages, ships with the CityMaaS code

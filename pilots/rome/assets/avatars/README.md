@@ -1,13 +1,14 @@
 # Pilot avatars
 
-The Rome catalogue is `settings.applications.smart_urbanity_access_together.flow.landing.avatars`
-in `pilots/rome/application.json`. Each entry has a stable `id`, image `src` and
+The Rome catalogue is `index.json` in this folder, named by
+`settings.applications.smart_urbanity_access_together.customization.landing.avatars`
+(`{"path": "./pilots/rome/assets/avatars/index.json"}`) in `pilots/rome/app_look.json`. Each entry has a stable `id`, image `src` and
 accessible `alt`; at most one entry has `default: true`. Without an explicit
 default the first entry is used. An empty catalogue offers no avatar.
 
-Relative `src` values are resolved from the configuration repository root at the
-selected immutable revision, not from the application document's directory.
-Arrays replace the inherited catalogue. Other pilots declare their own catalogue
+Relative `src` values in `index.json` are resolved next to it, at the selected
+immutable revision. A pilot may still list its avatars inline in `landing.avatars`; then
+relative `src` values are resolved from the repository root. Arrays replace the inherited catalogue. Other pilots declare their own catalogue
 or explicitly inherit a shared one; Rome's images are not application defaults.
 
 Only the selected ID is stored. A saved choice that names no catalogue entry, such as
