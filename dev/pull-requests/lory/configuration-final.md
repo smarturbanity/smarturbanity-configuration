@@ -18,7 +18,8 @@ research consent wording move to CityMaaS, which shows them when a pilot has no 
 Rome keeps its service subtypes and its consent version, contact and age limit here. The
 pilot list (`index.json` pilots) and the retired delivery package tool are removed: CityMaaS
 ships the list of cities. Rome's e-scooter questionnaire tab uses the Bootstrap scooter icon,
-like the other modes. Enable this revision in `versions.json` only after the CityMaaS release that
+like the other modes. The unread `definitions/index.json` is removed and the root index lists
+only `forms`: the review tags and the perception publication rules are read by their paths. Enable this revision in `versions.json` only after the CityMaaS release that
 ships the catalogue and the consent is deployed.
 
 The pilot check now expects the perception publication part every pilot lists and reads

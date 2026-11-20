@@ -112,8 +112,8 @@ an older reader ignores them and would load the pilot without its topic files.
 
 The list of pilots, with their names and initial languages, ships with the CityMaaS code
 (`Projects/SmartUrbanity/Configuration/pilots.json`); a pilot's language there must match
-`application.json`'s `settings.default_language`. The root index lists only the shared
-directories. Shared definitions and forms remain independent content. There is no external base, application manifest,
+`application.json`'s `settings.default_language`. The root index lists only the forms
+directory; the files in `definitions/` are read by their own paths. There is no external base, application manifest,
 per-pilot index or separate service-subtype copy.
 
 A pilot marked `"status": "draft"` in the CityMaaS pilot list is a draft: CityMaaS offers it only in
