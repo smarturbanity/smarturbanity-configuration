@@ -9,15 +9,15 @@ wording listed under the scale, the chosen one highlighted; `answer_scale_stars:
 true` draws them as stars instead. Wording, stored values and translations are
 unchanged except where listed below.
 
-- **Likert (88 occurrences):** ease and clarity (very difficult … very easy),
+- **Likert (87 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
   comfort, pleasantness, overall judgement, air, cleanliness, noise, heat and shade,
   place safety and security, street safety from traffic and from
-  crime or harassment, desired facilities (no … yes), community attachment,
+  crime or harassment, desired facilities (no … yes),
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (98 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (99 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
-  confidence, trip safety) and the descriptive ladders (infrastructure adequacy,
+  confidence, trip safety, community attachment) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
   crowding, visual quality, parking problem, difficulty of getting through a street).
 - **Stars (12, all Likert):** judgements of quality or value: `place_pleasantness`,
@@ -67,6 +67,11 @@ unchanged except where listed below.
   scales, `put_no_seats` now separates not needing a seat from finding one usually,
   sometimes not or often not, and `modes_supported` answers all, some or none, with
   its follow-up shown for some and none. No answers had been collected.
+- **Uneven Likert scales:** `community_attachment` asked how strong the bond is
+  but ran from “Not connected” to “Very connected”, so its ends did not mirror each
+  other. It now asks “How connected do you feel to the people in your
+  neighbourhood?” on five ordered points: not at all, slightly, moderately, very,
+  extremely. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a

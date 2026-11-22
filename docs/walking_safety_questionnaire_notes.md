@@ -730,3 +730,10 @@ harassment by day and in the evening use the five safety answers of the place
 report. The seat question on public transport separates need from availability,
 and the usability question on supported travel modes answers all, some or none.
 No answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 an ordered scale for the neighbourhood attachment
+question: a bond goes from none to very strong and has no negative side, so
+`community_attachment` now asks “How connected do you feel to the people in your
+neighbourhood?” with not at all, slightly, moderately, very and extremely (prefer
+not to say stays). Same versions as the rating-scales change; no answers had been
+collected; eight translations.
