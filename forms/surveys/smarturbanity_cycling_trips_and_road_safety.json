@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Cycling – Your trips and road safety",
     "questionnaire_id": "smarturbanity_cycling_trips_and_road_safety",
-    "questionnaire_version": "2.1.0",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -127,6 +127,7 @@
             "text": "How confident do you feel cycling in city traffic?",
             "answer_key": "bike_confidence",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "show_if": {
               "bike_weekly": [
@@ -153,14 +154,11 @@
               {
                 "text": "Very: I cycle in any traffic",
                 "value": "very_confident_i_cycle_in_all_conditions"
-              },
-              {
-                "text": "I never cycle in traffic",
-                "value": "i_have_never_cycled_in_urban_traffic"
               }
             ],
             "question_id": "bike_confidence",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "text": "Does cycling in your daily life help your health or your mood?",
@@ -430,6 +428,7 @@
             "help": "Think about how quickly you can react, for example when a car door opens suddenly.",
             "answer_key": "bike_hazard_confidence",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -454,7 +453,8 @@
               }
             ],
             "question_id": "bike_hazard_confidence",
-            "question_version": "3.1.0"
+            "question_version": "4.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -462,6 +462,7 @@
             "help": "Think of cycle lanes, cycle paths and their signs and markings.",
             "answer_key": "bike_infra_adequacy",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -486,7 +487,8 @@
               }
             ],
             "question_id": "bike_infra_adequacy",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -720,7 +722,6 @@
       "#In between": "In between",
       "#Fairly: I manage most situations": "Fairly: I manage most situations",
       "#Very: I cycle in any traffic": "Very: I cycle in any traffic",
-      "#I never cycle in traffic": "I never cycle in traffic",
       "#Does cycling in your daily life help your health or your mood?": "Does cycling in your daily life help your health or your mood?",
       "#Cycling – Your trips": "Cycling – Your trips",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "In the same trip, do you usually combine cycling with another way of travelling?",
@@ -850,7 +851,6 @@
       "#In between": "Via di mezzo",
       "#Fairly: I manage most situations": "Abbastanza: me la cavo nella maggior parte dei casi",
       "#Very: I cycle in any traffic": "Molto: vado in bici con qualsiasi traffico",
-      "#I never cycle in traffic": "Non vado mai in bici nel traffico",
       "#Does cycling in your daily life help your health or your mood?": "Andare in bici nella vita di tutti i giorni fa bene alla tua salute o al tuo umore?",
       "#Cycling – Your trips": "In bici – I tuoi spostamenti",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "Nello stesso spostamento, di solito oltre alla bici usi anche un altro modo di spostarti?",
@@ -980,7 +980,6 @@
       "#In between": "Entre les deux",
       "#Fairly: I manage most situations": "Assez : je me débrouille dans la plupart des situations",
       "#Very: I cycle in any traffic": "Très : je roule à vélo dans toute circulation",
-      "#I never cycle in traffic": "Je ne fais jamais de vélo dans la circulation",
       "#Does cycling in your daily life help your health or your mood?": "Faire du vélo au quotidien est-il bon pour votre santé ou votre moral ?",
       "#Cycling – Your trips": "Vélo – Vos trajets",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "Au cours d’un même trajet, combinez-vous généralement le vélo avec un autre mode de déplacement ?",
@@ -1110,7 +1109,6 @@
       "#In between": "Mittel",
       "#Fairly: I manage most situations": "Einigermaßen: Ich komme in den meisten Situationen zurecht",
       "#Very: I cycle in any traffic": "Sehr: Ich fahre in jedem Verkehr Rad",
-      "#I never cycle in traffic": "Ich fahre nie im Verkehr Rad",
       "#Does cycling in your daily life help your health or your mood?": "Hilft Ihnen das Radfahren im Alltag für Ihre Gesundheit oder Ihre Stimmung?",
       "#Cycling – Your trips": "Radfahren – Ihre Wege",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "Kombinieren Sie auf demselben Weg das Fahrrad meist mit einer anderen Art der Fortbewegung?",
@@ -1240,7 +1238,6 @@
       "#In between": "Orta",
       "#Fairly: I manage most situations": "Oldukça: Çoğu durumun üstesinden gelirim",
       "#Very: I cycle in any traffic": "Çok: Her trafikte bisiklet sürerim",
-      "#I never cycle in traffic": "Trafikte hiç bisiklet sürmem",
       "#Does cycling in your daily life help your health or your mood?": "Günlük hayatınızda bisiklet sürmek sağlığınıza veya ruh halinize yardımcı oluyor mu?",
       "#Cycling – Your trips": "Bisiklet – Yolculuklarınız",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "Aynı yolculukta bisikleti genellikle başka bir ulaşım şekliyle birleştiriyor musunuz?",
@@ -1370,7 +1367,6 @@
       "#In between": "متوسط",
       "#Fairly: I manage most situations": "نسبتاً: از پس بیشتر موقعیت‌ها برمی‌آیم",
       "#Very: I cycle in any traffic": "بسیار: در هر ترافیکی دوچرخه‌سواری می‌کنم",
-      "#I never cycle in traffic": "هرگز در ترافیک دوچرخه‌سواری نمی‌کنم",
       "#Does cycling in your daily life help your health or your mood?": "آیا دوچرخه‌سواری در زندگی روزمره به سلامت یا حال شما کمک می‌کند؟",
       "#Cycling – Your trips": "دوچرخه‌سواری – سفرهای شما",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "آیا معمولاً در یک سفر، دوچرخه‌سواری را با روش دیگری از رفت‌وآمد ترکیب می‌کنید؟",
@@ -1500,7 +1496,6 @@
       "#In between": "Valahol a kettő között",
       "#Fairly: I manage most situations": "Eléggé: a legtöbb helyzettel megbirkózom",
       "#Very: I cycle in any traffic": "Nagyon: bármilyen forgalomban biciklizem",
-      "#I never cycle in traffic": "Soha nem biciklizem a forgalomban",
       "#Does cycling in your daily life help your health or your mood?": "A mindennapi kerékpározás segít az egészségének vagy a hangulatának?",
       "#Cycling – Your trips": "Kerékpározás – Az Ön útjai",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "Ugyanazon az úton a kerékpározást általában más közlekedési móddal kombinálja?",
@@ -1630,7 +1625,6 @@
       "#In between": "بين بين",
       "#Fairly: I manage most situations": "إلى حد كبير: أتعامل مع معظم المواقف",
       "#Very: I cycle in any traffic": "كثيرًا: أركب الدراجة في أي حركة مرور",
-      "#I never cycle in traffic": "لا أركب الدراجة وسط حركة المرور أبدًا",
       "#Does cycling in your daily life help your health or your mood?": "هل يفيد ركوب الدراجة في حياتك اليومية صحتك أو مزاجك؟",
       "#Cycling – Your trips": "ركوب الدراجة – رحلاتك",
       "#In the same trip, do you usually combine cycling with another way of travelling?": "هل تجمع عادةً بين ركوب الدراجة ووسيلة تنقل أخرى في الرحلة نفسها؟",

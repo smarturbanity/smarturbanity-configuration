@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Segment Assessment",
     "questionnaire_id": "street_segment_assessment",
-    "questionnaire_version": "5.2.0",
+    "questionnaire_version": "6.0.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
     "image_alt": "#Street section with a magnifying glass",
@@ -1022,6 +1022,7 @@
             "text": "How often do other vehicles or people occupy the cycling space?",
             "answer_key": "bike_intrusion_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_intrusion_users": [
@@ -1061,9 +1062,10 @@
             ],
             "required": true,
             "question_id": "bike_intrusion_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1076,6 +1078,7 @@
             "text": "How fast does motor traffic feel on this street?",
             "answer_key": "traffic_speed_feeling",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit"
             },
@@ -1101,17 +1104,14 @@
               {
                 "text": "Very fast",
                 "value": "5_very_fast"
-              },
-              {
-                "text": "No vehicles pass here",
-                "value": "no_vehicles"
               }
             ],
             "required": true,
             "question_id": "traffic_speed_feeling",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What makes things difficult with traffic here?",
@@ -1181,6 +1181,7 @@
             "text": "How steep is the climb on this stretch?",
             "answer_key": "segment_slope",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "checks_inline": false,
             "options": [
               {
@@ -1206,7 +1207,7 @@
             "add_i_dont_know": true,
             "required": true,
             "question_id": "segment_slope",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           }
@@ -1288,6 +1289,7 @@
             "text": "How often do surface problems slow you down or make you change path while walking?",
             "answer_key": "pedestrian_surface_problem_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "walking_surface_problems": [
@@ -1333,9 +1335,10 @@
             ],
             "required": true,
             "question_id": "pedestrian_surface_problem_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What obstacles reduce the walking space?",
@@ -1411,6 +1414,7 @@
             "text": "How often do obstacles block or reduce your space while walking?",
             "answer_key": "pedestrian_obstacle_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "walking_obstacles": [
@@ -1457,14 +1461,16 @@
             ],
             "required": true,
             "question_id": "pedestrian_obstacle_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "How often does this segment feel too crowded?",
             "answer_key": "crowding_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1497,7 +1503,7 @@
             ],
             "required": true,
             "question_id": "crowding_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1505,6 +1511,7 @@
             "text": "How often do motor vehicles pass too close while you are walking?",
             "answer_key": "pedestrian_close_passing_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1537,9 +1544,10 @@
             ],
             "required": true,
             "question_id": "pedestrian_close_passing_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1614,6 +1622,7 @@
             "text": "How often do surface problems slow you down or make you change path on a bicycle or e-scooter?",
             "answer_key": "cyclist_surface_problem_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_surface_problems": [
@@ -1658,9 +1667,10 @@
             ],
             "required": true,
             "question_id": "cyclist_surface_problem_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What obstacles make it difficult to ride a bicycle or e-scooter here?",
@@ -1736,6 +1746,7 @@
             "text": "How often do obstacles block or reduce your space on a bicycle or e-scooter?",
             "answer_key": "cyclist_obstacle_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_obstacles": [
@@ -1782,14 +1793,16 @@
             ],
             "required": true,
             "question_id": "cyclist_obstacle_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "How often do motor vehicles pass too close while you ride a bicycle or e-scooter?",
             "answer_key": "cyclist_close_passing_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1822,9 +1835,10 @@
             ],
             "required": true,
             "question_id": "cyclist_close_passing_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1838,6 +1852,7 @@
             "help": "A continuous walking space is a sidewalk or path without gaps along the whole stretch.",
             "answer_key": "desired_walking_path",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "walk_facility": [
@@ -1874,7 +1889,7 @@
             ],
             "required": true,
             "question_id": "desired_walking_path",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1883,6 +1898,7 @@
             "help": "A continuous cycle lane or path runs along the whole stretch without gaps.",
             "answer_key": "desired_bike_facility",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_facility": [
@@ -1918,7 +1934,7 @@
             ],
             "required": true,
             "question_id": "desired_bike_facility",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1926,6 +1942,7 @@
             "text": "How urgent is it to improve this street segment?",
             "answer_key": "segment_improvement_importance",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
@@ -1955,7 +1972,7 @@
             },
             "required": true,
             "question_id": "segment_improvement_importance",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -2209,7 +2226,6 @@
       "#Moderate": "Moderate",
       "#Fast": "Fast",
       "#Very fast": "Very fast",
-      "#No vehicles pass here": "No vehicles pass here",
       "#What makes things difficult with traffic here?": "What makes things difficult with traffic here?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.",
       "#Poor visibility": "Poor visibility",
@@ -2475,7 +2491,6 @@
       "#Moderate": "Moderato",
       "#Fast": "Veloce",
       "#Very fast": "Molto veloce",
-      "#No vehicles pass here": "Qui non passano veicoli",
       "#What makes things difficult with traffic here?": "Cosa ti mette in difficoltà con il traffico qui?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Per accessi laterali si intendono passi carrabili, ingressi di garage o vie laterali da cui i veicoli entrano o escono dalla strada.",
       "#Poor visibility": "Scarsa visibilità",
@@ -2741,7 +2756,6 @@
       "#Moderate": "Modérée",
       "#Fast": "Rapide",
       "#Very fast": "Très rapide",
-      "#No vehicles pass here": "Aucun véhicule ne passe ici",
       "#What makes things difficult with traffic here?": "Qu'est-ce qui vous met en difficulté avec la circulation ici ?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Les accès latéraux désignent les entrées charretières, entrées de garage ou rues latérales par lesquelles les véhicules entrent dans la rue ou en sortent.",
       "#Poor visibility": "Mauvaise visibilité",
@@ -3007,7 +3021,6 @@
       "#Moderate": "Mittel",
       "#Fast": "Schnell",
       "#Very fast": "Sehr schnell",
-      "#No vehicles pass here": "Hier fahren keine Fahrzeuge",
       "#What makes things difficult with traffic here?": "Was macht Ihnen hier den Umgang mit dem Verkehr schwer?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Seitliche Zufahrten sind Einfahrten, Garagenzufahrten oder Seitenstraßen, über die Fahrzeuge in die Straße ein- oder aus ihr ausfahren.",
       "#Poor visibility": "Schlechte Sicht",
@@ -3273,7 +3286,6 @@
       "#Moderate": "Orta",
       "#Fast": "Hızlı",
       "#Very fast": "Çok hızlı",
-      "#No vehicles pass here": "Buradan araç geçmiyor",
       "#What makes things difficult with traffic here?": "Burada trafikle ilgili sizi ne zorluyor?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Yan girişler, araçların sokağa girip çıktığı araç girişleri, garaj girişleri veya yan sokaklardır.",
       "#Poor visibility": "Yetersiz görüş",
@@ -3539,7 +3551,6 @@
       "#Moderate": "متوسط",
       "#Fast": "تند",
       "#Very fast": "بسیار تند",
-      "#No vehicles pass here": "از اینجا هیچ وسیله نقلیه‌ای عبور نمی‌کند",
       "#What makes things difficult with traffic here?": "در اینجا چه چیزی کنار آمدن با ترافیک را برایتان دشوار می‌کند؟",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "دسترسی‌های جانبی یعنی ورودی‌های خودرو، ورودی پارکینگ‌ها یا کوچه‌های فرعی که خودروها از آن‌ها وارد خیابان یا از آن خارج می‌شوند.",
       "#Poor visibility": "دید ضعیف",
@@ -3805,7 +3816,6 @@
       "#Moderate": "Közepes",
       "#Fast": "Gyors",
       "#Very fast": "Nagyon gyors",
-      "#No vehicles pass here": "Itt nem járnak járművek",
       "#What makes things difficult with traffic here?": "Mi nehezíti meg itt a forgalommal való boldogulást?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Oldalsó behajtók alatt kapubejárókat, garázsbejáratokat vagy mellékutcákat értünk, ahol a járművek be- vagy kihajtanak az utcából.",
       "#Poor visibility": "Rossz beláthatóság",
@@ -4071,7 +4081,6 @@
       "#Moderate": "متوسطة",
       "#Fast": "سريعة",
       "#Very fast": "سريعة جدًا",
-      "#No vehicles pass here": "لا تمر مركبات من هنا",
       "#What makes things difficult with traffic here?": "ما الذي يصعّب عليك التعامل مع حركة المرور هنا؟",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "المداخل الجانبية هي مداخل السيارات أو مداخل المرائب أو الشوارع الفرعية التي تدخل منها المركبات إلى الشارع أو تخرج منه.",
       "#Poor visibility": "رؤية ضعيفة",

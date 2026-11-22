@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - E-scooter – Trip experience and effort",
     "questionnaire_id": "smarturbanity_e_scooter_experience_and_effort",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -30,6 +30,7 @@
             "text": "When you ride an e-scooter, how much does traffic noise bother or annoy you?",
             "answer_key": "escooter_noise_bother",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -54,7 +55,8 @@
               }
             ],
             "question_id": "escooter_noise_bother",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -193,6 +195,7 @@
             "text": "When you ride an e-scooter, how stressed or relaxed do you usually feel?",
             "answer_key": "escooter_emotional_state",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -217,14 +220,16 @@
               }
             ],
             "question_id": "escooter_emotional_state",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you ride an e-scooter, how often do you feel anxious or overwhelmed?",
             "answer_key": "escooter_anxiety_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -249,8 +254,9 @@
               }
             ],
             "question_id": "escooter_anxiety_frequency",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
@@ -362,6 +368,7 @@
             "text": "When you ride an e-scooter, how tired do you usually feel when you arrive?",
             "answer_key": "escooter_tiredness",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -386,8 +393,9 @@
               }
             ],
             "question_id": "escooter_tiredness",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -438,6 +446,7 @@
             "help": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
             "answer_key": "escooter_effort_vs_alternatives",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "options": [
@@ -460,21 +469,19 @@
               {
                 "text": "Much more demanding",
                 "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I have no other way to travel",
-                "value": "no_alternative"
               }
             ],
             "question_id": "escooter_effort_vs_alternatives",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you ride an e-scooter, how often do you arrive in the time you planned?",
             "answer_key": "escooter_time_vs_expected",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -499,14 +506,16 @@
               }
             ],
             "question_id": "escooter_time_vs_expected",
-            "question_version": "2.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "3.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you ride an e-scooter, how satisfied are you overall?",
             "answer_key": "escooter_satisfaction",
             "question_type": "single_option",
+            "answer_scale": "rating",
             "required": true,
             "options": [
               {
@@ -531,8 +540,9 @@
               }
             ],
             "question_id": "escooter_satisfaction",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -675,7 +685,6 @@
       "#About the same": "About the same",
       "#A bit more demanding": "A bit more demanding",
       "#Much more demanding": "Much more demanding",
-      "#I have no other way to travel": "I have no other way to travel",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "When you ride an e-scooter, how often do you arrive in the time you planned?",
       "#When you ride an e-scooter, how satisfied are you overall?": "When you ride an e-scooter, how satisfied are you overall?",
       "#Very dissatisfied": "Very dissatisfied",
@@ -785,7 +794,6 @@
       "#About the same": "Più o meno uguale",
       "#A bit more demanding": "Un po' più impegnativo",
       "#Much more demanding": "Molto più impegnativo",
-      "#I have no other way to travel": "Non ho altri modi per spostarmi",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Quando vai in monopattino elettrico, quanto spesso arrivi nel tempo che avevi previsto?",
       "#When you ride an e-scooter, how satisfied are you overall?": "Quando vai in monopattino elettrico, qual è nel complesso il tuo livello di soddisfazione?",
       "#Very dissatisfied": "Molto basso",
@@ -895,7 +903,6 @@
       "#About the same": "À peu près pareil",
       "#A bit more demanding": "Un peu plus exigeant",
       "#Much more demanding": "Beaucoup plus exigeant",
-      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Lorsque vous roulez en trottinette électrique, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
       "#When you ride an e-scooter, how satisfied are you overall?": "Lorsque vous roulez en trottinette électrique, quel est votre niveau de satisfaction global ?",
       "#Very dissatisfied": "Très faible",
@@ -1005,7 +1012,6 @@
       "#About the same": "Ungefähr gleich",
       "#A bit more demanding": "Etwas anstrengender",
       "#Much more demanding": "Viel anstrengender",
-      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem E-Scooter in der Zeit an, die Sie eingeplant haben?",
       "#When you ride an e-scooter, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt, wenn Sie E-Scooter fahren?",
       "#Very dissatisfied": "Sehr unzufrieden",
@@ -1115,7 +1121,6 @@
       "#About the same": "Yaklaşık aynı",
       "#A bit more demanding": "Biraz daha zorlayıcı",
       "#Much more demanding": "Çok daha zorlayıcı",
-      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Elektrikli scooter kullanırken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
       "#When you ride an e-scooter, how satisfied are you overall?": "Elektrikli scooter kullanırken genel olarak ne kadar memnunsunuz?",
       "#Very dissatisfied": "Hiç memnun değilim",
@@ -1225,7 +1230,6 @@
       "#About the same": "تقریباً یکسان",
       "#A bit more demanding": "کمی سخت‌تر",
       "#Much more demanding": "خیلی سخت‌تر",
-      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "هنگام استفاده از اسکوتر برقی، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
       "#When you ride an e-scooter, how satisfied are you overall?": "هنگام استفاده از اسکوتر برقی، در کل چقدر راضی هستید؟",
       "#Very dissatisfied": "بسیار ناراضی",
@@ -1335,7 +1339,6 @@
       "#About the same": "Nagyjából ugyanolyan",
       "#A bit more demanding": "Kicsit megterhelőbb",
       "#Much more demanding": "Sokkal megterhelőbb",
-      "#I have no other way to travel": "Nincs más módom az utazásra",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "Ha elektromos rollerrel közlekedik, milyen gyakran ér célba a tervezett idő alatt?",
       "#When you ride an e-scooter, how satisfied are you overall?": "Összességében mennyire elégedett, amikor elektromos rollerrel közlekedik?",
       "#Very dissatisfied": "Nagyon elégedetlen",
@@ -1445,7 +1448,6 @@
       "#About the same": "بالقدر نفسه تقريبًا",
       "#A bit more demanding": "أصعب قليلًا",
       "#Much more demanding": "أصعب بكثير",
-      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
       "#When you ride an e-scooter, how often do you arrive in the time you planned?": "عند ركوب السكوتر الكهربائي، كم مرة يكون وصولك في الوقت الذي خططت له؟",
       "#When you ride an e-scooter, how satisfied are you overall?": "عند ركوب السكوتر الكهربائي، ما مدى رضاك بوجه عام؟",
       "#Very dissatisfied": "عدم رضا شديد",

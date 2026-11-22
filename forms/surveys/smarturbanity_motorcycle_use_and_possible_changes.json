@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Motorcycle and scooter – Use and possible changes",
     "questionnaire_id": "smarturbanity_motorcycle_use_and_possible_changes",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -512,6 +512,7 @@
             "text": "If riding cost more (fuel, parking, tolls), would you use your motorcycle or scooter less?",
             "answer_key": "motorcycle_cost_sensitivity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -533,14 +534,11 @@
               {
                 "text": "I'd stop using it for most trips",
                 "value": "would_stop_using_car_for_most_trips"
-              },
-              {
-                "text": "Not for me: I don't pay these costs",
-                "value": "not_paying"
               }
             ],
             "question_id": "motorcycle_cost_sensitivity",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -663,7 +661,6 @@
       "#Somewhat less": "Somewhat less",
       "#Much less": "Much less",
       "#I'd stop using it for most trips": "I'd stop using it for most trips",
-      "#Not for me: I don't pay these costs": "Not for me: I don't pay these costs",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Do you think about pollution from vehicles when you choose how to travel?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Pollution means exhaust fumes and gases that harm the air and the climate.",
       "#No, it doesn't affect my choices": "No, it doesn't affect my choices",
@@ -764,7 +761,6 @@
       "#Somewhat less": "Abbastanza meno",
       "#Much less": "Molto meno",
       "#I'd stop using it for most trips": "Smetterei di usarla per la maggior parte degli spostamenti",
-      "#Not for me: I don't pay these costs": "Non mi riguarda: non pago questi costi",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Quando scegli come spostarti, pensi all'inquinamento dei veicoli?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Per inquinamento si intendono i fumi di scarico e i gas che fanno male all'aria e al clima.",
       "#No, it doesn't affect my choices": "No, non influisce sulle mie scelte",
@@ -865,7 +861,6 @@
       "#Somewhat less": "Assez moins",
       "#Much less": "Beaucoup moins",
       "#I'd stop using it for most trips": "Je cesserais de l'utiliser pour la plupart des trajets",
-      "#Not for me: I don't pay these costs": "Cela ne me concerne pas : je ne paie pas ces frais",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Pensez-vous à la pollution des véhicules quand vous choisissez comment vous déplacer ?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Par pollution, on entend les gaz d'échappement qui nuisent à l'air et au climat.",
       "#No, it doesn't affect my choices": "Non, cela n'influence pas mes choix",
@@ -966,7 +961,6 @@
       "#Somewhat less": "Deutlich weniger",
       "#Much less": "Viel weniger",
       "#I'd stop using it for most trips": "Ich würde es für die meisten Wege nicht mehr nutzen",
-      "#Not for me: I don't pay these costs": "Trifft auf mich nicht zu: Ich zahle diese Kosten nicht",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Denken Sie an die Luftverschmutzung durch Fahrzeuge, wenn Sie entscheiden, wie Sie unterwegs sind?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Gemeint sind Abgase, die der Luft und dem Klima schaden.",
       "#No, it doesn't affect my choices": "Nein, es beeinflusst meine Entscheidungen nicht",
@@ -1067,7 +1061,6 @@
       "#Somewhat less": "Epey daha az",
       "#Much less": "Çok daha az",
       "#I'd stop using it for most trips": "Yolculuklarımın çoğunda kullanmayı bırakırdım",
-      "#Not for me: I don't pay these costs": "Bu soru benim için geçerli değil: Bu masrafları ben ödemiyorum",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Nasıl yolculuk edeceğinize karar verirken araçların neden olduğu kirliliği düşünüyor musunuz?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "Kirlilik, havaya ve iklime zarar veren egzoz dumanları ve gazlar demektir.",
       "#No, it doesn't affect my choices": "Hayır, seçimlerimi etkilemez",
@@ -1168,7 +1161,6 @@
       "#Somewhat less": "تا حدی کمتر",
       "#Much less": "خیلی کمتر",
       "#I'd stop using it for most trips": "برای بیشتر سفرها استفاده از آن را متوقف می‌کردم",
-      "#Not for me: I don't pay these costs": "مربوط به من نیست: این هزینه‌ها را نمی‌پردازم",
       "#Do you think about pollution from vehicles when you choose how to travel?": "وقتی شیوه سفر را انتخاب می‌کنید، به آلودگی ناشی از وسایل نقلیه فکر می‌کنید؟",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "آلودگی یعنی دود و گازهای اگزوز که به هوا و اقلیم آسیب می‌زنند.",
       "#No, it doesn't affect my choices": "نه، بر انتخاب‌های من تأثیری ندارد",
@@ -1269,7 +1261,6 @@
       "#Somewhat less": "Valamivel kevesebbet",
       "#Much less": "Sokkal kevesebbet",
       "#I'd stop using it for most trips": "A legtöbb úthoz nem használnám tovább",
-      "#Not for me: I don't pay these costs": "Rám nem vonatkozik: ezeket a költségeket nem én fizetem",
       "#Do you think about pollution from vehicles when you choose how to travel?": "Gondol a járművek okozta szennyezésre, amikor kiválasztja, hogyan utazik?",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "A szennyezés a kipufogógázokat és más gázokat jelenti, amelyek ártanak a levegőnek és az éghajlatnak.",
       "#No, it doesn't affect my choices": "Nem, nincs hatással a döntéseimre",
@@ -1370,7 +1361,6 @@
       "#Somewhat less": "أقل إلى حد ما",
       "#Much less": "أقل بكثير",
       "#I'd stop using it for most trips": "سأتوقف عن استخدامها في معظم الرحلات",
-      "#Not for me: I don't pay these costs": "لا ينطبق عليّ: لا أدفع هذه التكاليف",
       "#Do you think about pollution from vehicles when you choose how to travel?": "هل تفكر في التلوث الناتج عن المركبات عند اختيار طريقة تنقلك؟",
       "#Pollution means exhaust fumes and gases that harm the air and the climate.": "التلوث يعني عوادم المركبات والغازات التي تضر بالهواء والمناخ.",
       "#No, it doesn't affect my choices": "لا، لا يؤثر في اختياراتي",

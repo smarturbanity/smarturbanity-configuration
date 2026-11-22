@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Public transport – Your trips and improvements",
     "questionnaire_id": "smarturbanity_public_transport_trips_and_improvements",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -92,6 +92,7 @@
             "help": "Think of steps, ramps and space to wait, get on and get off.",
             "answer_key": "put_stop_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "show_if": {
@@ -120,7 +121,8 @@
               }
             ],
             "question_id": "put_stop_ease",
-            "question_version": "1.3.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
@@ -162,6 +164,7 @@
             "text": "How comfortable are you using apps to buy or validate bus, tram or metro tickets?",
             "answer_key": "app_pt_tickets",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "show_if": {
               "put_weekly": "yes"
@@ -186,15 +189,12 @@
               {
                 "text": "Very comfortable",
                 "value": "very_comfortable"
-              },
-              {
-                "text": "I don't use them",
-                "value": "not_used"
               }
             ],
             "question_id": "app_put_tickets",
-            "question_version": "1.2.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "In the same trip, do you usually combine public transport with another way of travelling?",
@@ -652,7 +652,6 @@
       "#Neither comfortable nor uncomfortable": "Neither comfortable nor uncomfortable",
       "#Somewhat comfortable": "Somewhat comfortable",
       "#Very comfortable": "Very comfortable",
-      "#I don't use them": "I don't use them",
       "#Why do you rarely use public transport? (Select all that apply)": "Why do you rarely use public transport? (Select all that apply)",
       "#It is too slow or doesn't go where I need to go": "It is too slow or doesn't go where I need to go",
       "#It is unreliable or runs too rarely": "It is unreliable or runs too rarely",
@@ -758,7 +757,6 @@
       "#Neither comfortable nor uncomfortable": "Né a mio agio né a disagio",
       "#Somewhat comfortable": "Abbastanza a mio agio",
       "#Very comfortable": "Molto a mio agio",
-      "#I don't use them": "Non le uso",
       "#Why do you rarely use public transport? (Select all that apply)": "Perché usi poco i mezzi pubblici? (Seleziona tutte le opzioni applicabili)",
       "#It is too slow or doesn't go where I need to go": "Sono troppo lenti o non vanno dove mi serve",
       "#It is unreliable or runs too rarely": "Sono inaffidabili o passano troppo di rado",
@@ -864,7 +862,6 @@
       "#Neither comfortable nor uncomfortable": "Ni à l’aise ni mal à l’aise",
       "#Somewhat comfortable": "Plutôt à l’aise",
       "#Very comfortable": "Très à l’aise",
-      "#I don't use them": "Je ne les utilise pas",
       "#Why do you rarely use public transport? (Select all that apply)": "Pourquoi utilisez-vous rarement les transports en commun ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#It is too slow or doesn't go where I need to go": "Ils sont trop lents ou ne vont pas là où je dois aller",
       "#It is unreliable or runs too rarely": "Ils sont peu fiables ou trop peu fréquents",
@@ -970,7 +967,6 @@
       "#Neither comfortable nor uncomfortable": "Weder wohl noch unwohl",
       "#Somewhat comfortable": "Eher wohl",
       "#Very comfortable": "Sehr wohl",
-      "#I don't use them": "Ich nutze sie nicht",
       "#Why do you rarely use public transport? (Select all that apply)": "Warum nutzen Sie selten öffentliche Verkehrsmittel? (Wählen Sie alles Zutreffende aus)",
       "#It is too slow or doesn't go where I need to go": "Sie sind zu langsam oder fahren nicht dorthin, wo ich hinmuss",
       "#It is unreliable or runs too rarely": "Sie sind unzuverlässig oder fahren zu selten",
@@ -1076,7 +1072,6 @@
       "#Neither comfortable nor uncomfortable": "Ne rahat ne rahatsız",
       "#Somewhat comfortable": "Oldukça rahat",
       "#Very comfortable": "Çok rahat",
-      "#I don't use them": "Kullanmıyorum",
       "#Why do you rarely use public transport? (Select all that apply)": "Neden nadiren toplu taşıma kullanıyorsunuz? (Uygun olanların tümünü seçin)",
       "#It is too slow or doesn't go where I need to go": "Çok yavaş veya gitmem gereken yere gitmiyor",
       "#It is unreliable or runs too rarely": "Güvenilmez veya çok seyrek geliyor",
@@ -1182,7 +1177,6 @@
       "#Neither comfortable nor uncomfortable": "نه راحت و نه ناراحت",
       "#Somewhat comfortable": "تا حدی راحت",
       "#Very comfortable": "بسیار راحت",
-      "#I don't use them": "از آن‌ها استفاده نمی‌کنم",
       "#Why do you rarely use public transport? (Select all that apply)": "چرا به‌ندرت از حمل‌ونقل عمومی استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#It is too slow or doesn't go where I need to go": "خیلی کند است یا به جاهایی که باید بروم نمی‌رود",
       "#It is unreliable or runs too rarely": "قابل‌اعتماد نیست یا دیر به دیر می‌آید",
@@ -1288,7 +1282,6 @@
       "#Neither comfortable nor uncomfortable": "Sem kényelmesen, sem kényelmetlenül",
       "#Somewhat comfortable": "Elég kényelmesen",
       "#Very comfortable": "Nagyon kényelmesen",
-      "#I don't use them": "Nem használom őket",
       "#Why do you rarely use public transport? (Select all that apply)": "Miért használja ritkán a tömegközlekedést? (Jelölje meg az összes megfelelőt)",
       "#It is too slow or doesn't go where I need to go": "Túl lassú, vagy nem oda megy, ahová nekem mennem kell",
       "#It is unreliable or runs too rarely": "Megbízhatatlan, vagy túl ritkán jár",
@@ -1394,7 +1387,6 @@
       "#Neither comfortable nor uncomfortable": "لا ارتياح ولا عدم ارتياح",
       "#Somewhat comfortable": "ارتياح إلى حد ما",
       "#Very comfortable": "ارتياح كبير",
-      "#I don't use them": "لا أستخدمها",
       "#Why do you rarely use public transport? (Select all that apply)": "لماذا نادرًا ما تستخدم النقل العام؟ (يمكن اختيار كل ما ينطبق)",
       "#It is too slow or doesn't go where I need to go": "بطيء جدًا أو لا يذهب إلى حيث أحتاج",
       "#It is unreliable or runs too rarely": "غير موثوق أو قليل الرحلات",

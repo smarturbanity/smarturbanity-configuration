@@ -9,7 +9,7 @@ const revisionFile = process.argv[2];
 assert.ok(revisionFile, 'Pass the actual QuestionnaireRevision.js consumer');
 const context = vm.createContext({});
 vm.runInContext(fs.readFileSync(revisionFile, 'utf8'), context);
-const shared = new Set(['#Other', '#None of these', "#I don't know", '#Prefer not to say']);
+const shared = new Set(['#Other', '#None of these', "#I don't know", '#Prefer not to say', '#Not applicable']);
 let questionnaires = 0;
 for (const name of fs.readdirSync(path.join(root, 'forms/surveys'), {recursive: true}).filter(file => file.endsWith('.json'))) {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'forms/surveys', name), 'utf8'));

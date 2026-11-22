@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - E-scooter – Your trips, comfort and improvements",
     "questionnaire_id": "smarturbanity_e_scooter_trips_comfort_and_improvements",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -115,6 +115,7 @@
             "text": "How confident do you feel riding an e-scooter in city traffic?",
             "answer_key": "escooter_confidence",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "show_if": {
               "escooter_weekly": [
@@ -141,14 +142,11 @@
               {
                 "text": "Very: I ride in any traffic",
                 "value": "very_confident_i_cycle_in_all_conditions"
-              },
-              {
-                "text": "I never ride in traffic",
-                "value": "i_have_never_cycled_in_urban_traffic"
               }
             ],
             "question_id": "escooter_confidence",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "text": "In the same trip, do you usually combine the e-scooter with another way of travelling?",
@@ -455,6 +453,7 @@
             "help": "For your own e-scooter, a place where you can lock it safely; for a shared one, an area where parking is allowed.",
             "answer_key": "escooter_parking_destination",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -479,13 +478,15 @@
               }
             ],
             "question_id": "escooter_parking_destination",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
             "text": "Has the lack of a good place to leave an e-scooter ever made you change plans or not use it?",
             "answer_key": "escooter_parking_changed_plans",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -510,7 +511,8 @@
               }
             ],
             "question_id": "escooter_parking_changed_plans",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           }
         ],
         "show_if": {
@@ -623,7 +625,6 @@
       "#In between": "In between",
       "#Fairly: I manage most situations": "Fairly: I manage most situations",
       "#Very: I ride in any traffic": "Very: I ride in any traffic",
-      "#I never ride in traffic": "I never ride in traffic",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "In the same trip, do you usually combine the e-scooter with another way of travelling?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
@@ -734,7 +735,6 @@
       "#In between": "Via di mezzo",
       "#Fairly: I manage most situations": "Abbastanza: me la cavo nella maggior parte dei casi",
       "#Very: I ride in any traffic": "Molta: vado con qualsiasi traffico",
-      "#I never ride in traffic": "Non vado mai nel traffico",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Nello stesso spostamento, di solito oltre al monopattino usi anche un altro modo di spostarti?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Per esempio monopattino e treno, oppure monopattino e metro. Un breve tratto a piedi fino alla fermata o al veicolo parcheggiato non conta.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quali altri modi di spostarti usi nello stesso spostamento? (Seleziona tutte le opzioni applicabili)",
@@ -845,7 +845,6 @@
       "#In between": "Entre les deux",
       "#Fairly: I manage most situations": "Assez : je me débrouille dans la plupart des situations",
       "#Very: I ride in any traffic": "Beaucoup : je roule dans toute circulation",
-      "#I never ride in traffic": "Je ne roule jamais dans la circulation",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Au cours d’un même trajet, combinez-vous généralement la trottinette électrique avec un autre mode de déplacement ?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Par exemple trottinette électrique et train, ou trottinette électrique et métro. Une courte marche jusqu’à un arrêt ou à un véhicule garé ne compte pas.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quels autres modes de déplacement utilisez-vous au cours du même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
@@ -956,7 +955,6 @@
       "#In between": "Mittel",
       "#Fairly: I manage most situations": "Einigermaßen: Ich komme in den meisten Situationen zurecht",
       "#Very: I ride in any traffic": "Sehr: Ich fahre in jedem Verkehr",
-      "#I never ride in traffic": "Ich fahre nie im Verkehr",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Kombinieren Sie auf demselben Weg den E-Scooter meist mit einer anderen Art der Fortbewegung?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Zum Beispiel E-Scooter und Zug oder E-Scooter und U-Bahn. Ein kurzer Fußweg zur Haltestelle oder zum geparkten Fahrzeug zählt nicht.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Welche anderen Verkehrsmittel nutzen Sie auf demselben Weg? (Wählen Sie alles Zutreffende aus)",
@@ -1067,7 +1065,6 @@
       "#In between": "Orta",
       "#Fairly: I manage most situations": "Oldukça: Çoğu durumun üstesinden gelirim",
       "#Very: I ride in any traffic": "Çok: Her trafikte scooter kullanırım",
-      "#I never ride in traffic": "Trafikte hiç scooter kullanmam",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Aynı yolculukta elektrikli scooter'ı genellikle başka bir ulaşım şekliyle birleştiriyor musunuz?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Örneğin elektrikli scooter ve tren ya da elektrikli scooter ve metro. Durağa veya park edilmiş araca kısa bir yürüyüş sayılmaz.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Aynı yolculukta başka hangi ulaşım şekillerini kullanıyorsunuz? (Uygun olanların tümünü seçin)",
@@ -1178,7 +1175,6 @@
       "#In between": "متوسط",
       "#Fairly: I manage most situations": "نسبتاً: از پس بیشتر موقعیت‌ها برمی‌آیم",
       "#Very: I ride in any traffic": "بسیار: در هر ترافیکی اسکوترسوار می‌شوم",
-      "#I never ride in traffic": "هرگز در ترافیک اسکوترسوار نمی‌شوم",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "آیا معمولاً در یک سفر، اسکوتر برقی را با روش دیگری از رفت‌وآمد ترکیب می‌کنید؟",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلاً اسکوتر برقی و قطار، یا اسکوتر برقی و مترو. پیاده‌روی کوتاه تا ایستگاه یا تا وسیلهٔ پارک‌شده حساب نمی‌شود.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "در همان سفر از کدام روش‌های دیگر رفت‌وآمد استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
@@ -1289,7 +1285,6 @@
       "#In between": "Valahol a kettő között",
       "#Fairly: I manage most situations": "Eléggé: a legtöbb helyzettel megbirkózom",
       "#Very: I ride in any traffic": "Nagyon: bármilyen forgalomban rollerezem",
-      "#I never ride in traffic": "Soha nem rollerezem a forgalomban",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "Ugyanazon az úton az elektromos rollert általában más közlekedési móddal kombinálja?",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "Például elektromos roller és vonat, vagy elektromos roller és metró. A megállóig vagy a parkoló járműig tartó rövid gyaloglás nem számít.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Milyen más közlekedési módokat használ ugyanazon az úton? (Jelölje meg az összes megfelelőt)",
@@ -1400,7 +1395,6 @@
       "#In between": "بين بين",
       "#Fairly: I manage most situations": "إلى حد كبير: أتعامل مع معظم المواقف",
       "#Very: I ride in any traffic": "كثيرًا: أركب السكوتر في أي حركة مرور",
-      "#I never ride in traffic": "لا أركب السكوتر وسط حركة المرور أبدًا",
       "#In the same trip, do you usually combine the e-scooter with another way of travelling?": "هل تجمع عادةً بين السكوتر الكهربائي ووسيلة تنقل أخرى في الرحلة نفسها؟",
       "#For example e-scooter and train, or e-scooter and metro. A short walk to a stop or to a parked vehicle does not count.": "مثلًا السكوتر الكهربائي والقطار، أو السكوتر الكهربائي والمترو. لا يُحتسب المشي القصير إلى المحطة أو إلى مركبة متوقفة.",
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "ما وسائل التنقل الأخرى المستخدمة في الرحلة نفسها؟ (يمكن اختيار كل ما ينطبق)",

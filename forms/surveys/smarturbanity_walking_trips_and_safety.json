@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Your trips and safety",
     "questionnaire_id": "smarturbanity_walking_trips_and_safety",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -181,6 +181,7 @@
             "help": "Think of strength, stamina and general health.",
             "answer_key": "walk_fitness",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -205,14 +206,15 @@
               }
             ],
             "question_id": "walk_fitness",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
                 "yes"
               ]
             },
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "In the same trip, do you usually combine walking with another way of travelling?",

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Motorcycle and scooter – Trip experience and surroundings",
     "questionnaire_id": "smarturbanity_motorcycle_trip_experience_and_surroundings",
-    "questionnaire_version": "1.1.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -30,6 +30,7 @@
             "text": "When you ride a motorcycle or scooter, how much does traffic noise bother or annoy you?",
             "answer_key": "motorcycle_noise_bother",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -54,7 +55,8 @@
               }
             ],
             "question_id": "motorcycle_noise_bother",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -193,6 +195,7 @@
             "text": "When you ride a motorcycle or scooter, how stressed or relaxed do you usually feel?",
             "answer_key": "motorcycle_emotional_state",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -217,14 +220,16 @@
               }
             ],
             "question_id": "motorcycle_emotional_state",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you ride a motorcycle or scooter, how often do you feel anxious or overwhelmed?",
             "answer_key": "motorcycle_anxiety_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -249,8 +254,9 @@
               }
             ],
             "question_id": "motorcycle_anxiety_frequency",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
@@ -362,6 +368,7 @@
             "text": "When you ride a motorcycle or scooter, how tired do you usually feel when you arrive?",
             "answer_key": "motorcycle_tiredness",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -386,8 +393,9 @@
               }
             ],
             "question_id": "motorcycle_tiredness",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -434,6 +442,7 @@
             "help": "Think of both physical and mental effort. Other ways could be walking, driving or public transport.",
             "answer_key": "motorcycle_effort_vs_alternatives",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "options": [
@@ -456,21 +465,19 @@
               {
                 "text": "Much more demanding",
                 "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I have no other way to travel",
-                "value": "no_alternative"
               }
             ],
             "question_id": "motorcycle_effort_vs_alternatives",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you ride a motorcycle or scooter, how often do you arrive in the time you planned?",
             "answer_key": "motorcycle_time_vs_expected",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -495,14 +502,16 @@
               }
             ],
             "question_id": "motorcycle_time_vs_expected",
-            "question_version": "2.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "3.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you ride a motorcycle or scooter, how satisfied are you overall?",
             "answer_key": "motorcycle_satisfaction",
             "question_type": "single_option",
+            "answer_scale": "rating",
             "required": true,
             "options": [
               {
@@ -527,8 +536,9 @@
               }
             ],
             "question_id": "motorcycle_satisfaction",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -673,7 +683,6 @@
       "#About the same": "About the same",
       "#A bit more demanding": "A bit more demanding",
       "#Much more demanding": "Much more demanding",
-      "#I have no other way to travel": "I have no other way to travel",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "When you ride a motorcycle or scooter, how often do you arrive in the time you planned?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "When you ride a motorcycle or scooter, how satisfied are you overall?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "When you ride a motorcycle or scooter, what are you least happy with?",
@@ -783,7 +792,6 @@
       "#About the same": "Più o meno uguale",
       "#A bit more demanding": "Un po' più impegnativo",
       "#Much more demanding": "Molto più impegnativo",
-      "#I have no other way to travel": "Non ho altri modi per spostarmi",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "Quando vai in moto o in scooter, quanto spesso arrivi nel tempo che avevi previsto?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "Quando vai in moto o in scooter, qual è nel complesso il tuo livello di soddisfazione?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "Quando vai in moto o in scooter, cosa ti piace di meno?",
@@ -893,7 +901,6 @@
       "#About the same": "À peu près pareil",
       "#A bit more demanding": "Un peu plus exigeant",
       "#Much more demanding": "Beaucoup plus exigeant",
-      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "Lorsque vous roulez à moto ou en scooter, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "Lorsque vous roulez à moto ou en scooter, quel est votre niveau de satisfaction global ?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "Lorsque vous roulez à moto ou en scooter, qu’est-ce qui vous plaît le moins ?",
@@ -1003,7 +1010,6 @@
       "#About the same": "Ungefähr gleich",
       "#A bit more demanding": "Etwas anstrengender",
       "#Much more demanding": "Viel anstrengender",
-      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem Motorrad oder Roller in der Zeit an, die Sie eingeplant haben?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt, wenn Sie Motorrad oder Roller fahren?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "Was gefällt Ihnen beim Motorrad- oder Rollerfahren am wenigsten?",
@@ -1113,7 +1119,6 @@
       "#About the same": "Yaklaşık aynı",
       "#A bit more demanding": "Biraz daha zorlayıcı",
       "#Much more demanding": "Çok daha zorlayıcı",
-      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "Motosiklet veya scooter sürerken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "Motosiklet veya scooter sürerken genel olarak ne kadar memnunsunuz?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "Motosiklet veya scooter sürerken en az neyden memnunsunuz?",
@@ -1223,7 +1228,6 @@
       "#About the same": "تقریباً یکسان",
       "#A bit more demanding": "کمی سخت‌تر",
       "#Much more demanding": "خیلی سخت‌تر",
-      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "هنگام موتورسواری، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "هنگام موتورسواری، در مجموع چقدر راضی هستید؟",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "هنگام موتورسواری، از چه چیزی کمتر از همه راضی هستید؟",
@@ -1333,7 +1337,6 @@
       "#About the same": "Nagyjából ugyanolyan",
       "#A bit more demanding": "Kicsit megterhelőbb",
       "#Much more demanding": "Sokkal megterhelőbb",
-      "#I have no other way to travel": "Nincs más módom az utazásra",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "Motorozás vagy robogózás közben milyen gyakran ér célba a tervezett idő alatt?",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "Motorozás vagy robogózás közben összességében mennyire elégedett?",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "Motorozás vagy robogózás közben mivel a legkevésbé elégedett?",
@@ -1443,7 +1446,6 @@
       "#About the same": "بالقدر نفسه تقريبًا",
       "#A bit more demanding": "أصعب قليلًا",
       "#Much more demanding": "أصعب بكثير",
-      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
       "#When you ride a motorcycle or scooter, how often do you arrive in the time you planned?": "عند ركوب الدراجة النارية أو السكوتر، كم مرة يكون وصولك في الوقت الذي خططت له؟",
       "#When you ride a motorcycle or scooter, how satisfied are you overall?": "عند ركوب الدراجة النارية أو السكوتر، ما مدى رضاك بشكل عام؟",
       "#When you ride a motorcycle or scooter, what are you least happy with?": "عند ركوب الدراجة النارية أو السكوتر، ما أكثر ما لا يعجبك؟",

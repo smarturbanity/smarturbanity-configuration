@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - E-scooter – Road and personal safety",
     "questionnaire_id": "smarturbanity_e_scooter_road_and_personal_safety",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -31,6 +31,7 @@
             "help": "For example a car door opening suddenly, a vehicle cutting across you, or a junction where you can't see what's coming.",
             "answer_key": "escooter_hazard_confidence",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -55,7 +56,8 @@
               }
             ],
             "question_id": "escooter_hazard_confidence",
-            "question_version": "2.1.0"
+            "question_version": "3.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -63,6 +65,7 @@
             "help": "Think of cycle lanes, cycle paths and their signs and markings.",
             "answer_key": "escooter_infra_adequacy",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -87,7 +90,8 @@
               }
             ],
             "question_id": "escooter_infra_adequacy",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -302,6 +306,7 @@
             "text": "When you ride an e-scooter after dark, does poor street lighting change your route or when you ride?",
             "answer_key": "escooter_skip_dark",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -323,14 +328,11 @@
               {
                 "text": "I don't ride after dark because of poor lighting",
                 "value": "i_do_not_cycle_after_dark_because_of_poo"
-              },
-              {
-                "text": "I don't ride after dark for other reasons",
-                "value": "no_dark_other"
               }
             ],
             "question_id": "escooter_skip_dark",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "text": "During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
@@ -566,7 +568,6 @@
       "#I ride slower or keep to better-lit roads": "I ride slower or keep to better-lit roads",
       "#I take a much longer, better-lit route": "I take a much longer, better-lit route",
       "#I don't ride after dark because of poor lighting": "I don't ride after dark because of poor lighting",
-      "#I don't ride after dark for other reasons": "I don't ride after dark for other reasons",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
       "#Yes": "Yes",
       "#No": "No",
@@ -662,7 +663,6 @@
       "#I ride slower or keep to better-lit roads": "Vado più piano o resto sulle strade più illuminate",
       "#I take a much longer, better-lit route": "Faccio un percorso molto più lungo ma meglio illuminato",
       "#I don't ride after dark because of poor lighting": "Non vado dopo il buio per la scarsa illuminazione",
-      "#I don't ride after dark for other reasons": "Non vado dopo il buio per altri motivi",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Durante il giorno, ti è mai capitato di sentirti in pericolo per criminalità o molestie quando vai in monopattino elettrico? (Le molestie comprendono commenti indesiderati, pedinamenti, contatti fisici o comportamenti intimidatori rivolti a te.)",
       "#Yes": "Sì",
       "#No": "No",
@@ -758,7 +758,6 @@
       "#I ride slower or keep to better-lit roads": "Je roule plus lentement ou je reste sur les routes mieux éclairées",
       "#I take a much longer, better-lit route": "Je fais un trajet beaucoup plus long, mais mieux éclairé",
       "#I don't ride after dark because of poor lighting": "Je ne roule pas après la tombée de la nuit à cause du mauvais éclairage",
-      "#I don't ride after dark for other reasons": "Je ne roule pas après la tombée de la nuit pour d’autres raisons",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "En journée, vous arrive-t-il de vous sentir en danger à cause de la délinquance ou du harcèlement lorsque vous roulez en trottinette électrique ? (Le harcèlement comprend les remarques non désirées, la filature, les contacts physiques ou les comportements intimidants envers vous.)",
       "#Yes": "Oui",
       "#No": "Non",
@@ -854,7 +853,6 @@
       "#I ride slower or keep to better-lit roads": "Ich fahre langsamer oder bleibe auf besser beleuchteten Straßen",
       "#I take a much longer, better-lit route": "Ich nehme eine viel längere, aber besser beleuchtete Strecke",
       "#I don't ride after dark because of poor lighting": "Ich fahre nach Einbruch der Dunkelheit nicht wegen der schlechten Beleuchtung",
-      "#I don't ride after dark for other reasons": "Ich fahre nach Einbruch der Dunkelheit aus anderen Gründen nicht",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Fühlen Sie sich tagsüber beim E-Scooter-Fahren manchmal durch Kriminalität oder Belästigung unsicher? (Zu Belästigung zählen unerwünschte Bemerkungen, Verfolgen, Berühren oder einschüchterndes Verhalten, das gegen Sie gerichtet ist.)",
       "#Yes": "Ja",
       "#No": "Nein",
@@ -950,7 +948,6 @@
       "#I ride slower or keep to better-lit roads": "Daha yavaş sürerim veya daha iyi aydınlatılmış yollarda kalırım",
       "#I take a much longer, better-lit route": "Çok daha uzun ama daha iyi aydınlatılmış bir güzergâh seçerim",
       "#I don't ride after dark because of poor lighting": "Yetersiz aydınlatma nedeniyle karanlıkta scooter kullanmam",
-      "#I don't ride after dark for other reasons": "Başka nedenlerle karanlıkta scooter kullanmam",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Gündüz elektrikli scooter kullanırken suç veya taciz nedeniyle kendinizi güvensiz hissettiğiniz oluyor mu? (Taciz; istenmeyen sözleri, takip edilmeyi, dokunulmayı veya size yönelik yıldırıcı davranışları kapsar.)",
       "#Yes": "Evet",
       "#No": "Hayır",
@@ -1046,7 +1043,6 @@
       "#I ride slower or keep to better-lit roads": "آهسته‌تر می‌روم یا در خیابان‌های روشن‌تر می‌مانم",
       "#I take a much longer, better-lit route": "مسیر خیلی طولانی‌تر اما روشن‌تر را انتخاب می‌کنم",
       "#I don't ride after dark because of poor lighting": "به دلیل روشنایی ضعیف بعد از تاریکی اسکوترسوار نمی‌شوم",
-      "#I don't ride after dark for other reasons": "به دلایل دیگر بعد از تاریکی اسکوترسوار نمی‌شوم",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "آیا در طول روز هنگام استفاده از اسکوتر برقی پیش می‌آید که به‌خاطر جرم یا آزار احساس ناامنی کنید؟ (آزار شامل حرف‌های ناخواسته، تعقیب شدن، لمس شدن یا رفتار تهدیدآمیز نسبت به شماست.)",
       "#Yes": "بله",
       "#No": "خیر",
@@ -1142,7 +1138,6 @@
       "#I ride slower or keep to better-lit roads": "Lassabban megyek, vagy a jobban megvilágított utakon maradok",
       "#I take a much longer, better-lit route": "Sokkal hosszabb, de jobban megvilágított útvonalat választok",
       "#I don't ride after dark because of poor lighting": "Sötétedés után nem rollerezem a rossz világítás miatt",
-      "#I don't ride after dark for other reasons": "Sötétedés után más okból nem rollerezem",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Előfordul, hogy nappal elektromos rollerezés közben a bűncselekmények vagy a zaklatás miatt nem érzi magát biztonságban? (Zaklatás: nem kívánt megjegyzések, követés, megérintés vagy Ön ellen irányuló megfélemlítő viselkedés.)",
       "#Yes": "Igen",
       "#No": "Nem",
@@ -1238,7 +1233,6 @@
       "#I ride slower or keep to better-lit roads": "أركب ببطء أو ألتزم بالطرق الأفضل إضاءة",
       "#I take a much longer, better-lit route": "أسلك طريقًا أطول بكثير لكنه أفضل إضاءة",
       "#I don't ride after dark because of poor lighting": "لا أركب السكوتر بعد حلول الظلام بسبب ضعف الإضاءة",
-      "#I don't ride after dark for other reasons": "لا أركب السكوتر بعد حلول الظلام لأسباب أخرى",
       "#During the day, do you ever feel unsafe from crime or harassment when you ride an e-scooter? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "خلال النهار، هل يحدث أن تشعر بعدم الأمان من الجريمة أو التحرش عند ركوب السكوتر الكهربائي؟ (يشمل التحرش التعليقات غير المرغوبة أو الملاحقة أو اللمس أو السلوك المخيف الموجّه إليك.)",
       "#Yes": "نعم",
       "#No": "لا",

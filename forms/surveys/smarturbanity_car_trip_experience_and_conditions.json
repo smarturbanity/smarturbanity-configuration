@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Car – Trip experience and conditions",
     "questionnaire_id": "smarturbanity_car_trip_experience_and_conditions",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -202,6 +202,7 @@
             "text": "Compared with other ways of getting around, how comfortable is the car for you?",
             "answer_key": "car_comfort",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -226,7 +227,8 @@
               }
             ],
             "question_id": "car_comfort",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -234,6 +236,7 @@
             "help": "For example traffic jams, crashes or roadworks.",
             "answer_key": "car_delay_stress",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -258,13 +261,15 @@
               }
             ],
             "question_id": "car_delay_stress",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
             "text": "Do traffic jams make you change your route or the time you leave?",
             "answer_key": "car_congestion_adapt",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -289,7 +294,8 @@
               }
             ],
             "question_id": "car_congestion_adapt",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -297,6 +303,7 @@
             "help": "Think of the places you drive to most often.",
             "answer_key": "car_parking_issue",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -318,14 +325,11 @@
               {
                 "text": "A very big problem",
                 "value": "critical_issue"
-              },
-              {
-                "text": "Not for me: I don't drive",
-                "value": "not_driver"
               }
             ],
             "question_id": "car_parking_issue",
-            "question_version": "1.2.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -371,6 +375,7 @@
             "text": "How much do charging points affect whether you use an electric car?",
             "answer_key": "car_charging",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -392,14 +397,11 @@
               {
                 "text": "Very much",
                 "value": "extremely_influential"
-              },
-              {
-                "text": "Not for me: my vehicle isn't electric",
-                "value": "i_don_t_have_an_electric_vehicle_so_this"
               }
             ],
             "question_id": "car_charging",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           }
         ]
       },
@@ -413,6 +415,7 @@
             "text": "When you travel by car, how much does traffic noise bother or annoy you?",
             "answer_key": "car_noise_bother",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -437,7 +440,8 @@
               }
             ],
             "question_id": "car_noise_bother",
-            "question_version": "1.1.0"
+            "question_version": "2.0.0",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -576,6 +580,7 @@
             "text": "When you travel by car, how stressed or relaxed do you usually feel?",
             "answer_key": "car_emotional_state",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -600,14 +605,16 @@
               }
             ],
             "question_id": "car_emotional_state",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you travel by car, how often do you feel anxious or overwhelmed?",
             "answer_key": "car_anxiety_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -632,8 +639,9 @@
               }
             ],
             "question_id": "car_anxiety_frequency",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
@@ -741,6 +749,7 @@
             "text": "When you travel by car, how tired do you usually feel when you arrive?",
             "answer_key": "car_tiredness",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -765,8 +774,9 @@
               }
             ],
             "question_id": "car_tiredness",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -817,6 +827,7 @@
             "help": "Think of both physical and mental effort. Other ways could be walking, cycling or public transport.",
             "answer_key": "car_effort_vs_alternatives",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "options": [
@@ -839,21 +850,19 @@
               {
                 "text": "Much more demanding",
                 "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I have no other way to travel",
-                "value": "no_alternative"
               }
             ],
             "question_id": "car_effort_vs_alternatives",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you travel by car, how often do you arrive in the time you planned?",
             "answer_key": "car_time_vs_expected",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -878,14 +887,16 @@
               }
             ],
             "question_id": "car_time_vs_expected",
-            "question_version": "2.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "3.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you travel by car, how satisfied are you overall?",
             "answer_key": "car_satisfaction",
             "question_type": "single_option",
+            "answer_scale": "rating",
             "required": true,
             "options": [
               {
@@ -910,8 +921,9 @@
               }
             ],
             "question_id": "car_satisfaction",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -1028,7 +1040,6 @@
       "#A real problem": "A real problem",
       "#A big problem": "A big problem",
       "#A very big problem": "A very big problem",
-      "#Not for me: I don't drive": "Not for me: I don't drive",
       "#When parking is hard, what do you usually do?": "When parking is hard, what do you usually do?",
       "#It doesn't change my plans": "It doesn't change my plans",
       "#I still go, but it's slower or more stressful": "I still go, but it's slower or more stressful",
@@ -1037,7 +1048,6 @@
       "#I go another way instead (e.g. bus, on foot)": "I go another way instead (e.g. bus, on foot)",
       "#How much do charging points affect whether you use an electric car?": "How much do charging points affect whether you use an electric car?",
       "#Very much": "Very much",
-      "#Not for me: my vehicle isn't electric": "Not for me: my vehicle isn't electric",
       "#Car – Comfort": "Car – Comfort",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "When you travel by car, how much does traffic noise bother or annoy you?",
       "#Slightly": "Slightly",
@@ -1111,7 +1121,6 @@
       "#A bit easier": "A bit easier",
       "#A bit more demanding": "A bit more demanding",
       "#Much more demanding": "Much more demanding",
-      "#I have no other way to travel": "I have no other way to travel",
       "#When you travel by car, how often do you arrive in the time you planned?": "When you travel by car, how often do you arrive in the time you planned?",
       "#When you travel by car, how satisfied are you overall?": "When you travel by car, how satisfied are you overall?",
       "#When you travel by car, what are you least happy with?": "When you travel by car, what are you least happy with?",
@@ -1194,7 +1203,6 @@
       "#A real problem": "Un problema medio",
       "#A big problem": "Un grosso problema",
       "#A very big problem": "Un problema molto grosso",
-      "#Not for me: I don't drive": "Non mi riguarda: non guido",
       "#When parking is hard, what do you usually do?": "Quando è difficile parcheggiare, cosa fai di solito?",
       "#It doesn't change my plans": "Non cambia i miei programmi",
       "#I still go, but it's slower or more stressful": "Ci vado lo stesso, ma è più lento o più stressante",
@@ -1203,7 +1211,6 @@
       "#I go another way instead (e.g. bus, on foot)": "Mi sposto in un altro modo (ad es. autobus, a piedi)",
       "#How much do charging points affect whether you use an electric car?": "Quanto contano i punti di ricarica nella scelta di usare un’auto elettrica?",
       "#Very much": "Moltissimo",
-      "#Not for me: my vehicle isn't electric": "Non mi riguarda: il mio veicolo non è elettrico",
       "#Car – Comfort": "In auto – Comfort",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "Quando viaggi in auto, quanto ti disturba o ti infastidisce il rumore del traffico?",
       "#Slightly": "Poco",
@@ -1277,7 +1284,6 @@
       "#A bit easier": "Un po' più facile",
       "#A bit more demanding": "Un po' più impegnativo",
       "#Much more demanding": "Molto più impegnativo",
-      "#I have no other way to travel": "Non ho altri modi per spostarmi",
       "#When you travel by car, how often do you arrive in the time you planned?": "Quando viaggi in auto, quanto spesso arrivi nel tempo che avevi previsto?",
       "#When you travel by car, how satisfied are you overall?": "Quando viaggi in auto, qual è nel complesso il tuo livello di soddisfazione?",
       "#When you travel by car, what are you least happy with?": "Quando viaggi in auto, cosa ti piace di meno?",
@@ -1360,7 +1366,6 @@
       "#A real problem": "Un problème moyen",
       "#A big problem": "Un gros problème",
       "#A very big problem": "Un très gros problème",
-      "#Not for me: I don't drive": "Cela ne me concerne pas : je ne conduis pas",
       "#When parking is hard, what do you usually do?": "Quand il est difficile de se garer, que faites-vous habituellement ?",
       "#It doesn't change my plans": "Cela ne change pas mes projets",
       "#I still go, but it's slower or more stressful": "J'y vais quand même, mais c'est plus long ou plus stressant",
@@ -1369,7 +1374,6 @@
       "#I go another way instead (e.g. bus, on foot)": "Je me déplace autrement (par ex. en bus, à pied)",
       "#How much do charging points affect whether you use an electric car?": "Dans quelle mesure les bornes de recharge influencent-elles votre choix d’utiliser une voiture électrique ?",
       "#Very much": "Énormément",
-      "#Not for me: my vehicle isn't electric": "Cela ne me concerne pas : mon véhicule n'est pas électrique",
       "#Car – Comfort": "Voiture – Confort",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "Lorsque vous vous déplacez en voiture, dans quelle mesure le bruit de la circulation vous dérange-t-il ?",
       "#Slightly": "Un peu",
@@ -1443,7 +1447,6 @@
       "#A bit easier": "Un peu plus facile",
       "#A bit more demanding": "Un peu plus exigeant",
       "#Much more demanding": "Beaucoup plus exigeant",
-      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
       "#When you travel by car, how often do you arrive in the time you planned?": "Lorsque vous vous déplacez en voiture, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
       "#When you travel by car, how satisfied are you overall?": "Lorsque vous vous déplacez en voiture, quel est votre niveau de satisfaction global ?",
       "#When you travel by car, what are you least happy with?": "Lorsque vous vous déplacez en voiture, qu’est-ce qui vous plaît le moins ?",
@@ -1526,7 +1529,6 @@
       "#A real problem": "Ein mittleres Problem",
       "#A big problem": "Ein großes Problem",
       "#A very big problem": "Ein sehr großes Problem",
-      "#Not for me: I don't drive": "Trifft auf mich nicht zu: Ich fahre nicht selbst",
       "#When parking is hard, what do you usually do?": "Was tun Sie in der Regel, wenn das Parken schwierig ist?",
       "#It doesn't change my plans": "Es ändert nichts an meinen Plänen",
       "#I still go, but it's slower or more stressful": "Ich fahre trotzdem hin, aber es dauert länger oder ist stressiger",
@@ -1535,7 +1537,6 @@
       "#I go another way instead (e.g. bus, on foot)": "Ich nehme stattdessen ein anderes Verkehrsmittel (z. B. Bus, zu Fuß)",
       "#How much do charging points affect whether you use an electric car?": "Wie sehr beeinflussen Ladepunkte, ob Sie ein Elektroauto nutzen?",
       "#Very much": "Sehr stark",
-      "#Not for me: my vehicle isn't electric": "Trifft auf mich nicht zu: Mein Fahrzeug ist nicht elektrisch",
       "#Car – Comfort": "Auto – Komfort",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "Wie sehr stört oder ärgert Sie Verkehrslärm bei Autofahrten?",
       "#Slightly": "Etwas",
@@ -1609,7 +1610,6 @@
       "#A bit easier": "Etwas leichter",
       "#A bit more demanding": "Etwas anstrengender",
       "#Much more demanding": "Viel anstrengender",
-      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
       "#When you travel by car, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit dem Auto in der Zeit an, die Sie eingeplant haben?",
       "#When you travel by car, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt mit Autofahrten?",
       "#When you travel by car, what are you least happy with?": "Was gefällt Ihnen bei Autofahrten am wenigsten?",
@@ -1692,7 +1692,6 @@
       "#A real problem": "Orta düzeyde bir sorun",
       "#A big problem": "Büyük bir sorun",
       "#A very big problem": "Çok büyük bir sorun",
-      "#Not for me: I don't drive": "Bu soru benim için geçerli değil: Araç kullanmıyorum",
       "#When parking is hard, what do you usually do?": "Park etmek zor olduğunda genellikle ne yaparsınız?",
       "#It doesn't change my plans": "Planlarımı değiştirmez",
       "#I still go, but it's slower or more stressful": "Yine de giderim ama daha yavaş veya daha stresli olur",
@@ -1701,7 +1700,6 @@
       "#I go another way instead (e.g. bus, on foot)": "Bunun yerine başka bir şekilde giderim (örn. otobüs, yürüyerek)",
       "#How much do charging points affect whether you use an electric car?": "Şarj noktaları elektrikli araba kullanıp kullanmamanızı ne kadar etkiliyor?",
       "#Very much": "Çok fazla",
-      "#Not for me: my vehicle isn't electric": "Bu soru benim için geçerli değil: Aracım elektrikli değil",
       "#Car – Comfort": "Araba – Konfor",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "Arabayla yolculuk ederken trafik gürültüsü sizi ne kadar rahatsız eder veya sinirlendirir?",
       "#Slightly": "Biraz",
@@ -1775,7 +1773,6 @@
       "#A bit easier": "Biraz daha kolay",
       "#A bit more demanding": "Biraz daha zorlayıcı",
       "#Much more demanding": "Çok daha zorlayıcı",
-      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
       "#When you travel by car, how often do you arrive in the time you planned?": "Arabayla yolculuk ederken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
       "#When you travel by car, how satisfied are you overall?": "Arabayla yolculuk ederken genel olarak ne kadar memnunsunuz?",
       "#When you travel by car, what are you least happy with?": "Arabayla yolculuk ederken en az neyden memnunsunuz?",
@@ -1858,7 +1855,6 @@
       "#A real problem": "مشکل جدی",
       "#A big problem": "مشکل بزرگ",
       "#A very big problem": "مشکل بسیار بزرگ",
-      "#Not for me: I don't drive": "مربوط به من نیست: رانندگی نمی‌کنم",
       "#When parking is hard, what do you usually do?": "وقتی پیدا کردن جای پارک سخت است، معمولاً چه می‌کنید؟",
       "#It doesn't change my plans": "برنامه من را تغییر نمی‌دهد",
       "#I still go, but it's slower or more stressful": "باز هم می‌روم، اما کندتر یا با تنش بیشتر",
@@ -1867,7 +1863,6 @@
       "#I go another way instead (e.g. bus, on foot)": "به جای آن با روش دیگری می‌روم (مثلاً اتوبوس، پیاده)",
       "#How much do charging points affect whether you use an electric car?": "ایستگاه‌های شارژ چقدر بر استفاده شما از خودرو برقی اثر می‌گذارند؟",
       "#Very much": "خیلی زیاد",
-      "#Not for me: my vehicle isn't electric": "مربوط به من نیست: وسیله من برقی نیست",
       "#Car – Comfort": "خودرو – راحتی",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "هنگام سفر با خودرو، سروصدای ترافیک چقدر شما را اذیت یا آزرده می‌کند؟",
       "#Slightly": "کمی",
@@ -1941,7 +1936,6 @@
       "#A bit easier": "کمی راحت‌تر",
       "#A bit more demanding": "کمی سخت‌تر",
       "#Much more demanding": "خیلی سخت‌تر",
-      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
       "#When you travel by car, how often do you arrive in the time you planned?": "هنگام سفر با خودرو، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
       "#When you travel by car, how satisfied are you overall?": "هنگام سفر با خودرو، در مجموع چقدر راضی هستید؟",
       "#When you travel by car, what are you least happy with?": "هنگام سفر با خودرو، از چه چیزی کمتر از همه راضی هستید؟",
@@ -2024,7 +2018,6 @@
       "#A real problem": "Komoly probléma",
       "#A big problem": "Nagy probléma",
       "#A very big problem": "Nagyon nagy probléma",
-      "#Not for me: I don't drive": "Rám nem vonatkozik: nem vezetek",
       "#When parking is hard, what do you usually do?": "Ha nehéz parkolni, mit szokott tenni?",
       "#It doesn't change my plans": "Nem változtat a terveimen",
       "#I still go, but it's slower or more stressful": "Ettől még elmegyek, de lassabb vagy stresszesebb",
@@ -2033,7 +2026,6 @@
       "#I go another way instead (e.g. bus, on foot)": "Inkább más módon megyek (pl. busszal, gyalog)",
       "#How much do charging points affect whether you use an electric car?": "Mennyire befolyásolják a töltőpontok, hogy használ-e elektromos autót?",
       "#Very much": "Rendkívül",
-      "#Not for me: my vehicle isn't electric": "Rám nem vonatkozik: a járművem nem elektromos",
       "#Car – Comfort": "Autó – Kényelem",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "Autós utazás közben mennyire zavarja vagy bosszantja a forgalom zaja?",
       "#Slightly": "Kissé",
@@ -2107,7 +2099,6 @@
       "#A bit easier": "Kicsit könnyebb",
       "#A bit more demanding": "Kicsit megterhelőbb",
       "#Much more demanding": "Sokkal megterhelőbb",
-      "#I have no other way to travel": "Nincs más módom az utazásra",
       "#When you travel by car, how often do you arrive in the time you planned?": "Autós utazás közben milyen gyakran ér célba a tervezett idő alatt?",
       "#When you travel by car, how satisfied are you overall?": "Autós utazás közben összességében mennyire elégedett?",
       "#When you travel by car, what are you least happy with?": "Autós utazás közben mivel a legkevésbé elégedett?",
@@ -2190,7 +2181,6 @@
       "#A real problem": "مشكلة حقيقية",
       "#A big problem": "مشكلة كبيرة",
       "#A very big problem": "مشكلة كبيرة جدًا",
-      "#Not for me: I don't drive": "لا ينطبق عليّ: لا أقود السيارة",
       "#When parking is hard, what do you usually do?": "عندما يصعب إيجاد موقف، ما تصرّفك عادةً؟",
       "#It doesn't change my plans": "لا يغيّر خططي",
       "#I still go, but it's slower or more stressful": "ما زلت أذهب، لكن الأمر يكون أبطأ أو أكثر إرهاقًا",
@@ -2199,7 +2189,6 @@
       "#I go another way instead (e.g. bus, on foot)": "أذهب بوسيلة أخرى بدلًا من ذلك (مثل الحافلة أو مشيًا)",
       "#How much do charging points affect whether you use an electric car?": "إلى أي مدى تؤثر نقاط الشحن في قرارك باستخدام سيارة كهربائية؟",
       "#Very much": "كثيرًا جدًا",
-      "#Not for me: my vehicle isn't electric": "لا ينطبق عليّ: مركبتي ليست كهربائية",
       "#Car – Comfort": "السيارة – الراحة",
       "#When you travel by car, how much does traffic noise bother or annoy you?": "عند التنقل بالسيارة، ما مدى انزعاجك من ضجيج حركة المرور؟",
       "#Slightly": "يزعجني قليلًا",
@@ -2273,7 +2262,6 @@
       "#A bit easier": "أسهل قليلًا",
       "#A bit more demanding": "أصعب قليلًا",
       "#Much more demanding": "أصعب بكثير",
-      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
       "#When you travel by car, how often do you arrive in the time you planned?": "عند التنقل بالسيارة، كم مرة يكون وصولك في الوقت الذي خططت له؟",
       "#When you travel by car, how satisfied are you overall?": "عند التنقل بالسيارة، ما مدى رضاك بشكل عام؟",
       "#When you travel by car, what are you least happy with?": "عند التنقل بالسيارة، ما أكثر ما لا يعجبك؟",

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Public transport – Trip experience and effort",
     "questionnaire_id": "smarturbanity_public_transport_experience_and_effort",
-    "questionnaire_version": "2.1.0",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -30,6 +30,7 @@
             "text": "When you use public transport, how much does traffic noise bother or annoy you?",
             "answer_key": "put_noise_bother",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -54,8 +55,9 @@
               }
             ],
             "question_id": "put_noise_bother",
-            "question_version": "1.1.0",
-            "help": "Think about waiting at stops and travelling on board public transport."
+            "question_version": "2.0.0",
+            "help": "Think about waiting at stops and travelling on board public transport.",
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "personal_data",
@@ -167,6 +169,7 @@
             "help": "For example buildings, squares, how cared-for a place is and its general feel. Think about waiting at stops and travelling on board public transport.",
             "answer_key": "put_visual_quality",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -188,14 +191,11 @@
               {
                 "text": "I sometimes choose a route because it's nicer or more interesting",
                 "value": "very_strongly_i_sometimes_choose_routes"
-              },
-              {
-                "text": "I cannot assess this",
-                "value": "cannot_assess"
               }
             ],
             "question_id": "put_visual_quality",
-            "question_version": "2.1.0"
+            "question_version": "3.0.0",
+            "add_not_applicable": true
           }
         ]
       },
@@ -209,6 +209,7 @@
             "text": "When you use public transport, how stressed or relaxed do you usually feel?",
             "answer_key": "put_emotional_state",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -233,14 +234,16 @@
               }
             ],
             "question_id": "put_emotional_state",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
             "text": "When you use public transport, how often do you feel anxious or overwhelmed?",
             "answer_key": "put_anxiety_frequency",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -265,8 +268,9 @@
               }
             ],
             "question_id": "put_anxiety_frequency",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "special_category_health",
@@ -382,6 +386,7 @@
             "text": "When you use public transport, how tired do you usually feel when you arrive?",
             "answer_key": "put_tiredness",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -406,8 +411,9 @@
               }
             ],
             "question_id": "put_tiredness",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -462,6 +468,7 @@
             "help": "Think of both physical and mental effort. Other ways could be walking, cycling or driving.",
             "answer_key": "put_effort_vs_alternatives",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "options": [
@@ -484,21 +491,19 @@
               {
                 "text": "Much more demanding",
                 "value": "far_more_demanding_than_alternatives_phy"
-              },
-              {
-                "text": "I have no other way to travel",
-                "value": "no_alternative"
               }
             ],
             "question_id": "put_effort_vs_alternatives",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you use public transport, how often do you arrive in the time you planned?",
             "answer_key": "put_time_vs_expected",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "options": [
               {
@@ -523,14 +528,16 @@
               }
             ],
             "question_id": "put_time_vs_expected",
-            "question_version": "2.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "3.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
             "text": "When you use public transport, how satisfied are you overall?",
             "answer_key": "put_satisfaction",
             "question_type": "single_option",
+            "answer_scale": "rating",
             "required": true,
             "options": [
               {
@@ -555,8 +562,9 @@
               }
             ],
             "question_id": "put_satisfaction",
-            "question_version": "1.1.0",
-            "add_prefer_not_to_say": true
+            "question_version": "2.0.0",
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "privacy_classification": "heightened_personal",
@@ -706,7 +714,6 @@
       "#About the same": "About the same",
       "#A bit more demanding": "A bit more demanding",
       "#Much more demanding": "Much more demanding",
-      "#I have no other way to travel": "I have no other way to travel",
       "#When you use public transport, how often do you arrive in the time you planned?": "When you use public transport, how often do you arrive in the time you planned?",
       "#When you use public transport, how satisfied are you overall?": "When you use public transport, how satisfied are you overall?",
       "#When you use public transport, what are you least happy with?": "When you use public transport, what are you least happy with?",
@@ -742,7 +749,6 @@
       "#I take another route": "I take another route",
       "#I travel at another time": "I travel at another time",
       "#I prepare differently (e.g. clothes, umbrella)": "I prepare differently (e.g. clothes, umbrella)",
-      "#I cannot assess this": "I cannot assess this",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>"
     },
     "it": {
@@ -827,7 +833,6 @@
       "#About the same": "Più o meno uguale",
       "#A bit more demanding": "Un po' più impegnativo",
       "#Much more demanding": "Molto più impegnativo",
-      "#I have no other way to travel": "Non ho altri modi per spostarmi",
       "#When you use public transport, how often do you arrive in the time you planned?": "Quando usi i mezzi pubblici, quanto spesso arrivi nel tempo che avevi previsto?",
       "#When you use public transport, how satisfied are you overall?": "Quando usi i mezzi pubblici, qual è nel complesso il tuo livello di soddisfazione?",
       "#When you use public transport, what are you least happy with?": "Quando usi i mezzi pubblici, cosa ti piace di meno?",
@@ -863,7 +868,6 @@
       "#I take another route": "Cambio percorso",
       "#I travel at another time": "Mi sposto in un altro orario",
       "#I prepare differently (e.g. clothes, umbrella)": "Mi preparo in modo diverso (ad es. vestiti, ombrello)",
-      "#I cannot assess this": "Non posso valutarlo",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>Rumore, aria, maltempo, pulizia e aspetto dei luoghi <b>quando usi i mezzi pubblici</b>.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”. Le tue risposte non sono collegate al tuo nome e non vengono inviate a nessuna amministrazione pubblica.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Scopri di più su SmartUrbanity</a></p><p>Solo il gruppo di ricerca SmartUrbanity legge le tue risposte. Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><ul><li>Trasporto pubblico – Il posto in cui ti muovi</li><li>Trasporto pubblico – Come vivi lo spostamento</li><li>Trasporto pubblico – Fatica e soddisfazione</li></ul>"
     },
     "fr": {
@@ -948,7 +952,6 @@
       "#About the same": "À peu près pareil",
       "#A bit more demanding": "Un peu plus exigeant",
       "#Much more demanding": "Beaucoup plus exigeant",
-      "#I have no other way to travel": "Je n'ai pas d'autre moyen de me déplacer",
       "#When you use public transport, how often do you arrive in the time you planned?": "Lorsque vous utilisez les transports en commun, à quelle fréquence arrivez-vous dans le temps que vous aviez prévu ?",
       "#When you use public transport, how satisfied are you overall?": "Lorsque vous utilisez les transports en commun, quel est votre niveau de satisfaction global ?",
       "#When you use public transport, what are you least happy with?": "Lorsque vous utilisez les transports en commun, qu’est-ce qui vous plaît le moins ?",
@@ -984,7 +987,6 @@
       "#I take another route": "Je change d’itinéraire",
       "#I travel at another time": "Je me déplace à un autre horaire",
       "#I prepare differently (e.g. clothes, umbrella)": "Je m’équipe autrement (par exemple vêtements, parapluie)",
-      "#I cannot assess this": "Je ne peux pas l’évaluer",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>Le bruit, l’air, la météo, la propreté et l’aspect des lieux <b>lorsque vous utilisez les transports en commun</b>.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ». Vos réponses ne sont pas associées à votre nom et ne sont transmises à aucune administration.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">En savoir plus sur SmartUrbanity</a></p><p>Seule l’équipe de recherche SmartUrbanity lit vos réponses. Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><ul><li>Transports en commun – Votre environnement</li><li>Transports en commun – Ressenti du trajet</li><li>Transports en commun – Effort et satisfaction</li></ul>"
     },
     "de": {
@@ -1069,7 +1071,6 @@
       "#About the same": "Ungefähr gleich",
       "#A bit more demanding": "Etwas anstrengender",
       "#Much more demanding": "Viel anstrengender",
-      "#I have no other way to travel": "Ich habe keine andere Möglichkeit, unterwegs zu sein",
       "#When you use public transport, how often do you arrive in the time you planned?": "Wie oft kommen Sie mit öffentlichen Verkehrsmitteln in der Zeit an, die Sie eingeplant haben?",
       "#When you use public transport, how satisfied are you overall?": "Wie zufrieden sind Sie insgesamt mit Fahrten mit öffentlichen Verkehrsmitteln?",
       "#When you use public transport, what are you least happy with?": "Was gefällt Ihnen bei Fahrten mit öffentlichen Verkehrsmitteln am wenigsten?",
@@ -1105,7 +1106,6 @@
       "#I take another route": "Ich nehme eine andere Route",
       "#I travel at another time": "Ich fahre oder gehe zu einer anderen Zeit los",
       "#I prepare differently (e.g. clothes, umbrella)": "Ich bereite mich anders vor (z. B. Kleidung, Regenschirm)",
-      "#I cannot assess this": "Das kann ich nicht beurteilen",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>Lärm, Luft, Wetter, Sauberkeit und das Aussehen der Orte, <b>wenn Sie öffentliche Verkehrsmittel nutzen</b>.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen. Ihre Antworten werden nicht mit Ihrem Namen verknüpft und an keine Behörde weitergegeben.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Mehr über SmartUrbanity erfahren</a></p><p>Nur das SmartUrbanity-Forschungsteam liest Ihre Antworten. Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><ul><li>Öffentliche Verkehrsmittel – Ihre Umgebung</li><li>Öffentliche Verkehrsmittel – Wie sich der Weg anfühlt</li><li>Öffentliche Verkehrsmittel – Aufwand und Zufriedenheit</li></ul>"
     },
     "tr": {
@@ -1190,7 +1190,6 @@
       "#About the same": "Yaklaşık aynı",
       "#A bit more demanding": "Biraz daha zorlayıcı",
       "#Much more demanding": "Çok daha zorlayıcı",
-      "#I have no other way to travel": "Başka bir yolculuk yolum yok",
       "#When you use public transport, how often do you arrive in the time you planned?": "Toplu taşıma kullanırken gideceğiniz yere ne sıklıkla planladığınız sürede ulaşıyorsunuz?",
       "#When you use public transport, how satisfied are you overall?": "Toplu taşıma kullanırken genel olarak ne kadar memnunsunuz?",
       "#When you use public transport, what are you least happy with?": "Toplu taşıma kullanırken en az neyden memnunsunuz?",
@@ -1226,7 +1225,6 @@
       "#I take another route": "Başka bir güzergâh seçerim",
       "#I travel at another time": "Başka bir saatte yola çıkarım",
       "#I prepare differently (e.g. clothes, umbrella)": "Farklı hazırlanırım (ör. kıyafet, şemsiye)",
-      "#I cannot assess this": "Bunu değerlendiremiyorum",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p><b>Toplu taşıma kullanırken</b> gürültü, hava kalitesi, hava koşulları, temizlik ve yerlerin görünümü.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz. Yanıtlarınız adınızla ilişkilendirilmez ve hiçbir kamu kurumuna gönderilmez.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">SmartUrbanity hakkında daha fazla bilgi edinin</a></p><p>Yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur. Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><ul><li>Toplu taşıma – Çevreniz</li><li>Toplu taşıma – Yolculuk nasıl hissettiriyor</li><li>Toplu taşıma – Çaba ve memnuniyet</li></ul>"
     },
     "fa": {
@@ -1311,7 +1309,6 @@
       "#About the same": "تقریباً یکسان",
       "#A bit more demanding": "کمی سخت‌تر",
       "#Much more demanding": "خیلی سخت‌تر",
-      "#I have no other way to travel": "روش دیگری برای سفر ندارم",
       "#When you use public transport, how often do you arrive in the time you planned?": "هنگام استفاده از حمل‌ونقل عمومی، چقدر پیش می‌آید که در زمانی که برنامه‌ریزی کرده‌اید به مقصد برسید؟",
       "#When you use public transport, how satisfied are you overall?": "هنگام استفاده از حمل‌ونقل عمومی، در مجموع چقدر راضی هستید؟",
       "#When you use public transport, what are you least happy with?": "هنگام استفاده از حمل‌ونقل عمومی، از چه چیزی کمتر از همه راضی هستید؟",
@@ -1347,7 +1344,6 @@
       "#I take another route": "مسیر دیگری را انتخاب می‌کنم",
       "#I travel at another time": "در زمان دیگری رفت‌وآمد می‌کنم",
       "#I prepare differently (e.g. clothes, umbrella)": "به شکل دیگری آماده می‌شوم (مثلاً لباس، چتر)",
-      "#I cannot assess this": "نمی‌توانم این را ارزیابی کنم",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>سر و صدا، هوا، آب‌وهوا، پاکیزگی و ظاهر مکان‌ها <b>هنگام استفاده از حمل‌ونقل عمومی</b>.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید. پاسخ‌های شما به نام شما مرتبط نمی‌شوند و به هیچ نهاد دولتی فرستاده نمی‌شوند.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">درباره SmartUrbanity بیشتر بدانید</a></p><p>فقط گروه پژوهشی SmartUrbanity پاسخ‌های شما را می‌خواند. آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><ul><li>حمل‌ونقل عمومی – محیط اطراف شما</li><li>حمل‌ونقل عمومی – حال و هوای سفر</li><li>حمل‌ونقل عمومی – تلاش و رضایت</li></ul>"
     },
     "hu": {
@@ -1432,7 +1428,6 @@
       "#About the same": "Nagyjából ugyanolyan",
       "#A bit more demanding": "Kicsit megterhelőbb",
       "#Much more demanding": "Sokkal megterhelőbb",
-      "#I have no other way to travel": "Nincs más módom az utazásra",
       "#When you use public transport, how often do you arrive in the time you planned?": "Tömegközlekedés közben milyen gyakran ér célba a tervezett idő alatt?",
       "#When you use public transport, how satisfied are you overall?": "Tömegközlekedés közben összességében mennyire elégedett?",
       "#When you use public transport, what are you least happy with?": "Tömegközlekedés közben mivel a legkevésbé elégedett?",
@@ -1468,7 +1463,6 @@
       "#I take another route": "Másik útvonalat választok",
       "#I travel at another time": "Más időpontban indulok",
       "#I prepare differently (e.g. clothes, umbrella)": "Másképp készülök fel (például ruházat, esernyő)",
-      "#I cannot assess this": "Ezt nem tudom megítélni",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>Zaj, levegő, időjárás, tisztaság és a helyek látványa <b>tömegközlekedés közben</b>.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget. Válaszai nem kapcsolódnak a nevéhez, és semmilyen hatósághoz nem kerülnek.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">További információ a SmartUrbanity projektről</a></p><p>Válaszait csak a SmartUrbanity kutatócsoportja olvassa. Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><ul><li>Tömegközlekedés – A környezete</li><li>Tömegközlekedés – Az utazás élménye</li><li>Tömegközlekedés – Erőfeszítés és elégedettség</li></ul>"
     },
     "ar": {
@@ -1553,7 +1547,6 @@
       "#About the same": "بالقدر نفسه تقريبًا",
       "#A bit more demanding": "أصعب قليلًا",
       "#Much more demanding": "أصعب بكثير",
-      "#I have no other way to travel": "ليس لدي طريقة أخرى للتنقل",
       "#When you use public transport, how often do you arrive in the time you planned?": "عند استخدام وسائل النقل العام، كم مرة يكون وصولك في الوقت الذي خططت له؟",
       "#When you use public transport, how satisfied are you overall?": "عند استخدام وسائل النقل العام، ما مدى رضاك بشكل عام؟",
       "#When you use public transport, what are you least happy with?": "عند استخدام وسائل النقل العام، ما أكثر ما لا يعجبك؟",
@@ -1589,7 +1582,6 @@
       "#I take another route": "أسلك طريقًا آخر",
       "#I travel at another time": "أتنقل في وقت آخر",
       "#I prepare differently (e.g. clothes, umbrella)": "أستعد بطريقة مختلفة (مثل الملابس أو المظلة)",
-      "#I cannot assess this": "لا أستطيع تقييم ذلك",
       "#<p>Noise, air, weather, cleanliness and how places look <b>when you use public transport</b>.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”. Your answers are not linked to your name, and no public authority receives them.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about SmartUrbanity</a></p><p>Only the SmartUrbanity research team reads your answers. We keep them for research for 36 months; then we delete them or make them anonymous.</p><ul><li>Public transport – Your surroundings</li><li>Public transport – How the trip feels</li><li>Public transport – Effort and satisfaction</li></ul>": "<p>الضوضاء والهواء والطقس والنظافة ومظهر الأماكن <b>عند استخدام وسائل النقل العام</b>.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة». لا ترتبط إجاباتك باسمك ولا تُرسل إلى أي جهة حكومية.</p><p><a href=\"$pilot_page\" target=\"_blank\" rel=\"noopener noreferrer\">مزيد من المعلومات عن SmartUrbanity</a></p><p>يقرأ إجاباتك فريق البحث في SmartUrbanity فقط. نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><ul><li>النقل العام – ما حولك</li><li>النقل العام – شعورك أثناء الرحلة</li><li>النقل العام – الجهد والرضا</li></ul>"
     }
   }
