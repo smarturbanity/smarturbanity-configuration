@@ -1,7 +1,7 @@
 # Rating scales and “Not applicable” in the SmartUrbanity questionnaires
 
-Ordered questions now say how they are shown: 12 as stars, the others as numbered
-points with every point's wording listed under the scale. Where a question may not concern the
+Ordered questions now say how they are shown: 12 as stars, the others as an ordered
+scale (`answer_scale: "score"`, not a Likert agreement scale) of numbered points with every point's wording listed under the scale. Where a question may not concern the
 respondent (per-mode surveys, mode-dependent street questions) it offers the
 standard “Not applicable” answer (Italian “Non mi riguarda”); 20 questions replace their own “does not concern
 me” option with it. `connection_clarity` is reversed to run from difficult to easy

@@ -1,7 +1,7 @@
 # Rating scales and “Not applicable”
 
 Decision: ordered single-choice questions declare how the application shows them.
-`answer_scale: "likert"` shows numbered points 1..n with every point's wording listed under the scale, the chosen one highlighted;
+`answer_scale: "score"` (an ordered scale, not a Likert agreement scale) shows numbered points 1..n with every point's wording listed under the scale, the chosen one highlighted;
 `answer_scale: "rating"` shows stars. Wording, stored values and translations are
 unchanged except where listed below.
 
