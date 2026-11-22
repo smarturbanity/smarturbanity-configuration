@@ -37,6 +37,11 @@ unchanged except where listed below.
   `put_visual_quality`, `walk_visual_quality`. Unused translations are removed.
 - **Order and wording:** `connection_clarity` now runs from “Very difficult” to
   “Very easy”; `trip_rating` options lose the “(1)…(5)” suffix in all languages.
+- **Trips given up for cost:** `travel_given_up_cost` asked a yes/no question with
+  three frequency answers. It now asks “In the last month, how many times did you
+  give up a trip because it cost too much?” with five counted points: never, once,
+  2–3 times, about once a week, several times a week. `travel_given_up_purposes`
+  follows every answer except never. No answers had been collected.
 
 Unchanged: questions judged as already clear, the four questions with a middle
 answer at the end (`history_detailed`, `walk_distance`, `walk_wayfinding`,

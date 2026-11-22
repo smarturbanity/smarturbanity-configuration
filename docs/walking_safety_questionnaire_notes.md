@@ -701,3 +701,11 @@ is sometimes or often, `travel_given_up_purposes` 1.0.0 asks which trips (work o
 study, health, shopping and errands, visiting people, leisure; several answers).
 Profile 2.2.0. Earlier `economic_status` answers stay stored and are not compared
 with the new ones. Eight translations; no browser/persona retest is claimed.
+
+Lory changed `travel_given_up_cost` on 2026-11-22: the question asked whether a
+trip had been given up but offered frequencies, and three points are too few for
+a scale. It now asks “In the last month, how many times did you give up a trip
+because it cost too much?” with never, once, 2–3 times, about once a week and
+several times a week (prefer not to say stays). `travel_given_up_purposes` shows
+for every answer except never. Same version as the rating-scales change (question
+2.0.0, profile 3.0.0); no answers had been collected. Eight translations.
