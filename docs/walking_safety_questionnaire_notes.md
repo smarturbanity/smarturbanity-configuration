@@ -753,3 +753,12 @@ doesn’t bother me”. The public transport question now asks only about the ve
 “When the bus, tram or train is crowded, how comfortable do you feel?”; a crowded
 stop is no longer part of it. Same versions as the rating-scales change; no
 answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 to split the place report question on hot days, which mixed
+heat and shade in one answer and had a middle “Bearable” that already leaned
+negative. `place_heat_shade` is replaced by `place_heat_comfort` (“On hot days, how
+comfortable do you feel here?”, with the five comfort answers of the crowding
+questions) and `place_shade` (“How much shade is there here on hot days?”: no
+shade, very little shade, some shade, plenty of shade, shade almost everywhere), both
+version 1.0.0 with the same conditions, I don’t know and prefer not to say. No
+answers had been collected; eight translations.

@@ -11,15 +11,16 @@ unchanged except where listed below.
 
 - **Likert (87 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
-  comfort, pleasantness, overall judgement, air, cleanliness, noise, heat and shade,
+  comfort, pleasantness, overall judgement, air, cleanliness, noise, comfort on hot days,
   place safety and security, street safety from traffic and from
   crime or harassment, desired facilities (no … yes),
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (99 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (100 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
   confidence, trip safety, community attachment) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
-  crowding, visual quality, parking problem, difficulty of getting through a street).
+  crowding, visual quality, parking problem, difficulty of getting through a street,
+  shade on hot days).
 - **Stars (12, all Likert):** judgements of quality or value: `place_pleasantness`,
   `place_overall`, `place_air`, `place_cleanliness`, `motorcycle_parking`,
   `trip_rating` and the six `*_satisfaction` questions; every other scale keeps
@@ -79,7 +80,12 @@ unchanged except where listed below.
   and had different middle answers; both now read very uncomfortable, fairly
   uncomfortable, neither uncomfortable nor comfortable, fairly comfortable, very
   comfortable, and the public transport question asks only about a crowded bus,
-  tram or train. No answers had been collected.
+  tram or train. `place_heat_shade` mixed heat and shade in one answer (“Hot,
+  little shade”) and had a middle “Bearable” that was already negative; it becomes
+  two questions: `place_heat_comfort` (“On hot days, how comfortable do you feel
+  here?”, Likert with the comfort labels above) and `place_shade` (“How much shade
+  is there here on hot days?”, ordered: no shade, very little, some, plenty, shade
+  almost everywhere), both version 1.0.0. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
