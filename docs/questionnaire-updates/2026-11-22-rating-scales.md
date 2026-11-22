@@ -1,7 +1,7 @@
 # Rating scales and “Not applicable”
 
 Decision: ordered single-choice questions declare how the application shows them.
-`answer_scale: "likert"` shows numbered points 1..n with a legend for the two ends;
+`answer_scale: "likert"` shows numbered points 1..n with every point's wording listed under the scale, the chosen one highlighted;
 `answer_scale: "rating"` shows stars. Wording, stored values and translations are
 unchanged except where listed below.
 
@@ -11,7 +11,7 @@ unchanged except where listed below.
 - **Numbers (137 occurrences):** agreement, intensity, frequency in words, ease,
   stress, usefulness and the descriptive scales (infrastructure adequacy, parking
   at the destination, heat and shade, slope, vehicle availability, reflexes).
-- **Not applicable:** `add_not_applicable: true` adds the standard answer below the
+- **Not applicable:** `add_not_applicable: true` adds the standard answer (Italian “Non mi riguarda”) below the
   scale, stored as `not_applicable`, never preselected and never a point. It is set
   only where a question may not concern the respondent: converted questions of the
   per-mode surveys, the mode-dependent street segment questions (`pedestrian_*`,
