@@ -1,11 +1,12 @@
 {
   "appFlags": [
     "answer_scale",
+    "answer_scale_stars",
     "add_not_applicable"
   ],
   "appBase": "8b6197f1a7ed2be8c0ae874f84a5ebf985274ed1",
   "configurationBase": "7b263d98c2e047af571497e8e48c2ec6c8a02d1e",
-  "behavior": "answer_scale score (an ordered scale) shows numbered points 1..n, rating shows stars; add_not_applicable adds the standard Not applicable answer below the scale, stored as not_applicable, never preselected and never a point.",
+  "behavior": "answer_scale says the kind of scale, likert (symmetric around a neutral middle, 1..n meaning -2..+2 in analysis) or score (an ordered scale that only grows); both show numbered points 1..n, or stars with answer_scale_stars true; add_not_applicable adds the standard Not applicable answer below the scale, stored as not_applicable, never preselected and never a point.",
   "sha256": "SHA-256 of the question object serialized as compact UTF-8 JSON",
   "forms": [
     {
@@ -189,7 +190,7 @@
       "id": "place_traffic_safety",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "07aed5c64c7d7534cc6d69e92d9706baed49d835412baffcf094bc9f5bd2d51d"
     },
@@ -198,7 +199,7 @@
       "id": "place_personal_security",
       "previous": "1.0.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "ed4889098143a44059b464b45623f8f816a0c716ed1b225d9c136892cc76fd65"
     },
@@ -207,7 +208,8 @@
       "id": "place_pleasantness",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": false,
       "sha256": "c08069f6c70fdcdba9a985bc82acef8e70d51b82842eb85defbf1ffa45437816"
     },
@@ -216,7 +218,8 @@
       "id": "place_overall",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": false,
       "sha256": "3c07ecb6d37514200c23da40e0c0f46d8e31db7e6ec2a54e316eaf05f146f7da"
     },
@@ -225,7 +228,7 @@
       "id": "place_moving_ease",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "77d6201868e15f848e47d5f7259d95dd59f6d9943a9a43fd7551110927235565"
     },
@@ -234,7 +237,7 @@
       "id": "place_heat_shade",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "ee36750d6e0d786febfc6b0ce5de7b9b1d423bca4c5a69bd7033d2aea03aca63"
     },
@@ -243,7 +246,7 @@
       "id": "place_noise",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "9503914b143b5ddc18811b0b557033556f631132c221a81d8de229ff46a5636d"
     },
@@ -252,7 +255,8 @@
       "id": "place_air",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": false,
       "sha256": "b3a704aac1ddd12c72e24b32576cfc45596292e2b43f5a09115d43b07b8ac4e7"
     },
@@ -261,7 +265,8 @@
       "id": "place_cleanliness",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": false,
       "sha256": "a55707197c99ddbc5980a7babbc1b0e64f496a9e3ebaa3f297fa3c7bdd43901d"
     },
@@ -297,7 +302,7 @@
       "id": "connection_clarity",
       "previous": "2.1.0",
       "version": "3.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "optionsReversed": true,
       "sha256": "752436c8bf6817e9a4aa0da2793ed3f81418a9d454ae085a8783a1fedff723ff"
@@ -343,7 +348,7 @@
       "id": "traffic_speed_feeling",
       "previous": "2.1.0",
       "version": "3.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_vehicles",
       "sha256": "cbdcf6decb042f5f24e882c075402fc58821a8f73a9d21c13e99a5b84d7f78ec"
@@ -425,7 +430,7 @@
       "id": "desired_walking_path",
       "previous": "2.1.0",
       "version": "3.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "570478b848ab915002e643a2d265377d746d3118e2eb41db1584d033af7538e9"
     },
@@ -434,7 +439,7 @@
       "id": "desired_bike_facility",
       "previous": "2.1.0",
       "version": "3.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "1ccbd3f461451e41a62a559a82ae854e90d243e64792a14d5bc4d584bd1f5f5f"
     },
@@ -452,7 +457,7 @@
       "id": "app_mobility",
       "previous": "1.3.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "not_used",
       "sha256": "1dbe992928d9dc86fbdc2f4164bd6fe58e105250455d7dc4ac27b5e086521e98"
@@ -471,7 +476,7 @@
       "id": "car_comfort",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "d92397e2110ddf8dcf11ba0cbf06eb48ff4fcbd2a3db360dcbde54e500666901"
     },
@@ -527,7 +532,7 @@
       "id": "car_emotional_state",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "afe2c6f4c68fb02899db72a3c2a2e0df5bb595d417ef66513aeef85874f71402"
     },
@@ -554,7 +559,7 @@
       "id": "car_effort_vs_alternatives",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "3cdc37fb904dfd9c6547f036f83858cdf7d44f9578182f857ddd564e1eeecd4d"
@@ -573,7 +578,8 @@
       "id": "car_satisfaction",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "f1bfe013f1827ad57d5c7ca85f49f8f7cb480c575dbc829b51b023741a2f3191"
     },
@@ -582,7 +588,7 @@
       "id": "bike_emotional_state",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "28b15c3c9776f3b0c2706e033804d32d980ca0be1a4c483eded3d8318b876668"
     },
@@ -609,7 +615,7 @@
       "id": "bike_effort_vs_alternatives",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "41052294c778f44d1126b90454a907c4f4b6740ba59cad7545d023f2b500580c"
@@ -628,7 +634,8 @@
       "id": "bike_satisfaction",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "2c9e0153c6339bbfc55ddeba63c4699cfe392193557b383256c2b33e41e561ba"
     },
@@ -711,7 +718,7 @@
       "id": "escooter_emotional_state",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "ba83c004578d59dafad579fa3abeb8a6b32cc19f2343444c6c8a4034a916b570"
     },
@@ -738,7 +745,7 @@
       "id": "escooter_effort_vs_alternatives",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "f2f84acdd0e5f139e8ed7d17c417254d480a52b2a420379524ce5327a41c500c"
@@ -757,7 +764,8 @@
       "id": "escooter_satisfaction",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "3566d4df3662a7588cfd3644b7717d06aa68f8195af59a74a5bb9b55726fccc1"
     },
@@ -840,7 +848,7 @@
       "id": "motorcycle_calming",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "05c866b07d5d78b14a0a1eb567edae96978e86e3c12e09a2414c7d72fe0b2b2b"
     },
@@ -849,7 +857,8 @@
       "id": "motorcycle_parking",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "c6e3c4895c1528dc6ab91d6761d906b0f62aa7fe4cdaddff99219d14ee5a2ba0"
     },
@@ -886,7 +895,7 @@
       "id": "motorcycle_emotional_state",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "498aae3be20ee5f085398cee502c3ddee00064f3c7880ad4ffbd7a92006394a5"
     },
@@ -913,7 +922,7 @@
       "id": "motorcycle_effort_vs_alternatives",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "c18baba070189a87d071793f2ef0bb4a191483a69ca070053e831e013bea620a"
@@ -932,7 +941,8 @@
       "id": "motorcycle_satisfaction",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "f79df81d28c2542a56704138ecf7c6be20231f78f545df78e29e7d011192711f"
     },
@@ -970,7 +980,7 @@
       "id": "put_emotional_state",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "15f0498a7040e00e4c1e15171c17e6ed0739c0f0968cd944fea9f710c4e672fb"
     },
@@ -997,7 +1007,7 @@
       "id": "put_effort_vs_alternatives",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "42e1efe1d08c25250b2343cc74e02e059893ee8372ae51db574e25c2b4a2387c"
@@ -1016,7 +1026,8 @@
       "id": "put_satisfaction",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "8cca5c350055f8897163b3a128f0fe00b3d07f8f1934eeebdd874a1cee5515d0"
     },
@@ -1025,7 +1036,7 @@
       "id": "put_crowding_comfort",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "fe604000be7c7e3ef852b74ac76550ede21095f70511fcc212883bfa7f3e2eb0"
     },
@@ -1052,7 +1063,7 @@
       "id": "app_put_tickets",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "not_used",
       "sha256": "b542f66c5261937c18b17b0e757df328609ce14f9c81484e9567bd3a879886d3"
@@ -1072,7 +1083,7 @@
       "id": "walk_crowding_comfort",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "81466c9bd32bd6933ffdb29e19406900135b463e7a6740ce67926e1a2f1404c8"
     },
@@ -1100,7 +1111,7 @@
       "id": "walk_emotional_state",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "sha256": "175cc02eba1d24739fc5d2474b0b633afb6fd82863ce6c22236ce695a99dcc97"
     },
@@ -1127,7 +1138,7 @@
       "id": "walk_effort_vs_alternatives",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": true,
       "replacedOption": "no_alternative",
       "sha256": "c5d1105b70feee3074d109f5530b5cf5531ce50f4283198f94198ec7181c8852"
@@ -1146,7 +1157,8 @@
       "id": "walk_satisfaction",
       "previous": "1.2.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": true,
       "sha256": "148d1837cc8593afdd52b44532c2c856e251a1cee7b64162e1788b9d72327a00"
     },
@@ -1164,7 +1176,7 @@
       "id": "community_attachment",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "740a4090ef7433f5c91a8a76c380d0dc640ca6f9bdc68825b8c732756bf7a84d"
     },
@@ -1182,7 +1194,7 @@
       "id": "vehicle_ease",
       "previous": "2.2.0",
       "version": "3.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "62407f640072b94d03bcb792b1ead46b4fd5721c0378dccb1fbf772528013940"
     },
@@ -1191,7 +1203,7 @@
       "id": "trip_time_vs_expected",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "2dd008cf6fe75eb58089c32d301c3c8072a88ede86fc9ede9e01ef49a06c7a22"
     },
@@ -1236,7 +1248,8 @@
       "id": "trip_rating",
       "previous": "1.1.0",
       "version": "2.0.0",
-      "scale": "rating",
+      "scale": "likert",
+      "stars": true,
       "notApplicable": false,
       "numbersRemovedFromText": true,
       "sha256": "50d976cf2b3dfe874913ba6f445b2aa9d6a29251cec3ad37245e711dfba21d88"
@@ -1246,7 +1259,7 @@
       "id": "account_creation_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "e899a3beeb49bcd6c9626826ade93919d6de0af07458765fcad0c0a461cf8630"
     },
@@ -1255,7 +1268,7 @@
       "id": "profile_update_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "d7442350f70910dfc0deb54161cfc1c4ee5aaecd34b370736655fd90f0df1d67"
     },
@@ -1264,7 +1277,7 @@
       "id": "password_reset_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "80909325f710ab1860a3bb04ad84f9131ad3630f6f785f74d4c45d572c7b7258"
     },
@@ -1273,7 +1286,7 @@
       "id": "texts_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "9098d14bc58b7443ea9a7bffcfc765acb93ba6e00705dfa04a060d0c985e29d9"
     },
@@ -1282,7 +1295,7 @@
       "id": "icons_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "9e75330459357fc51d78af44e7a24508e77bd7fe4cb91d6783e77c38b77f765e"
     },
@@ -1291,7 +1304,7 @@
       "id": "layout_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f8fcf91bd9d4fa85a3e548ff947b0fe94b4bacbc345c5b861f7f7c24a58415d3"
     },
@@ -1300,7 +1313,7 @@
       "id": "tracking_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "7b65132f637425f9679420b527e01147ea24ed9c3295a108d3657091d1cdab4e"
     },
@@ -1309,7 +1322,7 @@
       "id": "mode_switch_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "12a63f313aa1acdd8e5895bfa92b9d53b81d9f1d1536949d957043e992927cad"
     },
@@ -1318,7 +1331,7 @@
       "id": "points_conversion_ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "def46944bf2a09e8f1bb527d5af07ee63b08706ef6f10b6a431bd913202ef2b6"
     },
@@ -1336,7 +1349,7 @@
       "id": "intention_to_use",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "99900be172a1d6097e104d3bc81b5c797d4f664d669ca1157891b204e0fb696a"
     },
@@ -1345,7 +1358,7 @@
       "id": "ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "38cad1147dc3bed23ca3591261ca792049dea3d741f9269dbceee03146a60aa4"
     },
@@ -1354,7 +1367,7 @@
       "id": "texts_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "0d42e61d61dc37f8a02a5d7cd4f871b8506e0a9b3ef8d1a2a9d00ad4d71d926f"
     },
@@ -1363,7 +1376,7 @@
       "id": "icons_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f65a25f96e363f5d07bf57775b260193e0a201c01cc4c01e0685a564e62383de"
     },
@@ -1372,7 +1385,7 @@
       "id": "layout_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f8fcf91bd9d4fa85a3e548ff947b0fe94b4bacbc345c5b861f7f7c24a58415d3"
     },
@@ -1390,7 +1403,7 @@
       "id": "intention_to_use",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "aebf8deb970b96849510b580a05bf65b5eb5c5a29202c396fdf1c7780cfd6349"
     },
@@ -1399,7 +1412,7 @@
       "id": "ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "9e69e4cbfd6f5aeb0591ca3e4a54d272100baa86d6c9286c188698c5f6400087"
     },
@@ -1408,7 +1421,7 @@
       "id": "texts_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "9098d14bc58b7443ea9a7bffcfc765acb93ba6e00705dfa04a060d0c985e29d9"
     },
@@ -1417,7 +1430,7 @@
       "id": "icons_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f65a25f96e363f5d07bf57775b260193e0a201c01cc4c01e0685a564e62383de"
     },
@@ -1426,7 +1439,7 @@
       "id": "layout_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f8fcf91bd9d4fa85a3e548ff947b0fe94b4bacbc345c5b861f7f7c24a58415d3"
     },
@@ -1444,7 +1457,7 @@
       "id": "intention_to_use",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "b576bf117614db6fbb6fd0a8bb666cf6edbbad52760eec201ab1a9daa4fe643d"
     },
@@ -1453,7 +1466,7 @@
       "id": "ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "dcb832ec108374ccefe3acfbe92d42387bca1bb2e85dcf6e6652290b4ec88585"
     },
@@ -1462,7 +1475,7 @@
       "id": "texts_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "58d11e8d176a5106d7f4a4ff41f1f89cf7985dbe6d11d913098fba002b4a47c2"
     },
@@ -1471,7 +1484,7 @@
       "id": "icons_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f65a25f96e363f5d07bf57775b260193e0a201c01cc4c01e0685a564e62383de"
     },
@@ -1480,7 +1493,7 @@
       "id": "layout_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f8fcf91bd9d4fa85a3e548ff947b0fe94b4bacbc345c5b861f7f7c24a58415d3"
     },
@@ -1498,7 +1511,7 @@
       "id": "intention_to_use",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f32a7580d5f12ff50452e527321822ae7d25d33338e89c620dd29f3d8de6cccd"
     },
@@ -1507,7 +1520,7 @@
       "id": "ease",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "3368e426c502158539e1c6995cb0ea0b3b3cda664b157dc492260ad3c195b4ad"
     },
@@ -1516,7 +1529,7 @@
       "id": "texts_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "58d11e8d176a5106d7f4a4ff41f1f89cf7985dbe6d11d913098fba002b4a47c2"
     },
@@ -1525,7 +1538,7 @@
       "id": "layout_clarity",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "f8fcf91bd9d4fa85a3e548ff947b0fe94b4bacbc345c5b861f7f7c24a58415d3"
     },
@@ -1543,7 +1556,7 @@
       "id": "intention_to_use",
       "previous": null,
       "version": null,
-      "scale": "score",
+      "scale": "likert",
       "notApplicable": false,
       "sha256": "3100a41558dd182cf423738962a3bfcba58f9a8f623b21092d55351d63b20017"
     }
@@ -1551,8 +1564,9 @@
   "verification": {
     "sourceOccurrences": 149,
     "forms": 29,
-    "score": 137,
-    "rating": 12,
+    "likert": 70,
+    "score": 78,
+    "stars": 12,
     "notApplicable": 85,
     "replacedOptions": 20
   }
