@@ -74,8 +74,12 @@ unchanged except where listed below.
   extremely. `trip_rating` had a middle answer that was already positive (“Fair”)
   and ends that did not mirror each other (“Very poor”, “Excellent”); its stars now
   read very poor, poor, neither good nor poor, good, very good, the labels of
-  `motorcycle_parking`, and lose the “(1)…(5)” suffix. No answers had been
-  collected.
+  `motorcycle_parking`, and lose the “(1)…(5)” suffix. `put_crowding_comfort` and
+  `walk_crowding_comfort` mixed “A little uncomfortable” with “Mostly comfortable”
+  and had different middle answers; both now read very uncomfortable, fairly
+  uncomfortable, neither uncomfortable nor comfortable, fairly comfortable, very
+  comfortable, and the public transport question asks only about a crowded bus,
+  tram or train. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a

@@ -743,3 +743,13 @@ stars of `trip_rating` read very poor, poor, neither good nor poor, good and ver
 good, like the other star questions, instead of a middle “Fair” that leaned
 positive and an “Excellent” that did not mirror “Very poor”. Values 1–5 are
 unchanged; same versions as the rating-scales change; eight translations.
+
+Lory chose on 2026-11-22 the same balanced comfort scale for both crowding
+questions: `put_crowding_comfort` and `walk_crowding_comfort` read very
+uncomfortable, fairly uncomfortable, neither uncomfortable nor comfortable, fairly
+comfortable and very comfortable, instead of “a little” on one side and “mostly”
+on the other, and the walking question loses its different middle answer “It
+doesn’t bother me”. The public transport question now asks only about the vehicle:
+“When the bus, tram or train is crowded, how comfortable do you feel?”; a crowded
+stop is no longer part of it. Same versions as the rating-scales change; no
+answers had been collected; eight translations.
