@@ -51,7 +51,31 @@
         "bike": {
           "property": "osm.bicycle"
         }
-      }
+      },
+      "derived_properties": [
+        {
+          "property": "crossing_kind",
+          "cases": [
+            {"selectors": [{"property": "osm.crossing", "values": ["traffic_signals", "toucan", "pelican", "pegasus"]}], "value": "signal"},
+            {"selectors": [{"property": "osm.crossing:signals", "values": ["yes"]}], "value": "signal"},
+            {"selectors": [{"property": "osm.crossing", "values": ["unmarked"]}], "value": "unmarked"},
+            {"selectors": [{"property": "osm.crossing:markings", "values": ["no"]}], "value": "unmarked"},
+            {"selectors": [{"property": "osm.crossing", "values": ["marked", "zebra", "uncontrolled"]}], "value": "marked_no_signal"},
+            {"selectors": [{"property": "osm.crossing:markings", "values": ["yes", "zebra", "lines", "dashes", "dots", "ladder", "ladder:skewed", "ladder:paired", "surface", "pictograms"]}], "value": "marked_no_signal"}
+          ]
+        },
+        {
+          "property": "crossing_users",
+          "cases": [
+            {"selectors": [{"property": "osm.bicycle", "values": ["no", "dismount"]}], "value": "pedestrians_only"},
+            {"selectors": [{"property": "osm.bicycle", "values": ["yes", "designated"]}, {"property": "osm.segregated", "values": ["yes"]}], "value": "separate_bike_lane"},
+            {"selectors": [{"property": "osm.bicycle", "values": ["designated"]}], "value": "shared_ped_bike"},
+            {"selectors": [{"property": "osm.crossing", "values": ["toucan"]}], "value": "shared_ped_bike"},
+            {"selectors": [{"property": "osm.crossing_ref", "values": ["toucan"]}], "value": "shared_ped_bike"},
+            {"selectors": [{"property": "osm.bicycle", "values": ["yes"]}], "value": "bikes_not_marked"}
+          ]
+        }
+      ]
     },
     "package_properties": {
       "segments": {
@@ -77,6 +101,8 @@
           "physical_infrastructure.tunnel",
           "physical_infrastructure.barrier",
           "physical_infrastructure.width_m",
+          "physical_infrastructure.surface",
+          "physical_infrastructure.lit",
           "osm.id",
           "osm.segment",
           "osm.direction",
@@ -126,12 +152,20 @@
         "properties": []
       },
       "connections": {
+        "omit_null": true,
         "properties": [
           "address",
           "walk_access",
           "bike_access",
           "crossing_kind",
-          "crossing_users"
+          "crossing_users",
+          "osm.crossing:island",
+          "osm.tactile_paving",
+          "osm.traffic_signals:sound",
+          "osm.traffic_signals:vibration",
+          "osm.kerb",
+          "osm.wheelchair",
+          "osm.lit"
         ]
       }
     },
