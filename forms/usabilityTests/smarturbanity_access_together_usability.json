@@ -719,12 +719,16 @@
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Yes, all of them",
+                "value": "all"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Only some of them",
+                "value": "some"
+              },
+              {
+                "text": "None of them",
+                "value": "none"
               }
             ],
             "checks_inline": false,
@@ -738,7 +742,8 @@
             "question_type": "textarea",
             "show_if": {
               "modes_supported": [
-                "no"
+                "some",
+                "none"
               ]
             },
             "required": false,
@@ -1531,6 +1536,9 @@
       "#Anything to add about the permissions the app asks for?": "Anything to add about the permissions the app asks for?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Did you manage to complete the questionnaires before and after the trip?",
       "#Does the app support the travel modes you usually use?": "Does the app support the travel modes you usually use?",
+      "#Yes, all of them": "Yes, all of them",
+      "#Only some of them": "Only some of them",
+      "#None of them": "None of them",
       "#Which travel modes are missing?": "Which travel modes are missing?",
       "#How easy is it to record your trips with the app?": "How easy is it to record your trips with the app?",
       "#What made recording your trips difficult?": "What made recording your trips difficult?",
@@ -1682,6 +1690,9 @@
       "#Anything to add about the permissions the app asks for?": "Avez-vous quelque chose à ajouter sur les autorisations demandées par l’application ?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Avez-vous réussi à compléter les questionnaires avant et après le trajet ?",
       "#Does the app support the travel modes you usually use?": "L’application prend-elle en charge les modes de transport que vous utilisez habituellement ?",
+      "#Yes, all of them": "Oui, tous",
+      "#Only some of them": "Seulement certains",
+      "#None of them": "Aucun",
       "#Which travel modes are missing?": "Quels modes de transport manquent ?",
       "#How easy is it to record your trips with the app?": "Dans quelle mesure est-il facile d’enregistrer vos trajets avec l’application ?",
       "#What made recording your trips difficult?": "Qu’est-ce qui a rendu l’enregistrement de vos trajets difficile ?",
@@ -1833,6 +1844,9 @@
       "#Anything to add about the permissions the app asks for?": "Vuoi aggiungere qualcosa sulle autorizzazioni che l’app chiede?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Hai potuto compilare i questionari prima e dopo il viaggio?",
       "#Does the app support the travel modes you usually use?": "L’app supporta i modi di spostamento che usi di solito?",
+      "#Yes, all of them": "Sì, tutti",
+      "#Only some of them": "Solo alcuni",
+      "#None of them": "Nessuno",
       "#Which travel modes are missing?": "Quali modi di spostamento mancano?",
       "#How easy is it to record your trips with the app?": "Quanto è facile registrare i tuoi viaggi con l’app?",
       "#What made recording your trips difficult?": "Cosa ha reso difficile registrare i tuoi viaggi?",
@@ -1984,6 +1998,9 @@
       "#Anything to add about the permissions the app asks for?": "Möchten Sie noch etwas zu den Berechtigungen sagen, die die App anfordert?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Konnten Sie die Fragebögen vor und nach dem Weg ausfüllen?",
       "#Does the app support the travel modes you usually use?": "Unterstützt die App die Verkehrsmittel, die Sie normalerweise nutzen?",
+      "#Yes, all of them": "Ja, alle",
+      "#Only some of them": "Nur einige",
+      "#None of them": "Keine",
       "#Which travel modes are missing?": "Welche Verkehrsmittel fehlen?",
       "#How easy is it to record your trips with the app?": "Wie einfach ist es, Ihre Wege mit der App aufzuzeichnen?",
       "#What made recording your trips difficult?": "Was hat das Aufzeichnen Ihrer Wege schwierig gemacht?",
@@ -2135,6 +2152,9 @@
       "#Anything to add about the permissions the app asks for?": "Uygulamanın istediği izinler hakkında eklemek istediğiniz bir şey var mı?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Yolculuktan önce ve sonra anketleri doldurabildiniz mi?",
       "#Does the app support the travel modes you usually use?": "Uygulama genellikle kullandığınız ulaşım türlerini destekliyor mu?",
+      "#Yes, all of them": "Evet, hepsini",
+      "#Only some of them": "Yalnızca bazılarını",
+      "#None of them": "Hiçbirini",
       "#Which travel modes are missing?": "Hangi ulaşım türleri eksik?",
       "#How easy is it to record your trips with the app?": "Uygulamayla yolculuklarınızı kaydetmek ne kadar kolay?",
       "#What made recording your trips difficult?": "Yolculuklarınızı kaydetmeyi ne zorlaştırdı?",
@@ -2286,6 +2306,9 @@
       "#Anything to add about the permissions the app asks for?": "Szeretne még valamit hozzáfűzni az alkalmazás által kért engedélyekhez?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Sikerült kitöltenie az út előtti és utáni kérdőíveket?",
       "#Does the app support the travel modes you usually use?": "Támogatja az alkalmazás azokat a közlekedési módokat, amelyeket általában használ?",
+      "#Yes, all of them": "Igen, mindet",
+      "#Only some of them": "Csak néhányat",
+      "#None of them": "Egyiket sem",
       "#Which travel modes are missing?": "Mely közlekedési módok hiányoznak?",
       "#How easy is it to record your trips with the app?": "Mennyire könnyű rögzíteni az útjait az alkalmazással?",
       "#What made recording your trips difficult?": "Mi tette nehézzé az útjai rögzítését?",
@@ -2437,6 +2460,9 @@
       "#Anything to add about the permissions the app asks for?": "درباره مجوزهایی که برنامه درخواست می‌کند نکته دیگری دارید؟",
       "#Did you manage to complete the questionnaires before and after the trip?": "توانستید پرسشنامه‌های قبل و بعد از سفر را تکمیل کنید؟",
       "#Does the app support the travel modes you usually use?": "آیا برنامه از شیوه‌های سفری که معمولاً استفاده می‌کنید پشتیبانی می‌کند؟",
+      "#Yes, all of them": "بله، همه را",
+      "#Only some of them": "فقط برخی را",
+      "#None of them": "هیچ‌کدام را",
       "#Which travel modes are missing?": "کدام شیوه‌های سفر وجود ندارد؟",
       "#How easy is it to record your trips with the app?": "ثبت سفرهایتان با برنامه چقدر آسان است؟",
       "#What made recording your trips difficult?": "چه چیزی ثبت سفرهایتان را دشوار کرد؟",
@@ -2588,6 +2614,9 @@
       "#Anything to add about the permissions the app asks for?": "هل لديك إضافة حول الأذونات التي يطلبها التطبيق؟",
       "#Did you manage to complete the questionnaires before and after the trip?": "هل تمكنت من إكمال الاستبيانات قبل الرحلة وبعدها؟",
       "#Does the app support the travel modes you usually use?": "هل يدعم التطبيق وسائل التنقل المستخدمة عادةً؟",
+      "#Yes, all of them": "نعم، جميعها",
+      "#Only some of them": "بعضها فقط",
+      "#None of them": "لا شيء منها",
       "#Which travel modes are missing?": "ما وسائل التنقل غير المتوفرة؟",
       "#How easy is it to record your trips with the app?": "ما مدى سهولة تسجيل رحلاتك باستخدام التطبيق؟",
       "#What made recording your trips difficult?": "ما الذي جعل تسجيل رحلاتك صعبًا؟",

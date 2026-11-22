@@ -9,16 +9,17 @@ wording listed under the scale, the chosen one highlighted; `answer_scale_stars:
 true` draws them as stars instead. Wording, stored values and translations are
 unchanged except where listed below.
 
-- **Likert (80 occurrences):** ease and clarity (very difficult … very easy),
+- **Likert (88 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
   comfort, pleasantness, overall judgement, air, cleanliness, noise, heat and shade,
-  place safety and security, desired facilities (no … yes), community attachment,
+  place safety and security, street safety from traffic and from
+  crime or harassment, desired facilities (no … yes), community attachment,
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (85 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (98 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
   confidence, trip safety) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
-  crowding, visual quality, parking problem).
+  crowding, visual quality, parking problem, difficulty of getting through a street).
 - **Stars (12, all Likert):** judgements of quality or value: `place_pleasantness`,
   `place_overall`, `place_air`, `place_cleanliness`, `motorcycle_parking`,
   `trip_rating` and the six `*_satisfaction` questions; every other scale keeps
@@ -27,14 +28,16 @@ unchanged except where listed below.
   scale, stored as `not_applicable`, never preselected and never a point. It is set
   only where a question may not concern the respondent: converted questions of the
   per-mode surveys, the mode-dependent street segment questions (`pedestrian_*`,
-  `cyclist_*`, `bike_intrusion_frequency`) and the 20 questions below.
-- **Out-of-scale options replaced (20):** the trailing option meaning “this does not
+  `cyclist_*`, `bike_intrusion_frequency`) and the 37 questions below.
+- **Out-of-scale options replaced (37):** the trailing option meaning “this does not
   concern me” is removed and replaced by Not applicable: `traffic_speed_feeling`,
   `app_mobility`, `app_put_tickets`, `car_parking_issue`, `car_charging`,
   `motorcycle_charging`, the six `*_effort_vs_alternatives`,
   `motorcycle_cost_sensitivity`, `bike_confidence`, `escooter_confidence`,
   `bike_skip_dark`, `escooter_skip_dark`, `walk_slope_effect`,
-  `put_visual_quality`, `walk_visual_quality`. Unused translations are removed.
+  `put_visual_quality`, `walk_visual_quality`, the nine `walk_*` safety questions
+  of the walking survey, and `pedestrian_traffic_unsafe`, `cyclist_traffic_unsafe`,
+  `personal_day_unsafe`, `personal_evening_unsafe` in both street assessments. Unused translations are removed.
 - **Order and wording:** `connection_clarity` now runs from “Very difficult” to
   “Very easy”; `trip_rating` options lose the “(1)…(5)” suffix in all languages.
 - **Trips given up for cost:** `travel_given_up_cost` asked a yes/no question with
@@ -52,6 +55,18 @@ unchanged except where listed below.
   results and fit of the trip history (ordered); ease of understanding the trip
   impact and the points calculation (Likert). Their follow-up questions show for the
   lower answers. No answers had been collected.
+- **Yes or no where the answer is a matter of degree:** the nine `walk_*` safety
+  questions of the walking survey ask how often (never … always), and the ones that
+  said only “on foot” now include the wheelchair. In both street assessments
+  `pedestrian_use_difficult` and `cyclist_use_difficult` ask how difficult it is to
+  get through, on five ordered points from “I cannot get through” to “Not
+  difficult”, keeping the impassable answer as the worst point;
+  `pedestrian_traffic_unsafe`, `cyclist_traffic_unsafe`, `personal_day_unsafe` and
+  `personal_evening_unsafe` ask how safe the person feels, with the five Likert
+  answers of the place report (not at all safe … completely safe). Outside the
+  scales, `put_no_seats` now separates not needing a seat from finding one usually,
+  sometimes not or often not, and `modes_supported` answers all, some or none, with
+  its follow-up shown for some and none. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a

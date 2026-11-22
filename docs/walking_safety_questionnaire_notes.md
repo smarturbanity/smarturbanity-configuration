@@ -720,3 +720,13 @@ much too much; usefulness of trip results, fit of the trip history and ease of
 understanding the impact and the points calculation have five points. Follow-up
 questions show for the lower answers. Same versions as the rating-scales change;
 no answers had been collected; eight translations where the form has them.
+
+Lory turned on 2026-11-22 the yes/no questions whose answer is a matter of degree
+into scales. The nine walking safety questions ask how often, from never to always,
+with Not applicable below, and mention the wheelchair where they said only on foot.
+In the street assessments, difficulty of getting through has five ordered points
+with “I cannot get through” as the worst; traffic safety and safety from crime or
+harassment by day and in the evening use the five safety answers of the place
+report. The seat question on public transport separates need from availability,
+and the usability question on supported travel modes answers all, some or none.
+No answers had been collected; eight translations.

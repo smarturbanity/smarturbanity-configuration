@@ -307,23 +307,32 @@
         "title": "Getting through",
         "questions": [
           {
-            "text": "Is it difficult for you to get through here on foot or using a wheelchair?",
+            "text": "How difficult is it for you to get through here on foot or using a wheelchair?",
             "answer_key": "pedestrian_use_difficult",
             "question_type": "single_option",
+            "answer_scale": "score",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              },
-              {
                 "text": "I cannot get through",
-                "value": "cannot_get_through"
+                "value": "5_cannot_get_through"
+              },
+              {
+                "text": "Very difficult",
+                "value": "4_very_difficult"
+              },
+              {
+                "text": "Quite difficult",
+                "value": "3_quite_difficult"
+              },
+              {
+                "text": "Slightly difficult",
+                "value": "2_slightly_difficult"
+              },
+              {
+                "text": "Not difficult",
+                "value": "1_not_difficult"
               }
             ],
             "show_if": {
@@ -333,28 +342,37 @@
             },
             "required": true,
             "question_id": "pedestrian_use_difficult",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
           {
-            "text": "Is it difficult for you to get through here by bicycle or e-scooter?",
+            "text": "How difficult is it for you to get through here by bicycle or e-scooter?",
             "answer_key": "cyclist_use_difficult",
             "question_type": "single_option",
+            "answer_scale": "score",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              },
-              {
                 "text": "I cannot get through",
-                "value": "cannot_get_through"
+                "value": "5_cannot_get_through"
+              },
+              {
+                "text": "Very difficult",
+                "value": "4_very_difficult"
+              },
+              {
+                "text": "Quite difficult",
+                "value": "3_quite_difficult"
+              },
+              {
+                "text": "Slightly difficult",
+                "value": "2_slightly_difficult"
+              },
+              {
+                "text": "Not difficult",
+                "value": "1_not_difficult"
               }
             ],
             "show_if": {
@@ -364,7 +382,7 @@
             },
             "required": true,
             "question_id": "cyclist_use_difficult",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           }
@@ -374,23 +392,32 @@
         "title": "Road safety",
         "questions": [
           {
-            "text": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
+            "text": "How safe from traffic do you feel here on foot or using a wheelchair?",
             "answer_key": "pedestrian_traffic_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {
@@ -400,28 +427,38 @@
             },
             "required": true,
             "question_id": "pedestrian_traffic_unsafe",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
-            "text": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
+            "text": "How safe from traffic do you feel here by bicycle or e-scooter?",
             "answer_key": "cyclist_traffic_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {
@@ -431,9 +468,10 @@
             },
             "required": true,
             "question_id": "cyclist_traffic_unsafe",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -441,60 +479,80 @@
         "title": "Personal security",
         "questions": [
           {
-            "text": "During the day, do you feel unsafe here from crime or harassment?",
+            "text": "During the day, how safe from crime or harassment do you feel here?",
             "answer_key": "personal_day_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {},
             "add_i_dont_know": true,
             "required": true,
             "question_id": "personal_day_unsafe",
-            "question_version": "1.0.1",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
-            "text": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+            "text": "In the evening or after dark, how safe from crime or harassment do you feel here?",
             "answer_key": "personal_evening_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {},
             "add_i_dont_know": true,
             "required": true,
             "question_id": "personal_evening_unsafe",
-            "question_version": "1.0.1",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -2327,13 +2385,19 @@
       "#Road safety": "Road safety",
       "#Personal security": "Personal security",
       "#More details": "More details",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Is it difficult for you to get through here on foot or using a wheelchair?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Is it difficult for you to get through here by bicycle or e-scooter?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "How difficult is it for you to get through here on foot or using a wheelchair?",
+      "#Quite difficult": "Quite difficult",
+      "#Slightly difficult": "Slightly difficult",
+      "#Not difficult": "Not difficult",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "How difficult is it for you to get through here by bicycle or e-scooter?",
       "#I cannot get through": "I cannot get through",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "During the day, do you feel unsafe here from crime or harassment?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "How safe from traffic do you feel here on foot or using a wheelchair?",
+      "#Not at all safe": "Not at all safe",
+      "#Quite safe": "Quite safe",
+      "#Completely safe": "Completely safe",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "How safe from traffic do you feel here by bicycle or e-scooter?",
+      "#During the day, how safe from crime or harassment do you feel here?": "During the day, how safe from crime or harassment do you feel here?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "In the evening or after dark, how safe from crime or harassment do you feel here?",
       "#Would you like to add optional details?": "Would you like to add optional details?",
       "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
       "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
@@ -2640,13 +2704,19 @@
       "#Road safety": "Sicurezza nel traffico",
       "#Personal security": "Sicurezza personale",
       "#More details": "Altri dettagli",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "È difficile per te passare da qui a piedi o in sedia a rotelle?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "È difficile per te passare da qui in bici o in monopattino elettrico?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Quanto è difficile per te passare da qui a piedi o in sedia a rotelle?",
+      "#Quite difficult": "Abbastanza difficile",
+      "#Slightly difficult": "Un po' difficile",
+      "#Not difficult": "Non difficile",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Quanto è difficile per te passare da qui in bici o in monopattino elettrico?",
       "#I cannot get through": "Non riesco a passare",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Il traffico ti fa sentire in pericolo qui a piedi o in sedia a rotelle?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Il traffico ti fa sentire in pericolo qui in bici o in monopattino elettrico?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Di giorno, qui ti senti in pericolo per reati o molestie?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Di sera o dopo il tramonto, qui ti senti in pericolo per reati o molestie?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Quanto ti senti al sicuro dal traffico qui a piedi o in sedia a rotelle?",
+      "#Not at all safe": "Per niente al sicuro",
+      "#Quite safe": "Abbastanza al sicuro",
+      "#Completely safe": "Del tutto al sicuro",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Quanto ti senti al sicuro dal traffico qui in bici o in monopattino elettrico?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Di giorno, quanto ti senti al sicuro qui da reati o molestie?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Di sera o dopo il tramonto, quanto ti senti al sicuro qui da reati o molestie?",
       "#Would you like to add optional details?": "Vuoi aggiungere dettagli facoltativi?",
       "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
       "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
@@ -2953,13 +3023,19 @@
       "#Road safety": "Sécurité routière",
       "#Personal security": "Sécurité personnelle",
       "#More details": "Plus de détails",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Est-il difficile pour toi de passer ici à pied ou en fauteuil roulant ?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Est-il difficile pour toi de passer ici à vélo ou en trottinette électrique ?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "À quel point est-il difficile pour toi de passer ici à pied ou en fauteuil roulant ?",
+      "#Quite difficult": "Plutôt difficile",
+      "#Slightly difficult": "Un peu difficile",
+      "#Not difficult": "Pas difficile",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "À quel point est-il difficile pour toi de passer ici à vélo ou en trottinette électrique ?",
       "#I cannot get through": "Je ne peux pas passer",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "La circulation te fait-elle te sentir en danger ici à pied ou en fauteuil roulant ?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "La circulation te fait-elle te sentir en danger ici à vélo ou en trottinette électrique ?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Le jour, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Le soir ou après la tombée de la nuit, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "À quel point te sens-tu en sécurité face à la circulation ici à pied ou en fauteuil roulant ?",
+      "#Not at all safe": "Pas du tout en sécurité",
+      "#Quite safe": "Plutôt en sécurité",
+      "#Completely safe": "Complètement en sécurité",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "À quel point te sens-tu en sécurité face à la circulation ici à vélo ou en trottinette électrique ?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Le jour, à quel point te sens-tu en sécurité ici face à la criminalité ou au harcèlement ?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Le soir ou après la tombée de la nuit, à quel point te sens-tu en sécurité ici face à la criminalité ou au harcèlement ?",
       "#Would you like to add optional details?": "Veux-tu ajouter des détails facultatifs ?",
       "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
       "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
@@ -3266,13 +3342,19 @@
       "#Road safety": "Verkehrssicherheit",
       "#Personal security": "Persönliche Sicherheit",
       "#More details": "Weitere Angaben",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Ist es für Sie schwierig, hier zu Fuß oder mit dem Rollstuhl durchzukommen?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Ist es für Sie schwierig, hier mit dem Fahrrad oder E-Scooter durchzukommen?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Wie schwierig ist es für Sie, hier zu Fuß oder mit dem Rollstuhl durchzukommen?",
+      "#Quite difficult": "Ziemlich schwierig",
+      "#Slightly difficult": "Etwas schwierig",
+      "#Not difficult": "Nicht schwierig",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Wie schwierig ist es für Sie, hier mit dem Fahrrad oder E-Scooter durchzukommen?",
       "#I cannot get through": "Ich komme nicht durch",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Fühlen Sie sich hier zu Fuß oder mit dem Rollstuhl durch den Verkehr unsicher?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Fühlen Sie sich hier mit dem Fahrrad oder E-Scooter durch den Verkehr unsicher?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Fühlen Sie sich hier tagsüber wegen Kriminalität oder Belästigung unsicher?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Fühlen Sie sich hier abends oder nach Einbruch der Dunkelheit wegen Kriminalität oder Belästigung unsicher?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Wie sicher vor dem Verkehr fühlen Sie sich hier zu Fuß oder mit dem Rollstuhl?",
+      "#Not at all safe": "Überhaupt nicht sicher",
+      "#Quite safe": "Ziemlich sicher",
+      "#Completely safe": "Vollkommen sicher",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Wie sicher vor dem Verkehr fühlen Sie sich hier mit dem Fahrrad oder E-Scooter?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Wie sicher vor Kriminalität oder Belästigung fühlen Sie sich hier tagsüber?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Wie sicher vor Kriminalität oder Belästigung fühlen Sie sich hier abends oder nach Einbruch der Dunkelheit?",
       "#Would you like to add optional details?": "Möchten Sie freiwillige Angaben ergänzen?",
       "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
       "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
@@ -3579,13 +3661,19 @@
       "#Road safety": "Trafik güvenliği",
       "#Personal security": "Kişisel güvenlik",
       "#More details": "Daha fazla ayrıntı",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Buradan yürüyerek veya tekerlekli sandalyeyle geçmek senin için zor mu?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Buradan bisiklet veya elektrikli scooter ile geçmek senin için zor mu?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Buradan yürüyerek veya tekerlekli sandalyeyle geçmek senin için ne kadar zor?",
+      "#Quite difficult": "Oldukça zor",
+      "#Slightly difficult": "Biraz zor",
+      "#Not difficult": "Zor değil",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Buradan bisiklet veya elektrikli scooter ile geçmek senin için ne kadar zor?",
       "#I cannot get through": "Geçemiyorum",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Burada yürürken veya tekerlekli sandalye kullanırken trafik seni güvensiz hissettiriyor mu?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Burada bisiklet veya elektrikli scooter kullanırken trafik seni güvensiz hissettiriyor mu?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Gündüz burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Akşam veya hava karardıktan sonra burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Burada yürürken veya tekerlekli sandalye kullanırken kendini trafiğe karşı ne kadar güvende hissediyorsun?",
+      "#Not at all safe": "Hiç güvende değil",
+      "#Quite safe": "Oldukça güvende",
+      "#Completely safe": "Tamamen güvende",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Burada bisiklet veya elektrikli scooter kullanırken kendini trafiğe karşı ne kadar güvende hissediyorsun?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Gündüz burada kendini suç veya tacize karşı ne kadar güvende hissediyorsun?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Akşam veya hava karardıktan sonra burada kendini suç veya tacize karşı ne kadar güvende hissediyorsun?",
       "#Would you like to add optional details?": "İsteğe bağlı ayrıntılar eklemek ister misin?",
       "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
       "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
@@ -3892,13 +3980,19 @@
       "#Road safety": "ایمنی در ترافیک",
       "#Personal security": "امنیت شخصی",
       "#More details": "جزئیات بیشتر",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "آیا عبور از اینجا پیاده یا با ویلچر برایت دشوار است؟",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "آیا عبور از اینجا با دوچرخه یا اسکوتر برقی برایت دشوار است؟",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "عبور از اینجا پیاده یا با ویلچر برایت چقدر دشوار است؟",
+      "#Quite difficult": "نسبتاً دشوار",
+      "#Slightly difficult": "کمی دشوار",
+      "#Not difficult": "دشوار نیست",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "عبور از اینجا با دوچرخه یا اسکوتر برقی برایت چقدر دشوار است؟",
       "#I cannot get through": "نمی‌توانم عبور کنم",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "آیا ترافیک در اینجا هنگام پیاده‌روی یا استفاده از ویلچر باعث احساس ناامنی تو می‌شود؟",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "آیا ترافیک در اینجا هنگام دوچرخه‌سواری یا استفاده از اسکوتر برقی باعث احساس ناامنی تو می‌شود؟",
-      "#During the day, do you feel unsafe here from crime or harassment?": "آیا روزها در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "آیا عصرها یا پس از تاریکی در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "اینجا هنگام پیاده‌روی یا استفاده از ویلچر چقدر در برابر ترافیک احساس امنیت می‌کنی؟",
+      "#Not at all safe": "اصلاً امن نیست",
+      "#Quite safe": "تا حد زیادی امن",
+      "#Completely safe": "کاملاً امن",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "اینجا هنگام دوچرخه‌سواری یا استفاده از اسکوتر برقی چقدر در برابر ترافیک احساس امنیت می‌کنی؟",
+      "#During the day, how safe from crime or harassment do you feel here?": "روزها اینجا چقدر در برابر جرم یا آزار احساس امنیت می‌کنی؟",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "عصرها یا پس از تاریکی، اینجا چقدر در برابر جرم یا آزار احساس امنیت می‌کنی؟",
       "#Would you like to add optional details?": "آیا می‌خواهی جزئیات اختیاری اضافه کنی؟",
       "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
       "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
@@ -4205,13 +4299,19 @@
       "#Road safety": "Közlekedésbiztonság",
       "#Personal security": "Személyes biztonság",
       "#More details": "További részletek",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Nehéz itt gyalog vagy kerekesszékkel áthaladnod?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Nehéz itt kerékpárral vagy elektromos rollerrel áthaladnod?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Mennyire nehéz itt gyalog vagy kerekesszékkel áthaladnod?",
+      "#Quite difficult": "Elég nehéz",
+      "#Slightly difficult": "Kicsit nehéz",
+      "#Not difficult": "Nem nehéz",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Mennyire nehéz itt kerékpárral vagy elektromos rollerrel áthaladnod?",
       "#I cannot get through": "Nem tudok áthaladni",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "A forgalom miatt veszélyben érzed magad itt gyalog vagy kerekesszékkel?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "A forgalom miatt veszélyben érzed magad itt kerékpárral vagy elektromos rollerrel?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Napközben bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Este vagy sötétedés után bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Mennyire érzed magad biztonságban a forgalomtól itt gyalog vagy kerekesszékkel?",
+      "#Not at all safe": "Egyáltalán nem biztonságban",
+      "#Quite safe": "Eléggé biztonságban",
+      "#Completely safe": "Teljesen biztonságban",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Mennyire érzed magad biztonságban a forgalomtól itt kerékpárral vagy elektromos rollerrel?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Napközben mennyire érzed magad biztonságban itt bűncselekményektől vagy zaklatástól?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Este vagy sötétedés után mennyire érzed magad biztonságban itt bűncselekményektől vagy zaklatástól?",
       "#Would you like to add optional details?": "Szeretnél további, nem kötelező részleteket megadni?",
       "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
       "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
@@ -4518,13 +4618,19 @@
       "#Road safety": "السلامة المرورية",
       "#Personal security": "الأمان الشخصي",
       "#More details": "المزيد من التفاصيل",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "هل يصعب عليك المرور من هنا مشيًا أو باستخدام كرسي متحرك؟",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "هل يصعب عليك المرور من هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "ما مدى صعوبة المرور من هنا عليك مشيًا أو باستخدام كرسي متحرك؟",
+      "#Quite difficult": "صعب إلى حد ما",
+      "#Slightly difficult": "صعب قليلًا",
+      "#Not difficult": "ليس صعبًا",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "ما مدى صعوبة المرور من هنا عليك بالدراجة أو السكوتر الكهربائي؟",
       "#I cannot get through": "لا أستطيع المرور",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "هل تجعلك حركة المرور تشعر بالخطر هنا مشيًا أو باستخدام كرسي متحرك؟",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "هل تجعلك حركة المرور تشعر بالخطر هنا بالدراجة أو السكوتر الكهربائي؟",
-      "#During the day, do you feel unsafe here from crime or harassment?": "هل تشعر هنا نهارًا بعدم الأمان بسبب الجرائم أو المضايقات؟",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "هل تشعر هنا مساءً أو بعد حلول الظلام بعدم الأمان بسبب الجرائم أو المضايقات؟",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "إلى أي مدى تشعر بالأمان من حركة المرور هنا مشيًا أو باستخدام كرسي متحرك؟",
+      "#Not at all safe": "لا أشعر بالأمان إطلاقًا",
+      "#Quite safe": "أشعر بالأمان إلى حد كبير",
+      "#Completely safe": "أشعر بالأمان تمامًا",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "إلى أي مدى تشعر بالأمان من حركة المرور هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#During the day, how safe from crime or harassment do you feel here?": "نهارًا، إلى أي مدى تشعر هنا بالأمان من الجرائم أو المضايقات؟",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "مساءً أو بعد حلول الظلام، إلى أي مدى تشعر هنا بالأمان من الجرائم أو المضايقات؟",
       "#Would you like to add optional details?": "هل ترغب في إضافة تفاصيل اختيارية؟",
       "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
       "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
