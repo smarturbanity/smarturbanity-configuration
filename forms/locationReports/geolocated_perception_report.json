@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - How this place feels",
     "questionnaire_id": "smarturbanity_geolocated_perception_report",
-    "questionnaire_version": "3.1.0",
+    "questionnaire_version": "4.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 2,
     "options": {
@@ -136,7 +136,7 @@
                 "value": "monthly"
               },
               {
-                "text": "Every week",
+                "text": "A few times a week",
                 "value": "weekly"
               },
               {
@@ -145,14 +145,16 @@
               }
             ],
             "question_id": "place_use_frequency",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "answer_scale": "score"
           },
           {
             "text": "How safe from traffic do you feel here?",
             "answer_key": "place_traffic_safety",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "checks_inline": false,
@@ -179,7 +181,7 @@
               }
             ],
             "question_id": "place_traffic_safety",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -188,6 +190,7 @@
             "help": "We ask this to understand where people feel safe or unsafe. If you prefer, you can choose “Prefer not to say”. Your answer is not linked to your name and it is not a police report.",
             "answer_key": "place_personal_security",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "add_i_dont_know": true,
             "add_prefer_not_to_say": true,
@@ -215,13 +218,15 @@
               }
             ],
             "question_id": "place_personal_security",
-            "question_version": "1.0.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal"
           },
           {
             "text": "How nice is it to be here (how it looks and feels)?",
             "answer_key": "place_pleasantness",
             "question_type": "single_option",
+            "answer_scale": "likert",
+            "answer_scale_stars": true,
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
@@ -247,7 +252,7 @@
               }
             ],
             "question_id": "place_pleasantness",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -256,6 +261,8 @@
             "text": "Overall, how positive or negative is your experience of this place?",
             "answer_key": "place_overall",
             "question_type": "single_option",
+            "answer_scale": "likert",
+            "answer_scale_stars": true,
             "required": true,
             "add_i_dont_know": true,
             "checks_inline": false,
@@ -282,7 +289,7 @@
               }
             ],
             "question_id": "place_overall",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -447,6 +454,7 @@
             "text": "How easy is it to move around here (space, paving, slopes, steps, obstacles)?",
             "answer_key": "place_moving_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -477,15 +485,16 @@
               }
             ],
             "question_id": "place_moving_ease",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
           },
           {
-            "text": "What is it like here on hot days?",
-            "answer_key": "place_heat_shade",
+            "text": "On hot days, how comfortable do you feel here?",
+            "answer_key": "place_heat_comfort",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -495,28 +504,68 @@
             "checks_inline": false,
             "options": [
               {
-                "text": "Very hot, no shade",
-                "value": "very_hot"
+                "text": "Very uncomfortable",
+                "value": "very_uncomfortable"
               },
               {
-                "text": "Hot, little shade",
-                "value": "hot"
+                "text": "Fairly uncomfortable",
+                "value": "fairly_uncomfortable"
               },
               {
-                "text": "Bearable",
-                "value": "bearable"
+                "text": "Neither uncomfortable nor comfortable",
+                "value": "neutral"
               },
               {
-                "text": "Cool, some shade",
-                "value": "cool"
+                "text": "Fairly comfortable",
+                "value": "fairly_comfortable"
               },
               {
-                "text": "Cool, plenty of shade",
-                "value": "very_cool"
+                "text": "Very comfortable",
+                "value": "very_comfortable"
               }
             ],
-            "question_id": "place_heat_shade",
-            "question_version": "1.1.0",
+            "question_id": "place_heat_comfort",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "required": true,
+            "add_prefer_not_to_say": true
+          },
+          {
+            "text": "How much shade is there here on hot days?",
+            "answer_key": "place_shade",
+            "question_type": "single_option",
+            "answer_scale": "score",
+            "show_if": {
+              "place_more_details": [
+                "yes"
+              ]
+            },
+            "add_i_dont_know": true,
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No shade",
+                "value": "none"
+              },
+              {
+                "text": "Very little shade",
+                "value": "very_little"
+              },
+              {
+                "text": "Some shade",
+                "value": "some"
+              },
+              {
+                "text": "Plenty of shade",
+                "value": "plenty"
+              },
+              {
+                "text": "Shade almost everywhere",
+                "value": "almost_everywhere"
+              }
+            ],
+            "question_id": "place_shade",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -525,6 +574,7 @@
             "text": "How noisy is it here?",
             "answer_key": "place_noise",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -555,7 +605,7 @@
               }
             ],
             "question_id": "place_noise",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -564,6 +614,8 @@
             "text": "How is the air here?",
             "answer_key": "place_air",
             "question_type": "single_option",
+            "answer_scale": "likert",
+            "answer_scale_stars": true,
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -594,7 +646,7 @@
               }
             ],
             "question_id": "place_air",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -603,6 +655,8 @@
             "text": "How clean and well maintained is this place?",
             "answer_key": "place_cleanliness",
             "question_type": "single_option",
+            "answer_scale": "likert",
+            "answer_scale_stars": true,
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -633,7 +687,7 @@
               }
             ],
             "question_id": "place_cleanliness",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -642,6 +696,7 @@
             "text": "How many people are usually around at that time?",
             "answer_key": "place_people",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "place_more_details": [
                 "yes"
@@ -672,7 +727,7 @@
               }
             ],
             "question_id": "place_people",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -814,10 +869,10 @@
       "#Early in the morning, while it is still dark": "Early in the morning, while it is still dark",
       "#At any time": "At any time",
       "#How often do you come here or pass by?": "How often do you come here or pass by?",
+      "#A few times a week": "A few times a week",
       "#This is the first time": "This is the first time",
       "#Less than once a month": "Less than once a month",
       "#A few times a month": "A few times a month",
-      "#Every week": "Every week",
       "#Every day or almost": "Every day or almost",
       "#How safe from traffic do you feel here?": "How safe from traffic do you feel here?",
       "#Not at all safe": "Not at all safe",
@@ -875,12 +930,18 @@
       "#Neither easy nor difficult": "Neither easy nor difficult",
       "#Easy": "Easy",
       "#Very easy": "Very easy",
-      "#What is it like here on hot days?": "What is it like here on hot days?",
-      "#Very hot, no shade": "Very hot, no shade",
-      "#Hot, little shade": "Hot, little shade",
-      "#Bearable": "Bearable",
-      "#Cool, some shade": "Cool, some shade",
-      "#Cool, plenty of shade": "Cool, plenty of shade",
+      "#On hot days, how comfortable do you feel here?": "On hot days, how comfortable do you feel here?",
+      "#Very uncomfortable": "Very uncomfortable",
+      "#Fairly uncomfortable": "Fairly uncomfortable",
+      "#Neither uncomfortable nor comfortable": "Neither uncomfortable nor comfortable",
+      "#Fairly comfortable": "Fairly comfortable",
+      "#Very comfortable": "Very comfortable",
+      "#How much shade is there here on hot days?": "How much shade is there here on hot days?",
+      "#No shade": "No shade",
+      "#Very little shade": "Very little shade",
+      "#Some shade": "Some shade",
+      "#Plenty of shade": "Plenty of shade",
+      "#Shade almost everywhere": "Shade almost everywhere",
       "#How noisy is it here?": "How noisy is it here?",
       "#Very noisy": "Very noisy",
       "#Noisy": "Noisy",
@@ -952,10 +1013,10 @@
       "#Early in the morning, while it is still dark": "La mattina presto, quando è ancora buio",
       "#At any time": "In qualsiasi momento",
       "#How often do you come here or pass by?": "Quanto spesso vieni o passi di qui?",
+      "#A few times a week": "Alcune volte a settimana",
       "#This is the first time": "È la prima volta",
       "#Less than once a month": "Meno di una volta al mese",
-      "#A few times a month": "Qualche volta al mese",
-      "#Every week": "Ogni settimana",
+      "#A few times a month": "Alcune volte al mese",
       "#Every day or almost": "Ogni giorno o quasi",
       "#How safe from traffic do you feel here?": "Quanto ti senti al sicuro dal traffico qui?",
       "#Not at all safe": "Per niente al sicuro",
@@ -1013,12 +1074,18 @@
       "#Neither easy nor difficult": "Né facile né difficile",
       "#Easy": "Facile",
       "#Very easy": "Molto facile",
-      "#What is it like here on hot days?": "Com'è questo luogo nei giorni caldi?",
-      "#Very hot, no shade": "Molto caldo, niente ombra",
-      "#Hot, little shade": "Caldo, poca ombra",
-      "#Bearable": "Sopportabile",
-      "#Cool, some shade": "Fresco, un po' d'ombra",
-      "#Cool, plenty of shade": "Fresco, tanta ombra",
+      "#On hot days, how comfortable do you feel here?": "Nei giorni caldi, quanto ti senti a tuo agio qui?",
+      "#Very uncomfortable": "Molto a disagio",
+      "#Fairly uncomfortable": "Abbastanza a disagio",
+      "#Neither uncomfortable nor comfortable": "Né a disagio né a mio agio",
+      "#Fairly comfortable": "Abbastanza a mio agio",
+      "#Very comfortable": "Molto a mio agio",
+      "#How much shade is there here on hot days?": "Quanta ombra c'è qui nei giorni caldi?",
+      "#No shade": "Nessuna ombra",
+      "#Very little shade": "Pochissima ombra",
+      "#Some shade": "Un po' d'ombra",
+      "#Plenty of shade": "Molta ombra",
+      "#Shade almost everywhere": "Ombra quasi ovunque",
       "#How noisy is it here?": "Quanto è rumoroso qui?",
       "#Very noisy": "Molto rumoroso",
       "#Noisy": "Rumoroso",
@@ -1090,10 +1157,10 @@
       "#Early in the morning, while it is still dark": "Tôt le matin, quand il fait encore nuit",
       "#At any time": "À tout moment",
       "#How often do you come here or pass by?": "À quelle fréquence venez-vous ou passez-vous ici ?",
+      "#A few times a week": "Quelques fois par semaine",
       "#This is the first time": "C’est la première fois",
       "#Less than once a month": "Moins d’une fois par mois",
       "#A few times a month": "Quelques fois par mois",
-      "#Every week": "Chaque semaine",
       "#Every day or almost": "Tous les jours ou presque",
       "#How safe from traffic do you feel here?": "Dans quelle mesure vous sentez-vous en sécurité par rapport à la circulation ici ?",
       "#Not at all safe": "Pas du tout en sécurité",
@@ -1151,12 +1218,18 @@
       "#Neither easy nor difficult": "Ni facile ni difficile",
       "#Easy": "Facile",
       "#Very easy": "Très facile",
-      "#What is it like here on hot days?": "Comment est cet endroit les jours de chaleur ?",
-      "#Very hot, no shade": "Très chaud, pas d’ombre",
-      "#Hot, little shade": "Chaud, peu d’ombre",
-      "#Bearable": "Supportable",
-      "#Cool, some shade": "Frais, un peu d’ombre",
-      "#Cool, plenty of shade": "Frais, beaucoup d’ombre",
+      "#On hot days, how comfortable do you feel here?": "Les jours de chaleur, dans quelle mesure vous sentez-vous à l'aise ici ?",
+      "#Very uncomfortable": "Très mal à l’aise",
+      "#Fairly uncomfortable": "Plutôt mal à l’aise",
+      "#Neither uncomfortable nor comfortable": "Ni mal à l'aise ni à l'aise",
+      "#Fairly comfortable": "Plutôt à l’aise",
+      "#Very comfortable": "Très à l’aise",
+      "#How much shade is there here on hot days?": "Combien d'ombre y a-t-il ici les jours de chaleur ?",
+      "#No shade": "Aucune ombre",
+      "#Very little shade": "Très peu d'ombre",
+      "#Some shade": "Un peu d'ombre",
+      "#Plenty of shade": "Beaucoup d'ombre",
+      "#Shade almost everywhere": "De l'ombre presque partout",
       "#How noisy is it here?": "Quel est le niveau de bruit ici ?",
       "#Very noisy": "Très bruyant",
       "#Noisy": "Bruyant",
@@ -1228,10 +1301,10 @@
       "#Early in the morning, while it is still dark": "Früh am Morgen, solange es noch dunkel ist",
       "#At any time": "Zu jeder Zeit",
       "#How often do you come here or pass by?": "Wie oft kommen Sie hierher oder kommen hier vorbei?",
+      "#A few times a week": "Einige Male pro Woche",
       "#This is the first time": "Das ist das erste Mal",
       "#Less than once a month": "Weniger als einmal im Monat",
       "#A few times a month": "Einige Male im Monat",
-      "#Every week": "Jede Woche",
       "#Every day or almost": "Jeden Tag oder fast jeden Tag",
       "#How safe from traffic do you feel here?": "Wie sicher fühlen Sie sich hier vor dem Verkehr?",
       "#Not at all safe": "Überhaupt nicht sicher",
@@ -1289,12 +1362,18 @@
       "#Neither easy nor difficult": "Weder leicht noch schwierig",
       "#Easy": "Leicht",
       "#Very easy": "Sehr leicht",
-      "#What is it like here on hot days?": "Wie ist es hier an heißen Tagen?",
-      "#Very hot, no shade": "Sehr heiß, kein Schatten",
-      "#Hot, little shade": "Heiß, wenig Schatten",
-      "#Bearable": "Erträglich",
-      "#Cool, some shade": "Kühl, etwas Schatten",
-      "#Cool, plenty of shade": "Kühl, viel Schatten",
+      "#On hot days, how comfortable do you feel here?": "Wie wohl fühlen Sie sich hier an heißen Tagen?",
+      "#Very uncomfortable": "Sehr unwohl",
+      "#Fairly uncomfortable": "Eher unwohl",
+      "#Neither uncomfortable nor comfortable": "Weder unwohl noch wohl",
+      "#Fairly comfortable": "Eher wohl",
+      "#Very comfortable": "Sehr wohl",
+      "#How much shade is there here on hot days?": "Wie viel Schatten gibt es hier an heißen Tagen?",
+      "#No shade": "Kein Schatten",
+      "#Very little shade": "Sehr wenig Schatten",
+      "#Some shade": "Etwas Schatten",
+      "#Plenty of shade": "Viel Schatten",
+      "#Shade almost everywhere": "Fast überall Schatten",
       "#How noisy is it here?": "Wie laut ist es hier?",
       "#Very noisy": "Sehr laut",
       "#Noisy": "Laut",
@@ -1366,10 +1445,10 @@
       "#Early in the morning, while it is still dark": "Sabah erkenden, hava henüz karanlıkken",
       "#At any time": "Her zaman",
       "#How often do you come here or pass by?": "Buraya ne sıklıkla geliyor veya buradan geçiyorsunuz?",
+      "#A few times a week": "Haftada birkaç kez",
       "#This is the first time": "İlk kez geliyorum",
       "#Less than once a month": "Ayda birden az",
       "#A few times a month": "Ayda birkaç kez",
-      "#Every week": "Her hafta",
       "#Every day or almost": "Her gün veya neredeyse her gün",
       "#How safe from traffic do you feel here?": "Burada trafikten ne kadar güvende hissediyorsunuz?",
       "#Not at all safe": "Hiç güvende değil",
@@ -1427,12 +1506,18 @@
       "#Neither easy nor difficult": "Ne kolay ne zor",
       "#Easy": "Kolay",
       "#Very easy": "Çok kolay",
-      "#What is it like here on hot days?": "Sıcak günlerde burası nasıl?",
-      "#Very hot, no shade": "Çok sıcak, gölge yok",
-      "#Hot, little shade": "Sıcak, az gölge",
-      "#Bearable": "Katlanılabilir",
-      "#Cool, some shade": "Serin, biraz gölge",
-      "#Cool, plenty of shade": "Serin, bol gölgeli",
+      "#On hot days, how comfortable do you feel here?": "Sıcak günlerde burada kendinizi ne kadar rahat hissediyorsunuz?",
+      "#Very uncomfortable": "Çok rahatsız",
+      "#Fairly uncomfortable": "Oldukça rahatsız",
+      "#Neither uncomfortable nor comfortable": "Ne rahatsız ne de rahat",
+      "#Fairly comfortable": "Oldukça rahat",
+      "#Very comfortable": "Çok rahat",
+      "#How much shade is there here on hot days?": "Sıcak günlerde burada ne kadar gölge var?",
+      "#No shade": "Hiç gölge yok",
+      "#Very little shade": "Çok az gölge",
+      "#Some shade": "Biraz gölge",
+      "#Plenty of shade": "Bol gölge",
+      "#Shade almost everywhere": "Neredeyse her yerde gölge",
       "#How noisy is it here?": "Burası ne kadar gürültülü?",
       "#Very noisy": "Çok gürültülü",
       "#Noisy": "Gürültülü",
@@ -1504,10 +1589,10 @@
       "#Early in the morning, while it is still dark": "صبح زود، وقتی هوا هنوز تاریک است",
       "#At any time": "در هر زمانی",
       "#How often do you come here or pass by?": "چند وقت یک‌بار به اینجا می‌آیید یا از اینجا می‌گذرید؟",
+      "#A few times a week": "چند بار در هفته",
       "#This is the first time": "این نخستین بار است",
       "#Less than once a month": "کمتر از ماهی یک‌بار",
       "#A few times a month": "چند بار در ماه",
-      "#Every week": "هر هفته",
       "#Every day or almost": "هر روز یا تقریباً هر روز",
       "#How safe from traffic do you feel here?": "در اینجا تا چه اندازه از ترافیک احساس امنیت می‌کنید؟",
       "#Not at all safe": "اصلاً امن نیست",
@@ -1565,12 +1650,18 @@
       "#Neither easy nor difficult": "نه آسان و نه دشوار",
       "#Easy": "آسان",
       "#Very easy": "بسیار آسان",
-      "#What is it like here on hot days?": "این مکان در روزهای گرم چگونه است؟",
-      "#Very hot, no shade": "بسیار گرم، بدون سایه",
-      "#Hot, little shade": "گرم، سایه کم",
-      "#Bearable": "قابل تحمل",
-      "#Cool, some shade": "خنک، کمی سایه",
-      "#Cool, plenty of shade": "خنک، با سایه فراوان",
+      "#On hot days, how comfortable do you feel here?": "در روزهای گرم، اینجا چقدر احساس راحتی می‌کنید؟",
+      "#Very uncomfortable": "بسیار ناراحت",
+      "#Fairly uncomfortable": "نسبتاً ناراحت",
+      "#Neither uncomfortable nor comfortable": "نه ناراحت و نه راحت",
+      "#Fairly comfortable": "نسبتاً راحت",
+      "#Very comfortable": "بسیار راحت",
+      "#How much shade is there here on hot days?": "در روزهای گرم، اینجا چقدر سایه وجود دارد؟",
+      "#No shade": "بدون سایه",
+      "#Very little shade": "سایهٔ خیلی کم",
+      "#Some shade": "کمی سایه",
+      "#Plenty of shade": "سایهٔ زیاد",
+      "#Shade almost everywhere": "تقریباً همه‌جا سایه",
       "#How noisy is it here?": "اینجا چقدر پر سر و صداست؟",
       "#Very noisy": "بسیار پر سر و صدا",
       "#Noisy": "پر سر و صدا",
@@ -1642,10 +1733,10 @@
       "#Early in the morning, while it is still dark": "Kora reggel, amikor még sötét van",
       "#At any time": "Bármikor",
       "#How often do you come here or pass by?": "Milyen gyakran jár ide vagy halad el itt?",
+      "#A few times a week": "Hetente néhányszor",
       "#This is the first time": "Most járok itt először",
       "#Less than once a month": "Havonta ritkábban mint egyszer",
       "#A few times a month": "Havonta néhányszor",
-      "#Every week": "Minden héten",
       "#Every day or almost": "Minden nap vagy majdnem",
       "#How safe from traffic do you feel here?": "Mennyire érzi magát biztonságban a forgalomtól itt?",
       "#Not at all safe": "Egyáltalán nem biztonságban",
@@ -1703,12 +1794,18 @@
       "#Neither easy nor difficult": "Se nem könnyű, se nem nehéz",
       "#Easy": "Könnyű",
       "#Very easy": "Nagyon könnyű",
-      "#What is it like here on hot days?": "Milyen itt a forró napokon?",
-      "#Very hot, no shade": "Nagyon meleg, nincs árnyék",
-      "#Hot, little shade": "Meleg, kevés árnyék",
-      "#Bearable": "Elviselhető",
-      "#Cool, some shade": "Hűvös, némi árnyék",
-      "#Cool, plenty of shade": "Hűvös, sok árnyék",
+      "#On hot days, how comfortable do you feel here?": "Mennyire érzi magát kényelmesen itt a meleg napokon?",
+      "#Very uncomfortable": "Nagyon kényelmetlenül",
+      "#Fairly uncomfortable": "Inkább kényelmetlenül",
+      "#Neither uncomfortable nor comfortable": "Sem kényelmetlenül, sem kényelmesen",
+      "#Fairly comfortable": "Inkább kényelmesen",
+      "#Very comfortable": "Nagyon kényelmesen",
+      "#How much shade is there here on hot days?": "Mennyi árnyék van itt a meleg napokon?",
+      "#No shade": "Nincs árnyék",
+      "#Very little shade": "Nagyon kevés árnyék",
+      "#Some shade": "Némi árnyék",
+      "#Plenty of shade": "Sok árnyék",
+      "#Shade almost everywhere": "Szinte mindenhol árnyék",
       "#How noisy is it here?": "Mennyire zajos ez a hely?",
       "#Very noisy": "Nagyon zajos",
       "#Noisy": "Zajos",
@@ -1780,10 +1877,10 @@
       "#Early in the morning, while it is still dark": "في الصباح الباكر، حين يكون الجو لا يزال مظلمًا",
       "#At any time": "في أي وقت",
       "#How often do you come here or pass by?": "ما عدد مرات مجيئك إلى هنا أو مرورك من هنا؟",
+      "#A few times a week": "بضع مرات في الأسبوع",
       "#This is the first time": "هذه هي المرة الأولى",
       "#Less than once a month": "أقل من مرة في الشهر",
       "#A few times a month": "بضع مرات في الشهر",
-      "#Every week": "كل أسبوع",
       "#Every day or almost": "كل يوم أو تقريبًا",
       "#How safe from traffic do you feel here?": "ما مدى شعورك بالأمان من حركة المرور هنا؟",
       "#Not at all safe": "لا أشعر بالأمان إطلاقًا",
@@ -1841,12 +1938,18 @@
       "#Neither easy nor difficult": "ليس سهلًا ولا صعبًا",
       "#Easy": "سهل",
       "#Very easy": "سهل جدًا",
-      "#What is it like here on hot days?": "كيف يكون هذا المكان في الأيام الحارة؟",
-      "#Very hot, no shade": "حار جدًا، لا يوجد ظل",
-      "#Hot, little shade": "حار، ظل قليل",
-      "#Bearable": "محتمل",
-      "#Cool, some shade": "منعش، بعض الظل",
-      "#Cool, plenty of shade": "بارد، ظل وافر",
+      "#On hot days, how comfortable do you feel here?": "ما مدى شعورك بالراحة هنا في الأيام الحارة؟",
+      "#Very uncomfortable": "عدم ارتياح شديد",
+      "#Fairly uncomfortable": "عدم ارتياح إلى حد ما",
+      "#Neither uncomfortable nor comfortable": "لا أشعر بعدم الراحة ولا بالراحة",
+      "#Fairly comfortable": "ارتياح إلى حد ما",
+      "#Very comfortable": "ارتياح كبير",
+      "#How much shade is there here on hot days?": "ما مقدار الظل هنا في الأيام الحارة؟",
+      "#No shade": "لا يوجد ظل",
+      "#Very little shade": "ظل قليل جدًا",
+      "#Some shade": "بعض الظل",
+      "#Plenty of shade": "ظل كثير",
+      "#Shade almost everywhere": "ظل في كل مكان تقريبًا",
       "#How noisy is it here?": "ما مدى الضجيج هنا؟",
       "#Very noisy": "صاخب جدًا",
       "#Noisy": "صاخب",

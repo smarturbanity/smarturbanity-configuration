@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - How did it go? The Access Together app",
     "questionnaire_id": "smarturbanity_feedback_access_together_app",
-    "questionnaire_version": "1.0.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 4,
     "options": {
@@ -72,7 +72,7 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Did you manage to install the app and register with the pilot code?",
+            "text": "Did you manage to install the app?",
             "answer_key": "task_install",
             "question_type": "single_option",
             "options": [
@@ -98,14 +98,55 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "Did you manage to register with the code you received?",
+            "answer_key": "task_register",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data",
+            "show_if": {
+              "task_install": [
+                "yes",
+                "yes_with_help"
+              ]
+            }
+          },
+          {
             "text": "What stopped you from completing it?",
             "answer_key": "task_install_issue",
             "question_type": "textarea",
             "required": false,
             "privacy_classification": "heightened_personal",
             "show_if": {
-              "task_install": [
-                "no"
+              "$any": [
+                {
+                  "task_install": [
+                    "no"
+                  ]
+                },
+                {
+                  "task_register": [
+                    "no"
+                  ]
+                }
               ]
             }
           },
@@ -227,6 +268,7 @@
             "text": "How easy was it to use the app?",
             "answer_key": "ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -277,6 +319,7 @@
             "text": "How easy to understand are the texts of the app?",
             "answer_key": "texts_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult to understand",
@@ -320,6 +363,7 @@
             "text": "How easy to understand are the icons?",
             "answer_key": "icons_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult to understand",
@@ -363,6 +407,7 @@
             "text": "How clear is the layout of the screens?",
             "answer_key": "layout_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very confusing",
@@ -403,12 +448,17 @@
             }
           },
           {
-            "text": "Is the text size comfortable to read?",
+            "text": "How do you find the size of the text?",
             "answer_key": "text_size",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Too small",
+                "text": "Much too small",
+                "value": "much_too_small"
+              },
+              {
+                "text": "A little too small",
                 "value": "too_small"
               },
               {
@@ -416,8 +466,12 @@
                 "value": "just_right"
               },
               {
-                "text": "Too large",
+                "text": "A little too large",
                 "value": "too_large"
+              },
+              {
+                "text": "Much too large",
+                "value": "much_too_large"
               }
             ],
             "checks_inline": false,
@@ -435,6 +489,7 @@
             "text": "How useful would the app be for you?",
             "answer_key": "tool_usefulness",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
                 "text": "Not at all useful",
@@ -466,6 +521,7 @@
             "text": "Would you keep using the app in the coming weeks?",
             "answer_key": "intention_to_use",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "I would definitely not use it",
@@ -516,7 +572,8 @@
       "#At the event, with the team": "At the event, with the team",
       "#Both": "Both",
       "#Did you manage to answer the questions before and after the trip?": "Did you manage to answer the questions before and after the trip?",
-      "#Did you manage to install the app and register with the pilot code?": "Did you manage to install the app and register with the pilot code?",
+      "#Did you manage to install the app?": "Did you manage to install the app?",
+      "#Did you manage to register with the code you received?": "Did you manage to register with the code you received?",
       "#Did you manage to open the guided pages (map, services, reports) from the app?": "Did you manage to open the guided pages (map, services, reports) from the app?",
       "#Did you manage to record a trip?": "Did you manage to record a trip?",
       "#Difficult": "Difficult",
@@ -537,7 +594,11 @@
       "#I would definitely use it": "I would definitely use it",
       "#I would probably not use it": "I would probably not use it",
       "#I would probably use it": "I would probably use it",
-      "#Is the text size comfortable to read?": "Is the text size comfortable to read?",
+      "#How do you find the size of the text?": "How do you find the size of the text?",
+      "#Much too small": "Much too small",
+      "#A little too small": "A little too small",
+      "#A little too large": "A little too large",
+      "#Much too large": "Much too large",
       "#Just right": "Just right",
       "#Moderately useful": "Moderately useful",
       "#Neither clear nor confusing": "Neither clear nor confusing",
@@ -555,8 +616,6 @@
       "#Slightly useful": "Slightly useful",
       "#SmartUrbanity - How did it go? The Access Together app": "SmartUrbanity - How did it go? The Access Together app",
       "#Thank you!": "Thank you!",
-      "#Too large": "Too large",
-      "#Too small": "Too small",
       "#Very clear": "Very clear",
       "#Very confusing": "Very confusing",
       "#Very difficult": "Very difficult",
@@ -589,7 +648,8 @@
       "#At the event, with the team": "All’evento, con il team",
       "#Both": "In entrambi i modi",
       "#Did you manage to answer the questions before and after the trip?": "Hai potuto rispondere alle domande prima e dopo lo spostamento?",
-      "#Did you manage to install the app and register with the pilot code?": "Hai potuto installare l’app e registrarti con il codice del pilota?",
+      "#Did you manage to install the app?": "Hai potuto installare l’app?",
+      "#Did you manage to register with the code you received?": "Hai potuto registrarti con il codice che hai ricevuto?",
       "#Did you manage to open the guided pages (map, services, reports) from the app?": "Hai potuto aprire le pagine guidate (mappa, servizi, segnalazioni) dall’app?",
       "#Did you manage to record a trip?": "Hai potuto registrare uno spostamento?",
       "#Difficult": "Difficile",
@@ -610,7 +670,11 @@
       "#I would definitely use it": "Sicuramente lo userei",
       "#I would probably not use it": "Probabilmente non lo userei",
       "#I would probably use it": "Probabilmente lo userei",
-      "#Is the text size comfortable to read?": "La dimensione del testo è comoda da leggere?",
+      "#How do you find the size of the text?": "Come trovi la dimensione del testo?",
+      "#Much too small": "Decisamente troppo piccola",
+      "#A little too small": "Un po' troppo piccola",
+      "#A little too large": "Un po' troppo grande",
+      "#Much too large": "Decisamente troppo grande",
       "#Just right": "Giusta",
       "#Moderately useful": "Abbastanza utile",
       "#Neither clear nor confusing": "Né chiara né confusa",
@@ -628,8 +692,6 @@
       "#Slightly useful": "Poco utile",
       "#SmartUrbanity - How did it go? The Access Together app": "SmartUrbanity - Com’è andata? L’app Access Together",
       "#Thank you!": "Grazie!",
-      "#Too large": "Troppo grande",
-      "#Too small": "Troppo piccola",
       "#Very clear": "Molto chiara",
       "#Very confusing": "Molto confusa",
       "#Very difficult": "Molto difficile",

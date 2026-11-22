@@ -210,8 +210,7 @@ and Italian, like the pilot's mobile app. Without it, every application language
 The pilot's connections are not configured here: its Movesion sign-in client for each
 runtime environment and the database that receives its participant answers (Rome's
 production answers go to `rome-db` in Movesion's `smart-urbanity` project) ship with the
-applications' code. This repository holds only content and interface; the applications
-ignore `movesion` and `answers_firestore` if an older technical file still lists them.
+applications' code. This repository holds only content and interface.
 
 `data_model.study_area` identifies the pilot's geographical boundary through
 an Area Group and an optional property selector. The boundary is the complete

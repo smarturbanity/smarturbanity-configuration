@@ -8,7 +8,7 @@ This is a questionnaire-definition simulation; it does not establish app behavio
 The confirmed 36-month wording and approved gender/neighbourhood choices stay.
 
 The final correction makes `put_crowding_comfort` explicitly about a crowded
-vehicle or stop, with a neutral middle answer. All eight languages change;
+bus, tram or train, with a neutral middle answer. All eight languages change;
 stored answer values, optional status, question ID and conditions stay unchanged.
 
 ## Remaining acceptance checks

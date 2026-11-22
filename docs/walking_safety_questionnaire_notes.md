@@ -701,3 +701,115 @@ is sometimes or often, `travel_given_up_purposes` 1.0.0 asks which trips (work o
 study, health, shopping and errands, visiting people, leisure; several answers).
 Profile 2.2.0. Earlier `economic_status` answers stay stored and are not compared
 with the new ones. Eight translations; no browser/persona retest is claimed.
+
+Lory changed `travel_given_up_cost` on 2026-11-22: the question asked whether a
+trip had been given up but offered frequencies, and three points are too few for
+a scale. It now asks “In the last month, how many times did you give up a trip
+because it cost too much?” with never, once, 2–3 times, about once a week and
+several times a week (prefer not to say stays). `travel_given_up_purposes` shows
+for every answer except never. Same version as the rating-scales change (question
+2.0.0, profile 3.0.0); no answers had been collected. Eight translations.
+
+Lory rewrote on 2026-11-22 the questions whose wording did not match their answers
+and the scales with fewer than four points. Yes/no questions answered with
+frequencies now ask how often (bicycle and e-scooter parking, traffic jams, vehicle
+pollution for car and motorcycle). Street and path visibility and green-light time
+in the street assessment have four ordered points from worst to best. Text size,
+pace and amount of points run on five symmetric points from much too little to
+much too much; usefulness of trip results, fit of the trip history and ease of
+understanding the impact and the points calculation have five points. Follow-up
+questions show for the lower answers. Same versions as the rating-scales change;
+no answers had been collected; eight translations where the form has them.
+
+Lory turned on 2026-11-22 the yes/no questions whose answer is a matter of degree
+into scales. The nine walking safety questions ask how often, from never to always,
+with Not applicable below, and mention the wheelchair where they said only on foot.
+In the street assessments, difficulty of getting through has five ordered points
+with “I cannot get through” as the worst; traffic safety and safety from crime or
+harassment by day and in the evening use the five safety answers of the place
+report. The seat question on public transport separates need from availability,
+and the usability question on supported travel modes answers all, some or none.
+No answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 an ordered scale for the neighbourhood attachment
+question: a bond goes from none to very strong and has no negative side, so
+`community_attachment` now asks “How connected do you feel to the people in your
+neighbourhood?” with not at all, slightly, moderately, very and extremely (prefer
+not to say stays). Same versions as the rating-scales change; no answers had been
+collected; eight translations.
+
+Lory chose on 2026-11-22 symmetric labels for the overall trip rating: the five
+stars of `trip_rating` read very poor, poor, neither good nor poor, good and very
+good, like the other star questions, instead of a middle “Fair” that leaned
+positive and an “Excellent” that did not mirror “Very poor”. Values 1–5 are
+unchanged; same versions as the rating-scales change; eight translations.
+
+Lory chose on 2026-11-22 the same balanced comfort scale for both crowding
+questions: `put_crowding_comfort` and `walk_crowding_comfort` read very
+uncomfortable, fairly uncomfortable, neither uncomfortable nor comfortable, fairly
+comfortable and very comfortable, instead of “a little” on one side and “mostly”
+on the other, and the walking question loses its different middle answer “It
+doesn’t bother me”. The public transport question now asks only about the vehicle:
+“When the bus, tram or train is crowded, how comfortable do you feel?”; a crowded
+stop is no longer part of it. Same versions as the rating-scales change; no
+answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 to split the place report question on hot days, which mixed
+heat and shade in one answer and had a middle “Bearable” that already leaned
+negative. `place_heat_shade` is replaced by `place_heat_comfort` (“On hot days, how
+comfortable do you feel here?”, with the five comfort answers of the crowding
+questions) and `place_shade` (“How much shade is there here on hot days?”: no
+shade, very little shade, some shade, plenty of shade, shade almost everywhere), both
+version 1.0.0 with the same conditions, I don’t know and prefer not to say. No
+answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 a symmetric liking scale for the six questions on streets
+with lots of people, shops and activity (`car_`, `bike_`, `escooter_`,
+`motorcycle_`, `put_` and `walk_route_liveliness_effect`): they ask “… do you
+like streets with lots of people, shops and activity?” with I dislike them a lot,
+I dislike them a little, I neither like nor dislike them, I like them a little and
+I like them a lot, and Not applicable below. The old answers carried reasons and
+mixed the subject with crowding, already asked by the crowding questions. Version
+2.0.0; no answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 one five-point scored scale for each question whose answers
+mixed how strong a feeling was with what the respondent does about it. In the walking
+forms `walk_visual_quality` asks how much pleasant or unpleasant surroundings affect
+how one feels on the way and `walk_cleanliness_effect` how much dirt or litter
+bothers, both from not at all to extremely; `walk_slope_effect` asks how much slopes
+make the trip harder (not at all, a little, moderately, a lot, I can't manage some
+slopes); `walk_benches_importance` asks how important benches are to rest along the
+way, from not at all to extremely important, and gains Not applicable (version
+3.0.0); `walk_fitness` runs very low, low, moderate, high, very high without
+descriptions on single steps. `walk_wayfinding` stays as it is, because its answer
+about directions that are not accessible keeps a separate meaning. No answers had
+been collected; eight translations.
+
+Lory chose on 2026-11-22 to split the walking questions that asked two things.
+`walk_distance` now lists only distances, from less than 500 metres (up to about six
+minutes) to more than 2 km (more than about 25 minutes), scored and without the
+answer about needing company, which becomes the new yes-or-no `walk_need_company`
+(version 1.0.0). `walk_identity_harassment` asks whether, in the last 12 months, the
+respondent was harassed because of who they are or how they look, yes or no with Not
+applicable instead of the old "doesn't apply" answer, and the new
+`walk_identity_harassment_worry` asks how often one worries about it, never to always
+(version 1.0.0). `walk_tiredness_cause` names physical effort without carrying
+bags, already a separate answer; `walk_dissatisfied` gains None of these,
+`walk_anxiety_causes` speaks of road crashes and `walk_combined_response` offers a
+shorter list. No answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 to split three double-barrelled questions (app installation
+and registration in the Access Together app feedback, bicycle separation from motor
+traffic and from people walking, and mobility apps for taxis and for sharing), to
+give ordered answers distinct steps (signal waiting time, use frequency of places,
+connections and segments with avoidance moved to its own question, remote work,
+near-miss outcome, how often a carer helps, usual trip company, location distance,
+walkable width, bridge cover, pedestrian access, the type of improvement, reasons
+for going outside the neighbourhood split from what for, and conflict points with
+vehicles), to align the usability test gender and education answers with the profile
+survey, and to use one common list of travel modes (usual mode, trip mode) and one
+of trip purposes (frequent purpose, trip purpose, given-up purposes), while the
+`*_combined_modes` questions keep bus, tram, metro and train as separate answers
+because the combination itself is what they ask about; "None of
+these" was already exclusive where requested, and the pet and bags question keeps
+its two options. No answers had been collected; eight translations.

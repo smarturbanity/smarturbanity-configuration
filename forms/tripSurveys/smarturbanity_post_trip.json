@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - After the trip",
     "questionnaire_id": "smarturbanity_post_trip",
-    "questionnaire_version": "4.10.0",
+    "questionnaire_version": "5.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 3,
     "trip_phase": "post",
@@ -29,10 +29,11 @@
         "questions": [
           {
             "question_id": "trip_time_vs_expected",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "text": "Compared to what you expected, how long did this trip feel?",
             "answer_key": "trip_time_vs_expected",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "required": true,
             "checks_inline": false,
             "options": [
@@ -62,10 +63,11 @@
           },
           {
             "question_id": "trip_effort",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "text": "How physically tiring was this trip?",
             "answer_key": "trip_effort",
             "question_type": "single_option",
+            "answer_scale": "score",
             "required": true,
             "checks_inline": false,
             "options": [
@@ -95,10 +97,11 @@
           },
           {
             "question_id": "trip_mental_effort",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "text": "How mentally tiring was this trip (stress, attention, finding the way)?",
             "answer_key": "trip_mental_effort",
             "question_type": "single_option",
+            "answer_scale": "score",
             "required": true,
             "checks_inline": false,
             "options": [
@@ -128,11 +131,12 @@
           },
           {
             "question_id": "trip_traffic_safety",
-            "question_version": "1.2.0",
+            "question_version": "2.0.0",
             "text": "How safe from traffic did you feel on this trip?",
             "help": "Think only of traffic: vehicles, their speed and the crossings.",
             "answer_key": "trip_traffic_safety",
             "question_type": "single_option",
+            "answer_scale": "score",
             "required": true,
             "checks_inline": false,
             "options": [
@@ -162,11 +166,12 @@
           },
           {
             "question_id": "trip_personal_security",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "text": "How safe did you feel from other people (e.g. theft, harassment)?",
             "help": "Think only of other people, not of traffic.",
             "answer_key": "trip_personal_security",
             "question_type": "single_option",
+            "answer_scale": "score",
             "required": true,
             "checks_inline": false,
             "add_prefer_not_to_say": true,
@@ -196,31 +201,33 @@
           },
           {
             "question_id": "trip_rating",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "text": "How would you rate this trip overall?",
             "answer_key": "trip_rating",
             "question_type": "single_option",
+            "answer_scale": "likert",
+            "answer_scale_stars": true,
             "required": true,
             "checks_inline": true,
             "options": [
               {
-                "text": "Very poor (1)",
+                "text": "Very poor",
                 "value": "1"
               },
               {
-                "text": "Poor (2)",
+                "text": "Poor",
                 "value": "2"
               },
               {
-                "text": "Fair (3)",
+                "text": "Neither good nor poor",
                 "value": "3"
               },
               {
-                "text": "Good (4)",
+                "text": "Good",
                 "value": "4"
               },
               {
-                "text": "Excellent (5)",
+                "text": "Very good",
                 "value": "5"
               }
             ],
@@ -691,11 +698,6 @@
       "#Anxious": "Anxious",
       "#How would you rate this trip overall?": "How would you rate this trip overall?",
       "#How did you feel emotionally after this trip?": "How did you feel emotionally after this trip?",
-      "#Very poor (1)": "Very poor (1)",
-      "#Poor (2)": "Poor (2)",
-      "#Fair (3)": "Fair (3)",
-      "#Good (4)": "Good (4)",
-      "#Excellent (5)": "Excellent (5)",
       "#The pedestrian light was too short": "The pedestrian light was too short",
       "#A crossing or light without an audible signal": "A crossing or light without an audible signal",
       "#Cars parked on the pavement or double-parked": "Cars parked on the pavement or double-parked",
@@ -716,7 +718,12 @@
       "#I felt a little uneasy, but nothing happened": "I felt a little uneasy, but nothing happened",
       "#Announcements or travel information that I could not hear or read": "Announcements or travel information that I could not hear or read",
       "#Anything else you want to tell us about this trip?": "Anything else you want to tell us about this trip?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>",
+      "#Very poor": "Very poor",
+      "#Poor": "Poor",
+      "#Neither good nor poor": "Neither good nor poor",
+      "#Good": "Good",
+      "#Very good": "Very good"
     },
     "it": {
       "code": "it",
@@ -802,11 +809,6 @@
       "#Anxious": "Ansia",
       "#How would you rate this trip overall?": "Come valuteresti questo spostamento nel complesso?",
       "#How did you feel emotionally after this trip?": "Che emozioni hai provato dopo questo spostamento?",
-      "#Very poor (1)": "Pessimo (1)",
-      "#Poor (2)": "Scarso (2)",
-      "#Fair (3)": "Accettabile (3)",
-      "#Good (4)": "Buono (4)",
-      "#Excellent (5)": "Ottimo (5)",
       "#The pedestrian light was too short": "Il semaforo pedonale era troppo breve",
       "#A crossing or light without an audible signal": "Un attraversamento o un semaforo senza segnale acustico",
       "#Cars parked on the pavement or double-parked": "Auto parcheggiate sul marciapiede o in doppia fila",
@@ -827,7 +829,12 @@
       "#I felt a little uneasy, but nothing happened": "Ho provato un po' di disagio, ma non è successo nulla",
       "#Announcements or travel information that I could not hear or read": "Annunci o informazioni sul viaggio che non potevo sentire o leggere",
       "#Anything else you want to tell us about this trip?": "Vuoi dirci altro su questo spostamento?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p><p>Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Le tue singole risposte le legge solo il gruppo di ricerca di SmartUrbanity e non vengono inviate a nessuna amministrazione pubblica.</p><p>Le conserviamo per la ricerca per 36 mesi; poi le cancelliamo o le rendiamo anonime.</p><p>La partecipazione è volontaria. Per proseguire, rispondi a ogni domanda visualizzata. Dove previsto, puoi scegliere “Preferisco non rispondere”.</p>",
+      "#Very poor": "Molto scarso",
+      "#Poor": "Scarso",
+      "#Neither good nor poor": "Né buono né scarso",
+      "#Good": "Buono",
+      "#Very good": "Molto buono"
     },
     "fr": {
       "code": "fr",
@@ -913,11 +920,6 @@
       "#Anxious": "Anxiété",
       "#How would you rate this trip overall?": "Comment évalueriez-vous ce trajet dans l'ensemble ?",
       "#How did you feel emotionally after this trip?": "Quelles émotions avez-vous ressenties après ce trajet ?",
-      "#Very poor (1)": "Très mauvais (1)",
-      "#Poor (2)": "Mauvais (2)",
-      "#Fair (3)": "Correct (3)",
-      "#Good (4)": "Bon (4)",
-      "#Excellent (5)": "Excellent (5)",
       "#The pedestrian light was too short": "Le feu piéton était trop court",
       "#A crossing or light without an audible signal": "Un passage piéton ou un feu sans signal sonore",
       "#Cars parked on the pavement or double-parked": "Voitures garées sur le trottoir ou en double file",
@@ -938,7 +940,12 @@
       "#I felt a little uneasy, but nothing happened": "J’ai ressenti un léger malaise, mais rien ne s’est passé",
       "#Announcements or travel information that I could not hear or read": "Des annonces ou des informations sur le trajet que je ne pouvais pas entendre ou lire",
       "#Anything else you want to tell us about this trip?": "Voulez-vous nous dire autre chose sur ce trajet ?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p><p>Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ».</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Seule l’équipe de recherche SmartUrbanity lit vos réponses individuelles, et elles ne sont transmises à aucune administration.</p><p>Nous les conservons pour la recherche pendant 36 mois, puis nous les supprimons ou les rendons anonymes.</p><p>La participation est volontaire. Pour continuer, répondez à chaque question affichée. Lorsque cette option est proposée, vous pouvez choisir « Je préfère ne pas répondre ».</p>",
+      "#Very poor": "Très mauvais",
+      "#Poor": "Mauvais",
+      "#Neither good nor poor": "Ni bon ni mauvais",
+      "#Good": "Bon",
+      "#Very good": "Très bon"
     },
     "de": {
       "code": "de",
@@ -1024,11 +1031,6 @@
       "#Anxious": "Ängstlich",
       "#How would you rate this trip overall?": "Wie würden Sie diesen Weg insgesamt bewerten?",
       "#How did you feel emotionally after this trip?": "Wie haben Sie sich nach diesem Weg gefühlt?",
-      "#Very poor (1)": "Sehr schlecht (1)",
-      "#Poor (2)": "Schlecht (2)",
-      "#Fair (3)": "Mittelmäßig (3)",
-      "#Good (4)": "Gut (4)",
-      "#Excellent (5)": "Ausgezeichnet (5)",
       "#The pedestrian light was too short": "Die Fußgängerampel war zu kurz grün",
       "#A crossing or light without an audible signal": "Eine Querung oder Ampel ohne akustisches Signal",
       "#Cars parked on the pavement or double-parked": "Auf dem Gehweg oder in zweiter Reihe parkende Autos",
@@ -1049,7 +1051,12 @@
       "#I felt a little uneasy, but nothing happened": "Ich fühlte mich etwas unwohl, aber es ist nichts passiert",
       "#Announcements or travel information that I could not hear or read": "Durchsagen oder Reiseinformationen, die ich nicht hören oder lesen konnte",
       "#Anything else you want to tell us about this trip?": "Möchten Sie uns noch etwas zu diesem Weg mitteilen?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p><p>Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Nur das SmartUrbanity-Forschungsteam liest Ihre einzelnen Antworten, und sie werden an keine Behörde weitergegeben.</p><p>Wir speichern sie 36 Monate lang für die Forschung; danach löschen oder anonymisieren wir sie.</p><p>Die Teilnahme ist freiwillig. Um fortzufahren, beantworten Sie jede angezeigte Frage. Wo angeboten, können Sie „Keine Angabe“ wählen.</p>",
+      "#Very poor": "Sehr schlecht",
+      "#Poor": "Schlecht",
+      "#Neither good nor poor": "Weder gut noch schlecht",
+      "#Good": "Gut",
+      "#Very good": "Sehr gut"
     },
     "tr": {
       "code": "tr",
@@ -1135,11 +1142,6 @@
       "#Anxious": "Endişeli",
       "#How would you rate this trip overall?": "Bu yolculuğu genel olarak nasıl değerlendirirsiniz?",
       "#How did you feel emotionally after this trip?": "Bu yolculuktan sonra duygusal olarak kendinizi nasıl hissettiniz?",
-      "#Very poor (1)": "Çok kötü (1)",
-      "#Poor (2)": "Kötü (2)",
-      "#Fair (3)": "Orta (3)",
-      "#Good (4)": "İyi (4)",
-      "#Excellent (5)": "Mükemmel (5)",
       "#The pedestrian light was too short": "Yaya ışığı çok kısaydı",
       "#A crossing or light without an audible signal": "Sesli sinyali olmayan bir geçit veya trafik ışığı",
       "#Cars parked on the pavement or double-parked": "Kaldırıma veya çift sıra park edilmiş arabalar",
@@ -1160,7 +1162,12 @@
       "#I felt a little uneasy, but nothing happened": "Biraz tedirgin oldum ama bir şey olmadı",
       "#Announcements or travel information that I could not hear or read": "Duyamadığım veya okuyamadığım yolculuk duyuruları ya da bilgileri",
       "#Anything else you want to tell us about this trip?": "Bu yolculukla ilgili bize söylemek istediğiniz başka bir şey var mı?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Bireysel yanıtlarınızı yalnızca SmartUrbanity araştırma ekibi okur ve hiçbir kamu kurumuna gönderilmez.</p><p>Yanıtlarınızı araştırma amacıyla 36 ay saklarız; ardından siler veya anonim hâle getiririz.</p><p>Katılım gönüllüdür. Devam etmek için gösterilen her soruyu yanıtlayın. Sunulduğu yerlerde “Belirtmek istemiyorum” seçeneğini seçebilirsiniz.</p>",
+      "#Very poor": "Çok kötü",
+      "#Poor": "Kötü",
+      "#Neither good nor poor": "Ne iyi ne kötü",
+      "#Good": "İyi",
+      "#Very good": "Çok iyi"
     },
     "fa": {
       "code": "fa",
@@ -1246,11 +1253,6 @@
       "#Anxious": "نگران",
       "#How would you rate this trip overall?": "در مجموع، این سفر را چگونه ارزیابی می‌کنید؟",
       "#How did you feel emotionally after this trip?": "بعد از این سفر چه حسی داشتید؟",
-      "#Very poor (1)": "بسیار بد (۱)",
-      "#Poor (2)": "بد (۲)",
-      "#Fair (3)": "متوسط (۳)",
-      "#Good (4)": "خوب (۴)",
-      "#Excellent (5)": "عالی (۵)",
       "#The pedestrian light was too short": "چراغ عابر پیاده خیلی کوتاه بود",
       "#A crossing or light without an audible signal": "گذرگاه یا چراغی بدون علامت صوتی",
       "#Cars parked on the pavement or double-parked": "خودروهای پارک‌شده روی پیاده‌رو یا دوبله‌پارک",
@@ -1271,7 +1273,12 @@
       "#I felt a little uneasy, but nothing happened": "کمی احساس ناراحتی کردم، اما اتفاقی نیفتاد",
       "#Announcements or travel information that I could not hear or read": "اعلان‌ها یا اطلاعات سفر که نمی‌توانستم بشنوم یا بخوانم",
       "#Anything else you want to tell us about this trip?": "چیز دیگری درباره این سفر می‌خواهید به ما بگویید؟",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p><p>آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>فقط تیم پژوهشی SmartUrbanity پاسخ‌های فردی شما را می‌خواند و به هیچ نهاد دولتی فرستاده نمی‌شود.</p><p>آن‌ها را برای پژوهش به مدت ۳۶ ماه نگه می‌داریم؛ سپس حذف یا ناشناس می‌کنیم.</p><p>شرکت داوطلبانه است. برای ادامه، به هر پرسش نمایش‌داده‌شده پاسخ دهید. هر جا این گزینه وجود دارد، می‌توانید «ترجیح می‌دهم پاسخ ندهم» را انتخاب کنید.</p>",
+      "#Very poor": "بسیار بد",
+      "#Poor": "بد",
+      "#Neither good nor poor": "نه خوب نه بد",
+      "#Good": "خوب",
+      "#Very good": "بسیار خوب"
     },
     "hu": {
       "code": "hu",
@@ -1357,11 +1364,6 @@
       "#Anxious": "Szorongónak",
       "#How would you rate this trip overall?": "Összességében hogyan értékelné ezt az utat?",
       "#How did you feel emotionally after this trip?": "Hogyan érezte magát érzelmileg az út után?",
-      "#Very poor (1)": "Nagyon rossz (1)",
-      "#Poor (2)": "Rossz (2)",
-      "#Fair (3)": "Közepes (3)",
-      "#Good (4)": "Jó (4)",
-      "#Excellent (5)": "Kiváló (5)",
       "#The pedestrian light was too short": "A gyalogos lámpa túl rövid ideig volt zöld",
       "#A crossing or light without an audible signal": "Hangjelzés nélküli átkelő vagy lámpa",
       "#Cars parked on the pavement or double-parked": "Járdán vagy második sorban parkoló autók",
@@ -1382,7 +1384,12 @@
       "#I felt a little uneasy, but nothing happened": "Kicsit kellemetlenül éreztem magam, de nem történt semmi",
       "#Announcements or travel information that I could not hear or read": "Olyan utazási közlemények vagy információk, amelyeket nem tudtam hallani vagy elolvasni",
       "#Anything else you want to tell us about this trip?": "Szeretne még valamit elmondani erről az útról?",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p><p>Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget.</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>Egyéni válaszait csak a SmartUrbanity kutatócsoportja olvassa, és semmilyen hatósághoz nem kerülnek.</p><p>Kutatási célból 36 hónapig őrizzük meg őket, majd töröljük vagy anonimizáljuk.</p><p>A részvétel önkéntes. A folytatáshoz válaszoljon minden megjelenő kérdésre. Ahol elérhető, választhatja az „Inkább nem válaszolok” lehetőséget.</p>",
+      "#Very poor": "Nagyon rossz",
+      "#Poor": "Rossz",
+      "#Neither good nor poor": "Sem jó, sem rossz",
+      "#Good": "Jó",
+      "#Very good": "Nagyon jó"
     },
     "ar": {
       "code": "ar",
@@ -1468,11 +1475,6 @@
       "#Anxious": "قلق",
       "#How would you rate this trip overall?": "ما تقييمك لهذه الرحلة بشكل عام؟",
       "#How did you feel emotionally after this trip?": "ما المشاعر التي شعرت بها بعد هذه الرحلة؟",
-      "#Very poor (1)": "سيئ جدًا (1)",
-      "#Poor (2)": "سيئ (2)",
-      "#Fair (3)": "مقبول (3)",
-      "#Good (4)": "جيد (4)",
-      "#Excellent (5)": "ممتاز (5)",
       "#The pedestrian light was too short": "كانت إشارة المشاة قصيرة جدًا",
       "#A crossing or light without an audible signal": "معبر أو إشارة ضوئية بلا إشارة صوتية",
       "#Cars parked on the pavement or double-parked": "سيارات متوقفة على الرصيف أو في صف مزدوج",
@@ -1493,7 +1495,12 @@
       "#I felt a little uneasy, but nothing happened": "شعرت ببعض الانزعاج، لكن لم يحدث شيء",
       "#Announcements or travel information that I could not hear or read": "إعلانات أو معلومات عن الرحلة لم أتمكن من سماعها أو قراءتها",
       "#Anything else you want to tell us about this trip?": "أي ملاحظات أخرى عن هذه الرحلة؟",
-      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة».</p>"
+      "#<p>Only the SmartUrbanity research team reads your individual answers, and they are not sent to any public authority.</p><p>We keep them for research for 36 months; then we delete them or make them anonymous.</p><p>Taking part is voluntary. To continue, answer each question shown. Where offered, you can choose “Prefer not to say”.</p>": "<p>لا يقرأ إجاباتك الفردية إلا فريق البحث في SmartUrbanity، ولا تُرسل إلى أي جهة حكومية.</p><p>نحتفظ بها لأغراض البحث لمدة 36 شهرًا؛ ثم نحذفها أو نجعلها مجهولة الهوية.</p><p>المشاركة طوعية. للمتابعة، أجب عن كل سؤال ظاهر. حيثما يتوفر الخيار، يمكنك اختيار «أفضّل عدم الإجابة».</p>",
+      "#Very poor": "سيئ جدًا",
+      "#Poor": "سيئ",
+      "#Neither good nor poor": "لا جيد ولا سيئ",
+      "#Good": "جيد",
+      "#Very good": "جيد جدًا"
     }
   },
   "id": "smarturbanity_post_trip",

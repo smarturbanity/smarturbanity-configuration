@@ -56,7 +56,7 @@ async function main() {
             let label;
             if (choice === 'refusal') label = 'Preferisco non rispondere';
             if (choice === 'none' && question.add_none) label = 'Nessuna di queste';
-            if (choice === 'none' && key.startsWith('personal_')) label = 'No';
+            if (choice === 'none' && key.startsWith('personal_')) label = form.languages.it['#' + question.options.at(-1).text];
             if (choice === 'positive') {
               const option = question.options.find(option => option.value === 'powered_wheelchair') || question.options[0];
               label = form.languages.it['#' + option.text] || option.text;
@@ -87,7 +87,7 @@ async function main() {
         const selected = Object.entries(answer || {}).filter(([, value]) => value === true).map(([key]) => key);
         let expected = [];
         if (choice === 'refusal' || (choice === 'skip' && question.required)) expected = ['Prefer not to say'];
-        if (choice === 'none') expected = [question.add_none ? 'None of these' : 'No'];
+        if (choice === 'none') expected = [question.add_none ? 'None of these' : question.options.at(-1).text];
         if (choice === 'positive') expected = [(question.options.find(option => option.value === 'powered_wheelchair') || question.options[0]).text];
         assert.deepEqual(selected, expected, prefix + ': serialized answer for ' + target);
       }

@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Access Together usability test",
     "questionnaire_id": "smarturbanity_access_together_usability",
-    "questionnaire_version": "2.1.0",
+    "questionnaire_version": "3.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 12,
     "options": {
@@ -73,11 +73,11 @@
             "question_type": "single_option",
             "options": [
               {
-                "text": "Male",
+                "text": "Man",
                 "value": "male"
               },
               {
-                "text": "Female",
+                "text": "Woman",
                 "value": "female"
               }
             ],
@@ -106,11 +106,19 @@
                 "value": "none"
               },
               {
-                "text": "Lower secondary school",
+                "text": "Primary school certificate",
+                "value": "primary"
+              },
+              {
+                "text": "Lower secondary school (middle school)",
                 "value": "lower_secondary"
               },
               {
-                "text": "High school",
+                "text": "Vocational qualification (2-3 year course)",
+                "value": "vocational"
+              },
+              {
+                "text": "Upper secondary school (high school diploma)",
                 "value": "upper_secondary"
               },
               {
@@ -180,6 +188,7 @@
             "text": "How easy is it to create an account?",
             "answer_key": "account_creation_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -298,6 +307,7 @@
             "text": "How easy is it to update your profile?",
             "answer_key": "profile_update_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -385,6 +395,7 @@
             "text": "How easy is it to reset your password?",
             "answer_key": "password_reset_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -441,6 +452,7 @@
             "text": "How easy to understand are the texts of the app?",
             "answer_key": "texts_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult to understand",
@@ -484,6 +496,7 @@
             "text": "How easy to understand are the icons of the app?",
             "answer_key": "icons_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult to understand",
@@ -527,6 +540,7 @@
             "text": "How clear is the layout of the screens?",
             "answer_key": "layout_clarity",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very confusing",
@@ -567,12 +581,17 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Is the text size comfortable to read?",
+            "text": "How do you find the size of the text?",
             "answer_key": "text_size",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Too small",
+                "text": "Much too small",
+                "value": "much_too_small"
+              },
+              {
+                "text": "A little too small",
                 "value": "too_small"
               },
               {
@@ -580,8 +599,12 @@
                 "value": "just_right"
               },
               {
-                "text": "Too large",
+                "text": "A little too large",
                 "value": "too_large"
+              },
+              {
+                "text": "Much too large",
+                "value": "much_too_large"
               }
             ],
             "checks_inline": false,
@@ -704,12 +727,16 @@
             "question_type": "single_option",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Yes, all of them",
+                "value": "all"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Only some of them",
+                "value": "some"
+              },
+              {
+                "text": "None of them",
+                "value": "none"
               }
             ],
             "checks_inline": false,
@@ -723,7 +750,8 @@
             "question_type": "textarea",
             "show_if": {
               "modes_supported": [
-                "no"
+                "some",
+                "none"
               ]
             },
             "required": false,
@@ -733,6 +761,7 @@
             "text": "How easy is it to record your trips with the app?",
             "answer_key": "tracking_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -814,6 +843,7 @@
             "text": "How easy is it to switch from one travel mode to another during a trip?",
             "answer_key": "mode_switch_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -860,21 +890,30 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Are the trip results (distance, time, points) useful to you?",
+            "text": "How useful are the trip results (distance, time, points) to you?",
             "answer_key": "results_useful",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all useful",
+                "value": "not_at_all"
               },
               {
-                "text": "Partly",
-                "value": "partly"
+                "text": "Slightly useful",
+                "value": "slightly"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Moderately useful",
+                "value": "moderately"
+              },
+              {
+                "text": "Very useful",
+                "value": "very"
+              },
+              {
+                "text": "Extremely useful",
+                "value": "extremely"
               }
             ],
             "checks_inline": false,
@@ -888,29 +927,39 @@
             "question_type": "textarea",
             "show_if": {
               "results_useful": [
-                "no",
-                "partly"
+                "not_at_all",
+                "slightly",
+                "moderately"
               ]
             },
             "required": false,
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Is the summary of your trip’s impact (CO₂ emissions) easy to understand?",
+            "text": "How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?",
             "answer_key": "impact_understandable",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Very difficult",
+                "value": "very_difficult"
               },
               {
-                "text": "Partly",
-                "value": "partly"
+                "text": "Difficult",
+                "value": "difficult"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy",
+                "value": "very_easy"
               }
             ],
             "checks_inline": false,
@@ -924,8 +973,9 @@
             "question_type": "textarea",
             "show_if": {
               "impact_understandable": [
-                "no",
-                "partly"
+                "very_difficult",
+                "difficult",
+                "neutral"
               ]
             },
             "required": false,
@@ -970,21 +1020,30 @@
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Is the trip history detailed enough for your needs?",
+            "text": "How well does the trip history meet your needs?",
             "answer_key": "history_detailed",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all",
+                "value": "not_at_all"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Slightly",
+                "value": "slightly"
               },
               {
-                "text": "Partly",
-                "value": "partly"
+                "text": "Moderately",
+                "value": "moderately"
+              },
+              {
+                "text": "Very well",
+                "value": "very_well"
+              },
+              {
+                "text": "Completely",
+                "value": "completely"
               }
             ],
             "checks_inline": false,
@@ -998,8 +1057,9 @@
             "question_type": "textarea",
             "show_if": {
               "history_detailed": [
-                "no",
-                "partly"
+                "not_at_all",
+                "slightly",
+                "moderately"
               ]
             },
             "required": false,
@@ -1013,21 +1073,30 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Is it clear how the app calculates the points you earn for a trip?",
+            "text": "How easy is it to understand how the app calculates the points you earn for a trip?",
             "answer_key": "points_calculation_clear",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Very difficult",
+                "value": "very_difficult"
               },
               {
-                "text": "Partly",
-                "value": "partly"
+                "text": "Difficult",
+                "value": "difficult"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Neither easy nor difficult",
+                "value": "neutral"
+              },
+              {
+                "text": "Easy",
+                "value": "easy"
+              },
+              {
+                "text": "Very easy",
+                "value": "very_easy"
               }
             ],
             "checks_inline": false,
@@ -1041,29 +1110,39 @@
             "question_type": "textarea",
             "show_if": {
               "points_calculation_clear": [
-                "partly",
-                "no"
+                "very_difficult",
+                "difficult",
+                "neutral"
               ]
             },
             "required": false,
             "privacy_classification": "heightened_personal"
           },
           {
-            "text": "Is the number of points given for the distance travelled reasonable?",
+            "text": "For the distance you travel, how many points does the app give you?",
             "answer_key": "points_per_distance_reasonable",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Far too few",
+                "value": "far_too_few"
               },
               {
-                "text": "It depends on the travel mode",
-                "value": "depends_on_mode"
+                "text": "Too few",
+                "value": "too_few"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "The right number",
+                "value": "about_right"
+              },
+              {
+                "text": "Too many",
+                "value": "too_many"
+              },
+              {
+                "text": "Far too many",
+                "value": "far_too_many"
               }
             ],
             "checks_inline": false,
@@ -1077,8 +1156,10 @@
             "question_type": "textarea",
             "show_if": {
               "points_per_distance_reasonable": [
-                "no",
-                "depends_on_mode"
+                "far_too_few",
+                "too_few",
+                "too_many",
+                "far_too_many"
               ]
             },
             "required": false,
@@ -1126,6 +1207,7 @@
             "text": "How easy is it to convert your points into rewards?",
             "answer_key": "points_conversion_ease",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "Very difficult",
@@ -1175,9 +1257,14 @@
             "text": "Considering the rewards on offer, how quickly do you collect points?",
             "answer_key": "points_collection_pace",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
-                "text": "Too slowly",
+                "text": "Much too slowly",
+                "value": "much_too_slow"
+              },
+              {
+                "text": "A little too slowly",
                 "value": "too_slow"
               },
               {
@@ -1185,8 +1272,12 @@
                 "value": "about_right"
               },
               {
-                "text": "Too quickly",
+                "text": "A little too quickly",
                 "value": "too_fast"
+              },
+              {
+                "text": "Much too quickly",
+                "value": "much_too_fast"
               }
             ],
             "checks_inline": false,
@@ -1249,6 +1340,7 @@
             "text": "How useful would this app be for you?",
             "answer_key": "app_usefulness",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
                 "text": "Not at all useful",
@@ -1280,6 +1372,7 @@
             "text": "Would you consider using this app if it were available?",
             "answer_key": "intention_to_use",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "options": [
               {
                 "text": "I would definitely not use it",
@@ -1347,19 +1440,25 @@
       "#Interface": "Interface",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>",
       "#What made switching travel mode difficult?": "What made switching travel mode difficult?",
-      "#Partly": "Partly",
       "#Recording trips": "Recording trips",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "Is it clear how the app calculates the points you earn for a trip?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "How easy is it to understand how the app calculates the points you earn for a trip?",
       "#What is unclear?": "What is unclear?",
-      "#Is the number of points given for the distance travelled reasonable?": "Is the number of points given for the distance travelled reasonable?",
+      "#For the distance you travel, how many points does the app give you?": "For the distance you travel, how many points does the app give you?",
+      "#Far too few": "Far too few",
+      "#Too few": "Too few",
+      "#The right number": "The right number",
+      "#Too many": "Too many",
+      "#Far too many": "Far too many",
       "#How should points be given instead?": "How should points be given instead?",
       "#How easy is it to convert your points into rewards?": "How easy is it to convert your points into rewards?",
       "#What made converting points difficult?": "What made converting points difficult?",
-      "#Too slowly": "Too slowly",
       "#About right": "About right",
-      "#Too quickly": "Too quickly",
       "#Considering the rewards on offer, how quickly do you collect points?": "Considering the rewards on offer, how quickly do you collect points?",
+      "#Much too slowly": "Much too slowly",
+      "#A little too slowly": "A little too slowly",
+      "#A little too quickly": "A little too quickly",
+      "#Much too quickly": "Much too quickly",
       "#Transport and mobility": "Transport and mobility",
       "#Food and drinks": "Food and drinks",
       "#Shopping": "Shopping",
@@ -1407,12 +1506,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 or older",
       "#What is your gender?": "What is your gender?",
-      "#Male": "Male",
-      "#Female": "Female",
+      "#Man": "Man",
+      "#Woman": "Woman",
       "#What is your highest completed level of education?": "What is your highest completed level of education?",
+      "#Primary school certificate": "Primary school certificate",
+      "#Lower secondary school (middle school)": "Lower secondary school (middle school)",
+      "#Vocational qualification (2-3 year course)": "Vocational qualification (2-3 year course)",
+      "#Upper secondary school (high school diploma)": "Upper secondary school (high school diploma)",
       "#No qualification": "No qualification",
-      "#Lower secondary school": "Lower secondary school",
-      "#High school": "High school",
       "#Bachelor degree or equivalent": "Bachelor degree or equivalent",
       "#Master degree or equivalent": "Master degree or equivalent",
       "#Doctorate degree": "Doctorate degree",
@@ -1433,27 +1534,36 @@
       "#Very confusing": "Very confusing",
       "#Rather confusing": "Rather confusing",
       "#Neither clear nor confusing": "Neither clear nor confusing",
-      "#Is the text size comfortable to read?": "Is the text size comfortable to read?",
-      "#Too small": "Too small",
+      "#How do you find the size of the text?": "How do you find the size of the text?",
+      "#Much too small": "Much too small",
+      "#A little too small": "A little too small",
+      "#A little too large": "A little too large",
+      "#Much too large": "Much too large",
       "#Just right": "Just right",
-      "#Too large": "Too large",
       "#Does it seem reasonable that the app asks for your location?": "Does it seem reasonable that the app asks for your location?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Does it seem reasonable that the app asks for your physical activity data?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Does it seem reasonable that the app asks for access to your camera?",
       "#Anything to add about the permissions the app asks for?": "Anything to add about the permissions the app asks for?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Did you manage to complete the questionnaires before and after the trip?",
       "#Does the app support the travel modes you usually use?": "Does the app support the travel modes you usually use?",
+      "#Yes, all of them": "Yes, all of them",
+      "#Only some of them": "Only some of them",
+      "#None of them": "None of them",
       "#Which travel modes are missing?": "Which travel modes are missing?",
       "#How easy is it to record your trips with the app?": "How easy is it to record your trips with the app?",
       "#What made recording your trips difficult?": "What made recording your trips difficult?",
       "#How easy is it to switch from one travel mode to another during a trip?": "How easy is it to switch from one travel mode to another during a trip?",
-      "#Are the trip results (distance, time, points) useful to you?": "Are the trip results (distance, time, points) useful to you?",
+      "#How useful are the trip results (distance, time, points) to you?": "How useful are the trip results (distance, time, points) to you?",
       "#What would make the results more useful?": "What would make the results more useful?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Is the summary of your trip’s impact (CO₂ emissions) easy to understand?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?",
       "#What is hard to understand in the impact summary?": "What is hard to understand in the impact summary?",
-      "#Is the trip history detailed enough for your needs?": "Is the trip history detailed enough for your needs?",
+      "#How well does the trip history meet your needs?": "How well does the trip history meet your needs?",
+      "#Not at all": "Not at all",
+      "#Slightly": "Slightly",
+      "#Moderately": "Moderately",
+      "#Very well": "Very well",
+      "#Completely": "Completely",
       "#What is missing from the trip history?": "What is missing from the trip history?",
-      "#It depends on the travel mode": "It depends on the travel mode",
       "#Neither easy nor difficult to understand": "Neither easy nor difficult to understand",
       "#What is your age group?": "What is your age group?"
     },
@@ -1486,19 +1596,25 @@
       "#Interface": "Interface",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>La clarté des écrans, des textes et des icônes, et si l’application ne demande que les accès dont elle a besoin.</p>",
       "#What made switching travel mode difficult?": "Qu’est-ce qui a rendu le changement de mode de transport difficile ?",
-      "#Partly": "Moyennement",
       "#Recording trips": "Enregistrement des trajets",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Enregistrer un trajet, changer de mode de transport en cours de route, et consulter vos résultats et votre historique.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "Est-il clair pour vous comment l’application calcule les points que vous gagnez pour un trajet ?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "Est-il facile de comprendre comment l'application calcule les points gagnés pour un trajet ?",
       "#What is unclear?": "Qu’est-ce qui n’est pas clair ?",
-      "#Is the number of points given for the distance travelled reasonable?": "Trouvez-vous que le nombre de points attribués en fonction de la distance parcourue est raisonnable ?",
+      "#For the distance you travel, how many points does the app give you?": "Pour la distance parcourue, combien de points l'application vous donne-t-elle ?",
+      "#Far too few": "Beaucoup trop peu",
+      "#Too few": "Trop peu",
+      "#The right number": "Le bon nombre",
+      "#Too many": "Trop",
+      "#Far too many": "Beaucoup trop",
       "#How should points be given instead?": "Comment les points devraient-ils plutôt être attribués ?",
       "#How easy is it to convert your points into rewards?": "Dans quelle mesure trouvez-vous facile de convertir vos points en cadeaux ?",
       "#What made converting points difficult?": "Qu’est-ce qui a rendu la conversion des points difficile ?",
-      "#Too slowly": "Trop lentement",
       "#About right": "Au bon rythme",
-      "#Too quickly": "Trop rapidement",
       "#Considering the rewards on offer, how quickly do you collect points?": "Compte tenu des cadeaux proposés, à quelle vitesse accumulez-vous des points ?",
+      "#Much too slowly": "Beaucoup trop lentement",
+      "#A little too slowly": "Un peu trop lentement",
+      "#A little too quickly": "Un peu trop rapidement",
+      "#Much too quickly": "Beaucoup trop rapidement",
       "#Transport and mobility": "Transport et mobilité",
       "#Food and drinks": "Alimentation et boissons",
       "#Shopping": "Shopping",
@@ -1546,12 +1662,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 ans ou plus",
       "#What is your gender?": "Quel est votre genre ?",
-      "#Male": "Homme",
-      "#Female": "Femme",
+      "#Man": "Homme",
+      "#Woman": "Femme",
       "#What is your highest completed level of education?": "Quel est le niveau d’études le plus élevé que vous avez terminé ?",
+      "#Primary school certificate": "Certificat d’études primaires",
+      "#Lower secondary school (middle school)": "Premier cycle du secondaire (collège)",
+      "#Vocational qualification (2-3 year course)": "Qualification professionnelle (formation de 2-3 ans)",
+      "#Upper secondary school (high school diploma)": "Second cycle du secondaire (diplôme de fin d’études secondaires)",
       "#No qualification": "Aucun diplôme",
-      "#Lower secondary school": "Enseignement secondaire inférieur / collège",
-      "#High school": "Enseignement secondaire supérieur / lycée",
       "#Bachelor degree or equivalent": "Licence ou équivalent",
       "#Master degree or equivalent": "Master ou équivalent",
       "#Doctorate degree": "Doctorat",
@@ -1572,27 +1690,36 @@
       "#Very confusing": "Très confuse",
       "#Rather confusing": "Plutôt confuse",
       "#Neither clear nor confusing": "Ni claire ni confuse",
-      "#Is the text size comfortable to read?": "La taille du texte est-elle confortable à lire ?",
-      "#Too small": "Trop petite",
+      "#How do you find the size of the text?": "Comment trouvez-vous la taille du texte ?",
+      "#Much too small": "Beaucoup trop petite",
+      "#A little too small": "Un peu trop petite",
+      "#A little too large": "Un peu trop grande",
+      "#Much too large": "Beaucoup trop grande",
       "#Just right": "Adaptée",
-      "#Too large": "Trop grande",
       "#Does it seem reasonable that the app asks for your location?": "Vous semble-t-il raisonnable que l’application demande votre localisation ?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Vous semble-t-il raisonnable que l’application demande vos données d’activité physique ?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Vous semble-t-il raisonnable que l’application demande l’accès à votre appareil photo ?",
       "#Anything to add about the permissions the app asks for?": "Avez-vous quelque chose à ajouter sur les autorisations demandées par l’application ?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Avez-vous réussi à compléter les questionnaires avant et après le trajet ?",
       "#Does the app support the travel modes you usually use?": "L’application prend-elle en charge les modes de transport que vous utilisez habituellement ?",
+      "#Yes, all of them": "Oui, tous",
+      "#Only some of them": "Seulement certains",
+      "#None of them": "Aucun",
       "#Which travel modes are missing?": "Quels modes de transport manquent ?",
       "#How easy is it to record your trips with the app?": "Dans quelle mesure est-il facile d’enregistrer vos trajets avec l’application ?",
       "#What made recording your trips difficult?": "Qu’est-ce qui a rendu l’enregistrement de vos trajets difficile ?",
       "#How easy is it to switch from one travel mode to another during a trip?": "Dans quelle mesure est-il facile de passer d’un mode de transport à un autre pendant un trajet ?",
-      "#Are the trip results (distance, time, points) useful to you?": "Les résultats de vos trajets (distance, durée, points) vous sont-ils utiles ?",
+      "#How useful are the trip results (distance, time, points) to you?": "Dans quelle mesure les résultats de vos trajets (distance, durée, points) vous sont-ils utiles ?",
       "#What would make the results more useful?": "Qu’est-ce qui rendrait les résultats plus utiles ?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Le résumé de l’impact de votre trajet (émissions de CO₂) est-il facile à comprendre ?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "Le résumé de l’impact de votre trajet (émissions de CO₂) est-il facile à comprendre ?",
       "#What is hard to understand in the impact summary?": "Qu’est-ce qui est difficile à comprendre dans le résumé de l’impact ?",
-      "#Is the trip history detailed enough for your needs?": "L’historique de vos trajets vous semble-t-il suffisamment détaillé pour répondre à vos besoins ?",
+      "#How well does the trip history meet your needs?": "Dans quelle mesure l’historique de vos trajets répond-il à vos besoins ?",
+      "#Not at all": "Pas du tout",
+      "#Slightly": "Un peu",
+      "#Moderately": "Moyennement",
+      "#Very well": "Très bien",
+      "#Completely": "Entièrement",
       "#What is missing from the trip history?": "Que manque-t-il dans l’historique des trajets ?",
-      "#It depends on the travel mode": "Cela dépend du mode de transport",
       "#Neither easy nor difficult to understand": "Ni faciles ni difficiles à comprendre",
       "#What is your age group?": "Dans quelle tranche d’âge êtes-vous ?"
     },
@@ -1625,19 +1752,25 @@
       "#Interface": "Interfaccia",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Quanto sono chiari schermate, testi e icone, e se l’app chiede solo gli accessi di cui ha bisogno.</p>",
       "#What made switching travel mode difficult?": "Cosa ha reso difficile cambiare modo di spostamento?",
-      "#Partly": "In parte",
       "#Recording trips": "Registrazione dei viaggi",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Registrare un viaggio, cambiare modo di spostamento durante il viaggio e leggere i tuoi risultati e la cronologia.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "È chiaro come l’app calcola i punti che guadagni per un viaggio?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "Quanto è facile capire come l'app calcola i punti che guadagni per un viaggio?",
       "#What is unclear?": "Cosa non è chiaro?",
-      "#Is the number of points given for the distance travelled reasonable?": "Il numero di punti dati in base alla distanza percorsa è ragionevole?",
+      "#For the distance you travel, how many points does the app give you?": "Per la distanza che percorri, quanti punti ti dà l'app?",
+      "#Far too few": "Decisamente troppo pochi",
+      "#Too few": "Troppo pochi",
+      "#The right number": "Il numero giusto",
+      "#Too many": "Troppi",
+      "#Far too many": "Decisamente troppi",
       "#How should points be given instead?": "Come dovrebbero essere assegnati i punti, invece?",
       "#How easy is it to convert your points into rewards?": "Quanto è facile convertire i tuoi punti in premi?",
       "#What made converting points difficult?": "Cosa ha reso difficile convertire i punti?",
-      "#Too slowly": "Troppo lentamente",
       "#About right": "Al ritmo giusto",
-      "#Too quickly": "Troppo velocemente",
       "#Considering the rewards on offer, how quickly do you collect points?": "Considerando i premi disponibili, quanto velocemente accumuli punti?",
+      "#Much too slowly": "Decisamente troppo lentamente",
+      "#A little too slowly": "Un po' troppo lentamente",
+      "#A little too quickly": "Un po' troppo velocemente",
+      "#Much too quickly": "Decisamente troppo velocemente",
       "#Transport and mobility": "Trasporti e mobilità",
       "#Food and drinks": "Cibo e bevande",
       "#Shopping": "Shopping",
@@ -1685,12 +1818,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 anni o più",
       "#What is your gender?": "Qual è il tuo genere?",
-      "#Male": "Uomo",
-      "#Female": "Donna",
+      "#Man": "Uomo",
+      "#Woman": "Donna",
       "#What is your highest completed level of education?": "Qual è il livello di istruzione più alto che hai completato?",
+      "#Primary school certificate": "Licenza elementare",
+      "#Lower secondary school (middle school)": "Scuola media inferiore",
+      "#Vocational qualification (2-3 year course)": "Qualifica professionale (corso di 2-3 anni)",
+      "#Upper secondary school (high school diploma)": "Scuola media superiore (diploma)",
       "#No qualification": "Nessun titolo di studio",
-      "#Lower secondary school": "Scuola secondaria di primo grado",
-      "#High school": "Scuola secondaria di secondo grado",
       "#Bachelor degree or equivalent": "Laurea triennale o titolo equivalente",
       "#Master degree or equivalent": "Laurea magistrale o titolo equivalente",
       "#Doctorate degree": "Dottorato di ricerca",
@@ -1711,27 +1846,36 @@
       "#Very confusing": "Molto confusa",
       "#Rather confusing": "Piuttosto confusa",
       "#Neither clear nor confusing": "Né chiara né confusa",
-      "#Is the text size comfortable to read?": "La dimensione del testo è comoda da leggere?",
-      "#Too small": "Troppo piccola",
+      "#How do you find the size of the text?": "Come trovi la dimensione del testo?",
+      "#Much too small": "Decisamente troppo piccola",
+      "#A little too small": "Un po' troppo piccola",
+      "#A little too large": "Un po' troppo grande",
+      "#Much too large": "Decisamente troppo grande",
       "#Just right": "Giusta",
-      "#Too large": "Troppo grande",
       "#Does it seem reasonable that the app asks for your location?": "Ti sembra ragionevole che l’app chieda la tua posizione?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Ti sembra ragionevole che l’app chieda i tuoi dati sull’attività fisica?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Ti sembra ragionevole che l’app chieda l’accesso alla tua fotocamera?",
       "#Anything to add about the permissions the app asks for?": "Vuoi aggiungere qualcosa sulle autorizzazioni che l’app chiede?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Hai potuto compilare i questionari prima e dopo il viaggio?",
       "#Does the app support the travel modes you usually use?": "L’app supporta i modi di spostamento che usi di solito?",
+      "#Yes, all of them": "Sì, tutti",
+      "#Only some of them": "Solo alcuni",
+      "#None of them": "Nessuno",
       "#Which travel modes are missing?": "Quali modi di spostamento mancano?",
       "#How easy is it to record your trips with the app?": "Quanto è facile registrare i tuoi viaggi con l’app?",
       "#What made recording your trips difficult?": "Cosa ha reso difficile registrare i tuoi viaggi?",
       "#How easy is it to switch from one travel mode to another during a trip?": "Quanto è facile passare da un modo di spostamento a un altro durante un viaggio?",
-      "#Are the trip results (distance, time, points) useful to you?": "I risultati dei viaggi (distanza, tempo, punti) ti sono utili?",
+      "#How useful are the trip results (distance, time, points) to you?": "Quanto ti sono utili i risultati dei viaggi (distanza, tempo, punti)?",
       "#What would make the results more useful?": "Cosa renderebbe i risultati più utili?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Il riepilogo dell’impatto del tuo viaggio (emissioni di CO₂) è facile da capire?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "Quanto è facile capire il riepilogo dell’impatto del tuo viaggio (emissioni di CO₂)?",
       "#What is hard to understand in the impact summary?": "Cos’è difficile da capire nel riepilogo dell’impatto?",
-      "#Is the trip history detailed enough for your needs?": "La cronologia dei viaggi è abbastanza dettagliata per le tue esigenze?",
+      "#How well does the trip history meet your needs?": "Quanto la cronologia dei viaggi risponde alle tue esigenze?",
+      "#Not at all": "Per niente",
+      "#Slightly": "Poco",
+      "#Moderately": "Abbastanza",
+      "#Very well": "Molto bene",
+      "#Completely": "Completamente",
       "#What is missing from the trip history?": "Cosa manca nella cronologia dei viaggi?",
-      "#It depends on the travel mode": "Dipende dal modo di spostamento",
       "#Neither easy nor difficult to understand": "Né facili né difficili da capire",
       "#What is your age group?": "Qual è la tua fascia d’età?"
     },
@@ -1764,19 +1908,25 @@
       "#Interface": "Oberfläche",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Wie klar Bildschirme, Texte und Symbole sind und ob die App nur die Zugriffe anfordert, die sie braucht.</p>",
       "#What made switching travel mode difficult?": "Was hat den Wechsel des Verkehrsmittels schwierig gemacht?",
-      "#Partly": "Teilweise",
       "#Recording trips": "Wege aufzeichnen",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Einen Weg aufzeichnen, unterwegs das Verkehrsmittel wechseln und Ihre Ergebnisse und Ihren Verlauf lesen.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "Ist Ihnen klar, wie die App die Punkte berechnet, die Sie für einen Weg erhalten?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "Wie leicht ist zu verstehen, wie die App die Punkte für einen Weg berechnet?",
       "#What is unclear?": "Was ist unklar?",
-      "#Is the number of points given for the distance travelled reasonable?": "Ist die Anzahl der Punkte für die zurückgelegte Strecke angemessen?",
+      "#For the distance you travel, how many points does the app give you?": "Wie viele Punkte gibt Ihnen die App für die zurückgelegte Strecke?",
+      "#Far too few": "Viel zu wenige",
+      "#Too few": "Zu wenige",
+      "#The right number": "Genau richtig viele",
+      "#Too many": "Zu viele",
+      "#Far too many": "Viel zu viele",
       "#How should points be given instead?": "Wie sollten die Punkte stattdessen vergeben werden?",
       "#How easy is it to convert your points into rewards?": "Wie einfach ist es, Ihre Punkte in Prämien umzuwandeln?",
       "#What made converting points difficult?": "Was hat das Umwandeln der Punkte schwierig gemacht?",
-      "#Too slowly": "Zu langsam",
       "#About right": "Im richtigen Tempo",
-      "#Too quickly": "Zu schnell",
       "#Considering the rewards on offer, how quickly do you collect points?": "Wie schnell sammeln Sie Punkte, gemessen an den angebotenen Prämien?",
+      "#Much too slowly": "Viel zu langsam",
+      "#A little too slowly": "Etwas zu langsam",
+      "#A little too quickly": "Etwas zu schnell",
+      "#Much too quickly": "Viel zu schnell",
       "#Transport and mobility": "Verkehr und Mobilität",
       "#Food and drinks": "Essen und Getränke",
       "#Shopping": "Einkaufen",
@@ -1824,12 +1974,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 Jahre oder älter",
       "#What is your gender?": "Welches Geschlecht haben Sie?",
-      "#Male": "Männlich",
-      "#Female": "Weiblich",
+      "#Man": "Mann",
+      "#Woman": "Frau",
       "#What is your highest completed level of education?": "Was ist Ihr höchster abgeschlossener Bildungsabschluss?",
+      "#Primary school certificate": "Grundschulabschluss",
+      "#Lower secondary school (middle school)": "Haupt- oder Realschulabschluss (mittlerer Abschluss)",
+      "#Vocational qualification (2-3 year course)": "Berufliche Qualifikation (Ausbildung von 2-3 Jahren)",
+      "#Upper secondary school (high school diploma)": "Abitur oder Fachabitur",
       "#No qualification": "Kein Abschluss",
-      "#Lower secondary school": "Mittlerer Schulabschluss",
-      "#High school": "Abitur oder vergleichbarer Schulabschluss",
       "#Bachelor degree or equivalent": "Bachelorabschluss oder vergleichbar",
       "#Master degree or equivalent": "Masterabschluss oder vergleichbar",
       "#Doctorate degree": "Promotion",
@@ -1850,27 +2002,36 @@
       "#Very confusing": "Sehr verwirrend",
       "#Rather confusing": "Eher verwirrend",
       "#Neither clear nor confusing": "Weder übersichtlich noch verwirrend",
-      "#Is the text size comfortable to read?": "Ist die Schriftgröße angenehm zu lesen?",
-      "#Too small": "Zu klein",
+      "#How do you find the size of the text?": "Wie finden Sie die Schriftgröße?",
+      "#Much too small": "Viel zu klein",
+      "#A little too small": "Etwas zu klein",
+      "#A little too large": "Etwas zu groß",
+      "#Much too large": "Viel zu groß",
       "#Just right": "Genau richtig",
-      "#Too large": "Zu groß",
       "#Does it seem reasonable that the app asks for your location?": "Finden Sie es nachvollziehbar, dass die App nach Ihrem Standort fragt?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Finden Sie es nachvollziehbar, dass die App nach Ihren Daten zur körperlichen Aktivität fragt?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Finden Sie es nachvollziehbar, dass die App Zugriff auf Ihre Kamera anfordert?",
       "#Anything to add about the permissions the app asks for?": "Möchten Sie noch etwas zu den Berechtigungen sagen, die die App anfordert?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Konnten Sie die Fragebögen vor und nach dem Weg ausfüllen?",
       "#Does the app support the travel modes you usually use?": "Unterstützt die App die Verkehrsmittel, die Sie normalerweise nutzen?",
+      "#Yes, all of them": "Ja, alle",
+      "#Only some of them": "Nur einige",
+      "#None of them": "Keine",
       "#Which travel modes are missing?": "Welche Verkehrsmittel fehlen?",
       "#How easy is it to record your trips with the app?": "Wie einfach ist es, Ihre Wege mit der App aufzuzeichnen?",
       "#What made recording your trips difficult?": "Was hat das Aufzeichnen Ihrer Wege schwierig gemacht?",
       "#How easy is it to switch from one travel mode to another during a trip?": "Wie einfach ist es, während eines Weges von einem Verkehrsmittel zu einem anderen zu wechseln?",
-      "#Are the trip results (distance, time, points) useful to you?": "Sind die Ergebnisse Ihrer Wege (Strecke, Zeit, Punkte) für Sie nützlich?",
+      "#How useful are the trip results (distance, time, points) to you?": "Wie nützlich sind die Ergebnisse Ihrer Wege (Strecke, Zeit, Punkte) für Sie?",
       "#What would make the results more useful?": "Was würde die Ergebnisse nützlicher machen?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Ist die Zusammenfassung der Auswirkungen Ihres Weges (CO₂-Emissionen) leicht verständlich?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "Wie leicht ist die Zusammenfassung der Auswirkungen Ihres Weges (CO₂-Emissionen) zu verstehen?",
       "#What is hard to understand in the impact summary?": "Was ist an der Zusammenfassung der Auswirkungen schwer verständlich?",
-      "#Is the trip history detailed enough for your needs?": "Ist der Wegeverlauf für Ihre Bedürfnisse detailliert genug?",
+      "#How well does the trip history meet your needs?": "Wie gut erfüllt der Wegeverlauf Ihre Bedürfnisse?",
+      "#Not at all": "Gar nicht",
+      "#Slightly": "Wenig",
+      "#Moderately": "Mittelmäßig",
+      "#Very well": "Sehr gut",
+      "#Completely": "Vollständig",
       "#What is missing from the trip history?": "Was fehlt im Wegeverlauf?",
-      "#It depends on the travel mode": "Das hängt vom Verkehrsmittel ab",
       "#Neither easy nor difficult to understand": "Weder leicht noch schwer verständlich",
       "#What is your age group?": "Zu welcher Altersgruppe gehören Sie?"
     },
@@ -1903,19 +2064,25 @@
       "#Interface": "Arayüz",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Ekranların, metinlerin ve simgelerin ne kadar anlaşılır olduğu ve uygulamanın yalnızca ihtiyaç duyduğu erişimleri isteyip istemediği.</p>",
       "#What made switching travel mode difficult?": "Ulaşım türünü değiştirmeyi ne zorlaştırdı?",
-      "#Partly": "Kısmen",
       "#Recording trips": "Yolculukları kaydetme",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Bir yolculuğu kaydetme, yolculuk sırasında ulaşım türünü değiştirme ve sonuçlarınızı ve geçmişinizi okuma.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "Uygulamanın bir yolculuk için kazandığınız puanları nasıl hesapladığı açık mı?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "Uygulamanın bir yolculuk için kazandığınız puanları nasıl hesapladığını anlamak ne kadar kolay?",
       "#What is unclear?": "Belirsiz olan nedir?",
-      "#Is the number of points given for the distance travelled reasonable?": "Kat edilen mesafe için verilen puan sayısı makul mü?",
+      "#For the distance you travel, how many points does the app give you?": "Kat ettiğiniz mesafe için uygulama size ne kadar puan veriyor?",
+      "#Far too few": "Çok az",
+      "#Too few": "Az",
+      "#The right number": "Uygun sayıda",
+      "#Too many": "Fazla",
+      "#Far too many": "Çok fazla",
       "#How should points be given instead?": "Puanlar bunun yerine nasıl verilmeli?",
       "#How easy is it to convert your points into rewards?": "Puanlarınızı ödüllere dönüştürmek ne kadar kolay?",
       "#What made converting points difficult?": "Puanları dönüştürmeyi ne zorlaştırdı?",
-      "#Too slowly": "Fazla yavaş",
       "#About right": "Uygun hızda",
-      "#Too quickly": "Fazla hızlı",
       "#Considering the rewards on offer, how quickly do you collect points?": "Sunulan ödüller göz önüne alındığında, ne kadar hızlı puan topluyorsunuz?",
+      "#Much too slowly": "Çok fazla yavaş",
+      "#A little too slowly": "Biraz fazla yavaş",
+      "#A little too quickly": "Biraz fazla hızlı",
+      "#Much too quickly": "Çok fazla hızlı",
       "#Transport and mobility": "Ulaşım ve mobilite",
       "#Food and drinks": "Yiyecek ve içecek",
       "#Shopping": "Alışveriş",
@@ -1963,12 +2130,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 yaş veya üzeri",
       "#What is your gender?": "Cinsiyetiniz nedir?",
-      "#Male": "Erkek",
-      "#Female": "Kadın",
+      "#Man": "Erkek",
+      "#Woman": "Kadın",
       "#What is your highest completed level of education?": "Tamamladığınız en yüksek eğitim düzeyi nedir?",
+      "#Primary school certificate": "İlkokul diploması",
+      "#Lower secondary school (middle school)": "Ortaokul",
+      "#Vocational qualification (2-3 year course)": "Mesleki yeterlilik (2-3 yıllık kurs)",
+      "#Upper secondary school (high school diploma)": "Lise (lise diploması)",
       "#No qualification": "Diplomam yok",
-      "#Lower secondary school": "Ortaokul",
-      "#High school": "Lise",
       "#Bachelor degree or equivalent": "Lisans veya dengi",
       "#Master degree or equivalent": "Yüksek lisans veya dengi",
       "#Doctorate degree": "Doktora",
@@ -1989,27 +2158,36 @@
       "#Very confusing": "Çok karmaşık",
       "#Rather confusing": "Oldukça karmaşık",
       "#Neither clear nor confusing": "Ne anlaşılır ne karmaşık",
-      "#Is the text size comfortable to read?": "Yazı boyutu rahat okunuyor mu?",
-      "#Too small": "Fazla küçük",
+      "#How do you find the size of the text?": "Yazı boyutunu nasıl buluyorsunuz?",
+      "#Much too small": "Çok fazla küçük",
+      "#A little too small": "Biraz fazla küçük",
+      "#A little too large": "Biraz fazla büyük",
+      "#Much too large": "Çok fazla büyük",
       "#Just right": "Tam uygun",
-      "#Too large": "Fazla büyük",
       "#Does it seem reasonable that the app asks for your location?": "Uygulamanın konumunuzu istemesi size makul görünüyor mu?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Uygulamanın fiziksel etkinlik verilerinizi istemesi size makul görünüyor mu?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Uygulamanın kameranıza erişim istemesi size makul görünüyor mu?",
       "#Anything to add about the permissions the app asks for?": "Uygulamanın istediği izinler hakkında eklemek istediğiniz bir şey var mı?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Yolculuktan önce ve sonra anketleri doldurabildiniz mi?",
       "#Does the app support the travel modes you usually use?": "Uygulama genellikle kullandığınız ulaşım türlerini destekliyor mu?",
+      "#Yes, all of them": "Evet, hepsini",
+      "#Only some of them": "Yalnızca bazılarını",
+      "#None of them": "Hiçbirini",
       "#Which travel modes are missing?": "Hangi ulaşım türleri eksik?",
       "#How easy is it to record your trips with the app?": "Uygulamayla yolculuklarınızı kaydetmek ne kadar kolay?",
       "#What made recording your trips difficult?": "Yolculuklarınızı kaydetmeyi ne zorlaştırdı?",
       "#How easy is it to switch from one travel mode to another during a trip?": "Bir yolculuk sırasında bir ulaşım türünden diğerine geçmek ne kadar kolay?",
-      "#Are the trip results (distance, time, points) useful to you?": "Yolculuk sonuçları (mesafe, süre, puanlar) sizin için faydalı mı?",
+      "#How useful are the trip results (distance, time, points) to you?": "Yolculuk sonuçları (mesafe, süre, puanlar) sizin için ne kadar faydalı?",
       "#What would make the results more useful?": "Sonuçları daha faydalı kılmak için ne değişmeli?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Yolculuğunuzun etki özeti (CO₂ emisyonları) kolay anlaşılır mı?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "Yolculuğunuzun etki özetini (CO₂ emisyonları) anlamak ne kadar kolay?",
       "#What is hard to understand in the impact summary?": "Etki özetinde anlaşılması zor olan nedir?",
-      "#Is the trip history detailed enough for your needs?": "Yolculuk geçmişi ihtiyaçlarınız için yeterince ayrıntılı mı?",
+      "#How well does the trip history meet your needs?": "Yolculuk geçmişi ihtiyaçlarınızı ne kadar karşılıyor?",
+      "#Not at all": "Hiç",
+      "#Slightly": "Biraz",
+      "#Moderately": "Orta düzeyde",
+      "#Very well": "Çok iyi",
+      "#Completely": "Tamamen",
       "#What is missing from the trip history?": "Yolculuk geçmişinde ne eksik?",
-      "#It depends on the travel mode": "Ulaşım türüne bağlı",
       "#Neither easy nor difficult to understand": "Ne kolay ne zor anlaşılır",
       "#What is your age group?": "Hangi yaş grubundasınız?"
     },
@@ -2042,19 +2220,25 @@
       "#Interface": "Felület",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>Mennyire világosak a képernyők, a szövegek és az ikonok, és csak azokhoz a hozzáférésekhez kér-e engedélyt az alkalmazás, amelyekre szüksége van.</p>",
       "#What made switching travel mode difficult?": "Mi tette nehézzé a közlekedési mód váltását?",
-      "#Partly": "Részben",
       "#Recording trips": "Utak rögzítése",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>Egy út rögzítése, a közlekedési mód váltása útközben, valamint az eredmények és az előzmények megtekintése.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "Világos az Ön számára, hogyan számítja ki az alkalmazás az egy útért kapott pontokat?",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "Mennyire könnyű megérteni, hogyan számolja ki az alkalmazás az egy útért kapott pontokat?",
       "#What is unclear?": "Mi nem világos?",
-      "#Is the number of points given for the distance travelled reasonable?": "Észszerű a megtett távolságért kapott pontok száma?",
+      "#For the distance you travel, how many points does the app give you?": "A megtett távolságért mennyi pontot ad az alkalmazás?",
+      "#Far too few": "Túlságosan kevés",
+      "#Too few": "Kevés",
+      "#The right number": "Megfelelő számú",
+      "#Too many": "Sok",
+      "#Far too many": "Túlságosan sok",
       "#How should points be given instead?": "Hogyan kellene inkább a pontokat adni?",
       "#How easy is it to convert your points into rewards?": "Mennyire könnyű a pontjait jutalmakra váltani?",
       "#What made converting points difficult?": "Mi tette nehézzé a pontok beváltását?",
-      "#Too slowly": "Túl lassan",
       "#About right": "Megfelelő ütemben",
-      "#Too quickly": "Túl gyorsan",
       "#Considering the rewards on offer, how quickly do you collect points?": "A kínált jutalmakhoz képest milyen gyorsan gyűjti a pontokat?",
+      "#Much too slowly": "Jóval túl lassan",
+      "#A little too slowly": "Kicsit túl lassan",
+      "#A little too quickly": "Kicsit túl gyorsan",
+      "#Much too quickly": "Jóval túl gyorsan",
       "#Transport and mobility": "Közlekedés és mobilitás",
       "#Food and drinks": "Étel és ital",
       "#Shopping": "Vásárlás",
@@ -2102,12 +2286,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 éves vagy idősebb",
       "#What is your gender?": "Mi az Ön neme?",
-      "#Male": "Férfi",
-      "#Female": "Nő",
+      "#Man": "Férfi",
+      "#Woman": "Nő",
       "#What is your highest completed level of education?": "Mi a legmagasabb befejezett iskolai végzettsége?",
+      "#Primary school certificate": "Elemi iskolai végzettség (alsó tagozat)",
+      "#Lower secondary school (middle school)": "Általános iskola (8 osztály)",
+      "#Vocational qualification (2-3 year course)": "Szakmai képesítés (2-3 éves képzés)",
+      "#Upper secondary school (high school diploma)": "Középiskola (érettségi)",
       "#No qualification": "Nincs végzettségem",
-      "#Lower secondary school": "Alsó középfokú végzettség",
-      "#High school": "Középiskolai végzettség",
       "#Bachelor degree or equivalent": "Alapképzés vagy annak megfelelő végzettség",
       "#Master degree or equivalent": "Mesterképzés vagy annak megfelelő végzettség",
       "#Doctorate degree": "Doktori fokozat",
@@ -2128,27 +2314,36 @@
       "#Very confusing": "Nagyon zavaros",
       "#Rather confusing": "Inkább zavaros",
       "#Neither clear nor confusing": "Se nem átlátható, se nem zavaros",
-      "#Is the text size comfortable to read?": "Kényelmes az olvasáshoz a betűméret?",
-      "#Too small": "Túl kicsi",
+      "#How do you find the size of the text?": "Milyennek találja a betűméretet?",
+      "#Much too small": "Jóval túl kicsi",
+      "#A little too small": "Kicsit túl kicsi",
+      "#A little too large": "Kicsit túl nagy",
+      "#Much too large": "Jóval túl nagy",
       "#Just right": "Éppen megfelelő",
-      "#Too large": "Túl nagy",
       "#Does it seem reasonable that the app asks for your location?": "Észszerűnek tűnik, hogy az alkalmazás hozzáférést kér a helyadataihoz?",
       "#Does it seem reasonable that the app asks for your physical activity data?": "Észszerűnek tűnik, hogy az alkalmazás hozzáférést kér a fizikai aktivitási adataihoz?",
       "#Does it seem reasonable that the app asks for access to your camera?": "Észszerűnek tűnik, hogy az alkalmazás hozzáférést kér a kamerájához?",
       "#Anything to add about the permissions the app asks for?": "Szeretne még valamit hozzáfűzni az alkalmazás által kért engedélyekhez?",
       "#Did you manage to complete the questionnaires before and after the trip?": "Sikerült kitöltenie az út előtti és utáni kérdőíveket?",
       "#Does the app support the travel modes you usually use?": "Támogatja az alkalmazás azokat a közlekedési módokat, amelyeket általában használ?",
+      "#Yes, all of them": "Igen, mindet",
+      "#Only some of them": "Csak néhányat",
+      "#None of them": "Egyiket sem",
       "#Which travel modes are missing?": "Mely közlekedési módok hiányoznak?",
       "#How easy is it to record your trips with the app?": "Mennyire könnyű rögzíteni az útjait az alkalmazással?",
       "#What made recording your trips difficult?": "Mi tette nehézzé az útjai rögzítését?",
       "#How easy is it to switch from one travel mode to another during a trip?": "Mennyire könnyű egy út közben egyik közlekedési módról a másikra váltani?",
-      "#Are the trip results (distance, time, points) useful to you?": "Hasznosak az Ön számára az utak eredményei (távolság, idő, pontok)?",
+      "#How useful are the trip results (distance, time, points) to you?": "Mennyire hasznosak az Ön számára az utak eredményei (távolság, idő, pontok)?",
       "#What would make the results more useful?": "Mitől lennének hasznosabbak az eredmények?",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "Könnyen érthető az útja hatásának összesítése (CO₂-kibocsátás)?",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "Mennyire könnyű megérteni az útja hatásának összesítését (CO₂-kibocsátás)?",
       "#What is hard to understand in the impact summary?": "Mi nehezen érthető a hatás összesítésében?",
-      "#Is the trip history detailed enough for your needs?": "Elég részletesek az utazási előzmények az Ön igényeihez?",
+      "#How well does the trip history meet your needs?": "Mennyire felelnek meg az utazási előzmények az Ön igényeinek?",
+      "#Not at all": "Egyáltalán nem",
+      "#Slightly": "Kevéssé",
+      "#Moderately": "Közepesen",
+      "#Very well": "Nagyon jól",
+      "#Completely": "Teljesen",
       "#What is missing from the trip history?": "Mi hiányzik az utazási előzményekből?",
-      "#It depends on the travel mode": "A közlekedési módtól függ",
       "#Neither easy nor difficult to understand": "Sem könnyen, sem nehezen érthetők",
       "#What is your age group?": "Melyik korcsoportba tartozik?"
     },
@@ -2181,19 +2376,25 @@
       "#Interface": "رابط کاربری",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>صفحه‌ها، متن‌ها و نمادها چقدر روشن هستند، و آیا برنامه فقط دسترسی‌هایی را که نیاز دارد درخواست می‌کند.</p>",
       "#What made switching travel mode difficult?": "چه چیزی تغییر شیوه سفر را دشوار کرد؟",
-      "#Partly": "تا حدی",
       "#Recording trips": "ثبت سفرها",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>ثبت یک سفر، تغییر شیوه سفر در طول آن، و خواندن نتایج و سابقه سفرهایتان.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "آیا برایتان روشن است که برنامه امتیازهایی را که برای یک سفر کسب می‌کنید چگونه محاسبه می‌کند؟",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "فهمیدن اینکه برنامه امتیازهای هر سفر را چگونه حساب می‌کند چقدر آسان است؟",
       "#What is unclear?": "چه چیزی روشن نیست؟",
-      "#Is the number of points given for the distance travelled reasonable?": "آیا تعداد امتیازهایی که برای مسافت طی‌شده داده می‌شود معقول است؟",
+      "#For the distance you travel, how many points does the app give you?": "برنامه برای مسافتی که طی می‌کنید چند امتیاز به شما می‌دهد؟",
+      "#Far too few": "خیلی کم",
+      "#Too few": "کم",
+      "#The right number": "به اندازه مناسب",
+      "#Too many": "زیاد",
+      "#Far too many": "خیلی زیاد",
       "#How should points be given instead?": "به نظر شما امتیازها به چه شکلی باید داده شوند؟",
       "#How easy is it to convert your points into rewards?": "تبدیل امتیازهایتان به جایزه چقدر آسان است؟",
       "#What made converting points difficult?": "چه چیزی تبدیل امتیازها را دشوار کرد؟",
-      "#Too slowly": "بیش از حد کند",
       "#About right": "با سرعت مناسب",
-      "#Too quickly": "بیش از حد سریع",
       "#Considering the rewards on offer, how quickly do you collect points?": "با توجه به جوایزی که ارائه می‌شود، با چه سرعتی امتیاز جمع می‌کنید؟",
+      "#Much too slowly": "خیلی کندتر از حد مناسب",
+      "#A little too slowly": "کمی کندتر از حد مناسب",
+      "#A little too quickly": "کمی سریع‌تر از حد مناسب",
+      "#Much too quickly": "خیلی سریع‌تر از حد مناسب",
       "#Transport and mobility": "حمل‌ونقل و جابه‌جایی",
       "#Food and drinks": "غذا و نوشیدنی",
       "#Shopping": "خرید",
@@ -2241,12 +2442,14 @@
       "#75-84": "75-84",
       "#85 or older": "۸۵ سال یا بیشتر",
       "#What is your gender?": "جنسیت شما چیست؟",
-      "#Male": "مرد",
-      "#Female": "زن",
+      "#Man": "مرد",
+      "#Woman": "زن",
       "#What is your highest completed level of education?": "بالاترین سطح تحصیلی که به پایان رسانده‌اید چیست؟",
+      "#Primary school certificate": "مدرک دوره ابتدایی",
+      "#Lower secondary school (middle school)": "دوره اول متوسطه (راهنمایی)",
+      "#Vocational qualification (2-3 year course)": "مدرک فنی و حرفه‌ای (دوره ۲-۳ ساله)",
+      "#Upper secondary school (high school diploma)": "دوره دوم متوسطه (دیپلم دبیرستان)",
       "#No qualification": "بدون مدرک تحصیلی",
-      "#Lower secondary school": "دوره متوسطه اول",
-      "#High school": "دبیرستان",
       "#Bachelor degree or equivalent": "کارشناسی یا معادل آن",
       "#Master degree or equivalent": "کارشناسی ارشد یا معادل آن",
       "#Doctorate degree": "دکتری",
@@ -2267,27 +2470,36 @@
       "#Very confusing": "بسیار گیج‌کننده",
       "#Rather confusing": "نسبتاً گیج‌کننده",
       "#Neither clear nor confusing": "نه روشن و نه گیج‌کننده",
-      "#Is the text size comfortable to read?": "آیا اندازه متن برای خواندن راحت است؟",
-      "#Too small": "بیش از حد کوچک",
+      "#How do you find the size of the text?": "اندازه متن را چگونه می‌بینید؟",
+      "#Much too small": "خیلی کوچک‌تر از حد مناسب",
+      "#A little too small": "کمی کوچک‌تر از حد مناسب",
+      "#A little too large": "کمی بزرگ‌تر از حد مناسب",
+      "#Much too large": "خیلی بزرگ‌تر از حد مناسب",
       "#Just right": "مناسب",
-      "#Too large": "بیش از حد بزرگ",
       "#Does it seem reasonable that the app asks for your location?": "آیا به نظرتان معقول است که برنامه موقعیت مکانی شما را درخواست کند؟",
       "#Does it seem reasonable that the app asks for your physical activity data?": "آیا به نظرتان معقول است که برنامه داده‌های فعالیت بدنی شما را درخواست کند؟",
       "#Does it seem reasonable that the app asks for access to your camera?": "آیا به نظرتان معقول است که برنامه دسترسی به دوربین شما را درخواست کند؟",
       "#Anything to add about the permissions the app asks for?": "درباره مجوزهایی که برنامه درخواست می‌کند نکته دیگری دارید؟",
       "#Did you manage to complete the questionnaires before and after the trip?": "توانستید پرسشنامه‌های قبل و بعد از سفر را تکمیل کنید؟",
       "#Does the app support the travel modes you usually use?": "آیا برنامه از شیوه‌های سفری که معمولاً استفاده می‌کنید پشتیبانی می‌کند؟",
+      "#Yes, all of them": "بله، همه را",
+      "#Only some of them": "فقط برخی را",
+      "#None of them": "هیچ‌کدام را",
       "#Which travel modes are missing?": "کدام شیوه‌های سفر وجود ندارد؟",
       "#How easy is it to record your trips with the app?": "ثبت سفرهایتان با برنامه چقدر آسان است؟",
       "#What made recording your trips difficult?": "چه چیزی ثبت سفرهایتان را دشوار کرد؟",
       "#How easy is it to switch from one travel mode to another during a trip?": "تغییر از یک شیوه سفر به شیوه‌ای دیگر در طول یک سفر چقدر آسان است؟",
-      "#Are the trip results (distance, time, points) useful to you?": "آیا نتایج سفر (مسافت، زمان، امتیازها) برای شما مفید است؟",
+      "#How useful are the trip results (distance, time, points) to you?": "نتایج سفر (مسافت، زمان، امتیازها) چقدر برای شما مفید است؟",
       "#What would make the results more useful?": "چه چیزی نتایج را مفیدتر می‌کند؟",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "آیا خلاصه اثر سفر شما (انتشار CO₂) آسان‌فهم است؟",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "فهمیدن خلاصه اثر سفر شما (انتشار CO₂) چقدر آسان است؟",
       "#What is hard to understand in the impact summary?": "در خلاصه اثر، فهم چه چیزی دشوار است؟",
-      "#Is the trip history detailed enough for your needs?": "آیا سابقه سفرها برای نیازهای شما به اندازه کافی جزئیات دارد؟",
+      "#How well does the trip history meet your needs?": "سابقه سفرها تا چه اندازه نیازهای شما را برآورده می‌کند؟",
+      "#Not at all": "اصلاً",
+      "#Slightly": "کمی",
+      "#Moderately": "تا حدی",
+      "#Very well": "خیلی خوب",
+      "#Completely": "کاملاً",
       "#What is missing from the trip history?": "چه چیزی در سابقه سفرها کم است؟",
-      "#It depends on the travel mode": "بستگی به شیوه سفر دارد",
       "#Neither easy nor difficult to understand": "نه آسان و نه دشوار برای فهم",
       "#What is your age group?": "در کدام گروه سنی هستید؟"
     },
@@ -2320,19 +2532,25 @@
       "#Interface": "الواجهة",
       "#<p>How clear the screens, texts and icons are, and whether the app asks only for the access it needs.</p>": "<p>مدى وضوح الشاشات والنصوص والأيقونات، وهل يطلب التطبيق فقط الأذونات التي يحتاجها.</p>",
       "#What made switching travel mode difficult?": "ما الذي جعل تغيير وسيلة التنقل صعبًا؟",
-      "#Partly": "جزئيًا",
       "#Recording trips": "تسجيل الرحلات",
       "#<p>Recording a trip, switching travel mode during it, and reading your results and history.</p>": "<p>تسجيل رحلة، وتغيير وسيلة التنقل خلالها، وقراءة نتائجك وسجلك.</p>",
-      "#Is it clear how the app calculates the points you earn for a trip?": "هل من الواضح لك كيف يحسب التطبيق النقاط المكتسبة مقابل الرحلة؟",
+      "#How easy is it to understand how the app calculates the points you earn for a trip?": "ما مدى سهولة فهم طريقة حساب التطبيق للنقاط التي تكسبها عن الرحلة؟",
       "#What is unclear?": "ما الذي ليس واضحًا؟",
-      "#Is the number of points given for the distance travelled reasonable?": "هل عدد النقاط الممنوحة مقابل المسافة المقطوعة معقول؟",
+      "#For the distance you travel, how many points does the app give you?": "كم عدد النقاط التي يمنحك إياها التطبيق مقابل المسافة التي تقطعها؟",
+      "#Far too few": "قليلة جدًا",
+      "#Too few": "قليلة",
+      "#The right number": "العدد المناسب",
+      "#Too many": "كثيرة",
+      "#Far too many": "كثيرة جدًا",
       "#How should points be given instead?": "كيف ينبغي منح النقاط بدلًا من ذلك؟",
       "#How easy is it to convert your points into rewards?": "ما مدى سهولة تحويل نقاطك إلى مكافآت؟",
       "#What made converting points difficult?": "ما الذي جعل تحويل النقاط صعبًا؟",
-      "#Too slowly": "ببطء زائد",
       "#About right": "بوتيرة مناسبة",
-      "#Too quickly": "بسرعة زائدة",
       "#Considering the rewards on offer, how quickly do you collect points?": "بالنظر إلى المكافآت المتاحة، ما مدى سرعة جمعك للنقاط؟",
+      "#Much too slowly": "ببطء زائد بكثير",
+      "#A little too slowly": "ببطء زائد قليلًا",
+      "#A little too quickly": "بسرعة زائدة قليلًا",
+      "#Much too quickly": "بسرعة زائدة بكثير",
       "#Transport and mobility": "النقل والتنقل",
       "#Food and drinks": "الطعام والمشروبات",
       "#Shopping": "التسوق",
@@ -2380,12 +2598,14 @@
       "#75-84": "75-84",
       "#85 or older": "85 سنة أو أكثر",
       "#What is your gender?": "ما جنسك؟",
-      "#Male": "ذكر",
-      "#Female": "أنثى",
+      "#Man": "رجل",
+      "#Woman": "امرأة",
       "#What is your highest completed level of education?": "ما أعلى مستوى تعليمي أكملته؟",
+      "#Primary school certificate": "شهادة المرحلة الابتدائية",
+      "#Lower secondary school (middle school)": "المرحلة الإعدادية (المتوسطة)",
+      "#Vocational qualification (2-3 year course)": "مؤهل مهني (دورة مدتها 2-3 سنوات)",
+      "#Upper secondary school (high school diploma)": "المرحلة الثانوية (شهادة الثانوية العامة)",
       "#No qualification": "لا توجد مؤهلات دراسية",
-      "#Lower secondary school": "التعليم الثانوي الأدنى",
-      "#High school": "الثانوية العامة",
       "#Bachelor degree or equivalent": "درجة البكالوريوس أو ما يعادلها",
       "#Master degree or equivalent": "درجة الماجستير أو ما يعادلها",
       "#Doctorate degree": "الدكتوراه",
@@ -2406,27 +2626,36 @@
       "#Very confusing": "مربك جدًا",
       "#Rather confusing": "مربك إلى حد ما",
       "#Neither clear nor confusing": "ليس واضحًا ولا مربكًا",
-      "#Is the text size comfortable to read?": "هل حجم النص مريح للقراءة؟",
-      "#Too small": "صغير أكثر من اللازم",
+      "#How do you find the size of the text?": "كيف تجد حجم النص؟",
+      "#Much too small": "صغير أكثر من اللازم بكثير",
+      "#A little too small": "صغير أكثر من اللازم قليلًا",
+      "#A little too large": "كبير أكثر من اللازم قليلًا",
+      "#Much too large": "كبير أكثر من اللازم بكثير",
       "#Just right": "مناسب",
-      "#Too large": "كبير أكثر من اللازم",
       "#Does it seem reasonable that the app asks for your location?": "هل يبدو لك معقولًا أن يطلب التطبيق موقعك؟",
       "#Does it seem reasonable that the app asks for your physical activity data?": "هل يبدو لك معقولًا أن يطلب التطبيق بيانات نشاطك البدني؟",
       "#Does it seem reasonable that the app asks for access to your camera?": "هل يبدو لك معقولًا أن يطلب التطبيق الوصول إلى الكاميرا لديك؟",
       "#Anything to add about the permissions the app asks for?": "هل لديك إضافة حول الأذونات التي يطلبها التطبيق؟",
       "#Did you manage to complete the questionnaires before and after the trip?": "هل تمكنت من إكمال الاستبيانات قبل الرحلة وبعدها؟",
       "#Does the app support the travel modes you usually use?": "هل يدعم التطبيق وسائل التنقل المستخدمة عادةً؟",
+      "#Yes, all of them": "نعم، جميعها",
+      "#Only some of them": "بعضها فقط",
+      "#None of them": "لا شيء منها",
       "#Which travel modes are missing?": "ما وسائل التنقل غير المتوفرة؟",
       "#How easy is it to record your trips with the app?": "ما مدى سهولة تسجيل رحلاتك باستخدام التطبيق؟",
       "#What made recording your trips difficult?": "ما الذي جعل تسجيل رحلاتك صعبًا؟",
       "#How easy is it to switch from one travel mode to another during a trip?": "ما مدى سهولة الانتقال من وسيلة تنقل إلى أخرى أثناء الرحلة؟",
-      "#Are the trip results (distance, time, points) useful to you?": "هل نتائج الرحلة (المسافة والوقت والنقاط) مفيدة لك؟",
+      "#How useful are the trip results (distance, time, points) to you?": "ما مدى فائدة نتائج الرحلة (المسافة والوقت والنقاط) بالنسبة لك؟",
       "#What would make the results more useful?": "ما الذي يجعل النتائج أكثر فائدة؟",
-      "#Is the summary of your trip’s impact (CO₂ emissions) easy to understand?": "هل ملخص أثر رحلتك (انبعاثات CO₂) سهل الفهم؟",
+      "#How easy is it to understand the summary of your trip’s impact (CO₂ emissions)?": "ما مدى سهولة فهم ملخص أثر رحلتك (انبعاثات CO₂)؟",
       "#What is hard to understand in the impact summary?": "ما الذي يصعب فهمه في ملخص الأثر؟",
-      "#Is the trip history detailed enough for your needs?": "هل سجل الرحلات مفصّل بما يكفي لاحتياجاتك؟",
+      "#How well does the trip history meet your needs?": "إلى أي مدى يلبي سجل الرحلات احتياجاتك؟",
+      "#Not at all": "إطلاقًا",
+      "#Slightly": "قليلًا",
+      "#Moderately": "إلى حد ما",
+      "#Very well": "بشكل جيد جدًا",
+      "#Completely": "بالكامل",
       "#What is missing from the trip history?": "ما الذي ينقص سجل الرحلات؟",
-      "#It depends on the travel mode": "يعتمد على وسيلة التنقل",
       "#Neither easy nor difficult to understand": "ليست سهلة ولا صعبة الفهم",
       "#What is your age group?": "ما فئتك العمرية؟"
     }

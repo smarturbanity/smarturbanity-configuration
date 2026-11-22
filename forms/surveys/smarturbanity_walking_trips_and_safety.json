@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "SmartUrbanity - Walking – Your trips and safety",
     "questionnaire_id": "smarturbanity_walking_trips_and_safety",
-    "questionnaire_version": "1.2.0",
+    "questionnaire_version": "2.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 5,
     "options": {
@@ -93,43 +93,53 @@
             "help": "A long rest means stopping for more than about 5 minutes. A rough idea is enough.",
             "answer_key": "walk_distance",
             "question_type": "single_option",
+            "answer_scale": "score",
             "required": true,
             "options": [
               {
-                "text": "I rarely or never walk",
-                "value": "rarely_walk"
-              },
-              {
-                "text": "Less than 500 metres (about 5-6 minutes)",
+                "text": "Less than 500 metres (up to about 6 minutes)",
                 "value": "lt_500m"
               },
               {
-                "text": "500 metres to 1 km (about 10-15 minutes)",
+                "text": "500 metres to 1 km (about 6-12 minutes)",
                 "value": "500m_1km"
               },
               {
-                "text": "1 to 2 km (about 15-25 minutes)",
+                "text": "1 to 2 km (about 12-25 minutes)",
                 "value": "1_2km"
               },
               {
-                "text": "More than 2 km",
+                "text": "More than 2 km (more than about 25 minutes)",
                 "value": "gt_2km"
-              },
-              {
-                "text": "Distance is not a limit for me (e.g. power wheelchair)",
-                "value": "no_limit"
-              },
-              {
-                "text": "Only if someone accompanies me",
-                "value": "only_accompanied"
-              },
-              {
-                "text": "I cannot walk or move around, even with a mobility aid",
-                "value": "cannot_walk_or_move"
               }
             ],
             "question_id": "walk_distance",
-            "question_version": "1.4.0",
+            "question_version": "2.0.0",
+            "privacy_classification": "special_category_health",
+            "show_if": {
+              "walk_days": [
+                "yes"
+              ]
+            },
+            "add_prefer_not_to_say": true
+          },
+          {
+            "text": "Do you need someone with you when you walk or go out in your wheelchair?",
+            "answer_key": "walk_need_company",
+            "question_type": "single_option",
+            "required": true,
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              }
+            ],
+            "question_id": "walk_need_company",
+            "question_version": "1.0.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
@@ -181,11 +191,13 @@
             "help": "Think of strength, stamina and general health.",
             "answer_key": "walk_fitness",
             "question_type": "single_option",
+            "answer_scale": "score",
+            "add_not_applicable": true,
             "required": true,
             "options": [
               {
-                "text": "Very low (I tire easily)",
-                "value": "very_low_sedentary_easily_fatigued"
+                "text": "Very low",
+                "value": "very_low"
               },
               {
                 "text": "Low",
@@ -196,16 +208,16 @@
                 "value": "moderate"
               },
               {
-                "text": "Good",
-                "value": "good"
-              },
-              {
                 "text": "High",
                 "value": "high"
+              },
+              {
+                "text": "Very high",
+                "value": "very_high"
               }
             ],
             "question_id": "walk_fitness",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "special_category_health",
             "show_if": {
               "walk_days": [
@@ -388,44 +400,24 @@
             "question_type": "single_option",
             "options": [
               {
-                "text": "I stop using one of the modes (e.g. stop bringing my bike)",
-                "value": "i_stop_using_one_of_the_modes_e_g_stop_b"
+                "text": "I change the modes I combine (e.g. a shared bike instead of my own)",
+                "value": "i_choose_a_different_combination_of_mode"
               },
               {
-                "text": "I switch to a single mode (e.g. only car, only public transport)",
+                "text": "I use only one mode (e.g. only the car or only public transport)",
                 "value": "i_switch_to_a_single_mode_e_g_only_car_o"
               },
               {
-                "text": "I change the time of travel (e.g. avoid peak hours)",
+                "text": "I change the time or the route (e.g. avoid peak hours, another transfer point)",
                 "value": "i_change_the_time_of_travel_e_g_avoid_pe"
               },
               {
-                "text": "I change the route or transfer point",
-                "value": "i_change_the_route_or_transfer_point"
-              },
-              {
-                "text": "I choose a different combination of modes",
-                "value": "i_choose_a_different_combination_of_mode"
+                "text": "I make that trip less often or avoid it",
+                "value": "i_reduce_how_often_i_make_that_trip"
               },
               {
                 "text": "I continue using the same combination despite difficulties",
                 "value": "i_continue_using_the_same_combination_de"
-              },
-              {
-                "text": "I reduce how often I make that trip",
-                "value": "i_reduce_how_often_i_make_that_trip"
-              },
-              {
-                "text": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
-                "value": "i_look_for_alternative_solutions_e_g_bik"
-              },
-              {
-                "text": "I avoid that trip entirely if possible",
-                "value": "i_avoid_that_trip_entirely_if_possible"
-              },
-              {
-                "text": "I do not experience significant difficulties",
-                "value": "i_do_not_experience_significant_difficul"
               }
             ],
             "add_other": true,
@@ -443,7 +435,7 @@
               }
             },
             "question_id": "walk_combined_response",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "required": true,
             "add_prefer_not_to_say": true
@@ -456,188 +448,268 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?",
+            "text": "When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?",
             "answer_key": "walk_fast_traffic_along_unsafe",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_fast_traffic_along_unsafe",
-            "question_version": "1.3.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "When you cross roads with fast or heavy traffic on foot, do you feel unsafe?",
+            "text": "When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?",
             "answer_key": "walk_fast_traffic_crossing_unsafe",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_fast_traffic_crossing_unsafe",
-            "question_version": "1.2.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "Do you make longer detours or avoid some streets because you cannot cross them safely on foot?",
+            "text": "How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?",
             "answer_key": "walk_unsafe_crossings",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_unsafe_crossings",
-            "question_version": "1.2.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "When you cross the street on foot, do you feel rushed or unsure?",
+            "text": "When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?",
             "answer_key": "walk_crossing_rushed_unsure",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_crossing_rushed_unsure",
-            "question_version": "1.1.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?",
+            "text": "When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?",
             "answer_key": "walk_cyclists_scooters_unsafe",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_cyclists_scooters_unsafe",
-            "question_version": "1.3.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?",
+            "text": "When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?",
             "answer_key": "walk_poor_sidewalk_unsafe",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_poor_sidewalk_unsafe",
-            "question_version": "1.3.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?",
+            "text": "How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?",
             "answer_key": "walk_obstacles_near_traffic",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_obstacles_near_traffic",
-            "question_version": "2.1.0",
-            "privacy_classification": "personal_data"
+            "question_version": "3.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
-            "text": "Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?",
+            "text": "How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?",
             "answer_key": "walk_obstacles_change_path",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_obstacles_change_path",
-            "question_version": "1.1.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
             "text": "When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)",
@@ -884,27 +956,37 @@
             "privacy_classification": "personal_data"
           },
           {
-            "text": "After dark, does poor street lighting make you change your route or the time you go out on foot?",
+            "text": "After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?",
             "answer_key": "walk_dark_lighting_change",
             "question_type": "single_option",
+            "answer_scale": "score",
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Never",
+                "value": "never"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Rarely",
+                "value": "rarely"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
               }
             ],
             "required": true,
             "question_id": "walk_dark_lighting_change",
-            "question_version": "1.2.0",
-            "privacy_classification": "personal_data"
+            "question_version": "2.0.0",
+            "privacy_classification": "personal_data",
+            "add_not_applicable": true
           },
           {
             "text": "When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)",
@@ -955,7 +1037,7 @@
             "add_none": true
           },
           {
-            "text": "When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?",
+            "text": "When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?",
             "answer_key": "walk_identity_harassment",
             "question_type": "single_option",
             "options": [
@@ -966,17 +1048,48 @@
               {
                 "text": "No",
                 "value": "no"
-              },
-              {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
               }
             ],
             "required": true,
             "add_prefer_not_to_say": true,
             "question_id": "walk_identity_harassment",
-            "question_version": "1.4.0",
-            "privacy_classification": "heightened_personal"
+            "question_version": "2.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_not_applicable": true
+          },
+          {
+            "text": "When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?",
+            "answer_key": "walk_identity_harassment_worry",
+            "question_type": "single_option",
+            "answer_scale": "score",
+            "options": [
+              {
+                "text": "Never",
+                "value": "never"
+              },
+              {
+                "text": "Rarely",
+                "value": "rarely"
+              },
+              {
+                "text": "Sometimes",
+                "value": "sometimes"
+              },
+              {
+                "text": "Often",
+                "value": "often"
+              },
+              {
+                "text": "Always",
+                "value": "always"
+              }
+            ],
+            "required": true,
+            "add_prefer_not_to_say": true,
+            "question_id": "walk_identity_harassment_worry",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_not_applicable": true
           }
         ],
         "show_if": {
@@ -1000,6 +1113,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Which other ways of travelling do you use in the same trip? (Select all that apply)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?",
       "#When you face these difficulties, how do you mostly respond?": "When you face these difficulties, how do you mostly respond?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "I change the modes I combine (e.g. a shared bike instead of my own)",
+      "#I use only one mode (e.g. only the car or only public transport)": "I use only one mode (e.g. only the car or only public transport)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "I change the time or the route (e.g. avoid peak hours, another transfer point)",
+      "#I make that trip less often or avoid it": "I make that trip less often or avoid it",
       "#Car": "Car",
       "#Car sharing": "Car sharing",
       "#Motorcycle, scooter or moped": "Motorcycle, scooter or moped",
@@ -1025,56 +1142,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Accessibility issues (stairs, no elevators, etc.)",
       "#Weather-related difficulties": "Weather-related difficulties",
       "#I do not experience significant difficulties": "I do not experience significant difficulties",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "I stop using one of the modes (e.g. stop bringing my bike)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "I switch to a single mode (e.g. only car, only public transport)",
-      "#I change the time of travel (e.g. avoid peak hours)": "I change the time of travel (e.g. avoid peak hours)",
-      "#I change the route or transfer point": "I change the route or transfer point",
-      "#I choose a different combination of modes": "I choose a different combination of modes",
       "#I continue using the same combination despite difficulties": "I continue using the same combination despite difficulties",
-      "#I reduce how often I make that trip": "I reduce how often I make that trip",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "I look for alternative solutions (e.g. bike sharing instead of own bike)",
-      "#I avoid that trip entirely if possible": "I avoid that trip entirely if possible",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "How far can you walk, or go in your wheelchair, without a long rest?",
+      "#Less than 500 metres (up to about 6 minutes)": "Less than 500 metres (up to about 6 minutes)",
+      "#500 metres to 1 km (about 6-12 minutes)": "500 metres to 1 km (about 6-12 minutes)",
+      "#1 to 2 km (about 12-25 minutes)": "1 to 2 km (about 12-25 minutes)",
+      "#More than 2 km (more than about 25 minutes)": "More than 2 km (more than about 25 minutes)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Do you need someone with you when you walk or go out in your wheelchair?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "A long rest means stopping for more than about 5 minutes. A rough idea is enough.",
-      "#I rarely or never walk": "I rarely or never walk",
-      "#Less than 500 metres (about 5-6 minutes)": "Less than 500 metres (about 5-6 minutes)",
-      "#500 metres to 1 km (about 10-15 minutes)": "500 metres to 1 km (about 10-15 minutes)",
-      "#1 to 2 km (about 15-25 minutes)": "1 to 2 km (about 15-25 minutes)",
-      "#More than 2 km": "More than 2 km",
-      "#Only if someone accompanies me": "Only if someone accompanies me",
-      "#I cannot walk or move around, even with a mobility aid": "I cannot walk or move around, even with a mobility aid",
       "#None": "None",
       "#1 day": "1 day",
       "#2-3 days": "2-3 days",
       "#4-5 days": "4-5 days",
       "#6-7 days": "6-7 days",
       "#Think of strength, stamina and general health.": "Think of strength, stamina and general health.",
-      "#Very low (I tire easily)": "Very low (I tire easily)",
       "#Low": "Low",
       "#Moderate": "Moderate",
-      "#Good": "Good",
       "#High": "High",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Count every kind of walk: to get somewhere, for leisure or for exercise.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?",
+      "#Very low": "Very low",
+      "#Very high": "Very high",
       "#Why do you rarely walk? (Select all that apply)": "Why do you rarely walk? (Select all that apply)",
       "#The places I go are too far or walking takes too long": "The places I go are too far or walking takes too long",
       "#Walking is tiring or physically difficult for me": "Walking is tiring or physically difficult for me",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "The streets are uncomfortable for walking (sidewalks, shade, benches)",
       "#Another reason": "Another reason",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "Distance is not a limit for me (e.g. power wheelchair)",
       "#I feel unsafe because of traffic": "I feel unsafe because of traffic",
       "#I am afraid of crime, such as theft": "I am afraid of crime, such as theft",
       "#I am afraid of harassment": "I am afraid of harassment",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?",
+      "#Never": "Never",
+      "#Rarely": "Rarely",
+      "#Sometimes": "Sometimes",
+      "#Often": "Often",
+      "#Always": "Always",
       "#Doesn't apply to me": "Doesn't apply to me",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "When you cross roads with fast or heavy traffic on foot, do you feel unsafe?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Do you make longer detours or avoid some streets because you cannot cross them safely on foot?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "When you cross the street on foot, do you feel rushed or unsure?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?",
       "#Walking – Road safety": "Walking – Road safety",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)",
       "#Car drivers": "Car drivers",
@@ -1106,7 +1217,7 @@
       "#Pedestrian traffic lights without an audible signal": "Pedestrian traffic lights without an audible signal",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "After dark, does poor street lighting make you change your route or the time you go out on foot?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?",
       "#Walking – Personal security": "Walking – Personal security",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)",
       "#Places with few people around (isolated or deserted areas)": "Places with few people around (isolated or deserted areas)",
@@ -1127,7 +1238,8 @@
       "#Nothing": "Nothing",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Few cues to find my way without sight (e.g. no tactile paths or audio announcements)",
       "#Not being able to hear people or vehicles approaching": "Not being able to hear people or vehicles approaching",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?",
       "#Walking – Your trips and safety": "Walking – Your trips and safety",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Walking – Your trips and safety",
       "#Thank you!": "Thank you!",
@@ -1147,6 +1259,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quali altri modi di spostarti usi nello stesso spostamento? (Seleziona tutte le opzioni applicabili)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quali difficoltà incontri nel combinare diversi mezzi di trasporto (ad es. bicicletta + trasporto pubblico, auto + metro, a piedi + autobus)?",
       "#When you face these difficulties, how do you mostly respond?": "Quando incontri queste difficoltà, come reagisci principalmente?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "Cambio i mezzi che combino (ad es. bici in condivisione invece della mia)",
+      "#I use only one mode (e.g. only the car or only public transport)": "Uso un solo mezzo (ad es. solo l'auto o solo i mezzi pubblici)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "Cambio orario o percorso (ad es. evito le ore di punta, cambio in un altro punto)",
+      "#I make that trip less often or avoid it": "Faccio quello spostamento meno spesso o lo evito",
       "#Car": "Auto",
       "#Car sharing": "Auto in condivisione (car sharing)",
       "#Motorcycle, scooter or moped": "Moto, scooter o motorino",
@@ -1172,56 +1288,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Problemi di accessibilità (scale, assenza di ascensori ecc.)",
       "#Weather-related difficulties": "Difficoltà legate alle condizioni meteorologiche",
       "#I do not experience significant difficulties": "Non incontro difficoltà significative",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Smetto di utilizzare uno dei mezzi (ad es. non porto più la mia bicicletta)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Passo a un'unica modalità di trasporto (ad es. solo auto o solo trasporto pubblico)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Cambio l'orario dello spostamento (ad es. evito le ore di punta)",
-      "#I change the route or transfer point": "Cambio il percorso o il punto di interscambio",
-      "#I choose a different combination of modes": "Scelgo una diversa combinazione di mezzi",
       "#I continue using the same combination despite difficulties": "Continuo a utilizzare la stessa combinazione nonostante le difficoltà",
-      "#I reduce how often I make that trip": "Riduco la frequenza con cui effettuo quello spostamento",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Cerco soluzioni alternative (ad es. bici in condivisione invece della mia bicicletta)",
-      "#I avoid that trip entirely if possible": "Evito completamente quello spostamento, se possibile",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Quanto riesci a camminare, o a muoverti in sedia a rotelle, senza fermarti per un lungo riposo?",
+      "#Less than 500 metres (up to about 6 minutes)": "Meno di 500 metri (fino a circa 6 minuti)",
+      "#500 metres to 1 km (about 6-12 minutes)": "Da 500 metri a 1 km (circa 6-12 minuti)",
+      "#1 to 2 km (about 12-25 minutes)": "Da 1 a 2 km (circa 12-25 minuti)",
+      "#More than 2 km (more than about 25 minutes)": "Più di 2 km (oltre circa 25 minuti)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Hai bisogno di qualcuno che ti accompagni quando cammini o ti sposti in sedia a rotelle?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Un riposo lungo significa fermarsi per più di 5 minuti circa. Basta un'idea approssimativa.",
-      "#I rarely or never walk": "Cammino raramente o mai",
-      "#Less than 500 metres (about 5-6 minutes)": "Meno di 500 metri (circa 5-6 minuti)",
-      "#500 metres to 1 km (about 10-15 minutes)": "Da 500 metri a 1 km (circa 10-15 minuti)",
-      "#1 to 2 km (about 15-25 minutes)": "Da 1 a 2 km (circa 15-25 minuti)",
-      "#More than 2 km": "Più di 2 km",
-      "#Only if someone accompanies me": "Solo se qualcuno mi accompagna",
-      "#I cannot walk or move around, even with a mobility aid": "Non riesco a camminare né a muovermi, nemmeno con un ausilio",
       "#None": "Nessuno",
       "#1 day": "1 giorno",
       "#2-3 days": "2-3 giorni",
       "#4-5 days": "4-5 giorni",
       "#6-7 days": "6-7 giorni",
       "#Think of strength, stamina and general health.": "Pensa a forza, resistenza e salute in generale.",
-      "#Very low (I tire easily)": "Molto bassa (mi stanco subito)",
       "#Low": "Bassa",
       "#Moderate": "Moderata",
-      "#Good": "Buona",
       "#High": "Alta",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "In una settimana tipo, in quanti giorni cammini, o ti sposti in sedia a rotelle, per almeno 10 minuti di fila?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Conta ogni tipo di camminata: per andare da qualche parte, per svago o per fare esercizio.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Come descriveresti in questo momento la tua forma fisica per camminare (forza, resistenza, equilibrio)?",
+      "#Very low": "Molto bassa",
+      "#Very high": "Molto alta",
       "#Why do you rarely walk? (Select all that apply)": "Perché cammini poco? (Seleziona tutte le opzioni applicabili)",
       "#The places I go are too far or walking takes too long": "I posti dove vado sono troppo lontani o a piedi ci vuole troppo tempo",
       "#Walking is tiring or physically difficult for me": "Camminare è faticoso o fisicamente difficile per me",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Le strade sono scomode per camminare (marciapiedi, ombra, panchine)",
       "#Another reason": "Un altro motivo",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "La distanza non è un limite per me (es. sedia a rotelle elettrica)",
       "#I feel unsafe because of traffic": "Non mi sento al sicuro per il traffico",
       "#I am afraid of crime, such as theft": "Ho paura di reati, per esempio furti",
       "#I am afraid of harassment": "Ho paura di molestie",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "Quando ti sposti a piedi o in sedia a rotelle lungo strade con traffico veloce o intenso, ti senti in pericolo?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "Quando ti sposti a piedi o in sedia a rotelle lungo strade con traffico veloce o intenso, quanto spesso ti senti in pericolo?",
+      "#Never": "Mai",
+      "#Rarely": "Raramente",
+      "#Sometimes": "A volte",
+      "#Often": "Spesso",
+      "#Always": "Sempre",
       "#Doesn't apply to me": "Non mi riguarda",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "Quando attraversi a piedi strade con traffico veloce o intenso, ti senti in pericolo?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Fai giri più lunghi o eviti alcune strade perché a piedi non riesci ad attraversarle in sicurezza?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "Quando attraversi la strada a piedi, ti capita di sentirti sotto pressione o nell'incertezza?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "Quando ti sposti a piedi o in sedia a rotelle, ti senti in pericolo se chi va in bici o in monopattino elettrico ti passa vicino?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Quando ti sposti a piedi o in sedia a rotelle, i marciapiedi in cattivo stato (es. buche, superfici irregolari o bordi sgretolati) ti fanno sentire in pericolo?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "Gli ostacoli sul marciapiede (es. lavori stradali, cassonetti o monopattini parcheggiati) ti costringono a camminare più vicino al traffico?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Gli ostacoli sul marciapiede (es. lavori stradali, cassonetti o monopattini parcheggiati) ti costringono a cambiare percorso o a fare una deviazione?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "Quando attraversi strade con traffico veloce o intenso a piedi o in sedia a rotelle, quanto spesso ti senti in pericolo?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "Quanto spesso fai giri più lunghi o eviti alcune strade perché a piedi o in sedia a rotelle non riesci ad attraversarle in sicurezza?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "Quando attraversi la strada a piedi o in sedia a rotelle, quanto spesso ti senti sotto pressione o nell'incertezza?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "Quando ti sposti a piedi o in sedia a rotelle, quanto spesso ti senti in pericolo perché chi va in bici o in monopattino elettrico ti passa vicino?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Quando ti sposti a piedi o in sedia a rotelle, quanto spesso i marciapiedi in cattivo stato (es. buche, superfici irregolari o bordi sgretolati) ti fanno sentire in pericolo?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "Quanto spesso gli ostacoli sul marciapiede (es. lavori stradali, cassonetti o monopattini parcheggiati) ti costringono a passare più vicino al traffico?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Quanto spesso gli ostacoli sul marciapiede (es. lavori stradali, cassonetti o monopattini parcheggiati) ti costringono a cambiare percorso o a fare una deviazione?",
       "#Walking – Road safety": "A piedi – Sicurezza stradale",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "Quando ti sposti a piedi o in sedia a rotelle, chi ti fa sentire in pericolo sulla strada? (Seleziona tutte le opzioni applicabili)",
       "#Car drivers": "Chi guida l’auto",
@@ -1253,7 +1363,7 @@
       "#Pedestrian traffic lights without an audible signal": "Semafori pedonali senza segnale acustico",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Durante il giorno, ti capita di non sentirti al sicuro da reati o molestie quando ti sposti a piedi o in sedia a rotelle? (Le molestie includono commenti indesiderati, persone che ti seguono senza che tu lo voglia, contatti fisici o comportamenti intimidatori.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "La sera o dopo il tramonto, ti capita di non sentirti al sicuro da reati o molestie quando ti sposti a piedi o in sedia a rotelle?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "Dopo il tramonto, l’illuminazione scarsa delle strade ti fa cambiare percorso o orario quando esci a piedi?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "Dopo il tramonto, quanto spesso l’illuminazione scarsa delle strade ti fa cambiare percorso o orario quando esci a piedi o in sedia a rotelle?",
       "#Walking – Personal security": "A piedi – Sicurezza personale",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "Quando ti sposti a piedi o in sedia a rotelle, cosa ti fa sentire meno al sicuro da reati o molestie? (Seleziona tutte le opzioni applicabili)",
       "#Places with few people around (isolated or deserted areas)": "Luoghi con poca gente (zone isolate o deserte)",
@@ -1274,7 +1384,8 @@
       "#Nothing": "Niente",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Pochi riferimenti per orientarmi senza vista (es. niente percorsi tattili o annunci sonori)",
       "#Not being able to hear people or vehicles approaching": "Non riuscire a sentire persone o veicoli che si avvicinano",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Quando ti sposti a piedi o in sedia a rotelle, hai subito o temi molestie per chi sei o per come appari (es. genere, aspetto, origine, età, disabilità)?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Quando ti sposti a piedi o in sedia a rotelle, negli ultimi 12 mesi hai subito molestie per chi sei o per come appari (es. genere, aspetto, origine, età, disabilità)?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "Quando ti sposti a piedi o in sedia a rotelle, quanto spesso ti preoccupa subire molestie per chi sei o per come appari?",
       "#Walking – Your trips and safety": "Camminare – Spostamenti e sicurezza",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Camminare – Spostamenti e sicurezza",
       "#Thank you!": "Grazie!",
@@ -1294,6 +1405,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Quels autres modes de déplacement utilisez-vous au cours du même trajet ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Quelles difficultés rencontrez-vous lorsque vous combinez différents modes de transport, par exemple vélo + transports publics, voiture + métro ou marche + bus ?",
       "#When you face these difficulties, how do you mostly respond?": "Quand vous rencontrez ces difficultés, que faites-vous le plus souvent ?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "Je change les modes que je combine (par ex. vélo partagé au lieu de mon propre vélo)",
+      "#I use only one mode (e.g. only the car or only public transport)": "Je n'utilise qu'un seul mode (par ex. uniquement la voiture ou uniquement les transports publics)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "Je change d'horaire ou d'itinéraire (par ex. j'évite les heures de pointe, autre lieu de correspondance)",
+      "#I make that trip less often or avoid it": "Je fais ce trajet moins souvent ou je l'évite",
       "#Car": "Voiture",
       "#Car sharing": "Autopartage",
       "#Motorcycle, scooter or moped": "Moto, scooter ou cyclomoteur",
@@ -1319,56 +1434,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Problèmes d’accessibilité (escaliers, absence d’ascenseur, etc.)",
       "#Weather-related difficulties": "Difficultés liées à la météo",
       "#I do not experience significant difficulties": "Je ne rencontre pas de difficulté importante",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "J’arrête d’utiliser l’un des modes (par ex. je ne prends plus mon vélo)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Je passe à un seul mode de transport (par ex. uniquement la voiture ou uniquement les transports publics)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Je change mon heure de déplacement (par ex. j’évite les heures de pointe)",
-      "#I change the route or transfer point": "Je change d’itinéraire ou de lieu de correspondance",
-      "#I choose a different combination of modes": "Je choisis une autre combinaison de modes",
       "#I continue using the same combination despite difficulties": "Je continue à utiliser la même combinaison malgré les difficultés",
-      "#I reduce how often I make that trip": "Je fais ce trajet moins souvent",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Je cherche une autre solution (par ex. vélo partagé au lieu de mon propre vélo)",
-      "#I avoid that trip entirely if possible": "J’évite complètement ce trajet si c’est possible",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Jusqu'où pouvez-vous marcher, ou rouler en fauteuil roulant, sans faire une longue pause ?",
+      "#Less than 500 metres (up to about 6 minutes)": "Moins de 500 mètres (jusqu'à environ 6 minutes)",
+      "#500 metres to 1 km (about 6-12 minutes)": "De 500 mètres à 1 km (environ 6-12 minutes)",
+      "#1 to 2 km (about 12-25 minutes)": "De 1 à 2 km (environ 12 à 25 minutes)",
+      "#More than 2 km (more than about 25 minutes)": "Plus de 2 km (plus de 25 minutes environ)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Avez-vous besoin que quelqu'un vous accompagne quand vous marchez ou vous déplacez en fauteuil roulant ?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Une longue pause, c'est s'arrêter plus de 5 minutes environ. Une idée approximative suffit.",
-      "#I rarely or never walk": "Je marche rarement ou jamais",
-      "#Less than 500 metres (about 5-6 minutes)": "Moins de 500 mètres (environ 5-6 minutes)",
-      "#500 metres to 1 km (about 10-15 minutes)": "De 500 mètres à 1 km (environ 10-15 minutes)",
-      "#1 to 2 km (about 15-25 minutes)": "De 1 à 2 km (environ 15 à 25 minutes)",
-      "#More than 2 km": "Plus de 2 km",
-      "#Only if someone accompanies me": "Seulement si quelqu’un m’accompagne",
-      "#I cannot walk or move around, even with a mobility aid": "Je ne peux ni marcher ni me déplacer, même avec une aide à la mobilité",
       "#None": "Aucun",
       "#1 day": "1 jour",
       "#2-3 days": "2-3 jours",
       "#4-5 days": "4-5 jours",
       "#6-7 days": "6-7 jours",
       "#Think of strength, stamina and general health.": "Pensez à la force, à l'endurance et à la santé en général.",
-      "#Very low (I tire easily)": "Très faible (je me fatigue vite)",
       "#Low": "Faible",
       "#Moderate": "Moyenne",
-      "#Good": "Bonne",
       "#High": "Élevée",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Au cours d’une semaine type, combien de jours marchez-vous, ou vous déplacez-vous en fauteuil roulant, pendant au moins 10 minutes d’affilée ?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Comptez toutes les marches : pour aller quelque part, pour le loisir ou pour faire de l’exercice.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Comment décririez-vous actuellement votre condition physique pour marcher (force, endurance, équilibre) ?",
+      "#Very low": "Très faible",
+      "#Very high": "Très élevée",
       "#Why do you rarely walk? (Select all that apply)": "Pourquoi marchez-vous rarement ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#The places I go are too far or walking takes too long": "Les lieux où je vais sont trop loin ou le trajet à pied prend trop de temps",
       "#Walking is tiring or physically difficult for me": "Marcher est fatigant ou physiquement difficile pour moi",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Les rues sont peu agréables pour marcher (trottoirs, ombre, bancs)",
       "#Another reason": "Une autre raison",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "La distance n’est pas une limite pour moi (par ex. fauteuil roulant électrique)",
       "#I feel unsafe because of traffic": "Je ne me sens pas en sécurité à cause de la circulation",
       "#I am afraid of crime, such as theft": "J’ai peur des délits, par exemple des vols",
       "#I am afraid of harassment": "J’ai peur du harcèlement",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant le long de routes à circulation rapide ou dense, vous sentez-vous en danger ?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant le long de routes à circulation rapide ou dense, à quelle fréquence vous sentez-vous en danger ?",
+      "#Never": "Jamais",
+      "#Rarely": "Rarement",
+      "#Sometimes": "Parfois",
+      "#Often": "Souvent",
+      "#Always": "Toujours",
       "#Doesn't apply to me": "Ne me concerne pas",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "Lorsque vous traversez à pied des routes à circulation rapide ou dense, vous sentez-vous en danger ?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Faites-vous des détours plus longs ou évitez-vous certaines rues parce que vous ne pouvez pas les traverser à pied en sécurité ?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "Quand vous traversez la rue à pied, avez-vous l’impression de devoir vous dépêcher, ou ressentez-vous de l’incertitude ?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, vous sentez-vous en danger quand des cyclistes ou des personnes en trottinette électrique passent près de vous ?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, le mauvais état des trottoirs (par ex. trous, surfaces irrégulières ou bords effrités) vous fait-il sentir en danger ?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "Les obstacles sur le trottoir (par ex. travaux, poubelles ou trottinettes garées) vous obligent-ils à marcher plus près de la circulation ?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Les obstacles sur le trottoir (par ex. travaux, poubelles ou trottinettes garées) vous obligent-ils à changer de trajet ou à faire un détour ?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "Lorsque vous traversez des routes à circulation rapide ou dense à pied ou en fauteuil roulant, à quelle fréquence vous sentez-vous en danger ?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "À quelle fréquence faites-vous des détours plus longs ou évitez-vous certaines rues parce que vous ne pouvez pas les traverser en sécurité à pied ou en fauteuil roulant ?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "Quand vous traversez la rue à pied ou en fauteuil roulant, à quelle fréquence avez-vous l’impression de devoir vous dépêcher, ou ressentez-vous de l’incertitude ?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, à quelle fréquence vous sentez-vous en danger parce que des cyclistes ou des personnes en trottinette électrique passent près de vous ?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, à quelle fréquence le mauvais état des trottoirs (par ex. trous, surfaces irrégulières ou bords effrités) vous fait-il sentir en danger ?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "À quelle fréquence les obstacles sur le trottoir (par ex. travaux, poubelles ou trottinettes garées) vous obligent-ils à vous rapprocher de la circulation ?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "À quelle fréquence les obstacles sur le trottoir (par ex. travaux, poubelles ou trottinettes garées) vous obligent-ils à changer de trajet ou à faire un détour ?",
       "#Walking – Road safety": "À pied – Sécurité routière",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, qui sur la route vous fait vous sentir en danger ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Car drivers": "Les personnes qui conduisent une voiture",
@@ -1400,7 +1509,7 @@
       "#Pedestrian traffic lights without an audible signal": "Feux piétons sans signal sonore",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Pendant la journée, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous marchez ou vous déplacez en fauteuil roulant ? (Le harcèlement comprend les commentaires non désirés, le fait que quelqu’un vous suive, les attouchements ou les comportements intimidants à votre égard.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "Le soir ou après la tombée de la nuit, vous arrive-t-il de ne pas vous sentir à l’abri de la criminalité ou du harcèlement lorsque vous marchez ou vous déplacez en fauteuil roulant ?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "Après la tombée de la nuit, un mauvais éclairage public vous fait-il changer d’itinéraire ou d’horaire quand vous sortez à pied ?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "Après la tombée de la nuit, à quelle fréquence un mauvais éclairage public vous fait-il changer d’itinéraire ou d’horaire quand vous sortez à pied ou en fauteuil roulant ?",
       "#Walking – Personal security": "À pied – Sécurité personnelle",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, qu’est-ce qui vous fait vous sentir moins à l’abri de la criminalité ou du harcèlement ? (Sélectionnez toutes les réponses qui s’appliquent)",
       "#Places with few people around (isolated or deserted areas)": "Les lieux où il y a peu de monde (zones isolées ou désertes)",
@@ -1421,7 +1530,8 @@
       "#Nothing": "Rien",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Peu de repères pour m’orienter sans la vue (par ex. pas de bandes podotactiles ni d’annonces sonores)",
       "#Not being able to hear people or vehicles approaching": "Ne pas entendre les personnes ou les véhicules qui approchent",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Quand vous vous déplacez à pied ou en fauteuil roulant, avez-vous subi ou craignez-vous du harcèlement lié à votre identité ou à votre apparence (par exemple genre, apparence, origine, âge, handicap) ?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, au cours des 12 derniers mois, avez-vous subi du harcèlement en raison de qui vous êtes ou de votre apparence (par ex. genre, apparence, origine, âge, handicap) ?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "Lorsque vous marchez ou vous déplacez en fauteuil roulant, à quelle fréquence avez-vous peur de subir du harcèlement en raison de qui vous êtes ou de votre apparence ?",
       "#Walking – Your trips and safety": "Marche – Vos déplacements et votre sécurité",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Marche – Vos déplacements et votre sécurité",
       "#Thank you!": "Merci !",
@@ -1441,6 +1551,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Welche anderen Verkehrsmittel nutzen Sie auf demselben Weg? (Wählen Sie alles Zutreffende aus)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Welche Schwierigkeiten haben Sie, wenn Sie verschiedene Verkehrsmittel kombinieren, zum Beispiel Fahrrad + öffentlicher Verkehr, Auto + U-Bahn oder zu Fuß + Bus?",
       "#When you face these difficulties, how do you mostly respond?": "Wie reagieren Sie normalerweise, wenn diese Schwierigkeiten auftreten?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "Ich kombiniere andere Verkehrsmittel (z. B. Leihrad statt eigenes Fahrrad)",
+      "#I use only one mode (e.g. only the car or only public transport)": "Ich nutze nur ein Verkehrsmittel (z. B. nur das Auto oder nur öffentliche Verkehrsmittel)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "Ich ändere Uhrzeit oder Route (z. B. Stoßzeiten meiden, anderer Umsteigepunkt)",
+      "#I make that trip less often or avoid it": "Ich mache diesen Weg seltener oder vermeide ihn",
       "#Car": "Auto",
       "#Car sharing": "Carsharing",
       "#Motorcycle, scooter or moped": "Motorrad, Motorroller oder Moped",
@@ -1466,56 +1580,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Probleme mit der Barrierefreiheit (Treppen, keine Aufzüge usw.)",
       "#Weather-related difficulties": "Schwierigkeiten durch das Wetter",
       "#I do not experience significant difficulties": "Ich habe keine größeren Schwierigkeiten",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ich nutze eines der Verkehrsmittel nicht mehr (z. B. nehme ich mein Fahrrad nicht mehr mit)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Ich wechsle zu nur einem Verkehrsmittel (z. B. nur Auto oder nur öffentlicher Verkehr)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Ich ändere meine Fahrzeit (z. B. vermeide ich Stoßzeiten)",
-      "#I change the route or transfer point": "Ich ändere Route oder Umsteigepunkt",
-      "#I choose a different combination of modes": "Ich wähle eine andere Kombination von Verkehrsmitteln",
       "#I continue using the same combination despite difficulties": "Ich nutze trotz der Schwierigkeiten weiterhin dieselbe Kombination",
-      "#I reduce how often I make that trip": "Ich mache diesen Weg seltener",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Ich suche nach einer anderen Lösung (z. B. Leihrad statt eigenes Fahrrad)",
-      "#I avoid that trip entirely if possible": "Ich vermeide diesen Weg ganz, wenn es möglich ist",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Wie weit können Sie zu Fuß gehen oder mit dem Rollstuhl fahren, ohne lange Pause?",
+      "#Less than 500 metres (up to about 6 minutes)": "Weniger als 500 Meter (bis etwa 6 Minuten)",
+      "#500 metres to 1 km (about 6-12 minutes)": "500 Meter bis 1 km (etwa 6-12 Minuten)",
+      "#1 to 2 km (about 12-25 minutes)": "1 bis 2 km (etwa 12-25 Minuten)",
+      "#More than 2 km (more than about 25 minutes)": "Mehr als 2 km (mehr als etwa 25 Minuten)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Brauchen Sie Begleitung, wenn Sie zu Fuß gehen oder mit dem Rollstuhl unterwegs sind?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Eine lange Pause heißt: mehr als etwa 5 Minuten anhalten. Eine grobe Schätzung reicht.",
-      "#I rarely or never walk": "Ich gehe selten oder nie zu Fuß",
-      "#Less than 500 metres (about 5-6 minutes)": "Weniger als 500 Meter (etwa 5-6 Minuten)",
-      "#500 metres to 1 km (about 10-15 minutes)": "500 Meter bis 1 km (etwa 10-15 Minuten)",
-      "#1 to 2 km (about 15-25 minutes)": "1 bis 2 km (etwa 15-25 Minuten)",
-      "#More than 2 km": "Mehr als 2 km",
-      "#Only if someone accompanies me": "Nur in Begleitung",
-      "#I cannot walk or move around, even with a mobility aid": "Ich kann weder gehen noch mich fortbewegen, auch nicht mit einem Hilfsmittel",
       "#None": "Keine",
       "#1 day": "1 Tag",
       "#2-3 days": "2-3 Tage",
       "#4-5 days": "4-5 Tage",
       "#6-7 days": "6-7 Tage",
       "#Think of strength, stamina and general health.": "Denken Sie an Kraft, Ausdauer und allgemeine Gesundheit.",
-      "#Very low (I tire easily)": "Sehr niedrig (ich werde schnell müde)",
       "#Low": "Niedrig",
       "#Moderate": "Mittel",
-      "#Good": "Gut",
       "#High": "Hoch",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "An wie vielen Tagen in einer typischen Woche gehen Sie zu Fuß oder fahren mit Ihrem Rollstuhl mindestens 10 Minuten am Stück?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Zählen Sie alle Wege zu Fuß: um irgendwohin zu kommen, in der Freizeit oder zum Training.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Wie würden Sie Ihre derzeitige körperliche Fitness zum Gehen beschreiben (Kraft, Ausdauer, Gleichgewicht)?",
+      "#Very low": "Sehr niedrig",
+      "#Very high": "Sehr hoch",
       "#Why do you rarely walk? (Select all that apply)": "Warum gehen Sie selten zu Fuß? (Wählen Sie alles Zutreffende aus)",
       "#The places I go are too far or walking takes too long": "Meine Ziele sind zu weit entfernt oder der Weg zu Fuß dauert zu lange",
       "#Walking is tiring or physically difficult for me": "Gehen ist für mich anstrengend oder körperlich schwierig",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Die Straßen sind zum Gehen unbequem (Gehwege, Schatten, Bänke)",
       "#Another reason": "Ein anderer Grund",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "Die Entfernung ist für mich keine Grenze (z. B. Elektrorollstuhl)",
       "#I feel unsafe because of traffic": "Ich fühle mich wegen des Verkehrs unsicher",
       "#I am afraid of crime, such as theft": "Ich habe Angst vor Straftaten, zum Beispiel Diebstahl",
       "#I am afraid of harassment": "Ich habe Angst vor Belästigung",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "Fühlen Sie sich unsicher, wenn Sie zu Fuß oder im Rollstuhl an Straßen mit schnellem oder dichtem Verkehr entlang unterwegs sind?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "Wie oft fühlen Sie sich unsicher, wenn Sie zu Fuß oder im Rollstuhl an Straßen mit schnellem oder dichtem Verkehr entlang unterwegs sind?",
+      "#Never": "Nie",
+      "#Rarely": "Selten",
+      "#Sometimes": "Manchmal",
+      "#Often": "Oft",
+      "#Always": "Immer",
       "#Doesn't apply to me": "Trifft auf mich nicht zu",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "Fühlen Sie sich unsicher, wenn Sie Straßen mit schnellem oder dichtem Verkehr zu Fuß überqueren?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Machen Sie längere Umwege oder meiden Sie bestimmte Straßen, weil Sie sie zu Fuß nicht sicher überqueren können?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "Fühlen Sie sich beim Überqueren der Straße zu Fuß gehetzt oder unsicher?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "Fühlen Sie sich beim Gehen oder Fahren im Rollstuhl unsicher, wenn Radfahrende oder E-Scooter-Fahrende dicht an Ihnen vorbeifahren?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Fühlen Sie sich beim Gehen oder Fahren im Rollstuhl wegen schlechter Gehwege (z. B. Löcher, unebene Oberflächen oder bröckelnde Kanten) unsicher?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "Zwingen Hindernisse auf dem Gehweg (z. B. Baustellen, Mülltonnen oder abgestellte E-Scooter) Sie dazu, näher am Verkehr zu gehen?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Zwingen Hindernisse auf dem Gehweg (z. B. Baustellen, Mülltonnen oder abgestellte E-Scooter) Sie dazu, Ihren Weg zu ändern oder einen Umweg zu machen?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "Wie oft fühlen Sie sich unsicher, wenn Sie Straßen mit schnellem oder dichtem Verkehr zu Fuß oder im Rollstuhl überqueren?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "Wie oft machen Sie längere Umwege oder meiden bestimmte Straßen, weil Sie sie zu Fuß oder im Rollstuhl nicht sicher überqueren können?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "Wie oft fühlen Sie sich beim Überqueren der Straße zu Fuß oder im Rollstuhl gehetzt oder unsicher?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "Wie oft fühlen Sie sich beim Gehen oder Fahren im Rollstuhl unsicher, weil Radfahrende oder E-Scooter-Fahrende dicht an Ihnen vorbeifahren?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Wie oft fühlen Sie sich beim Gehen oder Fahren im Rollstuhl wegen schlechter Gehwege (z. B. Löcher, unebene Oberflächen oder bröckelnde Kanten) unsicher?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "Wie oft zwingen Hindernisse auf dem Gehweg (z. B. Baustellen, Mülltonnen oder abgestellte E-Scooter) Sie dazu, näher an den Verkehr auszuweichen?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Wie oft zwingen Hindernisse auf dem Gehweg (z. B. Baustellen, Mülltonnen oder abgestellte E-Scooter) Sie dazu, Ihren Weg zu ändern oder einen Umweg zu machen?",
       "#Walking – Road safety": "Zu Fuß – Verkehrssicherheit",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "Wer im Straßenverkehr gibt Ihnen beim Gehen oder Fahren im Rollstuhl ein unsicheres Gefühl? (Wählen Sie alles Zutreffende aus)",
       "#Car drivers": "Autofahrende",
@@ -1547,7 +1655,7 @@
       "#Pedestrian traffic lights without an audible signal": "Fußgängerampeln ohne akustisches Signal",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Fühlen Sie sich tagsüber beim Gehen oder Fahren im Rollstuhl manchmal nicht sicher vor Kriminalität oder Belästigung? (Belästigung umfasst unerwünschte Kommentare, Verfolgen, Berührungen oder einschüchterndes Verhalten Ihnen gegenüber.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "Fühlen Sie sich abends oder nach Einbruch der Dunkelheit beim Gehen oder Fahren im Rollstuhl manchmal nicht sicher vor Kriminalität oder Belästigung?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "Ändern Sie nach Einbruch der Dunkelheit wegen schlechter Straßenbeleuchtung Ihren Weg oder die Zeit, zu der Sie zu Fuß unterwegs sind?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "Wie oft ändern Sie nach Einbruch der Dunkelheit wegen schlechter Straßenbeleuchtung Ihren Weg oder die Zeit, zu der Sie zu Fuß oder im Rollstuhl unterwegs sind?",
       "#Walking – Personal security": "Zu Fuß – Persönliche Sicherheit",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "Was gibt Ihnen beim Gehen oder Fahren im Rollstuhl ein geringeres Sicherheitsgefühl vor Kriminalität oder Belästigung? (Wählen Sie alles Zutreffende aus)",
       "#Places with few people around (isolated or deserted areas)": "Orte, an denen wenige Menschen sind (abgelegene oder menschenleere Gegenden)",
@@ -1568,7 +1676,8 @@
       "#Nothing": "Nichts",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Wenig Orientierungshilfen ohne Sehen (z. B. keine Blindenleitsysteme oder Durchsagen)",
       "#Not being able to hear people or vehicles approaching": "Sich nähernde Personen oder Fahrzeuge nicht hören können",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Haben Sie zu Fuß oder im Rollstuhl Belästigung wegen Ihrer Identität oder Ihres Aussehens erlebt oder befürchten Sie diese (z. B. wegen Geschlecht, Aussehen, Herkunft, Alter oder Behinderung)?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Wurden Sie in den letzten 12 Monaten beim Gehen oder Fahren im Rollstuhl wegen Ihrer Person oder Ihres Aussehens belästigt (z. B. Geschlecht, Aussehen, Herkunft, Alter, Behinderung)?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "Wie oft machen Sie sich beim Gehen oder Fahren im Rollstuhl Sorgen, wegen Ihrer Person oder Ihres Aussehens belästigt zu werden?",
       "#Walking – Your trips and safety": "Zu Fuß unterwegs – Wege und Sicherheit",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Zu Fuß unterwegs – Wege und Sicherheit",
       "#Thank you!": "Vielen Dank!",
@@ -1588,6 +1697,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Aynı yolculukta başka hangi ulaşım şekillerini kullanıyorsunuz? (Uygun olanların tümünü seçin)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Farklı ulaşım seçeneklerini birleştirirken ne tür güçlükler yaşıyorsunuz? Örneğin bisiklet + toplu taşıma, otomobil + metro veya yürüme + otobüs.",
       "#When you face these difficulties, how do you mostly respond?": "Bu güçlüklerle karşılaştığınızda genellikle ne yaparsınız?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "Birleştirdiğim ulaşım seçeneklerini değiştiririm (ör. kendi bisikletim yerine paylaşımlı bisiklet)",
+      "#I use only one mode (e.g. only the car or only public transport)": "Tek bir ulaşım seçeneği kullanırım (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "Saati veya güzergâhı değiştiririm (ör. yoğun saatlerden kaçınırım, başka bir aktarma noktası)",
+      "#I make that trip less often or avoid it": "O yolculuğu daha seyrek yaparım veya hiç yapmam",
       "#Car": "Otomobil",
       "#Car sharing": "Araç paylaşımı",
       "#Motorcycle, scooter or moped": "Motosiklet, skuter veya moped",
@@ -1613,56 +1726,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Erişilebilirlik sorunları (merdivenler, asansör olmaması vb.)",
       "#Weather-related difficulties": "Hava koşullarıyla ilgili güçlükler",
       "#I do not experience significant difficulties": "Önemli bir güçlük yaşamıyorum",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Ulaşım seçeneklerinden birini kullanmayı bırakırım (ör. bisikletimi yanımda götürmem)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Tek bir ulaşım seçeneğine geçerim (ör. yalnızca otomobil veya yalnızca toplu taşıma)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Yolculuk saatimi değiştiririm (ör. yoğun saatlerden kaçınırım)",
-      "#I change the route or transfer point": "Güzergâhı veya aktarma noktasını değiştiririm",
-      "#I choose a different combination of modes": "Farklı bir ulaşım seçeneği kombinasyonu kullanırım",
       "#I continue using the same combination despite difficulties": "Güçlüklere rağmen aynı kombinasyonu kullanmaya devam ederim",
-      "#I reduce how often I make that trip": "O yolculuğu daha seyrek yaparım",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Alternatif çözüm ararım (ör. kendi bisikletim yerine paylaşımlı bisiklet kullanırım)",
-      "#I avoid that trip entirely if possible": "Mümkünse o yolculuğu tamamen yapmam",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Uzun bir dinlenme olmadan ne kadar yürüyebilir veya tekerlekli sandalyenizle gidebilirsiniz?",
+      "#Less than 500 metres (up to about 6 minutes)": "500 metreden az (yaklaşık 6 dakikaya kadar)",
+      "#500 metres to 1 km (about 6-12 minutes)": "500 metre ile 1 km arası (yaklaşık 6-12 dakika)",
+      "#1 to 2 km (about 12-25 minutes)": "1 ile 2 km arası (yaklaşık 12-25 dakika)",
+      "#More than 2 km (more than about 25 minutes)": "2 km’den fazla (yaklaşık 25 dakikadan fazla)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Yürürken veya tekerlekli sandalyeyle dışarı çıkarken yanınızda birinin olmasına ihtiyaç duyar mısınız?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "Uzun dinlenme, yaklaşık 5 dakikadan uzun durmak demektir. Kabaca bir fikir yeterli.",
-      "#I rarely or never walk": "Nadiren yürürüm veya hiç yürümem",
-      "#Less than 500 metres (about 5-6 minutes)": "500 metreden az (yaklaşık 5-6 dakika)",
-      "#500 metres to 1 km (about 10-15 minutes)": "500 metre ile 1 km arası (yaklaşık 10-15 dakika)",
-      "#1 to 2 km (about 15-25 minutes)": "1 ile 2 km arası (yaklaşık 15-25 dakika)",
-      "#More than 2 km": "2 km’den fazla",
-      "#Only if someone accompanies me": "Yalnızca biri bana eşlik ederse",
-      "#I cannot walk or move around, even with a mobility aid": "Bir yardımcı araçla bile yürüyemiyorum veya hareket edemiyorum",
       "#None": "Hiçbiri",
       "#1 day": "1 gün",
       "#2-3 days": "2-3 gün",
       "#4-5 days": "4-5 gün",
       "#6-7 days": "6-7 gün",
       "#Think of strength, stamina and general health.": "Güç, dayanıklılık ve genel sağlığı düşünün.",
-      "#Very low (I tire easily)": "Çok düşük (çabuk yorulurum)",
       "#Low": "Düşük",
       "#Moderate": "Orta",
-      "#Good": "İyi",
       "#High": "Yüksek",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Tipik bir haftada kaç gün en az 10 dakika aralıksız yürüyor ya da tekerlekli sandalyenizle ilerliyorsunuz?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Her türlü yürüyüşü sayın: bir yere gitmek, boş zaman veya egzersiz için.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Yürümek için şu anki fiziksel formunuzu nasıl tanımlarsınız (güç, dayanıklılık, denge)?",
+      "#Very low": "Çok düşük",
+      "#Very high": "Çok yüksek",
       "#Why do you rarely walk? (Select all that apply)": "Neden nadiren yürüyorsunuz? (Uygun olanların tümünü seçin)",
       "#The places I go are too far or walking takes too long": "Gittiğim yerler çok uzak veya yürümek çok uzun sürüyor",
       "#Walking is tiring or physically difficult for me": "Yürümek benim için yorucu ya da fiziksel olarak zor",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Sokaklar yürümeye elverişli değil (kaldırımlar, gölge, banklar)",
       "#Another reason": "Başka bir neden",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "Mesafe benim için bir sınır değil (örn. akülü tekerlekli sandalye)",
       "#I feel unsafe because of traffic": "Trafik yüzünden kendimi güvende hissetmiyorum",
       "#I am afraid of crime, such as theft": "Hırsızlık gibi suçlardan korkuyorum",
       "#I am afraid of harassment": "Tacizden korkuyorum",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "Hızlı veya yoğun trafikli yollar boyunca yürürken veya tekerlekli sandalyeyle ilerlerken kendinizi güvensiz hissediyor musunuz?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "Hızlı veya yoğun trafikli yollar boyunca yürürken veya tekerlekli sandalyeyle ilerlerken kendinizi ne sıklıkla güvensiz hissediyorsunuz?",
+      "#Never": "Hiçbir zaman",
+      "#Rarely": "Nadiren",
+      "#Sometimes": "Bazen",
+      "#Often": "Sık sık",
+      "#Always": "Her zaman",
       "#Doesn't apply to me": "Benim için geçerli değil",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "Hızlı veya yoğun trafikli yollardan yürüyerek karşıya geçerken kendinizi güvensiz hissediyor musunuz?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Yaya olarak güvenle karşıya geçemediğiniz için daha uzun yoldan dolaşıyor ya da bazı sokaklardan kaçınıyor musunuz?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "Yaya olarak karşıdan karşıya geçerken kendinizi aceleye gelmiş ya da tedirgin hissediyor musunuz?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "Yürürken veya tekerlekli sandalyeyle ilerlerken bisikletliler veya e-scooter kullanıcıları yanınızdan yakın geçtiğinde kendinizi güvensiz hissediyor musunuz?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Yürürken veya tekerlekli sandalyeyle ilerlerken kötü durumdaki kaldırımlar (örn. çukurlar, düzgün olmayan yüzeyler veya kırık kenarlar) kendinizi güvensiz hissetmenize neden oluyor mu?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "Kaldırımdaki engeller (örn. yol çalışmaları, çöp kutuları veya park edilmiş scooter'lar) sizi trafiğe daha yakın yürümeye zorluyor mu?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Kaldırımdaki engeller (örn. yol çalışmaları, çöp kutuları veya park edilmiş scooter'lar) sizi yolunuzu değiştirmeye ya da dolaşmaya zorluyor mu?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "Hızlı veya yoğun trafikli yollardan yürüyerek veya tekerlekli sandalyeyle karşıya geçerken kendinizi ne sıklıkla güvensiz hissediyorsunuz?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "Yaya olarak veya tekerlekli sandalyeyle güvenle karşıya geçemediğiniz için ne sıklıkla daha uzun yoldan dolaşıyor ya da bazı sokaklardan kaçınıyorsunuz?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "Yaya olarak veya tekerlekli sandalyeyle karşıdan karşıya geçerken kendinizi ne sıklıkla aceleye gelmiş ya da tedirgin hissediyorsunuz?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "Yürürken veya tekerlekli sandalyeyle ilerlerken bisikletliler veya e-scooter kullanıcıları yanınızdan yakın geçtiği için kendinizi ne sıklıkla güvensiz hissediyorsunuz?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Yürürken veya tekerlekli sandalyeyle ilerlerken kötü durumdaki kaldırımlar (örn. çukurlar, düzgün olmayan yüzeyler veya kırık kenarlar) ne sıklıkla kendinizi güvensiz hissetmenize neden oluyor?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "Kaldırımdaki engeller (örn. yol çalışmaları, çöp kutuları veya park edilmiş scooter'lar) sizi ne sıklıkla trafiğe daha yakın ilerlemeye zorluyor?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Kaldırımdaki engeller (örn. yol çalışmaları, çöp kutuları veya park edilmiş scooter'lar) sizi ne sıklıkla yolunuzu değiştirmeye ya da dolaşmaya zorluyor?",
       "#Walking – Road safety": "Yürüyüş – Yol güvenliği",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "Yürürken veya tekerlekli sandalyeyle ilerlerken yolda kimler kendinizi güvensiz hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
       "#Car drivers": "Araba sürücüleri",
@@ -1694,7 +1801,7 @@
       "#Pedestrian traffic lights without an audible signal": "Sesli sinyali olmayan yaya trafik ışıkları",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Gündüz yürürken veya tekerlekli sandalyeyle ilerlerken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu? (Taciz; size yönelik istenmeyen yorumları, takip edilmeyi, dokunmayı veya yıldırıcı davranışları kapsar.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "Akşam veya hava karardıktan sonra yürürken veya tekerlekli sandalyeyle ilerlerken kendinizi suça veya tacize karşı güvende hissetmediğiniz oluyor mu?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "Hava karardıktan sonra yetersiz sokak aydınlatması, yürüyerek dışarı çıktığınızda güzergâhınızı veya saatinizi değiştirmenize neden oluyor mu?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "Hava karardıktan sonra yetersiz sokak aydınlatması, yürüyerek veya tekerlekli sandalyeyle dışarı çıktığınızda ne sıklıkla güzergâhınızı veya saatinizi değiştirmenize neden oluyor?",
       "#Walking – Personal security": "Yürüyüş – Kişisel güvenlik",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "Yürürken veya tekerlekli sandalyeyle ilerlerken neler kendinizi suça veya tacize karşı daha az güvende hissetmenize neden oluyor? (Uygun olanların tümünü seçin)",
       "#Places with few people around (isolated or deserted areas)": "Etrafta az insan olan yerler (ıssız veya tenha alanlar)",
@@ -1715,7 +1822,8 @@
       "#Nothing": "Hiçbir şey",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Görmeden yolumu bulmak için az ipucu olması (örn. hissedilebilir yüzey veya sesli anons yok)",
       "#Not being able to hear people or vehicles approaching": "Yaklaşan insanları veya araçları duyamamak",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Yürürken veya tekerlekli sandalye kullanırken kimliğiniz ya da görünüşünüz nedeniyle tacize uğradınız mı veya bundan korkuyor musunuz (ör. cinsiyet, görünüş, köken, yaş, engellilik)?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Yürürken veya tekerlekli sandalyeyle ilerlerken son 12 ayda kim olduğunuz ya da nasıl göründüğünüz nedeniyle (örn. cinsiyet, görünüş, köken, yaş, engellilik) tacize uğradınız mı?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "Yürürken veya tekerlekli sandalyeyle ilerlerken kim olduğunuz ya da nasıl göründüğünüz nedeniyle tacize uğramaktan ne sıklıkla endişe ediyorsunuz?",
       "#Walking – Your trips and safety": "Yürüyüş – Yolculuklarınız ve güvenliğiniz",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Yürüyüş – Yolculuklarınız ve güvenliğiniz",
       "#Thank you!": "Teşekkür ederiz!",
@@ -1735,6 +1843,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "در همان سفر از کدام روش‌های دیگر رفت‌وآمد استفاده می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "هنگام ترکیب روش‌های مختلف رفت‌وآمد، مثلاً دوچرخه + حمل‌ونقل عمومی، خودرو + مترو یا پیاده‌روی + اتوبوس، با چه مشکلاتی روبه‌رو می‌شوید؟",
       "#When you face these difficulties, how do you mostly respond?": "وقتی با این مشکلات روبه‌رو می‌شوید معمولاً چه کار می‌کنید؟",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "روش‌هایی را که ترکیب می‌کنم تغییر می‌دهم (مثلاً دوچرخه اشتراکی به جای دوچرخه شخصی)",
+      "#I use only one mode (e.g. only the car or only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "زمان یا مسیر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم یا جای دیگری وسیله عوض می‌کنم)",
+      "#I make that trip less often or avoid it": "آن سفر را کمتر انجام می‌دهم یا از آن صرف‌نظر می‌کنم",
       "#Car": "خودرو",
       "#Car sharing": "خودروی اشتراکی",
       "#Motorcycle, scooter or moped": "موتورسیکلت، اسکوتر یا موتور گازی",
@@ -1760,56 +1872,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "مشکلات دسترس‌پذیری (پله، نبود آسانسور و غیره)",
       "#Weather-related difficulties": "مشکلات مربوط به آب‌وهوا",
       "#I do not experience significant difficulties": "مشکل قابل توجهی ندارم",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "استفاده از یکی از روش‌ها را کنار می‌گذارم (مثلاً دیگر دوچرخه‌ام را نمی‌برم)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "فقط از یک روش استفاده می‌کنم (مثلاً فقط خودرو یا فقط حمل‌ونقل عمومی)",
-      "#I change the time of travel (e.g. avoid peak hours)": "زمان سفر را تغییر می‌دهم (مثلاً از ساعت شلوغی دوری می‌کنم)",
-      "#I change the route or transfer point": "مسیر یا محل تعویض وسیله را تغییر می‌دهم",
-      "#I choose a different combination of modes": "ترکیب دیگری از روش‌های رفت‌وآمد را انتخاب می‌کنم",
       "#I continue using the same combination despite difficulties": "با وجود مشکلات، همان ترکیب را ادامه می‌دهم",
-      "#I reduce how often I make that trip": "آن سفر را کمتر انجام می‌دهم",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "راه دیگری پیدا می‌کنم (مثلاً به جای دوچرخه شخصی از دوچرخه اشتراکی استفاده می‌کنم)",
-      "#I avoid that trip entirely if possible": "اگر ممکن باشد آن سفر را انجام نمی‌دهم",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "چقدر راه را می‌توانید پیاده یا با ویلچر، بدون استراحت طولانی بروید؟",
+      "#Less than 500 metres (up to about 6 minutes)": "کمتر از ۵۰۰ متر (تا حدود ۶ دقیقه)",
+      "#500 metres to 1 km (about 6-12 minutes)": "۵۰۰ متر تا ۱ کیلومتر (حدود ۶-۱۲ دقیقه)",
+      "#1 to 2 km (about 12-25 minutes)": "۱ تا ۲ کیلومتر (حدود ۱۲ تا ۲۵ دقیقه)",
+      "#More than 2 km (more than about 25 minutes)": "بیش از ۲ کیلومتر (بیش از حدود ۲۵ دقیقه)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "آیا وقتی پیاده یا با ویلچر بیرون می‌روید، به همراهی کسی نیاز دارید؟",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "«استراحت طولانی» یعنی بیش از حدود ۵ دقیقه توقف. یک اندازه تقریبی کافی است.",
-      "#I rarely or never walk": "به ندرت پیاده‌روی می‌کنم یا اصلاً پیاده نمی‌روم",
-      "#Less than 500 metres (about 5-6 minutes)": "کمتر از ۵۰۰ متر (حدود ۵-۶ دقیقه)",
-      "#500 metres to 1 km (about 10-15 minutes)": "۵۰۰ متر تا ۱ کیلومتر (حدود ۱۰-۱۵ دقیقه)",
-      "#1 to 2 km (about 15-25 minutes)": "۱ تا ۲ کیلومتر (حدود ۱۵ تا ۲۵ دقیقه)",
-      "#More than 2 km": "بیش از ۲ کیلومتر",
-      "#Only if someone accompanies me": "فقط اگر کسی همراهم باشد",
-      "#I cannot walk or move around, even with a mobility aid": "حتی با وسیله کمکی هم نمی‌توانم راه بروم یا جابه‌جا شوم",
       "#None": "هیچ‌کدام",
       "#1 day": "۱ روز",
       "#2-3 days": "۲-۳ روز",
       "#4-5 days": "۴-۵ روز",
       "#6-7 days": "۶-۷ روز",
       "#Think of strength, stamina and general health.": "به توان، استقامت و سلامت عمومی فکر کنید.",
-      "#Very low (I tire easily)": "بسیار کم (زود خسته می‌شوم)",
       "#Low": "پایین",
       "#Moderate": "متوسط",
-      "#Good": "خوب",
       "#High": "بالا",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "در یک هفتهٔ معمولی، چند روز دست‌کم ۱۰ دقیقه پشت سر هم پیاده‌روی می‌کنید یا با ویلچر حرکت می‌کنید؟",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "هر نوع پیاده‌روی را حساب کنید: برای رفتن به جایی، برای تفریح یا برای ورزش.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "آمادگی جسمانی فعلی خود را برای پیاده‌روی (قدرت، استقامت، تعادل) چگونه توصیف می‌کنید؟",
+      "#Very low": "بسیار پایین",
+      "#Very high": "بسیار بالا",
       "#Why do you rarely walk? (Select all that apply)": "چرا به‌ندرت پیاده‌روی می‌کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#The places I go are too far or walking takes too long": "جاهایی که می‌روم خیلی دورند یا پیاده‌روی زمان زیادی می‌برد",
       "#Walking is tiring or physically difficult for me": "پیاده‌روی برای من خسته‌کننده یا از نظر جسمی دشوار است",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "خیابان‌ها برای پیاده‌روی راحت نیستند (پیاده‌رو، سایه، نیمکت)",
       "#Another reason": "دلیل دیگر",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "مسافت برای من محدودیت نیست (مثلاً ویلچر برقی)",
       "#I feel unsafe because of traffic": "به‌خاطر ترافیک احساس امنیت نمی‌کنم",
       "#I am afraid of crime, such as theft": "از جرم، مثلاً دزدی، می‌ترسم",
       "#I am afraid of harassment": "از آزار و مزاحمت می‌ترسم",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "وقتی پیاده یا با ویلچر در امتداد خیابان‌هایی با ترافیک سریع یا سنگین حرکت می‌کنید، احساس ناامنی می‌کنید؟",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "وقتی پیاده یا با ویلچر در امتداد خیابان‌هایی با ترافیک سریع یا سنگین حرکت می‌کنید، چند وقت یک‌بار احساس ناامنی می‌کنید؟",
+      "#Never": "هرگز",
+      "#Rarely": "به‌ندرت",
+      "#Sometimes": "گاهی",
+      "#Often": "اغلب",
+      "#Always": "همیشه",
       "#Doesn't apply to me": "به من مربوط نمی‌شود",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "وقتی پیاده از خیابان‌هایی با ترافیک سریع یا سنگین عبور می‌کنید، احساس ناامنی می‌کنید؟",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "آیا راه‌های طولانی‌تری می‌روید یا از برخی خیابان‌ها دوری می‌کنید چون نمی‌توانید پیاده و با ایمنی از آن‌ها عبور کنید؟",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "آیا وقتی پیاده از خیابان عبور می‌کنید، احساس عجله یا تردید می‌کنید؟",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "هنگام پیاده‌روی یا حرکت با ویلچر، وقتی دوچرخه‌سواران یا کاربران اسکوتر برقی از نزدیک شما رد می‌شوند، احساس ناامنی می‌کنید؟",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "هنگام پیاده‌روی یا حرکت با ویلچر، آیا وضعیت بد پیاده‌روها (مثلاً چاله، سطح ناهموار یا لبه‌های فرسوده) باعث می‌شود احساس ناامنی کنید؟",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "آیا موانع روی پیاده‌رو (مثلاً کارهای عمرانی، سطل‌های زباله یا اسکوترهای پارک‌شده) شما را مجبور می‌کنند نزدیک‌تر به ترافیک راه بروید؟",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "آیا موانع روی پیاده‌رو (مثلاً کارهای عمرانی، سطل‌های زباله یا اسکوترهای پارک‌شده) شما را مجبور می‌کنند مسیرتان را عوض کنید یا راه را دور بزنید؟",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "وقتی پیاده یا با ویلچر از خیابان‌هایی با ترافیک سریع یا سنگین عبور می‌کنید، چند وقت یک‌بار احساس ناامنی می‌کنید؟",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "چند وقت یک‌بار راه‌های طولانی‌تری می‌روید یا از برخی خیابان‌ها دوری می‌کنید چون نمی‌توانید پیاده یا با ویلچر با ایمنی از آن‌ها عبور کنید؟",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "وقتی پیاده یا با ویلچر از خیابان عبور می‌کنید، چند وقت یک‌بار احساس عجله یا تردید می‌کنید؟",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "هنگام پیاده‌روی یا حرکت با ویلچر، چند وقت یک‌بار به این دلیل که دوچرخه‌سواران یا کاربران اسکوتر برقی از نزدیک شما رد می‌شوند احساس ناامنی می‌کنید؟",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "هنگام پیاده‌روی یا حرکت با ویلچر، چند وقت یک‌بار وضعیت بد پیاده‌روها (مثلاً چاله، سطح ناهموار یا لبه‌های فرسوده) باعث می‌شود احساس ناامنی کنید؟",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "چند وقت یک‌بار موانع روی پیاده‌رو (مثلاً کارهای عمرانی، سطل‌های زباله یا اسکوترهای پارک‌شده) شما را مجبور می‌کنند به ترافیک نزدیک‌تر شوید؟",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "چند وقت یک‌بار موانع روی پیاده‌رو (مثلاً کارهای عمرانی، سطل‌های زباله یا اسکوترهای پارک‌شده) شما را مجبور می‌کنند مسیرتان را عوض کنید یا راه را دور بزنید؟",
       "#Walking – Road safety": "پیاده‌روی – ایمنی راه",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "هنگام پیاده‌روی یا حرکت با ویلچر، چه کسانی در خیابان باعث می‌شوند احساس ناامنی کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Car drivers": "رانندگان خودرو",
@@ -1841,7 +1947,7 @@
       "#Pedestrian traffic lights without an audible signal": "چراغ‌های راهنمای عابر پیاده بدون علامت صوتی",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "در طول روز، آیا پیش می‌آید هنگام پیاده‌روی یا حرکت با ویلچر در برابر جرم یا آزار احساس امنیت نکنید؟ (آزار شامل اظهارنظرهای ناخواسته، تعقیب کردن، لمس کردن یا رفتار ارعاب‌آمیز نسبت به شما است.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "عصر یا پس از تاریک شدن هوا، آیا پیش می‌آید هنگام پیاده‌روی یا حرکت با ویلچر در برابر جرم یا آزار احساس امنیت نکنید؟",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "پس از تاریک شدن هوا، آیا روشنایی ضعیف خیابان باعث می‌شود مسیر یا زمان بیرون رفتن پیاده را تغییر دهید؟",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "پس از تاریک شدن هوا، چند وقت یک‌بار روشنایی ضعیف خیابان باعث می‌شود مسیر یا زمان بیرون رفتن پیاده یا با ویلچر را تغییر دهید؟",
       "#Walking – Personal security": "پیاده‌روی – امنیت شخصی",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "هنگام پیاده‌روی یا حرکت با ویلچر، چه چیزهایی باعث می‌شوند در برابر جرم یا آزار کمتر احساس امنیت کنید؟ (همه گزینه‌های مربوط را انتخاب کنید)",
       "#Places with few people around (isolated or deserted areas)": "مکان‌هایی با رفت‌وآمد کم (مناطق دورافتاده یا خلوت)",
@@ -1862,7 +1968,8 @@
       "#Nothing": "هیچ چیز",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "نشانه‌های کم برای مسیریابی بدون دیدن (مثلاً نبود مسیر لمسی یا اعلام صوتی)",
       "#Not being able to hear people or vehicles approaching": "نشنیدن صدای افراد یا وسایل نقلیه نزدیک‌شونده",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "هنگام رفت‌وآمد پیاده یا با ویلچر، آیا به دلیل هویت یا ظاهرتان آزار دیده‌اید یا از آن می‌ترسید (مثلاً جنسیت، ظاهر، خاستگاه، سن یا معلولیت)؟",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "هنگام پیاده‌روی یا حرکت با ویلچر، آیا در ۱۲ ماه گذشته به دلیل ویژگی‌های شخصی یا ظاهرتان (مثلاً جنسیت، ظاهر، خاستگاه، سن، معلولیت) آزار دیده‌اید؟",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "هنگام پیاده‌روی یا حرکت با ویلچر، چند وقت یک‌بار نگران این هستید که به دلیل ویژگی‌های شخصی یا ظاهرتان آزار ببینید؟",
       "#Walking – Your trips and safety": "پیاده‌روی – رفت‌وآمد و ایمنی شما",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - پیاده‌روی – رفت‌وآمد و ایمنی شما",
       "#Thank you!": "سپاسگزاریم!",
@@ -1882,6 +1989,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "Milyen más közlekedési módokat használ ugyanazon az úton? (Jelölje meg az összes megfelelőt)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "Milyen nehézségeket tapasztal különböző közlekedési módok kombinálásakor, például kerékpár + tömegközlekedés, autó + metró vagy gyaloglás + busz?",
       "#When you face these difficulties, how do you mostly respond?": "Mit tesz általában, amikor ilyen nehézségekkel találkozik?",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "Más közlekedési módokat kombinálok (pl. saját kerékpár helyett megosztott kerékpárt)",
+      "#I use only one mode (e.g. only the car or only public transport)": "Csak egy közlekedési módot használok (pl. csak autót vagy csak tömegközlekedést)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "Megváltoztatom az időpontot vagy az útvonalat (pl. kerülöm a csúcsidőt, máshol szállok át)",
+      "#I make that trip less often or avoid it": "Ritkábban teszem meg azt az utat, vagy elkerülöm",
       "#Car": "Autó",
       "#Car sharing": "Autómegosztás",
       "#Motorcycle, scooter or moped": "Motorkerékpár, robogó vagy segédmotor",
@@ -1907,56 +2018,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "Akadálymentességi problémák (lépcső, lift hiánya stb.)",
       "#Weather-related difficulties": "Időjárással kapcsolatos nehézségek",
       "#I do not experience significant difficulties": "Nem tapasztalok jelentős nehézséget",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "Abbahagyom az egyik közlekedési mód használatát (pl. nem viszem magammal a kerékpárt)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "Egyetlen közlekedési módra váltok (pl. csak autó vagy csak tömegközlekedés)",
-      "#I change the time of travel (e.g. avoid peak hours)": "Megváltoztatom az utazás időpontját (pl. kerülöm a csúcsidőt)",
-      "#I change the route or transfer point": "Megváltoztatom az útvonalat vagy az átszállási pontot",
-      "#I choose a different combination of modes": "Más közlekedési módokat kombinálok",
       "#I continue using the same combination despite difficulties": "A nehézségek ellenére ugyanazt a kombinációt használom",
-      "#I reduce how often I make that trip": "Ritkábban teszem meg azt az utat",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "Más megoldást keresek (pl. saját kerékpár helyett megosztott kerékpárt használok)",
-      "#I avoid that trip entirely if possible": "Ha lehet, teljesen elkerülöm azt az utat",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "Milyen messzire tud eljutni gyalog vagy kerekesszékkel hosszú pihenő nélkül?",
+      "#Less than 500 metres (up to about 6 minutes)": "Kevesebb mint 500 méter (kb. 6 percig)",
+      "#500 metres to 1 km (about 6-12 minutes)": "500 métertől 1 kilométerig (kb. 6-12 perc)",
+      "#1 to 2 km (about 12-25 minutes)": "1-2 km (kb. 12-25 perc)",
+      "#More than 2 km (more than about 25 minutes)": "Több mint 2 km (kb. 25 percnél több)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "Szüksége van kísérőre, amikor gyalog vagy kerekesszékkel közlekedik?",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "A hosszú pihenő kb. 5 percnél hosszabb megállást jelent. Elég egy hozzávetőleges válasz.",
-      "#I rarely or never walk": "Ritkán vagy soha nem gyalogolok",
-      "#Less than 500 metres (about 5-6 minutes)": "Kevesebb mint 500 méter (kb. 5-6 perc)",
-      "#500 metres to 1 km (about 10-15 minutes)": "500 métertől 1 kilométerig (kb. 10-15 perc)",
-      "#1 to 2 km (about 15-25 minutes)": "1-2 km (kb. 15-25 perc)",
-      "#More than 2 km": "Több mint 2 km",
-      "#Only if someone accompanies me": "Csak ha valaki elkísér",
-      "#I cannot walk or move around, even with a mobility aid": "Segédeszközzel sem tudok járni vagy közlekedni",
       "#None": "Egyik sem",
       "#1 day": "1 nap",
       "#2-3 days": "2-3 nap",
       "#4-5 days": "4-5 nap",
       "#6-7 days": "6-7 nap",
       "#Think of strength, stamina and general health.": "Gondoljon az erejére, a kitartására és az általános egészségi állapotára.",
-      "#Very low (I tire easily)": "Nagyon gyenge (könnyen elfáradok)",
       "#Low": "Alacsony",
       "#Moderate": "Közepes",
-      "#Good": "Jó",
       "#High": "Magas",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "Egy átlagos héten hány napon gyalogol, vagy közlekedik kerekesszékkel, legalább 10 percig egyhuzamban?",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "Számítson bele minden gyaloglást: ha valahová megy, szabadidőben vagy edzésként.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "Hogyan írná le jelenlegi fizikai erőnlétét a gyalogláshoz (erő, állóképesség, egyensúly)?",
+      "#Very low": "Nagyon alacsony",
+      "#Very high": "Nagyon magas",
       "#Why do you rarely walk? (Select all that apply)": "Miért jár ritkán gyalog? (Jelölje meg az összes megfelelőt)",
       "#The places I go are too far or walking takes too long": "Az úti céljaim túl messze vannak, vagy gyalog túl sokáig tart az út",
       "#Walking is tiring or physically difficult for me": "A gyaloglás fárasztó vagy fizikailag nehéz számomra",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "Az utcák kényelmetlenek a gyalogláshoz (járdák, árnyék, padok)",
       "#Another reason": "Egyéb ok",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "A távolság nem korlát számomra (pl. elektromos kerekesszék)",
       "#I feel unsafe because of traffic": "A forgalom miatt nem érzem magam biztonságban",
       "#I am afraid of crime, such as theft": "Félek a bűncselekményektől, például a lopástól",
       "#I am afraid of harassment": "Félek a zaklatástól",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "Érzi magát veszélyben, amikor gyors vagy sűrű forgalmú utak mentén halad gyalog vagy kerekesszékkel?",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "Milyen gyakran érzi magát veszélyben, amikor gyors vagy sűrű forgalmú utak mentén halad gyalog vagy kerekesszékkel?",
+      "#Never": "Soha",
+      "#Rarely": "Ritkán",
+      "#Sometimes": "Néha",
+      "#Often": "Gyakran",
+      "#Always": "Mindig",
       "#Doesn't apply to me": "Rám nem vonatkozik",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "Érzi magát veszélyben, amikor gyalog kel át gyors vagy sűrű forgalmú utakon?",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "Kerülőutat tesz vagy elkerül bizonyos utcákat, mert gyalog nem tud rajtuk biztonságosan átkelni?",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "Amikor gyalog átkel az úttesten, úgy érzi, sietnie kell, vagy bizonytalan?",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "Érzi magát veszélyben gyaloglás vagy kerekesszékes közlekedés közben, amikor kerékpárosok vagy elektromosroller-használók közel haladnak el Ön mellett?",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "A rossz állapotú járdák (pl. kátyúk, egyenetlen felületek vagy morzsolódó szélek) miatt érzi magát veszélyben gyaloglás vagy kerekesszékes közlekedés közben?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "A járdán lévő akadályok (pl. útépítés, kukák vagy leparkolt rollerek) miatt kénytelen közelebb menni a forgalomhoz?",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "A járdán lévő akadályok (pl. útépítés, kukák vagy leparkolt rollerek) miatt kénytelen útvonalat változtatni vagy kerülőt tenni?",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "Milyen gyakran érzi magát veszélyben, amikor gyalog vagy kerekesszékkel kel át gyors vagy sűrű forgalmú utakon?",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "Milyen gyakran tesz kerülőutat vagy kerül el bizonyos utcákat, mert gyalog vagy kerekesszékkel nem tud rajtuk biztonságosan átkelni?",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "Amikor gyalog vagy kerekesszékkel átkel az úttesten, milyen gyakran érzi úgy, hogy sietnie kell, vagy bizonytalan?",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "Gyaloglás vagy kerekesszékes közlekedés közben milyen gyakran érzi magát veszélyben, mert kerékpárosok vagy elektromosroller-használók közel haladnak el Ön mellett?",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "Gyaloglás vagy kerekesszékes közlekedés közben milyen gyakran érzi magát veszélyben a rossz állapotú járdák (pl. kátyúk, egyenetlen felületek vagy morzsolódó szélek) miatt?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "Milyen gyakran kényszerítik a járdán lévő akadályok (pl. útépítés, kukák vagy leparkolt rollerek), hogy közelebb menjen a forgalomhoz?",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "Milyen gyakran kényszerítik a járdán lévő akadályok (pl. útépítés, kukák vagy leparkolt rollerek), hogy útvonalat változtasson vagy kerülőt tegyen?",
       "#Walking – Road safety": "Gyaloglás – Közlekedésbiztonság",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "Gyaloglás vagy kerekesszékes közlekedés közben kik miatt érzi magát veszélyben az úton? (Jelölje meg az összes megfelelőt)",
       "#Car drivers": "Autóvezetők",
@@ -1988,7 +2093,7 @@
       "#Pedestrian traffic lights without an audible signal": "Hangjelzés nélküli gyalogos jelzőlámpák",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "Napközben előfordul, hogy gyaloglás vagy kerekesszékes közlekedés közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Zaklatásnak számítanak az Önnek címzett kéretlen megjegyzések, a követés, az érintés vagy a megfélemlítő viselkedés.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "Este vagy sötétedés után előfordul, hogy gyaloglás vagy kerekesszékes közlekedés közben nem érzi magát biztonságban a bűncselekményekkel vagy a zaklatással szemben?",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "Sötétedés után a gyenge közvilágítás miatt változtat útvonalat vagy időpontot, amikor gyalog indul el?",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "Sötétedés után milyen gyakran változtat útvonalat vagy időpontot a gyenge közvilágítás miatt, amikor gyalog vagy kerekesszékkel indul el?",
       "#Walking – Personal security": "Gyaloglás – Személyes biztonság",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "Gyaloglás vagy kerekesszékes közlekedés közben mi miatt érzi magát kevésbé biztonságban a bűncselekményekkel vagy a zaklatással szemben? (Jelölje meg az összes megfelelőt)",
       "#Places with few people around (isolated or deserted areas)": "Olyan helyek, ahol kevés ember van (elhagyatott vagy néptelen helyek)",
@@ -2009,7 +2114,8 @@
       "#Nothing": "Semmin",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "Kevés tájékozódási segítség látás nélkül (pl. nincs taktilis vezetősáv vagy hangos bemondás)",
       "#Not being able to hear people or vehicles approaching": "Nem hallom a közeledő embereket vagy járműveket",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Gyalogos vagy kerekesszékes közlekedés közben érte már zaklatás, vagy tart ettől az identitása vagy megjelenése miatt (például nem, külső, származás, életkor, fogyatékosság)?",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "Gyaloglás vagy kerekesszékes közlekedés közben az elmúlt 12 hónapban érte-e zaklatás amiatt, hogy ki Ön vagy hogyan néz ki (pl. nem, külső, származás, életkor, fogyatékosság)?",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "Gyaloglás vagy kerekesszékes közlekedés közben milyen gyakran aggódik amiatt, hogy zaklatás éri a személye vagy a külseje miatt?",
       "#Walking – Your trips and safety": "Gyaloglás – Utazásai és biztonsága",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - Gyaloglás – Utazásai és biztonsága",
       "#Thank you!": "Köszönjük!",
@@ -2029,6 +2135,10 @@
       "#Which other ways of travelling do you use in the same trip? (Select all that apply)": "ما وسائل التنقل الأخرى المستخدمة في الرحلة نفسها؟ (يمكن اختيار كل ما ينطبق)",
       "#What difficulties do you experience when combining different transport modes (e.g. bike + public transport, car + metro, walking + bus)?": "ما الصعوبات التي تظهر عند الجمع بين وسائل تنقل مختلفة، مثل الدراجة + النقل العام، السيارة + المترو، أو المشي + الحافلة؟",
       "#When you face these difficulties, how do you mostly respond?": "ما الإجراء المعتاد عند ظهور هذه الصعوبات؟",
+      "#I change the modes I combine (e.g. a shared bike instead of my own)": "أغيّر الوسائل التي أجمع بينها (مثل دراجة مشتركة بدلًا من دراجتي)",
+      "#I use only one mode (e.g. only the car or only public transport)": "أستخدم وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
+      "#I change the time or the route (e.g. avoid peak hours, another transfer point)": "أغيّر الوقت أو الطريق (مثل تجنب ساعات الذروة أو التبديل في نقطة أخرى)",
+      "#I make that trip less often or avoid it": "أقوم بهذه الرحلة أقل أو أتجنبها",
       "#Car": "السيارة",
       "#Car sharing": "مشاركة السيارات",
       "#Motorcycle, scooter or moped": "دراجة نارية أو سكوتر أو دراجة بمحرك صغير",
@@ -2054,56 +2164,50 @@
       "#Accessibility issues (stairs, no elevators, etc.)": "مشكلات في سهولة الوصول (سلالم، عدم وجود مصعد، وغيرها)",
       "#Weather-related difficulties": "صعوبات بسبب الطقس",
       "#I do not experience significant difficulties": "لا أواجه صعوبات كبيرة",
-      "#I stop using one of the modes (e.g. stop bringing my bike)": "أتوقف عن استخدام إحدى الوسائل (مثل عدم أخذ الدراجة معي)",
-      "#I switch to a single mode (e.g. only car, only public transport)": "أنتقل إلى وسيلة واحدة فقط (مثل السيارة فقط أو النقل العام فقط)",
-      "#I change the time of travel (e.g. avoid peak hours)": "أغيّر وقت الرحلة (مثل تجنب ساعات الذروة)",
-      "#I change the route or transfer point": "أغيّر الطريق أو نقطة التبديل",
-      "#I choose a different combination of modes": "أختار مزيجًا مختلفًا من وسائل التنقل",
       "#I continue using the same combination despite difficulties": "أواصل استخدام المزيج نفسه رغم الصعوبات",
-      "#I reduce how often I make that trip": "أقلل عدد مرات القيام بهذه الرحلة",
-      "#I look for alternative solutions (e.g. bike sharing instead of own bike)": "أبحث عن حل بديل (مثل استخدام دراجة مشتركة بدلًا من دراجتي)",
-      "#I avoid that trip entirely if possible": "أتجنب الرحلة تمامًا إذا كان ذلك ممكنًا",
       "#How far can you walk, or go in your wheelchair, without a long rest?": "ما المسافة التي يمكنك قطعها مشيًا أو بكرسي متحرك دون راحة طويلة؟",
+      "#Less than 500 metres (up to about 6 minutes)": "أقل من 500 متر (حتى 6 دقائق تقريبًا)",
+      "#500 metres to 1 km (about 6-12 minutes)": "من 500 متر إلى 1 كيلومتر (حوالي 6-12 دقيقة)",
+      "#1 to 2 km (about 12-25 minutes)": "من 1 إلى 2 كم (حوالي 12-25 دقيقة)",
+      "#More than 2 km (more than about 25 minutes)": "أكثر من 2 كم (أكثر من 25 دقيقة تقريبًا)",
+      "#Do you need someone with you when you walk or go out in your wheelchair?": "هل تحتاج إلى مرافق عندما تمشي أو تتنقل بالكرسي المتحرك؟",
       "#A long rest means stopping for more than about 5 minutes. A rough idea is enough.": "الراحة الطويلة تعني التوقف أكثر من 5 دقائق تقريبًا. يكفي تقدير تقريبي.",
-      "#I rarely or never walk": "نادراً ما أمشي أو لا أمشي إطلاقًا",
-      "#Less than 500 metres (about 5-6 minutes)": "أقل من 500 متر (حوالي 5-6 دقائق)",
-      "#500 metres to 1 km (about 10-15 minutes)": "من 500 متر إلى 1 كيلومتر (حوالي 10-15 دقيقة)",
-      "#1 to 2 km (about 15-25 minutes)": "من 1 إلى 2 كم (حوالي 15-25 دقيقة)",
-      "#More than 2 km": "أكثر من 2 كم",
-      "#Only if someone accompanies me": "فقط إذا رافقني أحد",
-      "#I cannot walk or move around, even with a mobility aid": "لا أستطيع المشي أو التنقل حتى مع وسيلة مساعدة",
       "#None": "لا شيء مما سبق",
       "#1 day": "يوم واحد",
       "#2-3 days": "2-3 أيام",
       "#4-5 days": "4-5 أيام",
       "#6-7 days": "6-7 أيام",
       "#Think of strength, stamina and general health.": "فكّر في القوة والتحمل والصحة العامة.",
-      "#Very low (I tire easily)": "منخفضة جدًا (أتعب بسهولة)",
-      "#Low": "منخفض",
-      "#Moderate": "متوسط",
-      "#Good": "جيد",
-      "#High": "مرتفع",
+      "#Low": "منخفضة",
+      "#Moderate": "متوسطة",
+      "#High": "مرتفعة",
       "#In a typical week, on how many days do you walk, or go in your wheelchair, for at least 10 minutes at a time?": "في أسبوع عادي، كم يومًا تمشي، أو تتنقل بكرسيك المتحرك، لمدة 10 دقائق متواصلة على الأقل؟",
       "#Count every kind of walk: to get somewhere, for leisure or for exercise.": "احسب كل أنواع المشي: للذهاب إلى مكان ما، أو للترفيه، أو لممارسة الرياضة.",
       "#How would you describe your physical fitness for walking at the moment (strength, stamina, balance)?": "كيف تصف لياقتك البدنية الحالية للمشي (القوة، التحمل، التوازن)؟",
+      "#Very low": "منخفضة جدًا",
+      "#Very high": "مرتفعة جدًا",
       "#Why do you rarely walk? (Select all that apply)": "لماذا نادرًا ما تمشي؟ (يمكن اختيار كل ما ينطبق)",
       "#The places I go are too far or walking takes too long": "الأماكن التي أذهب إليها بعيدة جدًا أو المشي يستغرق وقتًا طويلًا",
       "#Walking is tiring or physically difficult for me": "المشي متعب أو صعب جسديًا بالنسبة لي",
       "#The streets are uncomfortable for walking (sidewalks, shade, benches)": "الشوارع غير مريحة للمشي (الأرصفة والظل والمقاعد)",
       "#Another reason": "سبب آخر",
-      "#Distance is not a limit for me (e.g. power wheelchair)": "المسافة ليست قيدًا بالنسبة لي (مثل الكرسي المتحرك الكهربائي)",
       "#I feel unsafe because of traffic": "لا أشعر بالأمان بسبب حركة المرور",
       "#I am afraid of crime, such as theft": "أخاف من الجرائم، مثل السرقة",
       "#I am afraid of harassment": "أخاف من التحرش",
-      "#When you walk or use a wheelchair along roads with fast or heavy traffic, do you feel unsafe?": "عند المشي أو التنقل بكرسي متحرك بمحاذاة طرق ذات حركة مرور سريعة أو كثيفة، هل ينتابك شعور بعدم الأمان؟",
+      "#When you walk or use a wheelchair along roads with fast or heavy traffic, how often do you feel unsafe?": "عند المشي أو التنقل بكرسي متحرك بمحاذاة طرق ذات حركة مرور سريعة أو كثيفة، كم مرة ينتابك شعور بعدم الأمان؟",
+      "#Never": "أبدًا",
+      "#Rarely": "نادرًا",
+      "#Sometimes": "أحيانًا",
+      "#Often": "غالبًا",
+      "#Always": "دائمًا",
       "#Doesn't apply to me": "لا ينطبق عليّ",
-      "#When you cross roads with fast or heavy traffic on foot, do you feel unsafe?": "عند عبور طرق ذات حركة مرور سريعة أو كثيفة مشيًا، هل ينتابك شعور بعدم الأمان؟",
-      "#Do you make longer detours or avoid some streets because you cannot cross them safely on foot?": "هل تسلك طرقًا أطول أو تتجنّب بعض الشوارع لأنك لا تستطيع عبورها مشيًا بأمان؟",
-      "#When you cross the street on foot, do you feel rushed or unsure?": "عندما تعبر الشارع مشيًا، هل تشعر بالاستعجال أو بعدم الثقة؟",
-      "#When you walk or use a wheelchair, do you feel unsafe when cyclists or e-scooter riders pass close to you?": "عند المشي أو التنقل بكرسي متحرك، هل ينتابك شعور بعدم الأمان حين يمرّ بقربك من يركبون الدراجات أو يستخدمون السكوتر الكهربائي؟",
-      "#When you walk or use a wheelchair, do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "عند المشي أو التنقل بكرسي متحرك، هل تُشعرك الأرصفة السيئة (مثل الحفر أو الأسطح غير المستوية أو الحواف المتآكلة) بعدم الأمان؟",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to walk closer to traffic?": "هل تضطرك العوائق على الرصيف (مثل أعمال الطرق أو حاويات القمامة أو السكوترات المركونة) إلى المشي أقرب إلى حركة المرور؟",
-      "#Do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "هل تضطرك العوائق على الرصيف (مثل أعمال الطرق أو حاويات القمامة أو السكوترات المركونة) إلى تغيير طريقك أو أخذ طريق التفافي؟",
+      "#When you cross roads with fast or heavy traffic on foot or in your wheelchair, how often do you feel unsafe?": "عند عبور طرق ذات حركة مرور سريعة أو كثيفة مشيًا أو بكرسي متحرك، كم مرة ينتابك شعور بعدم الأمان؟",
+      "#How often do you make longer detours or avoid some streets because you cannot cross them safely on foot or in your wheelchair?": "كم مرة تسلك طرقًا أطول أو تتجنّب بعض الشوارع لأنك لا تستطيع عبورها بأمان مشيًا أو بكرسي متحرك؟",
+      "#When you cross the street on foot or in your wheelchair, how often do you feel rushed or unsure?": "عندما تعبر الشارع مشيًا أو بكرسي متحرك، كم مرة تشعر بالاستعجال أو بعدم الثقة؟",
+      "#When you walk or use a wheelchair, how often do you feel unsafe because cyclists or e-scooter riders pass close to you?": "عند المشي أو التنقل بكرسي متحرك، كم مرة ينتابك شعور بعدم الأمان لأن من يركبون الدراجات أو يستخدمون السكوتر الكهربائي يمرّون بقربك؟",
+      "#When you walk or use a wheelchair, how often do poor sidewalk conditions (e.g., holes, uneven surfaces, or crumbling edges) make you feel unsafe?": "عند المشي أو التنقل بكرسي متحرك، كم مرة تُشعرك الأرصفة السيئة (مثل الحفر أو الأسطح غير المستوية أو الحواف المتآكلة) بعدم الأمان؟",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to move closer to traffic?": "كم مرة تضطرك العوائق على الرصيف (مثل أعمال الطرق أو حاويات القمامة أو السكوترات المركونة) إلى الاقتراب أكثر من حركة المرور؟",
+      "#How often do obstacles on the sidewalk (e.g., roadworks, bins, or parked scooters) force you to change your path or make a detour?": "كم مرة تضطرك العوائق على الرصيف (مثل أعمال الطرق أو حاويات القمامة أو السكوترات المركونة) إلى تغيير طريقك أو أخذ طريق التفافي؟",
       "#Walking – Road safety": "المشي – السلامة على الطريق",
       "#When you walk or use a wheelchair, who on the road makes you feel unsafe? (Select all that apply)": "عند المشي أو التنقل بكرسي متحرك، من على الطريق يجعلك تشعر بعدم الأمان؟ (يمكن اختيار كل ما ينطبق)",
       "#Car drivers": "سائقو السيارات",
@@ -2135,7 +2239,7 @@
       "#Pedestrian traffic lights without an audible signal": "إشارات مرور للمشاة دون إشارة صوتية",
       "#During the day, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair? (Harassment includes unwanted comments, following, touching, or intimidating behaviour directed at you.)": "خلال النهار، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند المشي أو التنقل بكرسي متحرك؟ (يشمل التحرش التعليقات غير المرغوب فيها أو الملاحقة أو اللمس أو السلوك الترهيبي الموجّه إليك.)",
       "#In the evening or after dark, do you ever feel unsafe from crime or harassment when you walk or use a wheelchair?": "في المساء أو بعد حلول الظلام، هل يحدث أن ينتابك شعور بعدم الأمان من الجرائم أو التحرش عند المشي أو التنقل بكرسي متحرك؟",
-      "#After dark, does poor street lighting make you change your route or the time you go out on foot?": "بعد حلول الظلام، هل تدفعك الإنارة الضعيفة في الشوارع إلى تغيير طريقك أو موعد خروجك مشيًا؟",
+      "#After dark, how often does poor street lighting make you change your route or the time you go out on foot or in your wheelchair?": "بعد حلول الظلام، كم مرة تدفعك الإنارة الضعيفة في الشوارع إلى تغيير طريقك أو موعد خروجك مشيًا أو بكرسي متحرك؟",
       "#Walking – Personal security": "المشي – الأمان الشخصي",
       "#When you walk or use a wheelchair, what makes you feel less secure from crime or harassment? (Select all that apply)": "عند المشي أو التنقل بكرسي متحرك، ما الذي يقلل شعورك بالأمان من الجريمة أو التحرش؟ (يمكن اختيار كل ما ينطبق)",
       "#Places with few people around (isolated or deserted areas)": "أماكن يقل فيها المارة (مناطق معزولة أو مهجورة)",
@@ -2156,7 +2260,8 @@
       "#Nothing": "لا شيء",
       "#Few cues to find my way without sight (e.g. no tactile paths or audio announcements)": "قلة العلامات التي تساعدني على معرفة طريقي من دون بصر (مثل غياب الممرات اللمسية أو الإعلانات الصوتية)",
       "#Not being able to hear people or vehicles approaching": "عدم سماع الأشخاص أو المركبات التي تقترب",
-      "#When you walk or use a wheelchair, have you experienced or do you fear harassment because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "عند التنقل سيرًا على الأقدام أو بالكرسي المتحرك، هل سبق أن تعرضت لمضايقات أو تخشى التعرض لها بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو العمر أو الإعاقة)؟",
+      "#When you walk or use a wheelchair, in the last 12 months, have you been harassed because of who you are or how you look (e.g. gender, appearance, origin, age, disability)?": "عند المشي أو التنقل بكرسي متحرك، هل تعرضت للتحرش خلال الأشهر الاثني عشر الماضية بسبب هويتك أو مظهرك (مثل النوع الاجتماعي أو المظهر أو الأصل أو السن أو الإعاقة)؟",
+      "#When you walk or use a wheelchair, how often do you worry about being harassed because of who you are or how you look?": "عند المشي أو التنقل بكرسي متحرك، كم مرة يقلقك التعرض للتحرش بسبب هويتك أو مظهرك؟",
       "#Walking – Your trips and safety": "المشي – تنقلاتك وسلامتك",
       "#SmartUrbanity - Walking – Your trips and safety": "SmartUrbanity - المشي – تنقلاتك وسلامتك",
       "#Thank you!": "شكرًا لك!",

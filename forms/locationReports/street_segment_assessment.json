@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Street Segment Assessment",
     "questionnaire_id": "street_segment_assessment",
-    "questionnaire_version": "5.2.0",
+    "questionnaire_version": "6.0.0",
     "project": "SmartUrbanity",
     "image": "https://raw.githubusercontent.com/smarturbanity/smarturbanity-configuration/main/forms/locationReports/assets/street_segment_assessment.svg",
     "image_alt": "#Street section with a magnifying glass",
@@ -103,7 +103,7 @@
             "checks_inline": false,
             "options": [
               {
-                "text": "This is my first time",
+                "text": "This is the first time",
                 "value": "1_first_time"
               },
               {
@@ -119,19 +119,53 @@
                 "value": "4_weekly"
               },
               {
-                "text": "Almost every day",
+                "text": "Every day or almost",
                 "value": "5_daily"
-              },
-              {
-                "text": "I avoid it or have stopped using it",
-                "value": "avoid_or_stopped"
               }
             ],
             "required": true,
             "question_id": "segment_use_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "answer_scale": "score"
+          },
+          {
+            "text": "Do you avoid this street segment?",
+            "answer_key": "segment_avoidance",
+            "question_type": "single_option",
+            "checks_inline": false,
+            "options": [
+              {
+                "text": "No, never",
+                "value": "never"
+              },
+              {
+                "text": "No, I would avoid it, but it is the only way",
+                "value": "only_way"
+              },
+              {
+                "text": "Yes, at certain times or in certain situations",
+                "value": "some_times"
+              },
+              {
+                "text": "Yes, whenever I can",
+                "value": "always"
+              }
+            ],
+            "required": true,
+            "question_id": "segment_avoidance",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true,
+            "show_if": {
+              "segment_use_frequency": [
+                "2_less_than_monthly",
+                "3_monthly",
+                "4_weekly",
+                "5_daily"
+              ]
+            }
           }
         ]
       },
@@ -235,23 +269,32 @@
         "title": "Getting through",
         "questions": [
           {
-            "text": "Is it difficult for you to get through here on foot or using a wheelchair?",
+            "text": "How difficult is it for you to get through here on foot or using a wheelchair?",
             "answer_key": "pedestrian_use_difficult",
             "question_type": "single_option",
+            "answer_scale": "score",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              },
-              {
                 "text": "I cannot get through",
-                "value": "cannot_get_through"
+                "value": "5_cannot_get_through"
+              },
+              {
+                "text": "Very difficult",
+                "value": "4_very_difficult"
+              },
+              {
+                "text": "Quite difficult",
+                "value": "3_quite_difficult"
+              },
+              {
+                "text": "Slightly difficult",
+                "value": "2_slightly_difficult"
+              },
+              {
+                "text": "Not difficult",
+                "value": "1_not_difficult"
               }
             ],
             "show_if": {
@@ -261,28 +304,37 @@
             },
             "required": true,
             "question_id": "pedestrian_use_difficult",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
           {
-            "text": "Is it difficult for you to get through here by bicycle or e-scooter?",
+            "text": "How difficult is it for you to get through here by bicycle or e-scooter?",
             "answer_key": "cyclist_use_difficult",
             "question_type": "single_option",
+            "answer_scale": "score",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
-              },
-              {
-                "text": "No",
-                "value": "no"
-              },
-              {
                 "text": "I cannot get through",
-                "value": "cannot_get_through"
+                "value": "5_cannot_get_through"
+              },
+              {
+                "text": "Very difficult",
+                "value": "4_very_difficult"
+              },
+              {
+                "text": "Quite difficult",
+                "value": "3_quite_difficult"
+              },
+              {
+                "text": "Slightly difficult",
+                "value": "2_slightly_difficult"
+              },
+              {
+                "text": "Not difficult",
+                "value": "1_not_difficult"
               }
             ],
             "show_if": {
@@ -292,7 +344,7 @@
             },
             "required": true,
             "question_id": "cyclist_use_difficult",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           }
@@ -302,23 +354,32 @@
         "title": "Road safety",
         "questions": [
           {
-            "text": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
+            "text": "How safe from traffic do you feel here on foot or using a wheelchair?",
             "answer_key": "pedestrian_traffic_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {
@@ -328,28 +389,38 @@
             },
             "required": true,
             "question_id": "pedestrian_traffic_unsafe",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
-            "text": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
+            "text": "How safe from traffic do you feel here by bicycle or e-scooter?",
             "answer_key": "cyclist_traffic_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {
@@ -359,9 +430,10 @@
             },
             "required": true,
             "question_id": "cyclist_traffic_unsafe",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -369,60 +441,80 @@
         "title": "Personal security",
         "questions": [
           {
-            "text": "During the day, do you feel unsafe here from crime or harassment?",
+            "text": "During the day, how safe from crime or harassment do you feel here?",
             "answer_key": "personal_day_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {},
             "add_i_dont_know": true,
             "required": true,
             "question_id": "personal_day_unsafe",
-            "question_version": "1.0.1",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
-            "text": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+            "text": "In the evening or after dark, how safe from crime or harassment do you feel here?",
             "answer_key": "personal_evening_unsafe",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "checks_inline": false,
             "options": [
               {
-                "text": "Yes",
-                "value": "yes"
+                "text": "Not at all safe",
+                "value": "5_not_safe"
               },
               {
-                "text": "No",
-                "value": "no"
+                "text": "Not very safe",
+                "value": "4_slightly_safe"
               },
               {
-                "text": "Doesn't apply to me",
-                "value": "not_applicable"
+                "text": "Neither safe nor unsafe",
+                "value": "3_neutral"
+              },
+              {
+                "text": "Quite safe",
+                "value": "2_quite_safe"
+              },
+              {
+                "text": "Completely safe",
+                "value": "1_completely_safe"
               }
             ],
             "show_if": {},
             "add_i_dont_know": true,
             "required": true,
             "question_id": "personal_evening_unsafe",
-            "question_version": "1.0.1",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
             "help": "Harassment means unwanted comments, gestures or contact. This question is about your own feeling, not about traffic.",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -480,31 +572,32 @@
             "checks_inline": false,
             "options": [
               {
-                "text": "Only one person can just about pass",
+                "text": "Room for one person only, with difficulty",
                 "value": "1_barely_one_person"
               },
               {
-                "text": "One person can pass, but not a stroller or wheelchair",
+                "text": "Room for one person, but not for a wheelchair or stroller",
                 "value": "2_no_stroller_wheelchair"
               },
               {
-                "text": "A stroller or wheelchair can pass, but people cannot pass each other",
+                "text": "Room for a wheelchair or stroller, but two people cannot pass each other",
                 "value": "3_stroller_wheelchair_no_passing"
               },
               {
-                "text": "Two people can pass each other",
+                "text": "Two people can pass each other, but not two wheelchairs or strollers",
                 "value": "4_two_people_pass"
               },
               {
-                "text": "Very wide, with plenty of room to move",
+                "text": "Two wheelchairs or strollers can pass each other",
                 "value": "5_very_wide"
               }
             ],
             "required": true,
             "question_id": "walking_width_passability",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "answer_scale": "score"
           },
           {
             "text": "If there is a raised sidewalk, how is it protected from traffic?",
@@ -811,8 +904,8 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "How is the cycling space separated from walking or motor traffic?",
-            "answer_key": "bike_separation",
+            "text": "How is the cycling space separated from motor traffic?",
+            "answer_key": "bike_separation_traffic",
             "question_type": "multiple_options",
             "show_if": {
               "continue_audit": "yes_audit",
@@ -839,19 +932,44 @@
               {
                 "text": "Parked cars",
                 "value": "parked_cars"
-              },
+              }
+            ],
+            "required": true,
+            "question_id": "bike_separation_traffic",
+            "question_version": "1.0.0",
+            "privacy_classification": "heightened_personal",
+            "add_prefer_not_to_say": true
+          },
+          {
+            "text": "How is the cycling space separated from people walking?",
+            "answer_key": "bike_separation_pedestrians",
+            "question_type": "multiple_options",
+            "show_if": {
+              "continue_audit": "yes_audit",
+              "bike_facility": [
+                "interrupted_bike_facility",
+                "dedicated_bike_facility"
+              ],
+              "assessment_perspective": [
+                "cyclist"
+              ]
+            },
+            "add_i_dont_know": true,
+            "add_other": true,
+            "checks_inline": false,
+            "options": [
               {
-                "text": "Separate from people walking, at the same level",
+                "text": "Separated, at the same level",
                 "value": "separate_same_level"
               },
               {
-                "text": "Different level or kerb from people walking",
+                "text": "At a different level or behind a kerb",
                 "value": "different_level_from_pedestrians"
               }
             ],
             "required": true,
-            "question_id": "bike_separation",
-            "question_version": "1.1.0",
+            "question_id": "bike_separation_pedestrians",
+            "question_version": "1.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -954,23 +1072,28 @@
             "checks_inline": false,
             "options": [
               {
-                "text": "None",
+                "text": "No such places",
                 "value": "1_none"
               },
               {
-                "text": "Few (1–3)",
-                "value": "2_few"
+                "text": "1–2 places",
+                "value": "2_one_two"
               },
               {
-                "text": "Many (4 or more)",
-                "value": "3_many"
+                "text": "3–5 places",
+                "value": "3_three_five"
+              },
+              {
+                "text": "6 places or more",
+                "value": "4_six_or_more"
               }
             ],
             "required": true,
             "question_id": "bike_vehicle_conflict_points",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "answer_scale": "score"
           },
           {
             "text": "Who else commonly uses the cycling space?",
@@ -1022,6 +1145,7 @@
             "text": "How often do other vehicles or people occupy the cycling space?",
             "answer_key": "bike_intrusion_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_intrusion_users": [
@@ -1061,9 +1185,10 @@
             ],
             "required": true,
             "question_id": "bike_intrusion_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1076,6 +1201,7 @@
             "text": "How fast does motor traffic feel on this street?",
             "answer_key": "traffic_speed_feeling",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit"
             },
@@ -1101,17 +1227,14 @@
               {
                 "text": "Very fast",
                 "value": "5_very_fast"
-              },
-              {
-                "text": "No vehicles pass here",
-                "value": "no_vehicles"
               }
             ],
             "required": true,
             "question_id": "traffic_speed_feeling",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What makes things difficult with traffic here?",
@@ -1181,6 +1304,7 @@
             "text": "How steep is the climb on this stretch?",
             "answer_key": "segment_slope",
             "question_type": "single_option",
+            "answer_scale": "score",
             "checks_inline": false,
             "options": [
               {
@@ -1206,7 +1330,7 @@
             "add_i_dont_know": true,
             "required": true,
             "question_id": "segment_slope",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           }
@@ -1288,6 +1412,7 @@
             "text": "How often do surface problems slow you down or make you change path while walking?",
             "answer_key": "pedestrian_surface_problem_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "walking_surface_problems": [
@@ -1333,9 +1458,10 @@
             ],
             "required": true,
             "question_id": "pedestrian_surface_problem_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What obstacles reduce the walking space?",
@@ -1411,6 +1537,7 @@
             "text": "How often do obstacles block or reduce your space while walking?",
             "answer_key": "pedestrian_obstacle_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "walking_obstacles": [
@@ -1457,14 +1584,16 @@
             ],
             "required": true,
             "question_id": "pedestrian_obstacle_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "How often does this segment feel too crowded?",
             "answer_key": "crowding_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1497,7 +1626,7 @@
             ],
             "required": true,
             "question_id": "crowding_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1505,6 +1634,7 @@
             "text": "How often do motor vehicles pass too close while you are walking?",
             "answer_key": "pedestrian_close_passing_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1537,9 +1667,10 @@
             ],
             "required": true,
             "question_id": "pedestrian_close_passing_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1614,6 +1745,7 @@
             "text": "How often do surface problems slow you down or make you change path on a bicycle or e-scooter?",
             "answer_key": "cyclist_surface_problem_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_surface_problems": [
@@ -1658,9 +1790,10 @@
             ],
             "required": true,
             "question_id": "cyclist_surface_problem_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "What obstacles make it difficult to ride a bicycle or e-scooter here?",
@@ -1736,6 +1869,7 @@
             "text": "How often do obstacles block or reduce your space on a bicycle or e-scooter?",
             "answer_key": "cyclist_obstacle_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_obstacles": [
@@ -1782,14 +1916,16 @@
             ],
             "required": true,
             "question_id": "cyclist_obstacle_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           },
           {
             "text": "How often do motor vehicles pass too close while you ride a bicycle or e-scooter?",
             "answer_key": "cyclist_close_passing_frequency",
             "question_type": "single_option",
+            "answer_scale": "score",
             "show_if": {
               "continue_audit": "yes_audit",
               "assessment_perspective": [
@@ -1822,9 +1958,10 @@
             ],
             "required": true,
             "question_id": "cyclist_close_passing_frequency",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "add_not_applicable": true
           }
         ]
       },
@@ -1838,6 +1975,7 @@
             "help": "A continuous walking space is a sidewalk or path without gaps along the whole stretch.",
             "answer_key": "desired_walking_path",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "walk_facility": [
@@ -1874,7 +2012,7 @@
             ],
             "required": true,
             "question_id": "desired_walking_path",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1883,6 +2021,7 @@
             "help": "A continuous cycle lane or path runs along the whole stretch without gaps.",
             "answer_key": "desired_bike_facility",
             "question_type": "single_option",
+            "answer_scale": "likert",
             "show_if": {
               "continue_audit": "yes_audit",
               "bike_facility": [
@@ -1918,7 +2057,7 @@
             ],
             "required": true,
             "question_id": "desired_bike_facility",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -1926,6 +2065,7 @@
             "text": "How urgent is it to improve this street segment?",
             "answer_key": "segment_improvement_importance",
             "question_type": "single_option",
+            "answer_scale": "score",
             "add_i_dont_know": true,
             "checks_inline": false,
             "options": [
@@ -1955,7 +2095,7 @@
             },
             "required": true,
             "question_id": "segment_improvement_importance",
-            "question_version": "2.1.0",
+            "question_version": "3.0.0",
             "privacy_classification": "heightened_personal",
             "add_prefer_not_to_say": true
           },
@@ -2075,12 +2215,16 @@
       "#Pushing a stroller": "Pushing a stroller",
       "#None of these": "None of these",
       "#How often do you go along this street segment?": "How often do you go along this street segment?",
-      "#This is my first time": "This is my first time",
+      "#This is the first time": "This is the first time",
+      "#Every day or almost": "Every day or almost",
+      "#Do you avoid this street segment?": "Do you avoid this street segment?",
+      "#No, never": "No, never",
+      "#No, I would avoid it, but it is the only way": "No, I would avoid it, but it is the only way",
+      "#Yes, at certain times or in certain situations": "Yes, at certain times or in certain situations",
+      "#Yes, whenever I can": "Yes, whenever I can",
       "#Less than once a month": "Less than once a month",
       "#A few times a month": "A few times a month",
       "#A few times a week": "A few times a week",
-      "#Almost every day": "Almost every day",
-      "#I avoid it or have stopped using it": "I avoid it or have stopped using it",
       "#Quick assessment": "Quick assessment",
       "#Answer these first. Then you can finish or add optional details.": "Answer these first. Then you can finish or add optional details.",
       "#Is there a place for people to walk along this street?": "Is there a place for people to walk along this street?",
@@ -2128,11 +2272,11 @@
       "#Walking space": "Walking space",
       "#Look at the place. Answer only what you can see.": "Look at the place. Answer only what you can see.",
       "#How wide is the space for walking?": "How wide is the space for walking?",
-      "#Only one person can just about pass": "Only one person can just about pass",
-      "#One person can pass, but not a stroller or wheelchair": "One person can pass, but not a stroller or wheelchair",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "A stroller or wheelchair can pass, but people cannot pass each other",
-      "#Two people can pass each other": "Two people can pass each other",
-      "#Very wide, with plenty of room to move": "Very wide, with plenty of room to move",
+      "#Room for one person only, with difficulty": "Room for one person only, with difficulty",
+      "#Room for one person, but not for a wheelchair or stroller": "Room for one person, but not for a wheelchair or stroller",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "Room for a wheelchair or stroller, but two people cannot pass each other",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "Two people can pass each other, but not two wheelchairs or strollers",
+      "#Two wheelchairs or strollers can pass each other": "Two wheelchairs or strollers can pass each other",
       "#If there is a raised sidewalk, how is it protected from traffic?": "If there is a raised sidewalk, how is it protected from traffic?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "Bollards are short posts that stop vehicles from entering the walking area.",
       "#Raised only, no extra protection": "Raised only, no extra protection",
@@ -2171,11 +2315,12 @@
       "#No alternative without steps nearby": "No alternative without steps nearby",
       "#No clear problem": "No clear problem",
       "#Cycling space": "Cycling space",
-      "#How is the cycling space separated from walking or motor traffic?": "How is the cycling space separated from walking or motor traffic?",
+      "#How is the cycling space separated from motor traffic?": "How is the cycling space separated from motor traffic?",
+      "#How is the cycling space separated from people walking?": "How is the cycling space separated from people walking?",
+      "#Separated, at the same level": "Separated, at the same level",
+      "#At a different level or behind a kerb": "At a different level or behind a kerb",
       "#Bollards, barriers, kerbs, or planters": "Bollards, barriers, kerbs, or planters",
       "#Parked cars": "Parked cars",
-      "#Separate from people walking, at the same level": "Separate from people walking, at the same level",
-      "#Different level or kerb from people walking": "Different level or kerb from people walking",
       "#Is the cycling infrastructure one-way or two-way?": "Is the cycling infrastructure one-way or two-way?",
       "#One-way cycling facility": "One-way cycling facility",
       "#Two-way cycling facility": "Two-way cycling facility",
@@ -2187,9 +2332,11 @@
       "#Gravel or packed earth": "Gravel or packed earth",
       "#Mixed surface types": "Mixed surface types",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "How many places are there where motor vehicles cross or enter the cycling space?",
+      "#No such places": "No such places",
+      "#1–2 places": "1–2 places",
+      "#3–5 places": "3–5 places",
+      "#6 places or more": "6 places or more",
       "#None": "None",
-      "#Few (1–3)": "Few (1–3)",
-      "#Many (4 or more)": "Many (4 or more)",
       "#Who else commonly uses the cycling space?": "Who else commonly uses the cycling space?",
       "#Cars": "Cars",
       "#Motorcycles": "Motorcycles",
@@ -2209,7 +2356,6 @@
       "#Moderate": "Moderate",
       "#Fast": "Fast",
       "#Very fast": "Very fast",
-      "#No vehicles pass here": "No vehicles pass here",
       "#What makes things difficult with traffic here?": "What makes things difficult with traffic here?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.",
       "#Poor visibility": "Poor visibility",
@@ -2310,17 +2456,23 @@
       "#Road safety": "Road safety",
       "#Personal security": "Personal security",
       "#More details": "More details",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Is it difficult for you to get through here on foot or using a wheelchair?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Is it difficult for you to get through here by bicycle or e-scooter?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "How difficult is it for you to get through here on foot or using a wheelchair?",
+      "#Very difficult": "Very difficult",
+      "#Quite difficult": "Quite difficult",
+      "#Slightly difficult": "Slightly difficult",
+      "#Not difficult": "Not difficult",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "How difficult is it for you to get through here by bicycle or e-scooter?",
       "#I cannot get through": "I cannot get through",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Does traffic make you feel unsafe here on foot or using a wheelchair?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Does traffic make you feel unsafe here by bicycle or e-scooter?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "During the day, do you feel unsafe here from crime or harassment?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "In the evening or after dark, do you feel unsafe here from crime or harassment?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "How safe from traffic do you feel here on foot or using a wheelchair?",
+      "#Not at all safe": "Not at all safe",
+      "#Quite safe": "Quite safe",
+      "#Completely safe": "Completely safe",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "How safe from traffic do you feel here by bicycle or e-scooter?",
+      "#During the day, how safe from crime or harassment do you feel here?": "During the day, how safe from crime or harassment do you feel here?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "In the evening or after dark, how safe from crime or harassment do you feel here?",
       "#Would you like to add optional details?": "Would you like to add optional details?",
       "#Is there enough safe space to wait before crossing?": "Is there enough safe space to wait before crossing?",
       "#Is there a safe place to stop and rest here?": "Is there a safe place to stop and rest here?",
-      "#Doesn't apply to me": "Doesn't apply to me",
       "#Going to or from a parked motorcycle or motor scooter": "Going to or from a parked motorcycle or motor scooter",
       "#Are you using any of these on this trip?": "Are you using any of these on this trip?"
     },
@@ -2341,12 +2493,16 @@
       "#Pushing a stroller": "Spingo un passeggino",
       "#None of these": "Nessuna di queste",
       "#How often do you go along this street segment?": "Quanto spesso percorri questo tratto di strada?",
-      "#This is my first time": "È la prima volta",
+      "#This is the first time": "È la prima volta",
+      "#Every day or almost": "Ogni giorno o quasi",
+      "#Do you avoid this street segment?": "Eviti questo tratto di strada?",
+      "#No, never": "No, mai",
+      "#No, I would avoid it, but it is the only way": "No, lo eviterei ma è l'unica strada",
+      "#Yes, at certain times or in certain situations": "Sì, in certi orari o in certe situazioni",
+      "#Yes, whenever I can": "Sì, ogni volta che posso",
       "#Less than once a month": "Meno di una volta al mese",
       "#A few times a month": "Alcune volte al mese",
       "#A few times a week": "Alcune volte a settimana",
-      "#Almost every day": "Quasi ogni giorno",
-      "#I avoid it or have stopped using it": "Lo evito o ho smesso di percorrerlo",
       "#Quick assessment": "Valutazione rapida",
       "#Answer these first. Then you can finish or add optional details.": "Rispondi prima a queste. Poi puoi terminare o aggiungere dettagli facoltativi.",
       "#Is there a place for people to walk along this street?": "C'è uno spazio in cui camminare lungo questa strada?",
@@ -2394,11 +2550,11 @@
       "#Walking space": "Spazio per camminare",
       "#Look at the place. Answer only what you can see.": "Osserva il luogo e rispondi solo in base a ciò che puoi vedere.",
       "#How wide is the space for walking?": "Quanto è largo lo spazio per camminare?",
-      "#Only one person can just about pass": "Passa a fatica una sola persona",
-      "#One person can pass, but not a stroller or wheelchair": "Passa una persona, ma non un passeggino o una sedia a rotelle",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "Passano un passeggino o una sedia a rotelle, ma non ci si incrocia",
-      "#Two people can pass each other": "Due persone si incrociano senza problemi",
-      "#Very wide, with plenty of room to move": "Molto ampio, con molto spazio per muoversi",
+      "#Room for one person only, with difficulty": "C'è spazio a fatica per una sola persona",
+      "#Room for one person, but not for a wheelchair or stroller": "C'è spazio per una persona, ma non per una sedia a rotelle o un passeggino",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "C'è spazio per una sedia a rotelle o un passeggino, ma due persone non riescono a incrociarsi",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "Due persone riescono a incrociarsi, ma non due sedie a rotelle o due passeggini",
+      "#Two wheelchairs or strollers can pass each other": "Due sedie a rotelle o due passeggini riescono a incrociarsi",
       "#If there is a raised sidewalk, how is it protected from traffic?": "Se c'è un marciapiede rialzato, come è protetto dal traffico?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "I dissuasori sono paletti bassi che impediscono ai veicoli di entrare nello spazio pedonale.",
       "#Raised only, no extra protection": "Solo rialzato, senza altre protezioni",
@@ -2437,11 +2593,12 @@
       "#No alternative without steps nearby": "Non c'è un'alternativa senza scale nelle vicinanze",
       "#No clear problem": "Nessun problema evidente",
       "#Cycling space": "Spazio per le bici",
-      "#How is the cycling space separated from walking or motor traffic?": "Come è separato lo spazio ciclabile dalle persone a piedi o dal traffico motorizzato?",
+      "#How is the cycling space separated from motor traffic?": "Come è separato lo spazio ciclabile dal traffico motorizzato?",
+      "#How is the cycling space separated from people walking?": "Come è separato lo spazio ciclabile dalle persone a piedi?",
+      "#Separated, at the same level": "Separato, allo stesso livello",
+      "#At a different level or behind a kerb": "A un livello diverso o con un cordolo",
       "#Bollards, barriers, kerbs, or planters": "Dissuasori, barriere, cordoli o fioriere",
       "#Parked cars": "Automobili parcheggiate",
-      "#Separate from people walking, at the same level": "Separato dalle persone a piedi, allo stesso livello",
-      "#Different level or kerb from people walking": "Livello diverso o cordolo rispetto allo spazio pedonale",
       "#Is the cycling infrastructure one-way or two-way?": "Lo spazio ciclabile è a senso unico o a doppio senso?",
       "#One-way cycling facility": "Spazio ciclabile a senso unico",
       "#Two-way cycling facility": "Spazio ciclabile a doppio senso",
@@ -2453,9 +2610,11 @@
       "#Gravel or packed earth": "Ghiaia o terra battuta",
       "#Mixed surface types": "Superfici di tipo diverso",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "Quanti punti ci sono in cui i veicoli a motore attraversano o entrano nello spazio ciclabile?",
+      "#No such places": "Nessun punto",
+      "#1–2 places": "1–2 punti",
+      "#3–5 places": "3–5 punti",
+      "#6 places or more": "6 punti o più",
       "#None": "Nessuno",
-      "#Few (1–3)": "Pochi (1–3)",
-      "#Many (4 or more)": "Molti (4 o più)",
       "#Who else commonly uses the cycling space?": "Chi altro usa abitualmente lo spazio ciclabile?",
       "#Cars": "Automobili",
       "#Motorcycles": "Moto",
@@ -2475,7 +2634,6 @@
       "#Moderate": "Moderato",
       "#Fast": "Veloce",
       "#Very fast": "Molto veloce",
-      "#No vehicles pass here": "Qui non passano veicoli",
       "#What makes things difficult with traffic here?": "Cosa ti mette in difficoltà con il traffico qui?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Per accessi laterali si intendono passi carrabili, ingressi di garage o vie laterali da cui i veicoli entrano o escono dalla strada.",
       "#Poor visibility": "Scarsa visibilità",
@@ -2576,17 +2734,23 @@
       "#Road safety": "Sicurezza nel traffico",
       "#Personal security": "Sicurezza personale",
       "#More details": "Altri dettagli",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "È difficile per te passare da qui a piedi o in sedia a rotelle?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "È difficile per te passare da qui in bici o in monopattino elettrico?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Quanto è difficile per te passare da qui a piedi o in sedia a rotelle?",
+      "#Very difficult": "Molto difficile",
+      "#Quite difficult": "Abbastanza difficile",
+      "#Slightly difficult": "Un po' difficile",
+      "#Not difficult": "Non difficile",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Quanto è difficile per te passare da qui in bici o in monopattino elettrico?",
       "#I cannot get through": "Non riesco a passare",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Il traffico ti fa sentire in pericolo qui a piedi o in sedia a rotelle?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Il traffico ti fa sentire in pericolo qui in bici o in monopattino elettrico?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Di giorno, qui ti senti in pericolo per reati o molestie?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Di sera o dopo il tramonto, qui ti senti in pericolo per reati o molestie?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Quanto ti senti al sicuro dal traffico qui a piedi o in sedia a rotelle?",
+      "#Not at all safe": "Per niente al sicuro",
+      "#Quite safe": "Abbastanza al sicuro",
+      "#Completely safe": "Del tutto al sicuro",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Quanto ti senti al sicuro dal traffico qui in bici o in monopattino elettrico?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Di giorno, quanto ti senti al sicuro qui da reati o molestie?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Di sera o dopo il tramonto, quanto ti senti al sicuro qui da reati o molestie?",
       "#Would you like to add optional details?": "Vuoi aggiungere dettagli facoltativi?",
       "#Is there enough safe space to wait before crossing?": "C’è abbastanza spazio sicuro per aspettare prima di attraversare?",
       "#Is there a safe place to stop and rest here?": "Qui c’è un posto sicuro dove fermarsi a riposare?",
-      "#Doesn't apply to me": "Non mi riguarda",
       "#Going to or from a parked motorcycle or motor scooter": "Vado o torno da una moto o uno scooter parcheggiato",
       "#Are you using any of these on this trip?": "In questo spostamento usi uno di questi ausili o un passeggino?"
     },
@@ -2607,12 +2771,16 @@
       "#Pushing a stroller": "Je pousse une poussette",
       "#None of these": "Aucun de ces éléments",
       "#How often do you go along this street segment?": "À quelle fréquence parcourez-vous ce tronçon de rue ?",
-      "#This is my first time": "C’est la première fois",
+      "#This is the first time": "C’est la première fois",
+      "#Every day or almost": "Tous les jours ou presque",
+      "#Do you avoid this street segment?": "Évitez-vous ce tronçon de rue ?",
+      "#No, never": "Non, jamais",
+      "#No, I would avoid it, but it is the only way": "Non, je l’éviterais, mais c’est le seul chemin",
+      "#Yes, at certain times or in certain situations": "Oui, à certains moments ou dans certaines situations",
+      "#Yes, whenever I can": "Oui, dès que je le peux",
       "#Less than once a month": "Moins d’une fois par mois",
       "#A few times a month": "Quelques fois par mois",
       "#A few times a week": "Quelques fois par semaine",
-      "#Almost every day": "Presque tous les jours",
-      "#I avoid it or have stopped using it": "Je l'évite ou j'ai cessé de l'utiliser",
       "#Quick assessment": "Évaluation rapide",
       "#Answer these first. Then you can finish or add optional details.": "Répondez d’abord à ces questions. Ensuite, vous pouvez terminer ou ajouter des détails facultatifs.",
       "#Is there a place for people to walk along this street?": "Y a-t-il un espace où les personnes peuvent marcher le long de cette rue ?",
@@ -2660,11 +2828,11 @@
       "#Walking space": "Espace pour marcher",
       "#Look at the place. Answer only what you can see.": "Observez le lieu. Répondez uniquement à ce que vous pouvez voir.",
       "#How wide is the space for walking?": "Quelle est la largeur de l'espace pour marcher ?",
-      "#Only one person can just about pass": "Une seule personne passe tout juste",
-      "#One person can pass, but not a stroller or wheelchair": "Une personne passe, mais pas une poussette ni un fauteuil roulant",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "Une poussette ou un fauteuil roulant passe, mais on ne peut pas se croiser",
-      "#Two people can pass each other": "Deux personnes peuvent se croiser",
-      "#Very wide, with plenty of room to move": "Très large, avec beaucoup d’espace pour se déplacer",
+      "#Room for one person only, with difficulty": "De la place pour une seule personne, difficilement",
+      "#Room for one person, but not for a wheelchair or stroller": "De la place pour une personne, mais pas pour un fauteuil roulant ni une poussette",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "De la place pour un fauteuil roulant ou une poussette, mais deux personnes ne peuvent pas se croiser",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "Deux personnes peuvent se croiser, mais pas deux fauteuils roulants ou deux poussettes",
+      "#Two wheelchairs or strollers can pass each other": "Deux fauteuils roulants ou deux poussettes peuvent se croiser",
       "#If there is a raised sidewalk, how is it protected from traffic?": "S’il y a un trottoir surélevé, comment est-il protégé de la circulation ?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "Les potelets sont de petits poteaux qui empêchent les véhicules d’entrer dans l’espace piéton.",
       "#Raised only, no extra protection": "Surélevé uniquement, sans protection supplémentaire",
@@ -2703,11 +2871,12 @@
       "#No alternative without steps nearby": "Pas d'alternative sans marches à proximité",
       "#No clear problem": "Aucun problème évident",
       "#Cycling space": "Espace pour les vélos",
-      "#How is the cycling space separated from walking or motor traffic?": "Comment l’espace cyclable est-il séparé des personnes à pied ou de la circulation motorisée ?",
+      "#How is the cycling space separated from motor traffic?": "Comment l’espace cyclable est-il séparé de la circulation motorisée ?",
+      "#How is the cycling space separated from people walking?": "Comment l’espace cyclable est-il séparé des personnes à pied ?",
+      "#Separated, at the same level": "Séparé, au même niveau",
+      "#At a different level or behind a kerb": "À un niveau différent ou derrière une bordure",
       "#Bollards, barriers, kerbs, or planters": "Potelets, barrières, bordures ou jardinières",
       "#Parked cars": "Voitures stationnées",
-      "#Separate from people walking, at the same level": "Séparé des personnes à pied, au même niveau",
-      "#Different level or kerb from people walking": "Niveau différent ou bordure par rapport aux personnes à pied",
       "#Is the cycling infrastructure one-way or two-way?": "L'aménagement cyclable est-il à sens unique ou à double sens ?",
       "#One-way cycling facility": "Aménagement cyclable à sens unique",
       "#Two-way cycling facility": "Aménagement cyclable à double sens",
@@ -2719,9 +2888,11 @@
       "#Gravel or packed earth": "Gravier ou terre battue",
       "#Mixed surface types": "Revêtements mixtes",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "Combien d’endroits permettent aux véhicules motorisés de traverser ou d’entrer dans l’espace cyclable ?",
+      "#No such places": "Aucun endroit",
+      "#1–2 places": "1 à 2 endroits",
+      "#3–5 places": "3 à 5 endroits",
+      "#6 places or more": "6 endroits ou plus",
       "#None": "Aucun",
-      "#Few (1–3)": "Peu (1 à 3)",
-      "#Many (4 or more)": "Beaucoup (4 ou plus)",
       "#Who else commonly uses the cycling space?": "Qui d’autre utilise couramment l’espace cyclable ?",
       "#Cars": "Voitures",
       "#Motorcycles": "Motos et scooters",
@@ -2741,7 +2912,6 @@
       "#Moderate": "Modérée",
       "#Fast": "Rapide",
       "#Very fast": "Très rapide",
-      "#No vehicles pass here": "Aucun véhicule ne passe ici",
       "#What makes things difficult with traffic here?": "Qu'est-ce qui vous met en difficulté avec la circulation ici ?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Les accès latéraux désignent les entrées charretières, entrées de garage ou rues latérales par lesquelles les véhicules entrent dans la rue ou en sortent.",
       "#Poor visibility": "Mauvaise visibilité",
@@ -2842,17 +3012,23 @@
       "#Road safety": "Sécurité routière",
       "#Personal security": "Sécurité personnelle",
       "#More details": "Plus de détails",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Est-il difficile pour toi de passer ici à pied ou en fauteuil roulant ?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Est-il difficile pour toi de passer ici à vélo ou en trottinette électrique ?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "À quel point est-il difficile pour toi de passer ici à pied ou en fauteuil roulant ?",
+      "#Very difficult": "Très difficile",
+      "#Quite difficult": "Plutôt difficile",
+      "#Slightly difficult": "Un peu difficile",
+      "#Not difficult": "Pas difficile",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "À quel point est-il difficile pour toi de passer ici à vélo ou en trottinette électrique ?",
       "#I cannot get through": "Je ne peux pas passer",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "La circulation te fait-elle te sentir en danger ici à pied ou en fauteuil roulant ?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "La circulation te fait-elle te sentir en danger ici à vélo ou en trottinette électrique ?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Le jour, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Le soir ou après la tombée de la nuit, te sens-tu en danger ici à cause de la criminalité ou du harcèlement ?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "À quel point te sens-tu en sécurité face à la circulation ici à pied ou en fauteuil roulant ?",
+      "#Not at all safe": "Pas du tout en sécurité",
+      "#Quite safe": "Plutôt en sécurité",
+      "#Completely safe": "Complètement en sécurité",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "À quel point te sens-tu en sécurité face à la circulation ici à vélo ou en trottinette électrique ?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Le jour, à quel point te sens-tu en sécurité ici face à la criminalité ou au harcèlement ?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Le soir ou après la tombée de la nuit, à quel point te sens-tu en sécurité ici face à la criminalité ou au harcèlement ?",
       "#Would you like to add optional details?": "Veux-tu ajouter des détails facultatifs ?",
       "#Is there enough safe space to wait before crossing?": "Y a-t-il assez d’espace sûr pour attendre avant de traverser ?",
       "#Is there a safe place to stop and rest here?": "Y a-t-il ici un endroit sûr pour s’arrêter et se reposer ?",
-      "#Doesn't apply to me": "Ne me concerne pas",
       "#Going to or from a parked motorcycle or motor scooter": "Je vais à une moto ou un scooter garé, ou j’en reviens",
       "#Are you using any of these on this trip?": "Pour ce trajet, utilisez-vous une de ces aides ou une poussette ?"
     },
@@ -2873,12 +3049,16 @@
       "#Pushing a stroller": "Ich schiebe einen Kinderwagen",
       "#None of these": "Keine davon",
       "#How often do you go along this street segment?": "Wie oft sind Sie auf diesem Straßenabschnitt unterwegs?",
-      "#This is my first time": "Das ist mein erstes Mal",
+      "#This is the first time": "Das ist das erste Mal",
+      "#Every day or almost": "Jeden Tag oder fast jeden Tag",
+      "#Do you avoid this street segment?": "Meiden Sie diesen Straßenabschnitt?",
+      "#No, never": "Nein, nie",
+      "#No, I would avoid it, but it is the only way": "Nein, ich würde ihn meiden, aber es ist der einzige Weg",
+      "#Yes, at certain times or in certain situations": "Ja, zu bestimmten Zeiten oder in bestimmten Situationen",
+      "#Yes, whenever I can": "Ja, wann immer ich kann",
       "#Less than once a month": "Weniger als einmal im Monat",
       "#A few times a month": "Einige Male im Monat",
       "#A few times a week": "Einige Male pro Woche",
-      "#Almost every day": "Fast jeden Tag",
-      "#I avoid it or have stopped using it": "Ich meide diesen Ort oder nutze ihn nicht mehr",
       "#Quick assessment": "Schnelle Bewertung",
       "#Answer these first. Then you can finish or add optional details.": "Beantworten Sie zuerst diese Fragen. Danach können Sie abschließen oder optionale Details hinzufügen.",
       "#Is there a place for people to walk along this street?": "Gibt es entlang dieser Straße einen Bereich zum Gehen?",
@@ -2926,11 +3106,11 @@
       "#Walking space": "Platz zum Gehen",
       "#Look at the place. Answer only what you can see.": "Sehen Sie sich den Ort an. Beantworten Sie nur, was Sie sehen können.",
       "#How wide is the space for walking?": "Wie breit ist der Bereich zum Gehen?",
-      "#Only one person can just about pass": "Gerade einmal eine Person kommt durch",
-      "#One person can pass, but not a stroller or wheelchair": "Eine Person kommt durch, aber kein Kinderwagen oder Rollstuhl",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "Ein Kinderwagen oder Rollstuhl kommt durch, aber man kann einander nicht ausweichen",
-      "#Two people can pass each other": "Zwei Personen können aneinander vorbeigehen",
-      "#Very wide, with plenty of room to move": "Sehr breit, mit viel Bewegungsraum",
+      "#Room for one person only, with difficulty": "Platz nur für eine Person, und das knapp",
+      "#Room for one person, but not for a wheelchair or stroller": "Platz für eine Person, aber nicht für einen Rollstuhl oder Kinderwagen",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "Platz für einen Rollstuhl oder Kinderwagen, aber zwei Personen kommen nicht aneinander vorbei",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "Zwei Personen kommen aneinander vorbei, aber nicht zwei Rollstühle oder Kinderwagen",
+      "#Two wheelchairs or strollers can pass each other": "Zwei Rollstühle oder Kinderwagen kommen aneinander vorbei",
       "#If there is a raised sidewalk, how is it protected from traffic?": "Wie ist ein erhöhter Gehweg vom Verkehr geschützt?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "Poller sind niedrige Pfosten, die Fahrzeuge daran hindern, in den Gehbereich zu fahren.",
       "#Raised only, no extra protection": "Nur erhöht, ohne zusätzlichen Schutz",
@@ -2969,11 +3149,12 @@
       "#No alternative without steps nearby": "Keine stufenlose Alternative in der Nähe",
       "#No clear problem": "Kein eindeutiges Problem",
       "#Cycling space": "Platz zum Radfahren",
-      "#How is the cycling space separated from walking or motor traffic?": "Wie ist der Radbereich vom Fuß- oder Kraftfahrzeugverkehr getrennt?",
+      "#How is the cycling space separated from motor traffic?": "Wie ist der Radbereich vom Kraftfahrzeugverkehr getrennt?",
+      "#How is the cycling space separated from people walking?": "Wie ist der Radbereich vom Fußverkehr getrennt?",
+      "#Separated, at the same level": "Getrennt, auf gleicher Höhe",
+      "#At a different level or behind a kerb": "Auf anderer Höhe oder durch einen Bordstein getrennt",
       "#Bollards, barriers, kerbs, or planters": "Poller, Barrieren, Bordsteine oder Pflanzkübel",
       "#Parked cars": "Geparkte Autos",
-      "#Separate from people walking, at the same level": "Vom Fußverkehr getrennt, auf gleicher Höhe",
-      "#Different level or kerb from people walking": "Andere Höhe oder Bordstein gegenüber dem Fußverkehr",
       "#Is the cycling infrastructure one-way or two-way?": "Ist die Radinfrastruktur ein- oder zweirichtungsgeführt?",
       "#One-way cycling facility": "Einrichtungs-Radinfrastruktur",
       "#Two-way cycling facility": "Zweirichtungs-Radinfrastruktur",
@@ -2985,9 +3166,11 @@
       "#Gravel or packed earth": "Kies oder festgefahrene Erde",
       "#Mixed surface types": "Gemischte Oberflächen",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "An wie vielen Stellen kreuzen Kraftfahrzeuge den Radbereich oder fahren hinein?",
+      "#No such places": "Keine Stellen",
+      "#1–2 places": "1–2 Stellen",
+      "#3–5 places": "3–5 Stellen",
+      "#6 places or more": "6 Stellen oder mehr",
       "#None": "Keine",
-      "#Few (1–3)": "Wenige (1–3)",
-      "#Many (4 or more)": "Viele (4 oder mehr)",
       "#Who else commonly uses the cycling space?": "Wer nutzt den Radbereich sonst noch häufig?",
       "#Cars": "Autos",
       "#Motorcycles": "Motorräder",
@@ -3007,7 +3190,6 @@
       "#Moderate": "Mittel",
       "#Fast": "Schnell",
       "#Very fast": "Sehr schnell",
-      "#No vehicles pass here": "Hier fahren keine Fahrzeuge",
       "#What makes things difficult with traffic here?": "Was macht Ihnen hier den Umgang mit dem Verkehr schwer?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Seitliche Zufahrten sind Einfahrten, Garagenzufahrten oder Seitenstraßen, über die Fahrzeuge in die Straße ein- oder aus ihr ausfahren.",
       "#Poor visibility": "Schlechte Sicht",
@@ -3108,17 +3290,23 @@
       "#Road safety": "Verkehrssicherheit",
       "#Personal security": "Persönliche Sicherheit",
       "#More details": "Weitere Angaben",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Ist es für Sie schwierig, hier zu Fuß oder mit dem Rollstuhl durchzukommen?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Ist es für Sie schwierig, hier mit dem Fahrrad oder E-Scooter durchzukommen?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Wie schwierig ist es für Sie, hier zu Fuß oder mit dem Rollstuhl durchzukommen?",
+      "#Very difficult": "Sehr schwierig",
+      "#Quite difficult": "Ziemlich schwierig",
+      "#Slightly difficult": "Etwas schwierig",
+      "#Not difficult": "Nicht schwierig",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Wie schwierig ist es für Sie, hier mit dem Fahrrad oder E-Scooter durchzukommen?",
       "#I cannot get through": "Ich komme nicht durch",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Fühlen Sie sich hier zu Fuß oder mit dem Rollstuhl durch den Verkehr unsicher?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Fühlen Sie sich hier mit dem Fahrrad oder E-Scooter durch den Verkehr unsicher?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Fühlen Sie sich hier tagsüber wegen Kriminalität oder Belästigung unsicher?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Fühlen Sie sich hier abends oder nach Einbruch der Dunkelheit wegen Kriminalität oder Belästigung unsicher?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Wie sicher vor dem Verkehr fühlen Sie sich hier zu Fuß oder mit dem Rollstuhl?",
+      "#Not at all safe": "Überhaupt nicht sicher",
+      "#Quite safe": "Ziemlich sicher",
+      "#Completely safe": "Vollkommen sicher",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Wie sicher vor dem Verkehr fühlen Sie sich hier mit dem Fahrrad oder E-Scooter?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Wie sicher vor Kriminalität oder Belästigung fühlen Sie sich hier tagsüber?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Wie sicher vor Kriminalität oder Belästigung fühlen Sie sich hier abends oder nach Einbruch der Dunkelheit?",
       "#Would you like to add optional details?": "Möchten Sie freiwillige Angaben ergänzen?",
       "#Is there enough safe space to wait before crossing?": "Gibt es genug sicheren Platz, um vor dem Überqueren zu warten?",
       "#Is there a safe place to stop and rest here?": "Gibt es hier einen sicheren Ort zum Anhalten und Ausruhen?",
-      "#Doesn't apply to me": "Trifft auf mich nicht zu",
       "#Going to or from a parked motorcycle or motor scooter": "Ich gehe zu einem geparkten Motorrad oder Motorroller oder komme von dort",
       "#Are you using any of these on this trip?": "Nutzen Sie auf diesem Weg eines dieser Hilfsmittel oder einen Kinderwagen?"
     },
@@ -3139,12 +3327,16 @@
       "#Pushing a stroller": "Bebek arabası itiyorum",
       "#None of these": "Bunların hiçbiri",
       "#How often do you go along this street segment?": "Bu sokak kesiminden ne sıklıkla geçiyorsunuz?",
-      "#This is my first time": "Burayı ilk kez kullanıyorum",
+      "#This is the first time": "Bu ilk kez",
+      "#Every day or almost": "Her gün veya neredeyse her gün",
+      "#Do you avoid this street segment?": "Bu sokak kesiminden kaçınıyor musunuz?",
+      "#No, never": "Hayır, hiçbir zaman",
+      "#No, I would avoid it, but it is the only way": "Hayır, kaçınırdım ama tek yol bu",
+      "#Yes, at certain times or in certain situations": "Evet, belirli saatlerde veya belirli durumlarda",
+      "#Yes, whenever I can": "Evet, mümkün olan her durumda",
       "#Less than once a month": "Ayda birden az",
       "#A few times a month": "Ayda birkaç kez",
       "#A few times a week": "Haftada birkaç kez",
-      "#Almost every day": "Neredeyse her gün",
-      "#I avoid it or have stopped using it": "Buradan kaçınıyorum veya kullanmayı bıraktım",
       "#Quick assessment": "Hızlı değerlendirme",
       "#Answer these first. Then you can finish or add optional details.": "Önce bunları yanıtlayın. Ardından bitirebilir veya isteğe bağlı ayrıntılar ekleyebilirsiniz.",
       "#Is there a place for people to walk along this street?": "Bu sokak boyunca insanların yürüyebileceği bir alan var mı?",
@@ -3192,11 +3384,11 @@
       "#Walking space": "Yürüme alanı",
       "#Look at the place. Answer only what you can see.": "Yere bakın. Yalnızca görebildiğiniz şeyleri yanıtlayın.",
       "#How wide is the space for walking?": "Yürüme alanı ne kadar geniş?",
-      "#Only one person can just about pass": "Ancak tek bir kişi zorlukla geçebiliyor",
-      "#One person can pass, but not a stroller or wheelchair": "Bir kişi geçebiliyor, ama bebek arabası veya tekerlekli sandalye geçemiyor",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "Bebek arabası veya tekerlekli sandalye geçebiliyor, ama karşılaşan kişiler birbirinin yanından geçemiyor",
-      "#Two people can pass each other": "İki kişi rahatça karşılaşıp geçebiliyor",
-      "#Very wide, with plenty of room to move": "Çok geniş, hareket etmek için bol alan var",
+      "#Room for one person only, with difficulty": "Zorlukla tek bir kişilik yer var",
+      "#Room for one person, but not for a wheelchair or stroller": "Bir kişilik yer var, ama tekerlekli sandalye veya bebek arabası için yok",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "Tekerlekli sandalye veya bebek arabası için yer var, ama iki kişi birbirinin yanından geçemiyor",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "İki kişi birbirinin yanından geçebiliyor, ama iki tekerlekli sandalye veya bebek arabası geçemiyor",
+      "#Two wheelchairs or strollers can pass each other": "İki tekerlekli sandalye veya bebek arabası birbirinin yanından geçebiliyor",
       "#If there is a raised sidewalk, how is it protected from traffic?": "Yükseltilmiş bir kaldırım varsa trafikten nasıl korunuyor?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "Babalar, araçların yürüme alanına girmesini önleyen kısa direklerdir.",
       "#Raised only, no extra protection": "Yalnızca yükseltilmiş, ek koruma yok",
@@ -3235,11 +3427,12 @@
       "#No alternative without steps nearby": "Yakında basamaksız bir alternatif yok",
       "#No clear problem": "Belirgin bir sorun yok",
       "#Cycling space": "Bisiklet alanı",
-      "#How is the cycling space separated from walking or motor traffic?": "Bisiklet alanı yayalardan veya motorlu trafikten nasıl ayrılmış?",
+      "#How is the cycling space separated from motor traffic?": "Bisiklet alanı motorlu trafikten nasıl ayrılmış?",
+      "#How is the cycling space separated from people walking?": "Bisiklet alanı yayalardan nasıl ayrılmış?",
+      "#Separated, at the same level": "Ayrı, aynı seviyede",
+      "#At a different level or behind a kerb": "Farklı seviyede veya bordürle ayrılmış",
       "#Bollards, barriers, kerbs, or planters": "Dubalar, bariyerler, bordürler veya saksılar",
       "#Parked cars": "Park etmiş arabalar",
-      "#Separate from people walking, at the same level": "Yürüyen kişilerden ayrı, aynı seviyede",
-      "#Different level or kerb from people walking": "Yürüyen kişilerden farklı seviyede veya bordürle ayrılmış",
       "#Is the cycling infrastructure one-way or two-way?": "Bisiklet altyapısı tek yönlü mü, çift yönlü mü?",
       "#One-way cycling facility": "Tek yönlü bisiklet yolu",
       "#Two-way cycling facility": "Çift yönlü bisiklet yolu",
@@ -3251,9 +3444,11 @@
       "#Gravel or packed earth": "Çakıl veya sıkıştırılmış toprak",
       "#Mixed surface types": "Karışık yüzey türleri",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "Motorlu araçların bisiklet alanını kestiği veya alana girdiği kaç yer var?",
+      "#No such places": "Hiç yer yok",
+      "#1–2 places": "1–2 yer",
+      "#3–5 places": "3–5 yer",
+      "#6 places or more": "6 veya daha fazla yer",
       "#None": "Hiçbiri",
-      "#Few (1–3)": "Az (1–3)",
-      "#Many (4 or more)": "Çok (4 veya daha fazla)",
       "#Who else commonly uses the cycling space?": "Bisiklet alanını başka kimler sık kullanıyor?",
       "#Cars": "Arabalar",
       "#Motorcycles": "Motosikletler",
@@ -3273,7 +3468,6 @@
       "#Moderate": "Orta",
       "#Fast": "Hızlı",
       "#Very fast": "Çok hızlı",
-      "#No vehicles pass here": "Buradan araç geçmiyor",
       "#What makes things difficult with traffic here?": "Burada trafikle ilgili sizi ne zorluyor?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Yan girişler, araçların sokağa girip çıktığı araç girişleri, garaj girişleri veya yan sokaklardır.",
       "#Poor visibility": "Yetersiz görüş",
@@ -3374,17 +3568,23 @@
       "#Road safety": "Trafik güvenliği",
       "#Personal security": "Kişisel güvenlik",
       "#More details": "Daha fazla ayrıntı",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Buradan yürüyerek veya tekerlekli sandalyeyle geçmek senin için zor mu?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Buradan bisiklet veya elektrikli scooter ile geçmek senin için zor mu?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Buradan yürüyerek veya tekerlekli sandalyeyle geçmek senin için ne kadar zor?",
+      "#Very difficult": "Çok zor",
+      "#Quite difficult": "Oldukça zor",
+      "#Slightly difficult": "Biraz zor",
+      "#Not difficult": "Zor değil",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Buradan bisiklet veya elektrikli scooter ile geçmek senin için ne kadar zor?",
       "#I cannot get through": "Geçemiyorum",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "Burada yürürken veya tekerlekli sandalye kullanırken trafik seni güvensiz hissettiriyor mu?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "Burada bisiklet veya elektrikli scooter kullanırken trafik seni güvensiz hissettiriyor mu?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Gündüz burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Akşam veya hava karardıktan sonra burada suç veya taciz nedeniyle kendini güvensiz hissediyor musun?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Burada yürürken veya tekerlekli sandalye kullanırken kendini trafiğe karşı ne kadar güvende hissediyorsun?",
+      "#Not at all safe": "Hiç güvende değil",
+      "#Quite safe": "Oldukça güvende",
+      "#Completely safe": "Tamamen güvende",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Burada bisiklet veya elektrikli scooter kullanırken kendini trafiğe karşı ne kadar güvende hissediyorsun?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Gündüz burada kendini suç veya tacize karşı ne kadar güvende hissediyorsun?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Akşam veya hava karardıktan sonra burada kendini suç veya tacize karşı ne kadar güvende hissediyorsun?",
       "#Would you like to add optional details?": "İsteğe bağlı ayrıntılar eklemek ister misin?",
       "#Is there enough safe space to wait before crossing?": "Karşıya geçmeden önce beklemek için yeterli güvenli alan var mı?",
       "#Is there a safe place to stop and rest here?": "Burada durup dinlenmek için güvenli bir yer var mı?",
-      "#Doesn't apply to me": "Benim için geçerli değil",
       "#Going to or from a parked motorcycle or motor scooter": "Park edilmiş bir motosiklete veya motorlu skutere gidiyorum ya da oradan dönüyorum",
       "#Are you using any of these on this trip?": "Bu yolculukta bu yardımcı araçlardan birini veya bebek arabası kullanıyor musunuz?"
     },
@@ -3405,12 +3605,16 @@
       "#Pushing a stroller": "کالسکه بچه را هل می‌دهم",
       "#None of these": "هیچ‌کدام از این‌ها",
       "#How often do you go along this street segment?": "هر چند وقت یک‌بار این بخش از خیابان را طی می‌کنید؟",
-      "#This is my first time": "این نخستین بار من است",
+      "#This is the first time": "این نخستین بار است",
+      "#Every day or almost": "هر روز یا تقریباً هر روز",
+      "#Do you avoid this street segment?": "آیا از این بخش از خیابان دوری می‌کنید؟",
+      "#No, never": "خیر، هرگز",
+      "#No, I would avoid it, but it is the only way": "نه، از آن دوری می‌کردم، اما تنها راه است",
+      "#Yes, at certain times or in certain situations": "بله، در برخی ساعت‌ها یا در برخی موقعیت‌ها",
+      "#Yes, whenever I can": "بله، هر وقت بتوانم",
       "#Less than once a month": "کمتر از ماهی یک‌بار",
       "#A few times a month": "چند بار در ماه",
       "#A few times a week": "چند بار در هفته",
-      "#Almost every day": "تقریباً هر روز",
-      "#I avoid it or have stopped using it": "از آن دوری می‌کنم یا دیگر از آن استفاده نمی‌کنم",
       "#Quick assessment": "ارزیابی سریع",
       "#Answer these first. Then you can finish or add optional details.": "ابتدا به این پرسش‌ها پاسخ دهید. سپس می‌توانید پایان دهید یا جزئیات اختیاری اضافه کنید.",
       "#Is there a place for people to walk along this street?": "آیا در امتداد این خیابان فضایی برای پیاده‌روی وجود دارد؟",
@@ -3458,11 +3662,11 @@
       "#Walking space": "فضای پیاده‌روی",
       "#Look at the place. Answer only what you can see.": "به مکان نگاه کنید. فقط درباره چیزهایی پاسخ دهید که می‌بینید.",
       "#How wide is the space for walking?": "فضای پیاده‌روی چقدر عریض است؟",
-      "#Only one person can just about pass": "فقط یک نفر به‌زحمت عبور می‌کند",
-      "#One person can pass, but not a stroller or wheelchair": "یک نفر عبور می‌کند، اما کالسکه یا ویلچر نه",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "کالسکه یا ویلچر عبور می‌کند، اما دو نفر نمی‌توانند از کنار هم رد شوند",
-      "#Two people can pass each other": "دو نفر می‌توانند از کنار هم عبور کنند",
-      "#Very wide, with plenty of room to move": "بسیار پهن، با فضای فراوان برای حرکت",
+      "#Room for one person only, with difficulty": "به‌زحمت فقط برای یک نفر جا هست",
+      "#Room for one person, but not for a wheelchair or stroller": "جا برای یک نفر هست، اما برای ویلچر یا کالسکه نه",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "جا برای ویلچر یا کالسکه هست، اما دو نفر نمی‌توانند از کنار هم رد شوند",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "دو نفر می‌توانند از کنار هم رد شوند، اما دو ویلچر یا دو کالسکه نه",
+      "#Two wheelchairs or strollers can pass each other": "دو ویلچر یا دو کالسکه می‌توانند از کنار هم رد شوند",
       "#If there is a raised sidewalk, how is it protected from traffic?": "اگر پیاده‌رو برجسته است، چگونه از ترافیک محافظت می‌شود؟",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "استوبرها تیرک‌های کوتاهی هستند که مانع ورود خودروها به فضای پیاده می‌شوند.",
       "#Raised only, no extra protection": "فقط برجسته، بدون محافظت بیشتر",
@@ -3501,11 +3705,12 @@
       "#No alternative without steps nearby": "در نزدیکی جایگزینی بدون پله وجود ندارد",
       "#No clear problem": "مشکل روشنی وجود ندارد",
       "#Cycling space": "فضای دوچرخه",
-      "#How is the cycling space separated from walking or motor traffic?": "فضای دوچرخه چگونه از عابران پیاده یا ترافیک موتوری جدا شده است؟",
+      "#How is the cycling space separated from motor traffic?": "فضای دوچرخه چگونه از ترافیک موتوری جدا شده است؟",
+      "#How is the cycling space separated from people walking?": "فضای دوچرخه چگونه از عابران پیاده جدا شده است؟",
+      "#Separated, at the same level": "جدا، هم‌سطح",
+      "#At a different level or behind a kerb": "در سطحی متفاوت یا با جدول جداکننده",
       "#Bollards, barriers, kerbs, or planters": "میله‌ها، موانع، جدول‌ها یا گلدان‌ها",
       "#Parked cars": "خودروهای پارک‌شده",
-      "#Separate from people walking, at the same level": "جدا از عابران پیاده و هم‌سطح با آنان",
-      "#Different level or kerb from people walking": "سطح متفاوت یا جدول جداکننده از عابران پیاده",
       "#Is the cycling infrastructure one-way or two-way?": "مسیر دوچرخه یک‌طرفه است یا دوطرفه؟",
       "#One-way cycling facility": "مسیر دوچرخه یک‌طرفه",
       "#Two-way cycling facility": "مسیر دوچرخه دوطرفه",
@@ -3517,9 +3722,11 @@
       "#Gravel or packed earth": "شن یا خاک کوبیده",
       "#Mixed surface types": "ترکیبی از چند نوع سطح",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "چند محل وجود دارد که خودروهای موتوری فضای دوچرخه را قطع می‌کنند یا وارد آن می‌شوند؟",
+      "#No such places": "هیچ محلی",
+      "#1–2 places": "۱ تا ۲ محل",
+      "#3–5 places": "۳ تا ۵ محل",
+      "#6 places or more": "۶ محل یا بیشتر",
       "#None": "هیچ‌کدام",
-      "#Few (1–3)": "کم (۱ تا ۳)",
-      "#Many (4 or more)": "زیاد (۴ یا بیشتر)",
       "#Who else commonly uses the cycling space?": "چه کسانی دیگر معمولاً از فضای دوچرخه استفاده می‌کنند؟",
       "#Cars": "خودروها",
       "#Motorcycles": "موتورسیکلت‌ها",
@@ -3539,7 +3746,6 @@
       "#Moderate": "متوسط",
       "#Fast": "تند",
       "#Very fast": "بسیار تند",
-      "#No vehicles pass here": "از اینجا هیچ وسیله نقلیه‌ای عبور نمی‌کند",
       "#What makes things difficult with traffic here?": "در اینجا چه چیزی کنار آمدن با ترافیک را برایتان دشوار می‌کند؟",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "دسترسی‌های جانبی یعنی ورودی‌های خودرو، ورودی پارکینگ‌ها یا کوچه‌های فرعی که خودروها از آن‌ها وارد خیابان یا از آن خارج می‌شوند.",
       "#Poor visibility": "دید ضعیف",
@@ -3640,17 +3846,23 @@
       "#Road safety": "ایمنی در ترافیک",
       "#Personal security": "امنیت شخصی",
       "#More details": "جزئیات بیشتر",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "آیا عبور از اینجا پیاده یا با ویلچر برایت دشوار است؟",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "آیا عبور از اینجا با دوچرخه یا اسکوتر برقی برایت دشوار است؟",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "عبور از اینجا پیاده یا با ویلچر برایت چقدر دشوار است؟",
+      "#Very difficult": "بسیار دشوار",
+      "#Quite difficult": "نسبتاً دشوار",
+      "#Slightly difficult": "کمی دشوار",
+      "#Not difficult": "دشوار نیست",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "عبور از اینجا با دوچرخه یا اسکوتر برقی برایت چقدر دشوار است؟",
       "#I cannot get through": "نمی‌توانم عبور کنم",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "آیا ترافیک در اینجا هنگام پیاده‌روی یا استفاده از ویلچر باعث احساس ناامنی تو می‌شود؟",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "آیا ترافیک در اینجا هنگام دوچرخه‌سواری یا استفاده از اسکوتر برقی باعث احساس ناامنی تو می‌شود؟",
-      "#During the day, do you feel unsafe here from crime or harassment?": "آیا روزها در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "آیا عصرها یا پس از تاریکی در اینجا به دلیل جرم یا آزار احساس ناامنی می‌کنی؟",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "اینجا هنگام پیاده‌روی یا استفاده از ویلچر چقدر در برابر ترافیک احساس امنیت می‌کنی؟",
+      "#Not at all safe": "اصلاً امن نیست",
+      "#Quite safe": "تا حد زیادی امن",
+      "#Completely safe": "کاملاً امن",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "اینجا هنگام دوچرخه‌سواری یا استفاده از اسکوتر برقی چقدر در برابر ترافیک احساس امنیت می‌کنی؟",
+      "#During the day, how safe from crime or harassment do you feel here?": "روزها اینجا چقدر در برابر جرم یا آزار احساس امنیت می‌کنی؟",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "عصرها یا پس از تاریکی، اینجا چقدر در برابر جرم یا آزار احساس امنیت می‌کنی؟",
       "#Would you like to add optional details?": "آیا می‌خواهی جزئیات اختیاری اضافه کنی؟",
       "#Is there enough safe space to wait before crossing?": "آیا فضای امن کافی برای انتظار پیش از عبور وجود دارد؟",
       "#Is there a safe place to stop and rest here?": "آیا اینجا جای امنی برای توقف و استراحت وجود دارد؟",
-      "#Doesn't apply to me": "به من مربوط نمی‌شود",
       "#Going to or from a parked motorcycle or motor scooter": "به یک موتورسیکلت یا اسکوتر موتوریِ پارک‌شده می‌روم یا از آن برمی‌گردم",
       "#Are you using any of these on this trip?": "آیا در این سفر از یکی از این وسایل کمکی یا کالسکه استفاده می‌کنید؟"
     },
@@ -3671,12 +3883,16 @@
       "#Pushing a stroller": "Babakocsit tolok",
       "#None of these": "Ezek közül egyik sem",
       "#How often do you go along this street segment?": "Milyen gyakran halad végig ezen az utcaszakaszon?",
-      "#This is my first time": "Most járok itt először",
+      "#This is the first time": "Most járok itt először",
+      "#Every day or almost": "Minden nap vagy majdnem",
+      "#Do you avoid this street segment?": "Elkerüli ezt az utcaszakaszt?",
+      "#No, never": "Nem, soha",
+      "#No, I would avoid it, but it is the only way": "Nem, elkerülném, de ez az egyetlen út",
+      "#Yes, at certain times or in certain situations": "Igen, bizonyos időpontokban vagy helyzetekben",
+      "#Yes, whenever I can": "Igen, amikor csak tehetem",
       "#Less than once a month": "Havonta ritkábban mint egyszer",
       "#A few times a month": "Havonta néhányszor",
       "#A few times a week": "Hetente néhányszor",
-      "#Almost every day": "Szinte minden nap",
-      "#I avoid it or have stopped using it": "Elkerülöm, vagy már nem használom",
       "#Quick assessment": "Gyors értékelés",
       "#Answer these first. Then you can finish or add optional details.": "Először ezekre válaszoljon. Utána befejezheti, vagy hozzáadhat választható részleteket.",
       "#Is there a place for people to walk along this street?": "Van gyaloglásra alkalmas hely ezen az utcán?",
@@ -3724,11 +3940,11 @@
       "#Walking space": "Gyalogos tér",
       "#Look at the place. Answer only what you can see.": "Nézze meg a helyet. Csak arra válaszoljon, amit lát.",
       "#How wide is the space for walking?": "Milyen széles a gyalogosok helye?",
-      "#Only one person can just about pass": "Épphogy elfér egy ember",
-      "#One person can pass, but not a stroller or wheelchair": "Egy ember elfér, de babakocsi vagy kerekesszék nem",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "Babakocsi vagy kerekesszék elfér, de kikerülni nem lehet egymást",
-      "#Two people can pass each other": "Két ember el tud haladni egymás mellett",
-      "#Very wide, with plenty of room to move": "Nagyon széles, sok hely van a mozgáshoz",
+      "#Room for one person only, with difficulty": "Épphogy elfér egy ember",
+      "#Room for one person, but not for a wheelchair or stroller": "Egy embernek van hely, de kerekesszéknek vagy babakocsinak nincs",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "Kerekesszéknek vagy babakocsinak van hely, de két ember nem fér el egymás mellett",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "Két ember elfér egymás mellett, de két kerekesszék vagy babakocsi nem",
+      "#Two wheelchairs or strollers can pass each other": "Két kerekesszék vagy babakocsi is elfér egymás mellett",
       "#If there is a raised sidewalk, how is it protected from traffic?": "Ha van megemelt járda, hogyan védik a forgalomtól?",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "A terelőoszlopok alacsony oszlopok, amelyek megakadályozzák, hogy a járművek a gyalogos területre hajtsanak.",
       "#Raised only, no extra protection": "Csak megemelt, további védelem nélkül",
@@ -3767,11 +3983,12 @@
       "#No alternative without steps nearby": "Nincs a közelben lépcső nélküli alternatíva",
       "#No clear problem": "Nincs egyértelmű probléma",
       "#Cycling space": "Kerékpáros tér",
-      "#How is the cycling space separated from walking or motor traffic?": "Hogyan választják el a kerékpáros teret a gyalogos vagy gépjárműforgalomtól?",
+      "#How is the cycling space separated from motor traffic?": "Hogyan választják el a kerékpáros teret a gépjárműforgalomtól?",
+      "#How is the cycling space separated from people walking?": "Hogyan választják el a kerékpáros teret a gyalogosoktól?",
+      "#Separated, at the same level": "Elválasztva, azonos szinten",
+      "#At a different level or behind a kerb": "Eltérő szinten vagy szegéllyel elválasztva",
       "#Bollards, barriers, kerbs, or planters": "Oszlopok, korlátok, szegélyek vagy növényládák",
       "#Parked cars": "Parkoló autók",
-      "#Separate from people walking, at the same level": "A gyalogosoktól elválasztva, azonos szinten",
-      "#Different level or kerb from people walking": "A gyalogosoktól eltérő szinten vagy szegéllyel elválasztva",
       "#Is the cycling infrastructure one-way or two-way?": "A kerékpáros infrastruktúra egy- vagy kétirányú?",
       "#One-way cycling facility": "Egyirányú kerékpáros infrastruktúra",
       "#Two-way cycling facility": "Kétirányú kerékpáros infrastruktúra",
@@ -3783,9 +4000,11 @@
       "#Gravel or packed earth": "Kavics vagy döngölt föld",
       "#Mixed surface types": "Vegyes burkolattípusok",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "Hány helyen keresztezik a gépjárművek a kerékpáros teret vagy hajtanak be oda?",
+      "#No such places": "Egy hely sem",
+      "#1–2 places": "1–2 hely",
+      "#3–5 places": "3–5 hely",
+      "#6 places or more": "6 vagy több hely",
       "#None": "Senki",
-      "#Few (1–3)": "Kevés (1–3)",
-      "#Many (4 or more)": "Sok (4 vagy több)",
       "#Who else commonly uses the cycling space?": "Kik használják még rendszeresen a kerékpáros teret?",
       "#Cars": "Autók",
       "#Motorcycles": "Motorkerékpárok",
@@ -3805,7 +4024,6 @@
       "#Moderate": "Közepes",
       "#Fast": "Gyors",
       "#Very fast": "Nagyon gyors",
-      "#No vehicles pass here": "Itt nem járnak járművek",
       "#What makes things difficult with traffic here?": "Mi nehezíti meg itt a forgalommal való boldogulást?",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "Oldalsó behajtók alatt kapubejárókat, garázsbejáratokat vagy mellékutcákat értünk, ahol a járművek be- vagy kihajtanak az utcából.",
       "#Poor visibility": "Rossz beláthatóság",
@@ -3906,17 +4124,23 @@
       "#Road safety": "Közlekedésbiztonság",
       "#Personal security": "Személyes biztonság",
       "#More details": "További részletek",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "Nehéz itt gyalog vagy kerekesszékkel áthaladnod?",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "Nehéz itt kerékpárral vagy elektromos rollerrel áthaladnod?",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "Mennyire nehéz itt gyalog vagy kerekesszékkel áthaladnod?",
+      "#Very difficult": "Nagyon nehéz",
+      "#Quite difficult": "Elég nehéz",
+      "#Slightly difficult": "Kicsit nehéz",
+      "#Not difficult": "Nem nehéz",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "Mennyire nehéz itt kerékpárral vagy elektromos rollerrel áthaladnod?",
       "#I cannot get through": "Nem tudok áthaladni",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "A forgalom miatt veszélyben érzed magad itt gyalog vagy kerekesszékkel?",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "A forgalom miatt veszélyben érzed magad itt kerékpárral vagy elektromos rollerrel?",
-      "#During the day, do you feel unsafe here from crime or harassment?": "Napközben bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "Este vagy sötétedés után bűncselekmények vagy zaklatás miatt veszélyben érzed magad itt?",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "Mennyire érzed magad biztonságban a forgalomtól itt gyalog vagy kerekesszékkel?",
+      "#Not at all safe": "Egyáltalán nem biztonságban",
+      "#Quite safe": "Eléggé biztonságban",
+      "#Completely safe": "Teljesen biztonságban",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "Mennyire érzed magad biztonságban a forgalomtól itt kerékpárral vagy elektromos rollerrel?",
+      "#During the day, how safe from crime or harassment do you feel here?": "Napközben mennyire érzed magad biztonságban itt bűncselekményektől vagy zaklatástól?",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "Este vagy sötétedés után mennyire érzed magad biztonságban itt bűncselekményektől vagy zaklatástól?",
       "#Would you like to add optional details?": "Szeretnél további, nem kötelező részleteket megadni?",
       "#Is there enough safe space to wait before crossing?": "Van elég biztonságos hely a várakozásra átkelés előtt?",
       "#Is there a safe place to stop and rest here?": "Van itt biztonságos hely megállni és pihenni?",
-      "#Doesn't apply to me": "Rám nem vonatkozik",
       "#Going to or from a parked motorcycle or motor scooter": "Parkoló motorkerékpárhoz vagy robogóhoz megyek, vagy onnan jövök",
       "#Are you using any of these on this trip?": "Használ ezen az úton ilyen segédeszközt vagy babakocsit?"
     },
@@ -3937,12 +4161,16 @@
       "#Pushing a stroller": "أدفع عربة أطفال",
       "#None of these": "لا شيء مما سبق",
       "#How often do you go along this street segment?": "ما مدى تكرار سلوك هذا المقطع من الشارع؟",
-      "#This is my first time": "هذه مرتي الأولى",
+      "#This is the first time": "هذه هي المرة الأولى",
+      "#Every day or almost": "كل يوم أو تقريبًا",
+      "#Do you avoid this street segment?": "هل يحدث لك تجنب هذا المقطع من الشارع؟",
+      "#No, never": "لا، أبدًا",
+      "#No, I would avoid it, but it is the only way": "لا، كنت سأتجنبه، لكنه الطريق الوحيد",
+      "#Yes, at certain times or in certain situations": "نعم، في أوقات أو مواقف معيّنة",
+      "#Yes, whenever I can": "نعم، كلما أمكنني ذلك",
       "#Less than once a month": "أقل من مرة في الشهر",
       "#A few times a month": "بضع مرات في الشهر",
       "#A few times a week": "بضع مرات في الأسبوع",
-      "#Almost every day": "كل يوم تقريبًا",
-      "#I avoid it or have stopped using it": "أتجنبه أو توقفت عن استخدامه",
       "#Quick assessment": "تقييم سريع",
       "#Answer these first. Then you can finish or add optional details.": "يُرجى الإجابة عن هذه الأسئلة أولًا. بعد ذلك يمكنك الإنهاء أو إضافة تفاصيل اختيارية.",
       "#Is there a place for people to walk along this street?": "هل توجد مساحة للمشي على طول هذا الشارع؟",
@@ -3990,11 +4218,11 @@
       "#Walking space": "مساحة المشي",
       "#Look at the place. Answer only what you can see.": "يُرجى النظر إلى المكان والإجابة فقط عما يمكن رؤيته.",
       "#How wide is the space for walking?": "ما مدى اتساع مساحة المشي؟",
-      "#Only one person can just about pass": "بالكاد يمر شخص واحد",
-      "#One person can pass, but not a stroller or wheelchair": "يمر شخص واحد، لكن لا تمر عربة أطفال أو كرسي متحرك",
-      "#A stroller or wheelchair can pass, but people cannot pass each other": "تمر عربة أطفال أو كرسي متحرك، لكن لا يمكن للأشخاص تجاوز بعضهم",
-      "#Two people can pass each other": "يمكن لشخصين أن يمرا بجانب بعضهما",
-      "#Very wide, with plenty of room to move": "واسع جدًا، مع مساحة كبيرة للحركة",
+      "#Room for one person only, with difficulty": "مساحة لشخص واحد فقط، وبصعوبة",
+      "#Room for one person, but not for a wheelchair or stroller": "مساحة لشخص واحد، لكن ليس لكرسي متحرك أو عربة أطفال",
+      "#Room for a wheelchair or stroller, but two people cannot pass each other": "مساحة لكرسي متحرك أو عربة أطفال، لكن لا يمكن لشخصين أن يتجاوزا بعضهما",
+      "#Two people can pass each other, but not two wheelchairs or strollers": "يمكن لشخصين أن يتجاوزا بعضهما، لكن ليس لكرسيين متحركين أو عربتي أطفال",
+      "#Two wheelchairs or strollers can pass each other": "يمكن لكرسيين متحركين أو عربتي أطفال أن يتجاوزا بعضهما",
       "#If there is a raised sidewalk, how is it protected from traffic?": "إذا كان هناك رصيف مرتفع، فكيف يُحمى من حركة المرور؟",
       "#Bollards are short posts that stop vehicles from entering the walking area.": "الأعمدة الحاجزة أعمدة قصيرة تمنع المركبات من دخول منطقة المشي.",
       "#Raised only, no extra protection": "مرتفع فقط، دون حماية إضافية",
@@ -4033,11 +4261,12 @@
       "#No alternative without steps nearby": "لا يوجد بديل بدون درجات في الجوار",
       "#No clear problem": "لا توجد مشكلة واضحة",
       "#Cycling space": "مساحة الدراجات",
-      "#How is the cycling space separated from walking or motor traffic?": "كيف تفصل مساحة الدراجات عن المشاة أو حركة المركبات؟",
+      "#How is the cycling space separated from motor traffic?": "كيف تفصل مساحة الدراجات عن حركة المركبات؟",
+      "#How is the cycling space separated from people walking?": "كيف تفصل مساحة الدراجات عن المشاة؟",
+      "#Separated, at the same level": "منفصلة، على المستوى نفسه",
+      "#At a different level or behind a kerb": "على مستوى مختلف أو خلف حافة فاصلة",
       "#Bollards, barriers, kerbs, or planters": "أعمدة أو حواجز أو حواف أو أحواض نباتات",
       "#Parked cars": "سيارات متوقفة",
-      "#Separate from people walking, at the same level": "منفصلة عن المشاة وعلى المستوى نفسه",
-      "#Different level or kerb from people walking": "مستوى مختلف أو حافة فاصلة عن المشاة",
       "#Is the cycling infrastructure one-way or two-way?": "هل مسار الدراجات باتجاه واحد أم باتجاهين؟",
       "#One-way cycling facility": "مسار دراجات باتجاه واحد",
       "#Two-way cycling facility": "مسار دراجات باتجاهين",
@@ -4049,9 +4278,11 @@
       "#Gravel or packed earth": "حصى أو تراب مدكوك",
       "#Mixed surface types": "أنواع أسطح مختلطة",
       "#How many places are there where motor vehicles cross or enter the cycling space?": "كم موقعًا تعبر فيه المركبات الآلية مساحة الدراجات أو تدخل إليها؟",
+      "#No such places": "لا توجد أي مواقع",
+      "#1–2 places": "1–2 مواقع",
+      "#3–5 places": "3–5 مواقع",
+      "#6 places or more": "6 مواقع أو أكثر",
       "#None": "لا أحد",
-      "#Few (1–3)": "قليلة (1–3)",
-      "#Many (4 or more)": "كثيرة (4 أو أكثر)",
       "#Who else commonly uses the cycling space?": "من يستخدم مساحة الدراجات أيضًا بصورة شائعة؟",
       "#Cars": "سيارات",
       "#Motorcycles": "دراجات نارية",
@@ -4071,7 +4302,6 @@
       "#Moderate": "متوسطة",
       "#Fast": "سريعة",
       "#Very fast": "سريعة جدًا",
-      "#No vehicles pass here": "لا تمر مركبات من هنا",
       "#What makes things difficult with traffic here?": "ما الذي يصعّب عليك التعامل مع حركة المرور هنا؟",
       "#Side access means driveways, garage entrances or side streets where vehicles enter or leave the street.": "المداخل الجانبية هي مداخل السيارات أو مداخل المرائب أو الشوارع الفرعية التي تدخل منها المركبات إلى الشارع أو تخرج منه.",
       "#Poor visibility": "رؤية ضعيفة",
@@ -4172,17 +4402,23 @@
       "#Road safety": "السلامة المرورية",
       "#Personal security": "الأمان الشخصي",
       "#More details": "المزيد من التفاصيل",
-      "#Is it difficult for you to get through here on foot or using a wheelchair?": "هل يصعب عليك المرور من هنا مشيًا أو باستخدام كرسي متحرك؟",
-      "#Is it difficult for you to get through here by bicycle or e-scooter?": "هل يصعب عليك المرور من هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#How difficult is it for you to get through here on foot or using a wheelchair?": "ما مدى صعوبة المرور من هنا عليك مشيًا أو باستخدام كرسي متحرك؟",
+      "#Very difficult": "صعب جدًا",
+      "#Quite difficult": "صعب إلى حد ما",
+      "#Slightly difficult": "صعب قليلًا",
+      "#Not difficult": "ليس صعبًا",
+      "#How difficult is it for you to get through here by bicycle or e-scooter?": "ما مدى صعوبة المرور من هنا عليك بالدراجة أو السكوتر الكهربائي؟",
       "#I cannot get through": "لا أستطيع المرور",
-      "#Does traffic make you feel unsafe here on foot or using a wheelchair?": "هل تجعلك حركة المرور تشعر بالخطر هنا مشيًا أو باستخدام كرسي متحرك؟",
-      "#Does traffic make you feel unsafe here by bicycle or e-scooter?": "هل تجعلك حركة المرور تشعر بالخطر هنا بالدراجة أو السكوتر الكهربائي؟",
-      "#During the day, do you feel unsafe here from crime or harassment?": "هل تشعر هنا نهارًا بعدم الأمان بسبب الجرائم أو المضايقات؟",
-      "#In the evening or after dark, do you feel unsafe here from crime or harassment?": "هل تشعر هنا مساءً أو بعد حلول الظلام بعدم الأمان بسبب الجرائم أو المضايقات؟",
+      "#How safe from traffic do you feel here on foot or using a wheelchair?": "إلى أي مدى تشعر بالأمان من حركة المرور هنا مشيًا أو باستخدام كرسي متحرك؟",
+      "#Not at all safe": "لا أشعر بالأمان إطلاقًا",
+      "#Quite safe": "أشعر بالأمان إلى حد كبير",
+      "#Completely safe": "أشعر بالأمان تمامًا",
+      "#How safe from traffic do you feel here by bicycle or e-scooter?": "إلى أي مدى تشعر بالأمان من حركة المرور هنا بالدراجة أو السكوتر الكهربائي؟",
+      "#During the day, how safe from crime or harassment do you feel here?": "نهارًا، إلى أي مدى تشعر هنا بالأمان من الجرائم أو المضايقات؟",
+      "#In the evening or after dark, how safe from crime or harassment do you feel here?": "مساءً أو بعد حلول الظلام، إلى أي مدى تشعر هنا بالأمان من الجرائم أو المضايقات؟",
       "#Would you like to add optional details?": "هل ترغب في إضافة تفاصيل اختيارية؟",
       "#Is there enough safe space to wait before crossing?": "هل توجد مساحة آمنة كافية للانتظار قبل العبور؟",
       "#Is there a safe place to stop and rest here?": "هل يوجد هنا مكان آمن للتوقف والاستراحة؟",
-      "#Doesn't apply to me": "لا ينطبق عليّ",
       "#Going to or from a parked motorcycle or motor scooter": "أذهب إلى دراجة نارية أو سكوتر بمحرك متوقف أو أعود منها",
       "#Are you using any of these on this trip?": "هل تستخدم في هذه الرحلة إحدى هذه الوسائل المساعدة أو عربة أطفال؟"
     }
