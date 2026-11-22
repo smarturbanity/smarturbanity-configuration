@@ -737,3 +737,9 @@ question: a bond goes from none to very strong and has no negative side, so
 neighbourhood?” with not at all, slightly, moderately, very and extremely (prefer
 not to say stays). Same versions as the rating-scales change; no answers had been
 collected; eight translations.
+
+Lory chose on 2026-11-22 symmetric labels for the overall trip rating: the five
+stars of `trip_rating` read very poor, poor, neither good nor poor, good and very
+good, like the other star questions, instead of a middle “Fair” that leaned
+positive and an “Excellent” that did not mirror “Very poor”. Values 1–5 are
+unchanged; same versions as the rating-scales change; eight translations.

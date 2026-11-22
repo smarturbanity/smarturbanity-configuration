@@ -39,7 +39,7 @@ unchanged except where listed below.
   of the walking survey, and `pedestrian_traffic_unsafe`, `cyclist_traffic_unsafe`,
   `personal_day_unsafe`, `personal_evening_unsafe` in both street assessments. Unused translations are removed.
 - **Order and wording:** `connection_clarity` now runs from “Very difficult” to
-  “Very easy”; `trip_rating` options lose the “(1)…(5)” suffix in all languages.
+  “Very easy”.
 - **Trips given up for cost:** `travel_given_up_cost` asked a yes/no question with
   three frequency answers. It now asks “In the last month, how many times did you
   give up a trip because it cost too much?” with five counted points: never, once,
@@ -71,7 +71,11 @@ unchanged except where listed below.
   but ran from “Not connected” to “Very connected”, so its ends did not mirror each
   other. It now asks “How connected do you feel to the people in your
   neighbourhood?” on five ordered points: not at all, slightly, moderately, very,
-  extremely. No answers had been collected.
+  extremely. `trip_rating` had a middle answer that was already positive (“Fair”)
+  and ends that did not mirror each other (“Very poor”, “Excellent”); its stars now
+  read very poor, poor, neither good nor poor, good, very good, the labels of
+  `motorcycle_parking`, and lose the “(1)…(5)” suffix. No answers had been
+  collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
