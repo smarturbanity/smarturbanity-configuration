@@ -762,3 +762,12 @@ questions) and `place_shade` (“How much shade is there here on hot days?”: n
 shade, very little shade, some shade, plenty of shade, shade almost everywhere), both
 version 1.0.0 with the same conditions, I don’t know and prefer not to say. No
 answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 a symmetric liking scale for the six questions on streets
+with lots of people, shops and activity (`car_`, `bike_`, `escooter_`,
+`motorcycle_`, `put_` and `walk_route_liveliness_effect`): they ask “… do you
+like streets with lots of people, shops and activity?” with I dislike them a lot,
+I dislike them a little, I neither like nor dislike them, I like them a little and
+I like them a lot, and Not applicable below. The old answers carried reasons and
+mixed the subject with crowding, already asked by the crowding questions. Version
+2.0.0; no answers had been collected; eight translations.

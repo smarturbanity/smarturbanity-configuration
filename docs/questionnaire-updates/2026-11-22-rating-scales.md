@@ -9,9 +9,9 @@ wording listed under the scale, the chosen one highlighted; `answer_scale_stars:
 true` draws them as stars instead. Wording, stored values and translations are
 unchanged except where listed below.
 
-- **Likert (87 occurrences):** ease and clarity (very difficult … very easy),
+- **Likert (93 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
-  comfort, pleasantness, overall judgement, air, cleanliness, noise, comfort on hot days,
+  comfort, liking for lively streets, pleasantness, overall judgement, air, cleanliness, noise, comfort on hot days,
   place safety and security, street safety from traffic and from
   crime or harassment, desired facilities (no … yes),
   vehicle availability, speed of traffic and trip time against the expected one.
@@ -85,7 +85,11 @@ unchanged except where listed below.
   two questions: `place_heat_comfort` (“On hot days, how comfortable do you feel
   here?”, Likert with the comfort labels above) and `place_shade` (“How much shade
   is there here on hot days?”, ordered: no shade, very little, some, plenty, shade
-  almost everywhere), both version 1.0.0. No answers had been collected.
+  almost everywhere), both version 1.0.0. The six `*_route_liveliness_effect`
+  questions answered with reasons (“I feel safer”, “Crowds stress me”) and ends that
+  did not mirror each other; they now ask whether the respondent likes streets with
+  lots of people, shops and activity, from “I dislike them a lot” to “I like them a
+  lot”, with Not applicable. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
