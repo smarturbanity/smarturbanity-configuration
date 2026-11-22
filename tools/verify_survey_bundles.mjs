@@ -66,7 +66,7 @@ for (const id of modeIds) {
   if (gate) assert.deepEqual(campaigns.surveys_gallery.follow_up_stop_when[id], {[gate]: ['no']});
 }
 assert.equal(screens, 51);
-assert.equal(questions, 260);
+assert.equal(questions, 270);
 for (const c of Object.values(campaigns.campaigns)) {
   for (const id of c.questionnaires) assert.ok(catalogue.has(id), 'Missing campaign target ' + id);
   for (const id of c.questionnaires.filter(id => modeIds.has(id))) {

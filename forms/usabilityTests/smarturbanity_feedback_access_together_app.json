@@ -72,7 +72,7 @@
         "backgroundColor": "#f0f0f0",
         "questions": [
           {
-            "text": "Did you manage to install the app and register with the pilot code?",
+            "text": "Did you manage to install the app?",
             "answer_key": "task_install",
             "question_type": "single_option",
             "options": [
@@ -98,14 +98,55 @@
             "privacy_classification": "personal_data"
           },
           {
+            "text": "Did you manage to register with the code you received?",
+            "answer_key": "task_register",
+            "question_type": "single_option",
+            "options": [
+              {
+                "text": "Yes",
+                "value": "yes"
+              },
+              {
+                "text": "Yes, with help",
+                "value": "yes_with_help"
+              },
+              {
+                "text": "No",
+                "value": "no"
+              },
+              {
+                "text": "I didn’t try it",
+                "value": "not_tried"
+              }
+            ],
+            "checks_inline": false,
+            "required": false,
+            "privacy_classification": "personal_data",
+            "show_if": {
+              "task_install": [
+                "yes",
+                "yes_with_help"
+              ]
+            }
+          },
+          {
             "text": "What stopped you from completing it?",
             "answer_key": "task_install_issue",
             "question_type": "textarea",
             "required": false,
             "privacy_classification": "heightened_personal",
             "show_if": {
-              "task_install": [
-                "no"
+              "$any": [
+                {
+                  "task_install": [
+                    "no"
+                  ]
+                },
+                {
+                  "task_register": [
+                    "no"
+                  ]
+                }
               ]
             }
           },
@@ -531,7 +572,8 @@
       "#At the event, with the team": "At the event, with the team",
       "#Both": "Both",
       "#Did you manage to answer the questions before and after the trip?": "Did you manage to answer the questions before and after the trip?",
-      "#Did you manage to install the app and register with the pilot code?": "Did you manage to install the app and register with the pilot code?",
+      "#Did you manage to install the app?": "Did you manage to install the app?",
+      "#Did you manage to register with the code you received?": "Did you manage to register with the code you received?",
       "#Did you manage to open the guided pages (map, services, reports) from the app?": "Did you manage to open the guided pages (map, services, reports) from the app?",
       "#Did you manage to record a trip?": "Did you manage to record a trip?",
       "#Difficult": "Difficult",
@@ -606,7 +648,8 @@
       "#At the event, with the team": "All’evento, con il team",
       "#Both": "In entrambi i modi",
       "#Did you manage to answer the questions before and after the trip?": "Hai potuto rispondere alle domande prima e dopo lo spostamento?",
-      "#Did you manage to install the app and register with the pilot code?": "Hai potuto installare l’app e registrarti con il codice del pilota?",
+      "#Did you manage to install the app?": "Hai potuto installare l’app?",
+      "#Did you manage to register with the code you received?": "Hai potuto registrarti con il codice che hai ricevuto?",
       "#Did you manage to open the guided pages (map, services, reports) from the app?": "Hai potuto aprire le pagine guidate (mappa, servizi, segnalazioni) dall’app?",
       "#Did you manage to record a trip?": "Hai potuto registrare uno spostamento?",
       "#Difficult": "Difficile",

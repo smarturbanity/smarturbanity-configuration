@@ -784,3 +784,30 @@ way, from not at all to extremely important, and gains Not applicable (version
 descriptions on single steps. `walk_wayfinding` stays as it is, because its answer
 about directions that are not accessible keeps a separate meaning. No answers had
 been collected; eight translations.
+
+Lory chose on 2026-11-22 to split the walking questions that asked two things.
+`walk_distance` now lists only distances, from less than 500 metres (up to about six
+minutes) to more than 2 km (more than about 25 minutes), scored and without the
+answer about needing company, which becomes the new yes-or-no `walk_need_company`
+(version 1.0.0). `walk_identity_harassment` asks whether, in the last 12 months, the
+respondent was harassed because of who they are or how they look, yes or no with Not
+applicable instead of the old "doesn't apply" answer, and the new
+`walk_identity_harassment_worry` asks how often one worries about it, never to always
+(version 1.0.0). `walk_tiredness_cause` names physical effort without carrying
+bags, already a separate answer; `walk_dissatisfied` gains None of these,
+`walk_anxiety_causes` speaks of road crashes and `walk_combined_response` offers a
+shorter list. No answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 to split three double-barrelled questions (app installation
+and registration in the Access Together app feedback, bicycle separation from motor
+traffic and from people walking, and mobility apps for taxis and for sharing), to
+give ordered answers distinct steps (signal waiting time, use frequency of places,
+connections and segments with avoidance moved to its own question, remote work,
+near-miss outcome, how often a carer helps, usual trip company, location distance,
+walkable width, bridge cover, pedestrian access, the type of improvement, reasons
+for going outside the neighbourhood split from what for, and conflict points with
+vehicles), to align the usability test gender and education answers with the profile
+survey, and to use one common list of travel modes (usual mode, trip mode) and one
+of trip purposes (frequent purpose, trip purpose, given-up purposes); "None of
+these" was already exclusive where requested, and the pet and bags question keeps
+its two options. No answers had been collected; eight translations.

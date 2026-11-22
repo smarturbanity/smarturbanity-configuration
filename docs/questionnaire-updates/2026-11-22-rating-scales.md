@@ -9,18 +9,19 @@ wording listed under the scale, the chosen one highlighted; `answer_scale_stars:
 true` draws them as stars instead. Wording, stored values and translations are
 unchanged except where listed below.
 
-- **Likert (93 occurrences):** ease and clarity (very difficult … very easy),
+- **Likert (95 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
   comfort, liking for lively streets, pleasantness, overall judgement, air, cleanliness, noise, comfort on hot days,
   place safety and security, street safety from traffic and from
-  crime or harassment, desired facilities (no … yes),
+  crime or harassment, safety of crossings near stops, desired facilities (no … yes),
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (120 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (139 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
   confidence, trip safety, community attachment) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
   crowding, visual quality, parking problem, difficulty of getting through a street,
-  shade on hot days).
+  shade on hot days, distance one can walk, ease of using stops, worry about
+  harassment, less use with an alternative).
 - **Stars (12, all Likert):** judgements of quality or value: `place_pleasantness`,
   `place_overall`, `place_air`, `place_cleanliness`, `motorcycle_parking`,
   `trip_rating` and the six `*_satisfaction` questions; every other scale keeps
@@ -32,9 +33,9 @@ unchanged except where listed below.
   `cyclist_*`, `bike_intrusion_frequency`) and the 37 questions below.
 - **Out-of-scale options replaced (37):** the trailing option meaning “this does not
   concern me” is removed and replaced by Not applicable: `traffic_speed_feeling`,
-  `app_mobility`, `app_put_tickets`, `car_parking_issue`, `car_charging`,
+  `app_put_tickets`, `car_parking_issue`, `car_charging`,
   `motorcycle_charging`, the six `*_effort_vs_alternatives`,
-  `motorcycle_cost_sensitivity`, `bike_confidence`, `escooter_confidence`,
+  `car_cost_sensitivity`, `motorcycle_cost_sensitivity`, `bike_confidence`, `escooter_confidence`,
   `bike_skip_dark`, `escooter_skip_dark`, `walk_slope_effect`,
   `put_visual_quality`, `walk_visual_quality`, the nine `walk_*` safety questions
   of the walking survey, and `pedestrian_traffic_unsafe`, `cyclist_traffic_unsafe`,
@@ -111,20 +112,54 @@ unchanged except where listed below.
   help (not at all … extremely) and the new `bike_signs_lost` and
   `escooter_signs_lost`, how often missing or unclear signs make one lose the way
   (never … always), version 1.0.0. No answers had been collected.
+- **Questions that asked two things:** each now asks one, and a new question,
+  version 1.0.0, follows it. `put_stop_ease` asks how easy it is to reach the
+  stops and `put_stop_use` how easy it is to use them; `bike_health_benefit` asks
+  about physical health and `bike_mood_benefit` about mood; `walk_distance` lists
+  only distances (less than 500 metres … more than 2 km, scored) and
+  `walk_need_company` asks whether one needs someone along; `stop_crossing_safety`
+  runs from very unsafe to very safe (Likert) and `stop_crossing_avoidance` asks
+  whether the crossings make one avoid some stops or take a longer way. The six
+  `*_identity_harassment` questions ask yes or no whether, in the last 12 months,
+  the respondent was harassed because of who they are or how they look, with Not
+  applicable, and the new `*_identity_harassment_worry` asks how often one worries
+  about it (never … always, scored). No answers had been collected.
+- **Cost and alternatives:** `car_cost_sensitivity` and `motorcycle_cost_sensitivity`
+  ask whether one would use the vehicle less if fuel, parking and tolls cost about a
+  third more (as much as now … only when I have no other choice);
+  `motorcycle_less_with_alternative` uses the public transport scale (no, the same …
+  much less). No answers had been collected.
+- **Answer lists:** the six `*_dissatisfied` questions gain None of these,
+  `put_want_changes` gains Cheaper tickets, the `*_combined_response` lists are
+  shorter, the `*_anxiety_causes` speak of road crashes, the tiredness questions name
+  the physical effort of each mode apart from carrying loads, the walking answer of
+  `*_combined_modes` names a long stretch, missing orientation cues leave the car,
+  bike, e-scooter and motorcycle insecurity lists, the bad-weather answer no longer
+  mentions umbrellas, and `car_sustainable_motivation` drops weather and merges its
+  two “I need the car” answers. No answers had been collected.
+- **Ordered answers and common lists:** `signal_wait_time`, the use frequency of
+  places, connections and segments, `walking_width_passability`,
+  `bike_vehicle_conflict_points`, `near_miss_outcome`, `location_distance` and the new
+  `carer_frequency` become ordered scales with distinct steps; avoidance moves to the
+  new `connection_avoidance` and `segment_avoidance`; `app_mobility` becomes
+  `app_mobility_taxi` and `app_mobility_sharing` (Likert with Not applicable, 1.0.0),
+  `bike_separation` becomes `bike_separation_traffic` and
+  `bike_separation_pedestrians`, `task_register` and `reasons_outside_why` split off
+  their questions; `usual_mode`, `trip_mode`, `frequent_trip_purpose` and
+  `travel_given_up_purposes` use one list of modes and one of purposes, and the
+  usability test uses the profile answers for gender and education.
 
-Unchanged: questions judged as already clear, the three questions with a middle
-answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
-decision, `connection_use_frequency`, `segment_use_frequency` and
-`car_cost_sensitivity`, whose extra answers carry meaning.
+Unchanged: questions judged as already clear, the two questions with a middle
+answer at the end (`walk_wayfinding`, `place_avoidance`), and the three grid tables.
 
 Every changed question advances to its next major version, as the application's
-answer-contract rule requires; 29 forms advance to their next major version and the
+answer-contract rule requires; 34 forms advance to their next major version and the
 Rome contribution workflows pin the new street assessments and reports.
 `versions.json` is unchanged: the configuration needs an application that supports
 these properties before it is published. No collected answers are rewritten; the
 PlanEasy question-bank revisions are a separate follow-up.
 
-Verification: version bumps match the application's revision rule for 424 compared
+Verification: version bumps match the application's revision rule for 457 compared
 questions; language, bundle and response-choice verifiers pass and the runtime
 serializer reports no change. The [migration manifest](2026-11-22-rating-scales.json)
 lists each occurrence.

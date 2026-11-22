@@ -2,7 +2,7 @@
   "questionnaire": {
     "name": "Improvement Proposal",
     "questionnaire_id": "smarturbanity_improvement_proposal",
-    "questionnaire_version": "3.1.0",
+    "questionnaire_version": "4.0.0",
     "project": "SmartUrbanity",
     "estimated_minutes": 1,
     "options": {
@@ -24,7 +24,7 @@
           {
             "text": "What kind of improvement do you propose?",
             "answer_key": "improvement_type",
-            "question_type": "single_option",
+            "question_type": "multiple_options",
             "required": true,
             "checks_inline": false,
             "options": [
@@ -70,9 +70,10 @@
               }
             ],
             "question_id": "improvement_type",
-            "question_version": "1.1.0",
+            "question_version": "2.0.0",
             "privacy_classification": "heightened_personal",
-            "add_prefer_not_to_say": true
+            "add_prefer_not_to_say": true,
+            "help": "Select all that apply."
           },
           {
             "text": "What exactly do you propose?",
@@ -94,11 +95,17 @@
             "answer_key": "proposal_description",
             "question_type": "textarea",
             "show_if": {
-              "improvement_type": {
-                "not": [
-                  "other"
-                ]
-              }
+              "improvement_type": [
+                "infrastructure_improvement",
+                "new_or_changed_connection",
+                "lighting",
+                "personal_safety",
+                "seating_shade_greenery",
+                "traffic_lights",
+                "public_transport",
+                "repair_maintenance",
+                "service_access_point_improvement"
+              ]
             },
             "required": true,
             "question_id": "proposal_description",
@@ -170,6 +177,7 @@
       "#Your proposal": "Your proposal",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.",
       "#What kind of improvement do you propose?": "What kind of improvement do you propose?",
+      "#Select all that apply.": "Select all that apply.",
       "#A new or redesigned street, pavement or crossing": "A new or redesigned street, pavement or crossing",
       "#A new or reopened connection, such as stairs or a passage": "A new or reopened connection, such as stairs or a passage",
       "#Better lighting": "Better lighting",
@@ -202,6 +210,7 @@
       "#Your proposal": "La tua proposta",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Descrivi un cambiamento che renderebbe questo luogo più facile, più sicuro o più piacevole da usare. La tua proposta non modifica la mappa.",
       "#What kind of improvement do you propose?": "Che tipo di miglioramento proponi?",
+      "#Select all that apply.": "Puoi sceglierne più di uno.",
       "#A new or redesigned street, pavement or crossing": "Una strada, un marciapiede o un attraversamento nuovo o ridisegnato",
       "#A new or reopened connection, such as stairs or a passage": "Un collegamento nuovo o riaperto, come una scala o un passaggio",
       "#Better lighting": "Illuminazione migliore",
@@ -234,6 +243,7 @@
       "#Your proposal": "Votre proposition",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Décrivez un changement qui rendrait ce lieu plus facile, plus sûr ou plus agréable à utiliser. Votre proposition ne modifie pas la carte.",
       "#What kind of improvement do you propose?": "Quel type d’amélioration proposez-vous ?",
+      "#Select all that apply.": "Sélectionnez toutes les réponses qui s’appliquent.",
       "#A new or redesigned street, pavement or crossing": "Une rue, un trottoir ou une traversée nouveaux ou réaménagés",
       "#A new or reopened connection, such as stairs or a passage": "Une liaison nouvelle ou rouverte, comme un escalier ou un passage",
       "#Better lighting": "Meilleur éclairage",
@@ -266,6 +276,7 @@
       "#Your proposal": "Ihr Vorschlag",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Beschreiben Sie eine Änderung, die diesen Ort leichter, sicherer oder angenehmer nutzbar machen würde. Ihr Vorschlag ändert die Karte nicht.",
       "#What kind of improvement do you propose?": "Welche Art von Verbesserung schlagen Sie vor?",
+      "#Select all that apply.": "Alle zutreffenden Antworten auswählen.",
       "#A new or redesigned street, pavement or crossing": "Eine neue oder umgestaltete Straße, Gehweg oder Übergang",
       "#A new or reopened connection, such as stairs or a passage": "Eine neue oder wieder geöffnete Verbindung, zum Beispiel eine Treppe oder ein Durchgang",
       "#Better lighting": "Bessere Beleuchtung",
@@ -298,6 +309,7 @@
       "#Your proposal": "Öneriniz",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Bu yeri kullanmayı daha kolay, daha güvenli veya daha keyifli hâle getirecek bir değişikliği açıklayın. Öneriniz haritayı değiştirmez.",
       "#What kind of improvement do you propose?": "Ne tür bir iyileştirme öneriyorsunuz?",
+      "#Select all that apply.": "Uygun olanların tümünü seçin.",
       "#A new or redesigned street, pavement or crossing": "Yeni veya yeniden düzenlenmiş bir sokak, kaldırım veya geçit",
       "#A new or reopened connection, such as stairs or a passage": "Yeni veya yeniden açılmış bir bağlantı, örneğin merdiven veya geçit",
       "#Better lighting": "Daha iyi aydınlatma",
@@ -330,6 +342,7 @@
       "#Your proposal": "پیشنهاد شما",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "تغییری را توضیح دهید که استفاده از این مکان را آسان‌تر، ایمن‌تر یا خوشایندتر کند. پیشنهاد شما نقشه را تغییر نمی‌دهد.",
       "#What kind of improvement do you propose?": "چه نوع بهبودی پیشنهاد می‌کنید؟",
+      "#Select all that apply.": "همه موارد مناسب را انتخاب کنید.",
       "#A new or redesigned street, pavement or crossing": "خیابان، پیاده‌رو یا گذرگاه جدید یا بازطراحی‌شده",
       "#A new or reopened connection, such as stairs or a passage": "اتصالی جدید یا بازگشایی‌شده، مانند پله یا گذرگاه",
       "#Better lighting": "روشنایی بهتر",
@@ -362,6 +375,7 @@
       "#Your proposal": "Az Ön javaslata",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Írjon le egy olyan változtatást, amely könnyebbé, biztonságosabbá vagy kellemesebbé tenné ennek a helynek a használatát. Javaslata nem módosítja a térképet.",
       "#What kind of improvement do you propose?": "Milyen fejlesztést javasol?",
+      "#Select all that apply.": "Jelölje meg az összes megfelelőt.",
       "#A new or redesigned street, pavement or crossing": "Új vagy átalakított utca, járda vagy átkelő",
       "#A new or reopened connection, such as stairs or a passage": "Új vagy újranyitott kapcsolat, például lépcső vagy átjáró",
       "#Better lighting": "Jobb világítás",
@@ -394,6 +408,7 @@
       "#Your proposal": "اقتراحك",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "يُرجى وصف تغيير يجعل استخدام هذا المكان أسهل أو أكثر أمانًا أو أكثر راحة. لا يغيّر اقتراحك الخريطة.",
       "#What kind of improvement do you propose?": "ما نوع التحسين المقترح؟",
+      "#Select all that apply.": "يمكن اختيار كل ما ينطبق.",
       "#A new or redesigned street, pavement or crossing": "شارع أو رصيف أو معبر جديد أو معاد تصميمه",
       "#A new or reopened connection, such as stairs or a passage": "وصلة جديدة أو أُعيد فتحها، مثل درج أو ممر",
       "#Better lighting": "إضاءة أفضل",
@@ -426,6 +441,7 @@
       "#Your proposal": "Twoja propozycja",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Opisz zmianę, dzięki której korzystanie z tego miejsca byłoby łatwiejsze, bezpieczniejsze lub przyjemniejsze. Twoja propozycja nie zmienia mapy.",
       "#What kind of improvement do you propose?": "Jakie ulepszenie proponujesz?",
+      "#Select all that apply.": "Zaznacz wszystkie pasujące odpowiedzi.",
       "#A new or redesigned street, pavement or crossing": "Nowa lub przebudowana ulica, chodnik lub przejście",
       "#A new or reopened connection, such as stairs or a passage": "Nowe lub ponownie otwarte połączenie, np. schody lub przejście",
       "#Better lighting": "Lepsze oświetlenie",
@@ -458,6 +474,7 @@
       "#Your proposal": "Dit forslag",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Beskriv en ændring, der ville gøre dette sted lettere, sikrere eller mere behageligt at bruge. Dit forslag ændrer ikke kortet.",
       "#What kind of improvement do you propose?": "Hvilken slags forbedring foreslår du?",
+      "#Select all that apply.": "Vælg alle relevante.",
       "#A new or redesigned street, pavement or crossing": "En ny eller ombygget gade, fortov eller overgang",
       "#A new or reopened connection, such as stairs or a passage": "En ny eller genåbnet forbindelse, for eksempel en trappe eller en passage",
       "#Better lighting": "Bedre belysning",
@@ -490,6 +507,7 @@
       "#Your proposal": "Äre Virschlag",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Beschreift eng Ännerung, déi dës Plaz méi einfach, méi sécher oder méi agreabel ze benotze géif maachen. Äre Virschlag ännert d’Kaart net.",
       "#What kind of improvement do you propose?": "Wéi eng Verbesserung proposéiert Dir?",
+      "#Select all that apply.": "Wielt all déi zoutreffend Äntwerten.",
       "#A new or redesigned street, pavement or crossing": "Eng nei oder ëmgestalte Strooss, Trottoir oder Iwwergang",
       "#A new or reopened connection, such as stairs or a passage": "Eng nei oder nees opgemaachte Verbindung, zum Beispill eng Trap oder e Passage",
       "#Better lighting": "Besser Beliichtung",
@@ -522,6 +540,7 @@
       "#Your proposal": "Uw voorstel",
       "#Describe a change that would make this place easier, safer or more pleasant to use. Your proposal does not change the map.": "Beschrijf een verandering die deze plek gemakkelijker, veiliger of prettiger in gebruik zou maken. Uw voorstel verandert de kaart niet.",
       "#What kind of improvement do you propose?": "Wat voor verbetering stelt u voor?",
+      "#Select all that apply.": "Selecteer alles wat van toepassing is.",
       "#A new or redesigned street, pavement or crossing": "Een nieuwe of heringerichte straat, stoep of oversteekplaats",
       "#A new or reopened connection, such as stairs or a passage": "Een nieuwe of heropende verbinding, zoals een trap of doorgang",
       "#Better lighting": "Betere verlichting",
