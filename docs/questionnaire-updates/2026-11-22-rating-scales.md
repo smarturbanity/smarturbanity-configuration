@@ -15,7 +15,7 @@ unchanged except where listed below.
   place safety and security, street safety from traffic and from
   crime or harassment, desired facilities (no … yes),
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (100 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (120 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
   confidence, trip safety, community attachment) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
@@ -90,6 +90,27 @@ unchanged except where listed below.
   did not mirror each other; they now ask whether the respondent likes streets with
   lots of people, shops and activity, from “I dislike them a lot” to “I like them a
   lot”, with Not applicable. No answers had been collected.
+- **Scales that mixed feeling and behaviour:** some answers measured how strong a
+  feeling was and, in the same list, what the respondent does about it (“I avoid
+  steep roads”, “I take a flatter route”), so the steps were not one ordered scale.
+  Each of these questions now asks one thing on five points, scored, with Not
+  applicable: how much pleasant or unpleasant surroundings affect how one feels
+  (`*_visual_quality`, six modes), how much dirt or litter bothers (the six
+  `*_cleanliness_effect`), how much heavy or fast traffic bothers
+  (`bike_avoid_traffic`, `escooter_avoid_traffic`), how much parked cars or narrow
+  lanes make riding hard (`motorcycle_narrow`), how much timetables meet one’s needs
+  (`public_transport_reliability`), how hard parking is (`car_parking_issue`) and
+  how stressful other drivers are (`motorcycle_driver_stress`), all from not at all
+  to extremely; how much slopes make the trip harder (`escooter_avoid_slopes`,
+  `walk_slope_effect`, ending with “I can’t manage some slopes”); how important
+  benches are (`walk_benches_importance`); confidence in reacting in time to an
+  unexpected danger (the four `*_hazard_confidence`) and in riding in traffic
+  (`bike_confidence`, `escooter_confidence`), from not at all to extremely
+  confident; and fitness for walking (`walk_fitness`), from very low to very high.
+  `bike_wayfinding` and `escooter_wayfinding` become two questions: how much signs
+  help (not at all … extremely) and the new `bike_signs_lost` and
+  `escooter_signs_lost`, how often missing or unclear signs make one lose the way
+  (never … always), version 1.0.0. No answers had been collected.
 
 Unchanged: questions judged as already clear, the three questions with a middle
 answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a

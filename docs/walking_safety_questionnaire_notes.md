@@ -771,3 +771,16 @@ I dislike them a little, I neither like nor dislike them, I like them a little a
 I like them a lot, and Not applicable below. The old answers carried reasons and
 mixed the subject with crowding, already asked by the crowding questions. Version
 2.0.0; no answers had been collected; eight translations.
+
+Lory chose on 2026-11-22 one five-point scored scale for each question whose answers
+mixed how strong a feeling was with what the respondent does about it. In the walking
+forms `walk_visual_quality` asks how much pleasant or unpleasant surroundings affect
+how one feels on the way and `walk_cleanliness_effect` how much dirt or litter
+bothers, both from not at all to extremely; `walk_slope_effect` asks how much slopes
+make the trip harder (not at all, a little, moderately, a lot, I can't manage some
+slopes); `walk_benches_importance` asks how important benches are to rest along the
+way, from not at all to extremely important, and gains Not applicable (version
+3.0.0); `walk_fitness` runs very low, low, moderate, high, very high without
+descriptions on single steps. `walk_wayfinding` stays as it is, because its answer
+about directions that are not accessible keeps a separate meaning. No answers had
+been collected; eight translations.
