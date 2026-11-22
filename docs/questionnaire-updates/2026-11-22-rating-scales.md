@@ -9,12 +9,12 @@ wording listed under the scale, the chosen one highlighted; `answer_scale_stars:
 true` draws them as stars instead. Wording, stored values and translations are
 unchanged except where listed below.
 
-- **Likert (71 occurrences):** ease and clarity (very difficult … very easy),
+- **Likert (80 occurrences):** ease and clarity (very difficult … very easy),
   satisfaction, emotional state, effort against the alternatives, intention to use,
   comfort, pleasantness, overall judgement, air, cleanliness, noise, heat and shade,
   place safety and security, desired facilities (no … yes), community attachment,
   vehicle availability, speed of traffic and trip time against the expected one.
-- **Ordered (78 occurrences):** frequencies (never … always), intensities (not at
+- **Ordered (85 occurrences):** frequencies (never … always), intensities (not at
   all … extremely: noise, tiredness, stress, effort, usefulness, urgency,
   confidence, trip safety) and the descriptive ladders (infrastructure adequacy,
   parking at the destination, slope, dark, fitness, cost sensitivity, stop access,
@@ -42,10 +42,19 @@ unchanged except where listed below.
   give up a trip because it cost too much?” with five counted points: never, once,
   2–3 times, about once a week, several times a week. `travel_given_up_purposes`
   follows every answer except never. No answers had been collected.
+- **Questions fitted to their scale:** questions that asked yes or no but offered
+  frequencies now ask how often: `bike_parking_changed_plans`,
+  `escooter_parking_changed_plans`, `car_congestion_adapt`, `car_emissions`,
+  `motorcycle_emissions` (the last two gain a scale). Scales of two or three points
+  now have four or five: street visibility, path visibility and green-light time in
+  the street assessment (ordered, four points); text size in five forms, pace and
+  amount of points (Likert, much too little … much too much); usefulness of trip
+  results and fit of the trip history (ordered); ease of understanding the trip
+  impact and the points calculation (Likert). Their follow-up questions show for the
+  lower answers. No answers had been collected.
 
-Unchanged: questions judged as already clear, the four questions with a middle
-answer at the end (`history_detailed`, `walk_distance`, `walk_wayfinding`,
-`place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
+Unchanged: questions judged as already clear, the three questions with a middle
+answer at the end (`walk_distance`, `walk_wayfinding`, `place_avoidance`), the three grid tables, `place_use_frequency`, and, pending a
 decision, `connection_use_frequency`, `segment_use_frequency` and
 `car_cost_sensitivity`, whose extra answers carry meaning.
 

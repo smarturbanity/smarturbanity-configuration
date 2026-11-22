@@ -709,3 +709,14 @@ because it cost too much?” with never, once, 2–3 times, about once a week an
 several times a week (prefer not to say stays). `travel_given_up_purposes` shows
 for every answer except never. Same version as the rating-scales change (question
 2.0.0, profile 3.0.0); no answers had been collected. Eight translations.
+
+Lory rewrote on 2026-11-22 the questions whose wording did not match their answers
+and the scales with fewer than four points. Yes/no questions answered with
+frequencies now ask how often (bicycle and e-scooter parking, traffic jams, vehicle
+pollution for car and motorcycle). Street and path visibility and green-light time
+in the street assessment have four ordered points from worst to best. Text size,
+pace and amount of points run on five symmetric points from much too little to
+much too much; usefulness of trip results, fit of the trip history and ease of
+understanding the impact and the points calculation have five points. Follow-up
+questions show for the lower answers. Same versions as the rating-scales change;
+no answers had been collected; eight translations where the form has them.
