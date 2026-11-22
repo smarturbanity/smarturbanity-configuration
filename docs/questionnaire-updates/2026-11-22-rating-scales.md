@@ -146,7 +146,8 @@ unchanged except where listed below.
   `bike_separation` becomes `bike_separation_traffic` and
   `bike_separation_pedestrians`, `task_register` and `reasons_outside_why` split off
   their questions; `usual_mode`, `trip_mode`, `frequent_trip_purpose` and
-  `travel_given_up_purposes` use one list of modes and one of purposes, and the
+  `travel_given_up_purposes` use one list of modes and one of purposes (the
+  `*_combined_modes` questions keep bus, tram, metro and train apart), and the
   usability test uses the profile answers for gender and education.
 
 Unchanged: questions judged as already clear, the two questions with a middle

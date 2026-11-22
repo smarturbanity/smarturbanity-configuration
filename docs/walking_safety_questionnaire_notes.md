@@ -808,6 +808,8 @@ walkable width, bridge cover, pedestrian access, the type of improvement, reason
 for going outside the neighbourhood split from what for, and conflict points with
 vehicles), to align the usability test gender and education answers with the profile
 survey, and to use one common list of travel modes (usual mode, trip mode) and one
-of trip purposes (frequent purpose, trip purpose, given-up purposes); "None of
+of trip purposes (frequent purpose, trip purpose, given-up purposes), while the
+`*_combined_modes` questions keep bus, tram, metro and train as separate answers
+because the combination itself is what they ask about; "None of
 these" was already exclusive where requested, and the pet and bags question keeps
 its two options. No answers had been collected; eight translations.
